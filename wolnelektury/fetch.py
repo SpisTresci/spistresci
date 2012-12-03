@@ -11,7 +11,6 @@ def main():
         book_socket = urllib2.urlopen(book[u'href'])
         book_page =book_socket.read()
         book_socket.close()
-        print book_page;
         book_details = json.loads(book_page)
         (book.setdefault(n,book_details.get(n,0)) for n in set(book_details))
 
