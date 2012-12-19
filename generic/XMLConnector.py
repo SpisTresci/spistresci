@@ -16,7 +16,7 @@ class XMLConnector(GenericConnector):
     
     def fetchData(self):
         if self.mode == XMLConnector.SINGLE_XML:
-            """asfdasdf"""
+            self.downloadFile(self.url)
             
         elif self.mode == XMLConnector.ZIPPED_XMLS:
             zipname = self.downloadFile(self.url)

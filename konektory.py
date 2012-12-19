@@ -1,15 +1,15 @@
-from generic import  GenericConnector
-from generic import XMLConnector
-from virtualo import Virtualo
+from virtualo.Virtualo import Virtualo
+from dobryebook.DobryEbook import DobryEbook
 
 
 def main():
-    konektory = [Virtualo()]
+    konektory = [DobryEbook(),
+                 Virtualo()]
     
     for konektor in konektory:
         konektor.fetchData()
         konektor.parse()
-        konektor.update()
+        #konektor.update()
 
 if __name__ == '__main__':
     main()
