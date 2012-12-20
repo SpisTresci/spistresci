@@ -2,6 +2,7 @@ import abc
 
 import urllib2
 import zipfile
+import gzip
 import os.path
 
 
@@ -55,8 +56,19 @@ class GenericConnector(object):
         f.close()
         return file_name
 
-
-    def unpackZip(self, zipname):
+    def unpackGZIP(self, gzipname):
+        fh = gzip.GzipFile(gzipname, "r")
+        
+        file_content = fh.read()
+        fh.close()
+        
+        fileName, ext = os.path.splitext(gzipname)
+        
+        file = open(fileName, "w")
+        file.write(file_content)
+        file.close()
+        
+    def unpackZIP(self, zipname):
         zfile = zipfile.ZipFile(zipname)
         for name in zfile.namelist():
             (dirname, filename) = os.path.split(name)

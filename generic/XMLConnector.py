@@ -1,13 +1,13 @@
 from generic.GenericConnector import GenericConnector
-
+import os
 
 class XMLConnector(GenericConnector):
-    
+
     SINGLE_XML = 0;
     ZIPPED_XMLS = 1
-    
+
     mode = -1
-    
+
     def __init__(self, url, mode):
         GenericConnector.__init__(self, url)
         self.mode = mode
@@ -17,10 +17,15 @@ class XMLConnector(GenericConnector):
     def fetchData(self):
         if self.mode == XMLConnector.SINGLE_XML:
             self.downloadFile(self.url)
-            
+
         elif self.mode == XMLConnector.ZIPPED_XMLS:
             zipname = self.downloadFile(self.url)
-            self.unpackZip(zipname)
+            
+            fileName, ext = os.path.splitext(zipname)
+            if ext == ".zip":
+                self.unpackZIP(zipname)
+            elif ext == ".gz":
+                self.unpackGZIP(zipname)
 
     def getTagValue(self, product, tagName, default=""):
         tag = product.getElementsByTagName(tagName)[0]
