@@ -1,4 +1,4 @@
-from generic.XMLConnector import XMLConnector
+from generic import XMLConnector
 
 import os
 import re
