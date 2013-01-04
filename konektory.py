@@ -1,5 +1,8 @@
-from virtualo.Virtualo import Virtualo
-from dobryebook.DobryEbook import DobryEbook
+from dobryebook import DobryEbook
+from koobe import Koobe
+from nexto import Nexto
+from virtualo import Virtualo
+from wolnelektury import fetch
 
 
 def main():
