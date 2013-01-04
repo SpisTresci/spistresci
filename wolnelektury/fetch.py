@@ -3,7 +3,7 @@ import urllib2
 import json
 url = 'http://wolnelektury.pl/api/books/'
 
-def main():
+def fetch():
     socket = urllib2.urlopen(url)
     books_page = socket.read()
     book_list = json.loads(books_page)
@@ -12,10 +12,8 @@ def main():
         book_page =book_socket.read()
         book_socket.close()
         book_details = json.loads(book_page)
-        (book.setdefault(n,book_details.get(n,0)) for n in set(book_details))
+        book.update(book_details)
 
-    print books;
-
-
+    print book_list
 if __name__ == '__main__':
-    main()
+    fetch()
