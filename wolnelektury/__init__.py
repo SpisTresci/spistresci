@@ -1,1 +1,1 @@
-from wolnelektury import fetch
+from fetch import fetch
