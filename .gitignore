@@ -1,3 +1,6 @@
 cennik_full/
 cennik_full.zip
 *.pyc
+.settings/
+.project
+.pydevproject
