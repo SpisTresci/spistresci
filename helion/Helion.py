@@ -3,7 +3,6 @@ from xml.etree import ElementTree as et
 import os
 import traceback
 
-#TODO: translate helion xml tags into some kind of standarized key in dict
 #TODO: what to do with more than one elements with the same tagname?
 class Helion(XMLConnector):
     
@@ -48,7 +47,7 @@ class Helion(XMLConnector):
                 child = child.text
             tag_name = self.xml_tag_dict.get(child_elem.tag,child_elem.tag)
 
-            #TODO:what to do if there is more than one child elem with same tag
+            #TODO: what to do with more than one elements with the same tagname?
 
             ##isn't that a better approach?
             #i = 0
@@ -79,7 +78,6 @@ class Helion(XMLConnector):
                 
         filename  = 'produkty-wszystkie/produkty-wszystkie.xml'
         if not os.path.exists(filename):
-            print DUPA
             exit(-1)
         
         root = et.parse(filename).getroot()
