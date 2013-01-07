@@ -3,7 +3,7 @@ import sys
 import inspect
 
 
-#Tests if all our modules provides correct api to import from it (T57 task)
+#Tests if all our modules provides correct api to import from it
 class TestModuleImport():
     
     def assertModuleMember(self,module,member):
@@ -30,7 +30,6 @@ class TestModuleImport():
         self.assertModuleMember(nexto.Nexto, 'fetchData')
         self.assertModuleMember(nexto.Nexto, 'parse')
 
-
     def test_Koobe(self):
         import koobe
         self.assertModuleMember(koobe, 'Koobe')
@@ -43,4 +42,10 @@ class TestModuleImport():
         self.assertModuleMember(dobryebook.DobryEbook, 'fetchData')
         self.assertModuleMember(dobryebook.DobryEbook, 'parse')
 
- 
+    def test_Helion(self):
+        import helion
+        self.assertModuleMember(helion, 'Helion')
+        self.assertModuleMember(helion.Helion, 'fetchData')
+        self.assertModuleMember(helion.Helion, 'parse')
+
+
