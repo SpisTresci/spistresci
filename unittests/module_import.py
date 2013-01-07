@@ -48,4 +48,8 @@ class TestModuleImport():
         self.assertModuleMember(helion.Helion, 'fetchData')
         self.assertModuleMember(helion.Helion, 'parse')
 
+    def test_generic(self):
+        import generic
+        self.assertModuleMember(generic,'GenericConnector')
+        self.assertModuleMember(generic,'XMLConnector')
 
