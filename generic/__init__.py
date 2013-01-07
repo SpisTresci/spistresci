@@ -1,0 +1,2 @@
+from GenericConnector import GenericConnector
+from XMLConnector import XMLConnector

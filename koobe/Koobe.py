@@ -1,4 +1,4 @@
-from generic.XMLConnector import XMLConnector
+from generic import XMLConnector
 from xml.etree import ElementTree as et
 import os
 
