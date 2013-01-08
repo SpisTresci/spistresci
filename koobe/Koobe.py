@@ -32,3 +32,11 @@ class Koobe(XMLConnector):
             print "ID: " + id
             print "Opis: " + description
             print "url: " + url + "\n"
+
+            self.mesureLenght([title, id, description, url])
+
+
+        print self.max_len
+        for el in self.max_len_entry:
+            print el
+

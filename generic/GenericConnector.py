@@ -10,6 +10,9 @@ class GenericConnector(object):
     #__metaclass__ = abc.ABCMeta
     
     url = ""
+
+    max_len = []
+    max_len_entry = []
     
     def __init__(self, url):
         self.url = url
@@ -28,6 +31,16 @@ class GenericConnector(object):
     def updateDatabase(self):
         """update method"""
 
+    def mesureLenght(self, list):
+        if self.max_len == []:
+            for i in range(len(list)):
+                self.max_len.append(len(list[i]))
+                self.max_len_entry.append(list[i])
+        else:
+            for i in range(len(list)):
+                if list[i] != None and self.max_len[i] < len(list[i]):
+                    self.max_len[i] = len(list[i])
+                    self.max_len_entry[i] = list[i]
 
     def downloadFile(self, url):
         
