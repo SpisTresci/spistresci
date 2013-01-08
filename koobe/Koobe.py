@@ -12,7 +12,7 @@ class Koobe(XMLConnector):
         
     def parse(self):
                 
-        filename  = 'ekundelek.xml'
+        filename = 'ekundelek.xml'
         if not os.path.exists(filename):
             exit(-1)
  
@@ -27,13 +27,40 @@ class Koobe(XMLConnector):
             price = product.find('price').text
             category = product.find('category').text
             producer = product.find('producer').text
-            
-            print "Tytul: " + title
-            print "ID: " + id
-            print "Opis: " + description
-            print "url: " + url + "\n"
 
-            self.mesureLenght([title, id, description, url])
+            isbn = author = format = protection = None
+
+
+            for property in product.findall('property'):
+                if isbn == None:
+                    if property.get('name') == 'isbn':
+                        isbn = property.text
+
+                if author == None:
+                    if property.get('name') == 'author':
+                        author = property.text
+
+                if format == None:
+                    if property.get('name') == 'format':
+                        format = property.text
+
+                if protection == None:
+                    if property.get('name') == 'protection':
+                        protection = property.text
+
+            print "Tytul: " + title
+            # print "ID: " + id
+            # print "Opis: " + description
+            # print "url: " + url
+            # print "image: " + image
+            # print "price: " + price
+            # print "category: " + category
+            # print "producer: " + producer
+            # print "isbn: " + isbn
+            # print "author: " + author
+            # print "format: " + format
+            # print "protection: " + protection
+            self.mesureLenght([title, id, description, url, image, price, category, producer, isbn, author, format, protection])
 
 
         print self.max_len
