@@ -3,8 +3,6 @@ from generic import XMLConnector
 import os
 import re
 from xml.dom import minidom
-import shutil
-
 
 class Virtualo(XMLConnector):
     
