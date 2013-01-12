@@ -3,15 +3,15 @@ from generic import XMLConnector
 import os
 import re
 from xml.dom import minidom
+import shutil
 
 
 class Virtualo(XMLConnector):
     
     
-    url = "https://virtualo.pl/data/cennik_full.zip"
     
     def __init__(self):
-        XMLConnector.__init__(self, self.url, XMLConnector.ZIPPED_XMLS)
+        XMLConnector.__init__(self)
     
     def removeDescriptionShortTag(self, filename):
         """
@@ -36,8 +36,8 @@ class Virtualo(XMLConnector):
         i=1
     
         while True:
-    
-            filename  = 'cennik_full' + os.sep + 'VirtualoProducts' + str(i) +'.xml'
+            filename  = 'VirtualoProducts' + str(i) +'.xml'
+            filename = os.pakth.join(self.unpack_dir,filename)
             if not os.path.exists(filename):
                 break
             
@@ -48,7 +48,7 @@ class Virtualo(XMLConnector):
             products = DOMTree.childNodes.item(0).childNodes
     
     
-            print "START =======" + 'VirtualoProducts' + str(i) +'.xml' + "=========="
+            print 'START ======= %s,%s VirtualoProducts%i.xml====='%(self.url, XMLConnector.ZIPPED_XMLS,i)
     
             for product in products:
                 #product = products[103]
@@ -85,9 +85,10 @@ class Virtualo(XMLConnector):
     
                 #security = product.getElementsByTagName('security')[0].firstChild.nodeValue
     
-            print "END   =======" + 'VirtualoProducts' + str(i) +'.xml' + "=========="
-            print "odczytano " + str(len(products)) + " produktow"
+            print 'END   ======= VirtualoProducts%d.xml=========='%i
+            print 'odczytano %d produktow'%len(products)
             i=i+1
-    
+        
         pass
+
             

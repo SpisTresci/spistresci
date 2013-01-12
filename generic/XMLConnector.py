@@ -1,38 +1,43 @@
 from generic import GenericConnector
 import os
+import shutil
 
 class XMLConnector(GenericConnector):
 
-    SINGLE_XML = 0;
+    UNKNOWN = -1
+    SINGLE_XML = 0
     ZIPPED_XMLS = 1
+    GZIPPED_XMLS = 2
 
-    mode = -1
+    _mode_dict = {'SINGLE_XML':SINGLE_XML,
+                  'ZIPPED_XMLS':ZIPPED_XMLS,
+                  'GZIPPED_XMLS':GZIPPED_XMLS }
 
-    def __init__(self, url, mode):
-        GenericConnector.__init__(self, url)
-        self.mode = mode
-        print "XMLConnector Constructor!"
-        
+    def mode_int(self, mode):
+        return self._mode_dict.get(mode,self.UNKNOWN) 
+
+
+    def __init__(self):
+        GenericConnector.__init__(self)
+        self.mode = self.mode_int(self.config['mode'])
+
+    def __del__(self):
+        if self.unpack_dir and os.path.exists(self.unpack_dir):
+            shutil.rmtree(self.unpack_dir)
+            self.unpack_dir=''
     
     def fetchData(self):
-        if self.mode == XMLConnector.SINGLE_XML:
-            self.downloadFile(self.url)
-
-        elif self.mode == XMLConnector.ZIPPED_XMLS:
-            zipname = self.downloadFile(self.url)
-            
-            fileName, ext = os.path.splitext(zipname)
-            if ext == ".zip":
-                self.unpackZIP(zipname)
-            elif ext == ".gz":
-                self.unpackGZIP(zipname)
+        self.downloadFile()
+        if self.mode == XMLConnector.ZIPPED_XMLS:
+            self.unpackZIP(os.path.join(self.backup_dir,self.filename))
+        elif self.mode == XMLConnector.GZIPPED_XMLS: 
+            self.unpackGZIP(os.path.join(self.backup_dir,self.filename))
 
     def getTagValue(self, product, tagName, default=""):
         tag = product.getElementsByTagName(tagName)[0]
         value_of_tag = default
         if tag.firstChild != None:
             value_of_tag = tag.firstChild.nodeValue
-    
         return value_of_tag
     
     def getTagExpliciteValue(self, product, tagName, default=""):
@@ -41,5 +46,4 @@ class XMLConnector(GenericConnector):
         value_of_tag = default
         if tag.firstChild != None:
             value_of_tag = tag.toxml()
-    
-            return value_of_tag[len(('<'+tagName+'>')):-len(('</'+tagName+'>'))]
+        return value_of_tag[len(('<'+tagName+'>')):-len(('</'+tagName+'>'))]

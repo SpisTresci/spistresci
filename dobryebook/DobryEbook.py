@@ -4,19 +4,14 @@ from xml.etree import ElementTree as et
 
 class DobryEbook(XMLConnector):
 
-    url = "http://dobryebook.pl/xml/spistresci.xml"
-
-    def test(self):
-        print "test"
-
     def __init__(self):
-        XMLConnector.__init__(self, self.url, XMLConnector.SINGLE_XML)
+        XMLConnector.__init__(self)
 
     def parse(self):
 
-        filename  = 'spistresci.xml'
+        filename=os.path.join(self.backup_dir,self.filename)
         if not os.path.exists(filename):
-            exit(-1)
+            raise IOError('%s connector, missing xml file %s'%(self.my_name(),filename))
 
         root = et.parse(filename).getroot()
 

@@ -71,15 +71,10 @@ class Helion(XMLConnector):
             
         
     def __init__(self):
-        url = 'http://helion.pl/xml/produkty-wszystkie.xml.zip'
-        XMLConnector.__init__(self, url, XMLConnector.ZIPPED_XMLS)
+        XMLConnector.__init__(self)
         
     def parse(self):
-                
-        filename  = 'produkty-wszystkie/produkty-wszystkie.xml'
-        if not os.path.exists(filename):
-            exit(-1)
-        
+        filename = os.path.join(self.unpack_dir,self.unpack_file)
         root = et.parse(filename).getroot()
         for base in root[:2]:
             for book in base[:3]:

@@ -5,14 +5,12 @@ import os
 
 class Koobe(XMLConnector):
     
-    url = "http://www.koobe.pl/export/ekundelek.xml"
-    
     def __init__(self):
-        XMLConnector.__init__(self, self.url, XMLConnector.SINGLE_XML)
+        XMLConnector.__init__(self)
         
     def parse(self):
                 
-        filename = 'ekundelek.xml'
+        filename = os.path.join(self.backup_dir, self.filename)
         if not os.path.exists(filename):
             exit(-1)
  

@@ -6,45 +6,45 @@ import urllib, urllib2
 
 class Nexto(XMLConnector):
 
-    url = "https://www.nextoapi.pl/download_xml.req"
 
 
     def __init__(self):
-        XMLConnector.__init__(self, self.url, XMLConnector.ZIPPED_XMLS)
+        XMLConnector.__init__(self)
         
-    def downloadFile(self, url):
-        values = {'api_id': 'ZDhlODFkYjctNzYyZC00YTZjLTlkOTgtMTY4NDRhMDYwNDlm',
-             'pass': 'pomyslowo42', 
-             'xmlType':'PRODUCTS_LIST',}
+    def downloadFile(self):
+        values = {'api_id': self.config['api_id'],
+             'pass': self.config['pass'],
+             'xmlType':self.config['xmltype']}
         data = urllib.urlencode(values)
         req = urllib2.Request(self.url, data)
         rsp = urllib2.urlopen(req)
         content = rsp.read()
-        
-        open("download_xml.gz", "wb").write(content)
-        return "download_xml.gz"
+        if self.backup_dir and not os.path.exists(self.backup_dir):
+            os.makedirs(self.backup_dir)
+        filename=os.path.join(self.backup_dir, self.filename)
+
+        open(filename, "wb").write(content)
         
     def parse(self):
                  
-        filename  = 'download_xml'
+        filename  = os.path.join(self.unpack_dir,self.unpack_file)
         if not os.path.exists(filename):
-            exit(-1)
- 
+             raise IOError('%s connector, missing xml file %s'%(self.my_name(),filename))
+
         root = et.parse(filename).getroot()
         
-        for product in root[0]:
-            id          = product.find('id')
-            isbn        = product.find('isbn')
-            language    = product.find('language')
-            description = product.find('body')
-            title       = product.find('title')
-            publisher   = product.find('publisher')
-            manufacturer_id = product.find('manufacturer_id')
+        for product in root:
+            id = product.findtext('id','')
+            isbn = product.findtext('isbn','')
+            language = product.findtext('language','')
+            description = product.findtext('body','')
+            title = product.findtext('title','')
+            publisher = product.findtext('publisher','')
+            manufacturer_id = product.findtext('manufacturer_id','')
 
-            print "Tytul: " + title
-            print "ID: " + id
-            print "Opis: " + description
-            
+            print "Tytul: ",title
+            print "ID: ",id
+            print "Opis: ",description
         
 def main():
     
