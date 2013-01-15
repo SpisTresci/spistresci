@@ -33,18 +33,19 @@ class Nexto(XMLConnector):
 
         root = et.parse(filename).getroot()
         
-        for product in root:
-            id = product.findtext('id','')
-            isbn = product.findtext('isbn','')
-            language = product.findtext('language','')
-            description = product.findtext('body','')
-            title = product.findtext('title','')
-            publisher = product.findtext('publisher','')
-            manufacturer_id = product.findtext('manufacturer_id','')
+        for product in root[0]:
+            id          = product.findtext('id', '')
+            isbn        = product.findtext('isbn', '')
+            language    = product.findtext('language', '')
+            description = product.findtext('body', '')
+            title       = product.findtext('title', '')
+            publisher   = product.findtext('publisher', '')
+            manufacturer_id = product.findtext('manufacturer_id', '')
 
-            print "Tytul: ",title
-            print "ID: ",id
-            print "Opis: ",description
+            print "Tytul: " + title
+            print "ID: " + id
+            print "Opis: " + description
+            
         
 def main():
     

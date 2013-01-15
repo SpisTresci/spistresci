@@ -16,16 +16,16 @@ class DobryEbook(XMLConnector):
         root = et.parse(filename).getroot()
 
         for ebook in root:
-            title = ebook.find('tytul').text
-            subtitle = ebook.find('podtytul').text
-            author = ebook.find('autor').text
-            link = ebook.find('link').text
-            price = ebook.find('cena').text
-            file_size = ebook.find('wielkosc_pliku').text
-            numberOfPages = ebook.find('liczba_stron').text
-            isbn = ebook.find('isbn').text
-            smallCover = ebook.find('male_zdjecie').text
-            bigCover = ebook.find('duze_zdjecie').text
+            title = ebook.findtext('tytul', '')
+            subtitle = ebook.findtext('podtytul', '')
+            author = ebook.findtext('autor', '')
+            link = ebook.findtext('link', '')
+            price = ebook.findtext('cena', '')
+            file_size = ebook.findtext('wielkosc_pliku', '')
+            numberOfPages = ebook.findtext('liczba_stron', '')
+            isbn = ebook.findtext('isbn', '')
+            smallCover = ebook.findtext('male_zdjecie', '')
+            bigCover = ebook.findtext('duze_zdjecie', '')
 
             print "Tytul: " + title
             print "Autor: " + author

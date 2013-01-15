@@ -15,16 +15,16 @@ class Koobe(XMLConnector):
             exit(-1)
  
         root = et.parse(filename).getroot()
-        
+
         for product in root[0]:
-            title = product.find('name').text
-            id = product.find('id').text
-            description = product.find('description').text
-            url = product.find('url').text
-            image = product.find('image').text
-            price = product.find('price').text
-            category = product.find('category').text
-            producer = product.find('producer').text
+            title = product.findtext('name')
+            id = product.findtext('id')
+            description = product.findtext('description')
+            url = product.findtext('url')
+            image = product.findtext('image')
+            price = product.findtext('price')
+            category = product.findtext('category')
+            producer = product.findtext('producer')
 
             isbn = author = format = protection = None
 
