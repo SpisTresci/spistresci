@@ -1,0 +1,1 @@
+from BezKartek import BezKartek

@@ -1,16 +1,14 @@
+from bezkartek import BezKartek
 from dobryebook import DobryEbook
+from helion import Helion
 from koobe import Koobe
 from nexto import Nexto
 from virtualo import Virtualo
 from wolnelektury import fetch
-from helion import Helion
 import ConfigParser
 
 def main():
-    konektory = [DobryEbook(),
-                 Virtualo(),Helion(),Koobe(),Nexto()]
-#    konektory = [Nexto()]
-    
+    konektory = [BezKartek(),DobryEbook(),Helion(),Koobe(),Nexto(),Virtualo()]
     for konektor in konektory:
         konektor.fetchData()
         konektor.parse()

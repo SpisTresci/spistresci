@@ -22,7 +22,7 @@ class XMLConnector(GenericConnector):
         self.mode = self.mode_int(self.config['mode'])
 
     def __del__(self):
-        if self.unpack_dir and os.path.exists(self.unpack_dir):
+        if self.unpack_dir and self.remove_unpacked and os.path.exists(self.unpack_dir):
             shutil.rmtree(self.unpack_dir)
             self.unpack_dir=''
     

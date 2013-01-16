@@ -33,9 +33,11 @@ class GenericConnector(object):
         self._parse_config()
         self.url = self.config['url']
         self.filename = self.config['filename']
-        self.unpack_file = self.config.get('unpack_file','')
         self.backup_dir = self.config.get('backup_dir','')
+        self.remove_backup = self.config.get('remove_backup',1)
+        self.unpack_file = self.config.get('unpack_file','')
         self.unpack_dir = self.config.get('unpack_dir','')
+        self.remove_unpacked = int(self.config.get('remove_unpacked',1))
         
 
     #@abc.abstractmethod    
@@ -73,9 +75,10 @@ class GenericConnector(object):
         filename = os.path.join(self.backup_dir,self.filename)
         f = open(filename, 'wb')
         meta = u.info()
-        
-        print "File last modified: " + meta.getheaders("Last-Modified")[0]
-        print "Downloading: %s Bytes: %s" % (self.filename, int(meta.getheaders("Content-Length")[0]))
+        if meta.getheader("Last-Modified"):
+            print "File last modified: " + meta.getheader("Last-Modified")
+        if meta.getheader("Content-Length"):
+            print "Downloading: %s Bytes: %s" % (self.filename, int(meta.getheader("Content-Length")))
         
         file_size_dl = 0
         block_sz = 8192
