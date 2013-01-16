@@ -33,7 +33,6 @@ class GenericConnector(object):
         
     
     def __init__(self):
-        print self.config_file
         self._parse_config(self.config_file)
         self.url = self.config['url']
         self.filename = self.config['filename']
