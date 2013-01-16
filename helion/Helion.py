@@ -24,9 +24,9 @@ class Helion(XMLConnector):
         'format':'size',
         'typ':'type',
         'oprawa':'binding',
-        'liczbastron':'num_pages',
+        'liczbastron':'page_count',
         'datawydania':'publication_date',
-        'online':'online',
+        'oinline':'online',
         'okladka':'cover',
         'bestseller':'is_bestseller',
         'nowosc':'is_new',
@@ -36,6 +36,23 @@ class Helion(XMLConnector):
         'ksiegarnie_nieinter':'offline_bookshop',
         'opis':'description',
         'md5':'md5',
+        'online':'online',
+        'ident_powiazany':'lined_id',
+        'seriawydawnicza':'series_id',
+        'seriatematyczna':'thematic_series_id',
+        'waga':'mass',
+        'status2':'status2',
+        'cena_netto':'net_price',
+        'cena_brutto':'gross_price',
+        'vat':'vat',
+        'vat_procent':'vat_percent',
+        'okladkatyl':'cover_back',
+        'issueurl':'issueurl',
+        'top':'top',
+        'nosnik':'nosnik',
+        'przedsprzedazDO':'advanced_booking',
+        'ebook_format':'ebook_format',
+        'ebook_formaty':'ebook_format_list'
     }
 
 
@@ -44,8 +61,10 @@ class Helion(XMLConnector):
         for child_elem in elem:
             child = self.make_dict(child_elem)
             if not child:
-                child = child.text
-            tag_name = self.xml_tag_dict.get(child_elem.tag,child_elem.tag)
+                child = child_elem.text
+            #here an exception will be raised if we dont know this tag 
+            #i.e. tag not in xml_tag_dict
+            tag_name = self.xml_tag_dict[child_elem.tag]
 
             #TODO: what to do with more than one elements with the same tagname?
 
@@ -69,15 +88,17 @@ class Helion(XMLConnector):
             return elem.text
         return elem_dict
             
-        
-    def __init__(self):
+    def __init__(self, limit_books=0):
         XMLConnector.__init__(self)
-        
+        self.limit_books = limit_books
+      
     def parse(self):
         filename = os.path.join(self.unpack_dir,self.unpack_file)
         root = et.parse(filename).getroot()
-        for base in root[:2]:
-            for book in base[:3]:
+        for base in root:
+            if self.limit_books:
+                base=base[:self.limit_books]
+            for book in base:
                 book_dict = self.make_dict(book)
                 print book_dict
 #            print "Tytul: ",book_dict['title']

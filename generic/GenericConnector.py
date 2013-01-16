@@ -6,6 +6,7 @@ import gzip
 import os.path
 import ConfigParser
 from datetime import datetime
+import shutil
 
 class GenericConnector(object):
     #__metaclass__ = abc.ABCMeta
@@ -34,11 +35,18 @@ class GenericConnector(object):
         self.url = self.config['url']
         self.filename = self.config['filename']
         self.backup_dir = self.config.get('backup_dir','')
-        self.remove_backup = self.config.get('remove_backup',1)
+        self.remove_backup = int(self.config.get('remove_backup',1))
         self.unpack_file = self.config.get('unpack_file','')
         self.unpack_dir = self.config.get('unpack_dir','')
         self.remove_unpacked = int(self.config.get('remove_unpacked',1))
-        
+   
+    def __del__(self):
+        if self.backup_dir and self.remove_backup and os.path.exists(self.backup_dir):
+            shutil.rmtree(self.backup_dir)
+            self.backup_dir=''
+        if self.unpack_dir and self.remove_unpacked and os.path.exists(self.unpack_dir):
+            shutil.rmtree(self.unpack_dir)
+            self.unpack_dir=''
 
     #@abc.abstractmethod    
     def fetchData(self):

@@ -35,7 +35,7 @@ class Virtualo(XMLConnector):
     
         while True:
             filename  = 'VirtualoProducts' + str(i) +'.xml'
-            filename = os.pakth.join(self.unpack_dir,filename)
+            filename = os.path.join(self.unpack_dir,filename)
             if not os.path.exists(filename):
                 break
             
