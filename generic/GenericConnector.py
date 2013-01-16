@@ -13,6 +13,8 @@ class GenericConnector(object):
     
     max_len = []
     max_len_entry = []
+
+    config_file = 'conf/connectors.ini'
     
     @classmethod
     def my_name(cls):
@@ -31,7 +33,8 @@ class GenericConnector(object):
         
     
     def __init__(self):
-        self._parse_config()
+        print self.config_file
+        self._parse_config(self.config_file)
         self.url = self.config['url']
         self.filename = self.config['filename']
         self.backup_dir = self.config.get('backup_dir','')
