@@ -1,7 +1,6 @@
 from generic import XMLConnector
 from xml.etree import ElementTree as et
 import os
-import traceback
 
 #TODO: what to do with more than one elements with the same tagname?
 class Helion(XMLConnector):

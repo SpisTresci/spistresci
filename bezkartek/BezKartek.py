@@ -1,7 +1,6 @@
 from generic import XMLConnector
 from xml.etree import ElementTree as et
 import os
-import traceback
 
 class BezKartek(XMLConnector):
     
