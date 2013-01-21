@@ -17,7 +17,7 @@ class GenericConnector(object):
     config_file = 'conf/connectors.ini'
     config_object = None
 
-    @staticmethod
+    @classmethod
     def read_config(cls):
         cls.config_object = ConfigParser.ConfigParser()
         if not cls.config_object.read(cls.config_file):
@@ -29,17 +29,18 @@ class GenericConnector(object):
 
     def _parse_config(self, config_file='conf/connectors.ini', section=None, config_object = None):
         if not config_object:
-            self.read_config(GenericConnector)
+            self.read_config()
+        else:
+             self.config_object = config_object
         if not section:
            section = self.my_name()
         self.section = section
 
-        self.config = dict(config_object.items(self.section,
+        self.config = dict(self.config_object.items(self.section,
                         vars={'date':datetime.now().strftime('%Y%m%d%H%M%S')}
                       ))
         
     def __init__(self):
-        self.my_name()
         self._parse_config(self.config_file, config_object=self.config_object)
         self.url = self.config['url']
         self.filename = self.config['filename']

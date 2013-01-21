@@ -5,7 +5,7 @@ from connectors import *
 
 def main():
     GenericConnector.config_file = 'conf/backup.ini'
-    GenericConnector.read_config(GenericConnector)
+    GenericConnector.read_config()
 
     konektory = [ getattr(sys.modules[__name__],connector)()
                   for connector in GenericConnector.config_object.sections() ]
