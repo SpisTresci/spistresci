@@ -15,25 +15,32 @@ class GenericConnector(object):
     max_len_entry = []
 
     config_file = 'conf/connectors.ini'
+    config_object = None
+
+    @staticmethod
+    def read_config(cls):
+        cls.config_object = ConfigParser.ConfigParser()
+        if not cls.config_object.read(cls.config_file):
+            raise ConfigParser.Error('Could not read config from file %s'%cls.config_file)
     
     @classmethod
     def my_name(cls):
         return cls.__name__
 
-    def _parse_config(self,config_file='conf/connectors.ini',section=None):
-        self.config_file = config_file
+    def _parse_config(self, config_file='conf/connectors.ini', section=None, config_object = None):
+        if not config_object:
+            self.read_config(GenericConnector)
         if not section:
-            section = self.my_name()
+           section = self.my_name()
         self.section = section
-        config = ConfigParser.ConfigParser()
-        if config.read(self.config_file):
-            self.config = dict(config.items(self.section,vars={'date':datetime.now().strftime('%Y%m%d%H%M%S')}))
-        else:
-            raise ConfigParser.Error('Could not read config from file %s'%self.config_file)
+
+        self.config = dict(config_object.items(self.section,
+                        vars={'date':datetime.now().strftime('%Y%m%d%H%M%S')}
+                      ))
         
-    
     def __init__(self):
-        self._parse_config(self.config_file)
+        self.my_name()
+        self._parse_config(self.config_file, config_object=self.config_object)
         self.url = self.config['url']
         self.filename = self.config['filename']
         self.backup_dir = self.config.get('backup_dir','')

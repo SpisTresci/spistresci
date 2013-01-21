@@ -1,28 +1,14 @@
-from afiliant import Audiobook,Audioteka,Legimi
-from bezkartek import BezKartek
-from dobryebook import DobryEbook
-from helion import Helion
-from koobe import Koobe
-from nexto import Nexto
-from rw2010 import RW2010
-from virtualo import Virtualo
-#from wolnelektury import fetch
 import ConfigParser
+import sys
+
+from connectors import *
 
 def main():
-    konektory = [ 
-    Audiobook(),
-    Audioteka(),
-    BezKartek(),
-    DobryEbook(),
-    Helion(),
-    Legimi(),
-    Koobe(),
-    Legimi(),
-    Nexto(),
-    RW2010(),
-    Virtualo(),
-    ]
+
+    GenericConnector.read_config(GenericConnector)
+
+    konektory = [ getattr(sys.modules[__name__],connector)()
+                  for connector in GenericConnector.config_object.sections() ]
 
     for konektor in konektory:
         konektor.fetchData()
