@@ -11,6 +11,7 @@ from generic import GenericConnector
 import ConfigParser
 
 def main():
+    GenericConnector.config_file = 'conf/backup.ini'
     konektory = [ 
     Audiobook(),
     Audioteka(),
