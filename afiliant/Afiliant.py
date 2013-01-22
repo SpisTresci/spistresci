@@ -30,6 +30,7 @@ class Afiliant(XMLConnector):
         'Wydawca':'publisher',
         'Czyta':'lector',
         u'Dugo\u015b\u0107':'length',
+        'Producent':'author'
 
     }
 
@@ -77,3 +78,6 @@ class Audiobook(Afiliant):pass
 
 class Audioteka(Afiliant):pass
    
+#TODO: what to do with "Opracowanie: 'Name'" Producers (authors)
+class ZielonaSowa(Afiliant):pass
+
