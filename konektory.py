@@ -7,6 +7,7 @@ from connectors import *
 
 def main():
 
+    GenericConnector.config_file = 'conf/database_tests.ini'
     GenericConnector.read_config()
     Logger = logger_instance(GenericConnector.config_object.get('DEFAULT','log_config'))
 

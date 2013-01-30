@@ -11,6 +11,8 @@ import ConfigParser
 from connectors_logger import logger_instance
 from utils import Enum
 
+registered={}
+
 class GenericConnector(object):
    
     '''
@@ -65,6 +67,7 @@ class GenericConnector(object):
                       ))
         
     def __init__(self,name=None):
+        self.register()
         if not name:
             self._name = self.class_name()
         else:
@@ -83,6 +86,11 @@ class GenericConnector(object):
         self.logger.debug('%s connector created'%self.name)
         self.mode = self.BookList_Mode.int(self.config.get('mode','UNKNOWN'))
   
+
+    def register(self):
+        registered[self.my_name()]=type(self)
+   
+
     def __del__(self):
         self.logger.debug('Cleaning up after executing %s connector'%self.name)
         if self.backup_dir:
@@ -215,4 +223,81 @@ class GenericConnector(object):
             fd = open(os.path.join(dirname,name),"w")
             fd.write(zfile.read(name))
             fd.close()
+
+    def get_or_create_(self, ClassName, d, session):
+        c = session.query(ClassName).filter_by(**d).first()
+        if not c:
+            c = ClassName(**d)
+        return c
+    
+    def get_(self, ClassName, param_name, d, session):
+        return session.query(ClassName).filter_by(**{param_name:d[param_name]}).first()
+
+       
+    def add_record(self, d):
+        
+        Book = registered[self.name + 'Book']
+        Description = registered[self.name + 'BookDescription']
+        
+        Session = sessionmaker(bind=engine)
+        session = Session()
+        
+        book = self.get_(Book, "external_id", d, session)
+        if not book:
+            book=Book(d)
+            desc=Description(d)
+            book.description=desc
+            session.merge(book)
+            session.commit()       
+       
+from sqlalchemy.orm import sessionmaker, relationship, backref
+from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy import *
+from sqlalchemy.ext.declarative import declared_attr
+Base = declarative_base()
+engine  = create_engine('mysql://root:Z0oBvgF1R3@localhost/st', echo=True)
+
+        
+
+class GenericBook(object):
+    id = Column(Integer, primary_key=True)
+    title = Column(Unicode(255))
+    @declared_attr
+    def description(cls):
+        return relationship(cls.__tablename__+"Description", uselist=False, backref="book")
+    external_id = Column(Integer, unique=True)
+    @declared_attr
+    def __tablename__(cls):
+        registered[cls.__name__]=cls
+        return cls.__name__
+    
+    def __init__(self, initial_data):
+        for key in initial_data:
+            try:
+                if getattr(self, key) == None:
+                    setattr(self, key, initial_data[key])        
+            except AttributeError:
+                pass
+
+    
+    #@declared_attr
+    #def books_authors_table(cls):
+    #    return Table(cls.__name__ + '_books_authors', Base.metadata, Column('book_id', Integer, ForeignKey('book.id')), Column('author_id', Integer, ForeignKey('author.id')) )
+
+class GenericBookDescription(object):
+    id = Column(Integer, primary_key=True)
+    @declared_attr
+    def __tablename__(cls):
+        registered[cls.__name__]=cls
+        return cls.__name__
+    @declared_attr
+    def book_id(cls):
+        return Column(Integer, ForeignKey(cls.__tablename__[:-len("Description")]+'.id'))
+    description = Column(Unicode(20000))
+
+    def __init__(self, initial_data):
+        try:
+            self.description = initial_data['description']
+        except:
+            exit('Record ' + initial_data + ' doesn\'t have defined desription')
 

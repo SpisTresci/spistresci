@@ -1,2 +1,4 @@
 from GenericConnector import GenericConnector
+from GenericConnector import GenericBook
+from GenericConnector import GenericBookDescription
 from XMLConnector import XMLConnector

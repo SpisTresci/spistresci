@@ -1,4 +1,6 @@
 from generic import XMLConnector
+from generic import GenericBook
+from generic import GenericBookDescription
 from xml.etree import ElementTree as et
 import os
 
@@ -59,9 +61,28 @@ class Koobe(XMLConnector):
             # print "format: " + format
             # print "protection: " + protection
             self.mesureLenght([title, id, description, url, image, price, category, producer, isbn, author, format, protection])
-
+            self.add_record({'external_id':1234, 'description':'opis', 'title':'Taki sobie tytul', 'category':'horror'})
 
         print self.max_len
         for el in self.max_len_entry:
             print el
+
+from sqlalchemy.orm import sessionmaker, relationship, backref
+from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy import *
+from sqlalchemy.ext.declarative import declared_attr
+Base = declarative_base()
+engine  = create_engine('mysql://root:Z0oBvgF1R3@localhost/st', echo=True)
+
+class KoobeBook(GenericBook, Base):
+    id =  Column(Integer, primary_key=True)
+    name = Column(String(100))
+    category = Column(String(100))
+
+class KoobeBookDescription(GenericBookDescription, Base):
+    t = Column(String(100))
+
+
+engine  = create_engine('mysql://root:Z0oBvgF1R3@localhost/st', echo=True)    
+Base.metadata.create_all(engine)
 
