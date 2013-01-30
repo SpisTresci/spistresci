@@ -52,9 +52,16 @@ class GenericConnector(object):
    
     def __del__(self):
         if self.backup_dir and self.remove_backup and os.path.exists(self.backup_dir):
+            cwd = os.getcwd().rstrip('/')+'/'
+            abs_path = os.path.abspath(self.backup_dir).rstrip('/')+'/'
+            if abs_path in cwd:
+                raise IOError('Are you insane or something?. Don\'t tell me to remove whole my working dir\nHINT:backup_dur should not be current dir or parent')
             shutil.rmtree(self.backup_dir)
             self.backup_dir=''
         if self.unpack_dir and self.remove_unpacked and os.path.exists(self.unpack_dir):
+            abs_path = os.path.abspath(self.unpack_dir).rstrip('/')+'/'
+            if abs_path in cwd:
+                raise IOError('Are you insane or something?. Don\'t tell me to remove whole my working dir\nHINT:unpack_dir should not be current dir or parent')
             shutil.rmtree(self.unpack_dir)
             self.unpack_dir=''
 
