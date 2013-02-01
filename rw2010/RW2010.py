@@ -17,9 +17,8 @@ class RW2010(XMLConnector):
 
 
     def __init__(self, limit_books=0):
-        XMLConnector.__init__(self)
+        XMLConnector.__init__(self, limit_books)
         self.macro_url = self.config['macro_url']
-        self.limit_books = limit_books
         u = urllib2.urlopen(self.macro_url) 
         meta = u.info()
         result = u.read()

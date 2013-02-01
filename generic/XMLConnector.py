@@ -15,9 +15,10 @@ class XMLConnector(GenericConnector):
     def mode_int(self, mode):
         return self._mode_dict.get(mode,self.UNKNOWN) 
 
-    def __init__(self):
+    def __init__(self,limit_books=0):
         GenericConnector.__init__(self)
         self.mode = self.mode_int(self.config['mode'])
+        self.limit_books = limit_books
          
     def fetchData(self):
         self.downloadFile()

@@ -34,10 +34,6 @@ class Afiliant(XMLConnector):
 
     }
 
-    def __init__(self, limit_books=0):
-        XMLConnector.__init__(self)
-        self.limit_books = limit_books
-        
     def make_dict(self,book):
         book_dict = {}
         for tag in self.xml_tag_dict.keys():

@@ -87,10 +87,6 @@ class Helion(XMLConnector):
             return elem.text
         return elem_dict
             
-    def __init__(self, limit_books=0):
-        XMLConnector.__init__(self)
-        self.limit_books = limit_books
-      
     def parse(self):
         filename = os.path.join(self.unpack_dir,self.unpack_file)
         root = et.parse(filename).getroot()
