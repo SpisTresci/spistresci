@@ -56,6 +56,7 @@ class GenericConnector(object):
         self.logger.debug('%s connector created'%self.name)
   
     def __del__(self):
+        self.logger.debug('Cleaning up after executing %s connector'%self.name)
         if self.backup_dir and self.remove_backup and os.path.exists(self.backup_dir):
             cwd = os.getcwd().rstrip('/')+'/'
             abs_path = os.path.abspath(self.backup_dir).rstrip('/')+'/'
