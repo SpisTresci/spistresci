@@ -2,6 +2,7 @@ from generic import XMLConnector
 from generic import GenericBook
 from generic import GenericBookDescription
 from generic import GenericAuthor
+from sql_wrapper import *
 from xml.etree import ElementTree as et
 import os
 
@@ -69,13 +70,7 @@ class Koobe(XMLConnector):
         for el in self.max_len_entry:
             print el
 
-from sqlalchemy.orm import sessionmaker, relationship, backref
-from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy import *
-from sqlalchemy.ext.declarative import declared_attr
-Base = declarative_base()
-engine  = create_engine('mysql://root:Z0oBvgF1R3@localhost/st', echo=True)
-
+Base = SqlWrapper.getBaseClass()
 
 class KoobeBook(GenericBook, Base):
     id =  Column(Integer, primary_key=True)
@@ -83,13 +78,7 @@ class KoobeBook(GenericBook, Base):
     category = Column(Unicode(100))
 
 class KoobeBookDescription(GenericBookDescription, Base):
-    t = Column(Unicode(100))
-    
+    pass
+
 class KoobeAuthor(GenericAuthor, Base):
-    r = Column(Unicode(100))
-    books = relationship(**KoobeBook.secondary_books_authors_table(Base))
-
-
-engine  = create_engine('mysql://root:Z0oBvgF1R3@localhost/st', echo=True)    
-Base.metadata.create_all(engine)
-
+    pass

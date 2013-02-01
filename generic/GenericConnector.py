@@ -10,6 +10,7 @@ from datetime import datetime
 import ConfigParser
 from connectors_logger import logger_instance
 from utils import Enum
+from sql_wrapper import *
 
 registered={}
 
@@ -235,12 +236,11 @@ class GenericConnector(object):
 
        
     def add_record(self, d):
-        
         Book = registered[self.name + 'Book']
         Description = registered[self.name + 'BookDescription']
         Author = registered[self.name + 'Author']
         
-        Session = sessionmaker(bind=engine)
+        Session = sessionmaker(bind=SqlWrapper.getEngine())
         session = Session()
         
         book = self.get_(Book, "external_id", d, session)
@@ -255,27 +255,7 @@ class GenericConnector(object):
 
             session.commit()       
        
-from sqlalchemy.orm import sessionmaker, relationship, backref
-from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy import *
-from sqlalchemy.ext.declarative import declared_attr
-Base = declarative_base()
-engine  = create_engine('mysql://root:Z0oBvgF1R3@localhost/st', echo=True)
-
-import abc
-
 class GenericBook(object):
-    @classmethod
-    def secondary_books_authors_table(cls, Base):
-        name = cls.__tablename__[:-len("Book")]
-        return {    "argument":     name+"Book",
-                    "secondary":    Table(name+'_books_authors',
-                                      Base.metadata,
-                                      Column('book_id', Integer, ForeignKey(name+'Book.id')),
-                                      Column('author_id', Integer, ForeignKey(name+'Author.id'))
-                                      )
-                }
-
     id = Column(Integer, primary_key=True)
     title = Column(Unicode(255))
     external_id = Column(Integer, unique=True)
@@ -299,7 +279,7 @@ class GenericBook(object):
 
 class GenericBookDescription(object):
     id = Column(Integer, primary_key=True)
-    description = Column(Unicode(20000))
+    description = Column(Unicode(20000)) #TODO: parametr musi byc dynamicznie ustawiany
 
     @declared_attr
     def __tablename__(cls):
@@ -324,3 +304,12 @@ class GenericAuthor(object):
     def __tablename__(cls):
         registered[cls.__name__]=cls
         return cls.__name__
+
+    @declared_attr
+    def books(cls):
+        name = cls.__tablename__[:-len("Author")]
+        return relationship(name+'Book', secondary=Table(name+'_books_authors',
+                                      SqlWrapper.getBaseClass().metadata,
+                                      Column('book_id', Integer, ForeignKey(name+'Book.id')),
+                                      Column('author_id', Integer, ForeignKey(name+'Author.id'))
+                                      ))
