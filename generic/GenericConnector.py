@@ -1,5 +1,3 @@
-#import abc
-
 import urllib2
 import zipfile
 import gzip
@@ -8,8 +6,9 @@ import ConfigParser
 from datetime import datetime
 import shutil
 
+from connectors_logger import logger_instance
+
 class GenericConnector(object):
-    #__metaclass__ = abc.ABCMeta
     
     max_len = []
     max_len_entry = []
@@ -26,6 +25,9 @@ class GenericConnector(object):
     @classmethod
     def my_name(cls):
         return cls.__name__
+
+
+    name = property(lambda x:x.my_name())
 
     def _parse_config(self, config_file='conf/connectors.ini', section=None, config_object = None):
         if not config_object:
@@ -44,24 +46,29 @@ class GenericConnector(object):
         self._parse_config(self.config_file, config_object=self.config_object)
         self.url = self.config['url']
         self.filename = self.config['filename']
-        self.backup_dir = self.config.get('backup_dir','')
-        self.remove_backup = int(self.config.get('remove_backup',1))
-        self.unpack_file = self.config.get('unpack_file','')
-        self.unpack_dir = self.config.get('unpack_dir','')
-        self.remove_unpacked = int(self.config.get('remove_unpacked',1))
-   
+        self.backup_dir = self.config.get('backup_dir', '')
+        self.remove_backup = int(self.config.get('remove_backup', 1))
+        self.unpack_file = self.config.get('unpack_file', '')
+        self.unpack_dir = self.config.get('unpack_dir', '')
+        self.remove_unpacked = int(self.config.get('remove_unpacked', 1))
+        self.log_config=self.config.get('log_config', 'conf/log.connectors.ini')
+        self.logger = logger_instance(self.log_config)
+        self.logger.debug('%s connector created'%self.name)
+  
     def __del__(self):
         if self.backup_dir and self.remove_backup and os.path.exists(self.backup_dir):
             cwd = os.getcwd().rstrip('/')+'/'
             abs_path = os.path.abspath(self.backup_dir).rstrip('/')+'/'
             if abs_path in cwd:
                 raise IOError('Are you insane or something?. Don\'t tell me to remove whole my working dir\nHINT:backup_dur should not be current dir or parent')
+            self.logger.debug('Connector %s. Removing backup dir %s'%(self.name,self.backup_dir))
             shutil.rmtree(self.backup_dir)
             self.backup_dir=''
         if self.unpack_dir and self.remove_unpacked and os.path.exists(self.unpack_dir):
             abs_path = os.path.abspath(self.unpack_dir).rstrip('/')+'/'
             if abs_path in cwd:
                 raise IOError('Are you insane or something?. Don\'t tell me to remove whole my working dir\nHINT:unpack_dir should not be current dir or parent')
+            self.logger.debug('Connector %s. Removing unpack dir %s'%(self.name,self.backup_dir))
             shutil.rmtree(self.unpack_dir)
             self.unpack_dir=''
 
@@ -97,13 +104,16 @@ class GenericConnector(object):
         if self.backup_dir and not os.path.exists(self.backup_dir):
             os.makedirs(self.backup_dir)
 
-        filename = os.path.join(self.backup_dir,self.filename)
+        filename = os.path.join(self.backup_dir, self.filename)
         f = open(filename, 'wb')
         meta = u.info()
-        if meta.getheader("Last-Modified"):
-            print "File last modified: " + meta.getheader("Last-Modified")
         if meta.getheader("Content-Length"):
-            print "Downloading: %s Bytes: %s" % (self.filename, int(meta.getheader("Content-Length")))
+            self.logger.info('%s connector, downloading %s into %s (%s bytes)' % 
+            (self.name, self.filename, self.backup_dir, int(meta.getheader('Content-Length'))))
+        else:
+            self.logger.info('%s connector downloading %s into %s'%(self.name, self.filename,self.backup_dir))
+        if meta.getheader("Last-Modified"):
+            self.logger.info('File last modified: %s'%meta.getheader('Last-Modified'))
         
         file_size_dl = 0
         block_sz = 8192
@@ -114,12 +124,9 @@ class GenericConnector(object):
         
             file_size_dl += len(buffer)
             f.write(buffer)
-        
-            #status = r"%10d  [%3.2f%%]" % (file_size_dl, file_size_dl * 100. / file_size)
-            #status = status + chr(8)*(len(status)+1)
-            #print status,
 
         f.close()
+        self.logger.debug('Download of %s completed, downloaded %d bytes'%(self.filename,file_size_dl))
         return filename
 
     def unpackGZIP(self, gzipname):
@@ -132,8 +139,10 @@ class GenericConnector(object):
             self.unpack_file, ext = os.path.splitext(gzipname)
         if self.unpack_dir and not os.path.exists(self.unpack_dir):
                 os.makedirs(self.unpack_dir)
-      
-        file = open(os.path.join(self.unpack_dir,self.unpack_file), "w")
+     
+        unpack_file_name =  os.path.join(self.unpack_dir,self.unpack_file)
+        self.logger.debug('Unpacking gzip %s into %s'%(gzipname,unpack_file_name))
+        file = open(unpack_file_name, "w")
         file.write(file_content)
         file.close()
         
@@ -142,7 +151,7 @@ class GenericConnector(object):
         for name in zfile.namelist():
             (dirname, filename) = os.path.split(name)
             dirname = os.path.join(self.unpack_dir,dirname)
-            print "Decompressing " + filename + " on " + dirname
+            self.logger.debug('Unpacking zip %s into %s'%(filename,dirname))
             if dirname and not os.path.exists(dirname):
                 os.makedirs(dirname)
             fd = open(os.path.join(dirname,name),"w")

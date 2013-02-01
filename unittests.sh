@@ -1,2 +1,2 @@
 #!/bin/sh
-nosetests -v unittests/*.py
+nosetests -v -s unittests/*.py $@

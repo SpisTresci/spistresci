@@ -1,9 +1,8 @@
 import nose
 from nose.tools import *
-from nose.plugins.skip import SkipTest
 from generic import GenericConnector
-import re
 
+import re
 from datetime import datetime
 
 

@@ -15,7 +15,6 @@ class XMLConnector(GenericConnector):
     def mode_int(self, mode):
         return self._mode_dict.get(mode,self.UNKNOWN) 
 
-
     def __init__(self):
         GenericConnector.__init__(self)
         self.mode = self.mode_int(self.config['mode'])
