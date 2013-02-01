@@ -22,6 +22,14 @@ class ConnectorsLogger():
               'CRITICAL':logging.CRITICAL
               }
 
+    '''
+    Known limitations of this method:
+    Since we remeber single instance of logger for each config file, not for each logger name (as logggin.getLogger does)
+    It possible that 2 files configure one logger instance (if logger name in 2 config files are the same.
+    In that case logger will be configured twice, and only second config will be valid.
+
+    To make sure logger config is as expected, reload_config(config_file) should be executed
+    '''
     @staticmethod
     def logger_instance(config_file=None):
         if not config_file:
