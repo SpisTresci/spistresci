@@ -224,8 +224,8 @@ class GenericConnector(object):
             fd.write(zfile.read(name))
             fd.close()
 
-    def get_or_create_(self, ClassName, d, session):
-        c = session.query(ClassName).filter_by(**d).first()
+    def get_or_create_(self, ClassName, param_name, d, session):
+        c = session.query(ClassName).filter_by(**{param_name:d[param_name]}).first()
         if not c:
             c = ClassName(**d)
         return c
@@ -238,6 +238,7 @@ class GenericConnector(object):
         
         Book = registered[self.name + 'Book']
         Description = registered[self.name + 'BookDescription']
+        Author = registered[self.name + 'Author']
         
         Session = sessionmaker(bind=engine)
         session = Session()
@@ -247,7 +248,11 @@ class GenericConnector(object):
             book=Book(d)
             desc=Description(d)
             book.description=desc
-            session.merge(book)
+            for author in d['authors']:
+                a = self.get_or_create_(Author, 'name', {'name':author}, session)
+                a.books.append(book)
+                session.merge(a)
+
             session.commit()       
        
 from sqlalchemy.orm import sessionmaker, relationship, backref
@@ -257,20 +262,33 @@ from sqlalchemy.ext.declarative import declared_attr
 Base = declarative_base()
 engine  = create_engine('mysql://root:Z0oBvgF1R3@localhost/st', echo=True)
 
-        
+import abc
 
 class GenericBook(object):
+    @classmethod
+    def secondary_books_authors_table(cls, Base):
+        name = cls.__tablename__[:-len("Book")]
+        return {    "argument":     name+"Book",
+                    "secondary":    Table(name+'_books_authors',
+                                      Base.metadata,
+                                      Column('book_id', Integer, ForeignKey(name+'Book.id')),
+                                      Column('author_id', Integer, ForeignKey(name+'Author.id'))
+                                      )
+                }
+
     id = Column(Integer, primary_key=True)
     title = Column(Unicode(255))
+    external_id = Column(Integer, unique=True)
+
     @declared_attr
     def description(cls):
         return relationship(cls.__tablename__+"Description", uselist=False, backref="book")
-    external_id = Column(Integer, unique=True)
+
     @declared_attr
     def __tablename__(cls):
         registered[cls.__name__]=cls
         return cls.__name__
-    
+
     def __init__(self, initial_data):
         for key in initial_data:
             try:
@@ -279,21 +297,18 @@ class GenericBook(object):
             except AttributeError:
                 pass
 
-    
-    #@declared_attr
-    #def books_authors_table(cls):
-    #    return Table(cls.__name__ + '_books_authors', Base.metadata, Column('book_id', Integer, ForeignKey('book.id')), Column('author_id', Integer, ForeignKey('author.id')) )
-
 class GenericBookDescription(object):
     id = Column(Integer, primary_key=True)
+    description = Column(Unicode(20000))
+
     @declared_attr
     def __tablename__(cls):
         registered[cls.__name__]=cls
         return cls.__name__
+
     @declared_attr
     def book_id(cls):
         return Column(Integer, ForeignKey(cls.__tablename__[:-len("Description")]+'.id'))
-    description = Column(Unicode(20000))
 
     def __init__(self, initial_data):
         try:
@@ -301,3 +316,11 @@ class GenericBookDescription(object):
         except:
             exit('Record ' + initial_data + ' doesn\'t have defined desription')
 
+class GenericAuthor(object):
+    id = Column(Integer, primary_key=True)
+    name = Column(Unicode(255), unique=True)
+
+    @declared_attr
+    def __tablename__(cls):
+        registered[cls.__name__]=cls
+        return cls.__name__
