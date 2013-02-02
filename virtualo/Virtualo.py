@@ -41,15 +41,12 @@ class Virtualo(XMLConnector):
             
             self.removeDescriptionShortTag(filename)
             DOMTree = minidom.parse(filename)
-            #print DOMTree.toxml()
     
             products = DOMTree.childNodes.item(0).childNodes
     
-    
-            print 'START ======= %s,%s VirtualoProducts%i.xml====='%(self.url, XMLConnector.ZIPPED_XMLS,i)
+            self.logger.debug('Parsing %s'%os.path.split(filename)[1])
     
             for product in products:
-                #product = products[103]
                 title = self.getTagValue(product, 'title')
                 format = self.getTagValue(product, 'format')
                 security = self.getTagValue(product, 'security','brak')
@@ -58,17 +55,14 @@ class Virtualo(XMLConnector):
                 coverId = self.getTagValue(product, 'coverId')
                 authors = self.getTagValue(product, 'authors')
                 #print authors
-    
-                splitObj = re.split(', ', authors)
-                if len(splitObj) != 1:
-                    print authors
+                #splitObj = re.split(', ', authors)
+                #if len(splitObj) != 1:
+                #    print authors
     
                 url = self.getTagValue(product, 'url')
                 description = self.getTagExpliciteValue(product, 'description')
-                #descriptionShort = getTagValue(product, 'descriptionShort')
                 rating = self.getTagValue(product, 'rating')
     
-                #http://virtualo.pl/kodeks_karny_kodeks_postepowania_karnego_kodeks_karny/i123959/
                 matchObj = re.match(r'.*/i(\d*)/', url)
                 id = int(matchObj.group(1))
     
@@ -83,8 +77,8 @@ class Virtualo(XMLConnector):
     
                 #security = product.getElementsByTagName('security')[0].firstChild.nodeValue
     
-            print 'END   ======= VirtualoProducts%d.xml=========='%i
-            print 'odczytano %d produktow'%len(products)
+            self.logger.debug('File %s parsed'%os.path.split(filename)[1])
+            self.logger.debug('Virtualo, read %d products'%len(products))
             i=i+1
         
         pass

@@ -100,12 +100,13 @@ class GenericConnector(object):
                     self.max_len[i] = len(list[i])
                     self.max_len_entry[i] = list[i]
 
-    def downloadFile(self):
+    def downloadFile(self,filename=''):
         u = urllib2.urlopen(self.url)
         if self.backup_dir and not os.path.exists(self.backup_dir):
             os.makedirs(self.backup_dir)
-
-        filename = os.path.join(self.backup_dir, self.filename)
+        
+        if not filename:
+            filename = os.path.join(self.backup_dir, self.filename)
         f = open(filename, 'wb')
         meta = u.info()
         if meta.getheader("Content-Length"):
