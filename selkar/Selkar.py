@@ -51,23 +51,6 @@ class Selkar(XMLConnector):
         'bestseller':'is_bestseller',
     }
 
-    def make_dict(self,book):
-        book_dict = {}
-        for tag in self.xml_tag_dict.keys():
-            tag_split = tag.split('.')
-            if len(tag_split) > 1:
-                sub_elem = book    
-                for spl in tag_split:
-                     sub_elem = sub_elem.find(spl)
-                     if sub_elem is None:
-                         break
-                if sub_elem is not None:
-                     sub_elem=sub_elem.text
-                book_dict[ self.xml_tag_dict[tag] ]= sub_elem
-            else:
-                book_dict[ self.xml_tag_dict[tag] ] = book.findtext(tag) 
-        return book_dict
-
     def parse(self):
         for (key, root) in self.fetched_xmls.items():
             itemstag = root.find('items')

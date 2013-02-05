@@ -14,6 +14,8 @@ class XMLConnector(GenericConnector):
                   'GZIPPED_XMLS':GZIPPED_XMLS,
                   'MULTIPLE_XMLS':MULTIPLE_XMLS }
 
+    xml_tag_dict = {}
+
     def mode_int(self, mode):
         return self._mode_dict.get(mode,self.UNKNOWN) 
 
@@ -45,3 +47,20 @@ class XMLConnector(GenericConnector):
         if tag.firstChild != None:
             value_of_tag = tag.toxml()
         return value_of_tag[len(('<'+tagName+'>')):-len(('</'+tagName+'>'))]
+
+    def make_dict(self,book):
+        book_dict = {}
+        for tag in self.xml_tag_dict.keys():
+            tag_split = tag.split('.')
+            if len(tag_split) > 1:
+                sub_elem = book    
+                for spl in tag_split:
+                     sub_elem = sub_elem.find(spl)
+                     if sub_elem is None:
+                         break
+                if sub_elem is not None:
+                     sub_elem=sub_elem.text
+                book_dict[ self.xml_tag_dict[tag] ]= sub_elem
+            else:
+                book_dict[ self.xml_tag_dict[tag] ] = book.findtext(tag) 
+        return book_dict
