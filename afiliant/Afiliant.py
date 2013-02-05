@@ -77,3 +77,5 @@ class Audioteka(Afiliant):pass
 #TODO: what to do with "Opracowanie: 'Name'" Producers (authors)
 class ZielonaSowa(Afiliant):pass
 
+class TMC(Afiliant):pass
+
