@@ -17,7 +17,8 @@ def main():
 
     try:
         for connector in connectors:
-            connector.downloadFile()
+            #only download, do not unpack
+            connector.fetchData(unpack=False)
     except Exception as e:
         Logger.exception('Error executing backup')
     else:

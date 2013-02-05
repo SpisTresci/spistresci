@@ -7,10 +7,12 @@ class XMLConnector(GenericConnector):
     SINGLE_XML = 0
     ZIPPED_XMLS = 1
     GZIPPED_XMLS = 2
+    MULTIPLE_XMLS = 3
 
     _mode_dict = {'SINGLE_XML':SINGLE_XML,
                   'ZIPPED_XMLS':ZIPPED_XMLS,
-                  'GZIPPED_XMLS':GZIPPED_XMLS }
+                  'GZIPPED_XMLS':GZIPPED_XMLS,
+                  'MULTIPLE_XMLS':MULTIPLE_XMLS }
 
     def mode_int(self, mode):
         return self._mode_dict.get(mode,self.UNKNOWN) 
@@ -20,12 +22,14 @@ class XMLConnector(GenericConnector):
         self.mode = self.mode_int(self.config['mode'])
         self.limit_books = limit_books
          
-    def fetchData(self):
+    def fetchData(self,unpack = True):
         self.downloadFile()
-        if self.mode == XMLConnector.ZIPPED_XMLS:
-            self.unpackZIP(os.path.join(self.backup_dir,self.filename))
-        elif self.mode == XMLConnector.GZIPPED_XMLS: 
-            self.unpackGZIP(os.path.join(self.backup_dir,self.filename))
+        if unpack:
+            if self.mode == XMLConnector.ZIPPED_XMLS:
+                self.unpackZIP(os.path.join(self.backup_dir,self.filename))
+            elif self.mode == XMLConnector.GZIPPED_XMLS: 
+                self.downloadFile()
+                self.unpackGZIP(os.path.join(self.backup_dir,self.filename))
 
     def getTagValue(self, product, tagName, default=""):
         tag = product.getElementsByTagName(tagName)[0]

@@ -100,20 +100,26 @@ class GenericConnector(object):
                     self.max_len[i] = len(list[i])
                     self.max_len_entry[i] = list[i]
 
-    def downloadFile(self,filename=''):
-        u = urllib2.urlopen(self.url)
+    def downloadFile(self, url=None, filename=None):
+        if not url:
+            url = self.url
+        u = urllib2.urlopen(url)
         if self.backup_dir and not os.path.exists(self.backup_dir):
+
             os.makedirs(self.backup_dir)
         
-        if not filename:
+        if filename:
+            filename = os.path.join(self.backup_dir, filename)
+        else:
             filename = os.path.join(self.backup_dir, self.filename)
+
         f = open(filename, 'wb')
         meta = u.info()
         if meta.getheader("Content-Length"):
             self.logger.info('%s connector, downloading %s into %s (%s bytes)' % 
-            (self.name, self.filename, self.backup_dir, int(meta.getheader('Content-Length'))))
+            (self.name, url, filename, int(meta.getheader('Content-Length'))))
         else:
-            self.logger.info('%s connector downloading %s into %s'%(self.name, self.filename,self.backup_dir))
+            self.logger.info('%s connector downloading %s into %s'%(self.name, url, filename))
         if meta.getheader("Last-Modified"):
             self.logger.info('File last modified: %s'%meta.getheader('Last-Modified'))
         
@@ -128,7 +134,7 @@ class GenericConnector(object):
             f.write(buffer)
 
         f.close()
-        self.logger.debug('Download of %s completed, downloaded %d bytes'%(self.filename,file_size_dl))
+        self.logger.debug('Download of %s completed, downloaded %d bytes'%(filename,file_size_dl))
         return filename
 
     def unpackGZIP(self, gzipname):
