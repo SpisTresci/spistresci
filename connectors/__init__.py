@@ -10,6 +10,7 @@ from nexto import Nexto
 from rw2010 import RW2010
 from selkar import Selkar
 from virtualo import Virtualo
+from zinamon import Zinamon
 
 #from wolnelektury import fetch
 
