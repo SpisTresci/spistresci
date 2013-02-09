@@ -77,10 +77,19 @@ class ConnectorsLogger():
                     fromaddr = config['fromaddr']
                     toaddrs = config['toaddrs']
                     subject = config.get('subject','Error Executing Connectors')
+
                     credentials = config.get('credentials',None)
+
+                    #backward compatibility (python < 2.6)
+                    (minor,major)=sys.version_info[0:2]
+                    if minor<=2 and major <6:
+                        credentials = None
+
                     if credentials:
                         credentials = tuple(credentials.split(','))
-                    handler_object=self.handler_classes[handler](mailhost, fromaddr, toaddrs, subject, credentials)
+                        handler_object=self.handler_classes[handler](mailhost, fromaddr, toaddrs, subject, credentials)
+                    else:
+                        handler_object=self.handler_classes[handler](mailhost, fromaddr, toaddrs, subject)
                 elif handler == 'SYSLOG':
                     handler_object=self.handler_classes[handler]('/dev/log')
                 else:
