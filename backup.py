@@ -15,15 +15,13 @@ def main():
 
     Logger.debug('Created folowing connectors %s'%[connector.name for connector in connectors])
 
-    try:
-        for connector in connectors:
+    for connector in connectors:
+        try:
             #only download, do not unpack
             connector.fetchData(unpack=False)
-    except Exception as e:
-        Logger.exception('Error executing backup')
-    else:
-        Logger.debug('Backup execution finished')
-
+        except Exception:
+            Logger.exception('Error in backup, connector %s'%connector.name)
+    Logger.debug('Backup execution finished')
 
 if __name__ == '__main__':
     main()

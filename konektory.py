@@ -15,14 +15,13 @@ def main():
 
     Logger.debug('Created folowing connectors %s'%[connector.name for connector in connectors])
 
-    try:
-        for connector in connectors:
+    for connector in connectors:
+        try:
             connector.fetchData()
             connector.parse()
-    except Exception as e:
-        Logger.exception('Error executing connectors')
-    else:
-        Logger.debug('Execution finished')
+        except Exception:
+            Logger.exception('Error executing connector %s'%connector.name)
+    Logger.debug('Execution finished')
 
 
 if __name__ == '__main__':
