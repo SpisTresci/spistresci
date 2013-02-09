@@ -75,7 +75,7 @@ class ConnectorsLogger():
                 elif handler == 'SMTP':
                     mailhost = config['mailhost']
                     fromaddr = config['fromaddr']
-                    toaddrs = config['toaddrs']
+                    toaddrs = config['toaddrs'].split(',')
                     subject = config.get('subject','Error Executing Connectors')
 
                     credentials = config.get('credentials',None)
