@@ -24,7 +24,7 @@ class TestGenericConnector():
         now = datetime.now().strftime('%Y%m%d%H%M')
         pattern='unittests/data/generic_connector/backup/'+now
         eq_(pattern,self.mc.backup_dir[:-3])
-        eq_(self.mc.remove_backup,1)
+        eq_(self.mc.backup_archive,0)
 
 
 class TestGenericConnectorWithGenericConfigFileField(TestGenericConnector):

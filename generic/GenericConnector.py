@@ -1,15 +1,26 @@
 import urllib2
 import zipfile
 import gzip
+import bz2
+import tarfile
 import os.path
-import ConfigParser
-from datetime import datetime
 import shutil
+from datetime import datetime
 
+import ConfigParser
 from connectors_logger import logger_instance
+from utils import Enum
 
 class GenericConnector(object):
-    
+   
+    '''
+    NONE - remove backup dir after execution
+    UNCOMPRESSED - do not touch backup dir after execution
+    BZIP - create bziped2 tar archive
+    '''
+    class ArchiveType(Enum):
+        values = ['NONE', 'UNCOMPRESSED', 'BZIP']
+
     max_len = []
     max_len_entry = []
 
@@ -25,7 +36,6 @@ class GenericConnector(object):
     @classmethod
     def my_name(cls):
         return cls.__name__
-
 
     name = property(lambda x:x.my_name())
 
@@ -47,9 +57,10 @@ class GenericConnector(object):
         self.url = self.config['url']
         self.filename = self.config['filename']
         self.backup_dir = self.config.get('backup_dir', '')
-        self.remove_backup = int(self.config.get('remove_backup', 1))
+        self.backup_archive = self.ArchiveType.int(self.config.get('backup_archive','NONE'))
         self.unpack_file = self.config.get('unpack_file', '')
         self.unpack_dir = self.config.get('unpack_dir', '')
+        self.archive_file = self.config.get('archive_file','')
         self.remove_unpacked = int(self.config.get('remove_unpacked', 1))
         self.log_config=self.config.get('log_config', 'conf/log.connectors.ini')
         self.logger = logger_instance(self.log_config)
@@ -57,19 +68,28 @@ class GenericConnector(object):
   
     def __del__(self):
         self.logger.debug('Cleaning up after executing %s connector'%self.name)
-        if self.backup_dir and self.remove_backup and os.path.exists(self.backup_dir):
-            cwd = os.getcwd().rstrip('/')+'/'
-            abs_path = os.path.abspath(self.backup_dir).rstrip('/')+'/'
-            if abs_path in cwd:
-                raise IOError('Are you insane or something?. Don\'t tell me to remove whole my working dir\nHINT:backup_dur should not be current dir or parent')
-            self.logger.debug('Connector %s. Removing backup dir %s'%(self.name,self.backup_dir))
-            shutil.rmtree(self.backup_dir)
-            self.backup_dir=''
+        if self.backup_dir:
+            if self.backup_archive == self.ArchiveType.NONE and os.path.exists(self.backup_dir):
+                cwd = os.getcwd().rstrip('/')+'/'
+                abs_path = os.path.abspath(self.backup_dir).rstrip('/')+'/'
+                if abs_path in cwd:
+                    raise IOError(
+                    'Are you insane or something?. Don\'t tell me to remove whole my working dir\nHINT:backup_dur should not be current dir or parent'
+                    )
+                self.logger.debug('Connector %s. Removing backup dir %s'
+                                    %(self.name,self.backup_dir)
+                                 )
+                shutil.rmtree(self.backup_dir)
+                self.backup_dir=''
         if self.unpack_dir and self.remove_unpacked and os.path.exists(self.unpack_dir):
             abs_path = os.path.abspath(self.unpack_dir).rstrip('/')+'/'
             if abs_path in cwd:
-                raise IOError('Are you insane or something?. Don\'t tell me to remove whole my working dir\nHINT:unpack_dir should not be current dir or parent')
-            self.logger.debug('Connector %s. Removing unpack dir %s'%(self.name,self.backup_dir))
+                raise IOError(
+                'Are you insane or something?. Don\'t tell me to remove whole my working dir\nHINT:unpack_dir should not be current dir or parent'
+                )
+            self.logger.debug('Connector %s. Removing unpack dir %s'
+                                %(self.name,self.backup_dir)
+                             )
             shutil.rmtree(self.unpack_dir)
             self.unpack_dir=''
 
@@ -165,5 +185,9 @@ class GenericConnector(object):
             fd = open(os.path.join(dirname,name),"w")
             fd.write(zfile.read(name))
             fd.close()
-       
+
+    def createArchive(self, dirname, archive_file):
+        pass
+        
+
     

@@ -1,18 +1,21 @@
-# Backport of OrderedDict() class that runs on Python 2.4, 2.5, 2.6, 2.7 and pypy.
-# Passes Python2.7's test suite and incorporates all the latest updates.
-#
-# running comments:
-# - Found on http://code.activestate.com/recipes/576693/#
-# - Does not work on python 2.4
-# - TODO:
-#   it would be nice if we have unittest for this
-#
-# Usage:
-# try:
-#   from collections import OrderedDict
-# except ImportError:
-#   from compatibility import OrderedDict
+'''
+Backport of OrderedDict() class that runs on Python 2.4, 2.5, 2.6, 2.7 and pypy.
+Passes Python2.7's test suite and incorporates all the latest updates.
 
+Found at http://code.activestate.com/recipes/576693/
+Author: Raymond Hettinger
+http://code.activestate.com/recipes/users/178123/
+
+- Does not work on python 2.4
+- TODO:
+  it would be nice if we have unittest for this
+
+Usage:
+try:
+  from collections import OrderedDict
+except ImportError:
+  from compatibility import OrderedDict
+'''
 try:
     from thread import get_ident as _get_ident
 except ImportError:

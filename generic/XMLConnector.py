@@ -1,35 +1,32 @@
 from generic import GenericConnector
+from utils import Enum
 import os
 
 class XMLConnector(GenericConnector):
 
-    UNKNOWN = -1
-    SINGLE_XML = 0
-    ZIPPED_XMLS = 1
-    GZIPPED_XMLS = 2
-    MULTIPLE_XMLS = 3
-
-    _mode_dict = {'SINGLE_XML':SINGLE_XML,
-                  'ZIPPED_XMLS':ZIPPED_XMLS,
-                  'GZIPPED_XMLS':GZIPPED_XMLS,
-                  'MULTIPLE_XMLS':MULTIPLE_XMLS }
+    class XML_Mode(Enum):
+        values = [
+            'UNKNOWN',
+            'SINGLE_XML',
+            'ZIPPED_XMLS',
+            'GZIPPED_XMLS',
+            'MULTIPLE_XMLS',
+        ]
 
     xml_tag_dict = {}
 
-    def mode_int(self, mode):
-        return self._mode_dict.get(mode,self.UNKNOWN) 
 
     def __init__(self,limit_books=0):
         GenericConnector.__init__(self)
-        self.mode = self.mode_int(self.config['mode'])
+        self.mode = self.XML_Mode.int(self.config.get('mode','UNKNOWN'))
         self.limit_books = limit_books
          
     def fetchData(self,unpack = True):
         self.downloadFile()
         if unpack:
-            if self.mode == XMLConnector.ZIPPED_XMLS:
+            if self.mode == XMLConnector.XML_Mode.ZIPPED_XMLS:
                 self.unpackZIP(os.path.join(self.backup_dir,self.filename))
-            elif self.mode == XMLConnector.GZIPPED_XMLS: 
+            elif self.mode == XMLConnector.XML_Mode.GZIPPED_XMLS: 
                 self.downloadFile()
                 self.unpackGZIP(os.path.join(self.backup_dir,self.filename))
 
