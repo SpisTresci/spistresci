@@ -1,6 +1,9 @@
 #!/usr/bin/env python
 import urllib2
-import json
+try:
+    import json
+except ImportError:
+    import simplejson as json
 url = 'http://wolnelektury.pl/api/books/'
 
 def fetch():
