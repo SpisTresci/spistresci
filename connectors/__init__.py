@@ -1,7 +1,7 @@
 from generic import GenericConnector
 from generic import XMLConnector
 
-from afiliant import Audiobook,Audioteka,Legimi,ZielonaSowa,TMC
+from afiliant import *
 from bezkartek import BezKartek
 from dobryebook import DobryEbook
 from escapemagazine import EscapeMagazine
