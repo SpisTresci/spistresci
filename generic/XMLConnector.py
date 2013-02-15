@@ -16,8 +16,8 @@ class XMLConnector(GenericConnector):
     xml_tag_dict = {}
 
 
-    def __init__(self,limit_books=0):
-        GenericConnector.__init__(self)
+    def __init__(self, name=None, limit_books=0):
+        GenericConnector.__init__(self, name=name)
         self.mode = self.XML_Mode.int(self.config.get('mode','UNKNOWN'))
         self.limit_books = limit_books
          

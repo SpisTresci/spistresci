@@ -7,9 +7,8 @@ import urllib, urllib2
 class Nexto(XMLConnector):
 
 
-
-    def __init__(self):
-        XMLConnector.__init__(self)
+    def __init__(self, name=None):
+        XMLConnector.__init__(self, name=name)
         
     def downloadFile(self):
         values = {'api_id': self.config['api_id'],
@@ -29,7 +28,7 @@ class Nexto(XMLConnector):
                  
         filename  = os.path.join(self.unpack_dir,self.unpack_file)
         if not os.path.exists(filename):
-             raise IOError('%s connector, missing xml file %s'%(self.my_name(),filename))
+             raise IOError('%s connector, missing xml file %s'%(self.name,filename))
 
         root = et.parse(filename).getroot()
         

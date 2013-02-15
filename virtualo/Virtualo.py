@@ -6,10 +6,8 @@ from xml.dom import minidom
 
 class Virtualo(XMLConnector):
     
-    
-    
-    def __init__(self):
-        XMLConnector.__init__(self)
+    def __init__(self,name=None):
+        XMLConnector.__init__(self, name=name)
     
     def removeDescriptionShortTag(self, filename):
         """

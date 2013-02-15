@@ -4,14 +4,14 @@ from xml.etree import ElementTree as et
 
 class DobryEbook(XMLConnector):
 
-    def __init__(self):
-        XMLConnector.__init__(self)
+    def __init__(self,name=None):
+        XMLConnector.__init__(self, name=name)
 
     def parse(self):
 
         filename=os.path.join(self.backup_dir,self.filename)
         if not os.path.exists(filename):
-            raise IOError('%s connector, missing xml file %s'%(self.my_name(),filename))
+            raise IOError('%s connector, missing xml file %s'%(self.name, filename))
 
         root = et.parse(filename).getroot()
 

@@ -34,10 +34,12 @@ class GenericConnector(object):
             raise ConfigParser.Error('Could not read config from file %s'%cls.config_file)
     
     @classmethod
-    def my_name(cls):
+    def class_name(cls):
         return cls.__name__
 
-    name = property(lambda x:x.my_name())
+    @property
+    def name(self):
+        return self._name
 
     def _parse_config(self, config_file='conf/connectors.ini', section=None, config_object = None):
         if not config_object:
@@ -45,14 +47,18 @@ class GenericConnector(object):
         else:
              self.config_object = config_object
         if not section:
-           section = self.my_name()
+           section = self.name
         self.section = section
 
         self.config = dict(self.config_object.items(self.section,
                         vars={'date':datetime.now().strftime('%Y%m%d%H%M%S')}
                       ))
         
-    def __init__(self):
+    def __init__(self,name=None):
+        if not name:
+            self._name = self.class_name()
+        else:
+            self._name = name
         self._parse_config(self.config_file, config_object=self.config_object)
         self.url = self.config['url']
         self.filename = self.config['filename']

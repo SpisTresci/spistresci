@@ -67,17 +67,8 @@ class Afiliant(XMLConnector):
             dic = self.make_dict(book)
             print dic
 
-
-class Legimi(Afiliant):pass
-
-class Audiobook(Afiliant):pass
-
-class Audioteka(Afiliant):pass
-   
 #TODO: what to do with "Opracowanie: 'Name'" Producers (authors)
 class ZielonaSowa(Afiliant):pass
-
-class TMC(Afiliant):pass
 
 class ZloteMysli(Afiliant):
 

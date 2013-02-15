@@ -15,8 +15,8 @@ class RW2010(XMLConnector):
         'cena':'price',
     }
 
-    def __init__(self, limit_books=0):
-        XMLConnector.__init__(self, limit_books)
+    def __init__(self, name, limit_books=0):
+        XMLConnector.__init__(self, name=name, limit_books=limit_books)
         self.macro_url = self.config['macro_url']
         u = urllib2.urlopen(self.macro_url) 
         meta = u.info()

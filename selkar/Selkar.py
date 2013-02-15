@@ -4,8 +4,8 @@ import os
 import sys
 class Selkar(XMLConnector):
     
-    def __init__(self,limit_books=0):
-        XMLConnector.__init__(self,limit_books)
+    def __init__(self, name=None, limit_books=0):
+        XMLConnector.__init__(self,name=name,limit_books=limit_books)
         self.api_key = self.config['api_key']
         self.method = self.config.get('method','getProduct')
         self.aff=self.config['aff']
