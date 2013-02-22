@@ -1,7 +1,7 @@
 import urllib2
 import zipfile
+import tarfile
 import gzip
-import bz2
 import tarfile
 import os.path
 import shutil
@@ -16,10 +16,20 @@ class GenericConnector(object):
     '''
     NONE - remove backup dir after execution
     UNCOMPRESSED - do not touch backup dir after execution
-    BZIP - create bziped2 tar archive
+    BZIP - create tar.bz2 archive
+    GZIP - create tar.gz archive
     '''
     class ArchiveType(Enum):
-        values = ['NONE', 'UNCOMPRESSED', 'BZIP']
+        values = ['NONE', 'UNCOMPRESSED', 'BZIP', 'GZ']
+
+    class BookList_Mode(Enum):
+        values = [
+            'UNKNOWN',
+            'SINGLE_XML',
+            'ZIPPED_XMLS',
+            'GZIPPED_XMLS',
+            'MULTIPLE_XMLS',
+        ]
 
     max_len = []
     max_len_entry = []
@@ -71,33 +81,47 @@ class GenericConnector(object):
         self.log_config=self.config.get('log_config', 'conf/log.connectors.ini')
         self.logger = logger_instance(self.log_config)
         self.logger.debug('%s connector created'%self.name)
+        self.mode = self.BookList_Mode.int(self.config.get('mode','UNKNOWN'))
   
     def __del__(self):
         self.logger.debug('Cleaning up after executing %s connector'%self.name)
         if self.backup_dir:
+            if self.backup_archive in [self.ArchiveType.BZIP, self.ArchiveType.GZ] and \
+               self.mode not in [self.BookList_Mode.ZIPPED_XMLS, self.BookList_Mode.GZIPPED_XMLS]:
+                self.compress_dir(self.backup_dir, self.backup_archive)
+                self.backup_archive = self.ArchiveType.NONE
+                 
             if self.backup_archive == self.ArchiveType.NONE and os.path.exists(self.backup_dir):
-                cwd = os.getcwd().rstrip('/')+'/'
-                abs_path = os.path.abspath(self.backup_dir).rstrip('/')+'/'
-                if abs_path in cwd:
-                    raise IOError(
-                    'Are you insane or something?. Don\'t tell me to remove whole my working dir\nHINT:backup_dur should not be current dir or parent'
-                    )
-                self.logger.debug('Connector %s. Removing backup dir %s'
-                                    %(self.name,self.backup_dir)
-                                 )
-                shutil.rmtree(self.backup_dir)
+                self._rm_ifpossible(self.backup_dir, 'backup')
                 self.backup_dir=''
+
         if self.unpack_dir and self.remove_unpacked and os.path.exists(self.unpack_dir):
-            abs_path = os.path.abspath(self.unpack_dir).rstrip('/')+'/'
-            if abs_path in cwd:
-                raise IOError(
-                'Are you insane or something?. Don\'t tell me to remove whole my working dir\nHINT:unpack_dir should not be current dir or parent'
-                )
-            self.logger.debug('Connector %s. Removing unpack dir %s'
-                                %(self.name,self.backup_dir)
-                             )
-            shutil.rmtree(self.unpack_dir)
+            self._rm_ifpossible(self.unpack_dir, 'unpack')
             self.unpack_dir=''
+
+    def _rm_ifpossible(self, path, dir_type='backup'):
+        cwd = os.getcwd().rstrip('/')+'/'
+        abs_path = os.path.abspath(path).rstrip('/')+'/'
+        if abs_path in cwd:
+            raise IOError(
+            'Are you insane or something?. Don\'t tell me to remove whole my working dir (%s). HINT:%s dir should not be current dir or parent'%(path, dir_type)
+            )
+        self.logger.debug('Connector %s. Removing %s dir %s'%(self.name, dir_type, path))
+        shutil.rmtree(path)
+
+
+    def compress_dir(self, path, archive_type):
+       if archive_type == self.ArchiveType.GZ:
+           mode = 'gz'
+       else:
+           mode = 'bz2'
+       path = os.path.abspath(path)
+       basename = os.path.basename(path)
+       tar_name = os.path.abspath(os.path.join(path, '..' ,'%s.tar.%s'%(basename, mode)))
+       self.logger.debug('Comprassing dir %s to %s', path, tar_name)
+       tar = tarfile.open(tar_name, 'w:%s'%mode)
+       tar.add(path, arcname = basename)     
+
 
     #@abc.abstractmethod    
     def fetchData(self):
@@ -192,8 +216,3 @@ class GenericConnector(object):
             fd.write(zfile.read(name))
             fd.close()
 
-    def createArchive(self, dirname, archive_file):
-        pass
-        
-
-    

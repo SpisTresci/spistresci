@@ -4,29 +4,18 @@ import os
 
 class XMLConnector(GenericConnector):
 
-    class XML_Mode(Enum):
-        values = [
-            'UNKNOWN',
-            'SINGLE_XML',
-            'ZIPPED_XMLS',
-            'GZIPPED_XMLS',
-            'MULTIPLE_XMLS',
-        ]
-
     xml_tag_dict = {}
-
 
     def __init__(self, name=None, limit_books=0):
         GenericConnector.__init__(self, name=name)
-        self.mode = self.XML_Mode.int(self.config.get('mode','UNKNOWN'))
         self.limit_books = limit_books
          
     def fetchData(self,unpack = True):
         self.downloadFile()
         if unpack:
-            if self.mode == XMLConnector.XML_Mode.ZIPPED_XMLS:
+            if self.mode == XMLConnector.BookList_Mode.ZIPPED_XMLS:
                 self.unpackZIP(os.path.join(self.backup_dir,self.filename))
-            elif self.mode == XMLConnector.XML_Mode.GZIPPED_XMLS: 
+            elif self.mode == XMLConnector.BookList_Mode.GZIPPED_XMLS: 
                 self.downloadFile()
                 self.unpackGZIP(os.path.join(self.backup_dir,self.filename))
 
