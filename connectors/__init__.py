@@ -4,6 +4,7 @@ from generic import XMLConnector
 from afiliant import *
 from bezkartek import BezKartek
 from dobryebook import DobryEbook
+from czytio import Czytio
 from escapemagazine import EscapeMagazine
 from helion import Helion
 from koobe import Koobe
