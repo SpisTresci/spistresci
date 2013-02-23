@@ -150,10 +150,14 @@ class GenericConnector(object):
                     self.max_len[i] = len(list[i])
                     self.max_len_entry[i] = list[i]
 
-    def downloadFile(self, url=None, filename=None):
+    def downloadFile(self, url=None, filename=None, headers = None):
         if not url:
             url = self.url
-        u = urllib2.urlopen(url)
+        if headers:
+            req = urllib2.Request(url, headers=headers)
+            u = urllib2.urlopen(req)
+        else:
+            u = urllib2.urlopen(url)
         if self.backup_dir and not os.path.exists(self.backup_dir):
 
             os.makedirs(self.backup_dir)
