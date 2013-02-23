@@ -16,18 +16,49 @@ class TestGenericConnector():
     def setUp(self):
         MockConnector.config_file = 'unittests/data/generic_connector/conf/test.ini'
         self.mc = MockConnector()
+
+    def tearDown(self):
+        if os.path.exists(self.mc.backup_dir):
+            shutil.rmtree(self.mc.backup_dir)
+        if os.path.exists(self.mc.unpack_dir):
+            shutil.rmtree(self.mc.unpack_dir)
      
     def test_init(self):
         ok_(self.mc is not None)
-        eq_(self.mc.url,'localhost://')
-        ok_(type(self.mc.config) is dict,'config should be dict')
+        eq_(self.mc.url, 'http://www.google.com/images/srpr/logo3w.png')
+        ok_(type(self.mc.config) is dict, 'config should be dict')
         eq_(self.mc.filename,'generic.xml')
             #check with one minute accuracy
         now = datetime.now().strftime('%Y%m%d%H%M')
         pattern='unittests/data/generic_connector/backup/'+now
         eq_(pattern,self.mc.backup_dir[:-3])
-        eq_(self.mc.backup_archive,0)
+        eq_(self.mc.backup_archive, self.mc.ArchiveType.UNCOMPRESSED)
+        eq_(self.mc.mode, self.mc.BookList_Mode.SINGLE_XML)
 
+    def test_download_no_args(self):
+        self.mc.downloadFile()
+        filename = os.path.join(self.mc.backup_dir, self.mc.filename)
+        ok_(os.path.exists(filename),'File %s should exist'%filename)
+
+    def test_download_specified_filename(self):
+        filename = 'test.xml'
+        self.mc.downloadFile(filename = filename)
+        filepath = os.path.join(self.mc.backup_dir, filename)
+        ok_(os.path.exists(filepath),'File %s should exist'%filepath)
+
+    def test_download_specified_url(self):
+        url = 'http://i.s-microsoft.com/global/ImageStore/PublishingImages/logos/hp/logo-lg-1x.png'
+        self.mc.downloadFile(url = url)
+        filename = os.path.join(self.mc.backup_dir, self.mc.filename)
+        ok_(os.path.exists(filename),'File %s should exist'%filename)
+
+    #e.g. wiki requires non-bot user-agent
+    def test_download_with_specified_headers(self):
+        url = 'http://upload.wikimedia.org/wikipedia/en/b/bc/Wiki.png'
+        headers = {'User-Agent':'I am not a bot'}
+        self.mc.downloadFile(url = url, headers = headers)
+        filename = os.path.join(self.mc.backup_dir, self.mc.filename)
+        ok_(os.path.exists(filename),'File %s should exist'%filename)
 
 class TestGenericConnectorWithGenericConfigFileField(TestGenericConnector):
     def setUp(self):
