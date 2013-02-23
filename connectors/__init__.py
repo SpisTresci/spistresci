@@ -16,3 +16,4 @@ from zinamon import Zinamon
 
 #from wolnelektury import fetch
 
+import Tools

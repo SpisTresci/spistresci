@@ -3,27 +3,19 @@ import ConfigParser
 import sys
 
 from connectors import *
+from connectors import Tools
 from connectors_logger import logger_instance
 
 def main():
     GenericConnector.config_file = 'conf/backup.ini'
     GenericConnector.read_config()
-    Logger = logger_instance(GenericConnector.config_object.get('DEFAULT','log_config'))
+    Logger = logger_instance(GenericConnector.config_object.get('DEFAULT', 'log_config'))
 
-    connector_classnames = {}
-    for connector in GenericConnector.config_object.sections():
-        connector_name = None
-        try:
-            connector_name = GenericConnector.config_object.get(connector,'classname')
-        except ConfigParser.NoOptionError:
-            pass
-        finally:
-            if not connector_name:
-                connector_name = connector
-            connector_classnames[connector]=connector_name
+    connector_classnames = Tools.get_classnames()
+    final_connector_dic = Tools.filter_classnames(connector_classnames, sys.argv[1:])
 
     connectors = [ getattr(sys.modules[__name__],connector[1])(name=connector[0])
-                  for connector in connector_classnames.items() ]
+                  for connector in final_connector_dic.items() ]
 
 
     Logger.debug('Created folowing connectors %s'%[connector.name for connector in connectors])
