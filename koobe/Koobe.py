@@ -62,13 +62,13 @@ class Koobe(XMLConnector):
             # print "author: " + author
             # print "format: " + format
             # print "protection: " + protection
-            # self.mesureLenght([title, id, description, url, image, price, category, producer, isbn, author, format, protection])
+            self.mesureLenght(d)
             #self.add_record({'external_id':1234, 'authors':['Jas Fasola'], 'description':'opis', 'title':'Taki sobie tytul', 'category':'horror'})
             self.add_record(d)
 
         print self.max_len
-        for el in self.max_len_entry:
-            print el
+        for key in self.max_len_entry.keys():
+            print key+": "+ self.max_len_entry[key]
 
 Base = SqlWrapper.getBaseClass()
 

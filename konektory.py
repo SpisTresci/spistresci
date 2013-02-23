@@ -8,7 +8,7 @@ from sql_wrapper import *
 
 def main():
 
-    GenericConnector.config_file = 'conf/database_tests.ini'
+    GenericConnector.config_file = 'conf/bezkartek.ini'
     GenericConnector.read_config()
     SqlWrapper.init()
     Logger = logger_instance(GenericConnector.config_object.get('DEFAULT','log_config'))

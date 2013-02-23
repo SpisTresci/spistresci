@@ -14,6 +14,27 @@ from sql_wrapper import *
 
 registered={}
 
+class GenericBase(object):
+    @classmethod
+    def class_name(cls):
+        return cls.__name__
+
+    @property
+    def name(self):
+        return self._name
+
+    @staticmethod
+    def getConcretizedClass(context, className):
+        if "Author" in context.my_name():
+            return registered[context.my_name()[:-len("Author")] + className]
+        elif "Book" in context.my_name():
+            return registered[context.my_name()[:-len("Book")] + className]
+        elif "BookDescription" in context.my_name():
+            return registered[context.my_name()[:-len("BookDescription")] + className]
+        else: #Connector
+            return registered[context.my_name() + className]
+
+
 class GenericConnector(object):
    
     '''
@@ -34,8 +55,8 @@ class GenericConnector(object):
             'MULTIPLE_XMLS',
         ]
 
-    max_len = []
-    max_len_entry = []
+    max_len = {}
+    max_len_entry = {}
 
     config_file = 'conf/connectors.ini'
     config_object = None
@@ -46,14 +67,6 @@ class GenericConnector(object):
         if not cls.config_object.read(cls.config_file):
             raise ConfigParser.Error('Could not read config from file %s'%cls.config_file)
     
-    @classmethod
-    def class_name(cls):
-        return cls.__name__
-
-    @property
-    def name(self):
-        return self._name
-
     def _parse_config(self, config_file='conf/connectors.ini', section=None, config_object = None):
         if not config_object:
             self.read_config()
@@ -159,6 +172,27 @@ class GenericConnector(object):
                     self.max_len[i] = len(list[i])
                     self.max_len_entry[i] = list[i]
 
+    def mesureLenghtDict(self, dic):
+        if self.max_len == {}:
+            self.max_len = dict(dic)
+            for key in self.max_len.keys():
+                if not dic[key]:
+                    self.max_len[key] = 0
+                    self.max_len_entry[key]=''
+                else:
+                    self.max_len[key]=len(dic[key])
+                    self.max_len_entry[key]=dic[key]
+        else:
+            for key in dic.keys():
+                try:
+                    if dic[key] != None and self.max_len[key] < len(dic[key]):
+                        self.max_len[key] = len(dic[key])
+                        self.max_len_entry[key] = dic[key]
+                except AttributeError:
+                    self.max_len[key] = len(dic[key])
+                    self.max_len_entry[key] = dic[key]
+
+
     def downloadFile(self, url=None, filename=None):
         if not url:
             url = self.url
@@ -225,7 +259,8 @@ class GenericConnector(object):
             fd.write(zfile.read(name))
             fd.close()
 
-    def get_or_create_(self, ClassName, param_name, d, session):
+    @classmethod
+    def get_or_create_(cls, ClassName, param_name, d, session):
         c = session.query(ClassName).filter_by(**{param_name:d[param_name]}).first()
         if not c:
             c = ClassName(**d)
@@ -236,26 +271,32 @@ class GenericConnector(object):
 
        
     def add_record(self, d):
-        Book = registered[self.name + 'Book']
-        Description = registered[self.name + 'BookDescription']
-        Author = registered[self.name + 'Author']
+        Book =  GenericBook.getConcretizedClass(context=self)
+        Description = GenericBookDescription.getConcretizedClass(context=self)
+        Author = GenericAuthor.getConcretizedClass(context=self)
         
         Session = sessionmaker(bind=SqlWrapper.getEngine())
         session = Session()
         
         book = self.get_(Book, "external_id", d, session)
+
         if not book:
             book=Book(d)
             desc=Description(d)
             book.description=desc
             for author in d['authors']:
-                a = self.get_or_create_(Author, 'name', {'name':author}, session)
+                a = Author.get_or_create(author, session)
                 a.books.append(book)
-                session.merge(a)
+                session.add(a)
+            session.add(book)
+            session.commit()
+        else:
+            book.update(d, session)
+            session.commit()
 
-            session.commit()       
+        session.close()
        
-class GenericBook(object):
+class GenericBook(GenericBase):
     id = Column(Integer, primary_key=True)
     title = Column(Unicode(255))
     external_id = Column(Integer, unique=True)
@@ -277,7 +318,45 @@ class GenericBook(object):
             except AttributeError:
                 pass
 
-class GenericBookDescription(object):
+    def update(self, new_data, session):
+        new_book = type(self)(new_data)
+        for key in new_data:
+            try:
+                atr_type = type(getattr(self, key))
+                un = unicode(getattr(self, key))
+
+                if key == 'authors':
+                    str_author_list=[]
+                    for author in self.authors:
+                        str_author_list.append(unicode(author))
+
+                    if sorted(str_author_list) != sorted(new_data['authors']):
+                        Author = GenericAuthor.getConcretizedClass(context=self)
+
+                        for str_author in new_data['authors']:
+                            if str_author not in str_author_list:
+                                a = Author.get_or_create(str_author, session)
+                                #a.books.append(self)
+                                self.authors.append(a)
+                                session.add(a)
+
+                        for str_author in str_author_list:
+                            if str_author not in new_data['authors']:
+                                a = Author.get_or_create(str_author, session)
+                                self.authors.remove(a)
+                                session.commit()
+
+                elif un != new_data[key]:
+                    setattr(self, key, new_data[key])
+
+            except AttributeError:
+                pass
+
+    @staticmethod
+    def getConcretizedClass(context):
+        return GenericBase.getConcretizedClass(context, 'Book')
+
+class GenericBookDescription(GenericBase):
     id = Column(Integer, primary_key=True)
     description = Column(Unicode(20000)) #TODO: parametr musi byc dynamicznie ustawiany
 
@@ -296,7 +375,15 @@ class GenericBookDescription(object):
         except:
             exit('Record ' + initial_data + ' doesn\'t have defined desription')
 
-class GenericAuthor(object):
+    def __unicode__(self):
+        return unicode(self.description)
+
+    @staticmethod
+    def getConcretizedClass(context):
+        return GenericBase.getConcretizedClass(context, 'BookDescription')
+
+
+class GenericAuthor(GenericBase):
     id = Column(Integer, primary_key=True)
     name = Column(Unicode(255), unique=True)
 
@@ -312,4 +399,16 @@ class GenericAuthor(object):
                                       SqlWrapper.getBaseClass().metadata,
                                       Column('book_id', Integer, ForeignKey(name+'Book.id')),
                                       Column('author_id', Integer, ForeignKey(name+'Author.id'))
-                                      ))
+                                      ), backref='authors')
+    def __unicode__(self):
+        return unicode(self.name)
+
+    @classmethod
+    def get_or_create(cls, author, session):
+        return GenericConnector.get_or_create_(cls, 'name', {'name':author}, session)
+
+    @staticmethod
+    def getConcretizedClass(context):
+        return GenericBase.getConcretizedClass(context, 'Author')
+
+
