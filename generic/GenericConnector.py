@@ -198,7 +198,7 @@ class GenericConnector(object):
         fh.close()
 
         if not self.unpack_file:
-            self.unpack_file, ext = os.path.splitext(gzipname)
+            self.unpack_file, ext = os.path.splitext(os.path.basename(gzipname))
         if self.unpack_dir and not os.path.exists(self.unpack_dir):
                 os.makedirs(self.unpack_dir)
      
