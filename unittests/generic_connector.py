@@ -5,6 +5,7 @@ from generic import GenericConnector
 import os
 import shutil
 import tempfile
+import md5
 from datetime import datetime
 
 
@@ -59,6 +60,44 @@ class TestGenericConnector():
         self.mc.downloadFile(url = url, headers = headers)
         filename = os.path.join(self.mc.backup_dir, self.mc.filename)
         ok_(os.path.exists(filename),'File %s should exist'%filename)
+
+
+    @nottest
+    def _unpack_set_up(self, filename):
+        self.filename = filename
+        self.path = 'unittests/data/generic_connector/archives'
+        self.mc.unpack_dir = '/tmp/unittests/unpack_dir'
+
+    def assertUnpack(self, sample_file, sample_md5):
+        if sample_file and sample_md5:
+            ok_(os.path.exists(sample_file))
+            ok_(os.path.exists(sample_md5))
+            f = open(sample_md5)
+            md5sum = f.read().split(' ')[0]
+            f.close()
+            f = open(sample_file)
+            text = f.read()
+            f.close()
+            f_sum = md5.new(text)
+            eq_(md5sum,f_sum.hexdigest())
+    
+    def test_unpack_zip(self):
+        self._unpack_set_up('sample.zip')
+        self.mc.unpackZIP(os.path.join(self.path, self.filename))
+        sample_file = os.path.join(self.mc.unpack_dir, 'sample')
+        sample_md5 =os.path.join(self.mc.unpack_dir, 'sample.md5')
+        self.assertUnpack(sample_file, sample_md5)
+
+    def test_unpack_gzip(self):
+        self._unpack_set_up('sample.gz')
+        self.mc.unpackGZIP(os.path.join(self.path, self.filename))
+        sample_file = os.path.join(self.mc.unpack_dir, 'sample')
+        sample_md5 =os.path.join(self.path, 'sample.md5')
+        self.assertUnpack(sample_file, sample_md5)
+
+    def test_unpack_with_unpack_file_set(self):
+        self.mc.unpack_file = 'sample'
+        self.test_unpack_gzip()
 
 class TestGenericConnectorWithGenericConfigFileField(TestGenericConnector):
     def setUp(self):
