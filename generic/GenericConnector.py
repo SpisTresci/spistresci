@@ -133,16 +133,16 @@ class GenericConnector(object):
 
 
     def compress_dir(self, path, archive_type):
-       if archive_type == self.ArchiveType.GZ:
-           mode = 'gz'
-       else:
-           mode = 'bz2'
-       path = os.path.abspath(path)
-       basename = os.path.basename(path)
-       tar_name = os.path.abspath(os.path.join(path, '..' ,'%s.tar.%s'%(basename, mode)))
-       self.logger.debug('Comprassing dir %s to %s', path, tar_name)
-       tar = tarfile.open(tar_name, 'w:%s'%mode)
-       tar.add(path, arcname = basename)     
+        if archive_type == self.ArchiveType.GZ:
+            mode = 'gz'
+        else:
+            mode = 'bz2'
+        path = os.path.abspath(path)
+        basename = os.path.basename(path)
+        tar_name = os.path.abspath(os.path.join(path, '..' ,'%s.tar.%s'%(basename, mode)))
+        self.logger.debug('Comprassing dir %s to %s', path, tar_name)
+        tar = tarfile.open(tar_name, 'w:%s'%mode)
+        tar.add(path, arcname = basename)     
 
 
     #@abc.abstractmethod    
