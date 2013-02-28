@@ -14,6 +14,7 @@ def main():
     connector_classnames = Tools.get_classnames()
     final_connector_dic = Tools.filter_classnames(connector_classnames, sys.argv[1:])
 
+    print final_connector_dic
     connectors = [ getattr(sys.modules[__name__],connector[1])(name=connector[0])
                   for connector in final_connector_dic.items() ]
 

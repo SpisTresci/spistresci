@@ -9,30 +9,23 @@ from datetime import datetime
 
 import ConfigParser
 from connectors_logger import logger_instance
-from utils import Enum
+import utils
+#interesting thing: utils.Enum is hide by sql_wrapper.Enum 
 from sql_wrapper import *
 
 registered={}
 
 class GenericBase(object):
-    @classmethod
-    def class_name(cls):
-        return cls.__name__
-
-    @property
-    def name(self):
-        return self._name
-
     @staticmethod
     def getConcretizedClass(context, className):
-        if "Author" in context.my_name():
-            return registered[context.my_name()[:-len("Author")] + className]
-        elif "Book" in context.my_name():
-            return registered[context.my_name()[:-len("Book")] + className]
-        elif "BookDescription" in context.my_name():
-            return registered[context.my_name()[:-len("BookDescription")] + className]
+        if "Author" in context.name:
+            return registered[context.name[:-len("Author")] + className]
+        elif "Book" in context.name:
+            return registered[context.name[:-len("Book")] + className]
+        elif "BookDescription" in context.name:
+            return registered[context.name[:-len("BookDescription")] + className]
         else: #Connector
-            return registered[context.my_name() + className]
+            return registered[context.name + className]
 
 
 class GenericConnector(object):
@@ -43,10 +36,10 @@ class GenericConnector(object):
     BZIP - create tar.bz2 archive
     GZIP - create tar.gz archive
     '''
-    class ArchiveType(Enum):
+    class ArchiveType(utils.Enum):
         values = ['NONE', 'UNCOMPRESSED', 'BZIP', 'GZ']
 
-    class BookList_Mode(Enum):
+    class BookList_Mode(utils.Enum):
         values = [
             'UNKNOWN',
             'SINGLE_XML',
@@ -66,6 +59,15 @@ class GenericConnector(object):
         cls.config_object = ConfigParser.ConfigParser()
         if not cls.config_object.read(cls.config_file):
             raise ConfigParser.Error('Could not read config from file %s'%cls.config_file)
+
+    @classmethod
+    def class_name(cls):
+        return cls.__name__
+
+    @property
+    def name(self):
+        return self._name
+
     
     def _parse_config(self, config_file='conf/connectors.ini', section=None, config_object = None):
         if not config_object:
@@ -80,16 +82,17 @@ class GenericConnector(object):
                         vars={'date':datetime.now().strftime('%Y%m%d%H%M%S')}
                       ))
         
-    def __init__(self,name=None):
-        self.register()
+    def __init__(self, name=None):
         if not name:
             self._name = self.class_name()
         else:
             self._name = name
+        self.register()
         self._parse_config(self.config_file, config_object=self.config_object)
         self.url = self.config['url']
         self.filename = self.config['filename']
         self.backup_dir = self.config.get('backup_dir', '')
+        print self.ArchiveType.NONE
         self.backup_archive = self.ArchiveType.int(self.config.get('backup_archive','NONE'))
         self.unpack_file = self.config.get('unpack_file', '')
         self.unpack_dir = self.config.get('unpack_dir', '')
@@ -102,7 +105,7 @@ class GenericConnector(object):
   
 
     def register(self):
-        registered[self.my_name()]=type(self)
+        registered[self.name]=type(self)
    
 
     def __del__(self):
