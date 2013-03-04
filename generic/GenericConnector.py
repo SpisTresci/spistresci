@@ -12,6 +12,7 @@ from connectors_logger import logger_instance
 import utils
 #interesting thing: utils.Enum is hide by sql_wrapper.Enum 
 from sql_wrapper import *
+from pyisbn import *
 
 registered={}
 
@@ -194,6 +195,19 @@ class GenericConnector(object):
                 except AttributeError:
                     self.max_len[key] = len(dic[key])
                     self.max_len_entry[key] = dic[key]
+
+    def validateISBN(self, string):
+        try:
+            isbn = Isbn(string)
+            if isbn.validate():
+                return isbn.isbn
+            else:
+                print "Wrong ISBN formating! original ISBN: %s, cannonical ISBN: %s "%(string, isbn.isbn)
+                return ""
+
+        except IsbnError:
+            print "IsbnError! original ISBN: %s"%string
+            return ""
 
     def downloadFile(self, url=None, filename=None, headers = None):
         if not url:
