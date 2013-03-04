@@ -2,4 +2,5 @@ from GenericConnector import GenericConnector
 from GenericConnector import GenericBook
 from GenericConnector import GenericBookDescription
 from GenericConnector import GenericAuthor
+from GenericConnector import GenericBookPrice
 from XMLConnector import XMLConnector

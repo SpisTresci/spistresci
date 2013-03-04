@@ -431,4 +431,17 @@ class GenericAuthor(GenericBase):
     def getConcretizedClass(context):
         return GenericBase.getConcretizedClass(context, 'Author')
 
+class GenericBookPrice(GenericBase):
 
+    id = Column(Integer, primary_key=True)
+    @declared_attr
+    def book_id(cls):
+        return Column(Integer, ForeignKey(cls.__tablename__[:-len("Price")]+'.id'))
+
+    price = Column(Integer)
+    date = Column(DateTime)
+
+    @declared_attr
+    def __tablename__(cls):
+        registered[cls.__name__]=cls
+        return cls.__name__
