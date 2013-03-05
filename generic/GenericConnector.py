@@ -9,7 +9,24 @@ from datetime import datetime
 
 import ConfigParser
 from connectors_logger import logger_instance
-from utils import Enum
+import utils
+#interesting thing: utils.Enum is hide by sql_wrapper.Enum 
+from sql_wrapper import *
+
+registered={}
+
+class GenericBase(object):
+    @staticmethod
+    def getConcretizedClass(context, className):
+        if "Author" in context.name:
+            return registered[context.name[:-len("Author")] + className]
+        elif "Book" in context.name:
+            return registered[context.name[:-len("Book")] + className]
+        elif "BookDescription" in context.name:
+            return registered[context.name[:-len("BookDescription")] + className]
+        else: #Connector
+            return registered[context.name + className]
+
 
 class GenericConnector(object):
    
@@ -19,10 +36,10 @@ class GenericConnector(object):
     BZIP - create tar.bz2 archive
     GZIP - create tar.gz archive
     '''
-    class ArchiveType(Enum):
+    class ArchiveType(utils.Enum):
         values = ['NONE', 'UNCOMPRESSED', 'BZIP', 'GZ']
 
-    class BookList_Mode(Enum):
+    class BookList_Mode(utils.Enum):
         values = [
             'UNKNOWN',
             'SINGLE_XML',
@@ -31,8 +48,8 @@ class GenericConnector(object):
             'MULTIPLE_XMLS',
         ]
 
-    max_len = []
-    max_len_entry = []
+    max_len = {}
+    max_len_entry = {}
 
     config_file = 'conf/connectors.ini'
     config_object = None
@@ -42,7 +59,7 @@ class GenericConnector(object):
         cls.config_object = ConfigParser.ConfigParser()
         if not cls.config_object.read(cls.config_file):
             raise ConfigParser.Error('Could not read config from file %s'%cls.config_file)
-    
+
     @classmethod
     def class_name(cls):
         return cls.__name__
@@ -51,6 +68,7 @@ class GenericConnector(object):
     def name(self):
         return self._name
 
+    
     def _parse_config(self, config_file='conf/connectors.ini', section=None, config_object = None):
         if not config_object:
             self.read_config()
@@ -64,15 +82,17 @@ class GenericConnector(object):
                         vars={'date':datetime.now().strftime('%Y%m%d%H%M%S')}
                       ))
         
-    def __init__(self,name=None):
+    def __init__(self, name=None):
         if not name:
             self._name = self.class_name()
         else:
             self._name = name
+        self.register()
         self._parse_config(self.config_file, config_object=self.config_object)
         self.url = self.config['url']
         self.filename = self.config['filename']
         self.backup_dir = self.config.get('backup_dir', '')
+        print self.ArchiveType.NONE
         self.backup_archive = self.ArchiveType.int(self.config.get('backup_archive','NONE'))
         self.unpack_file = self.config.get('unpack_file', '')
         self.unpack_dir = self.config.get('unpack_dir', '')
@@ -83,6 +103,11 @@ class GenericConnector(object):
         self.logger.debug('%s connector created'%self.name)
         self.mode = self.BookList_Mode.int(self.config.get('mode','UNKNOWN'))
   
+
+    def register(self):
+        registered[self.name]=type(self)
+   
+
     def __del__(self):
         self.logger.debug('Cleaning up after executing %s connector'%self.name)
         if self.backup_dir:
@@ -111,16 +136,16 @@ class GenericConnector(object):
 
 
     def compress_dir(self, path, archive_type):
-       if archive_type == self.ArchiveType.GZ:
-           mode = 'gz'
-       else:
-           mode = 'bz2'
-       path = os.path.abspath(path)
-       basename = os.path.basename(path)
-       tar_name = os.path.abspath(os.path.join(path, '..' ,'%s.tar.%s'%(basename, mode)))
-       self.logger.debug('Comprassing dir %s to %s', path, tar_name)
-       tar = tarfile.open(tar_name, 'w:%s'%mode)
-       tar.add(path, arcname = basename)     
+        if archive_type == self.ArchiveType.GZ:
+            mode = 'gz'
+        else:
+            mode = 'bz2'
+        path = os.path.abspath(path)
+        basename = os.path.basename(path)
+        tar_name = os.path.abspath(os.path.join(path, '..' ,'%s.tar.%s'%(basename, mode)))
+        self.logger.debug('Comprassing dir %s to %s', path, tar_name)
+        tar = tarfile.open(tar_name, 'w:%s'%mode)
+        tar.add(path, arcname = basename)     
 
 
     #@abc.abstractmethod    
@@ -149,6 +174,26 @@ class GenericConnector(object):
                 if list[i] != None and self.max_len[i] < len(list[i]):
                     self.max_len[i] = len(list[i])
                     self.max_len_entry[i] = list[i]
+
+    def mesureLenghtDict(self, dic):
+        if self.max_len == {}:
+            self.max_len = dict(dic)
+            for key in self.max_len.keys():
+                if not dic[key]:
+                    self.max_len[key] = 0
+                    self.max_len_entry[key]=''
+                else:
+                    self.max_len[key]=len(dic[key])
+                    self.max_len_entry[key]=dic[key]
+        else:
+            for key in dic.keys():
+                try:
+                    if dic[key] != None and self.max_len[key] < len(dic[key]):
+                        self.max_len[key] = len(dic[key])
+                        self.max_len_entry[key] = dic[key]
+                except AttributeError:
+                    self.max_len[key] = len(dic[key])
+                    self.max_len_entry[key] = dic[key]
 
     def downloadFile(self, url=None, filename=None, headers = None):
         if not url:
@@ -219,4 +264,157 @@ class GenericConnector(object):
             fd = open(os.path.join(dirname,name),"w")
             fd.write(zfile.read(name))
             fd.close()
+
+    @classmethod
+    def get_or_create_(cls, ClassName, param_name, d, session):
+        c = session.query(ClassName).filter_by(**{param_name:d[param_name]}).first()
+        if not c:
+            c = ClassName(**d)
+        return c
+    
+    def get_(self, ClassName, param_name, d, session):
+        return session.query(ClassName).filter_by(**{param_name:d[param_name]}).first()
+
+       
+    def add_record(self, d):
+        Book =  GenericBook.getConcretizedClass(context=self)
+        Description = GenericBookDescription.getConcretizedClass(context=self)
+        Author = GenericAuthor.getConcretizedClass(context=self)
+        
+        Session = sessionmaker(bind=SqlWrapper.getEngine())
+        session = Session()
+        
+        book = self.get_(Book, "external_id", d, session)
+
+        if not book:
+            book=Book(d)
+            desc=Description(d)
+            book.description=desc
+            for author in d['authors']:
+                a = Author.get_or_create(author, session)
+                a.books.append(book)
+                session.add(a)
+            session.add(book)
+            session.commit()
+        else:
+            book.update(d, session)
+            session.commit()
+
+        session.close()
+       
+class GenericBook(GenericBase):
+    id = Column(Integer, primary_key=True)
+    title = Column(Unicode(255))
+    external_id = Column(Integer, unique=True)
+
+    @declared_attr
+    def description(cls):
+        return relationship(cls.__tablename__+"Description", uselist=False, backref="book")
+
+    @declared_attr
+    def __tablename__(cls):
+        registered[cls.__name__]=cls
+        return cls.__name__
+
+    def __init__(self, initial_data):
+        for key in initial_data:
+            try:
+                if getattr(self, key) == None:
+                    setattr(self, key, initial_data[key])        
+            except AttributeError:
+                pass
+
+    def update(self, new_data, session):
+        new_book = type(self)(new_data)
+        for key in new_data:
+            try:
+                atr_type = type(getattr(self, key))
+                un = unicode(getattr(self, key))
+
+                if key == 'authors':
+                    str_author_list=[]
+                    for author in self.authors:
+                        str_author_list.append(unicode(author))
+
+                    if sorted(str_author_list) != sorted(new_data['authors']):
+                        Author = GenericAuthor.getConcretizedClass(context=self)
+
+                        for str_author in new_data['authors']:
+                            if str_author not in str_author_list:
+                                a = Author.get_or_create(str_author, session)
+                                #a.books.append(self)
+                                self.authors.append(a)
+                                session.add(a)
+
+                        for str_author in str_author_list:
+                            if str_author not in new_data['authors']:
+                                a = Author.get_or_create(str_author, session)
+                                self.authors.remove(a)
+                                session.commit()
+
+                elif un != new_data[key]:
+                    setattr(self, key, new_data[key])
+
+            except AttributeError:
+                pass
+
+    @staticmethod
+    def getConcretizedClass(context):
+        return GenericBase.getConcretizedClass(context, 'Book')
+
+class GenericBookDescription(GenericBase):
+    id = Column(Integer, primary_key=True)
+    description = Column(Unicode(20000)) #TODO: parametr musi byc dynamicznie ustawiany
+
+    @declared_attr
+    def __tablename__(cls):
+        registered[cls.__name__]=cls
+        return cls.__name__
+
+    @declared_attr
+    def book_id(cls):
+        return Column(Integer, ForeignKey(cls.__tablename__[:-len("Description")]+'.id'))
+
+    def __init__(self, initial_data):
+        try:
+            self.description = initial_data['description']
+        except:
+            exit('Record ' + initial_data + ' doesn\'t have defined desription')
+
+    def __unicode__(self):
+        return unicode(self.description)
+
+    @staticmethod
+    def getConcretizedClass(context):
+        return GenericBase.getConcretizedClass(context, 'BookDescription')
+
+
+class GenericAuthor(GenericBase):
+    id = Column(Integer, primary_key=True)
+    name = Column(Unicode(255), unique=True)
+
+    @declared_attr
+    def __tablename__(cls):
+        registered[cls.__name__]=cls
+        return cls.__name__
+
+    @declared_attr
+    def books(cls):
+        name = cls.__tablename__[:-len("Author")]
+        return relationship(name+'Book', secondary=Table(name+'_books_authors',
+                                      SqlWrapper.getBaseClass().metadata,
+                                      Column('book_id', Integer, ForeignKey(name+'Book.id')),
+                                      Column('author_id', Integer, ForeignKey(name+'Author.id'))
+                                      ), backref='authors')
+    def __unicode__(self):
+        return unicode(self.name)
+
+    @classmethod
+    def get_or_create(cls, author, session):
+        return GenericConnector.get_or_create_(cls, 'name', {'name':author}, session)
+
+    @staticmethod
+    def getConcretizedClass(context):
+        return GenericBase.getConcretizedClass(context, 'Author')
+
 

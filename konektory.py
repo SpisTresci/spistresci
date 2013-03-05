@@ -4,11 +4,13 @@ import sys
 
 from connectors_logger import logger_instance
 from connectors import *
+from sql_wrapper import *
 from connectors import Tools
 
 def main():
 
     GenericConnector.read_config()
+    SqlWrapper.init()
     Logger = logger_instance(GenericConnector.config_object.get('DEFAULT', 'log_config'))
 
     connector_classnames = Tools.get_classnames()

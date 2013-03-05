@@ -1,4 +1,8 @@
 from generic import XMLConnector
+from generic import GenericBook
+from generic import GenericBookDescription
+from generic import GenericAuthor
+from sql_wrapper import *
 from xml.etree import ElementTree as et
 import os
 
@@ -17,36 +21,36 @@ class Koobe(XMLConnector):
         root = et.parse(filename).getroot()
 
         for product in root[0]:
-            title = product.findtext('name')
-            id = product.findtext('id')
-            description = product.findtext('description')
-            url = product.findtext('url')
-            image = product.findtext('image')
-            price = product.findtext('price')
-            category = product.findtext('category')
-            producer = product.findtext('producer')
+            d={}
+            d['title'] = product.findtext('name')
+            d['external_id'] = product.findtext('id')
+            d['description'] = product.findtext('description')
+            d['url'] = product.findtext('url')
+            d['image'] = product.findtext('image')
+            d['price'] = product.findtext('price')
+            d['category'] = product.findtext('category')
+            d['producer'] = product.findtext('producer')
 
-            isbn = author = format = protection = None
-
+            d['isbn']=d['protection']=None
+            d['authors']=[]
+            d['format']=[]
 
             for property in product.findall('property'):
-                if isbn == None:
+                if d['isbn'] == None:
                     if property.get('name') == 'isbn':
-                        isbn = property.text
+                        d['isbn'] = property.text
 
-                if author == None:
-                    if property.get('name') == 'author':
-                        author = property.text
+                if property.get('name') == 'author':
+                    d['authors'].append(property.text)
+                    
+                if property.get('name') == 'format':
+                    d['format'].append(property.text)
 
-                if format == None:
-                    if property.get('name') == 'format':
-                        format = property.text
-
-                if protection == None:
+                if d['protection'] == None:
                     if property.get('name') == 'protection':
-                        protection = property.text
+                        d['protection'] = property.text
 
-            print "Tytul: " + title
+            #print "Tytul: " + title
             # print "ID: " + id
             # print "Opis: " + description
             # print "url: " + url
@@ -58,10 +62,23 @@ class Koobe(XMLConnector):
             # print "author: " + author
             # print "format: " + format
             # print "protection: " + protection
-            self.mesureLenght([title, id, description, url, image, price, category, producer, isbn, author, format, protection])
-
+            self.mesureLenght(d)
+            #self.add_record({'external_id':1234, 'authors':['Jas Fasola'], 'description':'opis', 'title':'Taki sobie tytul', 'category':'horror'})
+            self.add_record(d)
 
         print self.max_len
-        for el in self.max_len_entry:
-            print el
+        for key in self.max_len_entry.keys():
+            print key+": "+ self.max_len_entry[key]
 
+Base = SqlWrapper.getBaseClass()
+
+class KoobeBook(GenericBook, Base):
+    id =  Column(Integer, primary_key=True)
+    name = Column(Unicode(100))
+    category = Column(Unicode(100))
+
+class KoobeBookDescription(GenericBookDescription, Base):
+    pass
+
+class KoobeAuthor(GenericAuthor, Base):
+    pass
