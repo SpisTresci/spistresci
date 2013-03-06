@@ -101,6 +101,8 @@ class GenericConnector(object):
         self.remove_unpacked = int(self.config.get('remove_unpacked', 1))
         self.log_config=self.config.get('log_config', 'conf/log.connectors.ini')
         self.logger = logger_instance(self.log_config)
+        self.log_erratum_config=self.config.get('log_erratum_config', 'conf/log.erratum.ini')
+        self.erratum_logger = logger_instance(self.log_erratum_config)
         self.logger.debug('%s connector created'%self.name)
         self.mode = self.BookList_Mode.int(self.config.get('mode','UNKNOWN'))
   
@@ -196,18 +198,23 @@ class GenericConnector(object):
                     self.max_len[key] = len(dic[key])
                     self.max_len_entry[key] = dic[key]
 
-    def validateISBN(self, string):
-        try:
-            isbn = Isbn(string)
-            if isbn.validate():
-                return isbn.isbn
-            else:
-                print "Wrong ISBN formating! original ISBN: %s, cannonical ISBN: %s "%(string, isbn.isbn)
-                return ""
+    def validateISBN(self, dic):
+        original_isbn = dic.get('isbn')
+        id=dic.get('external_id')
+        title=dic.get('title')
 
-        except IsbnError:
-            print "IsbnError! original ISBN: %s"%string
-            return ""
+        if original_isbn != None:
+            try:
+                isbn = Isbn(original_isbn)
+                if isbn.validate():
+                    return isbn.isbn
+                else:
+                    self.erratum_logger.info("ISBN validation failed! connector: %s, original_isbn: %s, cannonical ISBN: %s, id: %s, title: %s"%(self.name[:-len("Book")], original_isbn, isbn.isbn, id, title))
+            except IsbnError:
+                if original_isbn == '':
+                    self.erratum_logger.warning("Entry does not have ISBN! connector: %s, id: %s, title: %s"%(self.name, id, title))
+                else:
+                    self.erratum_logger.info("ISBN has wrong format! connector: %s, original_isbn: %s, id: %s, title: %s"%(self.name[:-len("Book")], original_isbn, id, title))
 
     def downloadFile(self, url=None, filename=None, headers = None):
         if not url:

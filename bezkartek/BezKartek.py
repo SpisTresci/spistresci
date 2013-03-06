@@ -41,8 +41,6 @@ class BezKartek(XMLConnector):
                 book_dict[ (self.xml_tag_dict[tag])[0] ]= sub_elem
             else:
                 book_dict[ (self.xml_tag_dict[tag])[0] ] = unicode(book.findtext(tag, (self.xml_tag_dict[tag])[1] ))
-                if (self.xml_tag_dict[tag])[0] == 'isbn' and book_dict[ (self.xml_tag_dict[tag])[0] ] != '':
-                    book_dict['isbn'] = self.validateISBN(book_dict['isbn'])
 
         book_dict['authors']=[x.strip() for x in book_dict['authors'].split(',')] #TODO: strip
         #book_dict['price']=int(book_dict['price'])/100
@@ -57,6 +55,7 @@ class BezKartek(XMLConnector):
             offers = offers[:self.limit_books]
         for book in offers:
             dic = self.make_dict(book)
+            self.validateISBN(dic)
             #print dic
             #self.mesureLenghtDict(dic)
             self.add_record(dic)

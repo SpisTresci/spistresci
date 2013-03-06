@@ -3,6 +3,7 @@ import logging.handlers
 import ConfigParser
 import os
 import sys
+from datetime import datetime
 
 def logger_instance(config):
     return ConnectorsLogger.logger_instance(config)
@@ -60,7 +61,7 @@ class ConnectorsLogger():
             return None
 
     def config_severity_handlers(self,severity):
-        config = dict(self.config.items(severity))
+        config = dict(self.config.items(severity, vars={'date':datetime.now().strftime('%Y%m%d%H%M%S')}))
         handlers_list = config.get('log_handlers','')
         if handlers_list:
             handlers = handlers_list.split(',')
