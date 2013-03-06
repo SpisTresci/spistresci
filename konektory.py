@@ -10,12 +10,12 @@ from connectors import Tools
 def main():
 
     GenericConnector.read_config()
-    SqlWrapper.init()
     Logger = logger_instance(GenericConnector.config_object.get('DEFAULT', 'log_config'))
 
     connector_classnames = Tools.get_classnames()
     final_connector_dic = Tools.filter_classnames(connector_classnames, sys.argv[1:])
 
+    SqlWrapper.init(GenericConnector.config_object.get('DEFAULT', 'db_config'), connectors = final_connector_dic.keys())
     connectors = [ getattr(sys.modules[__name__],connector[1])(name=connector[0])
                   for connector in final_connector_dic.items() ]
 
