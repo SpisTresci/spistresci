@@ -215,13 +215,13 @@ class GenericConnector(object):
                 if isbn.validate():
                     isbn_str = isbn.isbn
                 else:
-                    self.erratum_logger.info("ISBN validation failed! connector: %s, original_isbn: %s, cannonical ISBN: %s, id: %s, title: %s"%(self.name[:-len("Book")], original_isbn, isbn.isbn, id, title))
+                    self.erratum_logger.info("ISBN validation failed! connector: %s, original_isbn: %s, cannonical ISBN: %s, id: %s, title: %s"%(self.name, original_isbn, isbn.isbn, id, title))
 
             except IsbnError:
                 if original_isbn == '':
                     self.erratum_logger.warning("Entry does not have ISBN! connector: %s, id: %s, title: %s"%(self.name, id, title))
                 else:
-                    self.erratum_logger.info("ISBN has wrong format! connector: %s, original_isbn: %s, id: %s, title: %s"%(self.name[:-len("Book")], original_isbn, id, title))
+                    self.erratum_logger.info("ISBN has wrong format! connector: %s, original_isbn: %s, id: %s, title: %s"%(self.name, original_isbn, id, title))
 
         dic['isbn']=isbn_str
 

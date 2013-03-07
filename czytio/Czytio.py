@@ -27,9 +27,9 @@ class Czytio(XMLConnector):
             offers = offers[:self.limit_books]
         for book in offers:
             dic = self.make_dict(book)
-            print dic
+            #print dic
             self.validate(dic)
-            print dic
+            #print dic
             #self.mesureLenghtDict(dic)
             self.add_record(dic)
 
