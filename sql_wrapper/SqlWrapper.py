@@ -35,18 +35,27 @@ class SqlWrapper(object):
 
     @classmethod
     def createTriggers(cls):
-        trigger_command="""
+        trigger_insert_command="""
             CREATE TRIGGER %sPriceOn%s AFTER %s ON %s
             FOR EACH ROW
             BEGIN
             INSERT INTO %sPrice(book_id, price, date) VALUES (NEW.id, NEW.price, NOW());
             END;
             """
+        trigger_update_command="""
+            CREATE TRIGGER %sPriceOn%s AFTER %s ON %s
+            FOR EACH ROW
+            BEGIN
+            IF (NEW.price != OLD.price) THEN
+            INSERT INTO %sPrice(book_id, price, date) VALUES (NEW.id, NEW.price, NOW());
+            END IF;
+            END;
+            """
         for t in cls.getBaseClass().metadata.sorted_tables:
             tb=t.name
             if tb.endswith("Book"):
-                for c in ["Insert", "Update"]:
-                    event.listen(t, 'after_create', DDL(trigger_command%(tb,c,c,tb,tb), on="mysql"))
+                event.listen(t, 'after_create', DDL(trigger_insert_command%(tb,"Insert","INSERT",tb,tb), on="mysql"))
+                event.listen(t, 'after_create', DDL(trigger_update_command%(tb,"Update","UPDATE",tb,tb), on="mysql"))
 
     @classmethod
     def getBaseClass(cls):
