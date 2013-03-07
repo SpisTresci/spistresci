@@ -70,15 +70,15 @@ class Koobe(XMLConnector):
         for key in self.max_len_entry.keys():
             print key+": "+ self.max_len_entry[key]
 
-Base = SqlWrapper.getBaseClass()
-
-class KoobeBook(GenericBook, Base):
-    id =  Column(Integer, primary_key=True)
-    name = Column(Unicode(100))
-    category = Column(Unicode(100))
-
-class KoobeBookDescription(GenericBookDescription, Base):
-    pass
-
-class KoobeAuthor(GenericAuthor, Base):
-    pass
+#Base = SqlWrapper.getBaseClass()
+#
+#class KoobeBook(GenericBook, Base):
+#    id =  Column(Integer, primary_key=True)
+#    name = Column(Unicode(100))
+#    category = Column(Unicode(100))
+#
+#class KoobeBookDescription(GenericBookDescription, Base):
+#    pass
+#
+#class KoobeAuthor(GenericAuthor, Base):
+#    pass

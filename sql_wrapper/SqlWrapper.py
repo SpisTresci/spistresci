@@ -29,12 +29,12 @@ class SqlWrapper(object):
             cls.host = config.get('DEFAULT', 'host')
             cls.database = config.get('DEFAULT', 'database')
             cls.echo = config.getboolean('DEFAULT', 'echo')
-        cls.createTriggers();
         tables = [x for x in cls.getBaseClass().metadata.sorted_tables if any(con in x.name for con in connectors)]
+        cls.createTriggers(tables);
         cls.getBaseClass().metadata.create_all(cls.getEngine(), tables=tables)
 
     @classmethod
-    def createTriggers(cls):
+    def createTriggers(cls, tables):
         trigger_insert_command="""
             CREATE TRIGGER %sPriceOn%s AFTER %s ON %s
             FOR EACH ROW
@@ -51,7 +51,7 @@ class SqlWrapper(object):
             END IF;
             END;
             """
-        for t in cls.getBaseClass().metadata.sorted_tables:
+        for t in tables:
             tb=t.name
             if tb.endswith("Book"):
                 event.listen(t, 'after_create', DDL(trigger_insert_command%(tb,"Insert","INSERT",tb,tb), on="mysql"))
