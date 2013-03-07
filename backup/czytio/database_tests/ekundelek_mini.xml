@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<products>
+  <product>
+    <id>1</id>
+    <title><![CDATA[www.malpa.pl]]></title>
+    <authors><![CDATA[Krystyna Janda]]></authors>
+    <price>35.91</price>
+    <format>PDF</format>
+    <isbn>978-83-7747-225-5</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/103/wwwmalpapl</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/231/103-wwwmalpapl.jpg</cover>
+    <size>2,5 MB</size>
+    <length>413</length>
+  </product>
+  <product>
+    <id>2</id>
+    <title><![CDATA[Wszystko o raku piersi]]></title>
+    <authors><![CDATA[Ruth H. Grobstein]]></authors>
+    <price>26.91</price>
+    <format>PDF</format>
+    <isbn>978-83-7414-338-7</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/125/Wszystko_o_raku_piersi</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/231/125-Wszystko_o_raku_piersi.jpg</cover>
+    <size>1,4 MB</size>
+    <length>242</length>
+  </product>
+  <product>
+    <id>3</id>
+    <title><![CDATA[Limeryki o pewnych panach i paniach, czyli numery z każdej sfery]]></title>
+    <authors><![CDATA[Rafał Bryndal]]></authors>
+    <price>26.91</price>
+    <format>PDF</format>
+    <isbn>978-83-7747-110-4</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/171/Limeryki_o_pewnych_panach_i_paniach_czyli_numery_z_kazdej_sfery</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/210/171-Limeryki_o_pewnych_panach_i_paniach_czyli_numery_z_kazdej_sfery.jpg</cover>
+    <size>13 MB</size>
+    <length>166</length>
+  </product>
+  <product>
+    <id>4</id>
+    <title><![CDATA[Lekcje historii PRL w rozmowach]]></title>
+    <authors><![CDATA[Andrzej Brzeziecki]]></authors>
+    <price>31.41</price>
+    <format>PDF</format>
+    <isbn>978-83-7747-109-8</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/196/Lekcje_historii_PRL_w_rozmowach</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/231/196-Lekcje_historii_PRL_w_rozmowach.jpg</cover>
+    <size>4,2 MB</size>
+    <length>362</length>
+  </product>
+  <product>
+    <id>5</id>
+    <title><![CDATA[W świecie wszechmogącym. O przemocy, śmierci i Bogu]]></title>
+    <authors><![CDATA[Zbigniew Mikołejko]]></authors>
+    <price>44.91</price>
+    <format>PDF</format>
+    <isbn>978-83-7747-214-9</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/202/W_swiecie_wszechmogacym_O_przemocy_smierci_i_Bogu</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/239/202-W_swiecie_wszechmogacym_O_przemocy_smierci_i_Bogu.jpg</cover>
+    <size>2,8 MB</size>
+    <length>434</length>
+  </product>
+  <product>
+    <id>6</id>
+    <title><![CDATA[Prawo gospodarcze. Tom 5]]></title>
+    <authors><![CDATA[Marzena Okła]]></authors>
+    <price>179.10</price>
+    <format>PDF</format>
+    <isbn>978-83-7483-401-8</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/242/Prawo_gospodarcze_Tom_5</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/126/242-Prawo_gospodarcze_Tom_5.jpg</cover>
+    <size>3,0 MB</size>
+    <length>754</length>
+  </product>
+  <product>
+    <id>7</id>
+    <title><![CDATA[Prawo pracy materialne - wzory pism z objaśnieniami. Tom 7a]]></title>
+    <authors><![CDATA[Stanisław Piwnik]]></authors>
+    <price>179.10</price>
+    <format>PDF</format>
+    <isbn>978-83-7483-884-9</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/246/Prawo_pracy_materialne_-_wzory_pism_z_objasnieniami_Tom_7a</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/126/246-Prawo_pracy_materialne_-_wzory_pism_z_objasnieniami_Tom_7a.jpg</cover>
+    <size>3,6 MB</size>
+    <length>852</length>
+  </product>
+  <product>
+    <id>8</id>
+    <title><![CDATA[Regulae iuris Łacińskie inskrypcje na kolumnach Sądu Najwyższego Rzeczypospolitej Polskiej - twarda oprawa]]></title>
+    <authors><![CDATA[Witold Wołodkiewicz]]></authors>
+    <price>69.00</price>
+    <format>PDF</format>
+    <isbn>83-7483-286-X</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/283/Regulae_iuris_Lacinskie_inskrypcje_na_kolumnach_Sadu_Najwyzszego</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/305/283-Regulae_iuris_Lacinskie_inskrypcje_na_kolumnach_Sadu_Najwyzszego.jpg</cover>
+    <size>2,8 MB</size>
+    <length>184</length>
+  </product>
+  <product>
+    <id>9</id>
+    <title><![CDATA[Postępowanie karne skarbowe]]></title>
+    <authors><![CDATA[Feliks Prusak]]></authors>
+    <price>40.50</price>
+    <format>PDF</format>
+    <isbn>978-83-255-0727-5</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/310/Postepowanie_karne_skarbowe</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/297/310-Postepowanie_karne_skarbowe.jpg</cover>
+    <size>2,5 MB</size>
+    <length>457</length>
+  </product>
+  <product>
+    <id>10</id>
+    <title><![CDATA[Kodeks spółek handlowych. Tom III. Komentarz do artykułów 301-458]]></title>
+    <authors><![CDATA[Andrzej Szajkowski]]></authors>
+    <price>224.10</price>
+    <format>PDF</format>
+    <isbn>978-83-7483-035-5</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/314/Kodeks_spolek_handlowych_Tom_III_Komentarz_do_artykulow_301-458</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/301/314-Kodeks_spolek_handlowych_Tom_III_Komentarz_do_artykulow_301-458.jpg</cover>
+    <size>10,0 MB</size>
+    <length>1656</length>
+  </product>
+  <product>
+    <id>11</id>
+    <title><![CDATA[Wspólnotowe prawo gospodarcze. Tom I Swobody rynku wewnętrznego]]></title>
+    <authors><![CDATA[Aleksander Cieśliński]]></authors>
+    <price>89.10</price>
+    <format>PDF</format>
+    <isbn>978-83-7387-569-2</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/324/Wspolnotowe_prawo_gospodarcze_Tom_I_Swobody_rynku_wewnetrznego</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/297/324-Wspolnotowe_prawo_gospodarcze_Tom_I_Swobody_rynku_wewnetrznego.jpg</cover>
+    <size>4,8 MB</size>
+    <length>1063</length>
+  </product>
+  <product>
+    <id>12</id>
+    <title><![CDATA[Prawo upadłościowe i naprawcze]]></title>
+    <authors><![CDATA[Stanisław Gurgul]]></authors>
+    <price>35.10</price>
+    <format>PDF</format>
+    <isbn>978-83-255-1215-6</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/342/Prawo_upadlosciowe_i_naprawcze</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/299/342-Prawo_upadlosciowe_i_naprawcze.jpg</cover>
+    <size>2,9 MB</size>
+    <length>394</length>
+  </product>
+  <product>
+    <id>13</id>
+    <title><![CDATA[Prawo rzeczowe. System Prawa Prywatnego. Tom 3]]></title>
+    <authors><![CDATA[Edward Gniewek]]></authors>
+    <price>224.10</price>
+    <format>PDF</format>
+    <isbn>978-83-255-3898-9</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/352/Prawo_rzeczowe_System_Prawa_Prywatnego_Tom_3</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/118/352-Prawo_rzeczowe_System_Prawa_Prywatnego_Tom_3.jpg</cover>
+    <size>2,2 MB</size>
+    <length>604</length>
+  </product>
+  <product>
+    <id>15</id>
+    <title><![CDATA[Ubezpieczenie społeczne migrujących pracowników oraz osób prowadzących działalność gospodarczą]]></title>
+    <authors><![CDATA[Tomasz Major]]></authors>
+    <price>53.10</price>
+    <format>PDF</format>
+    <isbn>978-83-255-1621-5</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/371/Ubezpieczenie_spoleczne_migrujacych_pracownikow_oraz_osob_prowad</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/244/371-Ubezpieczenie_spoleczne_migrujacych_pracownikow_oraz_osob_prowad.jpg</cover>
+    <size>3,7 MB</size>
+    <length>218</length>
+  </product>
+</products>
