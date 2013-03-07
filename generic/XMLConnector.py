@@ -45,8 +45,10 @@ class XMLConnector(GenericConnector):
                      if sub_elem is None:
                          break
                 if sub_elem is not None:
-                     sub_elem=sub_elem.text
-                book_dict[ self.xml_tag_dict[tag] ]= sub_elem
+                     sub_elem=unicode(sub_elem.text)
+                book_dict[ (self.xml_tag_dict[tag])[0] ]= sub_elem
             else:
-                book_dict[ self.xml_tag_dict[tag] ] = book.findtext(tag) 
+                book_dict[ (self.xml_tag_dict[tag])[0] ] = unicode(book.findtext(tag, (self.xml_tag_dict[tag])[1] ))
+
+        book_dict['authors']=[x.strip() for x in book_dict['authors'].split(',')] #TODO: strip
         return book_dict

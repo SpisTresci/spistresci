@@ -198,23 +198,58 @@ class GenericConnector(object):
                     self.max_len[key] = len(dic[key])
                     self.max_len_entry[key] = dic[key]
 
-    def validateISBN(self, dic):
-        original_isbn = dic.get('isbn')
+    def validate(self, dic):
         id=dic.get('external_id')
         title=dic.get('title')
+        self.validateISBN(dic, id, title)
+        self.validatePrice(dic, id, title)
+        self.validateSize(dic, id, title)
+
+    def validateISBN(self, dic, id, title):
+        original_isbn = dic.get('isbn')
+        isbn_str=""
 
         if original_isbn != None:
             try:
                 isbn = Isbn(original_isbn)
                 if isbn.validate():
-                    return isbn.isbn
+                    isbn_str = isbn.isbn
                 else:
                     self.erratum_logger.info("ISBN validation failed! connector: %s, original_isbn: %s, cannonical ISBN: %s, id: %s, title: %s"%(self.name[:-len("Book")], original_isbn, isbn.isbn, id, title))
+
             except IsbnError:
                 if original_isbn == '':
                     self.erratum_logger.warning("Entry does not have ISBN! connector: %s, id: %s, title: %s"%(self.name, id, title))
                 else:
                     self.erratum_logger.info("ISBN has wrong format! connector: %s, original_isbn: %s, id: %s, title: %s"%(self.name[:-len("Book")], original_isbn, id, title))
+
+        dic['isbn']=isbn_str
+
+    def validatePrice(self, dic, id, title):
+        original_price = dic.get('price')
+        price=0
+        if original_price != None:
+            price_str=original_price
+            if "," in price_str:
+                price_str = price_str.replace(",", ".")
+
+            if "." in price_str:
+                if price_str.count(".")==1:
+                    price_str = price_str.replace(".", "")
+                else:
+                    self.erratum_logger.warning("Entry has price in wrong format! connector: %s, id: %s, title: %s"%(self.name, id, title))
+
+            try:
+                price = int(price_str)
+            except ValueError:
+                self.erratum_logger.warning("Entry has price in wrong format! connector: %s, id: %s, title: %s"%(self.name, id, title))
+
+        dic['price']=unicode(price)
+
+
+    def validateSize(self, dic, id, title):
+        pass
+
 
     def downloadFile(self, url=None, filename=None, headers = None):
         if not url:
@@ -309,8 +344,10 @@ class GenericConnector(object):
 
         if not book:
             book=Book(d)
-            desc=Description(d)
-            book.description=desc
+            if d.get('description') != None:
+                desc=Description(d)
+                book.description=desc
+
             for author in d['authors']:
                 a = Author.get_or_create(author, session)
                 a.books.append(book)

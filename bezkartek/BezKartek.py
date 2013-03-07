@@ -26,27 +26,6 @@ class BezKartek(XMLConnector):
     }
 
 
-    def make_dict(self,book):
-        book_dict = {}
-        for tag in self.xml_tag_dict.keys():
-            tag_split = tag.split('.')
-            if len(tag_split) > 1:
-                sub_elem = book    
-                for spl in tag_split:
-                     sub_elem = sub_elem.find(spl)
-                     if sub_elem is None:
-                         break
-                if sub_elem is not None:
-                     sub_elem=unicode(sub_elem.text)
-                book_dict[ (self.xml_tag_dict[tag])[0] ]= sub_elem
-            else:
-                book_dict[ (self.xml_tag_dict[tag])[0] ] = unicode(book.findtext(tag, (self.xml_tag_dict[tag])[1] ))
-
-        book_dict['authors']=[x.strip() for x in book_dict['authors'].split(',')] #TODO: strip
-        #book_dict['price']=int(book_dict['price'])/100
-        return book_dict
-
-
     def parse(self):
         filename = os.path.join(self.unpack_dir,self.unpack_file)
         root = et.parse(filename).getroot()
@@ -55,7 +34,7 @@ class BezKartek(XMLConnector):
             offers = offers[:self.limit_books]
         for book in offers:
             dic = self.make_dict(book)
-            self.validateISBN(dic)
+            self.validate(dic)
             #print dic
             #self.mesureLenghtDict(dic)
             self.add_record(dic)
