@@ -9,6 +9,7 @@ from datetime import datetime
 
 import ConfigParser
 from connectors_logger import logger_instance
+from sqlalchemy.ext.associationproxy import association_proxy
 import utils
 #interesting thing: utils.Enum is hide by sql_wrapper.Enum 
 from sql_wrapper import *
@@ -25,9 +26,10 @@ class GenericBase(object):
             return registered[context.name[:-len("Book")] + className]
         elif "BookDescription" in context.name:
             return registered[context.name[:-len("BookDescription")] + className]
+        elif "BooksAuthors" in context.name:
+            return registered[context.name[:-len("BooksAuthors")] + className]
         else: #Connector
             return registered[context.name + className]
-
 
 class GenericConnector(object):
    
@@ -334,15 +336,16 @@ class GenericConnector(object):
     def get_(self, ClassName, param_name, d, session):
         return session.query(ClassName).filter_by(**{param_name:d[param_name]}).first()
 
-       
+
     def add_record(self, d):
         Book =  GenericBook.getConcretizedClass(context=self)
         Description = GenericBookDescription.getConcretizedClass(context=self)
         Author = GenericAuthor.getConcretizedClass(context=self)
-        
+        BooksAuthors = GenericBooksAuthors.getConcretizedClass(context=self)
+
         Session = sessionmaker(bind=SqlWrapper.getEngine())
         session = Session()
-        
+
         book = self.get_(Book, "external_id", d, session)
 
         if not book:
@@ -352,9 +355,19 @@ class GenericConnector(object):
                 book.description=desc
 
             for author in d['authors']:
-                a = Author.get_or_create(author, session)
-                a.books.append(book)
-                session.add(a)
+                author = Author.get_or_create(author, session)
+                books_authors = BooksAuthors(translator=False)
+                books_authors.book = book
+                books_authors.author = author
+                session.add(books_authors)
+
+            for author in d['translators']:
+                author = Author.get_or_create(author, session)
+                books_authors = BooksAuthors(translator=True)
+                books_authors.book = book
+                books_authors.author = author
+                session.add(books_authors)
+
             session.add(book)
             session.commit()
         else:
@@ -362,7 +375,7 @@ class GenericConnector(object):
             session.commit()
 
         session.close()
-       
+
 class GenericBook(GenericBase):
     id = Column(Integer, primary_key=True)
     title = Column(Unicode(255))
@@ -377,11 +390,16 @@ class GenericBook(GenericBase):
         registered[cls.__name__]=cls
         return cls.__name__
 
+    @declared_attr
+    def authors(cls):
+        name = cls.__tablename__[:-len("Book")]
+        return association_proxy(name+"_authorship", "author")
+
     def __init__(self, initial_data):
         for key in initial_data:
             try:
                 if getattr(self, key) == None:
-                    setattr(self, key, initial_data[key])        
+                    setattr(self, key, initial_data[key])
             except AttributeError:
                 pass
 
@@ -449,7 +467,6 @@ class GenericBookDescription(GenericBase):
     def getConcretizedClass(context):
         return GenericBase.getConcretizedClass(context, 'BookDescription')
 
-
 class GenericAuthor(GenericBase):
     id = Column(Integer, primary_key=True)
     name = Column(Unicode(255), unique=True)
@@ -462,11 +479,8 @@ class GenericAuthor(GenericBase):
     @declared_attr
     def books(cls):
         name = cls.__tablename__[:-len("Author")]
-        return relationship(name+'Book', secondary=Table(name+'_books_authors',
-                                      SqlWrapper.getBaseClass().metadata,
-                                      Column('book_id', Integer, ForeignKey(name+'Book.id')),
-                                      Column('author_id', Integer, ForeignKey(name+'Author.id'))
-                                      ), backref='authors')
+        return association_proxy(name+"_authorship", "book")
+
     def __unicode__(self):
         return unicode(self.name)
 
@@ -492,3 +506,39 @@ class GenericBookPrice(GenericBase):
     def __tablename__(cls):
         registered[cls.__name__]=cls
         return cls.__name__
+
+class GenericBooksAuthors(GenericBase):
+
+    @declared_attr
+    def __tablename__(cls):
+        registered[cls.__name__]=cls
+        return cls.__name__
+
+    id = Column(Integer, primary_key=True)
+    translator = Column(Boolean)
+
+    @staticmethod
+    def getConcretizedClass(context):
+        return GenericBase.getConcretizedClass(context, 'BooksAuthors')
+
+    @declared_attr
+    def book_id(cls):
+        name = cls.__tablename__[:-len("BooksAuthors")]
+        return Column(Integer, ForeignKey(name+'Book.id'))
+
+    @declared_attr
+    def author_id(cls):
+        name = cls.__tablename__[:-len("BooksAuthors")]
+        return Column(Integer, ForeignKey(name+'Author.id'))
+
+    @declared_attr
+    def book(cls):
+        name = cls.__tablename__[:-len("BooksAuthors")]
+        table = registered[name + 'Book']
+        return relationship(table, backref=name+"_authorship")
+
+    @declared_attr
+    def author(cls):
+        name = cls.__tablename__[:-len("BooksAuthors")]
+        table = registered[name + 'Author']
+        return relationship(table, backref=name+"_authorship")

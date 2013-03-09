@@ -103,7 +103,7 @@ class Selkar(XMLConnector):
         id=dic.get('external_id')
         title=dic.get('title')
         self.validatePrice(dic, id, title, 'list_price')
-        #self.validateAuthors(dic, id, title, 'translator')
+        self.validateAuthors(dic, id, title, 'translators')
 
 Base = SqlWrapper.getBaseClass()
 
@@ -125,7 +125,6 @@ class SelkarBook(GenericBook, Base):
     url = Column(Unicode(180))          #173
     cover = Column(Unicode(80))         #66
 
-
 class SelkarBookDescription(GenericBookDescription, Base):
     pass
 
@@ -133,6 +132,9 @@ class SelkarAuthor(GenericAuthor, Base):
     pass
 
 class SelkarBookPrice(GenericBookPrice, Base):
+    pass
+
+class SelkarBooksAuthors(GenericBooksAuthors, Base):
     pass
 
 #{'status': 1, 'isbn': 13, 'description': 8000, 'publication_date': 10, 'ean': 15, 'price': 5, 'page_count': 4,
