@@ -101,6 +101,9 @@ class RW2010Author(GenericAuthor, Base):
 class RW2010BookPrice(GenericBookPrice, Base):
     pass
 
+class RW2010BooksAuthors(GenericBooksAuthors, Base):
+    pass
+
 #{'authors': 12, 'isbn': 0, 'format': 15, 'url': 155, 'price': 4, 'title': 98, 'cover': 150}
 #isbn:
 #title: Nie nadaje sie na zolnierza, to jeszcze szczeniak. Tajna historia II wojny swiatowej, ilustrowana.

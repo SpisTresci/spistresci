@@ -61,7 +61,8 @@ class CzytioAuthor(GenericAuthor, Base):
 class CzytioBookPrice(GenericBookPrice, Base):
     pass
 
-
+class CzytioBooksAuthors(GenericBooksAuthors, Base):
+    pass
 
 #{'isbn': 20, 'format': 4, 'url': 109, 'price': 6, 'title': 255, 'cover': 118, 'authors': 3, 'external_id': 5, 'size': 8}
 #isbn: 978-83-02-63935-07-8

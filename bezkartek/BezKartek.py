@@ -73,5 +73,6 @@ class BezKartekAuthor(GenericAuthor, Base):
 class BezKartekBookPrice(GenericBookPrice, Base):
     pass
 
-
+class BezKartekBooksAuthors(GenericBooksAuthors, Base):
+    pass
 
