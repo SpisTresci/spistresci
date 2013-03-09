@@ -204,6 +204,7 @@ class GenericConnector(object):
         self.validateISBN(dic, id, title)
         self.validatePrice(dic, id, title)
         self.validateSize(dic, id, title)
+        self.validateAuthors(dic, id, title)
 
     def validateISBN(self, dic, id, title):
         original_isbn = dic.get('isbn')
@@ -225,8 +226,8 @@ class GenericConnector(object):
 
         dic['isbn']=isbn_str
 
-    def validatePrice(self, dic, id, title):
-        original_price = dic.get('price')
+    def validatePrice(self, dic, id, title, price_tag_name='price'):
+        original_price = dic.get(price_tag_name)
         price=0
         if original_price != None:
             price_str=original_price
@@ -244,8 +245,10 @@ class GenericConnector(object):
             except ValueError:
                 self.erratum_logger.warning("Entry has price in wrong format! connector: %s, id: %s, title: %s"%(self.name, id, title))
 
-        dic['price']=unicode(price)
+        dic[price_tag_name]=unicode(price)
 
+    def validateAuthors(self, dic, id, title, price_tag_name='authors'):
+        dic[price_tag_name]=[x.strip() for x in dic[price_tag_name].split(',')] #TODO: strip
 
     def validateSize(self, dic, id, title):
         pass
