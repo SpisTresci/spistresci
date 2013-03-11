@@ -39,9 +39,9 @@ class BezKartek(XMLConnector):
             #self.mesureLenghtDict(dic)
             self.add_record(dic)
 
-        print self.max_len
-        for key in self.max_len_entry.keys():
-            print key+": "+ str(self.max_len_entry[key])
+        #print self.max_len
+        #for key in self.max_len_entry.keys():
+        #    print key+": "+ unicode(self.max_len_entry[key])
 
 
 Base = SqlWrapper.getBaseClass()

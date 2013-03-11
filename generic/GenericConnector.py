@@ -249,8 +249,8 @@ class GenericConnector(object):
 
         dic[price_tag_name]=unicode(price)
 
-    def validateAuthors(self, dic, id, title, price_tag_name='authors'):
-        dic[price_tag_name]=[x.strip() for x in dic[price_tag_name].split(',')] #TODO: strip
+    def validateAuthors(self, dic, id, title, tag_name='authors'):
+        dic[tag_name]=[x.strip() for x in dic[tag_name].split(',')]
 
     def validateSize(self, dic, id, title):
         pass
@@ -361,12 +361,13 @@ class GenericConnector(object):
                 books_authors.author = author
                 session.add(books_authors)
 
-            for author in d['translators']:
-                author = Author.get_or_create(author, session)
-                books_authors = BooksAuthors(translator=True)
-                books_authors.book = book
-                books_authors.author = author
-                session.add(books_authors)
+            if d.get('translators') != None:
+                for author in d['translators']:
+                    author = Author.get_or_create(author, session)
+                    books_authors = BooksAuthors(translator=True)
+                    books_authors.book = book
+                    books_authors.author = author
+                    session.add(books_authors)
 
             session.add(book)
             session.commit()

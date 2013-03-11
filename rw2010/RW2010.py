@@ -34,16 +34,16 @@ class RW2010(XMLConnector):
             offers = offers[:self.limit_books]
         for book in offers:
             dic = self.make_dict(book)
-            print dic
+            #print dic
             self.create_id_from_url(dic)
             self.validate(dic)
-            print dic
-            self.mesureLenghtDict(dic)
+            #print dic
+            #self.mesureLenghtDict(dic)
             self.add_record(dic)
 
-        print self.max_len
-        for key in self.max_len_entry.keys():
-            print key+": "+ str(self.max_len_entry[key])
+        #print self.max_len
+        #for key in self.max_len_entry.keys():
+        #    print key+": "+ unicode(self.max_len_entry[key])
 
     def create_id_from_url(self, dic):
         url = dic['url']

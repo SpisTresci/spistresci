@@ -35,7 +35,7 @@ class Czytio(XMLConnector):
 
         #print self.max_len
         #for key in self.max_len_entry.keys():
-        #    print key+": "+ str(self.max_len_entry[key])
+        #    print key+": "+ unicode(self.max_len_entry[key])
 
 
 Base = SqlWrapper.getBaseClass()
