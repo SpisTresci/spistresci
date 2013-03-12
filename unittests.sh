@@ -1,2 +1,3 @@
 #!/bin/sh
-nosetests -v -s unittests/*.py $@
+modules=${@:-unittests}
+nosetests -s $modules
