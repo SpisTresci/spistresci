@@ -30,8 +30,9 @@ class SqlWrapper(object):
             cls.database = config.get('DEFAULT', 'database')
             cls.echo = config.getboolean('DEFAULT', 'echo')
         tables = [x for x in cls.getBaseClass().metadata.sorted_tables if any(con in x.name for con in connectors)]
-        cls.createTriggers(tables);
-        cls.getBaseClass().metadata.create_all(cls.getEngine(), tables=tables)
+        if tables:
+            cls.createTriggers(tables);
+            cls.getBaseClass().metadata.create_all(cls.getEngine(), tables=tables)
 
     @classmethod
     def createTriggers(cls, tables):
