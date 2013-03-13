@@ -10,7 +10,7 @@ from datetime import datetime
 
 
 class MockConnector(GenericConnector):
-   pass 
+    pass
 
 class TestGenericConnector():
     

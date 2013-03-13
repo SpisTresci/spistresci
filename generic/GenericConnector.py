@@ -95,7 +95,6 @@ class GenericConnector(object):
         self.url = self.config['url']
         self.filename = self.config['filename']
         self.backup_dir = self.config.get('backup_dir', '')
-        print self.ArchiveType.NONE
         self.backup_archive = self.ArchiveType.int(self.config.get('backup_archive','NONE'))
         self.unpack_file = self.config.get('unpack_file', '')
         self.unpack_dir = self.config.get('unpack_dir', '')

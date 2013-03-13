@@ -5,8 +5,8 @@ import os
 import sys
 from datetime import datetime
 
-def logger_instance(config):
-    return ConnectorsLogger.logger_instance(config)
+def logger_instance(config, force_logger_in_tests=False):
+    return ConnectorsLogger.logger_instance(config, force_logger_in_tests)
     
 class ConnectorsLogger():
 
@@ -24,15 +24,23 @@ class ConnectorsLogger():
               }
 
     '''
-    Known limitations of this method:
-    Since we remeber single instance of logger for each config file, not for each logger name (as logggin.getLogger does)
+    Known limitations of ConnectorsLogger.logger_instance() method
+    We remeber single instance of logger for each config file, not for each logger name (as logggin.getLogger does)
     It possible that 2 files configure one logger instance (if logger name in 2 config files are the same.
     In that case logger will be configured twice, and only second config will be valid.
 
-    To make sure logger config is as expected, reload_config(config_file) should be executed
+    It is strongly recommended to use one logger instance name only in one config file across whole project.
+    To make sure logger config is as expected, reload_config(config_file) should be executed.
     '''
     @staticmethod
-    def logger_instance(config_file=None):
+    def logger_instance(config_file=None, force_logger_in_tests=False):
+        #a little bit 'hacky' way of telling logger not to run in tests
+        if sys.argv[0] == '/usr/bin/nosetests' and not force_logger_in_tests:
+            logger = logging.getLogger('null_logger')
+            logger.handlers = []
+            logger.addHandler(logging.NullHandler())
+            return logger
+
         if not config_file:
             try:
                 return ConnectorsLogger._loggers['']
@@ -135,7 +143,7 @@ class ConnectorsLogger():
         self.logger.setLevel(self.severities[self.level])
         self.set_handlers()
 
-    def __init__(self,log_config=''):
+    def __init__(self, log_config=''):
         if log_config in self._loggers:
             raise Exception('Dont even try to run GenericConnector constructor\nUse logger_instance instead\n')
         else:

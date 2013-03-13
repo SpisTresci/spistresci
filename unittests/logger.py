@@ -31,7 +31,7 @@ class TestGenericLogger():
             config_file = os.path.join(self.config_path, self.config_file)
         else:
             config_file = None
-        self.ml = logger_instance(config_file)
+        self.ml = logger_instance(config_file, force_logger_in_tests = True)
         self.ml.debug('test_debug')
         self.ml.info('test_info')
         self.ml.warning('test_warning')
@@ -123,7 +123,7 @@ class TestReloadConfig(TestGenericLogger):
     def setUp(self):
         MockStderr.truncate(0)
         config_file = os.path.join(self.config_path, self.config_file)
-        self.ml = logger_instance(config_file)
+        self.ml = logger_instance(config_file, force_logger_in_tests = True)
         handler = logging.StreamHandler()
         handler.setLevel(logging.DEBUG)
         formatter=logging.Formatter(fmt='this should not be in stderr after reload')
@@ -145,7 +145,7 @@ class TestSingleInstance(TestCriticalConsole):
         TestCriticalConsole.setUp(self)
         #configure ml2 logger
         config_file = os.path.join(self.config_path, self.config_file)
-        self.ml2 = logger_instance(config_file)
+        self.ml2 = logger_instance(config_file, force_logger_in_tests = True)
 
     def test_single_instance(self):
         #log to ml2 logger
@@ -172,7 +172,7 @@ class TestSingletonException(TestGenericLogger):
             config_file = os.path.join(self.config_path, self.config_file)
         else:
             config_file = None
-        self.ml = logger_instance(config_file)
+        self.ml = logger_instance(config_file, force_logger_in_tests = True)
     
     @raises(Exception)
     def test_singleton_exception_for_empty_config(self):
