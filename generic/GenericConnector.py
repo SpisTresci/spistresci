@@ -353,20 +353,15 @@ class GenericConnector(object):
                 desc=Description(d)
                 book.description=desc
 
-            for author in d['authors']:
-                author = Author.get_or_create(author, session)
-                books_authors = BooksAuthors(translator=False)
-                books_authors.book = book
-                books_authors.author = author
-                session.add(books_authors)
 
-            if d.get('translators') != None:
-                for author in d['translators']:
-                    author = Author.get_or_create(author, session)
-                    books_authors = BooksAuthors(translator=True)
-                    books_authors.book = book
-                    books_authors.author = author
-                    session.add(books_authors)
+            for touple in [('authors',False),('translators',True)]:
+                if d.get(touple[0]) != None:
+                    for author in d[touple[0]]:
+                        author = Author.get_or_create(author, session)
+                        books_authors = BooksAuthors(translator=touple[1])
+                        books_authors.book = book
+                        books_authors.author = author
+                        session.add(books_authors)
 
             session.add(book)
             session.commit()
