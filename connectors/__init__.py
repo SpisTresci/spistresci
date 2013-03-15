@@ -2,6 +2,7 @@ from generic import GenericConnector
 from generic import XMLConnector
 
 from afiliant import *
+from audiobook import Audiobook
 from bezkartek import BezKartek
 from dobryebook import DobryEbook
 from czytio import Czytio
