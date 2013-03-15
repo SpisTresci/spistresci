@@ -17,9 +17,15 @@ from pyisbn import *
 
 registered={}
 
+class InvalidContext(Exception):
+    pass
+
 class GenericBase(object):
     @staticmethod
     def getConcretizedClass(context, className):
+        if not isinstance(context, GenericBase):
+            raise InvalidContext("Only not abstract classes that inherit from GenericBase cat use this method")
+
         if "Author" in context.name:
             return registered[context.name[:-len("Author")] + className]
         elif "Book" in context.name:
