@@ -1,12 +1,13 @@
 import nose
 from nose.tools import *
 from generic import GenericConnector
+from datetime import datetime
+from utils import NoseUtils
 
 import os
 import shutil
 import tempfile
 import md5
-from datetime import datetime
 
 
 class MockConnector(GenericConnector):
@@ -98,7 +99,23 @@ class TestGenericConnector():
     def test_unpack_with_unpack_file_set(self):
         self.mc.unpack_file = 'sample'
         self.test_unpack_gzip()
+   
 
+    @NoseUtils.skip
+    def test_validateISBN(self):
+        pass
+
+    @NoseUtils.skipIf(True, 'Not implemented yet')
+    def test_validatePrice(self):
+        pass
+
+    @NoseUtils.skipIf(True)
+    def test_validateSize(self):
+        pass
+    @NoseUtils.skipBecause('Not implemented yet')
+    def test_validateAuthors(self):
+        pass
+            
 class TestGenericConnectorWithGenericConfigFileField(TestGenericConnector):
     def setUp(self):
         GenericConnector.config_file = 'unittests/data/generic_connector/conf/test.ini'

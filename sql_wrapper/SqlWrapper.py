@@ -31,11 +31,11 @@ class SqlWrapper(object):
             cls.echo = config.getboolean('DEFAULT', 'echo')
         tables = [x for x in cls.getBaseClass().metadata.sorted_tables if any(con in x.name for con in connectors)]
         if tables:
-            cls.createTriggers(tables);
+            cls.createTriggers(tables, scheme)
             cls.getBaseClass().metadata.create_all(cls.getEngine(), tables=tables)
 
     @classmethod
-    def createTriggers(cls, tables):
+    def createTriggers(cls, tables, scheme):
         trigger_insert_command="""
             CREATE TRIGGER %sPriceOn%s AFTER %s ON %s
             FOR EACH ROW
@@ -55,8 +55,8 @@ class SqlWrapper(object):
         for t in tables:
             tb=t.name
             if tb.endswith("Book"):
-                event.listen(t, 'after_create', DDL(trigger_insert_command%(tb,"Insert","INSERT",tb,tb), on="mysql"))
-                event.listen(t, 'after_create', DDL(trigger_update_command%(tb,"Update","UPDATE",tb,tb), on="mysql"))
+                event.listen(t, 'after_create', DDL(trigger_insert_command%(tb,"Insert","INSERT",tb,tb), on=scheme))
+                event.listen(t, 'after_create', DDL(trigger_update_command%(tb,"Update","UPDATE",tb,tb), on=scheme))
 
     @classmethod
     def getBaseClass(cls):
