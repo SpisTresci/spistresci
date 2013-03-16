@@ -29,7 +29,7 @@ class Afiliant(XMLConnector):
         'Rok_wydania':('year',''),
         'Format':('format',''),
         'Wydawca':('publisher',''),
-        'Czyta':('lector',''),
+        'Czyta':('lectors',''),
         u'Dugo\u015b\u0107':('length',''),
         'Producent':('manufacturer',''),
 
@@ -66,7 +66,8 @@ class Afiliant(XMLConnector):
             offers = offers[:self.limit_books]
         for book in offers:
             dic = self.make_dict(book)
-            print dic
+            self.validate(dic)
+            self.add_record(dic)
 
 
 class AfiliantBook(GenericBook):

@@ -5,6 +5,7 @@ import gzip
 import tarfile
 import os.path
 import shutil
+import re
 from datetime import datetime
 
 import ConfigParser
@@ -213,6 +214,8 @@ class GenericConnector(GenericBase):
         self.validatePrice(dic, id, title)
         self.validateSize(dic, id, title)
         self.validateAuthors(dic, id, title)
+        self.validateLength(dic, id, title)
+
 
     def validateISBN(self, dic, id, title):
         original_isbn = dic.get('isbn')
@@ -256,11 +259,14 @@ class GenericConnector(GenericBase):
         dic[price_tag_name]=unicode(price)
 
     def validateAuthors(self, dic, id, title, tag_name='authors'):
-        dic[tag_name]=[x.strip() for x in dic[tag_name].split(',')]
+        if dic.get(tag_name) != None:
+            dic[tag_name]=[x.strip() for x in re.split("[,;]", dic[tag_name])]
 
     def validateSize(self, dic, id, title):
         pass
 
+    def validateLength(self, dic, id, title):
+        pass
 
     def downloadFile(self, url=None, filename=None, headers = None):
         if not url:
@@ -361,11 +367,11 @@ class GenericConnector(GenericBase):
                 book.description=desc
 
 
-            for touple in [('authors',False),('translators',True)]:
+            for touple in [('authors',False, False), ('translators',True, False), ('lectors', False, True)]:
                 if d.get(touple[0]) != None:
                     for author in d[touple[0]]:
                         author = Author.get_or_create(author, session)
-                        books_authors = BooksAuthors(translator=touple[1])
+                        books_authors = BooksAuthors(is_translator=touple[1], is_lector=touple[2])
                         books_authors.book = book
                         books_authors.author = author
                         session.add(books_authors)
@@ -517,7 +523,8 @@ class GenericBooksAuthors(GenericBase):
         return cls.__name__
 
     id = Column(Integer, primary_key=True)
-    translator = Column(Boolean)
+    is_translator = Column(Boolean)
+    is_lector = Column(Boolean)
 
     @staticmethod
     def getConcretizedClass(context):
