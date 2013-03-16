@@ -10,6 +10,7 @@ from czytio import Czytio
 from escapemagazine import EscapeMagazine
 from helion import Helion
 from koobe import Koobe
+from legimi import Legimi
 from nexto import Nexto
 from rw2010 import RW2010
 from selkar import Selkar
