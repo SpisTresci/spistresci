@@ -37,7 +37,8 @@ class GenericBase(object):
         else: #Connector
             return registered[context.name + className]
 
-class GenericConnector(object):
+
+class GenericConnector(GenericBase):
    
     '''
     NONE - remove backup dir after execution
