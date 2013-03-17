@@ -388,6 +388,7 @@ class GenericBook(GenericBase):
     id = Column(Integer, primary_key=True)
     title = Column(Unicode(255))
     external_id = Column(Integer, unique=True)
+    price = Column(Integer)                     #GROSZE!!!
 
     @declared_attr
     def description(cls):

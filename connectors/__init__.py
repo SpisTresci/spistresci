@@ -17,6 +17,7 @@ from selkar import Selkar
 from tmc import Tmc
 from virtualo import Virtualo
 from zinamon import Zinamon
+from zielonasowa import ZielonaSowa
 
 #from wolnelektury import fetch
 

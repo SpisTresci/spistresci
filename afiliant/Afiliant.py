@@ -85,9 +85,6 @@ class AfiliantBookPrice(GenericBookPrice):
 class AfiliantBooksAuthors(GenericBooksAuthors):
     pass
 
-#TODO: what to do with "Opracowanie: 'Name'" Producers (authors)
-class ZielonaSowa(Afiliant):pass
-
 class ZloteMysli(Afiliant):
 
     xml_attributes_dict = {
