@@ -6,6 +6,7 @@ from audiobook import Audiobook
 from audioteka import Audioteka
 from bezkartek import BezKartek
 from dobryebook import DobryEbook
+from empik import Empik
 from czytio import Czytio
 from escapemagazine import EscapeMagazine
 from helion import Helion
