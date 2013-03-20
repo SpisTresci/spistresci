@@ -19,6 +19,7 @@ from tmc import Tmc
 from virtualo import Virtualo
 from zinamon import Zinamon
 from zielonasowa import ZielonaSowa
+from zlotemysli import ZloteMysli
 
 #from wolnelektury import fetch
 

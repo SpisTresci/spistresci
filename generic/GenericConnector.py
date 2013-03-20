@@ -204,12 +204,15 @@ class GenericConnector(GenericBase):
         else:
             for key in dic.keys():
                 try:
-                    if dic[key] != None and self.max_len[key] < len(dic[key]):
-                        self.max_len[key] = len(dic[key])
-                        self.max_len_entry[key] = dic[key]
+                    if dic.get(key) != None and (self.max_len.get(key) == None or self.max_len[key] < len(dic[key])):
+                            self.max_len[key] = len(dic[key])
+                            self.max_len_entry[key] = dic[key]
                 except AttributeError:
                     self.max_len[key] = len(dic[key])
                     self.max_len_entry[key] = dic[key]
+                #except KeyError:
+                #    self.max_len[key] = len(dic[key])
+                #    self.max_len_entry[key] = dic[key]
 
     def validate(self, dic):
         id=dic.get('external_id')

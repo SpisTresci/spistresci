@@ -84,23 +84,3 @@ class AfiliantBookPrice(GenericBookPrice):
 
 class AfiliantBooksAuthors(GenericBooksAuthors):
     pass
-
-class ZloteMysli(Afiliant):
-
-    xml_attributes_dict = {
-        'Autor':'author',
-        'ISBN':'isbn',
-        'Wydawnictwo':'publisher',
-        'Rok wydania':'year',
-        'Format':'format',
-        'Format pliku':'ebook_format',
-        u'Ilo\u015b\u0107 stron':'length',
-        'Oprawa':'binding',
-        #it may be sth different than image tag
-        'zm:imageParent':'cover_zm',
-        'zm:imageMedium':'cover_medium',
-        'zm:imageSmall':'cover_small',
-        #it may be sth different than category
-        'zm:categoryId':'category_zm',
-        'zm:productTypeId':'product_type',
-    }
