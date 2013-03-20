@@ -30,7 +30,7 @@ class Czytio(XMLConnector):
             #print dic
             self.validate(dic)
             #print dic
-            #self.mesureLenghtDict(dic)
+            #self.measureLenghtDict(dic)
             self.add_record(dic)
 
         #print self.max_len

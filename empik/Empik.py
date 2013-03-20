@@ -27,7 +27,7 @@ class Empik(XMLConnector):
         for book in products:
             dic = self.make_dict(book)
             self.validate(dic)
-            #self.mesureLenghtDict(dic)
+            #self.measureLenghtDict(dic)
             self.add_record(dic)
 
         #print self.max_len

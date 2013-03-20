@@ -38,7 +38,7 @@ class RW2010(XMLConnector):
             self.create_id_from_url(dic)
             self.validate(dic)
             #print dic
-            #self.mesureLenghtDict(dic)
+            #self.measureLenghtDict(dic)
             self.add_record(dic)
 
         #print self.max_len

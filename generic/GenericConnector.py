@@ -176,7 +176,7 @@ class GenericConnector(GenericBase):
     def updateDatabase(self):
         """update method"""
 
-    def mesureLenght(self, list):
+    def measureLenght(self, list):
         if self.max_len == []:
             for i in range(len(list)):
                 if not list[i]:
@@ -191,7 +191,7 @@ class GenericConnector(GenericBase):
                     self.max_len[i] = len(list[i])
                     self.max_len_entry[i] = list[i]
 
-    def mesureLenghtDict(self, dic):
+    def measureLenghtDict(self, dic):
         if self.max_len == {}:
             self.max_len = dict(dic)
             for key in self.max_len.keys():
@@ -210,9 +210,6 @@ class GenericConnector(GenericBase):
                 except AttributeError:
                     self.max_len[key] = len(dic[key])
                     self.max_len_entry[key] = dic[key]
-                #except KeyError:
-                #    self.max_len[key] = len(dic[key])
-                #    self.max_len_entry[key] = dic[key]
 
     def validate(self, dic):
         id=dic.get('external_id')

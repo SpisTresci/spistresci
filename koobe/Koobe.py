@@ -62,7 +62,7 @@ class Koobe(XMLConnector):
             # print "author: " + author
             # print "format: " + format
             # print "protection: " + protection
-            self.mesureLenght(d)
+            self.measureLenght(d)
             #self.add_record({'external_id':1234, 'authors':['Jas Fasola'], 'description':'opis', 'title':'Taki sobie tytul', 'category':'horror'})
             self.add_record(d)
 
