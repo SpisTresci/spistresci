@@ -16,27 +16,33 @@ import utils
 from sql_wrapper import *
 from pyisbn import *
 
-registered={}
 
 class InvalidContext(Exception):
     pass
 
 class GenericBase(object):
+
+    registered = {}
+
+    @classmethod
+    def register(cls):
+        if not cls.__name__ in cls.registered:
+            cls.registered[cls.__name__]=cls
+
     @staticmethod
     def getConcretizedClass(context, className):
         if not isinstance(context, GenericBase):
             raise InvalidContext("Only not abstract classes that inherit from GenericBase cat use this method")
-
-        if "Author" in context.name:
-            return registered[context.name[:-len("Author")] + className]
-        elif "Book" in context.name:
-            return registered[context.name[:-len("Book")] + className]
-        elif "BookDescription" in context.name:
-            return registered[context.name[:-len("BookDescription")] + className]
-        elif "BooksAuthors" in context.name:
-            return registered[context.name[:-len("BooksAuthors")] + className]
+        if context.name.endswith('Author'):
+            return GenericBase.registered[context.name[:-len('Author')] + className]
+        elif context.name.endswith('Book'):
+            return GenericBase.registered[context.name[:-len('Book')] + className]
+        elif context.name.endswith('BookDescription'):
+            return GenericBase.registered[context.name[:-len('BookDescription')] + className]
+        elif context.name.endswith('BooksAuthors'):
+            return GenericBase.registered[context.name[:-len('BooksAuthors')] + className]
         else: #Connector
-            return registered[context.name + className]
+            return GenericBase.registered[context.name + className]
 
 
 class GenericConnector(GenericBase):
@@ -116,8 +122,6 @@ class GenericConnector(GenericBase):
         self.mode = self.BookList_Mode.int(self.config.get('mode','UNKNOWN'))
   
 
-    def register(self):
-        registered[self.name]=type(self)
    
 
     def __del__(self):
@@ -396,7 +400,7 @@ class GenericBook(GenericBase):
 
     @declared_attr
     def __tablename__(cls):
-        registered[cls.__name__]=cls
+        cls.register()
         return cls.__name__
 
     @declared_attr
@@ -456,7 +460,7 @@ class GenericBookDescription(GenericBase):
 
     @declared_attr
     def __tablename__(cls):
-        registered[cls.__name__]=cls
+        cls.register()
         return cls.__name__
 
     @declared_attr
@@ -482,7 +486,7 @@ class GenericAuthor(GenericBase):
 
     @declared_attr
     def __tablename__(cls):
-        registered[cls.__name__]=cls
+        cls.register()
         return cls.__name__
 
     @declared_attr
@@ -513,14 +517,14 @@ class GenericBookPrice(GenericBase):
 
     @declared_attr
     def __tablename__(cls):
-        registered[cls.__name__]=cls
+        cls.register()
         return cls.__name__
 
 class GenericBooksAuthors(GenericBase):
 
     @declared_attr
     def __tablename__(cls):
-        registered[cls.__name__]=cls
+        cls.register()
         return cls.__name__
 
     id = Column(Integer, primary_key=True)
@@ -544,11 +548,11 @@ class GenericBooksAuthors(GenericBase):
     @declared_attr
     def book(cls):
         name = cls.__tablename__[:-len("BooksAuthors")]
-        table = registered[name + 'Book']
+        table = cls.registered[name + 'Book']
         return relationship(table, backref=name+"_authorship")
 
     @declared_attr
     def author(cls):
         name = cls.__tablename__[:-len("BooksAuthors")]
-        table = registered[name + 'Author']
+        table = cls.registered[name + 'Author']
         return relationship(table, backref=name+"_authorship")

@@ -10,25 +10,20 @@ import urlparse
 class SqlWrapper(object):
     Base = None
     engine = None
-
-    scheme = 'mysql'
-    username = 'root'
-    password = ''
-    host = 'localhost'
-    database = 'st'
-    echo =  False
+    defaults = {'scheme':'mysql', 'username':'', 'password':'', 
+                'host':'localhost', 'database':'test', 'echo': 'False'}
 
     @classmethod
     def init(cls, config_file=None, connectors=None):
+        config = ConfigParser.SafeConfigParser(cls.defaults)
         if config_file:
-            config = ConfigParser.SafeConfigParser()
             config.read(config_file)
-            cls.scheme = config.get('DEFAULT', 'scheme')
-            cls.username = config.get('DEFAULT', 'username')
-            cls.password = config.get('DEFAULT', 'password')
-            cls.host = config.get('DEFAULT', 'host')
-            cls.database = config.get('DEFAULT', 'database')
-            cls.echo = config.getboolean('DEFAULT', 'echo')
+        cls.scheme = config.get('DEFAULT', 'scheme')
+        cls.username = config.get('DEFAULT', 'username')
+        cls.password = config.get('DEFAULT', 'password')
+        cls.host = config.get('DEFAULT', 'host')
+        cls.database = config.get('DEFAULT', 'database')
+        cls.echo = config.getboolean('DEFAULT', 'echo')
         tables = [x for x in cls.getBaseClass().metadata.sorted_tables if any(con in x.name for con in connectors)]
         if tables:
             cls.createTriggers(tables, cls.scheme)

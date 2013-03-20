@@ -1,13 +1,14 @@
 import nose
 from nose.tools import *
-from generic import GenericConnector
-from datetime import datetime
+
+from generic import GenericConnector, GenericBase
 from utils import NoseUtils
 
+from datetime import datetime
 import os
 import shutil
 import tempfile
-import md5
+import hashlib
 
 
 class MockConnector(GenericConnector):
@@ -79,7 +80,7 @@ class TestGenericConnector():
             f = open(sample_file)
             text = f.read()
             f.close()
-            f_sum = md5.new(text)
+            f_sum = hashlib.md5(text)
             eq_(md5sum,f_sum.hexdigest())
     
     def test_unpack_zip(self):
