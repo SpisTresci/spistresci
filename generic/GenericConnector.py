@@ -86,7 +86,7 @@ class GenericConnector(GenericBase):
         return self._name
 
     
-    def _parse_config(self, config_file='conf/connectors.ini', section=None, config_object = None):
+    def parse_config(self, config_file='conf/connectors.ini', section=None, config_object = None):
         if not config_object:
             self.read_config()
         else:
@@ -105,24 +105,22 @@ class GenericConnector(GenericBase):
         else:
             self._name = name
         self.register()
-        self._parse_config(self.config_file, config_object=self.config_object)
+        self.parse_config(self.config_file)
         self.url = self.config['url']
         self.filename = self.config['filename']
         self.backup_dir = self.config.get('backup_dir', '')
-        self.backup_archive = self.ArchiveType.int(self.config.get('backup_archive','NONE'))
+        self.backup_archive = self.ArchiveType.int(self.config.get('backup_archive', 'NONE'))
         self.unpack_file = self.config.get('unpack_file', '')
         self.unpack_dir = self.config.get('unpack_dir', '')
-        self.archive_file = self.config.get('archive_file','')
+        self.archive_file = self.config.get('archive_file', '')
         self.remove_unpacked = int(self.config.get('remove_unpacked', 1))
         self.log_config=self.config.get('log_config', 'conf/log.connectors.ini')
         self.logger = logger_instance(self.log_config)
         self.log_erratum_config=self.config.get('log_erratum_config', 'conf/log.erratum.ini')
         self.erratum_logger = logger_instance(self.log_erratum_config)
-        self.logger.debug('%s connector created'%self.name)
-        self.mode = self.BookList_Mode.int(self.config.get('mode','UNKNOWN'))
-  
-
-   
+        self.logger.debug('%s connector created' % self.name)
+        self.mode = self.BookList_Mode.int(self.config.get('mode', 'UNKNOWN'))
+        self.filters = self.config.get('filters', None)
 
     def __del__(self):
         self.logger.debug('Cleaning up after executing %s connector'%self.name)
@@ -166,15 +164,26 @@ class GenericConnector(GenericBase):
 
     #@abc.abstractmethod    
     def fetchData(self):
-        """parse fetchData"""
+        """fetchData method"""
+        pass
     
     #@abc.abstractmethod    
     def parse(self):
         """parse method"""
+        pass
 
     #@abc.abstractmethod        
     def updateDatabase(self):
         """update method"""
+        pass
+
+    def applySingleFilter(self, filterClass):
+        pass
+
+    def applyFilters(self):
+        if self.filters:
+            for f_class in self.filters.split(','):
+                self.applySingleFilter(f_class)
 
     def measureLenght(self, list):
         if self.max_len == []:

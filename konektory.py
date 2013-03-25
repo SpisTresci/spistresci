@@ -24,6 +24,7 @@ def main():
     for connector in connectors:
         try:
             connector.fetchData()
+            connector.applyFilters()
             connector.parse()
         except Exception:
             Logger.exception('Error executing connector %s'%connector.name)

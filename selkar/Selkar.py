@@ -7,6 +7,7 @@ from sql_wrapper import *
 class Selkar(XMLConnector):
     
     def __init__(self, name=None, limit_books=0):
+        print 'PZ selkar __init__ config_file = %s, config_object = %s' % (self.config_file, self.config_object)
         XMLConnector.__init__(self,name=name,limit_books=limit_books)
         self.api_key = self.config['api_key']
         self.method = self.config.get('method','getProduct')
@@ -73,6 +74,10 @@ class Selkar(XMLConnector):
         #print self.max_len
         #for key in self.max_len_entry.keys():
         #    print key+": "+ unicode(self.max_len_entry[key])
+
+
+    def applySingleFilter(self, filterClass):
+        raise NotImplementedError('One Does Not Simply apply filter on Selkar without implementation')
 
     def fetchData(self, unpack=True):
         params = {'url':self.url,
