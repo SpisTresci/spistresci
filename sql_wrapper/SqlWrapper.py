@@ -2,42 +2,59 @@ from sql_wrapper import *
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import event, DDL
-
-import ConfigParser
 import urlparse
 
+import ConfigParser
+import utils
+
 MYSQL_TRIGGER_INSERT = '''
-CREATE TRIGGER %sPriceOn%s AFTER %s ON %s
+CREATE TRIGGER %(tb)sPriceOnInsert AFTER INSERT ON %(tb)s
 FOR EACH ROW
 BEGIN
-INSERT INTO %sPrice(book_id, price, date) VALUES (NEW.id, NEW.price, NOW());
+INSERT INTO %(tb)sPrice(book_id, price, date) VALUES (NEW.id, NEW.price, NOW());
 END;
 '''
 MYSQL_TRIGGER_UPDATE = '''
-CREATE TRIGGER %sPriceOn%s AFTER %s ON %s
+CREATE TRIGGER %(tb)sPriceOnUpdate AFTER UPDATE ON %(tb)s
 FOR EACH ROW
 BEGIN
 IF (NEW.price != OLD.price) THEN
-INSERT INTO %sPrice(book_id, price, date) VALUES (NEW.id, NEW.price, NOW());
+INSERT INTO %(tb)sPrice(book_id, price, date) VALUES (NEW.id, NEW.price, NOW());
 END IF;
 END;
 '''
 
 SQLITE_TRIGGER_INSERT= '''
-CREATE TRIGGER %sPriceOn%s AFTER %s ON %s
+CREATE TRIGGER %(tb)sPriceOnInsert AFTER INSERT ON %(tb)s
 FOR EACH ROW
 BEGIN
-INSERT INTO %sPrice(book_id, price, date) VALUES (NEW.id, NEW.price, NOW());
+INSERT INTO %(tb)sPrice(book_id, price, date) VALUES (NEW.id, NEW.price, NOW());
 END;
 '''
 SQLITE_TRIGGER_UPDATE = '''
-CREATE TRIGGER %sPriceOn%s AFTER %s ON %s
+CREATE TRIGGER %(tb)sPriceOnUpdate AFTER UPDATE ON %(tb)s
 FOR EACH ROW
 WHEN (NEW.price != OLD.price)
 BEGIN
-INSERT INTO %sPrice(book_id, price, date) VALUES (NEW.id, NEW.price, NOW());
+INSERT INTO %(tb)sPrice(book_id, price, date) VALUES (NEW.id, NEW.price, NOW());
 END;
 '''
+
+TRIGGER_INSERT_DROP = 'DROP TRIGGER %(tb)sPriceOnInsert ;'
+
+TRIGGER_UPDATE_DROP = 'DROP TRIGGER %(tb)sPriceOnUpdate ;'
+
+class Triggers(utils.Enum):
+    values_dict = {
+    'TRIGGER_INSERT':{'mysql':MYSQL_TRIGGER_INSERT, 'sqlite':SQLITE_TRIGGER_INSERT},
+    'TRIGGER_UPDATE':{'mysql':MYSQL_TRIGGER_UPDATE, 'sqlite':SQLITE_TRIGGER_UPDATE},
+    'TRIGGER_INSERT_DROP':{'mysql':TRIGGER_INSERT_DROP, 'sqlite':TRIGGER_INSERT_DROP},
+    'TRIGGER_UPDATE_DROP':{'mysql':TRIGGER_UPDATE_DROP, 'sqlite':TRIGGER_UPDATE_DROP}}
+    values = values_dict.keys()
+
+    @classmethod
+    def get_trigger_ddl(cls, engine, trigger, table):
+        return cls.values_dict[cls.to_str(trigger)][engine] % {'tb':table}
 
 class SqlWrapper(object):
     Base = None
@@ -45,11 +62,11 @@ class SqlWrapper(object):
     defaults = {'scheme':'mysql', 'username':'root', 'password':'', 
                 'host':'localhost', 'database':'test', 'echo': 'False'}
 
-    trigger_commands = {'mysql':(MYSQL_TRIGGER_INSERT, MYSQL_TRIGGER_UPDATE), 
-                        'sqlite':(SQLITE_TRIGGER_INSERT, SQLITE_TRIGGER_UPDATE) }
+
+
 
     @classmethod
-    def init(cls, config_file=None, connectors=[]):
+    def init(cls, config_file=None, connectors=[], auto_write_to_db=True):
         config = ConfigParser.SafeConfigParser(cls.defaults)
         if config_file:
             config.read(config_file)
@@ -59,20 +76,31 @@ class SqlWrapper(object):
         cls.host = config.get('DEFAULT', 'host')
         cls.database = config.get('DEFAULT', 'database')
         cls.echo = config.getboolean('DEFAULT', 'echo')
-        tables = [x for x in cls.getBaseClass().metadata.sorted_tables if any(con in x.name for con in connectors)]
-        if tables:
-            cls.createTriggers(tables, cls.scheme)
-            cls.getBaseClass().metadata.create_all(cls.getEngine(), tables=tables)
+        cls.tables = [x for x in cls.getBaseClass().metadata.sorted_tables if any(con in x.name for con in connectors)]
+        if cls.tables and auto_write_to_db:
+            cls.createTriggers()
+            cls.createTables()
 
     @classmethod
-    def createTriggers(cls, tables, scheme):
-        for t in tables:
+    def createTables(cls):
+        if cls.tables:
+            cls.getBaseClass().metadata.bind = cls.getEngine()
+            cls.getBaseClass().metadata.create_all(cls.getEngine(), tables=cls.tables)
+
+    @classmethod
+    def createTriggers(cls):
+        for t in cls.tables:
             tb=t.name
             if tb.endswith("Book"):
                 #triggers have to be implemented for scheme to use it
-                (trigger_insert_command, trigger_update_command) = cls.trigger_commands[scheme]
-                event.listen(t, 'after_create', DDL(trigger_insert_command%(tb,"Insert","INSERT",tb,tb), on=scheme))
-                event.listen(t, 'after_create', DDL(trigger_update_command%(tb,"Update","UPDATE",tb,tb), on=scheme))
+                event.listen(t, 'after_create',
+                    DDL(Triggers.get_trigger_ddl(cls.scheme, Triggers.TRIGGER_INSERT, tb), on=cls.scheme))
+                event.listen(t, 'after_create',
+                    DDL(Triggers.get_trigger_ddl(cls.scheme, Triggers.TRIGGER_UPDATE, tb), on=cls.scheme))
+                event.listen(t, 'before_drop',
+                    DDL(Triggers.get_trigger_ddl(cls.scheme, Triggers.TRIGGER_INSERT_DROP, tb), on=cls.scheme))
+                event.listen(t, 'before_drop',
+                    DDL(Triggers.get_trigger_ddl(cls.scheme, Triggers.TRIGGER_UPDATE_DROP, tb), on=cls.scheme))
 
     @classmethod
     def getBaseClass(cls):
@@ -95,5 +123,5 @@ class SqlWrapper(object):
             urlparse.uses_netloc.append(cls.scheme)
             uri = urlparse.urlunparse((cls.scheme,netloc,cls.database,None,None,None))
             urlparse.uses_netloc.pop()
-            cls.engine = create_engine(uri, echo=cls.echo)
+            cls.engine = create_engine(uri, echo = cls.echo)
         return cls.engine
