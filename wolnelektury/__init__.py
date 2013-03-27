@@ -1,1 +1,0 @@
-from wolnelektury import fetch
