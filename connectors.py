@@ -8,7 +8,6 @@ from connectors.generic import *
 from connectors.specific import *
 from sqlwrapper import *
 
-
 def main():
 
     GenericConnector.read_config()
@@ -17,11 +16,11 @@ def main():
     connector_classnames = Tools.get_classnames()
     final_connector_dic = Tools.filter_classnames(connector_classnames, sys.argv[1:])
 
-    SqlWrapper.init(GenericConnector.config_object.get('DEFAULT', 'db_config'), connectors = final_connector_dic.keys())
-    connectors = [ getattr(sys.modules[__name__],connector[1])(name=connector[0])
+    SqlWrapper.init(GenericConnector.config_object.get('DEFAULT', 'db_config'), connectors=final_connector_dic.keys())
+    connectors = [ getattr(sys.modules[__name__], connector[1])(name=connector[0])
                   for connector in final_connector_dic.items() ]
 
-    Logger.debug('Created folowing connectors %s'%[connector.name for connector in connectors])
+    Logger.debug('Created folowing connectors %s' % [connector.name for connector in connectors])
 
     for connector in connectors:
         try:
@@ -29,7 +28,7 @@ def main():
             connector.applyFilters()
             connector.parse()
         except Exception:
-            Logger.exception('Error executing connector %s'%connector.name)
+            Logger.exception('Error executing connector %s' % connector.name)
     Logger.debug('Execution finished')
 
 

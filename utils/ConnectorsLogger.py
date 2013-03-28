@@ -7,7 +7,7 @@ from datetime import datetime
 
 def logger_instance(config, force_logger_in_tests=False):
     return ConnectorsLogger.logger_instance(config, force_logger_in_tests)
-    
+
 class ConnectorsLogger():
 
     _loggers = {}
@@ -16,10 +16,10 @@ class ConnectorsLogger():
                        'CONSOLE':logging.StreamHandler,
                        'SYSLOG':logging.handlers.SysLogHandler}
 
-    severities = {'DEBUG':logging.DEBUG, 
-              'INFO':logging.INFO, 
-              'WARNING':logging.WARNING, 
-              'ERROR':logging.ERROR, 
+    severities = {'DEBUG':logging.DEBUG,
+              'INFO':logging.INFO,
+              'WARNING':logging.WARNING,
+              'ERROR':logging.ERROR,
               'CRITICAL':logging.CRITICAL
               }
 
@@ -47,7 +47,7 @@ class ConnectorsLogger():
             except KeyError:
                 return ConnectorsLogger()
         elif not os.path.exists(config_file):
-             raise IOError('Log config file %s, does not exist'%config_file)
+             raise IOError('Log config file %s, does not exist' % config_file)
         else:
             try:
                 return ConnectorsLogger._loggers[config_file]
@@ -55,54 +55,54 @@ class ConnectorsLogger():
                 return ConnectorsLogger(config_file)
 
 
-    def config_formatter(self,config):
+    def config_formatter(self, config):
         if not config:
             return None
-        format = config.get('format',None)
+        format = config.get('format', None)
         if not format:
             return None
-        date_format = config.get('date_format',None)
+        date_format = config.get('date_format', None)
         try:
-             return logging.Formatter(fmt=format,datefmt=date_format)
+             return logging.Formatter(fmt=format, datefmt=date_format)
         except:
-            self.logger.warning('Could not format logging',exc_info=True)
+            self.logger.warning('Could not format logging', exc_info=True)
             return None
 
-    def config_severity_handlers(self,severity):
+    def config_severity_handlers(self, severity):
         config = dict(self.config.items(severity, vars={'date':datetime.now().strftime('%Y%m%d%H%M%S')}))
-        handlers_list = config.get('log_handlers','')
+        handlers_list = config.get('log_handlers', '')
         if handlers_list:
             handlers = handlers_list.split(',')
             for handler in handlers:
                 if handler == 'FILE':
-                    log_file= config.get('file','log/connectors.log')
+                    log_file = config.get('file', 'log/connectors.log')
                     log_dir = os.path.dirname(log_file)
                     if log_dir and not os.path.exists(log_dir):
                         os.makedirs(log_dir)
-                    handler_object=self.handler_classes[handler](log_file,mode='a')
+                    handler_object = self.handler_classes[handler](log_file, mode='a')
 
                 elif handler == 'SMTP':
                     mailhost = config['mailhost']
                     fromaddr = config['fromaddr']
                     toaddrs = config['toaddrs'].split(',')
-                    subject = config.get('subject','Error Executing Connectors')
+                    subject = config.get('subject', 'Error Executing Connectors')
 
-                    credentials = config.get('credentials',None)
+                    credentials = config.get('credentials', None)
 
                     #backward compatibility (python < 2.6)
-                    (minor,major)=sys.version_info[0:2]
-                    if minor<=2 and major <6:
+                    (minor, major) = sys.version_info[0:2]
+                    if minor <= 2 and major < 6:
                         credentials = None
 
                     if credentials:
                         credentials = tuple(credentials.split(','))
-                        handler_object=self.handler_classes[handler](mailhost, fromaddr, toaddrs, subject, credentials)
+                        handler_object = self.handler_classes[handler](mailhost, fromaddr, toaddrs, subject, credentials)
                     else:
-                        handler_object=self.handler_classes[handler](mailhost, fromaddr, toaddrs, subject)
+                        handler_object = self.handler_classes[handler](mailhost, fromaddr, toaddrs, subject)
                 elif handler == 'SYSLOG':
-                    handler_object=self.handler_classes[handler]('/dev/log')
+                    handler_object = self.handler_classes[handler]('/dev/log')
                 else:
-                    handler_object=self.handler_classes[handler]()
+                    handler_object = self.handler_classes[handler]()
                 handler_object.setLevel(self.severities[severity])
                 formatter = self.config_formatter(config)
                 if formatter:
@@ -112,7 +112,7 @@ class ConnectorsLogger():
     def set_handlers(self):
         if not self.logger:
             return
-        #clean up handlers each time logger config is read 
+        #clean up handlers each time logger config is read
         self.logger.handlers = []
 
         if self.config:
@@ -120,25 +120,25 @@ class ConnectorsLogger():
                 if severity in self.config.sections():
                     self.config_severity_handlers(severity)
         else:
-            handler_object=logging.StreamHandler()
+            handler_object = logging.StreamHandler()
             handler_object.setLevel(logging.DEBUG)
             self.logger.addHandler(handler_object)
 
-    def reload_config(self,log_config):
+    def reload_config(self, log_config):
         if not log_config:
             self.logger_name = 'connectors'
             self.level = 'DEBUG'
             self.log_config = ''
             self.config = None
         elif not os.path.exists(log_config):
-                raise IOError('Log config file %s, does not exist'%self.log_config)
+                raise IOError('Log config file %s, does not exist' % self.log_config)
         else:
             self.log_config = log_config
-            self.config = ConfigParser.SafeConfigParser({'level':'DEBUG','logger':'connectors'})
+            self.config = ConfigParser.SafeConfigParser({'level':'DEBUG', 'logger':'connectors'})
             self.config.read(self.log_config)
-            self.level = self.config.get('DEFAULT','level')
-            self.logger_name = self.config.get('DEFAULT','logger')
-        
+            self.level = self.config.get('DEFAULT', 'level')
+            self.logger_name = self.config.get('DEFAULT', 'logger')
+
         self.logger = logging.getLogger(self.logger_name)
         self.logger.setLevel(self.severities[self.level])
         self.set_handlers()

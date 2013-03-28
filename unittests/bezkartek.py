@@ -16,6 +16,6 @@ and generally it's not very risky, so screw it.
 class TestBezKartek(BaseDBTestFixture):
     config_file = 'unittests/data/bezkartek/conf/test.ini'
     connector_class = BezKartek
-    
+
 
 

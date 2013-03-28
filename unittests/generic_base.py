@@ -32,7 +32,7 @@ class TestGenericBase():
         cls.mb = MockBook()
         cls.mba = MockBooksAuthors()
         cls.mbd = MockBookDescription()
-        
+
     def assertGetConcretizedClass(self, mock):
         eq_(mock.getConcretizedClass(mock, 'Book'), MockBook)
         eq_(mock.getConcretizedClass(mock, 'Author'), MockAuthor)

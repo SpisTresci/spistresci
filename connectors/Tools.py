@@ -13,7 +13,7 @@ def get_classnames():
         finally:
             if not connector_name:
                 connector_name = connector
-            connector_classnames[connector]=connector_name
+            connector_classnames[connector] = connector_name
     return connector_classnames
 
 def filter_classnames(connector_classnames, filter_list):
@@ -28,9 +28,9 @@ def filter_classnames(connector_classnames, filter_list):
             names_from_filter.append(name)
         else:
             Logger = logger_instance(GenericConnector.config_object.get('DEFAULT', 'log_config'))
-            Logger.debug('Connector %s not known for config file %s' %(name, GenericConnector.config_file))
+            Logger.debug('Connector %s not known for config file %s' % (name, GenericConnector.config_file))
 
-    final_connector_list = {} 
+    final_connector_list = {}
     for cn in names_from_filter:
         final_connector_list[cn] = connector_classnames[cn]
     return final_connector_list

@@ -7,7 +7,7 @@ class Audiobook(Afiliant):
     pass
 
 class AudiobookBook(AfiliantBook, Base):
-    id =  Column(Integer, primary_key=True)
+    id = Column(Integer, primary_key=True)
 
     category = Column(Unicode(25))      #21
     #title(255)                         #122

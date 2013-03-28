@@ -5,14 +5,14 @@ import inspect
 
 #Tests if all our modules provides correct api to import from it
 class TestModuleImport():
-    
-    def assertModuleMember(self,module,member):
-        for (name,obj) in inspect.getmembers(module):
+
+    def assertModuleMember(self, module, member):
+        for (name, obj) in inspect.getmembers(module):
                 if name == member:
                     assert True
                     break
         else:
-            assert False, '%s missing in module %s'%(member,module)
+            assert False, '%s missing in module %s' % (member, module)
 
 '''
     def test_wolnelektury(self):

@@ -7,7 +7,7 @@ class Legimi(Afiliant):
     pass
 
 class LegimiBook(AfiliantBook, Base):
-    id =  Column(Integer, primary_key=True)
+    id = Column(Integer, primary_key=True)
 
     category = Column(Unicode(90))      #82
     publisher = Column(Unicode(80))     #73

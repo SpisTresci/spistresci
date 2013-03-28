@@ -24,14 +24,14 @@ class TestGenericLogger():
 
     def __init__(self):
         pass
-    
+
     def setUp(self):
         MockStderr.truncate(0)
         if self.config_file:
             config_file = os.path.join(self.config_path, self.config_file)
         else:
             config_file = None
-        self.ml = logger_instance(config_file, force_logger_in_tests = True)
+        self.ml = logger_instance(config_file, force_logger_in_tests=True)
         self.ml.debug('test_debug')
         self.ml.info('test_info')
         self.ml.warning('test_warning')
@@ -50,12 +50,12 @@ class TestGenericLogger():
 
     def tearDown(self):
         pass
-    
+
     def test_ml_exist(self):
         ok_(self.ml is not None)
 
     def test_log(self):
-        eq_(MockStderr.getvalue(),self.expected)
+        eq_(MockStderr.getvalue(), self.expected)
 
 class TestCriticalConsole(TestGenericLogger):
     config_file = 'test_critical_console.ini'
@@ -88,19 +88,19 @@ class TestDebugConsoleMissingSections(TestGenericLogger):
 
 class TestDebugConsoleErrorFile(TestGenericLogger):
     config_file = 'test_debug_console_error_file.ini'
-    file_name='/tmp/log_error.log'
+    file_name = '/tmp/log_error.log'
     expected_file_content = 'test_error\ntest_critical\n'
 
     def test_log_file(self):
         ok_(os.path.exists(self.file_name))#,'File %s should exist'%self.file_name)
-        f = open(self.file_name,'rU')
-        eq_(f.read(),self.expected_file_content)
+        f = open(self.file_name, 'rU')
+        eq_(f.read(), self.expected_file_content)
         f.close()
 
     def tearDown(self):
         TestGenericLogger.tearDown(self)
         if os.path.exists(self.file_name):
-            f = open(self.file_name,'w')
+            f = open(self.file_name, 'w')
             f.truncate()
             f.close()
 
@@ -123,13 +123,13 @@ class TestReloadConfig(TestGenericLogger):
     def setUp(self):
         MockStderr.truncate(0)
         config_file = os.path.join(self.config_path, self.config_file)
-        self.ml = logger_instance(config_file, force_logger_in_tests = True)
+        self.ml = logger_instance(config_file, force_logger_in_tests=True)
         handler = logging.StreamHandler()
         handler.setLevel(logging.DEBUG)
-        formatter=logging.Formatter(fmt='this should not be in stderr after reload')
+        formatter = logging.Formatter(fmt='this should not be in stderr after reload')
         handler.setFormatter(formatter)
         self.ml.logger.addHandler(handler)
-        
+
         self.ml.reload_config(config_file)
         self.ml.debug('test_debug')
         self.ml.info('test_info')
@@ -145,7 +145,7 @@ class TestSingleInstance(TestCriticalConsole):
         TestCriticalConsole.setUp(self)
         #configure ml2 logger
         config_file = os.path.join(self.config_path, self.config_file)
-        self.ml2 = logger_instance(config_file, force_logger_in_tests = True)
+        self.ml2 = logger_instance(config_file, force_logger_in_tests=True)
 
     def test_single_instance(self):
         #log to ml2 logger
@@ -160,20 +160,20 @@ class TestSingleInstance(TestCriticalConsole):
         self.ml.warning('ml_warning')
         self.ml.error('ml_error')
         self.ml.critical('ml_critical')
-        self.expected = self.expected+'ml2_critical\nml_critical\n'
+        self.expected = self.expected + 'ml2_critical\nml_critical\n'
         self.test_log()
 
 class TestSingletonException(TestGenericLogger):
     expected = ''
-    
+
     def setUp(self):
         MockStderr.truncate(0)
         if self.config_file:
             config_file = os.path.join(self.config_path, self.config_file)
         else:
             config_file = None
-        self.ml = logger_instance(config_file, force_logger_in_tests = True)
-    
+        self.ml = logger_instance(config_file, force_logger_in_tests=True)
+
     @raises(Exception)
     def test_singleton_exception_for_empty_config(self):
         from utils import ConnectorsLogger
@@ -181,7 +181,7 @@ class TestSingletonException(TestGenericLogger):
 
     @raises(Exception)
     def test_singleton_exception_for_config(self):
-        config_file = os.path.join(self.config_path,'test_debug_console.ini')
+        config_file = os.path.join(self.config_path, 'test_debug_console.ini')
         from utils import ConnectorsLogger
         self.ml2 = ConnectorsLogger.ConnectorsLogger()
         self.ml3 = ConnectorsLogger.ConnectorsLogger()

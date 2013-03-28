@@ -9,7 +9,7 @@ class Nexto(XMLConnector):
 
     def __init__(self, name=None):
         XMLConnector.__init__(self, name=name)
-        
+
     def downloadFile(self):
         values = {'api_id': self.config['api_id'],
              'pass': self.config['pass'],
@@ -20,40 +20,40 @@ class Nexto(XMLConnector):
         content = rsp.read()
         if self.backup_dir and not os.path.exists(self.backup_dir):
             os.makedirs(self.backup_dir)
-        filename=os.path.join(self.backup_dir, self.filename)
+        filename = os.path.join(self.backup_dir, self.filename)
 
         open(filename, "wb").write(content)
-        
+
     def parse(self):
-                 
-        filename  = os.path.join(self.unpack_dir,self.unpack_file)
+
+        filename = os.path.join(self.unpack_dir, self.unpack_file)
         if not os.path.exists(filename):
-             raise IOError('%s connector, missing xml file %s'%(self.name,filename))
+             raise IOError('%s connector, missing xml file %s' % (self.name, filename))
 
         root = et.parse(filename).getroot()
-        
+
         for product in root[0]:
-            id          = product.findtext('id', '')
-            isbn        = product.findtext('isbn', '')
-            language    = product.findtext('language', '')
+            id = product.findtext('id', '')
+            isbn = product.findtext('isbn', '')
+            language = product.findtext('language', '')
             description = product.findtext('body', '')
-            title       = product.findtext('title', '')
-            publisher   = product.findtext('publisher', '')
+            title = product.findtext('title', '')
+            publisher = product.findtext('publisher', '')
             manufacturer_id = product.findtext('manufacturer_id', '')
 
             print "Tytul: " + title
             print "ID: " + id
             print "Opis: " + description
-            
-        
+
+
 def main():
-    
+
         nexto = Nexto()
-        
+
         nexto.fetchData()
         nexto.parse()
         #konektor.update()
-        
+
 
 if __name__ == '__main__':
     main()

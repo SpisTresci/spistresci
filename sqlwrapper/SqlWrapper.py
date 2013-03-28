@@ -24,7 +24,7 @@ END IF;
 END;
 '''
 
-SQLITE_TRIGGER_INSERT= '''
+SQLITE_TRIGGER_INSERT = '''
 CREATE TRIGGER %(tb)sPriceOnInsert AFTER INSERT ON %(tb)s
 FOR EACH ROW
 BEGIN
@@ -59,7 +59,7 @@ class Triggers(utils.Enum):
 class SqlWrapper(object):
     Base = None
     engine = None
-    defaults = {'scheme':'mysql', 'username':'root', 'password':'', 
+    defaults = {'scheme':'mysql', 'username':'root', 'password':'',
                 'host':'localhost', 'database':'test', 'echo': 'False'}
 
 
@@ -90,7 +90,7 @@ class SqlWrapper(object):
     @classmethod
     def createTriggers(cls):
         for t in cls.tables:
-            tb=t.name
+            tb = t.name
             if tb.endswith("Book"):
                 #triggers have to be implemented for scheme to use it
                 event.listen(t, 'after_create',
@@ -121,7 +121,7 @@ class SqlWrapper(object):
                 netloc += '@'
             netloc += cls.host
             urlparse.uses_netloc.append(cls.scheme)
-            uri = urlparse.urlunparse((cls.scheme,netloc,cls.database,None,None,None))
+            uri = urlparse.urlunparse((cls.scheme, netloc, cls.database, None, None, None))
             urlparse.uses_netloc.pop()
-            cls.engine = create_engine(uri, echo = cls.echo)
+            cls.engine = create_engine(uri, echo=cls.echo)
         return cls.engine

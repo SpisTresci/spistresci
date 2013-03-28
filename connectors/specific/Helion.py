@@ -4,9 +4,9 @@ import os
 
 #TODO: what to do with more than one elements with the same tagname?
 class Helion(XMLConnector):
-    
+
     #dict of xml_tag -> db_column_name translations
-    xml_tag_dict= {
+    xml_tag_dict = {
         'isbn':'isbn',
         'ean':'ean',
         'ident':'id',
@@ -55,13 +55,13 @@ class Helion(XMLConnector):
     }
 
 
-    def make_dict(self,elem):
+    def make_dict(self, elem):
         elem_dict = {}
         for child_elem in elem:
             child = self.make_dict(child_elem)
             if not child:
                 child = child_elem.text
-            #here an exception will be raised if we dont know this tag 
+            #here an exception will be raised if we dont know this tag
             #i.e. tag not in xml_tag_dict
             tag_name = self.xml_tag_dict[child_elem.tag]
 
@@ -80,19 +80,19 @@ class Helion(XMLConnector):
                     old_child.append(child)
                     child = old_child
                 else:
-                    child = [old_child,child]
+                    child = [old_child, child]
 
             elem_dict[tag_name] = child
         if not len(elem_dict):
             return elem.text
         return elem_dict
-            
+
     def parse(self):
-        filename = os.path.join(self.unpack_dir,self.unpack_file)
+        filename = os.path.join(self.unpack_dir, self.unpack_file)
         root = et.parse(filename).getroot()
         for base in root:
             if self.limit_books:
-                base=base[:self.limit_books]
+                base = base[:self.limit_books]
             for book in base:
                 book_dict = self.make_dict(book)
                 print book_dict
@@ -100,6 +100,6 @@ class Helion(XMLConnector):
 #            print "ID: ", book_dict['id']
 #            print "Opis: ", book_dict['description']
 #            print "url: ",book_dict['url']
-#            print 
+#            print
 
-   
+

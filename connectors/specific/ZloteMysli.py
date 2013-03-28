@@ -6,25 +6,25 @@ Base = SqlWrapper.getBaseClass()
 class ZloteMysli(Afiliant):
 
     xml_attributes_dict = {
-        'Autor':('authors',''),
-        'ISBN':('isbn',''),
-        'Wydawnictwo':('publisher',''),
-        'Rok wydania':('date',''),
-        'Format':('object_format',''),
-        'Format pliku':('format',''),
-        u'Ilo\u015b\u0107 stron':('length',''),
-        'Oprawa':('binding',''),
+        'Autor':('authors', ''),
+        'ISBN':('isbn', ''),
+        'Wydawnictwo':('publisher', ''),
+        'Rok wydania':('date', ''),
+        'Format':('object_format', ''),
+        'Format pliku':('format', ''),
+        u'Ilo\u015b\u0107 stron':('length', ''),
+        'Oprawa':('binding', ''),
         #it may be sth different than image tag
-        'zm:imageParent':('cover_zm',''),
-        'zm:imageMedium':('cover_medium',''),
-        'zm:imageSmall':('cover_small',''),
+        'zm:imageParent':('cover_zm', ''),
+        'zm:imageMedium':('cover_medium', ''),
+        'zm:imageSmall':('cover_small', ''),
         #it may be sth different than category
-        'zm:categoryId':('category_id',''),
-        'zm:productTypeId':('product_type_id',''),
+        'zm:categoryId':('category_id', ''),
+        'zm:productTypeId':('product_type_id', ''),
     }
 
 class ZloteMysliBook(AfiliantBook, Base):
-    
+
     #external_id
     category = Column(Unicode(21))      #21
     categoryId = Column(Integer)        #2

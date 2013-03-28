@@ -7,12 +7,12 @@ class Audioteka(Afiliant):
     def validate(self, dic):
         Afiliant.validate(self, dic)
 
-        id=dic.get('external_id')
-        title=dic.get('title')
+        id = dic.get('external_id')
+        title = dic.get('title')
         self.validateAuthors(dic, id, title, 'lectors')
 
 class AudiotekaBook(AfiliantBook, Base):
-    id =  Column(Integer, primary_key=True)
+    id = Column(Integer, primary_key=True)
 
     category = Column(Unicode(25))      #21
     publisher = Column(Unicode(70))     #57

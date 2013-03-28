@@ -6,7 +6,7 @@ def skip(test):
         raise nose.SkipTest
     newtest = nose.tools.make_decorator(test)(newtest)
     return newtest
-   
+
 def skipBecause(reason=''):
     def decorate(test):
         def newtest(*args, **kwargs):

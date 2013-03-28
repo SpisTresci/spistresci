@@ -18,5 +18,5 @@ class TestSelkar(BaseDBTestFixture):
 
     @raises(NotImplementedError)
     def test_cant_apply_filters(self):
-        self.connector.filters='a,b,c'
+        self.connector.filters = 'a,b,c'
         self.connector.applyFilters()

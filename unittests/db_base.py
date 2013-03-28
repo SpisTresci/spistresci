@@ -32,7 +32,7 @@ class BaseDBTestFixture():
     def setUp(self):
         self.connection = self.engine.connect()
         self.session = self.Session(bind=self.connection)
-        
+
         SqlWrapper.createTriggers()
         SqlWrapper.createTables()
 
@@ -43,8 +43,8 @@ class BaseDBTestFixture():
         SqlWrapper.getBaseClass().metadata.drop_all()
 
     def test_tables_created(self):
-        eq_(self.engine.name,'sqlite')
-        eq_(self.engine.table_names(), 
-        ['%s%s' % (self.connector_class.class_name(),table) for table in 'Author', 'Book', 'BookDescription', 'BookPrice', 'BooksAuthors'])
-         
+        eq_(self.engine.name, 'sqlite')
+        eq_(self.engine.table_names(),
+        ['%s%s' % (self.connector_class.class_name(), table) for table in 'Author', 'Book', 'BookDescription', 'BookPrice', 'BooksAuthors'])
+
 #        eq_(self.connection.info, {})

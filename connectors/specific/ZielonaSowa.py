@@ -7,7 +7,7 @@ class ZielonaSowa(Afiliant):
     pass
 
 class ZielonaSowaBook(AfiliantBook, Base):
-    id =  Column(Integer, primary_key=True)
+    id = Column(Integer, primary_key=True)
 
     category = Column(Unicode(90))      #82
     #title(255)                         #82

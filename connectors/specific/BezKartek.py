@@ -4,9 +4,9 @@ from xml.etree import ElementTree as et
 from sqlwrapper import *
 
 class BezKartek(XMLConnector):
-    
+
     #dict of xml_tag -> db_column_name translations
-    xml_tag_dict= {
+    xml_tag_dict = {
         'isbn':('isbn', ''),
         'ebookId':('external_id', None),
         'name':('title', ''),
@@ -14,20 +14,20 @@ class BezKartek(XMLConnector):
         'authors':('authors', ''),
         'category':('category', ''),
         'description':('description', ''),
-        'format':('format',''),
+        'format':('format', ''),
         'image':('cover', ''),
-        'languages.lang_short':('lang_short',''),
-        'languages.lang_long': ('lang_long',''),
+        'languages.lang_short':('lang_short', ''),
+        'languages.lang_long': ('lang_long', ''),
         'price':('price', 0),
         'pageCount':('page_count', 0),
         'publisher':('publisher', ''),
         'securityType':('security', ''),
-        'audioTime':('audio_time',''),
+        'audioTime':('audio_time', ''),
     }
 
 
     def parse(self):
-        filename = os.path.join(self.unpack_dir,self.unpack_file)
+        filename = os.path.join(self.unpack_dir, self.unpack_file)
         root = et.parse(filename).getroot()
         offers = list(root[0])
         if self.limit_books:
@@ -47,7 +47,7 @@ class BezKartek(XMLConnector):
 Base = SqlWrapper.getBaseClass()
 
 class BezKartekBook(GenericBook, Base):
-    id =  Column(Integer, primary_key=True)
+    id = Column(Integer, primary_key=True)
 
     category = Column(Unicode(30))      #29
 

@@ -37,10 +37,10 @@ class Enum(object):
 
     @classmethod
     def int(cls, name):
-        try: 
+        try:
             ind = cls.values.index(name)
         except ValueError:
             ind = -1
         finally:
             return ind
-    
+

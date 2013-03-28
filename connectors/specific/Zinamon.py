@@ -4,9 +4,9 @@ import urllib2
 import os
 
 class Zinamon(XMLConnector):
-    
+
     #dict of xml_tag -> db_column_name translations
-    xml_tag_dict= {
+    xml_tag_dict = {
         'tytul':'title',
         'url':'url',
         'autorzy':'author',
@@ -30,4 +30,4 @@ class Zinamon(XMLConnector):
             print dic
 
 
-   
+

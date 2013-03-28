@@ -5,20 +5,20 @@ import os
 from sqlwrapper import *
 
 class Czytio(XMLConnector):
-    
+
     #dict of xml_tag -> db_column_name translations
-    xml_tag_dict= {
+    xml_tag_dict = {
         'id':('external_id', None),
         'title':('title', ''),
         'url':('url', ''),
         'authors':('authors', ''),
-        'format':('format',''),
+        'format':('format', ''),
         'isbn':('isbn', ''),
         'cover':('cover', ''),
         'price':('price', 0),
         'size':('size', 0),
     }
-    
+
     def parse(self):
         filename = os.path.join(self.backup_dir, self.filename)
         root = et.parse(filename).getroot()
@@ -41,7 +41,7 @@ class Czytio(XMLConnector):
 Base = SqlWrapper.getBaseClass()
 
 class CzytioBook(GenericBook, Base):
-    id =  Column(Integer, primary_key=True)
+    id = Column(Integer, primary_key=True)
     #title
     url = Column(Unicode(120))          #109
     #authors

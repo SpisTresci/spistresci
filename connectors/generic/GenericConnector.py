@@ -12,7 +12,7 @@ import ConfigParser
 from utils import logger_instance
 from sqlalchemy.ext.associationproxy import association_proxy
 import utils
-#interesting thing: utils.Enum is hide by sql_wrapper.Enum 
+#interesting thing: utils.Enum is hide by sql_wrapper.Enum
 from sqlwrapper import *
 from pyisbn import *
 
@@ -27,7 +27,7 @@ class GenericBase(object):
     @classmethod
     def register(cls):
         if not cls.__name__ in cls.registered:
-            cls.registered[cls.__name__]=cls
+            cls.registered[cls.__name__] = cls
 
     @staticmethod
     def getConcretizedClass(context, className):
@@ -46,7 +46,7 @@ class GenericBase(object):
 
 
 class GenericConnector(GenericBase):
-   
+
     '''
     NONE - remove backup dir after execution
     UNCOMPRESSED - do not touch backup dir after execution
@@ -75,7 +75,7 @@ class GenericConnector(GenericBase):
     def read_config(cls):
         cls.config_object = ConfigParser.ConfigParser()
         if not cls.config_object.read(cls.config_file):
-            raise ConfigParser.Error('Could not read config from file %s'%cls.config_file)
+            raise ConfigParser.Error('Could not read config from file %s' % cls.config_file)
 
     @classmethod
     def class_name(cls):
@@ -85,8 +85,8 @@ class GenericConnector(GenericBase):
     def name(self):
         return self._name
 
-    
-    def parse_config(self, config_file='conf/connectors.ini', section=None, config_object = None):
+
+    def parse_config(self, config_file='conf/connectors.ini', section=None, config_object=None):
         if not config_object:
             self.read_config()
         else:
@@ -98,7 +98,7 @@ class GenericConnector(GenericBase):
         self.config = dict(self.config_object.items(self.section,
                         vars={'date':datetime.now().strftime('%Y%m%d%H%M%S')}
                       ))
-        
+
     def __init__(self, name=None):
         if not name:
             self._name = self.class_name()
@@ -114,38 +114,38 @@ class GenericConnector(GenericBase):
         self.unpack_dir = self.config.get('unpack_dir', '')
         self.archive_file = self.config.get('archive_file', '')
         self.remove_unpacked = int(self.config.get('remove_unpacked', 1))
-        self.log_config=self.config.get('log_config', 'conf/log.connectors.ini')
+        self.log_config = self.config.get('log_config', 'conf/log.connectors.ini')
         self.logger = logger_instance(self.log_config)
-        self.log_erratum_config=self.config.get('log_erratum_config', 'conf/log.erratum.ini')
+        self.log_erratum_config = self.config.get('log_erratum_config', 'conf/log.erratum.ini')
         self.erratum_logger = logger_instance(self.log_erratum_config)
         self.logger.debug('%s connector created' % self.name)
         self.mode = self.BookList_Mode.int(self.config.get('mode', 'UNKNOWN'))
         self.filters = self.config.get('filters', None)
 
     def __del__(self):
-        self.logger.debug('Cleaning up after executing %s connector'%self.name)
+        self.logger.debug('Cleaning up after executing %s connector' % self.name)
         if self.backup_dir:
             if self.backup_archive in [self.ArchiveType.BZIP, self.ArchiveType.GZ] and \
                self.mode not in [self.BookList_Mode.ZIPPED_XMLS, self.BookList_Mode.GZIPPED_XMLS]:
                 self.compress_dir(self.backup_dir, self.backup_archive)
                 self.backup_archive = self.ArchiveType.NONE
-                 
+
             if self.backup_archive == self.ArchiveType.NONE and os.path.exists(self.backup_dir):
                 self._rm_ifpossible(self.backup_dir, 'backup')
-                self.backup_dir=''
+                self.backup_dir = ''
 
         if self.unpack_dir and self.remove_unpacked and os.path.exists(self.unpack_dir):
             self._rm_ifpossible(self.unpack_dir, 'unpack')
-            self.unpack_dir=''
+            self.unpack_dir = ''
 
     def _rm_ifpossible(self, path, dir_type='backup'):
-        cwd = os.getcwd().rstrip('/')+'/'
-        abs_path = os.path.abspath(path).rstrip('/')+'/'
+        cwd = os.getcwd().rstrip('/') + '/'
+        abs_path = os.path.abspath(path).rstrip('/') + '/'
         if abs_path in cwd:
             raise IOError(
-            'Are you insane or something?. Don\'t tell me to remove whole my working dir (%s). HINT:%s dir should not be current dir or parent'%(path, dir_type)
+            'Are you insane or something?. Don\'t tell me to remove whole my working dir (%s). HINT:%s dir should not be current dir or parent' % (path, dir_type)
             )
-        self.logger.debug('Connector %s. Removing %s dir %s'%(self.name, dir_type, path))
+        self.logger.debug('Connector %s. Removing %s dir %s' % (self.name, dir_type, path))
         shutil.rmtree(path)
 
 
@@ -156,23 +156,23 @@ class GenericConnector(GenericBase):
             mode = 'bz2'
         path = os.path.abspath(path)
         basename = os.path.basename(path)
-        tar_name = os.path.abspath(os.path.join(path, '..' ,'%s.tar.%s'%(basename, mode)))
+        tar_name = os.path.abspath(os.path.join(path, '..' , '%s.tar.%s' % (basename, mode)))
         self.logger.debug('Comprassing dir %s to %s', path, tar_name)
-        tar = tarfile.open(tar_name, 'w:%s'%mode)
-        tar.add(path, arcname = basename)     
+        tar = tarfile.open(tar_name, 'w:%s' % mode)
+        tar.add(path, arcname=basename)
 
 
-    #@abc.abstractmethod    
+    #@abc.abstractmethod
     def fetchData(self):
         """fetchData method"""
         pass
-    
-    #@abc.abstractmethod    
+
+    #@abc.abstractmethod
     def parse(self):
         """parse method"""
         pass
 
-    #@abc.abstractmethod        
+    #@abc.abstractmethod
     def updateDatabase(self):
         """update method"""
         pass
@@ -206,10 +206,10 @@ class GenericConnector(GenericBase):
             for key in self.max_len.keys():
                 if not dic[key]:
                     self.max_len[key] = 0
-                    self.max_len_entry[key]=''
+                    self.max_len_entry[key] = ''
                 else:
-                    self.max_len[key]=len(dic[key])
-                    self.max_len_entry[key]=dic[key]
+                    self.max_len[key] = len(dic[key])
+                    self.max_len_entry[key] = dic[key]
         else:
             for key in dic.keys():
                 try:
@@ -221,8 +221,8 @@ class GenericConnector(GenericBase):
                     self.max_len_entry[key] = dic[key]
 
     def validate(self, dic):
-        id=dic.get('external_id')
-        title=dic.get('title')
+        id = dic.get('external_id')
+        title = dic.get('title')
         self.validateISBN(dic, id, title)
         self.validatePrice(dic, id, title)
         self.validateSize(dic, id, title)
@@ -232,7 +232,7 @@ class GenericConnector(GenericBase):
 
     def validateISBN(self, dic, id, title):
         original_isbn = dic.get('isbn')
-        isbn_str=""
+        isbn_str = ""
 
         if original_isbn != None:
             try:
@@ -240,40 +240,40 @@ class GenericConnector(GenericBase):
                 if isbn.validate():
                     isbn_str = isbn.isbn
                 else:
-                    self.erratum_logger.info("ISBN validation failed! connector: %s, original_isbn: %s, cannonical ISBN: %s, id: %s, title: %s"%(self.name, original_isbn, isbn.isbn, id, title))
+                    self.erratum_logger.info("ISBN validation failed! connector: %s, original_isbn: %s, cannonical ISBN: %s, id: %s, title: %s" % (self.name, original_isbn, isbn.isbn, id, title))
 
             except IsbnError:
                 if original_isbn == '':
-                    self.erratum_logger.warning("Entry does not have ISBN! connector: %s, id: %s, title: %s"%(self.name, id, title))
+                    self.erratum_logger.warning("Entry does not have ISBN! connector: %s, id: %s, title: %s" % (self.name, id, title))
                 else:
-                    self.erratum_logger.info("ISBN has wrong format! connector: %s, original_isbn: %s, id: %s, title: %s"%(self.name, original_isbn, id, title))
+                    self.erratum_logger.info("ISBN has wrong format! connector: %s, original_isbn: %s, id: %s, title: %s" % (self.name, original_isbn, id, title))
 
-        dic['isbn']=isbn_str
+        dic['isbn'] = isbn_str
 
     def validatePrice(self, dic, id, title, price_tag_name='price'):
         original_price = dic.get(price_tag_name)
-        price=0
+        price = 0
         if original_price != None:
-            price_str=original_price
+            price_str = original_price
             if "," in price_str:
                 price_str = price_str.replace(",", ".")
 
             if "." in price_str:
-                if price_str.count(".")==1:
+                if price_str.count(".") == 1:
                     price_str = price_str.replace(".", "")
                 else:
-                    self.erratum_logger.warning("Entry has price in wrong format! connector: %s, id: %s, title: %s"%(self.name, id, title))
+                    self.erratum_logger.warning("Entry has price in wrong format! connector: %s, id: %s, title: %s" % (self.name, id, title))
 
             try:
                 price = int(price_str)
             except ValueError:
-                self.erratum_logger.warning("Entry has price in wrong format! connector: %s, id: %s, title: %s"%(self.name, id, title))
+                self.erratum_logger.warning("Entry has price in wrong format! connector: %s, id: %s, title: %s" % (self.name, id, title))
 
-        dic[price_tag_name]=unicode(price)
+        dic[price_tag_name] = unicode(price)
 
     def validateAuthors(self, dic, id, title, tag_name='authors'):
         if dic.get(tag_name) != None:
-            dic[tag_name]=[x.strip() for x in re.split("[,;]", dic[tag_name])]
+            dic[tag_name] = [x.strip() for x in re.split("[,;]", dic[tag_name])]
 
     def validateSize(self, dic, id, title):
         pass
@@ -281,7 +281,7 @@ class GenericConnector(GenericBase):
     def validateLength(self, dic, id, title):
         pass
 
-    def downloadFile(self, url=None, filename=None, headers = None):
+    def downloadFile(self, url=None, filename=None, headers=None):
         if not url:
             url = self.url
         if headers:
@@ -292,7 +292,7 @@ class GenericConnector(GenericBase):
         if self.backup_dir and not os.path.exists(self.backup_dir):
 
             os.makedirs(self.backup_dir)
-        
+
         if filename:
             filename = os.path.join(self.backup_dir, filename)
         else:
@@ -301,30 +301,30 @@ class GenericConnector(GenericBase):
         f = open(filename, 'wb')
         meta = u.info()
         if meta.getheader("Content-Length"):
-            self.logger.info('%s connector, downloading %s into %s (%s bytes)' % 
+            self.logger.info('%s connector, downloading %s into %s (%s bytes)' %
             (self.name, url, filename, int(meta.getheader('Content-Length'))))
         else:
-            self.logger.info('%s connector downloading %s into %s'%(self.name, url, filename))
+            self.logger.info('%s connector downloading %s into %s' % (self.name, url, filename))
         if meta.getheader("Last-Modified"):
-            self.logger.info('File last modified: %s'%meta.getheader('Last-Modified'))
-        
+            self.logger.info('File last modified: %s' % meta.getheader('Last-Modified'))
+
         file_size_dl = 0
         block_sz = 8192
         while True:
             buffer = u.read(block_sz)
             if not buffer:
                 break
-        
+
             file_size_dl += len(buffer)
             f.write(buffer)
 
         f.close()
-        self.logger.debug('Download of %s completed, downloaded %d bytes'%(filename,file_size_dl))
+        self.logger.debug('Download of %s completed, downloaded %d bytes' % (filename, file_size_dl))
         return filename
 
     def unpackGZIP(self, gzipname):
         fh = gzip.GzipFile(gzipname, "r")
-        
+
         file_content = fh.read()
         fh.close()
 
@@ -332,22 +332,22 @@ class GenericConnector(GenericBase):
             self.unpack_file, ext = os.path.splitext(os.path.basename(gzipname))
         if self.unpack_dir and not os.path.exists(self.unpack_dir):
                 os.makedirs(self.unpack_dir)
-     
-        unpack_file_name =  os.path.join(self.unpack_dir,self.unpack_file)
-        self.logger.debug('Unpacking gzip %s into %s'%(gzipname,unpack_file_name))
+
+        unpack_file_name = os.path.join(self.unpack_dir, self.unpack_file)
+        self.logger.debug('Unpacking gzip %s into %s' % (gzipname, unpack_file_name))
         file = open(unpack_file_name, "w")
         file.write(file_content)
         file.close()
-        
+
     def unpackZIP(self, zipname):
         zfile = zipfile.ZipFile(zipname)
         for name in zfile.namelist():
             (dirname, filename) = os.path.split(name)
-            dirname = os.path.join(self.unpack_dir,dirname)
-            self.logger.debug('Unpacking zip %s into %s'%(filename,dirname))
+            dirname = os.path.join(self.unpack_dir, dirname)
+            self.logger.debug('Unpacking zip %s into %s' % (filename, dirname))
             if dirname and not os.path.exists(dirname):
                 os.makedirs(dirname)
-            fd = open(os.path.join(dirname,name),"w")
+            fd = open(os.path.join(dirname, name), "w")
             fd.write(zfile.read(name))
             fd.close()
 
@@ -357,13 +357,13 @@ class GenericConnector(GenericBase):
         if not c:
             c = ClassName(**d)
         return c
-    
+
     def get_(self, ClassName, param_name, d, session):
         return session.query(ClassName).filter_by(**{param_name:d[param_name]}).first()
 
 
     def add_record(self, d):
-        Book =  GenericBook.getConcretizedClass(context=self)
+        Book = GenericBook.getConcretizedClass(context=self)
         Description = GenericBookDescription.getConcretizedClass(context=self)
         Author = GenericAuthor.getConcretizedClass(context=self)
         BooksAuthors = GenericBooksAuthors.getConcretizedClass(context=self)
@@ -374,13 +374,13 @@ class GenericConnector(GenericBase):
         book = self.get_(Book, "external_id", d, session)
 
         if not book:
-            book=Book(d)
+            book = Book(d)
             if d.get('description') != None:
-                desc=Description(d)
-                book.description=desc
+                desc = Description(d)
+                book.description = desc
 
 
-            for touple in [('authors',False, False), ('translators',True, False), ('lectors', False, True)]:
+            for touple in [('authors', False, False), ('translators', True, False), ('lectors', False, True)]:
                 if d.get(touple[0]) != None:
                     for author in d[touple[0]]:
                         author = Author.get_or_create(author, session)
@@ -405,7 +405,7 @@ class GenericBook(GenericBase):
 
     @declared_attr
     def description(cls):
-        return relationship(cls.__tablename__+"Description", uselist=False, backref="book")
+        return relationship(cls.__tablename__ + "Description", uselist=False, backref="book")
 
     @declared_attr
     def __tablename__(cls):
@@ -415,7 +415,7 @@ class GenericBook(GenericBase):
     @declared_attr
     def authors(cls):
         name = cls.__tablename__[:-len("Book")]
-        return association_proxy(name+"_authorship", "author")
+        return association_proxy(name + "_authorship", "author")
 
     def __init__(self, initial_data):
         for key in initial_data:
@@ -433,7 +433,7 @@ class GenericBook(GenericBase):
                 un = unicode(getattr(self, key))
 
                 if key == 'authors':
-                    str_author_list=[]
+                    str_author_list = []
                     for author in self.authors:
                         str_author_list.append(unicode(author))
 
@@ -474,7 +474,7 @@ class GenericBookDescription(GenericBase):
 
     @declared_attr
     def book_id(cls):
-        return Column(Integer, ForeignKey(cls.__tablename__[:-len("Description")]+'.id'))
+        return Column(Integer, ForeignKey(cls.__tablename__[:-len("Description")] + '.id'))
 
     def __init__(self, initial_data):
         try:
@@ -501,7 +501,7 @@ class GenericAuthor(GenericBase):
     @declared_attr
     def books(cls):
         name = cls.__tablename__[:-len("Author")]
-        return association_proxy(name+"_authorship", "book")
+        return association_proxy(name + "_authorship", "book")
 
     def __unicode__(self):
         return unicode(self.name)
@@ -519,7 +519,7 @@ class GenericBookPrice(GenericBase):
     id = Column(Integer, primary_key=True)
     @declared_attr
     def book_id(cls):
-        return Column(Integer, ForeignKey(cls.__tablename__[:-len("Price")]+'.id'))
+        return Column(Integer, ForeignKey(cls.__tablename__[:-len("Price")] + '.id'))
 
     price = Column(Integer)
     date = Column(DateTime)
@@ -547,21 +547,21 @@ class GenericBooksAuthors(GenericBase):
     @declared_attr
     def book_id(cls):
         name = cls.__tablename__[:-len("BooksAuthors")]
-        return Column(Integer, ForeignKey(name+'Book.id'))
+        return Column(Integer, ForeignKey(name + 'Book.id'))
 
     @declared_attr
     def author_id(cls):
         name = cls.__tablename__[:-len("BooksAuthors")]
-        return Column(Integer, ForeignKey(name+'Author.id'))
+        return Column(Integer, ForeignKey(name + 'Author.id'))
 
     @declared_attr
     def book(cls):
         name = cls.__tablename__[:-len("BooksAuthors")]
         table = cls.registered[name + 'Book']
-        return relationship(table, backref=name+"_authorship")
+        return relationship(table, backref=name + "_authorship")
 
     @declared_attr
     def author(cls):
         name = cls.__tablename__[:-len("BooksAuthors")]
         table = cls.registered[name + 'Author']
-        return relationship(table, backref=name+"_authorship")
+        return relationship(table, backref=name + "_authorship")

@@ -6,7 +6,7 @@ from sqlwrapper import *
 class Empik(XMLConnector):
 
     #dict of xml_tag -> db_column_name translations
-    xml_tag_dict= {
+    xml_tag_dict = {
         #'isbn':('isbn', ''),                   #ok
         'ean':('ean', ''),                      #ok
         'TDProductId':('external_id', None),    #ok
@@ -20,7 +20,7 @@ class Empik(XMLConnector):
 
 
     def parse(self):
-        filename = os.path.join(self.unpack_dir,self.unpack_file)
+        filename = os.path.join(self.unpack_dir, self.unpack_file)
         products = list(et.parse(filename).getroot())
         if self.limit_books:
             products = products[:self.limit_books]
@@ -38,7 +38,7 @@ class Empik(XMLConnector):
 Base = SqlWrapper.getBaseClass()
 
 class EmpikBook(GenericBook, Base):
-    id =  Column(Integer, primary_key=True)
+    id = Column(Integer, primary_key=True)
     ean = Column(Unicode(13))           #13
     price = Column(Integer)             #GROSZE!!!
     url = Column(Unicode(65))           #59

@@ -8,20 +8,20 @@ import os
 
 
 class Koobe(XMLConnector):
-    
-    def __init__(self,name=None):
+
+    def __init__(self, name=None):
         XMLConnector.__init__(self, name=name)
-        
+
     def parse(self):
-                
+
         filename = os.path.join(self.backup_dir, self.filename)
         if not os.path.exists(filename):
             exit(-1)
- 
+
         root = et.parse(filename).getroot()
 
         for product in root[0]:
-            d={}
+            d = {}
             d['title'] = product.findtext('name')
             d['external_id'] = product.findtext('id')
             d['description'] = product.findtext('description')
@@ -31,9 +31,9 @@ class Koobe(XMLConnector):
             d['category'] = product.findtext('category')
             d['producer'] = product.findtext('producer')
 
-            d['isbn']=d['protection']=None
-            d['authors']=[]
-            d['format']=[]
+            d['isbn'] = d['protection'] = None
+            d['authors'] = []
+            d['format'] = []
 
             for property in product.findall('property'):
                 if d['isbn'] == None:
@@ -42,7 +42,7 @@ class Koobe(XMLConnector):
 
                 if property.get('name') == 'author':
                     d['authors'].append(property.text)
-                    
+
                 if property.get('name') == 'format':
                     d['format'].append(property.text)
 
@@ -68,7 +68,7 @@ class Koobe(XMLConnector):
 
         print self.max_len
         for key in self.max_len_entry.keys():
-            print key+": "+ self.max_len_entry[key]
+            print key + ": " + self.max_len_entry[key]
 
 #Base = SqlWrapper.getBaseClass()
 #
