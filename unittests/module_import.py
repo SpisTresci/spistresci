@@ -14,6 +14,7 @@ class TestModuleImport():
         else:
             assert False, '%s missing in module %s'%(member,module)
 
+'''
     def test_wolnelektury(self):
         import wolnelektury 
         self.assertModuleMember(wolnelektury,'fetch')
@@ -53,3 +54,4 @@ class TestModuleImport():
         self.assertModuleMember(generic,'GenericConnector')
         self.assertModuleMember(generic,'XMLConnector')
 
+'''

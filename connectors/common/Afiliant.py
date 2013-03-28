@@ -1,6 +1,6 @@
-from generic import XMLConnector
+from connectors.generic import XMLConnector
 from xml.etree import ElementTree as et
-from generic import *
+from connectors.generic import *
 import os
 
 class Afiliant(XMLConnector):

@@ -1,7 +1,7 @@
 import os
-from generic import *
+from connectors.generic import *
 from xml.etree import ElementTree as et
-from sql_wrapper import *
+from sqlwrapper import *
 
 class Empik(XMLConnector):
 

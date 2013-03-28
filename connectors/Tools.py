@@ -1,5 +1,5 @@
-from generic import GenericConnector
-from connectors_logger import logger_instance
+from connectors.generic import GenericConnector
+from utils import logger_instance
 import ConfigParser
 
 def get_classnames():

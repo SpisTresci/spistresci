@@ -1,7 +1,7 @@
 from utils import NoseUtils
 from nose.tools import *
 from db_base import BaseDBTestFixture
-from connectors import BezKartek
+from connectors.specific import BezKartek
 
 '''
 Note:

@@ -2,7 +2,7 @@ import nose
 from nose.tools import *
 from nose.plugins.capture import Capture
 
-from connectors_logger import logger_instance
+from utils.ConnectorsLogger import logger_instance
 
 from StringIO import StringIO
 import sys
@@ -176,12 +176,12 @@ class TestSingletonException(TestGenericLogger):
     
     @raises(Exception)
     def test_singleton_exception_for_empty_config(self):
-        import connectors_logger
-        self.ml2 = connectors_logger.ConnectorsLogger.ConnectorsLogger()
+        from utils import ConnectorsLogger
+        self.ml2 = ConnectorsLogger.ConnectorsLogger()
 
     @raises(Exception)
     def test_singleton_exception_for_config(self):
         config_file = os.path.join(self.config_path,'test_debug_console.ini')
-        import connectors_logger
-        self.ml2 = connectors_logger.ConnectorsLogger.ConnectorsLogger()
-        self.ml3 = connectors_logger.ConnectorsLogger.ConnectorsLogger()
+        from utils import ConnectorsLogger
+        self.ml2 = ConnectorsLogger.ConnectorsLogger()
+        self.ml3 = ConnectorsLogger.ConnectorsLogger()

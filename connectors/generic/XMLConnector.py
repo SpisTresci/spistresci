@@ -1,4 +1,4 @@
-from generic import GenericConnector
+from connectors.generic import GenericConnector
 from utils import Enum
 import os
 

@@ -2,10 +2,12 @@
 import ConfigParser
 import sys
 
-from connectors_logger import logger_instance
-from connectors import *
-from sql_wrapper import *
+from utils import logger_instance
 from connectors import Tools
+from connectors.generic import *
+from connectors.specific import *
+from sqlwrapper import *
+
 
 def main():
 

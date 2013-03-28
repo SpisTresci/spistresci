@@ -1,4 +1,4 @@
-from sql_wrapper import *
+from sqlwrapper import *
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import event, DDL

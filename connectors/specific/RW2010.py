@@ -1,8 +1,8 @@
-from generic import *
+from connectors.generic import *
 from xml.etree import ElementTree as et
 import urllib2
 import os
-from sql_wrapper import *
+from sqlwrapper import *
 
 class RW2010(XMLConnector):
     

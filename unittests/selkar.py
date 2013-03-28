@@ -1,7 +1,7 @@
 from utils import NoseUtils
 from nose.tools import *
 from db_base import BaseDBTestFixture
-from connectors import Selkar
+from connectors.specific import Selkar
 '''
 Note:
 Running this test standalone may cause following exception:

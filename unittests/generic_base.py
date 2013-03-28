@@ -1,4 +1,4 @@
-from generic import GenericBase
+from connectors.generic import GenericBase
 from nose.tools import *
 
 class MockContext(GenericBase):

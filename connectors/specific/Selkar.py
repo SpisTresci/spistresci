@@ -1,8 +1,8 @@
-from generic import *
+from connectors.generic import *
 from xml.etree import ElementTree as et
 import os
 import sys
-from sql_wrapper import *
+from sqlwrapper import *
 
 class Selkar(XMLConnector):
     

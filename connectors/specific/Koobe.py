@@ -1,8 +1,8 @@
-from generic import XMLConnector
-from generic import GenericBook
-from generic import GenericBookDescription
-from generic import GenericAuthor
-from sql_wrapper import *
+from connectors.generic import XMLConnector
+from connectors.generic import GenericBook
+from connectors.generic import GenericBookDescription
+from connectors.generic import GenericAuthor
+from sqlwrapper import *
 from xml.etree import ElementTree as et
 import os
 

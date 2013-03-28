@@ -9,11 +9,11 @@ import re
 from datetime import datetime
 
 import ConfigParser
-from connectors_logger import logger_instance
+from utils import logger_instance
 from sqlalchemy.ext.associationproxy import association_proxy
 import utils
 #interesting thing: utils.Enum is hide by sql_wrapper.Enum 
-from sql_wrapper import *
+from sqlwrapper import *
 from pyisbn import *
 
 

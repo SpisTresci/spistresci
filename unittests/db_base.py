@@ -1,6 +1,6 @@
 from sqlalchemy.orm import sessionmaker
-from generic import GenericConnector
-from sql_wrapper import SqlWrapper
+from connectors.generic import GenericConnector
+from sqlwrapper import SqlWrapper
 from nose.tools import *
 
 '''

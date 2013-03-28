@@ -1,5 +1,5 @@
-from afiliant import *
-from sql_wrapper import *
+from connectors.common import *
+from sqlwrapper import *
 
 Base = SqlWrapper.getBaseClass()
 
