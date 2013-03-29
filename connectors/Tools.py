@@ -34,3 +34,15 @@ def filter_classnames(connector_classnames, filter_list):
     for cn in names_from_filter:
         final_connector_list[cn] = connector_classnames[cn]
     return final_connector_list
+
+def load_class(modulename, classname):
+    module =  __import__(modulename, globals(), locals(), [classname])
+    return getattr(module, classname)
+
+def load_connector(classname, config=None, modulename='connectors.specific'):
+    if config:
+        try:
+            modulename = config.get(classname, 'connector_module')
+        except ConfigParser.NoOptionError:
+            pass
+    return load_class(modulename, classname)

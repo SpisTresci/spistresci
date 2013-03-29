@@ -5,7 +5,6 @@ import sys
 from utils import logger_instance
 from connectors import Tools
 from connectors.generic import *
-from connectors.specific import *
 from sqlwrapper import *
 
 def main():
@@ -16,10 +15,9 @@ def main():
     connector_classnames = Tools.get_classnames()
     final_connector_dic = Tools.filter_classnames(connector_classnames, sys.argv[1:])
 
-    print final_connector_dic
-    connectors = [ getattr(sys.modules[__name__], connector[1])(name=connector[0])
-                  for connector in final_connector_dic.items() ]
-
+    connectors = [ Tools.load_connector(classname=connector[1], config=GenericConnector.config_object)
+                   (name=connector[0])
+                   for connector in final_connector_dic.items() ]
 
     Logger.debug('Created folowing connectors %s' % [connector.name for connector in connectors])
 
