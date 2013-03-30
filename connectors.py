@@ -18,7 +18,7 @@ def run_backup(connector):
     #only download, do not unpack
     connector.fetchData(unpack=False)
 
-def magically_run(app_name):
+def choose_your_destiny(app_name):
     return getattr(sys.modules[__name__], 'run_%s' % app_name)
 
 def main():
@@ -43,7 +43,7 @@ def main():
 
     for connector in connectors:
         try:
-            magically_run(app_name)(connector)
+            choose_your_destiny(app_name)(connector)
         except Exception:
             Logger.exception('Error executing %s, in connector %s' % (app_name, connector.name) )
     Logger.debug('Execution finished')
