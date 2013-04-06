@@ -1,3 +1,3 @@
 #!/bin/sh
 modules=${@:-unittests}
-nosetests  $modules
+nosetests -v  $modules
