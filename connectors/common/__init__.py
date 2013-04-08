@@ -4,3 +4,9 @@ from Afiliant import AfiliantBookDescription
 from Afiliant import AfiliantAuthor
 from Afiliant import AfiliantBookPrice
 from Afiliant import AfiliantBooksAuthors
+from Ceneo import Ceneo
+from Ceneo import CeneoBook
+from Ceneo import CeneoBookDescription
+from Ceneo import CeneoAuthor
+from Ceneo import CeneoBookPrice
+from Ceneo import CeneoBooksAuthors

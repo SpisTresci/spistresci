@@ -4,6 +4,7 @@ from Helion import Helion
 from BezKartek import BezKartek
 from Czytio import Czytio
 from DobryEbook import DobryEbook
+from eClicto import eClicto
 from Empik import Empik
 from EscapeMagazine import EscapeMagazine
 from Koobe import Koobe

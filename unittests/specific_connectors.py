@@ -4,6 +4,7 @@ from utils import NoseUtils
 
 from xml.etree import ElementTree as et
 from connectors.specific import Nexto
+from connectors.specific import eClicto
 import os
 
 class TestSpecificConnectors():
@@ -32,8 +33,6 @@ class TestSpecificConnectors():
         for line, offer in zip(lines, offers):
             eq_(eval(line), nexto.makeDict(offer))
 
-
-
     def test_nexto_make_dict_100(self):
         nexto = Nexto()
 
@@ -51,3 +50,39 @@ class TestSpecificConnectors():
 
         for line, offer in zip(lines, offers):
             eq_(eval(line), nexto.makeDict(offer))
+
+    def test_eclicto_make_dict(self):
+        eclicto = eClicto()
+
+        dicts = os.path.join('unittests/data/specific_connectors/dict/eclicto_formated.dict')
+        xml = os.path.join('unittests/data/specific_connectors/xml/eclicto_formated.xml')
+
+        f = open(dicts, 'r')
+        root = et.parse(xml).getroot()
+
+        lines = f.readlines()
+        offers = list(root[0])
+
+        eq_(len(lines), 1)
+        eq_(len(offers), 1)
+
+        for line, offer in zip(lines, offers):
+            eq_(eval(line), eclicto.makeDict(offer))
+
+    def test_eclicto_make_dict_100(self):
+        eclicto = eClicto()
+
+        dicts = os.path.join('unittests/data/specific_connectors/dict/eclicto_formated_100.dict')
+        xml = os.path.join('unittests/data/specific_connectors/xml/eclicto_formated_100.xml')
+
+        f = open(dicts, 'r')
+        root = et.parse(xml).getroot()
+
+        lines = f.readlines()
+        offers = list(root[0])
+
+        eq_(len(lines), 100)
+        eq_(len(offers), 100)
+
+        for line, offer in zip(lines, offers):
+            eq_(eval(line), eclicto.makeDict(offer))
