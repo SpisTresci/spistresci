@@ -1,10 +1,35 @@
 from connectors.generic import XMLConnector
+from connectors.generic import *
+from sqlwrapper import *
 from xml.etree import ElementTree as et
 import os
 import urllib, urllib2
 
-
 class Nexto(XMLConnector):
+
+    #dict of xml_tag -> db_column_name translations
+    xml_tag_dict = {
+        './id':('external_id', None),
+        './isbn':('isbn', ''),
+        './language':('lang_short', ''),
+        './body':('description', ''),
+        './title':('title', ''),
+        './publisher':('publisher', ''),
+        './manufacturer_id':('manufacturer_id', ''),
+        './product_code':('product_code', ''),
+
+        './category_refs/id':('category_id', ''),
+
+        './issues/issue/issue_id':('issue_id', ''),
+        './issues/issue/author':('authors', ''),
+        './issues/issue/gross_nexto_price':('gross_price', ''),
+        './issues/issue/vat':('vat', ''),
+        './issues/issue/default_net_price':('default_price', ''),
+        './issues/issue/net_api_price':('api_price', ''),
+        './issues/issue/default_spread':('default_spread', ''),
+        './issues/issue/image':('cover', ''),
+        "./issues/issue/format{'./type':('format', ''), './file-protection/type':('protection',''), './file-protection/properties':('properties','')}":('format', ''),
+       }
 
 
     def __init__(self, name=None):
@@ -25,35 +50,31 @@ class Nexto(XMLConnector):
         open(filename, "wb").write(content)
 
     def parse(self):
-
-        filename = os.path.join(self.unpack_dir, self.unpack_file)
-        if not os.path.exists(filename):
-             raise IOError('%s connector, missing xml file %s' % (self.name, filename))
-
+        filename = os.path.join(self.backup_dir, self.filename)
         root = et.parse(filename).getroot()
-
-        for product in root[0]:
-            id = product.findtext('id', '')
-            isbn = product.findtext('isbn', '')
-            language = product.findtext('language', '')
-            description = product.findtext('body', '')
-            title = product.findtext('title', '')
-            publisher = product.findtext('publisher', '')
-            manufacturer_id = product.findtext('manufacturer_id', '')
-
-            print "Tytul: " + title
-            print "ID: " + id
-            print "Opis: " + description
+        offers = list(root)
+        if self.limit_books:
+            offers = offers[:self.limit_books]
+        for book in offers:
+            dic = self.makeDict(book)
+            self.validate(dic)
+            #self.add_record(dic)
 
 
-def main():
+Base = SqlWrapper.getBaseClass()
 
-        nexto = Nexto()
+class NextoBook(GenericBook, Base):
+    id = Column(Integer, primary_key=True)
 
-        nexto.fetchData()
-        nexto.parse()
-        #konektor.update()
+class NextoBookDescription(GenericBookDescription, Base):
+    pass
 
+class NextoAuthor(GenericAuthor, Base):
+    pass
 
-if __name__ == '__main__':
-    main()
+class NextoBookPrice(GenericBookPrice, Base):
+    pass
+
+class NextoBooksAuthors(GenericBooksAuthors, Base):
+    pass
+
