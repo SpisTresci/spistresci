@@ -11,6 +11,7 @@ class TestSpecificConnectors():
 
     def setUp(self):
         Nexto.config_file = 'unittests/data/specific_connectors/conf/test.ini'
+        eClicto.config_file = 'unittests/data/specific_connectors/conf/test.ini'
 
     def tearDown(self):
         pass
