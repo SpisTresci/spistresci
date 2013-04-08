@@ -17,38 +17,37 @@ class TestSpecificConnectors():
     def test_nexto_make_dict(self):
         nexto = Nexto()
 
-        filename = os.path.join(nexto.backup_dir, nexto.filename)
-        print nexto.backup_dir, nexto.filename
-        root = et.parse(filename).getroot()
+        dicts = os.path.join('unittests/data/specific_connectors/dict/nexto_formated.dict')
+        xml = os.path.join('unittests/data/specific_connectors/xml/nexto_formated.xml')
+
+        f = open(dicts, 'r')
+        root = et.parse(xml).getroot()
+
+        lines = f.readlines()
         offers = list(root)
-        dic = nexto.makeDict(offers[0])
 
-        dic2 = {
-                'default_price': u'1.62',
-                'publisher': u'NetPress Digital Sp. z o.o.',
-                'product_code': u'netpress_pbi_08429',
-                'isbn': u'netpress_pbi_08429',
-                'description': u'description',
-                'title': u'Skarb wata\u017cki : powie\u015b\u0107 z ko\u0144ca XVIII wieku',
-                'format':   {
-                            'protection': u'NO_DRM',
-                            'properties': u'None',
-                            'format': u'epub'
-                            },
-                'cover': u'http://www.nexto.pl/upload/sklep/netpress/pbi/ebook/skarb_watazki__powiesc_z_konca_xviii_wie-wladyslaw_lozinski-netpress_digital/public/cover-6833.jpg',
-                'default_spread': u'59.88',
-                'gross_price': u'1.99',
-                'issue_id': u'56368',
-                'lang_short': u'pl',
-                'authors': u'W\u0142adys\u0142aw \u0141ozi\u0144ski',
-                'manufacturer_id': u'9',
-                'category_id':  [
-                                    u'1212',
-                                    u'1015'
-                                ],
-                'external_id': u'27138',
-                'vat': u'23',
-                'api_price': u'0.65'
-                }
+        eq_(len(lines), 1)
+        eq_(len(offers), 1)
 
-        eq_(dic, dic2)
+        for line, offer in zip(lines, offers):
+            eq_(eval(line), nexto.makeDict(offer))
+
+
+
+    def test_nexto_make_dict_100(self):
+        nexto = Nexto()
+
+        dicts = os.path.join('unittests/data/specific_connectors/dict/nexto_formated_100.dict')
+        xml = os.path.join('unittests/data/specific_connectors/xml/nexto_formated_100.xml')
+
+        f = open(dicts, 'r')
+        root = et.parse(xml).getroot()
+
+        lines = f.readlines()
+        offers = list(root)
+
+        eq_(len(lines), 100)
+        eq_(len(offers), 100)
+
+        for line, offer in zip(lines, offers):
+            eq_(eval(line), nexto.makeDict(offer))
