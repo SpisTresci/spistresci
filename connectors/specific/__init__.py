@@ -2,6 +2,7 @@ from Audiobook import Audiobook
 from Audioteka import Audioteka
 from Helion import Helion
 from BezKartek import BezKartek
+from CzeskieKlimaty import CzeskieKlimaty
 from Czytio import Czytio
 from DobryEbook import DobryEbook
 from eClicto import eClicto

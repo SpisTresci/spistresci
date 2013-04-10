@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<products>
+  <product>
+    <id>27138</id>
+    <isbn>netpress_pbi_08429</isbn>
+    <language>pl</language>
+    <body>description</body>
+    <title>Skarb watażki : powieść z końca XVIII wieku</title>
+    <publisher>NetPress Digital Sp. z o.o.</publisher>
+    <manufacturer_id>9</manufacturer_id>
+    <product_code>netpress_pbi_08429</product_code>
+    <category_refs>
+      <id>1212</id>
+      <id>1015</id>
+    </category_refs>
+    <issues>
+      <issue>
+        <issue_id>56368</issue_id>
+        <author>Władysław Łoziński</author>
+        <gross_nexto_price>1.99</gross_nexto_price>
+        <vat>23</vat>
+        <default_net_price>1.62</default_net_price>
+        <net_api_price>0.65</net_api_price>
+        <default_spread>59.88</default_spread>
+        <image>http://www.nexto.pl/upload/sklep/netpress/pbi/ebook/skarb_watazki__powiesc_z_konca_xviii_wie-wladyslaw_lozinski-netpress_digital/public/cover-6833.jpg</image>
+        <format>
+          <type>epub</type>
+          <file-protection>
+            <type>NO_DRM</type>
+            <properties/>
+          </file-protection>
+        </format>
+      </issue>
+    </issues>
+  </product>
+</products>
