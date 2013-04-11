@@ -26,17 +26,18 @@ class WolneEbooki(XMLConnector):
             offers = offers[:self.limit_books]
         for book in offers:
             dic = self.makeDict(book)
-	    #print dic
+            self.create_id_from_url(dic)
             self.validate(dic)
             #self.measureLenghtDict(dic)
-            #self.add_record(dic)
+            self.add_record(dic)
 
         #print self.max_len
         #for key in self.max_len_entry.keys():
         #    print key+": "+ unicode(self.max_len_entry[key])
 
 
-
+    def create_id_from_url(self, dic):
+        dic['external_id'] = int(dic['url'].split('/')[-1])
 
 class WolneEbookiBook(GenericBook, Base):
     id = Column(Integer, primary_key=True)
