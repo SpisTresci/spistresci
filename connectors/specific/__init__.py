@@ -15,6 +15,7 @@ from RW2010 import RW2010
 from Selkar import Selkar
 from Tmc import Tmc
 from Virtualo import Virtualo
+from WolneEbooki import WolneEbooki
 from ZielonaSowa import ZielonaSowa
 from Zinamon import Zinamon
 from ZloteMysli import ZloteMysli

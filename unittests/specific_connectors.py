@@ -6,6 +6,7 @@ from xml.etree import ElementTree as et
 from connectors.specific import Nexto
 from connectors.specific import eClicto
 from connectors.specific import CzeskieKlimaty
+from connectors.specific import WolneEbooki
 import os
 
 class TestSpecificConnectors():
@@ -14,6 +15,7 @@ class TestSpecificConnectors():
         Nexto.config_file = 'unittests/data/specific_connectors/conf/test.ini'
         eClicto.config_file = 'unittests/data/specific_connectors/conf/test.ini'
         CzeskieKlimaty.config_file = 'unittests/data/specific_connectors/conf/test.ini'
+        WolneEbooki.config_file = 'unittests/data/specific_connectors/conf/test.ini'
 
     def tearDown(self):
         pass
@@ -126,5 +128,43 @@ class TestSpecificConnectors():
 
         for line, offer in zip(lines, offers):
             eq_(eval(line), czeskieklimaty.makeDict(offer))
+
+
+
+    def test_wolneebooki_make_dict_1(self):
+        wolneebooki = WolneEbooki()
+
+        dicts = os.path.join('unittests/data/specific_connectors/dict/wolneebooki_formated_1.dict')
+        xml = os.path.join('unittests/data/specific_connectors/xml/wolneebooki_formated_1.xml')
+
+        f = open(dicts, 'r')
+        root = et.parse(xml).getroot()
+
+        lines = f.readlines()
+        offers = list(root)
+
+        eq_(len(lines), 1)
+        eq_(len(offers), 1)
+
+        for line, offer in zip(lines, offers):
+            eq_(eval(line), wolneebooki.makeDict(offer))
+
+    def test_wolneebooki_make_dict_19(self):
+        wolneebooki = WolneEbooki()
+
+        dicts = os.path.join('unittests/data/specific_connectors/dict/wolneebooki_formated_19.dict')
+        xml = os.path.join('unittests/data/specific_connectors/xml/wolneebooki_formated_19.xml')
+
+        f = open(dicts, 'r')
+        root = et.parse(xml).getroot()
+
+        lines = f.readlines()
+        offers = list(root)
+
+        eq_(len(lines), 19)
+        eq_(len(offers), 19)
+
+        for line, offer in zip(lines, offers):
+            eq_(eval(line), wolneebooki.makeDict(offer))
 
 
