@@ -71,7 +71,10 @@ class XMLConnector(GenericConnector):
                     self.getValueFromElem(xml_tag_dict, elem, ntag, book_dict)
 
             t = xml_tag_dict[tag][0]
-            if book_dict.get(t) != None and len(book_dict[t]) == 1:
+
+            if book_dict.get(t) == None:
+                book_dict[t] = unicode((xml_tag_dict[tag])[1])
+            elif len(book_dict[t]) == 1:
                 book_dict[t] = book_dict[t][0]
 
 
@@ -98,8 +101,7 @@ class XMLConnector(GenericConnector):
                 if atrrib_value[1] == None:
                     book_dict[new_tag].append(unicode(elem.attrib.get(atrrib_value[0], (xml_tag_dict[tag])[1])))
                 else:
-                    book_dict[new_tag].append(unicode(elem.text if elem.text != "" else (xml_tag_dict[tag])[1]))
+                    book_dict[new_tag].append(unicode(elem.text if elem.text != "" and elem.text != None else (xml_tag_dict[tag])[1]))
             else:
-                book_dict[new_tag].append(unicode(elem.text if elem.text != "" else (xml_tag_dict[tag])[1]))
-
+                book_dict[new_tag].append(unicode(elem.text if elem.text != "" and elem.text != None else (xml_tag_dict[tag])[1]))
 

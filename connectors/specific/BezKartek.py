@@ -7,22 +7,22 @@ class BezKartek(XMLConnector):
 
     #dict of xml_tag -> db_column_name translations
     xml_tag_dict = {
-        'isbn':('isbn', ''),
-        'ebookId':('external_id', None),
-        'name':('title', ''),
-        'url':('url', None),
-        'authors':('authors', ''),
-        'category':('category', ''),
-        'description':('description', ''),
-        'format':('format', ''),
-        'image':('cover', ''),
-        'languages.lang_short':('lang_short', ''),
-        'languages.lang_long': ('lang_long', ''),
-        'price':('price', 0),
-        'pageCount':('page_count', 0),
-        'publisher':('publisher', ''),
-        'securityType':('security', ''),
-        'audioTime':('audio_time', ''),
+        './isbn':('isbn', ''),
+        './ebookId':('external_id', None),
+        './name':('title', ''),
+        './url':('url', None),
+        './authors':('authors', ''),
+        './category':('category', ''),
+        './description':('description', ''),
+        './format':('format', ''),
+        './image':('cover', ''),
+        './languages/lang_short':('lang_short', ''),
+        './languages/lang_long': ('lang_long', ''),
+        './price':('price', 0),
+        './pageCount':('page_count', 0),
+        './publisher':('publisher', ''),
+        './securityType':('security', ''),
+        './audioTime':('audio_time', ''),
     }
 
 

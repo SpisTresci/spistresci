@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bezkartek>
+  <offers>
+    <offer>
+      <ebookId>110193</ebookId>
+      <name><![CDATA[Krok... w kierunku kreatywności. Zabawy i ćwiczenia.]]></name>
+      <description><![CDATA[<p style="text-align: justify;">Książka stanowi integralną całość z programem &bdquo;Krok...w kierunku kreatywności. Program stymulowania tw&oacute;rczości na etapie edukacji przedszkolnej i wczesnoszkolnej&rdquo;. Jest propozycją wielu zabaw i ćwiczeń dla dzieci, skierowaną do nauczycieli, psycholog&oacute;w oraz trener&oacute;w tw&oacute;rczości. Przedstawione propozycje można wplatać w organizowane zajęcia, dopasowując je do tematyki dnia lub prowadzić odrębnie w ramach imprez, zajęć integracyjnych i zabaw swobodnych. Każde z proponowanych ćwiczeń może być przeprowadzone w formie kr&oacute;tkiej zabawy lub rozbudowane do dłuższych zajęć. Ćwiczenia te z powodzeniem można upraszczać lub zwiększać stopień ich trudności w zależności od możliwości dzieci i pomysłu nauczyciela.</p>]]></description>
+      <url><![CDATA[http://www.bezkartek.pl/ti-v-ti110193/Psychologia/Mariola-Jader/Krok-w-kierunku-kreatywnosci-Zabawy-i-cwiczenia.jsf]]></url>
+      <image><![CDATA[http://www.bezkartek.pl/images/Covers/2009_08_28/110193/image1053828161.jpg?size=180x180&ext=png]]></image>
+      <price>0</price>
+      <category><![CDATA[Psychologia]]></category>
+      <authors><![CDATA[Mariola Jąder]]></authors>
+      <isbn><![CDATA[978-83-7308-701-9]]></isbn>
+      <publisher><![CDATA[Impuls]]></publisher>
+      <languages>
+        <lang_long><![CDATA[polski]]></lang_long>
+        <lang_short><![CDATA[PL]]></lang_short>
+      </languages>
+      <format><![CDATA[PDF]]></format>
+      <securityType><![CDATA[Watermark]]></securityType>
+    </offer>
+  </offers>
+</bezkartek>
