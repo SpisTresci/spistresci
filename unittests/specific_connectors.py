@@ -7,6 +7,7 @@ from connectors.specific import BezKartek
 from connectors.specific import CzeskieKlimaty
 from connectors.specific import DobryEbook
 from connectors.specific import eClicto
+from connectors.specific import Empik
 from connectors.specific import Nexto
 from connectors.specific import WolneEbooki
 import os
@@ -18,6 +19,7 @@ class TestSpecificConnectors():
         CzeskieKlimaty.config_file = 'unittests/data/specific_connectors/conf/test.ini'
         DobryEbook.config_file = 'unittests/data/specific_connectors/conf/test.ini'
         eClicto.config_file = 'unittests/data/specific_connectors/conf/test.ini'
+        Empik.config_file = 'unittests/data/specific_connectors/conf/test.ini'
         Nexto.config_file = 'unittests/data/specific_connectors/conf/test.ini'
         WolneEbooki.config_file = 'unittests/data/specific_connectors/conf/test.ini'
 
@@ -96,7 +98,6 @@ class TestSpecificConnectors():
         for line, offer in zip(lines, offers):
             eq_(eval(line), eclicto.makeDict(offer))
 
-
     def test_czeskieklimaty_make_dict_1(self):
         czeskieklimaty = CzeskieKlimaty()
 
@@ -132,8 +133,6 @@ class TestSpecificConnectors():
 
         for line, offer in zip(lines, offers):
             eq_(eval(line), czeskieklimaty.makeDict(offer))
-
-
 
     def test_wolneebooki_make_dict_1(self):
         wolneebooki = WolneEbooki()
@@ -171,7 +170,6 @@ class TestSpecificConnectors():
         for line, offer in zip(lines, offers):
             eq_(eval(line), wolneebooki.makeDict(offer))
 
-
     def test_bezkartek_make_dict_1(self):
         bezkartek = BezKartek()
 
@@ -207,8 +205,6 @@ class TestSpecificConnectors():
 
         for line, offer in zip(lines, offers):
             eq_(eval(line), bezkartek.makeDict(offer))
-
-
 
     def test_dobryebook_make_dict_1(self):
         dobryebook = DobryEbook()
@@ -246,5 +242,39 @@ class TestSpecificConnectors():
         for line, offer in zip(lines, offers):
             eq_(eval(line), dobryebook.makeDict(offer))
 
+    def test_empik_make_dict_1(self):
+        empik = Empik()
 
+        dicts = os.path.join('unittests/data/specific_connectors/dict/empik_formated_1.dict')
+        xml = os.path.join('unittests/data/specific_connectors/xml/empik_formated_1.xml')
+
+        f = open(dicts, 'r')
+        root = et.parse(xml).getroot()
+
+        lines = f.readlines()
+        offers = list(root)
+        
+	eq_(len(lines), 1)
+        eq_(len(offers), 1)
+
+        for line, offer in zip(lines, offers):
+            eq_(eval(line), empik.makeDict(offer))
+
+    def test_empik_make_dict_100(self):
+        empik = Empik()
+
+        dicts = os.path.join('unittests/data/specific_connectors/dict/empik_formated_100.dict')
+        xml = os.path.join('unittests/data/specific_connectors/xml/empik_formated_100.xml')
+
+        f = open(dicts, 'r')
+        root = et.parse(xml).getroot()
+
+        lines = f.readlines()
+        offers = list(root)
+
+        eq_(len(lines), 100)
+        eq_(len(offers), 100)
+
+        for line, offer in zip(lines, offers):
+            eq_(eval(line), empik.makeDict(offer))
 
