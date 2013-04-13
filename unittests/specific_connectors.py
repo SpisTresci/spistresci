@@ -5,6 +5,7 @@ from utils import NoseUtils
 from xml.etree import ElementTree as et
 from connectors.specific import BezKartek
 from connectors.specific import CzeskieKlimaty
+from connectors.specific import DobryEbook
 from connectors.specific import eClicto
 from connectors.specific import Nexto
 from connectors.specific import WolneEbooki
@@ -15,6 +16,7 @@ class TestSpecificConnectors():
     def setUp(self):
         BezKartek.config_file = 'unittests/data/specific_connectors/conf/test.ini'
         CzeskieKlimaty.config_file = 'unittests/data/specific_connectors/conf/test.ini'
+        DobryEbook.config_file = 'unittests/data/specific_connectors/conf/test.ini'
         eClicto.config_file = 'unittests/data/specific_connectors/conf/test.ini'
         Nexto.config_file = 'unittests/data/specific_connectors/conf/test.ini'
         WolneEbooki.config_file = 'unittests/data/specific_connectors/conf/test.ini'
@@ -205,5 +207,44 @@ class TestSpecificConnectors():
 
         for line, offer in zip(lines, offers):
             eq_(eval(line), bezkartek.makeDict(offer))
+
+
+
+    def test_dobryebook_make_dict_1(self):
+        dobryebook = DobryEbook()
+
+        dicts = os.path.join('unittests/data/specific_connectors/dict/dobryebook_formated_1.dict')
+        xml = os.path.join('unittests/data/specific_connectors/xml/dobryebook_formated_1.xml')
+
+        f = open(dicts, 'r')
+        root = et.parse(xml).getroot()
+
+        lines = f.readlines()
+        offers = list(root)
+
+        eq_(len(lines), 1)
+        eq_(len(offers), 1)
+
+        for line, offer in zip(lines, offers):
+            eq_(eval(line), dobryebook.makeDict(offer))
+
+    def test_dobryebook_make_dict_65(self):
+        dobryebook = DobryEbook()
+
+        dicts = os.path.join('unittests/data/specific_connectors/dict/dobryebook_formated_65.dict')
+        xml = os.path.join('unittests/data/specific_connectors/xml/dobryebook_formated_65.xml')
+
+        f = open(dicts, 'r')
+        root = et.parse(xml).getroot()
+
+        lines = f.readlines()
+        offers = list(root)
+
+        eq_(len(lines), 65)
+        eq_(len(offers), 65)
+
+        for line, offer in zip(lines, offers):
+            eq_(eval(line), dobryebook.makeDict(offer))
+
 
 
