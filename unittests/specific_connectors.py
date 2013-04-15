@@ -9,6 +9,7 @@ from connectors.specific import DobryEbook
 from connectors.specific import eClicto
 from connectors.specific import Empik
 from connectors.specific import Nexto
+from connectors.specific import TaniaKsiazka
 from connectors.specific import WolneEbooki
 import os
 
@@ -21,6 +22,7 @@ class TestSpecificConnectors():
         eClicto.config_file = 'unittests/data/specific_connectors/conf/test.ini'
         Empik.config_file = 'unittests/data/specific_connectors/conf/test.ini'
         Nexto.config_file = 'unittests/data/specific_connectors/conf/test.ini'
+        TaniaKsiazka.config_file = 'unittests/data/specific_connectors/conf/test.ini'
         WolneEbooki.config_file = 'unittests/data/specific_connectors/conf/test.ini'
 
     def tearDown(self):
@@ -277,4 +279,40 @@ class TestSpecificConnectors():
 
         for line, offer in zip(lines, offers):
             eq_(eval(line), empik.makeDict(offer))
+
+    def test_taniaksiazka_make_dict_1(self):
+        taniaksiazka = TaniaKsiazka()
+
+        dicts = os.path.join('unittests/data/specific_connectors/dict/taniaksiazka_formated_1.dict')
+        xml = os.path.join('unittests/data/specific_connectors/xml/taniaksiazka_formated_1.xml')
+
+        f = open(dicts, 'r')
+        root = et.parse(xml).getroot()
+
+        lines = f.readlines()
+        offers = list(root)
+
+        eq_(len(lines), 1)
+        eq_(len(offers), 1)
+
+        for line, offer in zip(lines, offers):
+            eq_(eval(line), taniaksiazka.makeDict(offer))
+
+    def test_taniaksiazka_make_dict_100(self):
+        taniaksiazka = TaniaKsiazka()
+
+        dicts = os.path.join('unittests/data/specific_connectors/dict/taniaksiazka_formated_100.dict')
+        xml = os.path.join('unittests/data/specific_connectors/xml/taniaksiazka_formated_100.xml')
+
+        f = open(dicts, 'r')
+        root = et.parse(xml).getroot()
+
+        lines = f.readlines()
+        offers = list(root)
+
+        eq_(len(lines), 100)
+        eq_(len(offers), 100)
+
+        for line, offer in zip(lines, offers):
+            eq_(eval(line), taniaksiazka.makeDict(offer))
 

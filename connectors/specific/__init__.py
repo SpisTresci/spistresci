@@ -13,6 +13,7 @@ from Legimi import Legimi
 from Nexto import Nexto
 from RW2010 import RW2010
 from Selkar import Selkar
+from TaniaKsiazka import TaniaKsiazka
 from Tmc import Tmc
 from Virtualo import Virtualo
 from WolneEbooki import WolneEbooki
