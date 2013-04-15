@@ -1,84 +1,68 @@
-from connectors.generic import XMLConnector
-from connectors.generic import GenericBook
-from connectors.generic import GenericBookDescription
-from connectors.generic import GenericAuthor
-from sqlwrapper import *
-from xml.etree import ElementTree as et
 import os
+from connectors.generic import *
+from xml.etree import ElementTree as et
+from sqlwrapper import *
 
+Base = SqlWrapper.getBaseClass()
 
 class Koobe(XMLConnector):
 
-    def __init__(self, name=None):
-        XMLConnector.__init__(self, name=name)
+    #dict of xml_tag -> db_column_name translations
+    xml_tag_dict = {
+        "./name":('title', ''),
+        "./id":('external_id', ''),
+        "./url":('url', ''),
+        "./description":('description', ''),
+        "./image":('cover', ''),
+        "./price":('price', ''),
+        "./category":('category', ''),
+        "./producer":('publisher', ''),
+        "./property[@name='isbn']":('isbn', ''),
+        "./property[@name='author']":('authors', ''),
+        "./property[@name='format']":('format', ''),
+        "./property[@name='protection']":('protection', ''),
+    }
 
     def parse(self):
-
         filename = os.path.join(self.backup_dir, self.filename)
-        if not os.path.exists(filename):
-            exit(-1)
-
         root = et.parse(filename).getroot()
+        offers = list(root[0])
+        if self.limit_books:
+            offers = offers[:self.limit_books]
+        for book in offers:
+            dic = self.makeDict(book)
+            #print dic
+            self.validate(dic)
+            #self.measureLenghtDict(dic)
+            self.add_record(dic)
 
-        for product in root[0]:
-            d = {}
-            d['title'] = product.findtext('name')
-            d['external_id'] = product.findtext('id')
-            d['description'] = product.findtext('description')
-            d['url'] = product.findtext('url')
-            d['image'] = product.findtext('image')
-            d['price'] = product.findtext('price')
-            d['category'] = product.findtext('category')
-            d['producer'] = product.findtext('producer')
+        #print self.max_len
+        #for key in self.max_len_entry.keys():
+        #    print key + ": " + unicode(self.max_len_entry[key])
 
-            d['isbn'] = d['protection'] = None
-            d['authors'] = []
-            d['format'] = []
 
-            for property in product.findall('property'):
-                if d['isbn'] == None:
-                    if property.get('name') == 'isbn':
-                        d['isbn'] = property.text
+class KoobeBook(GenericBook, Base):
+    id = Column(Integer, primary_key=True)
+    title = Column(Unicode(256))		#202
+    category = Column(Unicode(32))		#17
+    publisher = Column(Unicode(64))     #57
+    url = Column(Unicode(512))			#271
+    #description
+    isbn = Column(Unicode(13))			#13
+    price = Column(Integer)		        #grosze
+    cover = Column(Unicode(256))	    #159
+    format = Column(Unicode(16))        #14
+    protection = Column(Unicode(16))    #9
 
-                if property.get('name') == 'author':
-                    d['authors'].append(property.text)
+class KoobeBookDescription(GenericBookDescription, Base):
+    pass
 
-                if property.get('name') == 'format':
-                    d['format'].append(property.text)
+class KoobeAuthor(GenericAuthor, Base):
+    pass
 
-                if d['protection'] == None:
-                    if property.get('name') == 'protection':
-                        d['protection'] = property.text
+class KoobeBookPrice(GenericBookPrice, Base):
+    pass
 
-            #print "Tytul: " + title
-            # print "ID: " + id
-            # print "Opis: " + description
-            # print "url: " + url
-            # print "image: " + image
-            # print "price: " + price
-            # print "category: " + category
-            # print "producer: " + producer
-            # print "isbn: " + isbn
-            # print "author: " + author
-            # print "format: " + format
-            # print "protection: " + protection
-            self.measureLenght(d)
-            #self.add_record({'external_id':1234, 'authors':['Jas Fasola'], 'description':'opis', 'title':'Taki sobie tytul', 'category':'horror'})
-            self.add_record(d)
+class KoobeBooksAuthors(GenericBooksAuthors, Base):
+    pass
 
-        print self.max_len
-        for key in self.max_len_entry.keys():
-            print key + ": " + self.max_len_entry[key]
-
-#Base = SqlWrapper.getBaseClass()
-#
-#class KoobeBook(GenericBook, Base):
-#    id =  Column(Integer, primary_key=True)
-#    name = Column(Unicode(100))
-#    category = Column(Unicode(100))
-#
-#class KoobeBookDescription(GenericBookDescription, Base):
-#    pass
-#
-#class KoobeAuthor(GenericAuthor, Base):
-#    pass
