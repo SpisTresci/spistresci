@@ -9,24 +9,6 @@ class Virtualo(XMLConnector):
     def __init__(self, name=None):
         XMLConnector.__init__(self, name=name)
 
-    def removeDescriptionShortTag(self, filename):
-        """
-        This is done because of bug T25. DescriptionShort tags very often contain within itself unclosed formating tags.
-        Because information which is in descriptionShort is redundand (we have to keep full description anyway), so we can remove this tag from xmls.
-        """
-
-        ifile = open(filename, 'r',)
-        text = ifile.read()
-        ifile.close()
-
-        text = re.sub(r'(<descriptionShort>.*?</descriptionShort>)', r'', text, 0, re.DOTALL | re.MULTILINE | re.VERBOSE)
-
-        file_times = open(filename, "w")
-        file_times.write(text)
-        file_times.close()
-
-
-
     def parse(self):
 
         i = 1
@@ -37,7 +19,6 @@ class Virtualo(XMLConnector):
             if not os.path.exists(filename):
                 break
 
-            self.removeDescriptionShortTag(filename)
             DOMTree = minidom.parse(filename)
 
             products = DOMTree.childNodes.item(0).childNodes

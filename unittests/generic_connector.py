@@ -9,8 +9,9 @@ import os
 import shutil
 import tempfile
 import hashlib
+import ConfigParser
 
-
+        
 class MockConnector(GenericConnector):
     pass
 
@@ -37,18 +38,21 @@ class TestGenericConnector():
         eq_(pattern, self.mc.backup_dir[:-3])
         eq_(self.mc.backup_archive, self.mc.ArchiveType.UNCOMPRESSED)
         eq_(self.mc.mode, self.mc.BookList_Mode.SINGLE_XML)
-
+    
+    @NoseUtils.skipIf(not NoseUtils.network_available_for_tests(), 'Network connection broken')
     def test_download_no_args(self):
         self.mc.downloadFile()
         filename = os.path.join(self.mc.backup_dir, self.mc.filename)
         ok_(os.path.exists(filename), 'File %s should exist' % filename)
 
+    @NoseUtils.skipIf(not NoseUtils.network_available_for_tests(), 'Network connection broken')
     def test_download_specified_filename(self):
         filename = 'test.xml'
         self.mc.downloadFile(filename=filename)
         filepath = os.path.join(self.mc.backup_dir, filename)
         ok_(os.path.exists(filepath), 'File %s should exist' % filepath)
 
+    @NoseUtils.skipIf(not NoseUtils.network_available_for_tests(), 'Network connection broken')
     def test_download_specified_url(self):
         url = 'http://i.s-microsoft.com/global/ImageStore/PublishingImages/logos/hp/logo-lg-1x.png'
         self.mc.downloadFile(url=url)
@@ -56,6 +60,7 @@ class TestGenericConnector():
         ok_(os.path.exists(filename), 'File %s should exist' % filename)
 
     #e.g. wiki requires non-bot user-agent
+    @NoseUtils.skipIf(not NoseUtils.network_available_for_tests(), 'Network connection broken')
     def test_download_with_specified_headers(self):
         url = 'http://upload.wikimedia.org/wikipedia/en/b/bc/Wiki.png'
         headers = {'User-Agent':'I am not a bot'}
@@ -100,7 +105,6 @@ class TestGenericConnector():
     def test_unpack_with_unpack_file_set(self):
         self.mc.unpack_file = 'sample'
         self.test_unpack_gzip()
-
 
     @NoseUtils.skip
     def test_validateISBN(self):
@@ -176,3 +180,34 @@ class TestExceptionIfRemovingParrentDir():
         os.chdir(new_cwd)
         self._test_rm(self.mc.unpack_dir, 'unpack')
 
+
+class TestParseConfig():
+    def setUp(self):
+        MockConnector.config_file = 'unittests/data/generic_connector/conf/test_parse_config.ini'
+        self.mc = MockConnector()
+
+    @raises(ConfigParser.NoSectionError)
+    def test_raises_no_section_error(self):
+        class NotDefinedConnector(GenericConnector):
+            pass
+        NotDefinedConnector.config_file = self.mc.config_file
+        NotDefinedConnector()
+
+    @NoseUtils.skipBecause('T183: Passing name of file to parse_config currently does not work')
+    @raises(ConfigParser.Error)
+    def test_wrong_config_file(self):
+        self.mc.parse_config('NOT_A_FILE')
+        eq_(self.mc.config_file, 'NOT_A_FILE')
+
+
+    def test_standard_section(self):
+        self.mc = MockConnector('StandardSection')
+        for i in [1,2,3]:
+            eq_(self.mc.config['option'+str(i)],'val'+str(i))
+
+    def test_dotted_section(self):
+        self.mc = MockConnector('DottedSection')
+        eq_(self.mc.config['option1'],
+        {'test1':'val1.test1', 
+        'test2':{'':'val1.test2','test3':'val1.test2.test3'}, 
+        '':'val1'})

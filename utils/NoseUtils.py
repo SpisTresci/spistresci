@@ -1,4 +1,5 @@
 import nose
+import urllib2
 
 def skip(test):
     def newtest(*args, **kwargs):
@@ -28,3 +29,20 @@ def skipIf(condition=True, reason=''):
         return newtest
     return decorate
 
+
+g_network_available = True
+g_network_set = False
+
+def network_available_for_tests():
+    global g_network_set
+    global g_network_available
+    if g_network_set:
+        return g_network_available
+    try:
+        urllib2.urlopen('http://www.google.com')
+    except urllib2.URLError:
+        g_network_available = False
+    else:
+        g_network_available = True
+    finally:
+        g_network_set = True

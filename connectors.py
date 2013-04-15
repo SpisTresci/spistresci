@@ -30,12 +30,12 @@ def main():
     GenericConnector.read_config()
     Logger = logger_instance(GenericConnector.config_object.get('DEFAULT', 'log_config'))
 
-    connector_classnames = Tools.get_classnames()
-    final_connector_dic = Tools.filter_classnames(connector_classnames, sys.argv[1:])
+    connector_classnames = Tools.get_classnames(GenericConnector.config_object)
+    final_connector_dic = Tools.filter_classnames(connector_classnames, sys.argv[1:], Logger)
 
     if app_name != 'backup':
         SqlWrapper.init(GenericConnector.config_object.get('DEFAULT', 'db_config'), connectors=final_connector_dic.keys())
-    connectors = [ Tools.load_connector(classname=connector[1], config=GenericConnector.config_object)
+    connectors = [ Tools.load_connector(connectorname=connector[1], config=GenericConnector.config_object)
                    (name=connector[0])
                    for connector in final_connector_dic.items() ]
 

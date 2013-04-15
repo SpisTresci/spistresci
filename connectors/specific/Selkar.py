@@ -75,7 +75,7 @@ class Selkar(XMLConnector):
         #    print key+": "+ unicode(self.max_len_entry[key])
 
 
-    def applySingleFilter(self, filterClass):
+    def applySingleFilter(self, filter_name, f_params):
         raise NotImplementedError('One Does Not Simply apply filter on Selkar without implementation')
 
     def fetchData(self, unpack=True):

@@ -13,11 +13,16 @@ class XMLConnector(GenericConnector):
 
     def fetchData(self, unpack=True):
         self.downloadFile()
-        if unpack:
-            if self.mode == XMLConnector.BookList_Mode.ZIPPED_XMLS:
-                self.unpackZIP(os.path.join(self.backup_dir, self.filename))
-            elif self.mode == XMLConnector.BookList_Mode.GZIPPED_XMLS:
-                self.unpackGZIP(os.path.join(self.backup_dir, self.filename))
+        if unpack and self.mode == XMLConnector.BookList_Mode.ZIPPED_XMLS:
+            self.fetched_files.extend(
+              self.unpackZIP(os.path.join(self.backup_dir, self.filename))
+            )
+        elif unpack and self.mode == XMLConnector.BookList_Mode.GZIPPED_XMLS:
+            self.fetched_files.extend(
+              self.unpackGZIP(os.path.join(self.backup_dir, self.filename))
+            )
+        elif self.mode == XMLConnector.BookList_Mode.SINGLE_XML:
+            self.fetched_files.append(os.path.join(self.backup_dir, self.filename))
 
     def getTagValue(self, product, tagName, default=""):
         tag = product.getElementsByTagName(tagName)[0]

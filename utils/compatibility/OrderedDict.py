@@ -14,7 +14,7 @@ Usage:
 try:
   from collections import OrderedDict
 except ImportError:
-  from compatibility import OrderedDict
+  from utils.compatibility import OrderedDict
 '''
 try:
     from thread import get_ident as _get_ident

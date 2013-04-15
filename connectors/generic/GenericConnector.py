@@ -15,6 +15,7 @@ import utils
 #interesting thing: utils.Enum is hide by sql_wrapper.Enum
 from sqlwrapper import *
 from pyisbn import *
+from connectors import Tools
 
 
 class InvalidContext(Exception):
@@ -73,7 +74,9 @@ class GenericConnector(GenericBase):
 
     @classmethod
     def read_config(cls):
-        cls.config_object = ConfigParser.ConfigParser()
+        cls.config_object = ConfigParser.SafeConfigParser()
+        #TODO: our config should be case sensitive, somehow this does not work
+        #cls.config_object.optionxfrom = str
         if not cls.config_object.read(cls.config_file):
             raise ConfigParser.Error('Could not read config from file %s' % cls.config_file)
 
@@ -85,6 +88,22 @@ class GenericConnector(GenericBase):
     def name(self):
         return self._name
 
+    def _get_conf_option(self, _list, value, dic):
+        key = _list[0]
+        _list = _list[1:]
+        old_value = {}
+        if type(dic) is dict:
+            old_value=dic.get(key, {})
+        if not type(old_value) is dict:
+            old_value = {'':old_value}
+        if _list:
+            old_value[_list[0]] =  self._get_conf_option(_list, value, old_value)
+        else:
+            old_value[''] = value
+        if old_value.keys() == ['']:
+            old_value = old_value['']
+        return old_value
+
 
     def parse_config(self, config_file='conf/connectors.ini', section=None, config_object=None):
         if not config_object:
@@ -94,10 +113,15 @@ class GenericConnector(GenericBase):
         if not section:
            section = self.name
         self.section = section
-
-        self.config = dict(self.config_object.items(self.section,
-                        vars={'date':datetime.now().strftime('%Y%m%d%H%M%S')}
-                      ))
+        self.config = {}
+        for item in self.config_object.items(self.section,
+                        vars={'date':datetime.now().strftime('%Y%m%d%H%M%S')}):
+            
+            #this is for managaging config options like 
+            #option.suboption = 11
+            (key,value) = item
+            splited = key.split('.')
+            self.config[splited[0]] = self._get_conf_option(splited, value, self.config)
 
     def __init__(self, name=None):
         if not name:
@@ -120,7 +144,9 @@ class GenericConnector(GenericBase):
         self.erratum_logger = logger_instance(self.log_erratum_config)
         self.logger.debug('%s connector created' % self.name)
         self.mode = self.BookList_Mode.int(self.config.get('mode', 'UNKNOWN'))
-        self.filters = self.config.get('filters', None)
+        self.filters_config = self.config.get('filters', {})
+        self.filters = self.filters_config.get('')
+        self.fetched_files = []
 
     def __del__(self):
         self.logger.debug('Cleaning up after executing %s connector' % self.name)
@@ -177,13 +203,40 @@ class GenericConnector(GenericBase):
         """update method"""
         pass
 
-    def applySingleFilter(self, filterClass):
-        pass
+    def applySingleFilter(self, filter_name, f_params):
+        try:
+            self.logger.debug('Trying to run filter %s with params %s on files: %s' % 
+              (filter_name, f_params, self.fetched_files))
+            filter = Tools.load_filter(filter_name)(self.logger, f_params)
+            self.logger.info('Running filter %s' % filter)
+            for file in self.fetched_files:
+                filter.run(file)
+        except Exception as e:
+            self.logger.exception('Exception caught while executing filter %s for connector %s' % 
+              (filter_name, self.name))
+            raise e
+
+    '''
+    If you want to set filters and params in connector code manually,
+    simply overwrite applyFilters, following way:
 
     def applyFilters(self):
+       your_params = .... #dict of filters params {'filter_name1': {params}, filter_name2: {params}}
+       filter_names = ... #comman separated list of filter names 
+       (case sensitive, filter name means of course name of a class)
+       GenericConnector.applyFilters(self, params = your_params, filters filters_list)
+    '''
+    def applyFilters(self, params={}, filter_names=None):
+        filters = filter_names or self.filters
         if self.filters:
-            for f_class in self.filters.split(','):
-                self.applySingleFilter(f_class)
+            for _file in self.fetched_files:
+                backup = _file+'.backup'
+                shutil.copy2(_file, backup)
+                
+            for filter_name in filters.split(','):
+                #our config keys should be lower_case
+                f_params = params.get(filter_name, self.filters_config.get(filter_name.lower(), {}))
+                self.applySingleFilter(filter_name, f_params)
 
     def measureLenght(self, list):
         if self.max_len == []:
@@ -334,22 +387,29 @@ class GenericConnector(GenericBase):
                 os.makedirs(self.unpack_dir)
 
         unpack_file_name = os.path.join(self.unpack_dir, self.unpack_file)
+        self.fetched_files.append(unpack_file_name)
         self.logger.debug('Unpacking gzip %s into %s' % (gzipname, unpack_file_name))
         file = open(unpack_file_name, "w")
         file.write(file_content)
         file.close()
+        #result should be a list
+        return [unpack_file_name]
 
     def unpackZIP(self, zipname):
         zfile = zipfile.ZipFile(zipname)
+        unpacked_files = []
         for name in zfile.namelist():
             (dirname, filename) = os.path.split(name)
             dirname = os.path.join(self.unpack_dir, dirname)
             self.logger.debug('Unpacking zip %s into %s' % (filename, dirname))
             if dirname and not os.path.exists(dirname):
                 os.makedirs(dirname)
-            fd = open(os.path.join(dirname, name), "w")
+            unpacked_file = os.path.join(dirname, name)
+            fd = open(unpacked_file, "w")
             fd.write(zfile.read(name))
             fd.close()
+            unpacked_files.append(unpacked_file)
+        return unpacked_files
 
     @classmethod
     def get_or_create_(cls, ClassName, param_name, d, session):
