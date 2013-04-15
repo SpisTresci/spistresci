@@ -34,12 +34,6 @@ class Empik(XMLConnector):
         #for key in self.max_len_entry.keys():
         #    print key + ": " + unicode(self.max_len_entry[key])
 
-    def applyFilters(self):
-        f = os.path.join(self.backup_dir, self.filename)
-        for cmd in ["sed '$d' " + f + "  > " + f + ".tmp", 'echo "</products>" >> ' + f + ".tmp", 'rm ' + f, 'mv ' + f + ".tmp " + f]:
-            os.system(cmd)
-
-
 Base = SqlWrapper.getBaseClass()
 
 class EmpikBook(GenericBook, Base):

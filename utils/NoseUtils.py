@@ -46,3 +46,4 @@ def network_available_for_tests():
         g_network_available = True
     finally:
         g_network_set = True
+    return g_network_available

@@ -40,3 +40,11 @@ class RegexFilter(BaseFilter):
         tmp.close()
         shutil.copy2(tmp.name, file)
         os.remove(tmp.name)
+
+class Ads4Books(RegexFilter):
+    def __init__(self, logger, params):
+        params['pattern_list'] = r'</.*?>\d+$'
+        params['replace_list'] = r'</products>'
+        params['ignorecase']=True
+        RegexFilter.__init__(self, logger, params)
+        
