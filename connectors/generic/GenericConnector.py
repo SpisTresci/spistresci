@@ -231,6 +231,7 @@ class GenericConnector(GenericBase):
         if self.filters:
             for _file in self.fetched_files:
                 backup = _file+'.backup'
+                #TODO: removing backup file should be configurable
                 shutil.copy2(_file, backup)
                 
             for filter_name in filters.split(','):
