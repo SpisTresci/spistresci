@@ -4,6 +4,7 @@ from utils import NoseUtils
 
 from xml.etree import ElementTree as et
 from connectors.specific import BezKartek
+from connectors.specific import BooksOn
 from connectors.specific import CzeskieKlimaty
 from connectors.specific import DobryEbook
 from connectors.specific import eClicto
@@ -19,6 +20,7 @@ class TestSpecificConnectors():
 
     def setUp(self):
         BezKartek.config_file = 'unittests/data/specific_connectors/conf/test.ini'
+        BooksOn.config_file = 'unittests/data/specific_connectors/conf/test.ini'
         CzeskieKlimaty.config_file = 'unittests/data/specific_connectors/conf/test.ini'
         DobryEbook.config_file = 'unittests/data/specific_connectors/conf/test.ini'
         eClicto.config_file = 'unittests/data/specific_connectors/conf/test.ini'
@@ -392,4 +394,40 @@ class TestSpecificConnectors():
         for line, offer in zip(lines, offers):
             eq_(eval(line), woblink.makeDict(offer))
 
+
+    def test_bookson_make_dict_1(self):
+        bookson = BooksOn()
+
+        dicts = os.path.join('unittests/data/specific_connectors/dict/bookson_formated_1.dict')
+        xml = os.path.join('unittests/data/specific_connectors/xml/bookson_formated_1.xml')
+
+        f = open(dicts, 'r')
+        root = et.parse(xml).getroot()
+
+        lines = f.readlines()
+        offers = list(root[0])
+
+        eq_(len(lines), 1)
+        eq_(len(offers), 1)
+
+        for line, offer in zip(lines, offers):
+            eq_(eval(line), bookson.makeDict(offer))
+
+    def test_bookson_make_dict_6(self):
+        bookson = BooksOn()
+
+        dicts = os.path.join('unittests/data/specific_connectors/dict/bookson_formated_6.dict')
+        xml = os.path.join('unittests/data/specific_connectors/xml/bookson_formated_6.xml')
+
+        f = open(dicts, 'r')
+        root = et.parse(xml).getroot()
+
+        lines = f.readlines()
+        offers = list(root[0])
+
+        eq_(len(lines), 6)
+        eq_(len(offers), 6)
+
+        for line, offer in zip(lines, offers):
+            eq_(eval(line), bookson.makeDict(offer))
 

@@ -1,10 +1,9 @@
-from xml.etree import ElementTree as et
 from connectors.generic import *
-import os
+from connectors.common import *
 from sqlwrapper import *
 
 Base = SqlWrapper.getBaseClass()
-class Woblink(XMLConnector):
+class Woblink(Ceneo):
 
     #dict of xml_tag -> db_column_name translations
     xml_tag_dict = {
@@ -20,28 +19,6 @@ class Woblink(XMLConnector):
         "./attrs/a[@name='Wydawnictwo']":('publisher', ''),
         "./attrs/a[@name='Format']":('formats', ''),
     }
-
-
-    def parse(self):
-        filename = os.path.join(self.backup_dir, self.filename)
-        print filename
-        root = et.parse(filename).getroot()
-        offers = list(root[0])
-        if self.limit_books:
-            offers = offers[:self.limit_books]
-        for book in offers:
-            dic = self.makeDict(book)
-            self.validate(dic)
-            #self.measureLenghtDict(dic)
-            self.add_record(dic)
-
-        #print self.max_len
-        #for key in self.max_len_entry.keys():
-	#    try:
-        #        print key+": "+ unicode(self.max_len_entry[key])
-	#    except UnicodeEncodeError:
-	#        pass
-
 
 class WoblinkBook(GenericBook, Base):
     id = Column(Integer, primary_key=True)
