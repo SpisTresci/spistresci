@@ -145,7 +145,11 @@ class GenericConnector(GenericBase):
         self.logger.debug('%s connector created' % self.name)
         self.mode = self.BookList_Mode.int(self.config.get('mode', 'UNKNOWN'))
         self.filters_config = self.config.get('filters', {})
-        self.filters = self.filters_config.get('')
+        if type(self.filters_config) is dict:
+            self.filters = self.filters_config.get('')
+        else:
+            self.filters = self.filters_config
+            self.filters_config = {}
         self.fetched_files = []
 
     def __del__(self):

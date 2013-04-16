@@ -26,7 +26,7 @@ def filter_classnames(connector_classnames, filter_list, logger=None):
         if name in connector_classnames.keys():
             names_from_filter.append(name)
         elif logger:
-            logger.debug('Connector %s not known for config file %s' % (name, GenericConnector.config_file))
+            logger.debug('Connector %s not known'%name)
 
     final_connector_list = {}
     for cn in names_from_filter:

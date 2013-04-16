@@ -43,8 +43,8 @@ class RegexFilter(BaseFilter):
 
 class Ads4Books(RegexFilter):
     def __init__(self, logger, params):
-        params['pattern_list'] = r'</.*?>\d+$'
-        params['replace_list'] = r'</products>'
-        params['ignorecase']=True
+        params.setdefault('pattern_list',r'</.*?>\d+$')
+        params.setdefault('replace_list',r'</products>')
+        params.setdefault('ignorecase',True)
         RegexFilter.__init__(self, logger, params)
         

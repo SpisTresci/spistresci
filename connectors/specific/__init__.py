@@ -16,6 +16,7 @@ from Selkar import Selkar
 from TaniaKsiazka import TaniaKsiazka
 from Tmc import Tmc
 from Virtualo import Virtualo
+from Woblink import Woblink
 from WolneEbooki import WolneEbooki
 from ZielonaSowa import ZielonaSowa
 from Zinamon import Zinamon
