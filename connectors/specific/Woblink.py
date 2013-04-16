@@ -5,74 +5,56 @@ from sqlwrapper import *
 
 Base = SqlWrapper.getBaseClass()
 class Woblink(XMLConnector):
-    
-    
-    #dirty hack,
-    #probably will have to fix that in the future using
-    #et._namespace_map[''] = ''
-    xmls_namespace = '{urn:ExportB2B}'
 
     #dict of xml_tag -> db_column_name translations
-    xml_tag_dict= {
-        xmls_namespace+'id':('external_id',''),
-        xmls_namespace+'name':('title',''),
-        xmls_namespace+'url':('url',''),
-        xmls_namespace+'categoryId':('category',''),
-        xmls_namespace+'description':('description',''),
-        xmls_namespace+'image':('cover',''),
-        xmls_namespace+'price':('price', 0),
+    xml_tag_dict = {
+        ".[@id]":('external_id', ''),
+        ".[@price]":('price', 0),
+        ".[@url]":('url', ''),
+        ".[@avail]":('availability', ''),
+        "./cat":('category', ''),
+        "./name":('title', ''),
+        "./imgs/main[@url]":('cover', ''),
+        "./desc":('description', ''),
+        "./attrs/a[@name='ISBN']":('isbn', ''),
+        "./attrs/a[@name='Wydawnictwo']":('publisher', ''),
+        "./attrs/a[@name='Format']":('formats', ''),
     }
-    
-    xml_attributes_dict = {
-        'Autor':('authors',''),
-        'ISBN':('isbn',''),
-        'Wydawnictwo':('publisher',''),
-        'Rok_wydania':('year',''),
-        'Format':('format',''),
-        'Wydawca':('publisher',''),
-        'Czyta':('lectors',''),
-        u'Dugo\u015b\u0107':('length',''),
-        'Producent':('manufacturer',''),
-
-    }
-
-    def make_dict(self,book):
-        book_dict = {}
-        for tag in self.xml_tag_dict.keys():
-            book_dict[ (self.xml_tag_dict[tag])[0] ] = unicode(book.findtext(tag, (self.xml_tag_dict[tag])[1] ))
-
-        attributes = book.find(self.xmls_namespace+'attributes')
-
-        if not attributes:
-            return book_dict
-
-        for attribute in attributes:
-            name = attribute.findtext(self.xmls_namespace+'name')
-            value = unicode(attribute.findtext(self.xmls_namespace+'value', (self.xml_attributes_dict[name])[1]))
-            book_dict_key = (self.xml_attributes_dict[name])[0]
-            if book_dict_key in book_dict:
-                raise KeyError('%s already in book_dict'%book_dict_key)
-            book_dict[book_dict_key]=value
-        return book_dict
 
 
     def parse(self):
-        filename = os.path.join(self.backup_dir,self.filename)
+        filename = os.path.join(self.backup_dir, self.filename)
         print filename
         root = et.parse(filename).getroot()
-        loadoffers = root[0]
-        offerstag = loadoffers[0]
-        offers=list(offerstag)
+        offers = list(root[0])
         if self.limit_books:
             offers = offers[:self.limit_books]
         for book in offers:
-            dic = self.make_dict(book)
+            dic = self.makeDict(book)
             self.validate(dic)
-#            self.add_record(dic)
+            #self.measureLenghtDict(dic)
+            self.add_record(dic)
+
+        #print self.max_len
+        #for key in self.max_len_entry.keys():
+	#    try:
+        #        print key+": "+ unicode(self.max_len_entry[key])
+	#    except UnicodeEncodeError:
+	#        pass
 
 
 class WoblinkBook(GenericBook, Base):
     id = Column(Integer, primary_key=True)
+    category = Column(Unicode(64))	#33
+    publisher = Column(Unicode(64))     #32
+    isbn = Column(Unicode(13))		#13
+    title = Column(Unicode(256))	#212
+    url = Column(Unicode(64))		#59
+    cover = Column(Unicode(256))	#250
+    formats = Column(Unicode(16))	#9
+    external_id = Column(Integer)
+    price = Column(Integer)
+    availability = Column(Boolean)
     pass
 
 class WoblinkBookDescription(GenericBookDescription, Base):
@@ -84,5 +66,5 @@ class WoblinkAuthor(GenericAuthor, Base):
 class WoblinkBookPrice(GenericBookPrice, Base):
     pass
 
-class WoblinkBooksAuthors(GenericBooksAuthors):
+class WoblinkBooksAuthors(GenericBooksAuthors, Base):
     pass

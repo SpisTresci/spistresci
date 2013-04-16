@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<offers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1">
+  <group name="books">
+    <o id="8415" price="33.00" url="https://www.a4b-tracking.com/pl/stat-click-feed/47914441/33" avail="1">
+      <cat><![CDATA[Katalog]]></cat>
+      <name><![CDATA[Winning odpowiedzi]]></name>
+      <imgs>
+        <main url="http://woblink.com/storable/storable/pub_photos/189780-winning-odpowiedzi.jpg"/>
+      </imgs>
+      <desc><![CDATA["W bestsellerze z 2005 roku Winning znaczy zwyciężać Suzy i Jack Welch stworzyli niespotykany tekst będący zarówno traktatem filozoficznym na temat podstawowych praktyk biznesowych oraz przejrzystym podręcznikiem napisanym z typową dla Jacka otwartością i optymizmem. Wydawało się, że po niej, odwołując się do słów Warrena Buffeta, „nie będzie potrzebna żadna więcej książka o zarządzaniu”.
+Ale Winning ujawniła nienasycone pragnienia rozmawiania o pracy. Od chwili wydania Welchowie otrzymali dosłownie tysiące pytań od studentów college’ów przez doświadczonych menedżerów, po wybitnych szefów znanych korporacji i koncernów na szeroki zakres tematów – od przywództwa i globalnej konkurencji po radzenie sobie z bezkompromisowym szefem po budowanie zespołu. Właściwie padały pytania dotyczące dosłownie każdego aspektu biznesu i kariery zawodowej, często typowe, czasami zaskakujące, wiele ciekawych i wnikliwych. A wszystkie prosto z życia wzięte. 
+Winning – odpowiedzi podejmuje najważniejsze z nich i udziela otwartych, dosadnych odpowiedzi, które stanowią przedłużenie rozmowy podjętej przez Jacka i Suzy w Winning znaczy zwyciężać. Z całą pewnością dialog ten będzie zajmujący i pożyteczny dla wszystkich, którzy zajmują się ważna pracą polegającą na pomaganiu organizacjom w osiąganiu wzrostu i prosperity."]]></desc>
+      <attrs>
+        <a name="ISBN"><![CDATA[9788362304974]]></a>
+        <a name="Wydawnictwo"><![CDATA[Studio Emka]]></a>
+        <a name="Format">EPUB,MOBI</a>
+      </attrs>
+    </o>
+  </group>
+</offers>
