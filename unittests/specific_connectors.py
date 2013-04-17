@@ -11,6 +11,7 @@ from connectors.specific import eClicto
 from connectors.specific import Empik
 from connectors.specific import Koobe
 from connectors.specific import Nexto
+from connectors.specific import RW2010
 from connectors.specific import TaniaKsiazka
 from connectors.specific import WolneEbooki
 from connectors.specific import Woblink
@@ -28,6 +29,7 @@ class TestSpecificConnectors():
         Koobe.config_file = 'unittests/data/specific_connectors/conf/test.ini'
         Nexto.config_file = 'unittests/data/specific_connectors/conf/test.ini'
         TaniaKsiazka.config_file = 'unittests/data/specific_connectors/conf/test.ini'
+        RW2010.config_file = 'unittests/data/specific_connectors/conf/test.ini'
         WolneEbooki.config_file = 'unittests/data/specific_connectors/conf/test.ini'
         Woblink.config_file = 'unittests/data/specific_connectors/conf/test.ini'
 
@@ -430,4 +432,43 @@ class TestSpecificConnectors():
 
         for line, offer in zip(lines, offers):
             eq_(eval(line), bookson.makeDict(offer))
+
+    @NoseUtils.skipIf(not NoseUtils.network_available_for_tests(), 'Network connection broken')
+    def test_rw2010_make_dict_1(self):
+        rw2010 = RW2010()
+
+        dicts = os.path.join('unittests/data/specific_connectors/dict/rw2010_formated_1.dict')
+        xml = os.path.join('unittests/data/specific_connectors/xml/rw2010_formated_1.xml')
+
+        f = open(dicts, 'r')
+        root = et.parse(xml).getroot()
+
+        lines = f.readlines()
+        offers = list(root)
+
+        eq_(len(lines), 1)
+        eq_(len(offers), 1)
+
+        for line, offer in zip(lines, offers):
+            eq_(eval(line), rw2010.makeDict(offer))
+
+    @NoseUtils.skipIf(not NoseUtils.network_available_for_tests(), 'Network connection broken')
+    def test_rw2010_make_dict_100(self):
+        rw2010 = RW2010()
+
+        dicts = os.path.join('unittests/data/specific_connectors/dict/rw2010_formated_100.dict')
+        xml = os.path.join('unittests/data/specific_connectors/xml/rw2010_formated_100.xml')
+
+        f = open(dicts, 'r')
+        root = et.parse(xml).getroot()
+
+        lines = f.readlines()
+        offers = list(root)
+
+        eq_(len(lines), 100)
+        eq_(len(offers), 100)
+
+        for line, offer in zip(lines, offers):
+            eq_(eval(line), rw2010.makeDict(offer))
+
 

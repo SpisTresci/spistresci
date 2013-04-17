@@ -8,15 +8,15 @@ class RW2010(XMLConnector):
 
     #dict of xml_tag -> db_column_name translations
     xml_tag_dict = {
-        'tytul':('title', ''),
-        'url':('url', ''),
-        'autor':('authors', ''),
-        'formaty':('format', ''),
-        'okladka':('cover', ''),
-        'cena':('price', 0),
+        './tytul':('title', ''),
+        './url':('url', ''),
+        './autor':('authors', ''),
+        './formaty':('format', ''),
+        './okladka':('cover', ''),
+        './cena':('price', 0),
     }
 
-    def __init__(self, name, limit_books=0):
+    def __init__(self, name="RW2010", limit_books=0):
         XMLConnector.__init__(self, name=name, limit_books=limit_books)
         self.macro_url = self.config['macro_url']
         u = urllib2.urlopen(self.macro_url)
@@ -33,7 +33,7 @@ class RW2010(XMLConnector):
         if self.limit_books:
             offers = offers[:self.limit_books]
         for book in offers:
-            dic = self.make_dict(book)
+            dic = self.makeDict(book)
             #print dic
             self.create_id_from_url(dic)
             self.validate(dic)
