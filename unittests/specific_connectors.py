@@ -1,7 +1,7 @@
 import nose
 from nose.tools import *
 from utils import NoseUtils
-
+from connectors import Tools
 from xml.etree import ElementTree as et
 from connectors.generic import GenericConnector
 from connectors.specific import *
@@ -9,141 +9,52 @@ import os
 
 class TestSpecificConnectors():
 
-    inputpath='unittests/data/specific_connectors/'
-    GenericConnector.config_file = os.path.join(inputpath, 'conf/test.ini')
-
-    def setUp(self):
-        self.shortdicts = os.path.join(self.inputpath, 'dict/%s_formated_%d.dict' % (self.connector.name.lower(), self.short))
-        self.xmlshort = os.path.join(self.inputpath, 'xml/%s_formated_%d.xml' % (self.connector.name.lower(), self.short))
-        self.xmllong = os.path.join(self.inputpath, 'xml/%s_formated_%d.xml' % (self.connector.name.lower(), self.long))
-        self.longdicts = os.path.join(self.inputpath, 'dict/%s_formated_%d.dict' % (self.connector.name.lower(), self.long))
-        self.offers_from_root=lambda x:list(x[0])
+    def set_params(self, connector):
+        connector.shortdicts = os.path.join(self.inputpath, 'dict/%s_formated_%s.dict' % (connector.name.lower(), connector.config['short']))
+        connector.xmlshort = os.path.join(self.inputpath, 'xml/%s_formated_%s.xml' % (connector.name.lower(), connector.config['short']))
+        connector.xmllong = os.path.join(self.inputpath, 'xml/%s_formated_%s.xml' % (connector.name.lower(), connector.config['long']))
+        connector.longdicts = os.path.join(self.inputpath, 'dict/%s_formated_%s.dict' % (connector.name.lower(), connector.config['long']))
 
     def tearDown(self):
         pass
 
-
-class Assertions():
+    def weHaveToGoDeeper(self, root, depth):
+    	for i in range(int(depth)):
+	    root=root[0]
+	return root
 
     @nottest
-    def _test_dict(self, xml, dicts, assert_lines):
+    def _test_dict(self, connector, xml, dicts, assert_lines):
         f = open(dicts, 'r')
         root = et.parse(xml).getroot()
 
         lines = f.readlines()
-        offers = self.offers_from_root(root)
+        offers = self.weHaveToGoDeeper(root, connector.config['depth'])
 
         eq_(len(lines), assert_lines)
         eq_(len(offers), assert_lines)
 
         for line, offer in zip(lines, offers):
-            eq_(eval(line), self.connector.makeDict(offer))
+            eq_(eval(line), connector.makeDict(offer))
 
-    def test_make_dict_short(self):
-        self._test_dict(self.xmlshort, self.shortdicts, self.short)        
+    @nottest
+    def test_make_dict_short(self, connector):
+        self._test_dict(connector, connector.xmlshort, connector.shortdicts, int(connector.config['short']))
 
-    def test_make_dict_long(self):
-        self._test_dict(self.xmllong, self.longdicts, self.long)        
+    @nottest
+    def test_make_dict_long(self, connector):
+        self._test_dict(connector, connector.xmllong, connector.longdicts, int(connector.config['long']))
 
+    def test_connectors(self):
+    	self.inputpath='unittests/data/specific_connectors/'
+	GenericConnector.config_file = os.path.join(self.inputpath, 'conf/test.ini')
+        GenericConnector.read_config()
 
-class TestNexto(TestSpecificConnectors, Assertions):
-    def setUp(self):
-        self.short=1
-        self.long=100
-        self.connector = Nexto()
-        TestSpecificConnectors.setUp(self)
-        self.offers_from_root=lambda x:list(x)
+        connector_classnames = Tools.get_classnames(GenericConnector.config_object)
+	connectors = [ Tools.load_connector(connectorname=connector[1], config=GenericConnector.config_object)(name=connector[0]) for connector in connector_classnames .items() ]
 
-class TestEclicto(TestSpecificConnectors, Assertions):
-    def setUp(self):
-        self.short=1
-        self.long=100
-        self.connector = eClicto()
-        TestSpecificConnectors.setUp(self)
+    	for connector in connectors:
+	    self.set_params(connector)        
+            yield self.test_make_dict_short, connector
+            yield self.test_make_dict_long, connector
 
-class TestCzeskieKlimaty(TestSpecificConnectors, Assertions):
-    def setUp(self):
-        self.short=1
-        self.long=100
-        self.connector = CzeskieKlimaty()
-        TestSpecificConnectors.setUp(self)
-
-class TestWolneEbooki(TestSpecificConnectors, Assertions):
-    def setUp(self):
-        self.short=1
-        self.long=19
-        self.connector = WolneEbooki()
-        TestSpecificConnectors.setUp(self)
-        self.offers_from_root=lambda x:list(x)
-
-class TestBezKartek(TestSpecificConnectors, Assertions):
-    def setUp(self):
-        self.short=1
-        self.long=100
-        self.connector = BezKartek()
-        TestSpecificConnectors.setUp(self)
-
-class TestDobryEbook(TestSpecificConnectors, Assertions):
-    def setUp(self):
-        self.short=1
-        self.long=65
-        self.connector = DobryEbook()
-        TestSpecificConnectors.setUp(self)
-        self.offers_from_root=lambda x:list(x)
-
-class TestEmpik(TestSpecificConnectors, Assertions):
-    def setUp(self):
-        self.short=1
-        self.long=100
-        self.connector = Empik()
-        TestSpecificConnectors.setUp(self)
-        self.offers_from_root=lambda x:list(x)
-
-class TestTaniaKsiazka(TestSpecificConnectors, Assertions):
-    def setUp(self):
-        self.short=1
-        self.long=100
-        self.connector = TaniaKsiazka()
-        TestSpecificConnectors.setUp(self)
-        self.offers_from_root=lambda x:list(x)
-
-class TestKoobe(TestSpecificConnectors, Assertions):
-    def setUp(self):
-        self.short=1
-        self.long=100
-        self.connector = Koobe()
-        TestSpecificConnectors.setUp(self)
-
-class TestWoblink(TestSpecificConnectors, Assertions):
-    def setUp(self):
-        self.short=1
-        self.long=100
-        self.connector = Woblink()
-        TestSpecificConnectors.setUp(self)
-
-class TestBooksOn(TestSpecificConnectors, Assertions):
-    def setUp(self):
-        self.short=1
-        self.long=6
-        self.connector = BooksOn()
-        TestSpecificConnectors.setUp(self)
-
-
-class TestRW2010(TestSpecificConnectors, Assertions):
-    def setUp(self):
-        self.short=1
-        self.long=100
-        if NoseUtils.network_available_for_tests():
-            self.connector = RW2010()
-            TestSpecificConnectors.setUp(self)
-        else:
-            self.connector = None
-        self.offers_from_root=lambda x:list(x)
-
-    @NoseUtils.skipIf(not NoseUtils.network_available_for_tests(), 'Network connection broken')
-    def test_make_dict_short(self):
-        Assertions.test_make_dict_short(self)
-
-    @NoseUtils.skipIf(not NoseUtils.network_available_for_tests(), 'Network connection broken')
-    def test_make_dict_long(self):
-        Assertions.test_make_dict_long(self)
