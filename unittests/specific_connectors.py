@@ -6,14 +6,12 @@ from xml.etree import ElementTree as et
 from connectors.generic import GenericConnector
 from connectors.specific import *
 import os
-
+import glob
+import re
 class TestSpecificConnectors():
 
-    def set_params(self, connector):
-        connector.shortdicts = os.path.join(self.inputpath, 'dict/%s_formated_%s.dict' % (connector.name.lower(), connector.config['short']))
-        connector.xmlshort = os.path.join(self.inputpath, 'xml/%s_formated_%s.xml' % (connector.name.lower(), connector.config['short']))
-        connector.xmllong = os.path.join(self.inputpath, 'xml/%s_formated_%s.xml' % (connector.name.lower(), connector.config['long']))
-        connector.longdicts = os.path.join(self.inputpath, 'dict/%s_formated_%s.dict' % (connector.name.lower(), connector.config['long']))
+    def setUp(self):
+        pass
 
     def tearDown(self):
         pass
@@ -37,24 +35,18 @@ class TestSpecificConnectors():
         for line, offer in zip(lines, offers):
             eq_(eval(line), connector.makeDict(offer))
 
-    @nottest
-    def test_make_dict_short(self, connector):
-        self._test_dict(connector, connector.xmlshort, connector.shortdicts, int(connector.config['short']))
-
-    @nottest
-    def test_make_dict_long(self, connector):
-        self._test_dict(connector, connector.xmllong, connector.longdicts, int(connector.config['long']))
-
     def test_connectors(self):
     	self.inputpath='unittests/data/specific_connectors/'
-	GenericConnector.config_file = os.path.join(self.inputpath, 'conf/test.ini')
+        GenericConnector.config_file = os.path.join(self.inputpath, 'conf/test.ini')
         GenericConnector.read_config()
 
         connector_classnames = Tools.get_classnames(GenericConnector.config_object)
-	connectors = [ Tools.load_connector(connectorname=connector[1], config=GenericConnector.config_object)(name=connector[0]) for connector in connector_classnames .items() ]
+        connectors = [ Tools.load_connector(connectorname=connector[1], config=GenericConnector.config_object)(name=connector[0]) for connector in connector_classnames .items() ]
 
     	for connector in connectors:
-	    self.set_params(connector)        
-            yield self.test_make_dict_short, connector
-            yield self.test_make_dict_long, connector
+            for x in glob.glob(os.path.join(self.inputpath, 'dict', '%s_formated_*.dict'%connector.name.lower())):
+                pattern = re.compile('.*?(\d*)\.dict$')
+                num = pattern.match(x).group(1)
+                if num.isdigit():
+                    yield self._test_dict, connector, x.replace('dict', 'xml'), x, int(num)
 
