@@ -1,0 +1,3901 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:og="http://ogp.me/ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:sioc="http://rdfs.org/sioc/ns#" xmlns:sioct="http://rdfs.org/sioc/types#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" version="2.0" xml:base="http://www.bazaebokow.robertjszmidt.pl/?q=ebooki_r">
+  <channel>
+    <title>eBooki</title>
+    <link>http://www.bazaebokow.robertjszmidt.pl/?q=ebooki_r</link>
+    <description/>
+    <language>pl</language>
+    <item>
+      <title>Absolut</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/284</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/102" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Michałowska Iwona</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-uwagi field-type-text field-label-inline inline">
+          <div class="field-label">Uwagi:&amp;nbsp;</div>
+          <div class="field-items">
+            <div class="field-item even">Nowość!</div>
+          </div>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/114" typeof="skos:Concept" property="rdfs:label skos:prefLabel">fantastyka religijna</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/18" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Opowiadanie</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Mon, 08 Apr 2013 16:32:13 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">284 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>284</filteredId>
+    </item>
+    <item>
+      <title>Sakrament</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/283</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/102" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Michałowska Iwona</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-uwagi field-type-text field-label-inline inline">
+          <div class="field-label">Uwagi:&amp;nbsp;</div>
+          <div class="field-items">
+            <div class="field-item even">Nowość!</div>
+          </div>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/114" typeof="skos:Concept" property="rdfs:label skos:prefLabel">fantastyka religijna</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/18" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Opowiadanie</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Mon, 08 Apr 2013 16:30:11 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">283 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>283</filteredId>
+    </item>
+    <item>
+      <title>Statystyka magii</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/282</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/113" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Wójtowicz Milena</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-uwagi field-type-text field-label-inline inline">
+          <div class="field-label">Uwagi:&amp;nbsp;</div>
+          <div class="field-items">
+            <div class="field-item even">Nowość!</div>
+          </div>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/64" typeof="skos:Concept" property="rdfs:label skos:prefLabel">humorystyczna fantasy</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/18" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Opowiadanie</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Mon, 08 Apr 2013 13:48:40 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">282 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>282</filteredId>
+    </item>
+    <item>
+      <title>Kocha, lubi, szanuje</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/281</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/113" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Wójtowicz Milena</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-uwagi field-type-text field-label-inline inline">
+          <div class="field-label">Uwagi:&amp;nbsp;</div>
+          <div class="field-items">
+            <div class="field-item even">Nowość!</div>
+          </div>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/64" typeof="skos:Concept" property="rdfs:label skos:prefLabel">humorystyczna fantasy</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/18" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Opowiadanie</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Mon, 08 Apr 2013 13:46:55 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">281 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>281</filteredId>
+    </item>
+    <item>
+      <title>Szczęśliwy traf</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/280</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/113" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Wójtowicz Milena</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-uwagi field-type-text field-label-inline inline">
+          <div class="field-label">Uwagi:&amp;nbsp;</div>
+          <div class="field-items">
+            <div class="field-item even">Nowość!</div>
+          </div>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/64" typeof="skos:Concept" property="rdfs:label skos:prefLabel">humorystyczna fantasy</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/18" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Opowiadanie</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Mon, 08 Apr 2013 13:45:11 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">280 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>280</filteredId>
+    </item>
+    <item>
+      <title>Wyliczanka</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/279</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/94" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Jabłoński Mirosław P.</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-uwagi field-type-text field-label-inline inline">
+          <div class="field-label">Uwagi:&amp;nbsp;</div>
+          <div class="field-items">
+            <div class="field-item even">Nowość!</div>
+          </div>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/50" typeof="skos:Concept" property="rdfs:label skos:prefLabel">science fiction</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/18" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Opowiadanie</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Mon, 08 Apr 2013 13:43:13 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">279 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>279</filteredId>
+    </item>
+    <item>
+      <title>Mrs Robinson i inne rzeczy</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/278</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/106" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Inglot Jacek</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-uwagi field-type-text field-label-inline inline">
+          <div class="field-label">Uwagi:&amp;nbsp;</div>
+          <div class="field-items">
+            <div class="field-item even">Nowość!</div>
+          </div>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/50" typeof="skos:Concept" property="rdfs:label skos:prefLabel">science fiction</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/18" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Opowiadanie</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Mon, 08 Apr 2013 13:41:28 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">278 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>278</filteredId>
+    </item>
+    <item>
+      <title>Obcy na dzielnicy</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/277</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/111" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Bochiński Tomasz</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-uwagi field-type-text field-label-inline inline">
+          <div class="field-label">Uwagi:&amp;nbsp;</div>
+          <div class="field-items">
+            <div class="field-item even">Nowość!</div>
+          </div>
+        </div>
+        <div class="field field-name-field-cykl field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Cykl: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/112" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Opowieści Praskie</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/62" typeof="skos:Concept" property="rdfs:label skos:prefLabel">urban fantasy</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/18" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Opowiadanie</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Mon, 08 Apr 2013 13:39:22 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">277 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>277</filteredId>
+    </item>
+    <item>
+      <title>Tylko pieśń</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/274</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/110" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Chodkowska-Gyurics Agnieszka &amp;amp; Bochiński Tomasz</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-uwagi field-type-text field-label-inline inline">
+          <div class="field-label">Uwagi:&amp;nbsp;</div>
+          <div class="field-items">
+            <div class="field-item even">Nowość!</div>
+          </div>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/50" typeof="skos:Concept" property="rdfs:label skos:prefLabel">science fiction</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/18" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Opowiadanie</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Mon, 01 Apr 2013 12:58:38 +0000</pubDate>
+      <dc:creator>Logan</dc:creator>
+      <guid isPermaLink="false">274 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>274</filteredId>
+    </item>
+    <item>
+      <title>Bramy strachu</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/273</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/100" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Popik Emma</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/9" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Nowela</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Mon, 01 Apr 2013 12:56:38 +0000</pubDate>
+      <dc:creator>Logan</dc:creator>
+      <guid isPermaLink="false">273 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>273</filteredId>
+    </item>
+    <item>
+      <title>Zapakować w pudełko</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/272</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/100" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Popik Emma</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/18" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Opowiadanie</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Mon, 01 Apr 2013 12:55:36 +0000</pubDate>
+      <dc:creator>Logan</dc:creator>
+      <guid isPermaLink="false">272 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>272</filteredId>
+    </item>
+    <item>
+      <title>Zerwane ogniwo</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/271</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/23" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Żwikiewicz Wiktor</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/18" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Opowiadanie</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Mon, 01 Apr 2013 12:54:07 +0000</pubDate>
+      <dc:creator>Logan</dc:creator>
+      <guid isPermaLink="false">271 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>271</filteredId>
+    </item>
+    <item>
+      <title>Ciernie</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/269</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/26" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Uznański Sebastian</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/54" typeof="skos:Concept" property="rdfs:label skos:prefLabel">horror</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/18" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Opowiadanie</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Mon, 01 Apr 2013 12:50:23 +0000</pubDate>
+      <dc:creator>Logan</dc:creator>
+      <guid isPermaLink="false">269 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>269</filteredId>
+    </item>
+    <item>
+      <title>Szatański pierwiosnek</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/268</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/107" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Jadowska Aneta</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/18" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Opowiadanie</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Mon, 01 Apr 2013 12:48:22 +0000</pubDate>
+      <dc:creator>Logan</dc:creator>
+      <guid isPermaLink="false">268 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>268</filteredId>
+    </item>
+    <item>
+      <title>Szatanski interes</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/267</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/37" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Pacyński Tomasz</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/18" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Opowiadanie</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Mon, 01 Apr 2013 12:44:03 +0000</pubDate>
+      <dc:creator>Logan</dc:creator>
+      <guid isPermaLink="false">267 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>267</filteredId>
+    </item>
+    <item>
+      <title>Po deszczu każdy wilk śmierdzi mokrym psem</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/265</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/107" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Jadowska Aneta</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/18" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Opowiadanie</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Mon, 01 Apr 2013 12:39:31 +0000</pubDate>
+      <dc:creator>Logan</dc:creator>
+      <guid isPermaLink="false">265 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>265</filteredId>
+    </item>
+    <item>
+      <title>Miłość do grobowej deski</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/264</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/107" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Jadowska Aneta</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/18" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Opowiadanie</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Mon, 01 Apr 2013 12:35:31 +0000</pubDate>
+      <dc:creator>Logan</dc:creator>
+      <guid isPermaLink="false">264 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>264</filteredId>
+    </item>
+    <item>
+      <title>Dlaczego milczysz Noor</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/253</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/96" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Hemerling Marek</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-uwagi field-type-text field-label-inline inline">
+          <div class="field-label">Uwagi:&amp;nbsp;</div>
+          <div class="field-items">
+            <div class="field-item even">Nowość!</div>
+          </div>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/50" typeof="skos:Concept" property="rdfs:label skos:prefLabel">science fiction</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/18" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Opowiadanie</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Mon, 25 Mar 2013 11:00:00 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">253 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>253</filteredId>
+    </item>
+    <item>
+      <title>Las Liberte</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/255</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/106" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Inglot Jacek</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-uwagi field-type-text field-label-inline inline">
+          <div class="field-label">Uwagi:&amp;nbsp;</div>
+          <div class="field-items">
+            <div class="field-item even">Nowość!</div>
+          </div>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/53" typeof="skos:Concept" property="rdfs:label skos:prefLabel">humorystyczne science fiction</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/18" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Opowiadanie</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Mon, 25 Mar 2013 11:00:00 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">255 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>255</filteredId>
+    </item>
+    <item>
+      <title>List do prezydenta</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/256</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/106" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Inglot Jacek</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-uwagi field-type-text field-label-inline inline">
+          <div class="field-label">Uwagi:&amp;nbsp;</div>
+          <div class="field-items">
+            <div class="field-item even">Nowość!</div>
+          </div>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/50" typeof="skos:Concept" property="rdfs:label skos:prefLabel">science fiction</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/18" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Opowiadanie</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Mon, 25 Mar 2013 11:00:00 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">256 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>256</filteredId>
+    </item>
+    <item>
+      <title>Wypalą nas kruki, wrony...</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/257</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/106" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Inglot Jacek</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-uwagi field-type-text field-label-inline inline">
+          <div class="field-label">Uwagi:&amp;nbsp;</div>
+          <div class="field-items">
+            <div class="field-item even">Nowość!</div>
+          </div>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/50" typeof="skos:Concept" property="rdfs:label skos:prefLabel">science fiction</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/18" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Opowiadanie</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Mon, 25 Mar 2013 11:00:00 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">257 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>257</filteredId>
+    </item>
+    <item>
+      <title>Drzewo genealogiczne</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/258</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/94" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Jabłoński Mirosław P.</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-uwagi field-type-text field-label-inline inline">
+          <div class="field-label">Uwagi:&amp;nbsp;</div>
+          <div class="field-items">
+            <div class="field-item even">Nowość!</div>
+          </div>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/50" typeof="skos:Concept" property="rdfs:label skos:prefLabel">science fiction</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/18" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Opowiadanie</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Mon, 25 Mar 2013 11:00:00 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">258 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>258</filteredId>
+    </item>
+    <item>
+      <title>Zabić mr. Immortala</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/259</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/94" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Jabłoński Mirosław P.</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-uwagi field-type-text field-label-inline inline">
+          <div class="field-label">Uwagi:&amp;nbsp;</div>
+          <div class="field-items">
+            <div class="field-item even">Nowość!</div>
+          </div>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/50" typeof="skos:Concept" property="rdfs:label skos:prefLabel">science fiction</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/18" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Opowiadanie</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Mon, 25 Mar 2013 11:00:00 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">259 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>259</filteredId>
+    </item>
+    <item>
+      <title>Pięknie</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/260</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/99" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Majka Paweł</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-uwagi field-type-text field-label-inline inline">
+          <div class="field-label">Uwagi:&amp;nbsp;</div>
+          <div class="field-items">
+            <div class="field-item even">Nowość!</div>
+          </div>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/50" typeof="skos:Concept" property="rdfs:label skos:prefLabel">science fiction</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/18" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Opowiadanie</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Mon, 25 Mar 2013 11:00:00 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">260 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>260</filteredId>
+    </item>
+    <item>
+      <title>Porozmawiajmy</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/261</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/99" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Majka Paweł</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-uwagi field-type-text field-label-inline inline">
+          <div class="field-label">Uwagi:&amp;nbsp;</div>
+          <div class="field-items">
+            <div class="field-item even">Nowość!</div>
+          </div>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/50" typeof="skos:Concept" property="rdfs:label skos:prefLabel">science fiction</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/18" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Opowiadanie</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Mon, 25 Mar 2013 11:00:00 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">261 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>261</filteredId>
+    </item>
+    <item>
+      <title>Aure</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/262</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/48" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Wełnicki Marcin</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-uwagi field-type-text field-label-inline inline">
+          <div class="field-label">Uwagi:&amp;nbsp;</div>
+          <div class="field-items">
+            <div class="field-item even">Nowość!</div>
+          </div>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/50" typeof="skos:Concept" property="rdfs:label skos:prefLabel">science fiction</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/18" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Opowiadanie</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Mon, 25 Mar 2013 11:00:00 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">262 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>262</filteredId>
+    </item>
+    <item>
+      <title>Blues dla Suezabeth</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/252</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/96" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Hemerling Marek</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-uwagi field-type-text field-label-inline inline">
+          <div class="field-label">Uwagi:&amp;nbsp;</div>
+          <div class="field-items">
+            <div class="field-item even">Nowość!</div>
+          </div>
+        </div>
+        <div class="field field-name-field-wydawnictwo field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Wydawnictwo: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/105" typeof="skos:Concept" property="rdfs:label skos:prefLabel">science fiction</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/9" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Nowela</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Mon, 25 Mar 2013 11:00:00 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">252 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>252</filteredId>
+    </item>
+    <item>
+      <title>Kura</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/238</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/11" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Dębski Rafał</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-uwagi field-type-text field-label-inline inline">
+          <div class="field-label">Uwagi:&amp;nbsp;</div>
+          <div class="field-items">
+            <div class="field-item even">Nowość!</div>
+          </div>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/101" typeof="skos:Concept" property="rdfs:label skos:prefLabel">fantasy historyczna</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/18" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Opowiadanie</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Mon, 18 Mar 2013 11:00:00 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">238 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>238</filteredId>
+    </item>
+    <item>
+      <title>Wilczy dołek</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/239</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/11" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Dębski Rafał</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-uwagi field-type-text field-label-inline inline">
+          <div class="field-label">Uwagi:&amp;nbsp;</div>
+          <div class="field-items">
+            <div class="field-item even">Nowość!</div>
+          </div>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/101" typeof="skos:Concept" property="rdfs:label skos:prefLabel">fantasy historyczna</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/18" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Opowiadanie</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Mon, 18 Mar 2013 11:00:00 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">239 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>239</filteredId>
+    </item>
+    <item>
+      <title>Posłaniec</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/240</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/44" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Drzewiński Andrzej</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-uwagi field-type-text field-label-inline inline">
+          <div class="field-label">Uwagi:&amp;nbsp;</div>
+          <div class="field-items">
+            <div class="field-item even">Nowość!</div>
+          </div>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/50" typeof="skos:Concept" property="rdfs:label skos:prefLabel">science fiction</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/18" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Opowiadanie</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Mon, 18 Mar 2013 11:00:00 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">240 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>240</filteredId>
+    </item>
+    <item>
+      <title>;-)</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/241</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/30" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Juraszek Dawid</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-uwagi field-type-text field-label-inline inline">
+          <div class="field-label">Uwagi:&amp;nbsp;</div>
+          <div class="field-items">
+            <div class="field-item even">Nowość!</div>
+          </div>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/50" typeof="skos:Concept" property="rdfs:label skos:prefLabel">science fiction</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/18" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Opowiadanie</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Mon, 18 Mar 2013 11:00:00 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">241 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>241</filteredId>
+    </item>
+    <item>
+      <title>Skrypt opowiadacza z epoki</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/242</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/30" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Juraszek Dawid</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-uwagi field-type-text field-label-inline inline">
+          <div class="field-label">Uwagi:&amp;nbsp;</div>
+          <div class="field-items">
+            <div class="field-item even">Nowość!</div>
+          </div>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/50" typeof="skos:Concept" property="rdfs:label skos:prefLabel">science fiction</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/18" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Opowiadanie</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Mon, 18 Mar 2013 11:00:00 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">242 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>242</filteredId>
+    </item>
+    <item>
+      <title>Stwórca cieni</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/243</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/20" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Pawlak Romuald</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-uwagi field-type-text field-label-inline inline">
+          <div class="field-label">Uwagi:&amp;nbsp;</div>
+          <div class="field-items">
+            <div class="field-item even">Nowość!</div>
+          </div>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/58" typeof="skos:Concept" property="rdfs:label skos:prefLabel">fantasy</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/18" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Opowiadanie</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Mon, 18 Mar 2013 11:00:00 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">243 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>243</filteredId>
+    </item>
+    <item>
+      <title>Czarny piasek</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/244</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/102" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Michałowska Iwona</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-uwagi field-type-text field-label-inline inline">
+          <div class="field-label">Uwagi:&amp;nbsp;</div>
+          <div class="field-items">
+            <div class="field-item even">Nowość!</div>
+          </div>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/60" typeof="skos:Concept" property="rdfs:label skos:prefLabel">postapokalipsa</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/15" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Powieść</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Mon, 18 Mar 2013 11:00:00 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">244 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>244</filteredId>
+    </item>
+    <item>
+      <title>Koniec</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/245</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/103" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Świerczek Marek</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-uwagi field-type-text field-label-inline inline">
+          <div class="field-label">Uwagi:&amp;nbsp;</div>
+          <div class="field-items">
+            <div class="field-item even">Nowość!</div>
+          </div>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/81" typeof="skos:Concept" property="rdfs:label skos:prefLabel">groza</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/18" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Opowiadanie</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Mon, 18 Mar 2013 11:00:00 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">245 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>245</filteredId>
+    </item>
+    <item>
+      <title>Śpiew</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/246</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/103" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Świerczek Marek</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-uwagi field-type-text field-label-inline inline">
+          <div class="field-label">Uwagi:&amp;nbsp;</div>
+          <div class="field-items">
+            <div class="field-item even">Nowość!</div>
+          </div>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/81" typeof="skos:Concept" property="rdfs:label skos:prefLabel">groza</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/18" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Opowiadanie</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Mon, 18 Mar 2013 11:00:00 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">246 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>246</filteredId>
+    </item>
+    <item>
+      <title>Jeden dzień</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/247</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/104" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Zaręba Robert</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-uwagi field-type-text field-label-inline inline">
+          <div class="field-label">Uwagi:&amp;nbsp;</div>
+          <div class="field-items">
+            <div class="field-item even">Nowość!</div>
+          </div>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/50" typeof="skos:Concept" property="rdfs:label skos:prefLabel">science fiction</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/18" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Opowiadanie</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Mon, 18 Mar 2013 11:00:00 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">247 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>247</filteredId>
+    </item>
+    <item>
+      <title>Listy z gwiazd</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/248</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/104" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Zaręba Robert</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-uwagi field-type-text field-label-inline inline">
+          <div class="field-label">Uwagi:&amp;nbsp;</div>
+          <div class="field-items">
+            <div class="field-item even">Nowość!</div>
+          </div>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/50" typeof="skos:Concept" property="rdfs:label skos:prefLabel">science fiction</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/18" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Opowiadanie</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Mon, 18 Mar 2013 11:00:00 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">248 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>248</filteredId>
+    </item>
+    <item>
+      <title>Archipelag</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/249</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/27" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Żelkowski Marek</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-uwagi field-type-text field-label-inline inline">
+          <div class="field-label">Uwagi:&amp;nbsp;</div>
+          <div class="field-items">
+            <div class="field-item even">Nowość!</div>
+          </div>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/50" typeof="skos:Concept" property="rdfs:label skos:prefLabel">science fiction</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/18" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Opowiadanie</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Mon, 18 Mar 2013 11:00:00 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">249 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>249</filteredId>
+    </item>
+    <item>
+      <title>SOS</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/231</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/100" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Popik Emma</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-uwagi field-type-text field-label-inline inline">
+          <div class="field-label">Uwagi:&amp;nbsp;</div>
+          <div class="field-items">
+            <div class="field-item even">Nowość!</div>
+          </div>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/50" typeof="skos:Concept" property="rdfs:label skos:prefLabel">science fiction</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/18" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Opowiadanie</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Mon, 11 Mar 2013 11:00:00 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">231 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>231</filteredId>
+    </item>
+    <item>
+      <title>Szaman</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/232</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/100" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Popik Emma</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-uwagi field-type-text field-label-inline inline">
+          <div class="field-label">Uwagi:&amp;nbsp;</div>
+          <div class="field-items">
+            <div class="field-item even">Nowość!</div>
+          </div>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/50" typeof="skos:Concept" property="rdfs:label skos:prefLabel">science fiction</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/18" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Opowiadanie</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Mon, 11 Mar 2013 11:00:00 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">232 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>232</filteredId>
+    </item>
+    <item>
+      <title>Telerodzinka</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/233</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/100" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Popik Emma</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-uwagi field-type-text field-label-inline inline">
+          <div class="field-label">Uwagi:&amp;nbsp;</div>
+          <div class="field-items">
+            <div class="field-item even">Nowość!</div>
+          </div>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/50" typeof="skos:Concept" property="rdfs:label skos:prefLabel">science fiction</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/18" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Opowiadanie</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Mon, 11 Mar 2013 11:00:00 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">233 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>233</filteredId>
+    </item>
+    <item>
+      <title>Mędrcy świata</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/220</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/84" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Hałas Agnieszka</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-uwagi field-type-text field-label-inline inline">
+          <div class="field-label">Uwagi:&amp;nbsp;</div>
+          <div class="field-items">
+            <div class="field-item even">Nowość!</div>
+          </div>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/58" typeof="skos:Concept" property="rdfs:label skos:prefLabel">fantasy</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/18" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Opowiadanie</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Mon, 11 Mar 2013 11:00:00 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">220 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>220</filteredId>
+    </item>
+    <item>
+      <title>Aż staniemy się jako bogowie</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/221</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/100" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Popik Emma</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-uwagi field-type-text field-label-inline inline">
+          <div class="field-label">Uwagi:&amp;nbsp;</div>
+          <div class="field-items">
+            <div class="field-item even">Nowość!</div>
+          </div>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/50" typeof="skos:Concept" property="rdfs:label skos:prefLabel">science fiction</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/18" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Opowiadanie</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Mon, 11 Mar 2013 11:00:00 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">221 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>221</filteredId>
+    </item>
+    <item>
+      <title>Dziedzina</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/222</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/100" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Popik Emma</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-uwagi field-type-text field-label-inline inline">
+          <div class="field-label">Uwagi:&amp;nbsp;</div>
+          <div class="field-items">
+            <div class="field-item even">Nowość!</div>
+          </div>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/50" typeof="skos:Concept" property="rdfs:label skos:prefLabel">science fiction</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/18" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Opowiadanie</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Mon, 11 Mar 2013 11:00:00 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">222 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>222</filteredId>
+    </item>
+    <item>
+      <title>Dimoon 3: Słodkie maleństwo</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/97</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/38" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Graf Ela</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-uwagi field-type-text field-label-inline inline">
+          <div class="field-label">Uwagi:&amp;nbsp;</div>
+          <div class="field-items">
+            <div class="field-item even">Nowość!</div>
+          </div>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/57" typeof="skos:Concept" property="rdfs:label skos:prefLabel">kryminał paranormalny</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/9" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Nowela</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Mon, 11 Mar 2013 11:00:00 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">97 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>97</filteredId>
+    </item>
+    <item>
+      <title>Dzień jak co dzień</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/223</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/100" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Popik Emma</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-uwagi field-type-text field-label-inline inline">
+          <div class="field-label">Uwagi:&amp;nbsp;</div>
+          <div class="field-items">
+            <div class="field-item even">Nowość!</div>
+          </div>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/50" typeof="skos:Concept" property="rdfs:label skos:prefLabel">science fiction</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/18" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Opowiadanie</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Mon, 11 Mar 2013 11:00:00 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">223 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>223</filteredId>
+    </item>
+    <item>
+      <title>Heretyk</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/224</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/100" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Popik Emma</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-uwagi field-type-text field-label-inline inline">
+          <div class="field-label">Uwagi:&amp;nbsp;</div>
+          <div class="field-items">
+            <div class="field-item even">Nowość!</div>
+          </div>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/50" typeof="skos:Concept" property="rdfs:label skos:prefLabel">science fiction</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/18" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Opowiadanie</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Mon, 11 Mar 2013 11:00:00 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">224 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>224</filteredId>
+    </item>
+    <item>
+      <title>Krzak ciernisty</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/225</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/100" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Popik Emma</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-uwagi field-type-text field-label-inline inline">
+          <div class="field-label">Uwagi:&amp;nbsp;</div>
+          <div class="field-items">
+            <div class="field-item even">Nowość!</div>
+          </div>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/50" typeof="skos:Concept" property="rdfs:label skos:prefLabel">science fiction</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/18" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Opowiadanie</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Mon, 11 Mar 2013 11:00:00 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">225 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>225</filteredId>
+    </item>
+    <item>
+      <title>Lekcja wychowania obywatelskiego</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/226</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/100" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Popik Emma</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-uwagi field-type-text field-label-inline inline">
+          <div class="field-label">Uwagi:&amp;nbsp;</div>
+          <div class="field-items">
+            <div class="field-item even">Nowość!</div>
+          </div>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/50" typeof="skos:Concept" property="rdfs:label skos:prefLabel">science fiction</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/24" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Opowiadania</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Mon, 11 Mar 2013 11:00:00 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">226 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>226</filteredId>
+    </item>
+    <item>
+      <title>Maszyna</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/227</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/100" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Popik Emma</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-uwagi field-type-text field-label-inline inline">
+          <div class="field-label">Uwagi:&amp;nbsp;</div>
+          <div class="field-items">
+            <div class="field-item even">Nowość!</div>
+          </div>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/50" typeof="skos:Concept" property="rdfs:label skos:prefLabel">science fiction</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/18" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Opowiadanie</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Mon, 11 Mar 2013 11:00:00 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">227 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>227</filteredId>
+    </item>
+    <item>
+      <title>Mistrz</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/228</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/100" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Popik Emma</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-uwagi field-type-text field-label-inline inline">
+          <div class="field-label">Uwagi:&amp;nbsp;</div>
+          <div class="field-items">
+            <div class="field-item even">Nowość!</div>
+          </div>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/50" typeof="skos:Concept" property="rdfs:label skos:prefLabel">science fiction</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/18" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Opowiadanie</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Mon, 11 Mar 2013 11:00:00 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">228 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>228</filteredId>
+    </item>
+    <item>
+      <title>Myto</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/229</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/100" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Popik Emma</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-uwagi field-type-text field-label-inline inline">
+          <div class="field-label">Uwagi:&amp;nbsp;</div>
+          <div class="field-items">
+            <div class="field-item even">Nowość!</div>
+          </div>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/50" typeof="skos:Concept" property="rdfs:label skos:prefLabel">science fiction</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/18" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Opowiadanie</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Mon, 11 Mar 2013 11:00:00 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">229 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>229</filteredId>
+    </item>
+    <item>
+      <title>Nadejście Fortynbrasa</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/230</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/100" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Popik Emma</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-uwagi field-type-text field-label-inline inline">
+          <div class="field-label">Uwagi:&amp;nbsp;</div>
+          <div class="field-items">
+            <div class="field-item even">Nowość!</div>
+          </div>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/50" typeof="skos:Concept" property="rdfs:label skos:prefLabel">science fiction</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/18" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Opowiadanie</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Mon, 11 Mar 2013 11:00:00 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">230 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>230</filteredId>
+    </item>
+    <item>
+      <title>Kwoka i Buhaj - Prawdziwy harnaś</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/211</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/99" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Majka Paweł</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-uwagi field-type-text field-label-inline inline">
+          <div class="field-label">Uwagi:&amp;nbsp;</div>
+          <div class="field-items">
+            <div class="field-item even">Nowość!</div>
+          </div>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/64" typeof="skos:Concept" property="rdfs:label skos:prefLabel">humorystyczna fantasy</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/18" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Opowiadanie</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Mon, 04 Mar 2013 12:57:11 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">211 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>211</filteredId>
+    </item>
+    <item>
+      <title>Istotny element</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/207</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/99" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Majka Paweł</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-uwagi field-type-text field-label-inline inline">
+          <div class="field-label">Uwagi:&amp;nbsp;</div>
+          <div class="field-items">
+            <div class="field-item even">Nowość!</div>
+          </div>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/80" typeof="skos:Concept" property="rdfs:label skos:prefLabel">science fiction/groza</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/9" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Nowela</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Mon, 04 Mar 2013 11:00:00 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">207 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>207</filteredId>
+    </item>
+    <item>
+      <title>Potrzeba cudu</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/208</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/99" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Majka Paweł</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-uwagi field-type-text field-label-inline inline">
+          <div class="field-label">Uwagi:&amp;nbsp;</div>
+          <div class="field-items">
+            <div class="field-item even">Nowość!</div>
+          </div>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/50" typeof="skos:Concept" property="rdfs:label skos:prefLabel">science fiction</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/9" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Nowela</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Mon, 04 Mar 2013 11:00:00 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">208 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>208</filteredId>
+    </item>
+    <item>
+      <title>Kwoka i Buhaj - Prawdziwi barbarzyńcy</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/209</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/99" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Majka Paweł</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-uwagi field-type-text field-label-inline inline">
+          <div class="field-label">Uwagi:&amp;nbsp;</div>
+          <div class="field-items">
+            <div class="field-item even">Nowość!</div>
+          </div>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/64" typeof="skos:Concept" property="rdfs:label skos:prefLabel">humorystyczna fantasy</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/18" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Opowiadanie</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Mon, 04 Mar 2013 11:00:00 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">209 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>209</filteredId>
+    </item>
+    <item>
+      <title>Kwoka i Buhaj - Prawdziwi rycerze</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/210</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/99" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Majka Paweł</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-uwagi field-type-text field-label-inline inline">
+          <div class="field-label">Uwagi:&amp;nbsp;</div>
+          <div class="field-items">
+            <div class="field-item even">Nowość!</div>
+          </div>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/64" typeof="skos:Concept" property="rdfs:label skos:prefLabel">humorystyczna fantasy</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/18" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Opowiadanie</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Mon, 04 Mar 2013 11:00:00 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">210 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>210</filteredId>
+    </item>
+    <item>
+      <title>Sklep z płytami</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/200</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/94" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Jabłoński Mirosław P.</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-uwagi field-type-text field-label-inline inline">
+          <div class="field-label">Uwagi:&amp;nbsp;</div>
+          <div class="field-items">
+            <div class="field-item even">Nowość!</div>
+          </div>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/50" typeof="skos:Concept" property="rdfs:label skos:prefLabel">science fiction</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/18" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Opowiadanie</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Mon, 04 Mar 2013 11:00:00 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">200 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>200</filteredId>
+    </item>
+    <item>
+      <title>Termit</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/201</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/94" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Jabłoński Mirosław P.</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-uwagi field-type-text field-label-inline inline">
+          <div class="field-label">Uwagi:&amp;nbsp;</div>
+          <div class="field-items">
+            <div class="field-item even">Nowość!</div>
+          </div>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/50" typeof="skos:Concept" property="rdfs:label skos:prefLabel">science fiction</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/18" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Opowiadanie</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Mon, 04 Mar 2013 11:00:00 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">201 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>201</filteredId>
+    </item>
+    <item>
+      <title>Reguła Przetrwania</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/202</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/98" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Drukarczyk Grzegorz</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-uwagi field-type-text field-label-inline inline">
+          <div class="field-label">Uwagi:&amp;nbsp;</div>
+          <div class="field-items">
+            <div class="field-item even">Nowość!</div>
+          </div>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/60" typeof="skos:Concept" property="rdfs:label skos:prefLabel">postapokalipsa</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/9" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Nowela</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Mon, 04 Mar 2013 11:00:00 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">202 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>202</filteredId>
+    </item>
+    <item>
+      <title>Sprzedawca snów</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/203</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/98" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Drukarczyk Grzegorz</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-uwagi field-type-text field-label-inline inline">
+          <div class="field-label">Uwagi:&amp;nbsp;</div>
+          <div class="field-items">
+            <div class="field-item even">Premiera!</div>
+          </div>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/50" typeof="skos:Concept" property="rdfs:label skos:prefLabel">science fiction</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/9" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Nowela</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Mon, 04 Mar 2013 11:00:00 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">203 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>203</filteredId>
+    </item>
+    <item>
+      <title>Zawód: Prometeusz</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/204</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/41" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Podrzucki Wawrzyniec</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-uwagi field-type-text field-label-inline inline">
+          <div class="field-label">Uwagi:&amp;nbsp;</div>
+          <div class="field-items">
+            <div class="field-item even">Nowość!</div>
+          </div>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/50" typeof="skos:Concept" property="rdfs:label skos:prefLabel">science fiction</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/18" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Opowiadanie</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Mon, 04 Mar 2013 11:00:00 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">204 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>204</filteredId>
+    </item>
+    <item>
+      <title>Pasażer</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/205</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/40" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Mortka Marcin</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-uwagi field-type-text field-label-inline inline">
+          <div class="field-label">Uwagi:&amp;nbsp;</div>
+          <div class="field-items">
+            <div class="field-item even">Nowość!</div>
+          </div>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/50" typeof="skos:Concept" property="rdfs:label skos:prefLabel">science fiction</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/18" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Opowiadanie</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Mon, 04 Mar 2013 11:00:00 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">205 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>205</filteredId>
+    </item>
+    <item>
+      <title>Ostatni zjazd przed Litwą</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/206</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/5" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Szmidt Robert J.</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-uwagi field-type-text field-label-inline inline">
+          <div class="field-label">Uwagi:&amp;nbsp;</div>
+          <div class="field-items">
+            <div class="field-item even">Nowość!</div>
+          </div>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/50" typeof="skos:Concept" property="rdfs:label skos:prefLabel">science fiction</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/9" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Nowela</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Mon, 04 Mar 2013 11:00:00 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">206 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>206</filteredId>
+    </item>
+    <item>
+      <title>Odrobina luksusu</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/186</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/96" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Hemerling Marek</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-uwagi field-type-text field-label-inline inline">
+          <div class="field-label">Uwagi:&amp;nbsp;</div>
+          <div class="field-items">
+            <div class="field-item even">Nowość!</div>
+          </div>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/50" typeof="skos:Concept" property="rdfs:label skos:prefLabel">science fiction</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/18" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Opowiadanie</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Mon, 25 Feb 2013 11:00:00 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">186 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>186</filteredId>
+    </item>
+    <item>
+      <title>Perpetuum mobile</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/187</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/96" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Hemerling Marek</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-uwagi field-type-text field-label-inline inline">
+          <div class="field-label">Uwagi:&amp;nbsp;</div>
+          <div class="field-items">
+            <div class="field-item even">Nowość!</div>
+          </div>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/50" typeof="skos:Concept" property="rdfs:label skos:prefLabel">science fiction</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/18" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Opowiadanie</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Mon, 25 Feb 2013 11:00:00 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">187 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>187</filteredId>
+    </item>
+    <item>
+      <title>Przewrót w przód</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/188</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/96" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Hemerling Marek</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-uwagi field-type-text field-label-inline inline">
+          <div class="field-label">Uwagi:&amp;nbsp;</div>
+          <div class="field-items">
+            <div class="field-item even">Nowość!</div>
+          </div>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/50" typeof="skos:Concept" property="rdfs:label skos:prefLabel">science fiction</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/18" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Opowiadanie</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Mon, 25 Feb 2013 11:00:00 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">188 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>188</filteredId>
+    </item>
+    <item>
+      <title>Punky Null i jego pingwin</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/189</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/96" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Hemerling Marek</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-uwagi field-type-text field-label-inline inline">
+          <div class="field-label">Uwagi:&amp;nbsp;</div>
+          <div class="field-items">
+            <div class="field-item even">Nowość!</div>
+          </div>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/50" typeof="skos:Concept" property="rdfs:label skos:prefLabel">science fiction</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/18" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Opowiadanie</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Mon, 25 Feb 2013 11:00:00 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">189 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>189</filteredId>
+    </item>
+    <item>
+      <title>Nieśmiertelny</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/190</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/44" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Drzewiński Andrzej</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-uwagi field-type-text field-label-inline inline">
+          <div class="field-label">Uwagi:&amp;nbsp;</div>
+          <div class="field-items">
+            <div class="field-item even">Nowość!</div>
+          </div>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/50" typeof="skos:Concept" property="rdfs:label skos:prefLabel">science fiction</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/18" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Opowiadanie</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Mon, 25 Feb 2013 11:00:00 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">190 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>190</filteredId>
+    </item>
+    <item>
+      <title>Kwestia przyzwyczajenia</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/127</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/44" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Drzewiński Andrzej</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-uwagi field-type-text field-label-inline inline">
+          <div class="field-label">Uwagi:&amp;nbsp;</div>
+          <div class="field-items">
+            <div class="field-item even">Nowość!</div>
+          </div>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/50" typeof="skos:Concept" property="rdfs:label skos:prefLabel">science fiction</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/18" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Opowiadanie</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Mon, 25 Feb 2013 11:00:00 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">127 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>127</filteredId>
+    </item>
+    <item>
+      <title>Equnculus</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/192</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/20" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Pawlak Romuald</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-uwagi field-type-text field-label-inline inline">
+          <div class="field-label">Uwagi:&amp;nbsp;</div>
+          <div class="field-items">
+            <div class="field-item even">Nowość!</div>
+          </div>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/58" typeof="skos:Concept" property="rdfs:label skos:prefLabel">fantasy</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/18" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Opowiadanie</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Mon, 25 Feb 2013 11:00:00 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">192 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>192</filteredId>
+    </item>
+    <item>
+      <title>Ocalenie</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/128</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/44" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Drzewiński Andrzej</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-uwagi field-type-text field-label-inline inline">
+          <div class="field-label">Uwagi:&amp;nbsp;</div>
+          <div class="field-items">
+            <div class="field-item even">Nowość!</div>
+          </div>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/50" typeof="skos:Concept" property="rdfs:label skos:prefLabel">science fiction</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/18" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Opowiadanie</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Mon, 25 Feb 2013 11:00:00 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">128 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>128</filteredId>
+    </item>
+    <item>
+      <title>Rycerz bezkonny</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/193</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/20" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Pawlak Romuald</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-uwagi field-type-text field-label-inline inline">
+          <div class="field-label">Uwagi:&amp;nbsp;</div>
+          <div class="field-items">
+            <div class="field-item even">Nowość!</div>
+          </div>
+        </div>
+        <div class="field field-name-field-cykl field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Cykl: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/97" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Fillegan rycerz bezkonny</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/64" typeof="skos:Concept" property="rdfs:label skos:prefLabel">humorystyczna fantasy</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/18" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Opowiadanie</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Mon, 25 Feb 2013 11:00:00 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">193 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>193</filteredId>
+    </item>
+    <item>
+      <title>Marzenie</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/194</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/23" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Żwikiewicz Wiktor</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-uwagi field-type-text field-label-inline inline">
+          <div class="field-label">Uwagi:&amp;nbsp;</div>
+          <div class="field-items">
+            <div class="field-item even">Nowość!</div>
+          </div>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/50" typeof="skos:Concept" property="rdfs:label skos:prefLabel">science fiction</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/18" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Opowiadanie</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Mon, 25 Feb 2013 11:00:00 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">194 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>194</filteredId>
+    </item>
+    <item>
+      <title>Drugi element</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/67</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/37" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Pacyński Tomasz</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-uwagi field-type-text field-label-inline inline">
+          <div class="field-label">Uwagi:&amp;nbsp;</div>
+          <div class="field-items">
+            <div class="field-item even">Nowość!</div>
+          </div>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/58" typeof="skos:Concept" property="rdfs:label skos:prefLabel">fantasy</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/9" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Nowela</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Mon, 25 Feb 2013 11:00:00 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">67 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>67</filteredId>
+    </item>
+    <item>
+      <title>Diabelska maskarada</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/183</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/96" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Hemerling Marek</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-uwagi field-type-text field-label-inline inline">
+          <div class="field-label">Uwagi:&amp;nbsp;</div>
+          <div class="field-items">
+            <div class="field-item even">Nowość!</div>
+          </div>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/50" typeof="skos:Concept" property="rdfs:label skos:prefLabel">science fiction</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/15" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Powieść</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Mon, 25 Feb 2013 11:00:00 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">183 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>183</filteredId>
+    </item>
+    <item>
+      <title>Teraz, kurna, my</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/109</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/43" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Domagalski Dariusz</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-uwagi field-type-text field-label-inline inline">
+          <div class="field-label">Uwagi:&amp;nbsp;</div>
+          <div class="field-items">
+            <div class="field-item even">Nowość!</div>
+          </div>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/64" typeof="skos:Concept" property="rdfs:label skos:prefLabel">humorystyczna fantasy</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/9" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Nowela</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Mon, 25 Feb 2013 11:00:00 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">109 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>109</filteredId>
+    </item>
+    <item>
+      <title>Szkic IV - Prawda</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/184</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/96" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Hemerling Marek</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-uwagi field-type-text field-label-inline inline">
+          <div class="field-label">Uwagi:&amp;nbsp;</div>
+          <div class="field-items">
+            <div class="field-item even">Nowość!</div>
+          </div>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/50" typeof="skos:Concept" property="rdfs:label skos:prefLabel">science fiction</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/18" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Opowiadanie</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Mon, 25 Feb 2013 11:00:00 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">184 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>184</filteredId>
+    </item>
+    <item>
+      <title>Szkic VII - Gra</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/185</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/96" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Hemerling Marek</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-uwagi field-type-text field-label-inline inline">
+          <div class="field-label">Uwagi:&amp;nbsp;</div>
+          <div class="field-items">
+            <div class="field-item even">Nowość!</div>
+          </div>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/50" typeof="skos:Concept" property="rdfs:label skos:prefLabel">science fiction</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/18" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Opowiadanie</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Mon, 25 Feb 2013 11:00:00 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">185 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>185</filteredId>
+    </item>
+    <item>
+      <title>Podpalacze nieba</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/195</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/23" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Żwikiewicz Wiktor</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-uwagi field-type-text field-label-inline inline">
+          <div class="field-label">Uwagi:&amp;nbsp;</div>
+          <div class="field-items">
+            <div class="field-item even">Nowość!</div>
+          </div>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/50" typeof="skos:Concept" property="rdfs:label skos:prefLabel">science fiction</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/18" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Opowiadanie</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Sun, 24 Feb 2013 09:37:55 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">195 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>195</filteredId>
+    </item>
+    <item>
+      <title>Lot na biegun południowy</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/179</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/27" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Żelkowski Marek</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-uwagi field-type-text field-label-inline inline">
+          <div class="field-label">Uwagi:&amp;nbsp;</div>
+          <div class="field-items">
+            <div class="field-item even">18.02.2013 Nowość!</div>
+          </div>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/50" typeof="skos:Concept" property="rdfs:label skos:prefLabel">science fiction</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/18" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Opowiadanie</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Mon, 18 Feb 2013 09:39:44 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">179 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>179</filteredId>
+    </item>
+    <item>
+      <title>Mętne wody</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/178</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/48" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Wełnicki Marcin</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-uwagi field-type-text field-label-inline inline">
+          <div class="field-label">Uwagi:&amp;nbsp;</div>
+          <div class="field-items">
+            <div class="field-item even">Tylko u nas</div>
+          </div>
+        </div>
+        <div class="field field-name-field-cykl field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Cykl: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/79" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Śmiertelny Bóg</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/80" typeof="skos:Concept" property="rdfs:label skos:prefLabel">science fiction/groza</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Mon, 18 Feb 2013 09:37:17 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">178 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>178</filteredId>
+    </item>
+    <item>
+      <title>Antyplacebo</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/177</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/40" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Mortka Marcin</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-uwagi field-type-text field-label-inline inline">
+          <div class="field-label">Uwagi:&amp;nbsp;</div>
+          <div class="field-items">
+            <div class="field-item even">Nowość!</div>
+          </div>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/50" typeof="skos:Concept" property="rdfs:label skos:prefLabel">science fiction</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/18" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Opowiadanie</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Mon, 18 Feb 2013 09:34:52 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">177 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>177</filteredId>
+    </item>
+    <item>
+      <title>Gambit genów</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/176</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/26" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Uznański Sebastian</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-uwagi field-type-text field-label-inline inline">
+          <div class="field-label">Uwagi:&amp;nbsp;</div>
+          <div class="field-items">
+            <div class="field-item even">18.02.2013 Nowość!</div>
+          </div>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/50" typeof="skos:Concept" property="rdfs:label skos:prefLabel">science fiction</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/18" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Opowiadanie</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Mon, 18 Feb 2013 09:31:51 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">176 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>176</filteredId>
+    </item>
+    <item>
+      <title>Seksbomba</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/175</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/94" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Jabłoński Mirosław P.</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-uwagi field-type-text field-label-inline inline">
+          <div class="field-label">Uwagi:&amp;nbsp;</div>
+          <div class="field-items">
+            <div class="field-item even">Tylko u nas</div>
+          </div>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/50" typeof="skos:Concept" property="rdfs:label skos:prefLabel">science fiction</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/18" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Opowiadanie</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Mon, 18 Feb 2013 09:18:00 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">175 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>175</filteredId>
+    </item>
+    <item>
+      <title>Naumachia</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/174</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/94" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Jabłoński Mirosław P.</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-uwagi field-type-text field-label-inline inline">
+          <div class="field-label">Uwagi:&amp;nbsp;</div>
+          <div class="field-items">
+            <div class="field-item even">Tylko u nas</div>
+          </div>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/50" typeof="skos:Concept" property="rdfs:label skos:prefLabel">science fiction</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/18" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Opowiadanie</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Mon, 18 Feb 2013 09:15:26 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">174 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>174</filteredId>
+    </item>
+    <item>
+      <title>Mańkut</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/173</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/94" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Jabłoński Mirosław P.</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-uwagi field-type-text field-label-inline inline">
+          <div class="field-label">Uwagi:&amp;nbsp;</div>
+          <div class="field-items">
+            <div class="field-item even">Tylko u nas</div>
+          </div>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/50" typeof="skos:Concept" property="rdfs:label skos:prefLabel">science fiction</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/18" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Opowiadanie</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Mon, 18 Feb 2013 09:13:51 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">173 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>173</filteredId>
+    </item>
+    <item>
+      <title>Dzień Procreatora</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/172</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/94" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Jabłoński Mirosław P.</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-uwagi field-type-text field-label-inline inline">
+          <div class="field-label">Uwagi:&amp;nbsp;</div>
+          <div class="field-items">
+            <div class="field-item even">Tylko u nas</div>
+          </div>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/50" typeof="skos:Concept" property="rdfs:label skos:prefLabel">science fiction</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/18" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Opowiadanie</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Mon, 18 Feb 2013 09:11:19 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">172 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>172</filteredId>
+    </item>
+    <item>
+      <title>Kochali się we troje</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/171</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/95" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Jabłoński Witold</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-uwagi field-type-text field-label-inline inline">
+          <div class="field-label">Uwagi:&amp;nbsp;</div>
+          <div class="field-items">
+            <div class="field-item even">Tylko u nas</div>
+          </div>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/88" typeof="skos:Concept" property="rdfs:label skos:prefLabel">fantastyka obyczajowa</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/18" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Opowiadanie</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Sat, 16 Feb 2013 23:26:27 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">171 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>171</filteredId>
+    </item>
+    <item>
+      <title>Czas wodnika</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/170</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/94" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Jabłoński Mirosław P.</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-uwagi field-type-text field-label-inline inline">
+          <div class="field-label">Uwagi:&amp;nbsp;</div>
+          <div class="field-items">
+            <div class="field-item even">Tylko u nas</div>
+          </div>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/50" typeof="skos:Concept" property="rdfs:label skos:prefLabel">science fiction</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/18" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Opowiadanie</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Sat, 16 Feb 2013 23:24:38 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">170 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>170</filteredId>
+    </item>
+    <item>
+      <title>Niezwykły przypadek Martyny Gewalt</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/166</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/89" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Sawicki Andrzej W.</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-uwagi field-type-text field-label-inline inline">
+          <div class="field-label">Uwagi:&amp;nbsp;</div>
+          <div class="field-items">
+            <div class="field-item even">Nowość!</div>
+          </div>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/51" typeof="skos:Concept" property="rdfs:label skos:prefLabel">historyczna fantasy</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/18" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Opowiadanie</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Wed, 13 Feb 2013 23:34:34 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">166 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>166</filteredId>
+    </item>
+    <item>
+      <title>Tunel</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/165</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/86" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Łukowska Joanna</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/88" typeof="skos:Concept" property="rdfs:label skos:prefLabel">fantastyka obyczajowa</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/18" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Opowiadanie</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Wed, 13 Feb 2013 23:27:14 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">165 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>165</filteredId>
+    </item>
+    <item>
+      <title>Szósty zmysł</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/164</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/86" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Łukowska Joanna</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/93" typeof="skos:Concept" property="rdfs:label skos:prefLabel">romans paranormalny</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/18" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Opowiadanie</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Wed, 13 Feb 2013 23:21:10 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">164 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>164</filteredId>
+    </item>
+    <item>
+      <title>Ostatni z rodu</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/163</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/86" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Łukowska Joanna</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-cykl field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Cykl: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/92" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Pierwszy z rodu</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/58" typeof="skos:Concept" property="rdfs:label skos:prefLabel">fantasy</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/18" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Opowiadanie</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Wed, 13 Feb 2013 23:16:41 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">163 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>163</filteredId>
+    </item>
+    <item>
+      <title>Kleszcz, czyli boskie poczucie humoru</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/162</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/86" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Łukowska Joanna</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/88" typeof="skos:Concept" property="rdfs:label skos:prefLabel">fantastyka obyczajowa</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/18" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Opowiadanie</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Wed, 13 Feb 2013 23:13:38 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">162 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>162</filteredId>
+    </item>
+    <item>
+      <title>Dom nad jeziorem</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/161</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/86" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Łukowska Joanna</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-uwagi field-type-text field-label-inline inline">
+          <div class="field-label">Uwagi:&amp;nbsp;</div>
+          <div class="field-items">
+            <div class="field-item even">Nowość!</div>
+          </div>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/54" typeof="skos:Concept" property="rdfs:label skos:prefLabel">horror</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/18" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Opowiadanie</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Wed, 13 Feb 2013 23:09:59 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">161 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>161</filteredId>
+    </item>
+    <item>
+      <title>Po stronie mroku</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/160</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/84" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Hałas Agnieszka</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/91" typeof="skos:Concept" property="rdfs:label skos:prefLabel">dark fantasy/groza</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/18" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Opowiadanie</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Wed, 13 Feb 2013 23:07:17 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">160 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>160</filteredId>
+    </item>
+    <item>
+      <title>Ostatni raz</title>
+      <link>http://www.bazaebokow.robertjszmidt.pl/?q=node/159</link>
+      <description>
+        <div class="field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Autor: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/84" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Hałas Agnieszka</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-cykl field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Cykl: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/85" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Krzyczący w Ciemności</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Gatunek: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/58" typeof="skos:Concept" property="rdfs:label skos:prefLabel">fantasy</a>
+            </li>
+          </ul>
+        </div>
+        <div class="field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix">
+          <h3 class="field-label">Kategoria: </h3>
+          <ul class="links inline">
+            <li class="taxonomy-term-reference-0">
+              <a href="/?q=taxonomy/term/18" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Opowiadanie</a>
+            </li>
+          </ul>
+        </div>
+      </description>
+      <pubDate>Wed, 13 Feb 2013 23:04:57 +0000</pubDate>
+      <dc:creator>Robert Szmidt</dc:creator>
+      <guid isPermaLink="false">159 at http://www.bazaebokow.robertjszmidt.pl</guid>
+      <filteredId>159</filteredId>
+    </item>
+  </channel>
+</rss>

@@ -8,6 +8,7 @@ from connectors.specific import *
 import os
 import glob
 import re
+import sys
 class TestSpecificConnectors():
 
     def setUp(self):
@@ -17,9 +18,9 @@ class TestSpecificConnectors():
         pass
 
     def weHaveToGoDeeper(self, root, depth):
-    	for i in range(int(depth)):
-	    root=root[0]
-	return root
+        for i in range(int(depth)):
+            root=root[0]
+        return root
 
     @nottest
     def _test_dict(self, connector, xml, dicts, assert_lines):
@@ -27,7 +28,10 @@ class TestSpecificConnectors():
         root = et.parse(xml).getroot()
 
         lines = f.readlines()
-        offers = self.weHaveToGoDeeper(root, connector.config['depth'])
+        offers = self.weHaveToGoDeeper(root, connector.config.get('depth',0))
+        skip_offers = connector.config.get('skip_offers',0)
+        if skip_offers:
+            offers = offers[int(skip_offers):]
 
         eq_(len(lines), assert_lines)
         eq_(len(offers), assert_lines)

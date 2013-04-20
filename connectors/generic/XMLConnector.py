@@ -100,7 +100,7 @@ class XMLConnector(GenericConnector):
 
             if "@" in tag:
                 # from //path/tag[@attrib='value'] extract (u'attrib', u'value'), and from //path/tag[@attrib] extract (u'attrib', None)
-                regex = re.compile("\[@(\w+)(?:='(\w+)')?\]")
+                regex = re.compile("\[@(\w+)(?:='(.+?)')?\]")
                 atrrib_value = regex.search(tag).groups()
 
                 if atrrib_value[1] == None:

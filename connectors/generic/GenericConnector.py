@@ -115,7 +115,9 @@ class GenericConnector(GenericBase):
         self.section = section
         self.config = {}
         for item in self.config_object.items(self.section,
-                        vars={'date':datetime.now().strftime('%Y%m%d%H%M%S')}):
+                        vars={'date':datetime.now().strftime('%Y%m%d%H%M%S'),
+                              'connector_lowcase':self.name.lower(),
+                              'connector':self.name}):
             
             #this is for managaging config options like 
             #option.suboption = 11

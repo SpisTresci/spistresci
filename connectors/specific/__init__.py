@@ -9,6 +9,7 @@ from DobryEbook import DobryEbook
 from eClicto import eClicto
 from Empik import Empik
 from EscapeMagazine import EscapeMagazine
+from FantastykaPolska import FantastykaPolska
 from Koobe import Koobe
 from Legimi import Legimi
 from Nexto import Nexto

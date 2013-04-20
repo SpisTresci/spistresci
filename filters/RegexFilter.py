@@ -3,10 +3,6 @@ import tempfile
 import os
 import shutil
 from BaseFilters import BaseFilter
-try:
-  from collections import OrderedDict
-except ImportError:
-  from utils.compatibility import OrderedDict
 
 
 class RegexFilter(BaseFilter):
