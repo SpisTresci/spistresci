@@ -1,6 +1,6 @@
 import os
 from connectors.generic import *
-from xml.etree import ElementTree as et
+import lxml.etree as et
 from sqlwrapper import *
 
 Base = SqlWrapper.getBaseClass()

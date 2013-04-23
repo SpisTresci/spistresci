@@ -1,5 +1,5 @@
 from connectors.generic import XMLConnector
-from xml.etree import ElementTree as et
+import lxml.etree as et
 from connectors.generic import *
 import os
 

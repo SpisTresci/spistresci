@@ -2,7 +2,7 @@ import nose
 from nose.tools import *
 from utils import NoseUtils
 from connectors import Tools
-from xml.etree import ElementTree as et
+import lxml.etree as et
 from connectors.generic import GenericConnector
 from connectors.specific import *
 import os

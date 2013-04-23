@@ -1,5 +1,5 @@
 from connectors.generic import *
-from xml.etree import ElementTree as et
+import lxml.etree as et
 import os
 import sys
 from sqlwrapper import *

@@ -1,5 +1,5 @@
 from connectors.generic import XMLConnector
-from xml.etree import ElementTree as et
+import lxml.etree as et
 import os
 
 #TODO: what to do with more than one elements with the same tagname?
