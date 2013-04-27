@@ -2,4 +2,3 @@ backup
 *.pyc
 *.swp
 .build
-.static

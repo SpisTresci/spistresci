@@ -41,7 +41,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'SpisTresci - backend'
-copyright = u'2013, Krzysztof Szumny, Magdalena Szumna, Piotr Zawiślak'
+copyright = u'SpisTreści.pl Krzysztof Szumny, Magdalena Szumna, Piotr Zawiślak 2013'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -113,7 +113,7 @@ html_theme = 'default'
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
-#html_logo = None
+html_logo = '.static/Logo_ST.png'
 
 # The name of an image file (within the static path) to use as favicon of the
 # docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
@@ -187,7 +187,7 @@ latex_elements = {
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
   ('index', 'SpisTresci-backend.tex', u'SpisTresci - backend Documentation',
-   u'Krzysztof Szumny, Magdalena Szumna, Piotr Zawiślak', 'manual'),
+   u'SpisTreści.pl Krzysztof Szumny, Magdalena Szumna, Piotr Zawiślak', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -217,7 +217,7 @@ latex_documents = [
 # (source start file, name, description, authors, manual section).
 man_pages = [
     ('index', 'spistresci-backend', u'SpisTresci - backend Documentation',
-     [u'Krzysztof Szumny, Magdalena Szumna, Piotr Zawiślak'], 1)
+     [u'SpisTreści.pl Krzysztof Szumny, Magdalena Szumna, Piotr Zawiślak'], 1)
 ]
 
 # If true, show URL addresses after external links.
@@ -231,7 +231,7 @@ man_pages = [
 #  dir menu entry, description, category)
 texinfo_documents = [
   ('index', 'SpisTresci-backend', u'SpisTresci - backend Documentation',
-   u'Krzysztof Szumny, Magdalena Szumna, Piotr Zawiślak', 'SpisTresci-backend', 'One line description of project.',
+   u'SpisTreści.pl Krzysztof Szumny, Magdalena Szumna, Piotr Zawiślak', 'SpisTresci-backend', 'Wyszukiwarka SpisTreści.pl',
    'Miscellaneous'),
 ]
 
@@ -252,9 +252,9 @@ texinfo_documents = [
 
 # Bibliographic Dublin Core info.
 epub_title = u'SpisTresci - backend'
-epub_author = u'Krzysztof Szumny, Magdalena Szumna, Piotr Zawiślak'
-epub_publisher = u'Krzysztof Szumny, Magdalena Szumna, Piotr Zawiślak'
-epub_copyright = u'2013, Krzysztof Szumny, Magdalena Szumna, Piotr Zawiślak'
+epub_author = u'SpisTreści.pl Krzysztof Szumny, Magdalena Szumna, Piotr Zawiślak'
+epub_publisher = u'SpisTreści.pl Krzysztof Szumny, Magdalena Szumna, Piotr Zawiślak'
+epub_copyright = u'SpisTreści.pl Krzysztof Szumny, Magdalena Szumna, Piotr Zawiślak 2013'
 
 # The language of the text. It defaults to the language option
 # or en if the language is not set.
