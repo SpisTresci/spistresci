@@ -17,21 +17,15 @@ class TestSpecificConnectors():
     def tearDown(self):
         pass
 
-    def weHaveToGoDeeper(self, root, depth):
-        for i in range(int(depth)):
-            root=root[0]
-        return root
-
     @nottest
     def _test_dict(self, connector, xml, dicts, assert_lines):
         f = open(dicts, 'r')
         root = et.parse(xml).getroot()
 
         lines = f.readlines()
-        offers = self.weHaveToGoDeeper(root, connector.config.get('depth',0))
-        skip_offers = connector.config.get('skip_offers',0)
-        if skip_offers:
-            offers = offers[int(skip_offers):]
+        offers = connector.weHaveToGoDeeper(root, connector.depth)
+        if connector.skip_offers:
+            offers = offers[connector.skip_offers:]
 
         eq_(len(lines), assert_lines)
         eq_(len(offers), assert_lines)

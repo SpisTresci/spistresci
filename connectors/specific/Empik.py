@@ -18,22 +18,6 @@ class Empik(XMLConnector):
         './availability':('availability', ''),    #ok
     }
 
-
-    def parse(self):
-        filename = os.path.join(self.backup_dir, self.filename)
-        products = list(et.parse(filename).getroot())
-        if self.limit_books:
-            products = products[:self.limit_books]
-        for book in products:
-            dic = self.makeDict(book)
-            self.validate(dic)
-            #self.measureLenghtDict(dic)
-            self.add_record(dic)
-
-        #print self.max_len
-        #for key in self.max_len_entry.keys():
-        #    print key + ": " + unicode(self.max_len_entry[key])
-
 Base = SqlWrapper.getBaseClass()
 
 class EmpikBook(GenericBook, Base):

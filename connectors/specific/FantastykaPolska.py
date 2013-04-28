@@ -7,6 +7,9 @@ Base = SqlWrapper.getBaseClass()
 
 class FantastykaPolska(XMLConnector):
 
+    depth = 1
+    skip_offers = 4
+
     author_class_name='field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix'
     notes_class_name='field field-name-field-uwagi field-type-text field-label-inline inline'
     category_class_name='field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix'
@@ -21,22 +24,6 @@ class FantastykaPolska(XMLConnector):
         "./description/div[@class='%s']/ul/li/a"%category_class_name:('category', ''),
         "./description/div[@class='%s']/ul/li/a"%genre_class_name:('genre', ''),
     }
-
-    def parse(self):
-        filename = os.path.join(self.backup_dir, self.filename)
-        root = et.parse(filename).getroot()
-        channel = root[0]
-        items= list(channel)
-        if self.limit_books:
-            items = items[:self.limit_books]
-        for book in items:
-            if book.tag != 'item':
-                continue
-            dic = self.makeDict(book)
-            self.validate(dic)
-            self.add_record(dic)
-
-#{'category': 11, 'isbn': 0, 'title': 44, 'url': 50, 'notes': 22, 'authors': 2, 'genre': 29, 'external_id': 3, 'price': 1}
 
 class FantastykaPolskaBook(GenericBook, Base):
     id = Column(Integer, primary_key=True)

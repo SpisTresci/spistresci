@@ -17,24 +17,9 @@ class WolneEbooki(XMLConnector):
         "./okladka":('cover', ''),
     }
 
-
-    def parse(self):
-        filename = os.path.join(self.backup_dir, self.filename)
-        root = et.parse(filename).getroot()
-        offers = list(root)
-        if self.limit_books:
-            offers = offers[:self.limit_books]
-        for book in offers:
-            dic = self.makeDict(book)
-            self.create_id_from_url(dic)
-            self.validate(dic)
-            #self.measureLenghtDict(dic)
-            self.add_record(dic)
-
-        #print self.max_len
-        #for key in self.max_len_entry.keys():
-        #    print key+": "+ unicode(self.max_len_entry[key])
-
+    def validate(self, dic):
+        self.create_id_from_url(dic)
+        super(WolneEbooki, self).validate(dic)
 
     def create_id_from_url(self, dic):
         dic['external_id'] = int(dic['url'].split('/')[-1])
@@ -47,10 +32,6 @@ class WolneEbookiBook(GenericBook, Base):
     format = Column(Unicode(32))         #15
     url = Column(Unicode(64))            #35
     cover = Column(Unicode(64))          #38
-
-
-
-
 
 class WolneEbookiBookDescription(GenericBookDescription, Base):
     pass

@@ -8,6 +8,7 @@ Base = SqlWrapper.getBaseClass()
 
 class Latarnik(Ceneo):
 
+    depth=0
     #dict of xml_tag -> db_column_name translations
     xml_tag_dict = {
         ".[@id]":('external_id', ''),
@@ -46,29 +47,6 @@ class Latarnik(Ceneo):
         for i in range(0, len(header_of_desc), 2):
             if name + ":" in header_of_desc[i] and i <= len(header_of_desc) - 1 :
                 dic[tag] = header_of_desc[i + 1]
-
-
-    def parse(self):
-        filename = os.path.join(self.backup_dir, self.filename)
-        root = et.parse(filename).getroot()
-        group_books = root
-        offers = list(group_books)
-        if self.limit_books:
-            offers = offers[:self.limit_books]
-        for book in offers:
-            dic = self.makeDict(book)
-            self.validate(dic)
-            #self.measureLenghtDict(dic)
-            self.add_record(dic)
-
-        #print self.max_len
-        #for key in self.max_len_entry.keys():
-        #    print key + ": " + unicode(self.max_len_entry[key])
-
-
-#{'publisher_code': 17, 'set': 1, 'isbn': 13, 'description': 4336, 'weight': 5, 'price': 4,
-#'authors': 38, 'availability': 2, 'category': 22, 'publisher': 33, 'form': 7, 'title': 72, 'url': 104,
-# 'external_id': 3, 'cover': 125, 'stack': 1, 'type': 30}
 
 
 class LatarnikBook(CeneoBook, Base):

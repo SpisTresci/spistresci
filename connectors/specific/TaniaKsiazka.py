@@ -25,24 +25,6 @@ class TaniaKsiazka(XMLConnector):
         "./atribute[@Name='ISBN']":('isbn', ''),
        }
 
-
-    def parse(self):
-        filename = os.path.join(self.backup_dir, self.filename)
-        root = et.parse(filename).getroot()
-        offers = list(root)
-        if self.limit_books:
-            offers = offers[:self.limit_books]
-        for book in offers:
-            dic = self.makeDict(book)
-            print dic
-            self.validate(dic)
-            #self.measureLenghtDict(dic)
-            self.add_record(dic)
-
-        #print self.max_len
-        #for key in self.max_len_entry.keys():
-        #    print key + ": " + unicode(self.max_len_entry[key])
-
 Base = SqlWrapper.getBaseClass()
 
 class TaniaKsiazkaBook(GenericBook, Base):

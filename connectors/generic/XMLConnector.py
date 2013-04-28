@@ -1,11 +1,14 @@
 from connectors.generic import GenericConnector
 from utils import Enum
+from xml.etree import ElementTree as et
 import os
 import re
 
 class XMLConnector(GenericConnector):
 
     xml_tag_dict = {}
+    depth = 0
+    skip_offers = 0
 
     def __init__(self, name=None, limit_books=0):
         GenericConnector.__init__(self, name=name)
@@ -84,6 +87,27 @@ class XMLConnector(GenericConnector):
 
 
         return book_dict
+
+    def weHaveToGoDeeper(self, root, depth):
+        for i in range(int(depth)):
+            root=root[0]
+        return root
+
+    def parse(self):
+        dirname = self.backup_dir if self.unpack_dir == '' else self.unpack_dir
+        filename = self.filename if self.unpack_file == '' else self.unpack_file
+
+        filename = os.path.join(dirname, filename)
+        root = et.parse(filename).getroot()
+        offers = list(self.weHaveToGoDeeper(root, self.depth))
+        if self.skip_offers:
+            offers = offers[self.skip_offers:]
+        if self.limit_books:
+            offers = offers[:self.limit_books]
+        for offer in offers:
+            dic = self.makeDict(offer)
+            self.validate(dic)
+            self.add_record(dic)
 
     def getDictFromElem(self, xml_tag_dict, new_tag, elem, tag, book_dict):
         if elem != None:

@@ -5,6 +5,7 @@ from sqlwrapper import *
 
 class BezKartek(XMLConnector):
 
+    depth = 1
     #dict of xml_tag -> db_column_name translations
     xml_tag_dict = {
         './isbn':('isbn', ''),
@@ -24,25 +25,6 @@ class BezKartek(XMLConnector):
         './securityType':('security', ''),
         './audioTime':('audio_time', ''),
     }
-
-
-    def parse(self):
-        filename = os.path.join(self.unpack_dir, self.unpack_file)
-        root = et.parse(filename).getroot()
-        offers = list(root[0])
-        if self.limit_books:
-            offers = offers[:self.limit_books]
-        for book in offers:
-            dic = self.make_dict(book)
-            self.validate(dic)
-            #print dic
-            #self.measureLenghtDict(dic)
-            self.add_record(dic)
-
-        #print self.max_len
-        #for key in self.max_len_entry.keys():
-        #    print key+": "+ unicode(self.max_len_entry[key])
-
 
 Base = SqlWrapper.getBaseClass()
 

@@ -7,6 +7,7 @@ Base = SqlWrapper.getBaseClass()
 
 class Koobe(XMLConnector):
 
+    depth = 1
     #dict of xml_tag -> db_column_name translations
     xml_tag_dict = {
         "./name":('title', ''),
@@ -22,24 +23,6 @@ class Koobe(XMLConnector):
         "./property[@name='format']":('format', ''),
         "./property[@name='protection']":('protection', ''),
     }
-
-    def parse(self):
-        filename = os.path.join(self.backup_dir, self.filename)
-        root = et.parse(filename).getroot()
-        offers = list(root[0])
-        if self.limit_books:
-            offers = offers[:self.limit_books]
-        for book in offers:
-            dic = self.makeDict(book)
-            #print dic
-            self.validate(dic)
-            #self.measureLenghtDict(dic)
-            self.add_record(dic)
-
-        #print self.max_len
-        #for key in self.max_len_entry.keys():
-        #    print key + ": " + unicode(self.max_len_entry[key])
-
 
 class KoobeBook(GenericBook, Base):
     id = Column(Integer, primary_key=True)

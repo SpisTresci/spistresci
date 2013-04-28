@@ -26,24 +26,9 @@ class RW2010(XMLConnector):
         if result != 'Ok.':
             raise Exception('RW2010 init, macro %s returned %s' % (self.macro_url, result))
 
-    def parse(self):
-        filename = os.path.join(self.backup_dir, self.filename)
-        root = et.parse(filename).getroot()
-        offers = list(root)
-        if self.limit_books:
-            offers = offers[:self.limit_books]
-        for book in offers:
-            dic = self.makeDict(book)
-            #print dic
-            self.create_id_from_url(dic)
-            self.validate(dic)
-            #print dic
-            #self.measureLenghtDict(dic)
-            self.add_record(dic)
-
-        #print self.max_len
-        #for key in self.max_len_entry.keys():
-        #    print key+": "+ unicode(self.max_len_entry[key])
+    def validate(self, dic):
+        self.create_id_from_url(dic)
+        super(RW2010, self).validate(dic)
 
     def create_id_from_url(self, dic):
         url = dic['url']

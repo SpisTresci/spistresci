@@ -46,19 +46,7 @@ class Nexto(XMLConnector):
         if self.backup_dir and not os.path.exists(self.backup_dir):
             os.makedirs(self.backup_dir)
         filename = os.path.join(self.backup_dir, self.filename)
-
         open(filename, "wb").write(content)
-
-    def parse(self):
-        filename = os.path.join(self.backup_dir, self.filename)
-        root = et.parse(filename).getroot()
-        offers = list(root)
-        if self.limit_books:
-            offers = offers[:self.limit_books]
-        for book in offers:
-            dic = self.makeDict(book)
-            self.validate(dic)
-            #self.add_record(dic)
 
 
 Base = SqlWrapper.getBaseClass()

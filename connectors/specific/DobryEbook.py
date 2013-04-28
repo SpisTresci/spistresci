@@ -21,23 +21,9 @@ class DobryEbook(XMLConnector):
         "./duze_zdjecie":('cover', ''),
     }
 
-
-    def parse(self):
-        filename = os.path.join(self.backup_dir, self.filename)
-        root = et.parse(filename).getroot()
-        offers = list(root)
-        if self.limit_books:
-            offers = offers[:self.limit_books]
-        for book in offers:
-            dic = self.makeDict(book)
-            self.create_id_from_url(dic)
-            self.validate(dic)
-            #self.measureLenghtDict(dic)
-            self.add_record(dic)
-
-        #print self.max_len
-        #for key in self.max_len_entry.keys():
-        #    print key + ": " + unicode(self.max_len_entry[key])
+    def validate(self, dic):
+        self.create_id_from_url(dic)
+        super(DobryEbook, self).validate(dic)
 
     def create_id_from_url(self, dic):
         dic['external_id'] = int(dic['url'].split("-")[-1].split(".")[0])
