@@ -7,10 +7,10 @@ class Woblink(Ceneo):
 
     #dict of xml_tag -> db_column_name translations
     xml_tag_dict = {
-        ".[@id]":('external_id', ''),
-        ".[@price]":('price', 0),
-        ".[@url]":('url', ''),
-        ".[@avail]":('availability', ''),
+        "@id":('external_id', ''),
+        "@price":('price', 0),
+        "@url":('url', ''),
+        "@avail":('availability', ''),
         "./cat":('category', ''),
         "./name":('title', ''),
         "./imgs/main[@url]":('cover', ''),

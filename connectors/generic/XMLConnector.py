@@ -1,6 +1,6 @@
 from connectors.generic import GenericConnector
 from utils import Enum
-from xml.etree import ElementTree as et
+import lxml.etree as et
 import os
 import re
 
@@ -71,7 +71,8 @@ class XMLConnector(GenericConnector):
             regex = re.compile("([^{]*)({.*})?")
             recurency = regex.search(tag).groups()
             ntag = recurency[0]
-            elems = book.findall(ntag.replace("/", "/" + self.xmls_namespace))
+
+            elems = book.xpath(ntag, namespaces=self.xmls_namespace)
             for elem in elems:
                 if recurency[1] != None:
                     self.getDictFromElem(eval(recurency[1]), xml_tag_dict[tag][0], elem, tag, book_dict)
@@ -107,7 +108,12 @@ class XMLConnector(GenericConnector):
         for offer in offers:
             dic = self.makeDict(offer)
             self.validate(dic)
+            #self.measureLenghtDict(dic)
             self.add_record(dic)
+
+        #print self.max_len
+        #for key in self.max_len_entry.keys():
+        #    print key + ": " + unicode(self.max_len_entry[key])
 
     def getDictFromElem(self, xml_tag_dict, new_tag, elem, tag, book_dict):
         if elem != None:
@@ -124,11 +130,13 @@ class XMLConnector(GenericConnector):
 
             if "@" in tag:
                 # from //path/tag[@attrib='value'] extract (u'attrib', u'value'), and from //path/tag[@attrib] extract (u'attrib', None)
-                regex = re.compile("\[@(\w+)(?:='(.+?)')?\]")
+                regex = re.compile("\[?@(\w+)(?:='(.+?)')?\]?")
                 atrrib_value = regex.search(tag).groups()
 
-                if atrrib_value[1] == None:
+                if atrrib_value[1] == None and isinstance(elem, et._Element):
                     book_dict[new_tag].append(unicode(elem.attrib.get(atrrib_value[0], (xml_tag_dict[tag])[1])))
+                elif atrrib_value[1] == None:
+                    book_dict[new_tag].append(unicode(elem))
                 else:
                     book_dict[new_tag].append(unicode(elem.text if elem.text != "" and elem.text != None else (xml_tag_dict[tag])[1]))
             else:

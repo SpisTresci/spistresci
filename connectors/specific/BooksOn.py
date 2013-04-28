@@ -6,21 +6,21 @@ Base = SqlWrapper.getBaseClass()
 
 class BooksOn(Ceneo):
     
-    xmls_namespace ="{http://www.w3.org/2001/XMLSchema-instance}" 
+    xmls_namespace = {"n" : "http://www.w3.org/2001/XMLSchema-instance"} 
     
     #dict of xml_tag -> db_column_name translations
     xml_tag_dict= {
-        ".[@id]":('external_id',''),
-        ".[@price]":('price', 0),
-        ".[@url]":('url',''),
-        ".[@avail]":('availability',''),
-        ".[@set]":('set', 0), #???
-        ".[@baset]":('baset', 0), #???
-        "./cat":('category',''),
-        "./name":('title',''),
-        "./imgs/main[@url]":('cover',''),
-        "./desc":('description',''),
-        "./attrs/a[@name='Autor']":('authors',''),
+        "@id":('external_id',''),
+        "@price":('price', 0),
+        "@url":('url',''),
+        "@avail":('availability',''),
+        "@set":('set', 0), #???
+        "@baset":('baset', 0), #???
+        "./n:cat":('category',''),
+        "./n:name":('title',''),
+        "./n:imgs/n:main[@url]":('cover',''),
+        "./n:desc":('description',''),
+        "./n:attrs/n:a[@name='Autor']":('authors',''),
     }
 
 class BooksOnBook(CeneoBook, Base):

@@ -7,9 +7,9 @@ class CzeskieKlimaty(Ceneo):
 
     #dict of xml_tag -> db_column_name translations
     xml_tag_dict = {
-        ".[@id]":('external_id', ''),
-        ".[@price]":('price', 0),
-        ".[@url]":('url', ''),
+        "@id":('external_id', ''),
+        "@price":('price', 0),
+        "@url":('url', ''),
 
         "./name":('title', ''),
         "./desc":('description', ''),

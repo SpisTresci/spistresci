@@ -9,8 +9,8 @@ class TaniaKsiazka(XMLConnector):
 
     #dict of xml_tag -> db_column_name translations
     xml_tag_dict = {
-        ".[@awId]":('awId', ''),
-        ".[@programName]":('programName', ''),
+        "@awId":('awId', ''),
+        "@programName":('programName', ''),
         './pId':('external_id', None),
         './name':('title', ''),
         './desc':('description', ''),

@@ -7,12 +7,12 @@ class eClicto(Ceneo):
 
     #dict of xml_tag -> db_column_name translations
     xml_tag_dict = {
-        ".[@id]":('external_id', ''),
-        ".[@url]":('url', ''),
-        ".[@price]":('price', 0),
-        ".[@set]":('set', 0), #???
-        ".[@avail]":('availability', ''),
-        ".[@weight]":('weight', '0.00'),
+        "@id":('external_id', ''),
+        "@url":('url', ''),
+        "@price":('price', 0),
+        "@set":('set', 0), #???
+        "@avail":('availability', ''),
+        "@weight":('weight', '0.00'),
 
         "./cat":('category', ''),
         "./name":('title', ''),

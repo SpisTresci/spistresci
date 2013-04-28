@@ -11,13 +11,13 @@ class Latarnik(Ceneo):
     depth=0
     #dict of xml_tag -> db_column_name translations
     xml_tag_dict = {
-        ".[@id]":('external_id', ''),
-        ".[@url]":('url', ''),
-        ".[@price]":('price', 0),
-        ".[@avail]":('availability', ''),
-        ".[@set]":('set', 0), #???
-        ".[@stack]":('stack', 0), #???
-        ".[@weight]":('weight', '0.00'),
+        "@id":('external_id', ''),
+        "@url":('url', ''),
+        "@price":('price', 0),
+        "@avail":('availability', ''),
+        "@set":('set', 0), #???
+        "@stack":('stack', 0), #???
+        "@weight":('weight', '0.00'),
 
         "./cat":('category', ''),
         "./name":('title', ''),
