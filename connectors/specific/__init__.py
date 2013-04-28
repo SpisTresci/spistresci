@@ -11,6 +11,7 @@ from Empik import Empik
 from EscapeMagazine import EscapeMagazine
 from FantastykaPolska import FantastykaPolska
 from Koobe import Koobe
+from Latarnik import Latarnik
 from Legimi import Legimi
 from Nexto import Nexto
 from RW2010 import RW2010
