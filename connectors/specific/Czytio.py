@@ -8,35 +8,16 @@ class Czytio(XMLConnector):
 
     #dict of xml_tag -> db_column_name translations
     xml_tag_dict = {
-        'id':('external_id', None),
-        'title':('title', ''),
-        'url':('url', ''),
-        'authors':('authors', ''),
-        'format':('format', ''),
-        'isbn':('isbn', ''),
-        'cover':('cover', ''),
-        'price':('price', 0),
-        'size':('size', 0),
+        './id':('external_id', None),
+        './title':('title', ''),
+        './url':('url', ''),
+        './authors':('authors', ''),
+        './format':('format', ''),
+        './isbn':('isbn', ''),
+        './cover':('cover', ''),
+        './price':('price', 0),
+        './size':('size', 0),
     }
-
-    def parse(self):
-        filename = os.path.join(self.backup_dir, self.filename)
-        root = et.parse(filename).getroot()
-        offers = list(root)
-        if self.limit_books:
-            offers = offers[:self.limit_books]
-        for book in offers:
-            dic = self.make_dict(book)
-            #print dic
-            self.validate(dic)
-            #print dic
-            #self.measureLenghtDict(dic)
-            self.add_record(dic)
-
-        #print self.max_len
-        #for key in self.max_len_entry.keys():
-        #    print key+": "+ unicode(self.max_len_entry[key])
-
 
 Base = SqlWrapper.getBaseClass()
 
