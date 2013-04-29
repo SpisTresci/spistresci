@@ -332,8 +332,12 @@ class GenericConnector(GenericBase):
         dic[price_tag_name] = unicode(price)
 
     def validateAuthors(self, dic, id, title, tag_name='authors'):
-        if dic.get(tag_name) != None:
-            dic[tag_name] = [x.strip() for x in re.split("[,;]", dic[tag_name])]
+        if dic.get(tag_name) != None and (isinstance(dic.get(tag_name), unicode) or isinstance(dic.get(tag_name), str)):
+            dic[tag_name] = [unicode(x.strip()) for x in re.split("[,;]", dic[tag_name])]
+        elif dic.get(tag_name) != None and isinstance(dic.get(tag_name), list):
+            for x in dic[tag_name]:
+                print "\n\n\n\n\n\n" + x + "\n\n\n\n\n\n"
+            dic[tag_name] = [unicode(x) for x in dic[tag_name]]
 
     def validateSize(self, dic, id, title):
         pass
