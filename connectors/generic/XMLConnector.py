@@ -1,11 +1,14 @@
 from connectors.generic import GenericConnector
 from utils import Enum
+import lxml.etree as et
 import os
 import re
 
 class XMLConnector(GenericConnector):
 
     xml_tag_dict = {}
+    depth = 0
+    skip_offers = 0
 
     def __init__(self, name=None, limit_books=0):
         GenericConnector.__init__(self, name=name)
@@ -68,7 +71,8 @@ class XMLConnector(GenericConnector):
             regex = re.compile("([^{]*)({.*})?")
             recurency = regex.search(tag).groups()
             ntag = recurency[0]
-            elems = book.findall(ntag.replace("/", "/" + self.xmls_namespace))
+
+            elems = book.xpath(ntag, namespaces=self.xmls_namespace)
             for elem in elems:
                 if recurency[1] != None:
                     self.getDictFromElem(eval(recurency[1]), xml_tag_dict[tag][0], elem, tag, book_dict)
@@ -78,12 +82,38 @@ class XMLConnector(GenericConnector):
             t = xml_tag_dict[tag][0]
 
             if book_dict.get(t) == None:
-                book_dict[t] = unicode((xml_tag_dict[tag])[1]) if (xml_tag_dict[tag])[1] != None else (xml_tag_dict[tag])[1];
+                book_dict[t] = unicode((xml_tag_dict[tag])[1])
             elif len(book_dict[t]) == 1:
                 book_dict[t] = book_dict[t][0]
 
 
         return book_dict
+
+    def weHaveToGoDeeper(self, root, depth):
+        for i in range(int(depth)):
+            root=root[0]
+        return root
+
+    def parse(self):
+        dirname = self.backup_dir if self.unpack_dir == '' else self.unpack_dir
+        filename = self.filename if self.unpack_file == '' else self.unpack_file
+
+        filename = os.path.join(dirname, filename)
+        root = et.parse(filename).getroot()
+        offers = list(self.weHaveToGoDeeper(root, self.depth))
+        if self.skip_offers:
+            offers = offers[self.skip_offers:]
+        if self.limit_books:
+            offers = offers[:self.limit_books]
+        for offer in offers:
+            dic = self.makeDict(offer)
+            self.validate(dic)
+            #self.measureLenghtDict(dic)
+            self.add_record(dic)
+
+        #print self.max_len
+        #for key in self.max_len_entry.keys():
+        #    print key + ": " + unicode(self.max_len_entry[key])
 
     def getDictFromElem(self, xml_tag_dict, new_tag, elem, tag, book_dict):
         if elem != None:
@@ -100,11 +130,13 @@ class XMLConnector(GenericConnector):
 
             if "@" in tag:
                 # from //path/tag[@attrib='value'] extract (u'attrib', u'value'), and from //path/tag[@attrib] extract (u'attrib', None)
-                regex = re.compile("\[@(\w+)(?:='(.+?)')?\]")
+                regex = re.compile("\[?@(\w+)(?:='(.+?)')?\]?")
                 atrrib_value = regex.search(tag).groups()
 
-                if atrrib_value[1] == None:
+                if atrrib_value[1] == None and isinstance(elem, et._Element):
                     book_dict[new_tag].append(unicode(elem.attrib.get(atrrib_value[0], (xml_tag_dict[tag])[1])))
+                elif atrrib_value[1] == None:
+                    book_dict[new_tag].append(unicode(elem))
                 else:
                     book_dict[new_tag].append(unicode(elem.text if elem.text != "" and elem.text != None else (xml_tag_dict[tag])[1]))
             else:
