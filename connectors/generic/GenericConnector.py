@@ -138,7 +138,6 @@ class GenericConnector(GenericBase):
         self.backup_archive = self.ArchiveType.int(self.config.get('backup_archive', 'NONE'))
         self.unpack_file = self.config.get('unpack_file', '')
         self.unpack_dir = self.config.get('unpack_dir', '')
-        self.archive_file = self.config.get('archive_file', '')
         self.remove_unpacked = int(self.config.get('remove_unpacked', 1))
         self.log_config = self.config.get('log_config', 'conf/log.connectors.ini')
         self.logger = logger_instance(self.log_config)
