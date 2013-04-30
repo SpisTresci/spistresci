@@ -2,3 +2,6 @@ backup
 *.pyc
 *.swp
 .build
+*.*~
+PyZ3950_parsetab.py
+*.py.swo
