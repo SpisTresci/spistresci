@@ -82,7 +82,7 @@ class XMLConnector(GenericConnector):
             t = xml_tag_dict[tag][0]
 
             if book_dict.get(t) == None:
-                book_dict[t] = unicode((xml_tag_dict[tag])[1])
+                book_dict[t] = unicode((xml_tag_dict[tag])[1]) if (xml_tag_dict[tag])[1] != None else (xml_tag_dict[tag])[1];
             elif len(book_dict[t]) == 1:
                 book_dict[t] = book_dict[t][0]
 
