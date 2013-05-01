@@ -49,11 +49,11 @@ class XMLConnector(GenericConnector):
             if len(tag_split) > 1:
                 sub_elem = book
                 for spl in tag_split:
-                     sub_elem = sub_elem.find(spl)
-                     if sub_elem is None:
-                         break
+                    sub_elem = sub_elem.find(spl)
+                    if sub_elem is None:
+                        break
                 if sub_elem is not None:
-                     sub_elem = unicode(sub_elem.text)
+                    sub_elem = unicode(sub_elem.text)
                 book_dict[ (self.xml_tag_dict[tag])[0] ] = sub_elem
             else:
                 book_dict[ (self.xml_tag_dict[tag])[0] ] = unicode(book.findtext(tag, (self.xml_tag_dict[tag])[1]))
@@ -91,7 +91,7 @@ class XMLConnector(GenericConnector):
 
     def weHaveToGoDeeper(self, root, depth):
         for i in range(int(depth)):
-            root=root[0]
+            root = root[0]
         return root
 
     def parse(self):

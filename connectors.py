@@ -24,7 +24,7 @@ def main():
 
     base_name = os.path.basename(sys.argv[0])
     app_name = os.path.splitext(base_name)[0]
-    conf_name  = '%s.ini' % app_name
+    conf_name = '%s.ini' % app_name
     GenericConnector.config_file = os.path.join('conf', conf_name)
     GenericConnector.read_config()
     Logger = logger_instance(GenericConnector.config_object.get('DEFAULT', 'log_config'))
@@ -44,7 +44,7 @@ def main():
         try:
             choose_your_destiny(app_name)(connector)
         except Exception:
-            Logger.exception('Error executing %s, in connector %s' % (app_name, connector.name) )
+            Logger.exception('Error executing %s, in connector %s' % (app_name, connector.name))
     Logger.debug('Execution finished')
 
 if __name__ == '__main__':

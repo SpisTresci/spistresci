@@ -5,7 +5,8 @@ import os
 import re
 
 class Ceneo(XMLConnector):
-    depth=1
+    depth = 1
+    pass
 
 class CeneoBook(GenericBook):
     pass
