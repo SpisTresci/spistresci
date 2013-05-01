@@ -8,7 +8,6 @@ from connectors import Tools
 from connectors.generic import *
 from sqlwrapper import *
 
-
 def run_connectors(connector):
     connector.fetchData()
     connector.applyFilters()

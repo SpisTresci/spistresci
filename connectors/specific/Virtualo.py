@@ -1,65 +1,65 @@
-from connectors.generic import XMLConnector
-
+from connectors.generic import *
+from sqlwrapper import *
 import os
-import re
-from xml.dom import minidom
+
 
 class Virtualo(XMLConnector):
 
-    def __init__(self, name=None):
-        XMLConnector.__init__(self, name=name)
+    depth=0
+    #dict of xml_tag -> db_column_name translations
+    xml_tag_dict = {
+        './coverId' : ('external_id', ''),
+        './title' : ('title', ''),
+        './format' : ('format', ''),
+        './security' : ('protection', ''),
+        './price' : ('price', 0),
+        './isbn' : ('isbn', ''),
+        './authors' : ('authors', ''),
+        './url' : ('url', ''),
+        './description' : ('description', ''),
+        #not added to database
+        './descriptionShort' : ('descriptionShort', ''),
+        './rating' : ('rating', ''),
+     }
 
-    def parse(self):
+    def validate(self, dic):
+        super(Virtualo, self).validate(dic)
+        self.validateRating(dic)
 
-        i = 1
-
-        while True:
-            filename = 'VirtualoProducts' + str(i) + '.xml'
-            filename = os.path.join(self.unpack_dir, filename)
-            if not os.path.exists(filename):
-                break
-
-            DOMTree = minidom.parse(filename)
-
-            products = DOMTree.childNodes.item(0).childNodes
-
-            self.logger.debug('Parsing %s' % os.path.split(filename)[1])
-
-            for product in products:
-                title = self.getTagValue(product, 'title')
-                format = self.getTagValue(product, 'format')
-                security = self.getTagValue(product, 'security', 'brak')
-                price = self.getTagValue(product, 'price')
-                isbn = self.getTagValue(product, 'isbn')
-                coverId = self.getTagValue(product, 'coverId')
-                authors = self.getTagValue(product, 'authors')
-                #print authors
-                #splitObj = re.split(', ', authors)
-                #if len(splitObj) != 1:
-                #    print authors
-
-                url = self.getTagValue(product, 'url')
-                description = self.getTagExpliciteValue(product, 'description')
-                rating = self.getTagValue(product, 'rating')
-
-                matchObj = re.match(r'.*/i(\d*)/', url)
-                id = int(matchObj.group(1))
+    def validateRating(self, dic, rating_tag='rating'):
+        rating = dic.get(rating_tag, '0')
+        rating_normalized = 0
+        try:
+            #normalize ratings 1-5 -> %
+            rating_normalized = str(int(20 * float(rating.replace(',', '.'))))
+        except ValueError:
+            self.erratum_logger.warning('Entry has invalid rating. Connector: %s, id: %s, title: %s' % (self.name, dic.get('external_id'), dic.get('title')))
+        finally:
+            dic[rating_tag] = rating_normalized
 
 
-                #format_tag = product.getElementsByTagName('format')[0]
-                #format = ""
-                #if format_tag.firstChild != None:
-                #      format = format_tag.firstChild.nodeValue
+Base = SqlWrapper.getBaseClass()
+
+class VirtualoBook(GenericBook, Base):
+    id = Column(Integer, primary_key=True)
+    title = Column(Unicode(256))        #174
+    format = Column(Unicode(8))         #6
+    protection = Column(Unicode(8))       #3
+    price = Column(Integer)             #*0,01PLN
+    isbn = Column(Unicode(13))          #0
+    url = Column(Unicode(128))          #89
+    rating = Column(Integer)            #0-100
 
 
-                #format = product.getElementsByTagName('format')[0].firstChild.nodeValue
+class VirtualoBookDescription(GenericBookDescription, Base):
+    pass
 
-                #security = product.getElementsByTagName('security')[0].firstChild.nodeValue
+class VirtualoAuthor(GenericAuthor, Base):
+    pass
 
-            self.logger.debug('File %s parsed' % os.path.split(filename)[1])
-            self.logger.debug('Virtualo, read %d products' % len(products))
-            i = i + 1
+class VirtualoBookPrice(GenericBookPrice, Base):
+    pass
 
-        pass
-
+class VirtualoBooksAuthors(GenericBooksAuthors, Base):
+    pass
 
