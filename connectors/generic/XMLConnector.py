@@ -129,7 +129,7 @@ class XMLConnector(GenericConnector):
             if book_dict.get(new_tag) == None:
                 book_dict[new_tag] = []
 
-            if "@" in tag:
+            if "@" in tag.split('/')[-1]:
                 # from //path/tag[@attrib='value'] extract (u'attrib', u'value'), and from //path/tag[@attrib] extract (u'attrib', None)
                 regex = re.compile("\[?@(\w+)(?:='(.+?)')?\]?")
                 atrrib_value = regex.search(tag).groups()
