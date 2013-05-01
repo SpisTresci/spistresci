@@ -20,3 +20,6 @@ class TestSelkar(BaseDBTestFixture):
     def test_cant_apply_filters(self):
         self.connector.filters = 'a,b,c'
         self.connector.applyFilters()
+
+    def test_do_nothing(self):
+        pass

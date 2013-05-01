@@ -18,4 +18,5 @@ class TestBezKartek(BaseDBTestFixture):
     connector_class = BezKartek
 
 
-
+    def test_do_nothing_bezkartek(self):
+        pass
