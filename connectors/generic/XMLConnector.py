@@ -107,10 +107,14 @@ class XMLConnector(GenericConnector):
                     break
                 dic = self.makeDict(offer)
                 self.validate(dic)
+                #uncomment when creating connector
                 #self.measureLenghtDict(dic)
+                #print dic
                 self.add_record(dic)
             if book_number > self.limit_books:
                 break
+        #uncomment when creating connector
+        #print self.max_len
 
     def getDictFromElem(self, xml_tag_dict, new_tag, elem, tag, book_dict):
         if elem != None:

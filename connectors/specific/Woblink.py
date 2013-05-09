@@ -17,7 +17,7 @@ class Woblink(Ceneo):
         "./desc":('description', ''),
         "./attrs/a[@name='ISBN']":('isbn', ''),
         "./attrs/a[@name='Wydawnictwo']":('publisher', ''),
-        "./attrs/a[@name='Format']":('formats', ''),
+        "./attrs/a[@name='Format']":('format', ''),
     }
 
 class WoblinkBook(GenericBook, Base):
@@ -28,7 +28,7 @@ class WoblinkBook(GenericBook, Base):
     title = Column(Unicode(256))	#212
     url = Column(Unicode(64))		#59
     cover = Column(Unicode(256))	#250
-    formats = Column(Unicode(16))	#9
+    format = Column(Unicode(16))	#9
     external_id = Column(Integer)
     price = Column(Integer)
     availability = Column(Boolean)

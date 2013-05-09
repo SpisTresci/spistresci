@@ -10,6 +10,7 @@ from eClicto import eClicto
 from Empik import Empik
 from EscapeMagazine import EscapeMagazine
 from FantastykaPolska import FantastykaPolska
+from KodeksyWmp3 import KodeksyWmp3
 from Koobe import Koobe
 from Latarnik import Latarnik
 from Legimi import Legimi

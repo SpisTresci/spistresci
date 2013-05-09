@@ -50,8 +50,8 @@ class Helion(XMLConnector):
         'top':'top',
         'nosnik':'nosnik',
         'przedsprzedazDO':'advanced_booking',
-        'ebook_format':'ebook_format',
-        'ebook_formaty':'ebook_format_list'
+        'ebook_format':'format',
+        'ebook_formaty':'format_list'
     }
 
 
