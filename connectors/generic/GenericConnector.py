@@ -451,7 +451,7 @@ class GenericConnector(GenericBase):
         return c
 
     def get_(self, ClassName, param_name, d, session):
-        return session.query(ClassName).filter_by(**{param_name:d[param_name]}).first()
+        return (session.query(ClassName).filter_by(**{param_name:d[param_name]}).first()) if d.get(param_name) != None else None
 
 
     def add_record(self, d):
@@ -595,7 +595,11 @@ class GenericBookDescription(GenericBase):
 
 class GenericAuthor(GenericBase):
     id = Column(Integer, primary_key=True)
-    name = Column(Unicode(255), unique=True)
+    name = Column(Unicode(255))#, unique=True)
+    firstName = Column(Unicode(32))
+    middleName = Column(Unicode(32))
+    lastName = Column(Unicode(32))
+
 
     @declared_attr
     def __tablename__(cls):
@@ -612,7 +616,7 @@ class GenericAuthor(GenericBase):
 
     @classmethod
     def get_or_create(cls, author, session):
-        return GenericConnector.get_or_create_(cls, 'name', {'name':author}, session)
+        return GenericConnector.get_or_create_(cls, 'name', author, session)
 
     @staticmethod
     def getConcretizedClass(context):

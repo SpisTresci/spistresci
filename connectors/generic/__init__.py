@@ -9,3 +9,5 @@ from GenericConnector import GenericBooksISBNs
 from GenericConnector import GenericBase
 
 from XMLConnector import XMLConnector
+
+from ReferenceConnector import ReferenceConnector
