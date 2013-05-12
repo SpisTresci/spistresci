@@ -42,15 +42,3 @@ class TaniaKsiazkaBook(GenericBook, Base):
     brand = Column(Unicode(32))             #?
     awId = Column(Integer)                  #
 
-class TaniaKsiazkaBookDescription(GenericBookDescription, Base):
-    pass
-
-class TaniaKsiazkaAuthor(GenericAuthor, Base):
-    pass
-
-class TaniaKsiazkaBookPrice(GenericBookPrice, Base):
-    pass
-
-class TaniaKsiazkaBooksAuthors(GenericBooksAuthors, Base):
-    pass
-

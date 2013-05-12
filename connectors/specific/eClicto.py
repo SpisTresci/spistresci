@@ -1,4 +1,5 @@
-from connectors.common import *
+from connectors.common import Ceneo
+from connectors.generic import GenericBook
 from sqlwrapper import *
 
 Base = SqlWrapper.getBaseClass()
@@ -25,7 +26,7 @@ class eClicto(Ceneo):
         "./attrs/a[@name='Format']":('format', ''),
     }
 
-class eClictoBook(CeneoBook, Base):
+class eClictoBook(GenericBook, Base):
     id = Column(Integer, primary_key=True)
 
     price = Column(Integer)             #GROSZE!!!
@@ -39,16 +40,3 @@ class eClictoBook(CeneoBook, Base):
     title = Column(Unicode(256))        #26
     cover = Column(Unicode(64))         #55
     isbn = Column(Unicode(13))          #0
-
-class eClictoBookDescription(CeneoBookDescription, Base):
-    pass
-
-class eClictoAuthor(CeneoAuthor, Base):
-    pass
-
-class eClictoBookPrice(CeneoBookPrice, Base):
-    pass
-
-class eClictoBooksAuthors(CeneoBooksAuthors, Base):
-    pass
-

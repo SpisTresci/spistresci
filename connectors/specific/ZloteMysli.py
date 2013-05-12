@@ -1,4 +1,5 @@
-from connectors.common import *
+from connectors.common import Afiliant
+from connectors.generic import GenericBook
 from sqlwrapper import *
 
 Base = SqlWrapper.getBaseClass()
@@ -23,7 +24,7 @@ class ZloteMysli(Afiliant):
         'zm:productTypeId':('product_type_id', ''),
     }
 
-class ZloteMysliBook(AfiliantBook, Base):
+class ZloteMysliBook(GenericBook, Base):
 
     #external_id
     category = Column(Unicode(21))      #21
@@ -43,15 +44,3 @@ class ZloteMysliBook(AfiliantBook, Base):
     product_type_id = Column(Integer)
     object_format = Column(Unicode(2))  #2
     length = Column(Unicode(25))        #25
-
-class ZloteMysliBookDescription(AfiliantBookDescription, Base):
-    pass
-
-class ZloteMysliAuthor(AfiliantAuthor, Base):
-    pass
-
-class ZloteMysliBookPrice(AfiliantBookPrice, Base):
-    pass
-
-class ZloteMysliBooksAuthors(AfiliantBooksAuthors, Base):
-    pass

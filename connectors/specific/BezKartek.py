@@ -44,17 +44,3 @@ class BezKartekBook(GenericBook, Base):
     security = Column(Unicode(10))      #9
     lang_short = Column(Unicode(2))     #2
     lang_long = Column(Unicode(10))     #9
-
-
-class BezKartekBookDescription(GenericBookDescription, Base):
-    pass
-
-class BezKartekAuthor(GenericAuthor, Base):
-    pass
-
-class BezKartekBookPrice(GenericBookPrice, Base):
-    pass
-
-class BezKartekBooksAuthors(GenericBooksAuthors, Base):
-    pass
-

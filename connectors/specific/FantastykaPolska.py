@@ -35,17 +35,3 @@ class FantastykaPolskaBook(GenericBook, Base):
     notes = Column(Unicode(32))         #22
     genre = Column(Unicode(32))         #29
     external_id = Column(Integer)
-
-
-class FantastykaPolskaBookDescription(GenericBookDescription, Base):
-    pass
-
-class FantastykaPolskaAuthor(GenericAuthor, Base):
-    pass
-
-class FantastykaPolskaBookPrice(GenericBookPrice, Base):
-    pass
-
-class FantastykaPolskaBooksAuthors(GenericBooksAuthors, Base):
-    pass
-

@@ -1,4 +1,5 @@
-from connectors.common import *
+from connectors.common import Afiliant
+from connectors.generic import GenericBook
 from sqlwrapper import *
 
 Base = SqlWrapper.getBaseClass()
@@ -11,7 +12,7 @@ class Audioteka(Afiliant):
         title = dic.get('title')
         self.validateAuthors(dic, id, title, 'lectors')
 
-class AudiotekaBook(AfiliantBook, Base):
+class AudiotekaBook(GenericBook, Base):
     id = Column(Integer, primary_key=True)
 
     category = Column(Unicode(25))      #21
@@ -24,15 +25,3 @@ class AudiotekaBook(AfiliantBook, Base):
     length = Column(Unicode(20))        #16
     #lectors
     external_id = Column(Unicode(90), unique=True) #86
-
-class AudiotekaBookDescription(AfiliantBookDescription, Base):
-    pass
-
-class AudiotekaAuthor(AfiliantAuthor, Base):
-    pass
-
-class AudiotekaBookPrice(AfiliantBookPrice, Base):
-    pass
-
-class AudiotekaBooksAuthors(AfiliantBooksAuthors, Base):
-    pass

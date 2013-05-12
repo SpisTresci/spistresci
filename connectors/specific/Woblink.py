@@ -32,16 +32,4 @@ class WoblinkBook(GenericBook, Base):
     external_id = Column(Integer)
     price = Column(Integer)
     availability = Column(Boolean)
-    pass
 
-class WoblinkBookDescription(GenericBookDescription, Base):
-    pass
-
-class WoblinkAuthor(GenericAuthor, Base):
-    pass
-
-class WoblinkBookPrice(GenericBookPrice, Base):
-    pass
-
-class WoblinkBooksAuthors(GenericBooksAuthors, Base):
-    pass

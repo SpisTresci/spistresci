@@ -33,15 +33,3 @@ class ZinamonBook(GenericBook, Base):
     isbn = Column(Unicode(13))          #0
     category = Column(Unicode(512))     #20
     protection = Column(Unicode(16))    #9
-
-class ZinamonBookDescription(GenericBookDescription, Base):
-    pass
-
-class ZinamonAuthor(GenericAuthor, Base):
-    pass
-
-class ZinamonBookPrice(GenericBookPrice, Base):
-    pass
-
-class ZinamonBooksAuthors(GenericBooksAuthors, Base):
-    pass

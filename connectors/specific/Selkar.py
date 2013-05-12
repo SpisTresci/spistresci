@@ -128,38 +128,3 @@ class SelkarBook(GenericBook, Base):
     publisher = Column(Unicode(60))     #57
     url = Column(Unicode(180))          #173
     cover = Column(Unicode(80))         #66
-
-class SelkarBookDescription(GenericBookDescription, Base):
-    pass
-
-class SelkarAuthor(GenericAuthor, Base):
-    pass
-
-class SelkarBookPrice(GenericBookPrice, Base):
-    pass
-
-class SelkarBooksAuthors(GenericBooksAuthors, Base):
-    pass
-
-#{'status': 1, 'isbn': 13, 'description': 8000, 'publication_date': 10, 'ean': 15, 'price': 5, 'page_count': 4,
-# 'binding': 22, 'translator': 92, 'is_bestseller': 1, 'authors': 10, 'list_price': 6, 'id': 6, 'size': 32, 'category': 4, 'publisher': 57, 'title': 100, 'url': 173, 'cover': 66}
-#status: 1
-#category: 2716
-#isbn: 9788377998229
-#description:
-#ean: 978830116510901
-#url: http://selkar.pl/osobowosc-samorealizacja-kariera-2/trud-i-zmaganie-milosc-i-szczescie-skupienie-rekolekcyjne-o-milosci-samego-siebie-ksiazka-audio-c?aff=admin@spistresci.pl
-#title:
-#price: 11990
-#page_count: 1254
-#binding: Miekka ze skrzydelkami
-#cover: http://selkar.pl/img/product_media/190001-191000/1014697365(1).jpg
-#translator: Litwinow Jezry, Brzechwa Jan, Wyszomirski Jezry, Jastrzebiec-Kozlowski Czeslaw, Tuwim Julian
-#is_bestseller: 0
-#list_price: 199.00
-#authors: [u'Tom Krause', u'Elizabeth Harwood', u'Mirella Freni', u'Jos\xe9 Van Dam', u'Frederica von Stade', u'Jane Barbi\xe9', u'Michel S\xe9n\xe9chal', u'et al.', u'vocal soloists/Vienna Philharmonic Orchestra & Chorus of the Vienna State Opera', u'/Herbert von Karajan']
-#publisher: Firma Ksiegarska Jacek i Krzysztof Olesiejuk - Inwestycje
-#publication_date: 2011-03-16
-#id: 219838
-#size: 1900.0000 x 1300.0000 x 190.0000
-

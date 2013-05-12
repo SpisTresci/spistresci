@@ -54,16 +54,3 @@ class EscapeMagazineBook(GenericBook, Base):
     subtitle = Column(Unicode(128))         #0
     publisher = Column(Unicode(32))         #15
     url = Column(Unicode(128))              #94
-
-class EscapeMagazineBookDescription(GenericBookDescription, Base):
-    pass
-
-class EscapeMagazineAuthor(GenericAuthor, Base):
-    pass
-
-class EscapeMagazineBookPrice(GenericBookPrice, Base):
-    pass
-
-class EscapeMagazineBooksAuthors(GenericBooksAuthors, Base):
-    pass
-

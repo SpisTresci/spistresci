@@ -17,6 +17,7 @@ from sqlwrapper import *
 from pyisbn import *
 from connectors import Tools
 
+Base = SqlWrapper.getBaseClass()
 
 class InvalidContext(Exception):
     pass
@@ -46,7 +47,6 @@ class GenericBase(object):
             return GenericBase.registered[context.name[:-len('ISBN')] + className]
         else: #Connector
             return GenericBase.registered[context.name + className]
-
 
 class GenericConnector(GenericBase):
 
@@ -503,6 +503,14 @@ class GenericBook(GenericBase):
     title = Column(Unicode(255))
     external_id = Column(Integer, unique=True)
     price = Column(Integer)                     #GROSZE!!!
+
+    @declared_attr
+    def declareTablesFor(cls):
+        connector_name = cls.__tablename__[:-len("Book")]
+        for table_name in ["BookDescription", "Author", "BookPrice", "BooksAuthors", "BooksISBNs", "ISBN"]:
+            t = 'class %s%s(%s%s, Base): pass' % (connector_name, table_name, "Generic", table_name)
+            print t
+            exec(t)
 
     @declared_attr
     def description(cls):

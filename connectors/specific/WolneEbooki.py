@@ -32,16 +32,3 @@ class WolneEbookiBook(GenericBook, Base):
     format = Column(Unicode(32))         #15
     url = Column(Unicode(64))            #35
     cover = Column(Unicode(64))          #38
-
-class WolneEbookiBookDescription(GenericBookDescription, Base):
-    pass
-
-class WolneEbookiAuthor(GenericAuthor, Base):
-    pass
-
-class WolneEbookiBookPrice(GenericBookPrice, Base):
-    pass
-
-class WolneEbookiBooksAuthors(GenericBooksAuthors, Base):
-    pass
-

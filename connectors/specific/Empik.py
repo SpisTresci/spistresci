@@ -28,15 +28,3 @@ class EmpikBook(GenericBook, Base):
     url = Column(Unicode(65))           #59
     cover = Column(Unicode(280))        #269
     availability = Column(Unicode(10))  #0
-
-class EmpikBookDescription(GenericBookDescription, Base):
-    pass
-
-class EmpikAuthor(GenericAuthor, Base):
-    pass
-
-class EmpikBookPrice(GenericBookPrice, Base):
-    pass
-
-class EmpikBooksAuthors(GenericBooksAuthors, Base):
-    pass

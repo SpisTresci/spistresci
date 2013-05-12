@@ -54,15 +54,3 @@ Base = SqlWrapper.getBaseClass()
 class NextoBook(GenericBook, Base):
     id = Column(Integer, primary_key=True)
 
-class NextoBookDescription(GenericBookDescription, Base):
-    pass
-
-class NextoAuthor(GenericAuthor, Base):
-    pass
-
-class NextoBookPrice(GenericBookPrice, Base):
-    pass
-
-class NextoBooksAuthors(GenericBooksAuthors, Base):
-    pass
-

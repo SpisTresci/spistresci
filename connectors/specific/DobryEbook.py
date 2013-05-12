@@ -40,16 +40,3 @@ class DobryEbookBook(GenericBook, Base):
     cover = Column(Unicode(64))			#60
     small_cover = Column(Unicode(64))		#60
     file_size = Column(Unicode(16))		#8
-
-class DobryEbookBookDescription(GenericBookDescription, Base):
-    pass
-
-class DobryEbookAuthor(GenericAuthor, Base):
-    pass
-
-class DobryEbookBookPrice(GenericBookPrice, Base):
-    pass
-
-class DobryEbookBooksAuthors(GenericBooksAuthors, Base):
-    pass
-

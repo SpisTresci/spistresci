@@ -1,4 +1,5 @@
-from connectors.common import *
+from connectors.common import Ceneo
+from connectors.generic import GenericBook
 from connectors.generic import XMLConnector
 from xml.etree import ElementTree as et
 from sqlwrapper import *
@@ -49,7 +50,7 @@ class Latarnik(Ceneo):
                 dic[tag] = header_of_desc[i + 1]
 
 
-class LatarnikBook(CeneoBook, Base):
+class LatarnikBook(GenericBook, Base):
     id = Column(Integer, primary_key=True)
 
     url = Column(Unicode(128))          #104
@@ -65,16 +66,4 @@ class LatarnikBook(CeneoBook, Base):
     isbn = Column(Unicode(13))          #0
     publisher = Column(Unicode(64))     #33
     publisher_code = Column(Unicode(32))        #17
-
-class LatarnikBookDescription(CeneoBookDescription, Base):
-    pass
-
-class LatarnikAuthor(CeneoAuthor, Base):
-    pass
-
-class LatarnikBookPrice(CeneoBookPrice, Base):
-    pass
-
-class LatarnikBooksAuthors(CeneoBooksAuthors, Base):
-    pass
 

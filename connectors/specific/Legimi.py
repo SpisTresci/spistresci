@@ -1,4 +1,5 @@
-from connectors.common import *
+from connectors.common import Afiliant
+from connectors.generic import GenericBook
 from sqlwrapper import *
 
 Base = SqlWrapper.getBaseClass()
@@ -6,7 +7,7 @@ Base = SqlWrapper.getBaseClass()
 class Legimi(Afiliant):
     pass
 
-class LegimiBook(AfiliantBook, Base):
+class LegimiBook(GenericBook, Base):
     id = Column(Integer, primary_key=True)
 
     category = Column(Unicode(90))      #82
@@ -20,15 +21,3 @@ class LegimiBook(AfiliantBook, Base):
     length = Column(Unicode(20))        #16
     #lectors
     format = Column(Unicode(25))        #23 #TODO: store format in proper way
-
-class LegimiBookDescription(AfiliantBookDescription, Base):
-    pass
-
-class LegimiAuthor(AfiliantAuthor, Base):
-    pass
-
-class LegimiBookPrice(AfiliantBookPrice, Base):
-    pass
-
-class LegimiBooksAuthors(AfiliantBooksAuthors, Base):
-    pass

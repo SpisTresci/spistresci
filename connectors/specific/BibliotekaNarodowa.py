@@ -136,21 +136,3 @@ class BibliotekaNarodowaBook(GenericBook, Base):
     date = Column(Unicode(4))#, primary_key=True)
     lang = Column(Unicode(4))                       #
     form = Column(Unicode(8))                       #
-
-class BibliotekaNarodowaBookDescription(GenericBookDescription, Base):
-    pass
-
-class BibliotekaNarodowaAuthor(GenericAuthor, Base):
-    pass
-
-class BibliotekaNarodowaBookPrice(GenericBookPrice, Base):
-    pass
-
-class BibliotekaNarodowaBooksAuthors(GenericBooksAuthors, Base):
-    pass
-
-class BibliotekaNarodowaBooksISBNs(GenericBooksISBNs, Base):
-    pass
-
-class BibliotekaNarodowaISBN(GenericISBN, Base):
-    pass

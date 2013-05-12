@@ -23,7 +23,7 @@ class BooksOn(Ceneo):
         "./n:attrs/n:a[@name='Autor']":('authors',''),
     }
 
-class BooksOnBook(CeneoBook, Base):
+class BooksOnBook(GenericBook, Base):
     id = Column(Integer, primary_key=True)
 
     price = Column(Integer)             #GROSZE!!!
@@ -35,15 +35,3 @@ class BooksOnBook(CeneoBook, Base):
     title = Column(Unicode(256))        #26
     cover = Column(Unicode(128))        #90
     isbn = Column(Unicode(13))          #0
-
-class BooksOnBookDescription(CeneoBookDescription, Base):
-    pass
-
-class BooksOnAuthor(CeneoAuthor, Base):
-    pass
-
-class BooksOnBookPrice(CeneoBookPrice, Base):
-    pass
-
-class BooksOnBooksAuthors(CeneoBooksAuthors, Base):
-    pass

@@ -37,15 +37,3 @@ class KoobeBook(GenericBook, Base):
     format = Column(Unicode(16))        #14
     protection = Column(Unicode(16))    #9
 
-class KoobeBookDescription(GenericBookDescription, Base):
-    pass
-
-class KoobeAuthor(GenericAuthor, Base):
-    pass
-
-class KoobeBookPrice(GenericBookPrice, Base):
-    pass
-
-class KoobeBooksAuthors(GenericBooksAuthors, Base):
-    pass
-

@@ -75,25 +75,3 @@ class RW2010Book(GenericBook, Base):
     isbn = Column(Unicode(13))          #0
     cover = Column(Unicode(160))        #150
     price = Column(Integer)             #GROSZE!!!
-
-
-class RW2010BookDescription(GenericBookDescription, Base):
-    pass
-
-class RW2010Author(GenericAuthor, Base):
-    pass
-
-class RW2010BookPrice(GenericBookPrice, Base):
-    pass
-
-class RW2010BooksAuthors(GenericBooksAuthors, Base):
-    pass
-
-#{'authors': 12, 'isbn': 0, 'format': 15, 'url': 155, 'price': 4, 'title': 98, 'cover': 150}
-#isbn:
-#title: Nie nadaje sie na zolnierza, to jeszcze szczeniak. Tajna historia II wojny swiatowej, ilustrowana.
-#url: http://www.rw2010.pl/go.live.php/PL-H6/przegladaj/SMjM3/nie-nadaje-sie-na-zolnierza-to-jeszcze-szczeniak-tajna-historia-ii-wojny-swiatowej-ilustrowana.html
-#price: 1000
-#format: pdf, epub, mobi
-#cover: http://www.rw2010.pl/data/catalogue/StLS00NzM2NTMtUG93cm90eSB3IHRvbmFjamkgc2NpLWZpX09LxYFBREtBIFBSWsOTRF9QaW90ciBLaWXFgmJpZXdza2lfNzExeDEwMjQuanBn.jpg
-#authors: [u'Samuel', u'Gizmo', u'Jula', u'Kocica', u'Maciej', u'Klara', u'Magdalena', u'Miron', u'Simon', u'Adrian', u'Dorian', u'Irmina.']

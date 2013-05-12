@@ -1,4 +1,5 @@
-from connectors.common import *
+from connectors.common import Ceneo
+from connectors.generic import GenericBook
 from sqlwrapper import *
 
 Base = SqlWrapper.getBaseClass()
@@ -23,7 +24,7 @@ class CzeskieKlimaty(Ceneo):
     }
 
 
-class CzeskieKlimatyBook(CeneoBook, Base):
+class CzeskieKlimatyBook(GenericBook, Base):
     id = Column(Integer, primary_key=True)
 
     price = Column(Integer)             #GROSZE!!!
@@ -38,25 +39,3 @@ class CzeskieKlimatyBook(CeneoBook, Base):
     page_count = Column(Integer)
     publisher = Column(Unicode(70))     #59
     date = Column(Date)                 #
-
-
-
-
-
-class CzeskieKlimatyBookDescription(CeneoBookDescription, Base):
-    pass
-
-class CzeskieKlimatyAuthor(CeneoAuthor, Base):
-    pass
-
-class CzeskieKlimatyBookPrice(CeneoBookPrice, Base):
-    pass
-
-class CzeskieKlimatyBooksAuthors(CeneoBooksAuthors, Base):
-    pass
-
-class CzeskieKlimatyBooksISBNs(CeneoBooksISBNs, Base):
-    pass
-
-class CzeskieKlimatyISBN(CeneoISBN, Base):
-    pass

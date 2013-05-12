@@ -50,16 +50,3 @@ class VirtualoBook(GenericBook, Base):
     url = Column(Unicode(128))          #89
     rating = Column(Integer)            #0-100
 
-
-class VirtualoBookDescription(GenericBookDescription, Base):
-    pass
-
-class VirtualoAuthor(GenericAuthor, Base):
-    pass
-
-class VirtualoBookPrice(GenericBookPrice, Base):
-    pass
-
-class VirtualoBooksAuthors(GenericBooksAuthors, Base):
-    pass
-

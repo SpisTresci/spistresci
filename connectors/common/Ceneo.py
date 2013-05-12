@@ -8,23 +8,3 @@ class Ceneo(XMLConnector):
     depth = 1
     pass
 
-class CeneoBook(GenericBook):
-    pass
-
-class CeneoBookDescription(GenericBookDescription):
-    pass
-
-class CeneoAuthor(GenericAuthor):
-    pass
-
-class CeneoBookPrice(GenericBookPrice):
-    pass
-
-class CeneoBooksAuthors(GenericBooksAuthors):
-    pass
-
-class CeneoBooksISBNs(GenericBooksISBNs):
-    pass
-
-class CeneoISBN(GenericISBN):
-    pass

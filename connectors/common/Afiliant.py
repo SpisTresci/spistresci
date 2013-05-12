@@ -5,7 +5,6 @@ import os
 
 class Afiliant(XMLConnector):
 
-
     #dirty hack,
     #probably will have to fix that in the future using
     #et._namespace_map[''] = ''
@@ -68,19 +67,3 @@ class Afiliant(XMLConnector):
             dic = self.make_dict(book)
             self.validate(dic)
             self.add_record(dic)
-
-
-class AfiliantBook(GenericBook):
-    pass
-
-class AfiliantBookDescription(GenericBookDescription):
-    pass
-
-class AfiliantAuthor(GenericAuthor):
-    pass
-
-class AfiliantBookPrice(GenericBookPrice):
-    pass
-
-class AfiliantBooksAuthors(GenericBooksAuthors):
-    pass
