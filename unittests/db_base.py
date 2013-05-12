@@ -51,7 +51,7 @@ class BaseDBTestFixture():
     def test_tables_created(self):
         eq_(self.engine.name, 'sqlite')
         eq_(self.engine.table_names(),
-        ['%s%s' % (self.connector_class.class_name(), table) for table in 'Author', 'Book', 'BookDescription', 'BookPrice', 'BooksAuthors'])
+        ['%s%s' % (self.connector_class.class_name(), table) for table in 'Author', 'Book', 'BookDescription', 'BookPrice', 'BooksAuthors', 'BooksISBNs', 'ISBN'])
 
 #        eq_(self.connection.info, {})
 
