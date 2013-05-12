@@ -22,3 +22,9 @@ class CeneoBookPrice(GenericBookPrice):
 
 class CeneoBooksAuthors(GenericBooksAuthors):
     pass
+
+class CeneoBooksISBNs(GenericBooksISBNs):
+    pass
+
+class CeneoISBN(GenericISBN):
+    pass

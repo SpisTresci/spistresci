@@ -42,6 +42,8 @@ class GenericBase(object):
             return GenericBase.registered[context.name[:-len('BookDescription')] + className]
         elif context.name.endswith('BooksAuthors'):
             return GenericBase.registered[context.name[:-len('BooksAuthors')] + className]
+        elif context.name.endswith('ISBN'):
+            return GenericBase.registered[context.name[:-len('ISBN')] + className]
         else: #Connector
             return GenericBase.registered[context.name + className]
 
@@ -282,32 +284,49 @@ class GenericConnector(GenericBase):
     def validate(self, dic):
         id = dic.get('external_id')
         title = dic.get('title')
-        self.validateISBN(dic, id, title)
+        self.validateISBNs(dic, id, title)
         self.validatePrice(dic, id, title)
         self.validateSize(dic, id, title)
         self.validateAuthors(dic, id, title)
         self.validateLength(dic, id, title)
 
 
-    def validateISBN(self, dic, id, title):
-        original_isbn = dic.get('isbn')
-        isbn_str = ""
-
+    def validateISBNs(self, dic, id, title):
+        original_isbn = dic.get('isbns')
+        isbn_list = []
         if original_isbn != None:
-            try:
-                isbn = Isbn(original_isbn)
-                if isbn.validate():
-                    isbn_str = isbn.isbn
-                else:
-                    self.erratum_logger.info("ISBN validation failed! connector: %s, original_isbn: %s, cannonical ISBN: %s, id: %s, title: %s" % (self.name, original_isbn, isbn.isbn, id, title))
+            if not (isinstance(original_isbn, list) and not isinstance(original_isbn, str)):
+                original_isbn = [original_isbn]
 
-            except IsbnError:
-                if original_isbn == '':
-                    self.erratum_logger.warning("Entry does not have ISBN! connector: %s, id: %s, title: %s" % (self.name, id, title))
-                else:
-                    self.erratum_logger.info("ISBN has wrong format! connector: %s, original_isbn: %s, id: %s, title: %s" % (self.name, original_isbn, id, title))
+            for i in original_isbn:
+                isbn_dic={}
+                try:
+                    isbn_dic['raw'] = i
+                    isbn = Isbn(i)
+                    if isbn.validate():
+                        isbn_dic['valid'] = True
+                        if len(isbn.isbn) == 10:
+                            isbn_dic['isbn10'] = isbn.isbn
+                            isbn_dic['isbn13'] = isbn.convert()
+                            isbn_dic['core'] = isbn.isbn[:-1]
+                        else:
+                            isbn_dic['isbn13'] = isbn.isbn
+                            isbn_dic['isbn10'] = isbn.convert()
+                            isbn_dic['core'] = isbn.convert()[:-1]
+                    else:
+                        isbn_dic['valid'] = False
+                        self.erratum_logger.info("ISBN validation failed! connector: %s, original_isbn: %s, cannonical ISBN: %s, id: %s, title: %s" % (self.name, original_isbn, isbn.isbn, id, title))
 
-        dic['isbn'] = isbn_str
+                except IsbnError:
+                    if original_isbn == '':
+                        self.erratum_logger.warning("Entry does not have ISBN! connector: %s, id: %s, title: %s" % (self.name, id, title))
+                    else:
+                        isbn_dic['valid'] = False
+                        self.erratum_logger.info("ISBN has wrong format! connector: %s, original_isbn: %s, id: %s, title: %s" % (self.name, original_isbn, id, title))
+
+                isbn_list.append(isbn_dic)
+
+        dic['isbns'] = isbn_list
 
     def validatePrice(self, dic, id, title, price_tag_name='price'):
         original_price = dic.get(price_tag_name)
@@ -423,7 +442,10 @@ class GenericConnector(GenericBase):
 
     @classmethod
     def get_or_create_(cls, ClassName, param_name, d, session):
-        c = session.query(ClassName).filter_by(**{param_name:d[param_name]}).first()
+        c = None
+        if d.get(param_name) != None:
+            c = session.query(ClassName).filter_by(**{param_name:d[param_name]}).first()
+
         if not c:
             c = ClassName(**d)
         return c
@@ -437,6 +459,7 @@ class GenericConnector(GenericBase):
         Description = GenericBookDescription.getConcretizedClass(context=self)
         Author = GenericAuthor.getConcretizedClass(context=self)
         BooksAuthors = GenericBooksAuthors.getConcretizedClass(context=self)
+        ISBN = GenericISBN.getConcretizedClass(context=self)
 
         Session = sessionmaker(bind=SqlWrapper.getEngine())
         session = Session()
@@ -449,6 +472,14 @@ class GenericConnector(GenericBase):
                 desc = Description(d)
                 book.description = desc
 
+            if d.get('isbns') != None:
+                for isbn_d in d['isbns']:
+                    if self.get_(ISBN, 'raw', isbn_d, session) != None:
+                        isbn = ISBN.get_or_create('raw', isbn_d, session)
+                    else:
+                        isbn = ISBN.get_or_create('core', isbn_d, session)
+
+                    book.isbns.append(isbn)
 
             for touple in [('authors', False, False), ('translators', True, False), ('lectors', False, True)]:
                 if d.get(touple[0]) != None:
@@ -523,6 +554,8 @@ class GenericBook(GenericBase):
                                 self.authors.remove(a)
                                 session.commit()
 
+                elif key == 'isbns':
+                    pass
                 elif un != new_data[key]:
                     setattr(self, key, new_data[key])
 
@@ -533,6 +566,7 @@ class GenericBook(GenericBase):
     def getConcretizedClass(context):
         return GenericBase.getConcretizedClass(context, 'Book')
 
+    
 class GenericBookDescription(GenericBase):
     id = Column(Integer, primary_key=True)
     description = Column(Unicode(20000)) #TODO: parametr musi byc dynamicznie ustawiany
@@ -635,3 +669,53 @@ class GenericBooksAuthors(GenericBase):
         name = cls.__tablename__[:-len("BooksAuthors")]
         table = cls.registered[name + 'Author']
         return relationship(table, backref=name + "_authorship")
+
+
+class GenericBooksISBNs(GenericBase):
+    id = Column(Integer, primary_key=True)
+
+    @declared_attr
+    def __tablename__(cls):
+        cls.register()
+        return cls.__name__
+
+    @staticmethod
+    def getConcretizedClass(context):
+        return GenericBase.getConcretizedClass(context, 'BooksISBNs')
+
+    @declared_attr
+    def book_id(cls):
+        name = cls.__tablename__[:-len("BooksISBNs")]
+        return Column(Integer, ForeignKey(name + 'Book.id'))
+
+    @declared_attr
+    def isbn_id(cls):
+        name = cls.__tablename__[:-len("BooksISBNs")]
+        return Column(Integer, ForeignKey(name + 'ISBN.id'))
+
+class GenericISBN(GenericBase):
+    id = Column(Integer, primary_key=True)
+
+    @declared_attr
+    def __tablename__(cls):
+        cls.register()
+        return cls.__name__
+
+    @declared_attr
+    def books(cls):
+        name = cls.__tablename__[:-len("ISBN")]
+        return relationship(name + "Book", secondary=cls.metadata.tables[name + 'BooksISBNs'] , backref="isbns")
+
+    @staticmethod
+    def getConcretizedClass(context):
+        return GenericBase.getConcretizedClass(context, 'ISBN')
+
+    @classmethod
+    def get_or_create(cls, param_name, isbn_dict, session):
+        return GenericConnector.get_or_create_(cls, param_name, isbn_dict, session)
+
+    raw = Column(Unicode(20), unique=True)
+    core = Column(Unicode(9), unique=True)
+    isbn10 = Column(Unicode(10))
+    isbn13 = Column(Unicode(13))
+    valid = Column(Boolean)

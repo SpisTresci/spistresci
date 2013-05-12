@@ -16,7 +16,7 @@ class CzeskieKlimaty(Ceneo):
         "./cat":('category', ''),
         "./imgs/main[@url]":('cover', ''),
         "./attrs/a[@name='Autor']":('authors', ''),
-        "./attrs/a[@name='ISBN']":('isbn', ''),
+        "./attrs/a[@name='ISBN']":('isbns', ''),
         "./attrs/a[@name='Ilosc_stron']":('page_count', ''),
         "./attrs/a[@name='Wydawnictwo']":('publisher', ''),
         "./attrs/a[@name='Rok_wydania']":('date', ''),
@@ -34,7 +34,7 @@ class CzeskieKlimatyBook(CeneoBook, Base):
     category = Column(Unicode(80))      #72
     cover = Column(Unicode(64))         #38
     #authors
-    isbn = Column(Unicode(13))          #
+    #isbn = Column(Unicode(13))          #
     page_count = Column(Integer)
     publisher = Column(Unicode(70))     #59
     date = Column(Date)                 #
@@ -55,3 +55,8 @@ class CzeskieKlimatyBookPrice(CeneoBookPrice, Base):
 class CzeskieKlimatyBooksAuthors(CeneoBooksAuthors, Base):
     pass
 
+class CzeskieKlimatyBooksISBNs(CeneoBooksISBNs, Base):
+    pass
+
+class CzeskieKlimatyISBN(CeneoISBN, Base):
+    pass
