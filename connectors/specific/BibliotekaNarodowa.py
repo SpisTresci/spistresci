@@ -89,9 +89,7 @@ class BibliotekaNarodowa(XMLConnector, ReferenceConnector):
                         dic[tag_name] = unicode(dic[tag_name][0])
 
 
-    #TODO
-    def is_name(self, name):
-        return True
+
 
     def validateAuthors(self, dic, id, title, tag_name='authors'):
         if dic.get(tag_name) != None:

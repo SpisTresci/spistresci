@@ -350,12 +350,39 @@ class GenericConnector(GenericBase):
         dic[price_tag_name] = unicode(price)
 
     def validateAuthors(self, dic, id, title, tag_name='authors'):
-        if dic.get(tag_name) != None and (isinstance(dic.get(tag_name), unicode) or isinstance(dic.get(tag_name), str)):
-            dic[tag_name] = [unicode(x.strip()) for x in re.split("[,;]", dic[tag_name])]
-        elif dic.get(tag_name) != None and isinstance(dic.get(tag_name), list):
-            for x in dic[tag_name]:
-                print "\n\n\n\n\n\n" + x + "\n\n\n\n\n\n"
-            dic[tag_name] = [unicode(x) for x in dic[tag_name]]
+        if dic.get(tag_name) != None:
+            if isinstance(dic.get(tag_name), unicode) or isinstance(dic.get(tag_name), str):
+                dic[tag_name] = [unicode(x.strip()) for x in re.split("[,;]", dic[tag_name])]
+            elif isinstance(dic.get(tag_name), list):
+                dic[tag_name] = [unicode(x) for x in dic[tag_name]]
+
+            persons = dic[tag_name]
+            new_list_of_person_dicts=[]
+            pdict={}
+            if not (isinstance(persons, list) and not isinstance(persons, str)):
+                persons = [persons]
+            for person in persons:
+                pdict["name"] = person.strip()
+                names = [x.strip() for x in person.split(" ")]
+                if len(names) == 2: #imie i nazwisko
+                    n1=names[0].strip()
+                    n2=names[1].strip()
+                    pdict["firstName"] = n1 if self.is_name(n1) else (n2 if self.is_name(n2) else n1)
+                    pdict["lastName"] = n2 if self.is_name(n1) else (n1 if self.is_name(n2) else n2)
+                elif len(names) == 3:
+                    pdict["firstName"] = names[0].strip()
+                    pdict["middleName"] = names[1].strip()
+                    pdict["lastName"] = names[2].strip()
+                else:
+                    print str(len(names)) + " - "  + person
+
+                new_list_of_person_dicts.append(pdict)
+
+            dic[tag_name] = new_list_of_person_dicts
+
+    #TODO
+    def is_name(self, name):
+        return True
 
     def validateSize(self, dic, id, title):
         pass
