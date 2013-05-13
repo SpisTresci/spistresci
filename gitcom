@@ -1,0 +1,206 @@
+nni@anx:~$ ls
+C:\nppdf32Log\debuglog.txt  examples.desktop  mod_wsgi-3.3.tar.gz  Pobrane    Szablony
+devel                       history.txt       Muzyka               Publiczny  Wideo
+Dokumenty                   mod_wsgi-3.3      Obrazy               Pulpit
+anni@anx:~$ cd devel/spistresci.pl/
+anni@anx:~/devel/spistresci.pl$ ls
+konektory
+anni@anx:~/devel/spistresci.pl$ git clone git@spistresci.pl:/var/git/frontend.git
+Cloning into 'frontend'...
+git@spistresci.pl's password: 
+remote: Counting objects: 3, done.
+remote: Total 3 (delta 0), reused 0 (delta 0)
+Receiving objects: 100% (3/3), done.
+anni@anx:~/devel/spistresci.pl$ ls
+frontend  konektory
+anni@anx:~/devel/spistresci.pl$ cd frontend/
+anni@anx:~/devel/spistresci.pl/frontend$ ls
+test
+anni@anx:~/devel/spistresci.pl/frontend$ git log 
+commit d72eafcaa6d93c4acdd38306c4b985bedfdc843d
+Author: Krzysztof Szumny <kszumny@opera.com>
+Date:   Sun May 12 18:10:06 2013 +0200
+
+    test
+anni@anx:~/devel/spistresci.pl/frontend$ git status
+# On branch master
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	manage.py
+#	mysite/
+nothing added to commit but untracked files present (use "git add" to track)
+anni@anx:~/devel/spistresci.pl/frontend$ git add .
+anni@anx:~/devel/spistresci.pl/frontend$ git status
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	new file:   manage.py
+#	new file:   mysite/__init__.py
+#	new file:   mysite/__init__.pyc
+#	new file:   mysite/settings.py
+#	new file:   mysite/settings.pyc
+#	new file:   mysite/settings.py~
+#	new file:   mysite/urls.py
+#	new file:   mysite/urls.pyc
+#	new file:   mysite/urls.py~
+#	new file:   mysite/views.py
+#	new file:   mysite/views.pyc
+#	new file:   mysite/views.py~
+#	new file:   mysite/wsgi.py
+#	new file:   mysite/wsgi.pyc
+#
+anni@anx:~/devel/spistresci.pl/frontend$ touch .gitignore 
+anni@anx:~/devel/spistresci.pl/frontend$ ls
+manage.py  mysite  test
+anni@anx:~/devel/spistresci.pl/frontend$ ls -la
+razem 20
+drwxr-xr-x 4 anni anni 4096 maj 12 18:28 .
+drwxrwxr-x 4 anni anni 4096 maj 12 18:22 ..
+drwxrwxr-x 8 anni anni 4096 maj 12 18:27 .git
+-rw-rw-r-- 1 anni anni    0 maj 12 18:28 .gitignore
+-rwxr-xr-x 1 anni anni  249 maj 12 16:46 manage.py
+drwxrwxr-x 2 anni anni 4096 maj 12 18:04 mysite
+-rw-rw-r-- 1 anni anni    0 maj 12 18:22 test
+anni@anx:~/devel/spistresci.pl/frontend$ gedit .gitignore
+anni@anx:~/devel/spistresci.pl/frontend$ git status
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	new file:   manage.py
+#	new file:   mysite/__init__.py
+#	new file:   mysite/__init__.pyc
+#	new file:   mysite/settings.py
+#	new file:   mysite/settings.pyc
+#	new file:   mysite/settings.py~
+#	new file:   mysite/urls.py
+#	new file:   mysite/urls.pyc
+#	new file:   mysite/urls.py~
+#	new file:   mysite/views.py
+#	new file:   mysite/views.pyc
+#	new file:   mysite/views.py~
+#	new file:   mysite/wsgi.py
+#	new file:   mysite/wsgi.pyc
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	.gitignore
+#	.gitignore~
+anni@anx:~/devel/spistresci.pl/frontend$ gedit .gitignore
+anni@anx:~/devel/spistresci.pl/frontend$ git status
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	new file:   manage.py
+#	new file:   mysite/__init__.py
+#	new file:   mysite/__init__.pyc
+#	new file:   mysite/settings.py
+#	new file:   mysite/settings.pyc
+#	new file:   mysite/settings.py~
+#	new file:   mysite/urls.py
+#	new file:   mysite/urls.pyc
+#	new file:   mysite/urls.py~
+#	new file:   mysite/views.py
+#	new file:   mysite/views.pyc
+#	new file:   mysite/views.py~
+#	new file:   mysite/wsgi.py
+#	new file:   mysite/wsgi.pyc
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	.gitignore
+anni@anx:~/devel/spistresci.pl/frontend$ git reset HEAD .
+anni@anx:~/devel/spistresci.pl/frontend$ git ststus
+git: 'ststus' is not a git command. See 'git --help'.
+
+Did you mean this?
+	status
+anni@anx:~/devel/spistresci.pl/frontend$ git status
+# On branch master
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	.gitignore
+#	manage.py
+#	mysite/
+nothing added to commit but untracked files present (use "git add" to track)
+anni@anx:~/devel/spistresci.pl/frontend$ git add .
+anni@anx:~/devel/spistresci.pl/frontend$ git status
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	new file:   .gitignore
+#	new file:   manage.py
+#	new file:   mysite/__init__.py
+#	new file:   mysite/settings.py
+#	new file:   mysite/urls.py
+#	new file:   mysite/views.py
+#	new file:   mysite/wsgi.py
+#
+anni@anx:~/devel/spistresci.pl/frontend$ git commit
+[master a15640b] T223: Initial data
+ 6 files changed, 216 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100755 manage.py
+ create mode 100644 mysite/__init__.py
+ create mode 100644 mysite/settings.py
+ create mode 100644 mysite/urls.py
+ create mode 100644 mysite/views.py
+ create mode 100644 mysite/wsgi.py
+anni@anx:~/devel/spistresci.pl/frontend$ git status
+# On branch master
+# Your branch is ahead of 'origin/master' by 1 commit.
+#
+nothing to commit (working directory clean)
+anni@anx:~/devel/spistresci.pl/frontend$ git log
+commit a15640b970cb664dfd09ca77607aa212aa75a8af
+Author: Anita <awysokinska@spistresci.pl>
+Date:   Sun May 12 18:35:17 2013 +0200
+
+    T223: Initial data
+
+commit d72eafcaa6d93c4acdd38306c4b985bedfdc843d
+Author: Krzysztof Szumny <kszumny@opera.com>
+Date:   Sun May 12 18:10:06 2013 +0200
+
+    test
+anni@anx:~/devel/spistresci.pl/frontend$ git log --decorate
+commit a15640b970cb664dfd09ca77607aa212aa75a8af (HEAD, master)
+Author: Anita <awysokinska@spistresci.pl>
+Date:   Sun May 12 18:35:17 2013 +0200
+
+    T223: Initial data
+
+commit d72eafcaa6d93c4acdd38306c4b985bedfdc843d (origin/master, origin/HEAD)
+Author: Krzysztof Szumny <kszumny@opera.com>
+Date:   Sun May 12 18:10:06 2013 +0200
+
+    test
+anni@anx:~/devel/spistresci.pl/frontend$ git push origin master
+git@spistresci.pl's password: 
+Counting objects: 10, done.
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (9/9), 3.88 KiB, done.
+Total 9 (delta 0), reused 0 (delta 0)
+To git@spistresci.pl:/var/git/frontend.git
+   d72eafc..a15640b  master -> master
+anni@anx:~/devel/spistresci.pl/frontend$ git log --decorate
+commit a15640b970cb664dfd09ca77607aa212aa75a8af (HEAD, origin/master, origin/HEAD, master)
+Author: Anita <awysokinska@spistresci.pl>
+Date:   Sun May 12 18:35:17 2013 +0200
+
+    T223: Initial data
+
+commit d72eafcaa6d93c4acdd38306c4b985bedfdc843d
+Author: Krzysztof Szumny <kszumny@opera.com>
+Date:   Sun May 12 18:10:06 2013 +0200
+
+    test
+anni@anx:~/devel/spistresci.pl/frontend$ 
+

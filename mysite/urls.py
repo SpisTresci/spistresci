@@ -4,8 +4,9 @@ from django.conf.urls import patterns, include, url
 # from django.contrib import admin
 # admin.autodiscover()
 
-from mysite.views import main
+from mysite.views import main, logo
 
 urlpatterns = patterns('',
     ('^main/$', main),
+    ('^image/$',logo),
 )
