@@ -30,14 +30,3 @@ class KodeksyWmp3Book(GenericBook, Base):
     external_id = Column(Integer)
     price = Column(Integer)
 
-class KodeksyWmp3BookDescription(GenericBookDescription, Base):
-    pass
-
-class KodeksyWmp3Author(GenericAuthor, Base):
-    pass
-
-class KodeksyWmp3BookPrice(GenericBookPrice, Base):
-    pass
-
-class KodeksyWmp3BooksAuthors(GenericBooksAuthors, Base):
-    pass

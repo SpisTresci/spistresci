@@ -373,8 +373,9 @@ class GenericConnector(GenericBase):
                     pdict["firstName"] = names[0].strip()
                     pdict["middleName"] = names[1].strip()
                     pdict["lastName"] = names[2].strip()
-                else:
-                    print str(len(names)) + " - "  + person
+#                else:
+#                   TODO: use logger here instead of debug printf
+#                    print str(len(names)) + " - "  + person
 
                 new_list_of_person_dicts.append(pdict)
 
@@ -536,7 +537,7 @@ class GenericBook(GenericBase):
         connector_name = cls.__tablename__[:-len("Book")]
         for table_name in ["BookDescription", "Author", "BookPrice", "BooksAuthors", "BooksISBNs", "ISBN"]:
             t = 'class %s%s(%s%s, Base): pass' % (connector_name, table_name, "Generic", table_name)
-            print t
+#            print t
             exec(t)
 
     @declared_attr
