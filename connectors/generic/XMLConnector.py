@@ -106,10 +106,12 @@ class XMLConnector(GenericConnector):
                 elif self.limit_books and book_number > self.limit_books:
                     break
                 dic = self.makeDict(offer)
+                #comment out when creating connector
                 self.validate(dic)
                 #uncomment when creating connector
                 #self.measureLenghtDict(dic)
                 #print dic
+                #comment out when creating connector
                 self.add_record(dic)
             if book_number > self.limit_books:
                 break

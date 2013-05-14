@@ -288,6 +288,7 @@ class GenericConnector(GenericBase):
         self.validatePrice(dic, id, title)
         self.validateSize(dic, id, title)
         self.validateAuthors(dic, id, title)
+        self.validateAuthors(dic, id, title, 'lectors')
         self.validateLength(dic, id, title)
 
 

@@ -1,3 +1,4 @@
+from Audeo import Audeo
 from Audiobook import Audiobook
 from Audioteka import Audioteka
 from Helion import Helion

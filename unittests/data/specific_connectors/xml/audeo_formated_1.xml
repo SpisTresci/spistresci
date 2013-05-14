@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<offers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1">
+  <group name="other">
+    <o id="825802" url="https://audeo.pl/445660/wichrowe-wzgorza" price="18.3" avail="99">
+      <cat>Literatura/Obyczajowa</cat>
+      <name>WICHROWE WZGÓRZA</name>
+      <imgs>
+        <main url="https://audeo.pl/img/384440/products/1_1413e854122b.jpg"/>
+      </imgs>
+      <desc><![CDATA[Dorastająca Katarzyna zakochuje się w Heathcliffie, podczas gdy jej brat, Hindley, nienawidzi go
+coraz bardziej. Rozdarty między miłością do Katarzyny a nienawiścia do jej brata, nieustannie
+upokarzany.&lt;br&gt;
+&lt;br&gt;
+Heathcliff opuszcza wreszcie Wichrowe Wzgórza. Kiedy po kilku latach nieobecnosci wraca, Katarzyna
+jest już mężatką, choć w głebi serca wciąż kocha Heathcliffa. Pchany żądzą zemsty, Heathcliff
+obmyśla przewrotny plan, który stanie sie przyczyną tragedii całej rodziny.&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;]]></desc>
+      <attrs>
+        <a name="Producent"><![CDATA[Tower Press]]></a>
+        <a name="Autor"><![CDATA[Emily Bronte]]></a>
+        <a name="Lektor"><![CDATA[Zbigniew Zapasiewicz]]></a>
+        <a name="Czas (min)"><![CDATA[470]]></a>
+      </attrs>
+    </o>
+  </group>
+</offers>
