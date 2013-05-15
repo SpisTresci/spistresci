@@ -2,7 +2,6 @@ from Audeo import Audeo
 from Audiobook import Audiobook
 from Audioteka import Audioteka
 from Helion import Helion
-from BibliotekaNarodowa import BibliotekaNarodowa
 from BooksOn import BooksOn
 from BezKartek import BezKartek
 from CzeskieKlimaty import CzeskieKlimaty

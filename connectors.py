@@ -13,6 +13,11 @@ def run_connectors(connector):
     connector.applyFilters()
     connector.parse()
 
+def run_reference_connectors(connector):
+    connector.fetchData()
+    connector.applyFilters()
+    connector.parse()
+
 def run_backup(connector):
     #only download, do not unpack
     connector.fetchData(unpack=False)
