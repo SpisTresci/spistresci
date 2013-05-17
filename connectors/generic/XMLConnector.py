@@ -42,22 +42,22 @@ class XMLConnector(GenericConnector):
             value_of_tag = tag.toxml()
         return value_of_tag[len(('<' + tagName + '>')):-len(('</' + tagName + '>'))]
 
-    def make_dict(self, book):
-        book_dict = {}
-        for tag in self.xml_tag_dict.keys():
-            tag_split = tag.split('.')
-            if len(tag_split) > 1:
-                sub_elem = book
-                for spl in tag_split:
-                    sub_elem = sub_elem.find(spl)
-                    if sub_elem is None:
-                        break
-                if sub_elem is not None:
-                    sub_elem = unicode(sub_elem.text)
-                book_dict[ (self.xml_tag_dict[tag])[0] ] = sub_elem
-            else:
-                book_dict[ (self.xml_tag_dict[tag])[0] ] = unicode(book.findtext(tag, (self.xml_tag_dict[tag])[1]))
-        return book_dict
+#    def make_dict(self, book):
+#        book_dict = {}
+#        for tag in self.xml_tag_dict.keys():
+#            tag_split = tag.split('.')
+#            if len(tag_split) > 1:
+#                sub_elem = book
+#                for spl in tag_split:
+#                    sub_elem = sub_elem.find(spl)
+#                    if sub_elem is None:
+#                        break
+#                if sub_elem is not None:
+#                    sub_elem = unicode(sub_elem.text)
+#                book_dict[ (self.xml_tag_dict[tag])[0] ] = sub_elem
+#            else:
+#                book_dict[ (self.xml_tag_dict[tag])[0] ] = unicode(book.findtext(tag, (self.xml_tag_dict[tag])[1]))
+#        return book_dict
 
 
     xmls_namespace = ""
@@ -94,7 +94,19 @@ class XMLConnector(GenericConnector):
             root = root[0]
         return root
 
+    '''override before_parse, adjust_parse and after_parse to
+        add some connector specific steps to parse method'''
+    def before_parse(self):
+        pass
+
+    def adjust_parse(self, dic):
+        pass
+
+    def after_parse(self):
+        pass
+
     def parse(self):
+        self.before_parse()
         book_number = 0
         for filename in self.fetched_files:
             root = et.parse(filename).getroot()
@@ -107,6 +119,7 @@ class XMLConnector(GenericConnector):
                     break
                 dic = self.makeDict(offer)
                 #comment out when creating connector
+                self.adjust_parse(dic)
                 self.validate(dic)
                 #uncomment when creating connector
                 #self.measureLenghtDict(dic)
@@ -115,6 +128,7 @@ class XMLConnector(GenericConnector):
                 self.add_record(dic)
             if book_number > self.limit_books:
                 break
+        self.after_parse()
         #uncomment when creating connector
         #print self.max_len
 

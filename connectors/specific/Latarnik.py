@@ -33,12 +33,11 @@ class Latarnik(Ceneo):
         "./attrs/a[@name='Kod_producenta']":('publisher_code', ''),
     }
 
-    def validate(self, dic):
+    def adjust_parse(self, dic):
         self.createFromDescription(dic, u"Autor", "authors")
         self.createFromDescription(dic, u"No\xc3nik", "form")
         self.createFromDescription(dic, u"Rozmiar", "form")
         self.createFromDescription(dic, u"Oprawa", "type")
-        super(Latarnik, self).validate(dic)
 
     def createFromDescription(self, dic, name, tag):
         if dic.get('description') == None:

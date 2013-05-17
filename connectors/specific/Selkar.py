@@ -63,7 +63,7 @@ class Selkar(XMLConnector):
             if self.limit_books:
                 itemss = items[:self.limit_books]
             for book in items:
-                dic = self.make_dict(book)
+                dic = self.makeDict(book)
                 #print dic
                 self.validate(dic)
                 #print dic

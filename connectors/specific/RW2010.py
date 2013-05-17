@@ -26,9 +26,8 @@ class RW2010(XMLConnector):
         if result != 'Ok.':
             raise Exception('RW2010 init, macro %s returned %s' % (self.macro_url, result))
 
-    def validate(self, dic):
+    def adjust_parse(self, dic):
         self.create_id_from_url(dic)
-        super(RW2010, self).validate(dic)
 
     def create_id_from_url(self, dic):
         url = dic['url']
@@ -42,9 +41,9 @@ class RW2010(XMLConnector):
             repr = repr + (digit * pow(base, i))
             i = i + 1
 
-        print repr
-        print let_id
-        print self.recreate_str_id_from_id(repr)
+    #    print repr
+    #    print let_id
+    #    print self.recreate_str_id_from_id(repr)
         assert let_id == self.recreate_str_id_from_id(repr)
         dic['external_id'] = unicode(repr)
 

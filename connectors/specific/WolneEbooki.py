@@ -17,9 +17,8 @@ class WolneEbooki(XMLConnector):
         "./okladka":('cover', ''),
     }
 
-    def validate(self, dic):
+    def adjust_parse(self, dic):
         self.create_id_from_url(dic)
-        super(WolneEbooki, self).validate(dic)
 
     def create_id_from_url(self, dic):
         dic['external_id'] = int(dic['url'].split('/')[-1])

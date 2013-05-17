@@ -40,8 +40,7 @@ class AudeoBook(GenericBook, Base):
         #TODO: Not implemented yet        
         pass
 
-    def validate(self, dic):
+    def inside_parse(self, dic):
         if dic['authors'] == ['Praca Zbiorowa'] or dic['authors'] == ['Zbiorowy']:
             self.getAuthorsFromDescription(dic, u"Autor", "authors")
-        super(Audeo, self).validate(dic)
 

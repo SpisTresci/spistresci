@@ -21,13 +21,11 @@ class DobryEbook(XMLConnector):
         "./duze_zdjecie":('cover', ''),
     }
 
-    def validate(self, dic):
+    def adjust_parse(self, dic):
         self.create_id_from_url(dic)
-        super(DobryEbook, self).validate(dic)
 
     def create_id_from_url(self, dic):
         dic['external_id'] = int(dic['url'].split("-")[-1].split(".")[0])
-
 
 class DobryEbookBook(GenericBook, Base):
     id = Column(Integer, primary_key=True)
