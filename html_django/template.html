@@ -1,21 +1,26 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
-<body>
-
-<center><b>
+<head>
+<meta HTTP-EQUIV="Content-type" CONTENT="text/html; charset=iso-8859-2">
+<meta HTTP-EQUIV="Content-Language" CONTENT="pl">
+<TITLE>SpisTreści</TITLE>
+</head>
+<body bgcolor="#003366" text="#FFFFFF">
+<center><big><b>
 <img src="http://127.0.0.1:8000/image/">
 <br/> <br/>
 Tutaj powstaje nowy serwis dla wszystkich miłośników książek elektronicznych.<br/>
 Jeżeli chcesz być powiadomiony o starcie serwisu,<br/>
 zostaw proszę nam swój adres email: 
-<form>
+</script>
+<form action="" method="post">
 <br/>
 	<input type="text" name="mail">
-	<input type="submit" name="sub" value="Dodaj">
+	<input type="submit" value="Dodaj">
 </form> 
 
-</center></b>
-
-<!-- Informacja zostanie wyslana na adres {{ address }}(testuje sobie szablon). -->
-
+</big><b>
+{{ response }}
+</center>
 </body>
 </html>
