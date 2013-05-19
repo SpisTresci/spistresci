@@ -3,19 +3,19 @@
 from django.template import Context
 from django.http import HttpResponse
 from django.shortcuts import render_to_response
-from application.models import DataTable
+from application.models import Address
 from datetime import datetime
 from django.core.context_processors import csrf
 from django.views.decorators.csrf import csrf_protect
 
 
 def main(request):
-	if request.method=='POST' and request.POST.get('mail') and '@' in request.POST['mail'] and not(DataTable.objects.filter(email=request.POST['mail']).exists()):
+	if request.method=='POST' and '@' in request.POST['mail'] and not(Address.objects.filter(email=request.POST['mail']).exists()):
         	addr = request.POST['mail']
 		dat=datetime.now()
-		new_email=DataTable(email=addr, date=dat)
+		new_email=Address(email=addr, date=dat)
 		new_email.save();
-		return render_to_response('template.html',{'response': "Dziękujemy za pozostawienie e-maila."})
+		return render_to_response('template.html',{'response': "Dziękujemy za pozostawienie adresu e-mail."})
 		
     	else:
 		return render_to_response('template.html',{'response':""})
