@@ -1,6 +1,6 @@
 # Django settings for mysite project.
 
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
@@ -108,7 +108,7 @@ ROOT_URLCONF = 'mysite.urls'
 WSGI_APPLICATION = 'mysite.wsgi.application'
 
 TEMPLATE_DIRS = (
-'/home/anni/Pulpit/djcode/mysite/html_django',
+'/home/anni/devel/spistresci.pl/frontend/html_django',
 )
 
 INSTALLED_APPS = (

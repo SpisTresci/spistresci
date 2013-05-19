@@ -21,7 +21,7 @@ def main(request):
 		return render_to_response('template.html',{'response':""})
  
 def logo(request):
-    image_data = open("/home/anni/Pulpit/djcode/mysite/imgs/Logo_ST.png", "rb").read()
+    image_data = open("/home/anni/devel/spistresci.pl/frontend/imgs/Logo_ST.png", "rb").read()
     return HttpResponse(image_data, mimetype="image/png") 
 
 
