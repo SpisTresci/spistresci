@@ -112,8 +112,8 @@ class XMLConnector(GenericConnector):
             root = et.parse(filename).getroot()
             offers = list(self.weHaveToGoDeeper(root, self.depth))
             for offer in offers:
-                book_number+=1
-                if book_number < self.skip_offers+1:
+                book_number += 1
+                if book_number < self.skip_offers + 1:
                     continue
                 elif self.limit_books and book_number > self.limit_books:
                     break

@@ -45,6 +45,8 @@ class GenericBase(object):
             return GenericBase.registered[context.name[:-len('BooksAuthors')] + className]
         elif context.name.endswith('ISBN'):
             return GenericBase.registered[context.name[:-len('ISBN')] + className]
+        elif context.name.endswith('Format'):
+            return GenericBase.registered[context.name[:-len('Format')] + className]
         else: #Connector
             return GenericBase.registered[context.name + className]
 
@@ -95,11 +97,11 @@ class GenericConnector(GenericBase):
         _list = _list[1:]
         old_value = {}
         if type(dic) is dict:
-            old_value=dic.get(key, {})
+            old_value = dic.get(key, {})
         if not type(old_value) is dict:
             old_value = {'':old_value}
         if _list:
-            old_value[_list[0]] =  self._get_conf_option(_list, value, old_value)
+            old_value[_list[0]] = self._get_conf_option(_list, value, old_value)
         else:
             old_value[''] = value
         if old_value.keys() == ['']:
@@ -120,10 +122,10 @@ class GenericConnector(GenericBase):
                         vars={'date':datetime.now().strftime('%Y%m%d%H%M%S'),
                               'connector_lowcase':self.name.lower(),
                               'connector':self.name}):
-            
-            #this is for managaging config options like 
+
+            #this is for managaging config options like
             #option.suboption = 11
-            (key,value) = item
+            (key, value) = item
             splited = key.split('.')
             self.config[splited[0]] = self._get_conf_option(splited, value, self.config)
 
@@ -237,10 +239,10 @@ class GenericConnector(GenericBase):
         filters = filter_names or self.filters
         if self.filters:
             for _file in self.fetched_files:
-                backup = _file+'.backup'
+                backup = _file + '.backup'
                 #TODO: removing backup file should be configurable
                 shutil.copy2(_file, backup)
-                
+
             for filter_name in filters.split(','):
                 #our config keys should be lower_case
                 f_params = params.get(filter_name, self.filters_config.get(filter_name.lower(), {}))
@@ -284,12 +286,25 @@ class GenericConnector(GenericBase):
     def validate(self, dic):
         id = dic.get('external_id')
         title = dic.get('title')
+        self.validateFormats(dic, id, title)
         self.validateISBNs(dic, id, title)
         self.validatePrice(dic, id, title)
         self.validateSize(dic, id, title)
         self.validateAuthors(dic, id, title)
         self.validateAuthors(dic, id, title, 'lectors')
         self.validateLength(dic, id, title)
+
+
+    def validateFormats(self, dic, id, title):
+        if dic.get("formats") != None:
+            formats = dic["formats"]
+            if isinstance(formats, str) or isinstance(formats, unicode):
+                if "," in formats:
+                    formats = formats.split(",")
+                else:
+                    formats = [formats]
+
+            dic['formats'] = [x.strip().lower() for x in formats]
 
 
     def validateISBNs(self, dic, id, title):
@@ -300,7 +315,7 @@ class GenericConnector(GenericBase):
                 original_isbn = [original_isbn]
 
             for i in original_isbn:
-                isbn_dic={}
+                isbn_dic = {}
                 try:
                     isbn_dic['raw'] = i
                     isbn = Isbn(i)
@@ -358,16 +373,16 @@ class GenericConnector(GenericBase):
                 dic[tag_name] = [unicode(x) for x in dic[tag_name]]
 
             persons = dic[tag_name]
-            new_list_of_person_dicts=[]
-            pdict={}
+            new_list_of_person_dicts = []
+            pdict = {}
             if not (isinstance(persons, list) and not isinstance(persons, str)):
                 persons = [persons]
             for person in persons:
                 pdict["name"] = person.strip()
                 names = [x.strip() for x in person.split(" ")]
                 if len(names) == 2: #imie i nazwisko
-                    n1=names[0].strip()
-                    n2=names[1].strip()
+                    n1 = names[0].strip()
+                    n2 = names[1].strip()
                     pdict["firstName"] = n1 if self.is_name(n1) else (n2 if self.is_name(n2) else n1)
                     pdict["lastName"] = n2 if self.is_name(n1) else (n1 if self.is_name(n2) else n2)
                 elif len(names) == 3:
@@ -489,6 +504,7 @@ class GenericConnector(GenericBase):
         Author = GenericAuthor.getConcretizedClass(context=self)
         BooksAuthors = GenericBooksAuthors.getConcretizedClass(context=self)
         ISBN = GenericISBN.getConcretizedClass(context=self)
+        Format = GenericFormat.getConcretizedClass(context=self)
 
         Session = sessionmaker(bind=SqlWrapper.getEngine())
         session = Session()
@@ -509,6 +525,11 @@ class GenericConnector(GenericBase):
                         isbn = ISBN.get_or_create('core', isbn_d, session)
 
                     book.isbns.append(isbn)
+
+            if d.get('formats') != None:
+                for format in d['formats']:
+                    f = Format.get_or_create(format, session)
+                    book.formats.append(f)
 
             for touple in [('authors', False, False), ('translators', True, False), ('lectors', False, True)]:
                 if d.get(touple[0]) != None:
@@ -536,7 +557,7 @@ class GenericBook(GenericBase):
     @declared_attr
     def declareTablesFor(cls):
         connector_name = cls.__tablename__[:-len("Book")]
-        for table_name in ["BookDescription", "Author", "BookPrice", "BooksAuthors", "BooksISBNs", "ISBN"]:
+        for table_name in ["BookDescription", "Author", "BookPrice", "BooksAuthors", "BooksISBNs", "ISBN", "BooksFormats", "Format"]:
             t = 'class %s%s(%s%s, Base): pass' % (connector_name, table_name, "Generic", table_name)
 #            print t
             exec(t)
@@ -760,3 +781,46 @@ class GenericISBN(GenericBase):
     isbn10 = Column(Unicode(10))
     isbn13 = Column(Unicode(13))
     valid = Column(Boolean)
+
+class GenericBooksFormats(GenericBase):
+    id = Column(Integer, primary_key=True)
+
+    @declared_attr
+    def __tablename__(cls):
+        cls.register()
+        return cls.__name__
+
+    @staticmethod
+    def getConcretizedClass(context):
+        return GenericBase.getConcretizedClass(context, 'BooksFormats')
+
+    @declared_attr
+    def book_id(cls):
+        name = cls.__tablename__[:-len("BooksFormats")]
+        return Column(Integer, ForeignKey(name + 'Book.id'))
+
+    @declared_attr
+    def format_id(cls):
+        name = cls.__tablename__[:-len("BooksFormats")]
+        return Column(Integer, ForeignKey(name + 'Format.id'))
+
+class GenericFormat(GenericBase):
+    id = Column(Integer, primary_key=True)
+    name = Column(Unicode(10))
+    @declared_attr
+    def __tablename__(cls):
+        cls.register()
+        return cls.__name__
+
+    @declared_attr
+    def books(cls):
+        name = cls.__tablename__[:-len("Format")]
+        return relationship(name + "Book", secondary=cls.metadata.tables[name + 'BooksFormats'] , backref="formats")
+
+    @staticmethod
+    def getConcretizedClass(context):
+        return GenericBase.getConcretizedClass(context, 'Format')
+
+    @classmethod
+    def get_or_create(cls, format, session):
+        return GenericConnector.get_or_create_(cls, "name", {"name":format}, session)

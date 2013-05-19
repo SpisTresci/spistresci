@@ -1,7 +1,7 @@
 from Audeo import Audeo
 from Audiobook import Audiobook
 from Audioteka import Audioteka
-from Helion import Helion
+from Bookoteka import Bookoteka
 from BooksOn import BooksOn
 from BezKartek import BezKartek
 from CzeskieKlimaty import CzeskieKlimaty
@@ -11,6 +11,7 @@ from eClicto import eClicto
 from Empik import Empik
 from EscapeMagazine import EscapeMagazine
 from FantastykaPolska import FantastykaPolska
+from Helion import Helion
 from KodeksyWmp3 import KodeksyWmp3
 from Koobe import Koobe
 from Latarnik import Latarnik
