@@ -6,7 +6,7 @@ from django.conf.urls import patterns, include, url
 from welcome_screen.views import main, logo
 
 urlpatterns = patterns('',
-     ('^$', main),    
-     ('^image/$',logo),
+     ('^$', main),
+     ('^image/$', logo),
 
 )
