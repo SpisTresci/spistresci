@@ -82,10 +82,9 @@ class BibliotekaNarodowa(XMLConnector, MARCConnector, ReferenceConnector):
 Base = SqlWrapper.getBaseClass()
 
 class BibliotekaNarodowaBook(GenericBook, Base):
-    id =  Column(Integer, primary_key=True)
-    title = Column(Unicode(512))                    #502
+    title = Column(Unicode(512), primary_key=True)                    #502
     genre = Column(Unicode(16))                     #4
     publisher = Column(Unicode(1024))               #118
-    date = Column(Unicode(4))#, primary_key=True)
+    date = Column(Unicode(4), primary_key=True)
     lang = Column(Unicode(4))                       #
     form = Column(Unicode(8))                       #

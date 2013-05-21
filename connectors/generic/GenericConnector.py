@@ -11,6 +11,7 @@ from datetime import datetime
 import ConfigParser
 from utils import logger_instance
 from sqlalchemy.ext.associationproxy import association_proxy
+from sqlalchemy.orm import class_mapper
 import utils
 #interesting thing: utils.Enum is hide by sql_wrapper.Enum
 from sqlwrapper import *
@@ -497,18 +498,22 @@ class GenericConnector(GenericBase):
         return unpacked_files
 
     @classmethod
-    def get_or_create_(cls, ClassName, param_name, d, session):
+    def get_or_create_(cls, session, ClassName, d, param_name=None):
         c = None
-        if d.get(param_name) != None:
+        if param_name == None:
+            c = session.query(ClassName).filter_by(**d).first()
+        elif d.get(param_name) != None:
             c = session.query(ClassName).filter_by(**{param_name:d[param_name]}).first()
 
         if not c:
             c = ClassName(**d)
         return c
 
-    def get_(self, ClassName, param_name, d, session):
-        return (session.query(ClassName).filter_by(**{param_name:d[param_name]}).first()) if d.get(param_name) != None else None
-
+    def get_(self, session, ClassName, d, param_name=None):
+        if param_name == None:
+            return session.query(ClassName).filter_by(**d).first()
+        else:
+            return (session.query(ClassName).filter_by(**{param_name:d[param_name]}).first()) if d.get(param_name) != None else None
 
     def add_record(self, d):
         Book = GenericBook.getConcretizedClass(context=self)
@@ -521,7 +526,14 @@ class GenericConnector(GenericBase):
         Session = sessionmaker(bind=SqlWrapper.getEngine())
         session = Session()
 
-        book = self.get_(Book, "external_id", d, session)
+
+        primary_keys = [key.name for key in class_mapper(Book).primary_key]
+        primary_keys.remove('id')
+        get_dict = {}
+        for key in primary_keys:
+            get_dict[key] = d[key]
+
+        book = self.get_(session, Book, get_dict)
 
         if not book:
             book = Book(d)
@@ -531,22 +543,22 @@ class GenericConnector(GenericBase):
 
             if d.get('isbns') != None:
                 for isbn_d in d['isbns']:
-                    if self.get_(ISBN, 'raw', isbn_d, session) != None:
-                        isbn = ISBN.get_or_create('raw', isbn_d, session)
+                    if self.get_(session, ISBN, isbn_d, 'raw',) != None:
+                        isbn = ISBN.get_or_create(session, isbn_d, 'raw')
                     else:
-                        isbn = ISBN.get_or_create('core', isbn_d, session)
+                        isbn = ISBN.get_or_create(session, isbn_d, 'core')
 
                     book.isbns.append(isbn)
 
             if d.get('formats') != None:
                 for format in d['formats']:
-                    f = Format.get_or_create(format, session)
+                    f = Format.get_or_create(session, format)
                     book.formats.append(f)
 
             for touple in [('authors', False, False), ('translators', True, False), ('lectors', False, True)]:
                 if d.get(touple[0]) != None:
                     for author in d[touple[0]]:
-                        author = Author.get_or_create(author, session)
+                        author = Author.get_or_create(session, author)
                         books_authors = BooksAuthors(is_translator=touple[1], is_lector=touple[2])
                         books_authors.book = book
                         books_authors.author = author
@@ -563,7 +575,7 @@ class GenericConnector(GenericBase):
 class GenericBook(GenericBase):
     id = Column(Integer, primary_key=True)
     title = Column(Unicode(255))
-    external_id = Column(Integer, unique=True)
+    external_id = Column(Integer, primary_key=True)
     price = Column(Integer)                     #GROSZE!!!
 
     @declared_attr
@@ -613,14 +625,14 @@ class GenericBook(GenericBase):
 
                         for str_author in new_data['authors']:
                             if str_author not in str_author_list:
-                                a = Author.get_or_create(str_author, session)
+                                a = Author.get_or_create(session, str_author)
                                 #a.books.append(self)
                                 self.authors.append(a)
                                 session.add(a)
 
                         for str_author in str_author_list:
                             if str_author not in new_data['authors']:
-                                a = Author.get_or_create(str_author, session)
+                                a = Author.get_or_create(session, str_author)
                                 self.authors.remove(a)
                                 session.commit()
 
@@ -685,8 +697,8 @@ class GenericAuthor(GenericBase):
         return unicode(self.name)
 
     @classmethod
-    def get_or_create(cls, author, session):
-        return GenericConnector.get_or_create_(cls, 'name', author, session)
+    def get_or_create(cls, session, author):
+        return GenericConnector.get_or_create_(session, cls, author, 'name')
 
     @staticmethod
     def getConcretizedClass(context):
@@ -785,8 +797,8 @@ class GenericISBN(GenericBase):
         return GenericBase.getConcretizedClass(context, 'ISBN')
 
     @classmethod
-    def get_or_create(cls, param_name, isbn_dict, session):
-        return GenericConnector.get_or_create_(cls, param_name, isbn_dict, session)
+    def get_or_create(cls, session, isbn_dict, param_name):
+        return GenericConnector.get_or_create_(session, cls, isbn_dict, param_name)
 
     raw = Column(Unicode(20), unique=True)
     core = Column(Unicode(9), unique=True)
@@ -834,5 +846,5 @@ class GenericFormat(GenericBase):
         return GenericBase.getConcretizedClass(context, 'Format')
 
     @classmethod
-    def get_or_create(cls, format, session):
-        return GenericConnector.get_or_create_(cls, "name", {"name":format}, session)
+    def get_or_create(cls, session, format):
+        return GenericConnector.get_or_create_(session, cls, {"name":format}, "name")
