@@ -11,3 +11,5 @@ from GenericConnector import GenericBase
 from XMLConnector import XMLConnector
 
 from ReferenceConnector import ReferenceConnector
+
+from MARCConnector import MARCConnector

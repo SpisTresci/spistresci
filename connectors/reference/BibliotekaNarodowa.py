@@ -1,25 +1,10 @@
 # -*- coding: utf-8 -*-
 #!/usr/bin/env python
-
-# ***** To run this, please Install PyZ3950: *****
-# git clone git://github.com/asl2/PyZ3950.git PyZ3950
-# cd PyZ3950
-# sudo python setup.py install
-#
-# ********  PyZ3950 also need ply library: *******
-# sudo easy_install ply
-
-from datetime import datetime
-from PyZ3950 import zoom, zmarc
 from connectors.generic import *
-import lxml.etree as et
-import urllib2
-import os
 from sqlwrapper import *
 import re
-import glob
 
-class BibliotekaNarodowa(XMLConnector, ReferenceConnector):
+class BibliotekaNarodowa(XMLConnector, MARCConnector, ReferenceConnector):
 
     #dict of xml_tag -> db_column_name translations
     xml_tag_dict = {
@@ -38,37 +23,12 @@ class BibliotekaNarodowa(XMLConnector, ReferenceConnector):
         #"./identifier[@type='isbn']":('external_id', ''),
     }
 
+    XML_FILE_SIZE_LIMIT = 5000
+    QUERY = 'isbn="9788300*"'
+
     def fetchData(self):
-        self.conn = self.make_conn ()
-        self.fetch_mods (zoom.Query ('CCL', 'isbn="978*"'))
-
-
-    def make_conn(self):
-        conn = zoom.Connection ('193.59.172.100', 210)
-        conn.databaseName = 'INNOPAC'
-        conn.preferredRecordSyntax = 'USMARC'
-        return conn
-
-    def fetch_mods(self, query):
-        res_list = list(self.conn.search (query))
-        dir_name = "data/" + datetime.now().strftime('%Y%m%d%H%M%S')
-        if not os.path.exists(dir_name):
-            os.makedirs(dir_name)
-
-        n = i = 0
-        while i != len(res_list):
-            filename = os.path.join(dir_name, "bibliotekanarodowa_%d.xml" % n)
-            print "bibliotekanarodowa_%d.xml" % n
-            f = open(filename, 'w')
-            f.write("<root>")
-            for j in range(5000):
-                i = i + 1
-                if i == len(res_list):
-                    break
-                marc_obj = zmarc.MARC (res_list[i].data, strict=0)
-                f.write(marc_obj.toMODS ())
-            f.write("</root>")
-            n = n + 1
+        self.conn = self.makeConnection()
+        self.fetchMods(self.QUERY)
 
     def validate(self, dic):
         id = dic.get('external_id')
@@ -78,7 +38,6 @@ class BibliotekaNarodowa(XMLConnector, ReferenceConnector):
         self.validateAuthors(dic, id, title)
         self.validateAuthors(dic, id, title, "translators")
 
-
     def validateLists(self, dic):
         for tag_name in dic.keys():
             if dic.get(tag_name) != None:
@@ -87,9 +46,6 @@ class BibliotekaNarodowa(XMLConnector, ReferenceConnector):
                         dic[tag_name] = dic[tag_name][0]
                     else:
                         dic[tag_name] = unicode(dic[tag_name][0])
-
-
-
 
     def validateAuthors(self, dic, id, title, tag_name='authors'):
         if dic.get(tag_name) != None:
@@ -106,10 +62,10 @@ class BibliotekaNarodowa(XMLConnector, ReferenceConnector):
                     firstNames = names[1]
                     if " " in firstNames:
                         first_and_middle = firstNames.split(" ")
-                        pdict["firstName"] = self.remove_dot_from_name(first_and_middle[0])
-                        pdict["middleName"] = self.remove_dot_from_name(first_and_middle[1]) 
+                        pdict["firstName"] = self.removeDotFromName(first_and_middle[0])
+                        pdict["middleName"] = self.removeDotFromName(first_and_middle[1]) 
                     else:
-                        pdict["firstName"] = self.remove_dot_from_name(firstNames)
+                        pdict["firstName"] = self.removeDotFromName(firstNames)
                 elif len(names) == 1:
                     print "1 - "  + person
                 else:
@@ -119,9 +75,8 @@ class BibliotekaNarodowa(XMLConnector, ReferenceConnector):
 
             dic[tag_name] = new_list_of_person_dicts
 
-
-    def remove_dot_from_name(self, name):
-        return name[:-1] if (name.endswith(".") and self.is_name(name[:-1])) else name
+    def removeDotFromName(self, name):
+        return name[:-1] if (name.endswith(".") and self.isName(name[:-1])) else name
 
 
 Base = SqlWrapper.getBaseClass()

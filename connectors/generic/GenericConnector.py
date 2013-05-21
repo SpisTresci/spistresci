@@ -16,6 +16,7 @@ import utils
 from sqlwrapper import *
 from pyisbn import *
 from connectors import Tools
+import glob
 
 Base = SqlWrapper.getBaseClass()
 
@@ -75,6 +76,8 @@ class GenericConnector(GenericBase):
 
     config_file = 'conf/connectors.ini'
     config_object = None
+
+    list_of_names = []
 
     @classmethod
     def read_config(cls):
@@ -137,6 +140,9 @@ class GenericConnector(GenericBase):
         self.register()
         self.parse_config(self.config_file)
         self.url = self.config['url']
+        self.port = self.config.get('port', '')
+        self.database_name = self.config.get('database_name', '')
+        self.preferred_record_syntax = self.config.get('preferred_record_syntax', '')
         self.filename = self.config['filename']
         self.backup_dir = self.config.get('backup_dir', '')
         self.backup_archive = self.ArchiveType.int(self.config.get('backup_archive', 'NONE'))
@@ -156,6 +162,7 @@ class GenericConnector(GenericBase):
             self.filters = self.filters_config
             self.filters_config = {}
         self.fetched_files = []
+        self.loadListOfNames()
 
     def __del__(self):
         self.logger.debug('Cleaning up after executing %s connector' % self.name)
@@ -383,8 +390,8 @@ class GenericConnector(GenericBase):
                 if len(names) == 2: #imie i nazwisko
                     n1 = names[0].strip()
                     n2 = names[1].strip()
-                    pdict["firstName"] = n1 if self.is_name(n1) else (n2 if self.is_name(n2) else n1)
-                    pdict["lastName"] = n2 if self.is_name(n1) else (n1 if self.is_name(n2) else n2)
+                    pdict["firstName"] = n1 if self.isName(n1) else (n2 if self.isName(n2) else n1)
+                    pdict["lastName"] = n2 if self.isName(n1) else (n1 if self.isName(n2) else n2)
                 elif len(names) == 3:
                     pdict["firstName"] = names[0].strip()
                     pdict["middleName"] = names[1].strip()
@@ -397,9 +404,14 @@ class GenericConnector(GenericBase):
 
             dic[tag_name] = new_list_of_person_dicts
 
-    #TODO
-    def is_name(self, name):
-        return True
+    def isName(self, word):
+        return word in self.list_of_names
+
+    def loadListOfNames(self):
+        for file in glob.glob("data/names/*"):
+            with open(file, 'rU') as f:
+                for line in f:
+                    self.list_of_names.append(line.strip())
 
     def validateSize(self, dic, id, title):
         pass
