@@ -27,6 +27,13 @@ class TestDataValidator(object):
         eq_(input, expected)
 
     @nottest
+    def _test_validate_tag_name_helper_eq(self, functionName, input, expected):
+        validateFun = getattr(self.dv, "validate" + functionName)
+        validateFun(input, "id", "title")
+        eq_(input, expected)
+
+
+    @nottest
     def _test_validate_helper_not_eq(self, functionName, input, expected):
         validateFun = getattr(self.dv, "validate" + functionName)
         validateFun(input, "id", "title")
@@ -52,12 +59,16 @@ class TestDataValidator(object):
 
     @nottest
     @raises(DataValidatorError)
-    def _test_validate_helper_raises(self, functionName, input):
+    def _test_validate_helper_raises(self, functionName, input, tag_name=None):
         validateFun = getattr(self.dv, "validate" + functionName)
-        validateFun(input, "id", "title")
+        if tag_name:
+            validateFun(input, "id", "title", tag_name)
+        else:
+            validateFun(input, "id", "title")
 
     def test_validate_price(self):
         yield self._test_validate_helper_eq, "Price", {}, {"price":"0"}
+        yield self._test_validate_helper_eq, "Price", {"price":""}, {"price":"0"}
         yield self._test_validate_helper_eq, "Price", {"price":"10"}, {"price":"1000"}
         yield self._test_validate_helper_eq, "Price", {"price":"124"}, {"price":"12400"}
         yield self._test_validate_helper_eq, "Price", {"price":"000"}, {"price":"0"}
@@ -105,6 +116,7 @@ class TestDataValidator(object):
 
         yield self._test_validate_helper_eq, "Formats", {"formats":"pdf mobi epub"}, {"formats":["pdf", "mobi", "epub"]}
 
+        yield self._test_validate_helper_eq, "Formats", {"formats":[u'pdf', u'epub', u'mobi']}, {"formats":[u"pdf", u"epub", u"mobi"]}
 
         yield self._test_validate_helper_warning, "Formats", {"formats":"Pdf, Mobi, Mobi"}
         yield self._test_validate_helper_warning, "Formats", {"formats":"Pdf, Mobi, MOBI"}
@@ -118,6 +130,7 @@ class TestDataValidator(object):
 
     def test_validate_isbns(self):
         yield self._test_validate_helper_eq, "ISBNs", {}, {"isbns":[]}
+        yield self._test_validate_helper_eq, "ISBNs", {"isbns":""}, {"isbns":[]}
         yield self._test_validate_helper_eq, "ISBNs", {"isbns":"978-83-7308-701-9"}, {"isbns":[{    "raw":"978-83-7308-701-9",
                                                                                                     'valid': True,
                                                                                                     'isbn10': '837308701X',
@@ -205,10 +218,10 @@ class TestDataValidator(object):
         yield self._test_validate_helper_eq, "ISBNs", {"isbns":"12345"}, {"isbns":[{'raw': '12345', 'valid': False}]}
         yield self._test_validate_helper_eq, "ISBNs", {"isbns":"123456789"}, {"isbns":[{'raw': '123456789', 'valid': False}]}
         yield self._test_validate_helper_eq, "ISBNs", {"isbns":"123456789"}, {"isbns":[{'raw': '123456789', 'valid': False}]}
-        yield self._test_validate_helper_eq, "ISBNs", {"isbns":"1234567890"}, {"isbns":[{'raw': '1234567890', 'valid': False}]}
+        yield self._test_validate_helper_eq, "ISBNs", {"isbns":"1234567890"}, {"isbns":[{'raw': '1234567890', 'valid': False, 'core': '123456789'}]}
         yield self._test_validate_helper_eq, "ISBNs", {"isbns":"12345678901"}, {"isbns":[{'raw': '12345678901', 'valid': False}]}
         yield self._test_validate_helper_eq, "ISBNs", {"isbns":"1234"}, {"isbns":[{'raw': '1234', 'valid': False}]}
-        yield self._test_validate_helper_eq, "ISBNs", {"isbns":"978-83-61445-20-5"}, {"isbns":[{'raw': '978-83-61445-20-5', 'valid': False}]}
+        yield self._test_validate_helper_eq, "ISBNs", {"isbns":"978-83-61445-20-5"}, {"isbns":[{'raw': '978-83-61445-20-5', 'valid': False, 'core': '836144520'}]}
 
         yield self._test_validate_helper_eq, "ISBNs", {"isbns":"ISBN978-83-936379-9-7"}, {"isbns":[{"raw":"978-83-936379-9-7",
                                                                                                     'valid': True,
@@ -216,31 +229,44 @@ class TestDataValidator(object):
                                                                                                     'isbn13': '9788393637997',
                                                                                                     'core': '839363799'}]}
 
-        yield self._test_validate_helper_eq, "ISBNs", {"isbns":"978-83-933966-0-4"}, {"isbns":[{'raw': '978-83-933966-0-4', 'valid': False}]}
+        yield self._test_validate_helper_eq, "ISBNs", {"isbns":"978-83-933966-0-4"}, {"isbns":[{'raw': '978-83-933966-0-4', 'valid': False, 'core': '839339660'}]}
 
     def test_validate_authors(self):
-        yield self._test_validate_helper_eq, "Authors", {"authors":""}, {"authors":[]}
+        import sys
+        yield self._test_validate_helper_eq, "Authors", {}, {}
+        yield self._test_validate_helper_eq, "Authors", {"authors":""}, {"persons":[{"authors":[]}]}
+        yield self._test_validate_tag_name_helper_eq, "Authors", {"authors":""}, {"persons":[{"authors":[]}]}
+        yield self._test_validate_tag_name_helper_eq, "Translators", {"translators":""}, {"persons":[{"translators":[]}]}
+        yield self._test_validate_tag_name_helper_eq, "Redactors", {"redactors":""}, {"persons":[{"redactors":[]}]}
+        yield self._test_validate_tag_name_helper_eq, "Lectors", {"lectors":""}, {"persons":[{"lectors":[]}]}
 
-        yield self._test_validate_helper_eq, "Authors", {"authors":u"Mariola Jąder"}, {"authors":[{'name':u'Mariola Jąder', 'firstName': 'Mariola', 'lastName': u'Jąder'}]}
-        yield self._test_validate_helper_eq, "Authors", {"authors":u"Mariola  Jąder"}, {"authors":[{'name':u'Mariola Jąder', 'firstName': 'Mariola', 'lastName': u'Jąder'}]}
-        yield self._test_validate_helper_not_eq, "Authors", {"authors":u"Mariola Jąder"}, {"authors":[{'name':u'Mariola Jąder', 'firstName': 'Mariola', 'middleName': '', 'lastName': u'Jąder'}]}
+        yield self._test_validate_helper_raises, "Persons", {}, "asfasfas"
+        yield self._test_validate_helper_raises, "Persons", {}, "author"
+        yield self._test_validate_helper_raises, "Persons", {}, "translator"
+        yield self._test_validate_helper_raises, "Persons", {}, "redactor"
+        yield self._test_validate_helper_raises, "Persons", {}, "lector"
 
-        yield self._test_validate_helper_eq, "Authors", {"authors":u"Małgorzata Żmudzka-Kosała"}, {"authors":[{'name':u'Małgorzata Żmudzka-Kosała', 'firstName': u'Małgorzata', 'lastName': u'Żmudzka-Kosała'}]}
-        yield self._test_validate_helper_not_eq, "Authors", {"authors":u"Małgorzata Żmudzka-Kosała"}, {"authors":[{'name':u'Małgorzata Żmudzka-Kosała', 'firstName': 'Małgorzata', 'lastName': u'Żmudzka-Kosała'}]}
-        yield self._test_validate_helper_eq, "Authors", {"authors":u"Małgorzata Żmudzka - Kosała"}, {"authors":[{'name':u'Małgorzata Żmudzka-Kosała', 'firstName': u'Małgorzata', 'lastName': u'Żmudzka-Kosała'}]}
-        yield self._test_validate_helper_not_eq, "Authors", {"authors":u"Małgorzata Żmudzka - Kosała"}, {"authors":[{'name':u'Małgorzata Żmudzka - Kosała', 'firstName': 'Małgorzata', 'lastName': u'Żmudzka - Kosała'}]}
-        yield self._test_validate_helper_not_eq, "Authors", {"authors":u"Małgorzata Żmudzka - Kosała"}, {"authors":[{'name':u'Małgorzata Żmudzka - Kosała', 'firstName': 'Małgorzata', 'lastName': u'Żmudzka-Kosała'}]}
-        yield self._test_validate_helper_not_eq, "Authors", {"authors":u"Małgorzata Żmudzka - Kosała"}, {"authors":[{'name':u'Małgorzata Żmudzka - Kosała'}]}
+
+        yield self._test_validate_helper_eq, "Authors", {"authors":u"Mariola Jąder"}, {"persons":[{"authors":[{'name':u'Mariola Jąder', 'firstName': 'Mariola', 'middleName': u'', 'lastName': u'Jąder'}]}]}
+        yield self._test_validate_helper_eq, "Authors", {"authors":u"Mariola  Jąder"}, {"persons":[{"authors":[{'name':u'Mariola Jąder', 'firstName': 'Mariola', 'middleName': u'', 'lastName': u'Jąder'}]}]}
+        yield self._test_validate_helper_eq, "Authors", {"authors":u"Mariola Jąder"}, {"persons":[{"authors":[{'name':u'Mariola Jąder', 'firstName': 'Mariola', 'middleName': '', 'lastName': u'Jąder'}]}]}
+
+        yield self._test_validate_helper_eq, "Authors", {"authors":u"Małgorzata Żmudzka-Kosała"}, {"persons":[{"authors":[{'name':u'Małgorzata Żmudzka-Kosała', 'firstName': u'Małgorzata', 'middleName': u'', 'lastName': u'Żmudzka-Kosała'}]}]}
+        yield self._test_validate_helper_not_eq, "Authors", {"authors":u"Małgorzata Żmudzka-Kosała"}, {"persons":[{"authors":[{'name':u'Małgorzata Żmudzka-Kosała', 'firstName': 'Małgorzata', 'middleName': u'', 'lastName': u'Żmudzka-Kosała'}]}]}
+        yield self._test_validate_helper_eq, "Authors", {"authors":u"Małgorzata Żmudzka - Kosała"}, {"persons":[{"authors":[{'name':u'Małgorzata Żmudzka-Kosała', 'firstName': u'Małgorzata', 'middleName': u'', 'lastName': u'Żmudzka-Kosała'}]}]}
+        yield self._test_validate_helper_not_eq, "Authors", {"authors":u"Małgorzata Żmudzka - Kosała"}, {"persons":[{"authors":[{'name':u'Małgorzata Żmudzka - Kosała', 'firstName': 'Małgorzata', 'middleName': u'', 'lastName': u'Żmudzka - Kosała'}]}]}
+        yield self._test_validate_helper_not_eq, "Authors", {"authors":u"Małgorzata Żmudzka - Kosała"}, {"persons":[{"authors":[{'name':u'Małgorzata Żmudzka - Kosała', 'firstName': 'Małgorzata', 'middleName': u'', 'lastName': u'Żmudzka-Kosała'}]}]}
+        yield self._test_validate_helper_not_eq, "Authors", {"authors":u"Małgorzata Żmudzka - Kosała"}, {"persons":[{"authors":[{'name':u'Małgorzata Żmudzka - Kosała'}]}]}
 
         #yield self._test_validate_helper_not_eq, "Authors", {"authors":u"Red. Katarzyna Cymbalista-Hajib"}, {"authors":[{'middleName': u'Katarzyna', 'lastName': u'Cymbalista-Hajib', 'name': u'Red. Katarzyna Cymbalista-Hajib', 'firstName': u'Red.'}]}
 
-        yield self._test_validate_helper_eq, "Authors", {"authors":u"J.Kobuszewski"}, {"authors":[{'name':u'J. Kobuszewski', 'firstName': 'J.', 'lastName': u'Kobuszewski'}]}
-        yield self._test_validate_helper_eq, "Authors", {"authors":u"S.J.Watson"}, {"authors":[{'name':u'S. J. Watson', 'firstName': 'S.', 'middleName': 'J.', 'lastName': u'Watson'}]}
-        yield self._test_validate_helper_eq, "Authors", {"authors":u"George R.R.  Martin"}, {"authors":[{'name':u'George R. R. Martin'}]}
+        yield self._test_validate_helper_eq, "Authors", {"authors":u"J.Kobuszewski"}, {"persons":[{"authors":[{'name':u'J. Kobuszewski', 'firstName': 'J.', 'middleName': u'', 'lastName': u'Kobuszewski'}]}]}
+        yield self._test_validate_helper_eq, "Authors", {"authors":u"S.J.Watson"}, {"persons":[{"authors":[{'name':u'S. J. Watson', 'firstName': 'S.', 'middleName': 'J.', 'lastName': u'Watson'}]}]}
+        yield self._test_validate_helper_eq, "Authors", {"authors":u"George R.R.  Martin"}, {"persons":[{"authors":[{'middleName': u'', 'lastName': u'', 'name': u'George R. R. Martin', 'firstName': u''}]}]}
 
-        yield self._test_validate_helper_eq, "Authors", {"authors":u"PIOTR CHOLEWIŃSKI"}, {"authors":[{'lastName': u'Cholewiński', 'name': u'PIOTR CHOLEWIŃSKI', 'firstName': u'Piotr'}]}
-        yield self._test_validate_helper_eq, "Authors", {"authors":u"H.Łabonarska"}, {"authors":[{'lastName': u'Łabonarska', 'name': u'H. Łabonarska', 'firstName': u'H.'}]}
-        yield self._test_validate_helper_eq, "Authors", {"authors":u"Wojciech Piotr  Kwiatek"}, {"authors":[{'lastName': 'Kwiatek', 'name': u'Wojciech Piotr Kwiatek', 'firstName': 'Wojciech', 'middleName': 'Piotr' }]}
+        yield self._test_validate_helper_eq, "Authors", {"authors":u"PIOTR CHOLEWIŃSKI"}, {"persons":[{"authors":[{'lastName': u'Cholewiński', 'name': u'PIOTR CHOLEWIŃSKI', 'middleName': u'', 'firstName': u'Piotr'}]}]}
+        yield self._test_validate_helper_eq, "Authors", {"authors":u"H.Łabonarska"}, {"persons":[{"authors":[{'lastName': u'Łabonarska', 'name': u'H. Łabonarska', 'middleName': u'', 'firstName': u'H.'}]}]}
+        yield self._test_validate_helper_eq, "Authors", {"authors":u"Wojciech Piotr  Kwiatek"}, {"persons":[{"authors":[{'lastName': 'Kwiatek', 'name': u'Wojciech Piotr Kwiatek', 'firstName': 'Wojciech', 'middleName': 'Piotr' }]}]}
         #yield self._test_validate_helper_eq, "Authors", {"authors":u"INFOA International s.r.o."}, {"authors":[{'name':u'INFOA International s.r.o.'}]}
 
         #ks. dr Krzysztof Marcyński SAC
@@ -255,17 +281,20 @@ class TestDataValidator(object):
         #Wilhelm i Jakub Grimm
         #Św. Jan od Krzyża
 
-        yield self._test_validate_helper_eq, "Authors", {"authors":u"Tomasz Martyniuk;Barbara Dudek;Monika Wąs"}, {"authors":[
+        yield self._test_validate_helper_eq, "Authors", {"authors":u"Tomasz Martyniuk;Barbara Dudek;Monika Wąs"}, {"persons":[{"authors":[
                                                                                                                               {'lastName': u'Martyniuk',
                                                                                                                                'name': u'Tomasz Martyniuk',
+                                                                                                                               'middleName': u'',
                                                                                                                                'firstName': u'Tomasz'},
 
                                                                                                                               {'lastName': u'Dudek',
                                                                                                                                'name': u'Barbara Dudek',
+                                                                                                                               'middleName': u'',
                                                                                                                                'firstName': u'Barbara'},
 
                                                                                                                               {'lastName': u'W\u0105s',
                                                                                                                                'name': u'Monika W\u0105s',
+                                                                                                                               'middleName': u'',
                                                                                                                                'firstName': u'Monika'}
                                                                                                                               ]
-                                                                                                                   }
+                                                                                                                   }]}

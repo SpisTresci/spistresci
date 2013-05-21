@@ -83,6 +83,8 @@ class GenericConnector(GenericBase, DataValidator):
     config_file = 'conf/connectors.ini'
     config_object = None
 
+    rows_initialized = True;#False
+
     @classmethod
     def read_config(cls):
         cls.config_object = MultiLevelConfigParser()
@@ -207,6 +209,14 @@ class GenericConnector(GenericBase, DataValidator):
         tar = tarfile.open(tar_name, 'w:%s' % mode)
         tar.add(path, arcname=basename)
 
+    def createSession(self):
+        Session = sessionmaker(bind = SqlWrapper.getEngine())
+        self.session = Session()
+
+    def closeSession(self):
+        self.session.commit()
+        self.session.close()
+
     #@abc.abstractmethod
     def fetchData(self):
         """fetchData method"""
@@ -230,14 +240,14 @@ class GenericConnector(GenericBase, DataValidator):
 
     def applySingleFilter(self, filter_name, f_params):
         try:
-            self.logger.debug('Trying to run filter %s with params %s on files: %s' % 
+            self.logger.debug('Trying to run filter %s with params %s on files: %s' %
               (filter_name, f_params, self.fetched_files))
             filter = Tools.load_filter(filter_name)(self.logger, f_params)
             self.logger.info('Running filter %s' % filter)
             for file in self.fetched_files:
                 filter.run(file)
         except Exception as e:
-            self.logger.exception('Exception caught while executing filter %s for connector %s' % 
+            self.logger.exception('Exception caught while executing filter %s for connector %s' %
               (filter_name, self.name))
             raise e
 
@@ -376,6 +386,7 @@ class GenericConnector(GenericBase, DataValidator):
             unpacked_files.append(unpacked_file)
         return unpacked_files
 
+    #TODO: move to SqlWrapper
     @classmethod
     def get_or_create_(cls, session, ClassName, d, param_name=None):
         c = None
@@ -388,13 +399,19 @@ class GenericConnector(GenericBase, DataValidator):
             c = ClassName(**d)
         return c
 
-    def get_(self, session, ClassName, d, param_name=None):
+    @classmethod
+    def get_(cls, session, ClassName, d, param_name=None):
         if param_name == None:
             return session.query(ClassName).filter_by(**d).first()
         else:
             return (session.query(ClassName).filter_by(**{param_name:d[param_name]}).first()) if d.get(param_name) != None else None
 
     def add_record(self, d):
+        #TODO: made this thread safe
+        if not GenericConnector.rows_initialized:
+            PersonRole.init_rows()
+            GenericConnector.rows_initialized = True
+
         Book = GenericBook.getConcretizedClass(context=self)
         Description = GenericBookDescription.getConcretizedClass(context=self)
         Author = GenericAuthor.getConcretizedClass(context=self)
@@ -402,8 +419,8 @@ class GenericConnector(GenericBase, DataValidator):
         ISBN = GenericISBN.getConcretizedClass(context=self)
         Format = GenericFormat.getConcretizedClass(context=self)
 
-        Session = sessionmaker(bind=SqlWrapper.getEngine())
-        session = Session()
+        #Session = sessionmaker(bind=SqlWrapper.getEngine())
+        session = self.session #Session()
 
         search_keys = [c.name for c in Book.__table__.columns if c.unique or c.primary_key]
         search_keys.remove('id')
@@ -433,32 +450,36 @@ class GenericConnector(GenericBase, DataValidator):
                     f = Format.get_or_create(session, format)
                     book.formats.append(f)
 
-            for touple in [('authors', False, False), ('translators', True, False), ('lectors', False, True)]:
-                if d.get(touple[0]) != None:
-                    for author in d[touple[0]]:
-                        author = Author.get_or_create(session, author)
-                        books_authors = BooksAuthors(is_translator=touple[1], is_lector=touple[2])
+            if d.get('persons') != None:
+                for role_dict in d['persons']:
+                    role = role_dict.keys()[0]
+                    list_of_person_dicts = role_dict[role]
+
+                    role_ = PersonRole.get(session, role)
+                    for person_dict in list_of_person_dicts:
+                        author = Author.get_or_create(session, person_dict)
+                        books_authors = BooksAuthors()
+                        books_authors.role = role_
                         books_authors.book = book
                         books_authors.author = author
                         session.add(books_authors)
 
             session.add(book)
-            session.commit()
+            #session.commit()
         else:
             book.update(d, session)
-            session.commit()
+            #session.commit()
 
-        session.close()
+        #session.close()
 
     statuses = {
-                0:('unavailable','niedostepna'),
-                1:('available','dostepna'),
-                2:('in preparation','w przygotowaniu'),
-                3:('presale','przedsprzedaz'),
-                4:('print on demand','druk na zadanie'),
-                5:('few pieces left in stock','dostepna w malej ilosci'),
+                0:('unavailable', 'niedostepna'),
+                1:('available', 'dostepna'),
+                2:('in preparation', 'w przygotowaniu'),
+                3:('presale', 'przedsprzedaz'),
+                4:('print on demand', 'druk na zadanie'),
+                5:('few pieces left in stock', 'dostepna w malej ilosci'),
                 }
-
 
 class GenericBook(GenericBase):
     id = Column(Integer, primary_key=True)
@@ -471,7 +492,7 @@ class GenericBook(GenericBase):
     @declared_attr
     def declareTablesFor(cls):
         connector_name = cls.__tablename__[:-len("Book")]
-        for table_name in ["BookDescription", "Author", "BookPrice", "BooksAuthors", "BooksISBNs", "ISBN", "BooksFormats", "Format"]:
+        for table_name in ["BookDescription", "Author", "BookPrice", "BooksAuthors", "ISBN", "BooksFormats", "Format"]:
             t = 'class %s%s(%s%s, Base): pass' % (connector_name, table_name, "Generic", table_name)
 #            print t
             exec(t)
@@ -479,6 +500,10 @@ class GenericBook(GenericBase):
     @declared_attr
     def description(cls):
         return relationship(cls.__tablename__ + "Description", uselist=False, backref="book")
+
+    @declared_attr
+    def isbns(cls):
+        return relationship(cls.__tablename__[:-len("Book")] + "ISBN", backref="book", lazy='dynamic')
 
     @declared_attr
     def __tablename__(cls):
@@ -504,6 +529,7 @@ class GenericBook(GenericBase):
             except AttributeError:
                 pass
 
+    #DoNotLetCommit
     def update(self, new_data, session):
         new_book = type(self)(new_data)
         for key in new_data:
@@ -511,7 +537,7 @@ class GenericBook(GenericBase):
                 atr_type = type(getattr(self, key))
                 un = unicode(getattr(self, key))
 
-                if key == 'authors':
+                if key == 'persons':
                     str_author_list = []
                     for author in self.authors:
                         str_author_list.append(unicode(author))
@@ -544,7 +570,7 @@ class GenericBook(GenericBase):
     def getConcretizedClass(context):
         return GenericBase.getConcretizedClass(context, 'Book')
 
-    
+
 class GenericBookDescription(GenericBase):
     id = Column(Integer, primary_key=True)
     description = Column(Unicode(20000)) #TODO: parametr musi byc dynamicznie ustawiany
@@ -577,7 +603,6 @@ class GenericAuthor(GenericBase):
     firstName = Column(Unicode(32))
     middleName = Column(Unicode(32))
     lastName = Column(Unicode(32))
-
 
     @declared_attr
     def __tablename__(cls):
@@ -623,8 +648,14 @@ class GenericBooksAuthors(GenericBase):
         return cls.__name__
 
     id = Column(Integer, primary_key=True)
-    is_translator = Column(Boolean)
-    is_lector = Column(Boolean)
+
+    @declared_attr
+    def role_id(cls):
+        return Column(Integer, ForeignKey('PersonRole.id'))
+
+    @declared_attr
+    def role(cls):
+        return relationship(PersonRole)
 
     @staticmethod
     def getConcretizedClass(context):
@@ -653,27 +684,28 @@ class GenericBooksAuthors(GenericBase):
         return relationship(table, backref=name + "_authorship")
 
 
-class GenericBooksISBNs(GenericBase):
+class PersonRole(Base):
+    __tablename__ = "PersonRole"
+
     id = Column(Integer, primary_key=True)
+    name = Column(Unicode(10), unique=True)
 
-    @declared_attr
-    def __tablename__(cls):
-        cls.register()
-        return cls.__name__
+    @classmethod
+    def get(cls, session, role):
+        return GenericConnector.get_(session, cls, {"name":role[:-1]}, 'name')
 
-    @staticmethod
-    def getConcretizedClass(context):
-        return GenericBase.getConcretizedClass(context, 'BooksISBNs')
+    @classmethod
+    def get_or_create(cls, session, role):
+        return GenericConnector.get_or_create_(session, cls, {"name":role}, 'name')
 
-    @declared_attr
-    def book_id(cls):
-        name = cls.__tablename__[:-len("BooksISBNs")]
-        return Column(Integer, ForeignKey(name + 'Book.id'))
+    @classmethod
+    def init_rows(cls):
+        session = sessionmaker(bind=SqlWrapper.getEngine())()
+        for role in DataValidator.supported_persons:
+            session.add(PersonRole(name=role))
+        session.commit()
 
-    @declared_attr
-    def isbn_id(cls):
-        name = cls.__tablename__[:-len("BooksISBNs")]
-        return Column(Integer, ForeignKey(name + 'ISBN.id'))
+SqlWrapper.table_list += ["PersonRole"]
 
 class GenericISBN(GenericBase):
     id = Column(Integer, primary_key=True)
@@ -684,9 +716,8 @@ class GenericISBN(GenericBase):
         return cls.__name__
 
     @declared_attr
-    def books(cls):
-        name = cls.__tablename__[:-len("ISBN")]
-        return relationship(name + "Book", secondary=cls.metadata.tables[name + 'BooksISBNs'] , backref="isbns")
+    def book_id(cls):
+        return Column(Integer, ForeignKey(cls.__tablename__[:-len("ISBN")] + 'Book.id'))
 
     @staticmethod
     def getConcretizedClass(context):
@@ -735,7 +766,7 @@ class GenericFormat(GenericBase):
     @declared_attr
     def books(cls):
         name = cls.__tablename__[:-len("Format")]
-        return relationship(name + "Book", secondary=cls.metadata.tables[name + 'BooksFormats'] , backref="formats")
+        return dynamic_loader(name + "Book", secondary = cls.metadata.tables[name + 'BooksFormats'] , backref = backref("formats", lazy = 'dynamic'), lazy = 'dynamic',)
 
     @staticmethod
     def getConcretizedClass(context):

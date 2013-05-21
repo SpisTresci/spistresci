@@ -11,10 +11,10 @@ import re
 import sys
 class TestSpecificConnectors(object):
 
-    def setUp(self):
+    def setup_func(self):
         pass
 
-    def tearDown(self):
+    def teardown_func(self):
         pass
 
     @nottest

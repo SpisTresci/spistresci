@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<offers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1">
+  <group name="books">
+    <o id="8554" price="27.90" url="https://www.a4b-tracking.com/pl/stat-click-feed/73703410/33" avail="1">
+      <cat><![CDATA[Literatura faktu]]></cat>
+      <name><![CDATA[Futbol jest okrutny]]></name>
+      <imgs>
+        <main url="http://woblink.com/storable/storable/pub_photos/192777-futbol-jest-okrutny.jpg"/>
+      </imgs>
+      <desc><![CDATA["„Wiecie, jak to jest żyć z perspektywą wykitowania podczas meczu, w dodatku perspektywą naukowo potwierdzoną? Dlaczego ministerstwo zdrowia, a niechby nawet ministerstwo sportu nie informuje, że oglądanie Tottenhamu może być przyczyną wielu groźnych chorób?” – to brzmi jak fragment Futbolowej gorączki Nicka Hornby’ego, choć dotyczy klubu, z którym Hornby jako kibic Arsenalu raczej nie chciałby mieć nic wspólnego. Futbol jest okrutny to pełna humoru autoanaliza kibicowskiego uzależnienia: opowieść o tym, jak piłka nożna niepostrzeżenie zagarnia kolejne przestrzenie życia dziennikarza „Tygodnika Powszechnego”, jak komplikuje udział w arcyważnej naradzie kierownictwa firmy, jak wpływa na wychowywanie dzieci i relacje z własnym ojcem, jak zmienia myślenie o seksie i śmierci.
+
+Równocześnie jest to opowieść o chorobach i wielkości współczesnej piłki. Z jednej strony komercja, bankrutujące kluby, rasizm, seksizm i homofobia, ciężki los sędziów i zmarnowane życie dawnych gwiazd, z drugiej futbol jako narzędzie społecznej zmiany – kluby odbudowywane przez kibiców, piłkarze zaangażowani w pomaganie innym, sto osiem podań Barcelony i piętnaście minut w szatni Liverpoolu. Jednym słowem: futbol w jego absolutnej narracyjnej nieprzewidywalności, z nieustającym Fergie Time, czyli meczami rozstrzyganymi w ostatnich sekundach ostatniej kolejki ostatniego sezonu. Rozważna i romantyczna opowieść o „pięknej grze”, której patronami są inni kibice inteligenci: Marek Bieńczyk, Jerzy Pilch, Ken Loach i... Jan Paweł II."]]></desc>
+      <attrs>
+        <a name="ISBN"><![CDATA[9788375366341]]></a>
+        <a name="Wydawnictwo"><![CDATA[Czarne]]></a>
+        <a name="Format">EPUB,MOBI</a>
+      </attrs>
+    </o>
+  </group>
+</offers>

@@ -43,8 +43,8 @@ class HelionBase(XMLConnector):
         "./ksiegarnie_nieinter/vat":('vat', ''),
         "./ksiegarnie_nieinter/vat_procent":('vat_percent', ''),
         "./opis":('description', ''),
-        "./top":('place_in_top', ''),
-        "./przedsprzedazDO":('advanced_booking',''),
+        "./top":('place_in_top', -1),
+        "./przedsprzedazDO":('advanced_booking', None),
         "./nosnik":('storage_type',''),
         "./md5":('md5', ''),
     }

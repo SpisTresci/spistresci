@@ -5,5 +5,6 @@ from generic_connector import *
 from logger import *
 from module_import import *
 from selkar import *
+from similarity_calculator import *
 from specific_connectors import *
 from data_validator import *

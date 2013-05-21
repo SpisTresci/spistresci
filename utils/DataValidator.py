@@ -6,6 +6,7 @@ class DataValidator(object):
 
     list_of_names = []
     supported_formats = ["pdf", "mobi", "epub", "txt", "mp3"]
+    supported_persons = ['author', 'lector', 'redactor', 'translator']
 
     def validate(self, dic):
         id = dic.get('external_id')
@@ -16,8 +17,8 @@ class DataValidator(object):
         self.validatePrice(dic, id, title, 'price_normal')
         self.validateSize(dic, id, title)
         self.validateAuthors(dic, id, title)
-        self.validateAuthors(dic, id, title, 'lectors')
-        self.validateAuthors(dic, id, title, 'translators')
+        self.validateLectors(dic, id, title)
+        self.validateTranslators(dic, id, title)
         self.validateLength(dic, id, title)
 
 
@@ -32,6 +33,8 @@ class DataValidator(object):
                     format_list = formats.split(" ")
                 else:
                     format_list = [formats]
+            else:
+                format_list = formats
 
         format_list = [x.strip().lower() for x in format_list]
 
@@ -48,18 +51,18 @@ class DataValidator(object):
     def validateISBNs(self, dic, id, title):
         original_isbn = dic.get('isbns')
         isbn_list = []
-        if original_isbn != None:
+        if original_isbn != None and original_isbn != "":
             if not (isinstance(original_isbn, list) and not isinstance(original_isbn, basestring)):
                 original_isbn = [original_isbn]
 
             for i in original_isbn:
                 isbn_dic = {}
                 try:
-                    i=self.simplifyHyphens(i, "ISBN has wrong format! Some different unicode character was used instead of '-'. Connector: %s, original_isbn: %s, id: %s, title: %s" % (self.name, original_isbn, id, title))
+                    i = self.simplifyHyphens(i, "ISBN has wrong format! Some different unicode character was used instead of '-'. Connector: %s, original_isbn: %s, id: %s, title: %s" % (self.name, original_isbn, id, title))
 
-                    i=i.lower()
+                    i = i.lower()
                     if "isbn" in i:
-                        i=i.replace(i[i.find("isbn"):len("isbn")],"")
+                        i = i.replace(i[i.find("isbn"):len("isbn")], "")
 
                     isbn_dic['raw'] = i
                     isbn = Isbn(i)
@@ -78,6 +81,11 @@ class DataValidator(object):
                             self.erratum_logger.info("ISBN validation failed! connector: %s, original_isbn: %s, cannonical ISBN: %s, id: %s, title: %s" % (self.name, original_isbn, isbn.isbn, id, title))
                     else:
                         isbn_dic['valid'] = False
+                        c = i.replace("-", "")
+                        if len(c) == 10:
+                            isbn_dic['core'] = isbn.isbn[:-1]
+                        elif len(c) == 13:
+                            isbn_dic['core'] = isbn.isbn[3:-1]
                         self.erratum_logger.info("ISBN validation failed! connector: %s, original_isbn: %s, cannonical ISBN: %s, id: %s, title: %s" % (self.name, original_isbn, isbn.isbn, id, title))
 
                 except IsbnError:
@@ -91,7 +99,7 @@ class DataValidator(object):
 
         dic['isbns'] = isbn_list
 
-    def validatePrice(self, dic, id, title, price_tag_name='price'):
+    def validatePrice(self, dic, id, title, price_tag_name = 'price'):
         original_price = dic.get(price_tag_name)
         price = 0
         if original_price != None:
@@ -124,7 +132,59 @@ class DataValidator(object):
 
         dic[price_tag_name] = unicode(price)
 
-    def validateAuthors(self, dic, id, title, tag_name='authors'):
+    def validatePerson(self, person, id, title):
+        pdict = {}
+        person = person.strip()
+        person = self.simplifyHyphens(person, "Authors has wrong format! Some different unicode character was used instead of '-'. Connector: %s, person: %s, id: %s, title: %s" % (self.name, person, id, title))
+        person = person.replace(" - ", "-")
+
+        while "  " in person:
+            person = person.replace("  ", " ")
+
+        # "J.T.Tomas" -> "J. T. Tomas"
+        import regex
+        p = ur'([\p{Lu}])\.([\p{Lu}])' #http://stackoverflow.com/q/4050381/
+        s = r'\1. \2'
+        u = regex.UNICODE
+        person = regex.sub(p, s, regex.sub(p, s, person, u), u)
+
+        if person != "":
+            pdict["name"] = person
+
+            names = [x.strip() for x in person.split(" ")]
+            if len(names) == 2: #imie i nazwisko
+                n1 = names[0].strip()
+                n2 = names[1].strip()
+                pdict["firstName"] = (n1 if self.isName(n1) else (n2 if self.isName(n2) else n1)).title()
+                pdict["lastName"] = (n2 if self.isName(n1) else (n1 if self.isName(n2) else n2)).title()
+                pdict["middleName"] = u""
+            elif len(names) == 3:
+                pdict["firstName"] = names[0].strip().title()
+                pdict["middleName"] = names[1].strip().title()
+                pdict["lastName"] = names[2].strip().title()
+            else:
+                pdict["firstName"] = pdict["middleName"] = pdict["lastName"] = u""
+
+        return pdict
+
+
+    def validateAuthors(self, dic, id, title):
+        self.validatePersons(dic, id, title, 'authors')
+
+    def validateLectors(self, dic, id, title):
+        self.validatePersons(dic, id, title, 'lectors')
+
+    def validateTranslators(self, dic, id, title):
+        self.validatePersons(dic, id, title, 'translators')
+
+    def validateRedactors(self, dic, id, title):
+        self.validatePersons(dic, id, title, 'redactors')
+
+
+    def validatePersons(self, dic, id, title, tag_name):
+        if not any(tag_name[:-1] == role for role in self.supported_persons):
+            raise DataValidatorError("tag_name <" + tag_name + "> is not supported!")
+
         if dic.get(tag_name) != None:
             if isinstance(dic.get(tag_name), basestring):
                 dic[tag_name] = [unicode(x.strip()) for x in re.split("[,;]", dic[tag_name])]
@@ -136,38 +196,15 @@ class DataValidator(object):
             if not (isinstance(persons, list) and not isinstance(persons, basestring)):
                 persons = [persons]
             for person in persons:
-                pdict = {}
-                person = person.strip()
-                person = self.simplifyHyphens(person, "Authors has wrong format! Some different unicode character was used instead of '-'. Connector: %s, person: %s, id: %s, title: %s" % (self.name, person, id, title))
-                person = person.replace(" - ","-")
-
-                while "  " in person:
-                    person = person.replace("  ", " ")
-
-                # "J.T.Tomas" -> "J. T. Tomas"
-                import regex
-                p=ur'([\p{Lu}])\.([\p{Lu}])' #http://stackoverflow.com/q/4050381/
-                s=r'\1. \2'
-                u=regex.UNICODE
-                person = regex.sub(p, s, regex.sub(p, s, person, u), u)
-
-                if person != "":
-                    pdict["name"] = person
-
-                    names = [x.strip() for x in person.split(" ")]
-                    if len(names) == 2: #imie i nazwisko
-                        n1 = names[0].strip()
-                        n2 = names[1].strip()
-                        pdict["firstName"] = (n1 if self.isName(n1) else (n2 if self.isName(n2) else n1)).title()
-                        pdict["lastName"] = (n2 if self.isName(n1) else (n1 if self.isName(n2) else n2)).title()
-                    elif len(names) == 3:
-                        pdict["firstName"] = names[0].strip().title()
-                        pdict["middleName"] = names[1].strip().title()
-                        pdict["lastName"] = names[2].strip().title()
-
+                pdict = self.validatePerson(person, id, title)
+                if pdict != {}:
                     new_list_of_person_dicts.append(pdict)
 
-            dic[tag_name] = new_list_of_person_dicts
+            if dic.get('persons') == None:
+                dic['persons'] = []
+
+            dic['persons'].append({unicode(tag_name):new_list_of_person_dicts})
+            del dic[tag_name]
 
     def isName(self, word):
         return word in self.list_of_names
@@ -184,10 +221,13 @@ class DataValidator(object):
     def validateLength(self, dic, id, title):
         pass
 
-    def simplifyHyphens(self, string, error_msg):
+    def simplifyHyphens(self, string, error_msg = None):
+        if string == None:
+            return ""
+
         hyphenLike = [u'\u2010', u'\u2011', u'\u2012', u'\u2013', u'\u2014', u'\u2015']
         if any(char in string for char in hyphenLike):
-            self.erratum_logger.info(error_msg)
+            if error_msg: self.erratum_logger.info(error_msg)
             string = re.sub('[%s]' % ''.join(hyphenLike), "-", string)
         return string
 
@@ -210,7 +250,7 @@ class DataValidatorError(Exception):
     # a new property that takes lookup precedence.
     message = property(_get_message, _set_message)
 
-    def __init__(self, msg=''):
+    def __init__(self, msg = ''):
         self.message = msg
         Exception.__init__(self, msg)
 

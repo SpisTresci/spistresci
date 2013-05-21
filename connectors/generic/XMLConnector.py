@@ -11,7 +11,7 @@ class XMLConnector(GenericConnector):
     skip_offers = 0
 
     def __init__(self, name=None, limit_books=0):
-        GenericConnector.__init__(self, name=name)
+        super(XMLConnector, self).__init__(name=name)
         self.limit_books = limit_books
 
     def get_et(self):

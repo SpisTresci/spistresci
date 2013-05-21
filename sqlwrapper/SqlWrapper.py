@@ -2,6 +2,7 @@ from sqlwrapper import *
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import event, DDL
+from sqlalchemy.orm import joinedload
 import urlparse
 
 import utils
@@ -61,11 +62,10 @@ class SqlWrapper(object):
     defaults = {'scheme':'mysql', 'username':'root', 'password':'',
                 'host':'localhost', 'database':'test', 'echo': 'False'}
 
-
-
+    table_list = []
 
     @classmethod
-    def init(cls, config_file=None, connectors=[], auto_write_to_db=True):
+    def init(cls, config_file = None, connectors = [], auto_write_to_db = True):
         config = utils.MultiLevelConfigParser(cls.defaults)
         if config_file:
             config.read(config_file)
@@ -76,15 +76,22 @@ class SqlWrapper(object):
         cls.database = config.get('DEFAULT', 'database')
         cls.echo = config.getboolean('DEFAULT', 'echo')
         cls.tables = [x for x in cls.getBaseClass().metadata.sorted_tables if any(con in x.name for con in connectors)]
+        cls.table_list = [cls.getBaseClass().metadata.tables[x] for x in cls.table_list if cls.getBaseClass().metadata.tables.get(x) != None]
+        cls.createTables(cls.table_list)
         if cls.tables and auto_write_to_db:
             cls.createTriggers()
-            cls.createTables()
+            cls.createTables(cls.tables)
+
+        #cls.getBaseClass().metadata.bind.execute("CREATE FUNCTION levenshtein RETURNS INT SONAME 'levenshtein.so'; CREATE FUNCTION levenshtein_k RETURNS INT SONAME 'levenshtein.so'; CREATE FUNCTION levenshtein_ratio RETURNS REAL SONAME 'levenshtein.so';")
+        #print "ok"
 
     @classmethod
-    def createTables(cls):
-        if cls.tables:
-            cls.getBaseClass().metadata.bind = cls.getEngine()
-            cls.getBaseClass().metadata.create_all(cls.getEngine(), tables=cls.tables)
+    def createTables(cls, tables=None):
+        if not tables:
+            tables = cls.tables
+        cls.getBaseClass().metadata.bind = cls.getEngine()
+        cls.getBaseClass().metadata.create_all(cls.getEngine(), tables=tables)
+
 
     @classmethod
     def createTriggers(cls):
@@ -124,3 +131,15 @@ class SqlWrapper(object):
             urlparse.uses_netloc.pop()
             cls.engine = create_engine(uri, echo=cls.echo)
         return cls.engine
+
+    @classmethod
+    def get_or_create_(cls, session, ClassName, d, param_name = None):
+        c = None
+        if param_name == None:
+            c = session.query(ClassName).filter_by(**d).first()
+        elif d.get(param_name) != None:
+            c = session.query(ClassName).filter_by(**{param_name:d[param_name]}).first()
+
+        if not c:
+            c = ClassName(**d)
+        return c

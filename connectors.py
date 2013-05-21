@@ -7,11 +7,18 @@ from utils import logger_instance, filter_varargs
 from connectors import Tools
 from connectors.generic import *
 from sqlwrapper import *
+from final import Final
 
 def run_connectors(connector):
     connector.fetchData()
     connector.applyFilters()
+
+    connector.createSession()
     connector.parse()
+    connector.closeSession()
+    f = Final()
+    f.insert(connector)
+
 
 def run_reference_connectors(connector):
     connector.fetchData()
@@ -26,6 +33,8 @@ def choose_your_destiny(app_name):
     return getattr(sys.modules[__name__], 'run_%s' % app_name)
 
 def main():
+
+    sys.argv = ['./connectors.py', 'eBookpoint', 'Koobe']#, 'Virtualo'] #'Woblink',
 
     base_name = os.path.basename(sys.argv[0])
     app_name = os.path.splitext(base_name)[0]
@@ -50,7 +59,8 @@ def main():
 
     for connector in connectors:
         try:
-            choose_your_destiny(app_name)(connector)
+            #choose_your_destiny(app_name)(connector)
+            run_connectors(connector)
         except Exception:
             Logger.exception('Error executing %s, in connector %s' % (app_name, connector.name))
     Logger.debug('Execution finished')
