@@ -126,8 +126,7 @@ class XMLConnector(GenericConnector):
                 #print dic
                 #comment out when creating connector
                 self.add_record(dic)
-            if book_number > self.limit_books:
-                break
+
         self.after_parse()
         #uncomment when creating connector
         #print self.max_len
