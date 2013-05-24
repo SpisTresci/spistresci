@@ -17,6 +17,7 @@ from Koobe import Koobe
 from Latarnik import Latarnik
 from Legimi import Legimi
 from Nexto import Nexto
+from Pokatne import Pokatne
 from RW2010 import RW2010
 from Selkar import Selkar
 from TaniaKsiazka import TaniaKsiazka

@@ -526,11 +526,10 @@ class GenericConnector(GenericBase):
         Session = sessionmaker(bind=SqlWrapper.getEngine())
         session = Session()
 
-
-        primary_keys = [key.name for key in class_mapper(Book).primary_key]
-        primary_keys.remove('id')
+        search_keys = [c.name for c in Book.__table__.columns if c.unique or c.primary_key]
+        search_keys.remove('id')
         get_dict = {}
-        for key in primary_keys:
+        for key in search_keys:
             get_dict[key] = d[key]
 
         book = self.get_(session, Book, get_dict)
