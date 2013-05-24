@@ -7,6 +7,7 @@ from application.models import Address
 from datetime import datetime
 from django.core.context_processors import csrf
 from django.views.decorators.csrf import csrf_protect
+import os
 
 
 def main(request):
@@ -19,7 +20,10 @@ def main(request):
     else:
         return render_to_response('template.html', {'response':""})
 
+#Note: This seems to be stupid, but in production this should be absolute path 
+#Moreover defining separate view for each image looks bad in my opinion
+SITE_ROOT = os.path.dirname(os.path.realpath(__file__))
 def logo(request):
-    image_data = open("imgs/Logo_ST.png", "rb").read()
+    image_data = open(os.path.join(SITE_ROOT,'../imgs/Logo_ST.png'), "rb").read()
     return HttpResponse(image_data, mimetype="image/png") 
 

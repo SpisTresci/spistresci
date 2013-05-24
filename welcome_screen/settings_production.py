@@ -28,3 +28,13 @@ SITE_ROOT = os.path.dirname(os.path.realpath(__file__))
 TEMPLATE_DIRS = (
     os.path.join(SITE_ROOT,'templates'),
 )
+
+
+# Absolute filesystem path to the directory that will hold user-uploaded files.
+# Example: "/var/www/example.com/media/"
+#MEDIA_ROOT = '/home/frontend/frontend/imgs'
+
+# URL that handles the media served from MEDIA_ROOT. Make sure to use a
+# trailing slash.
+# Examples: "http://example.com/media/", "http://media.example.com/"
+#MEDIA_URL = ''
