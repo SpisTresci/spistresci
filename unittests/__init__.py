@@ -5,3 +5,4 @@ from generic_base import *
 from bezkartek import *
 from selkar import *
 from specific_connectors import *
+from data_validator import *
