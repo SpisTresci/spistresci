@@ -325,6 +325,11 @@ class GenericConnector(GenericBase):
             for i in original_isbn:
                 isbn_dic = {}
                 try:
+                    hyphenLike = [u'\u2010', u'\u2011', u'\u2012', u'\u2013', u'\u2014', u'\u2015']
+                    if any(char in i for char in hyphenLike):
+                        self.erratum_logger.info("ISBN has wrong format! One of these (%s) unicode character was used instead of '-'. Connector: %s, original_isbn: %s, id: %s, title: %s" % (str(hyphenLike), self.name, original_isbn, id, title))
+                        i = re.sub('[%s]' % ''.join(hyphenLike), "-", i)
+
                     isbn_dic['raw'] = i
                     isbn = Isbn(i)
                     if isbn.validate():
