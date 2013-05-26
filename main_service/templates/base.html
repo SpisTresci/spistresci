@@ -1,20 +1,73 @@
-<?php include('menu.php') ?>
+<!DOCTYPE HTML>
+{% load staticfiles %}
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %}{% endblock title %}</title>
+    <link href="{% static "css/style.css" %}" rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="{% static "js/js.js" %}"></script>
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <ul class="menu">
+      <li class="act">
+        <a href="index.php">
+          Spis treści
+        </a>
+      </li>
+      <li>
+        <a href="">
+          eKundelek
+        </a>
+      </li>
+      <li>
+        <a href="">
+          eczytniki
+        </a>
+      </li>
+      <li>
+        <a href="">
+          Ranking
+        </a>
+      </li>
+      <li>
+        <a href="">
+          Egazeciarz
+        </a>
+      </li>
+      <li>
+        <a href="">
+          Raporty
+        </a>
+      </li>
+      <li class="menu2 menu2b">
+        <a href="">
+          ZALOGUJ SIĘ
+        </a>
+      </li>
+      <li class="menu2 menu2a">
+        <a href="">
+          ZAREJESTRUJ SIĘ
+        </a>
+      </li>
+    
+    </ul>
     <div class="container">
       <div class="index_top_bg">
         <div class="index_top">
           <a href="index.php" class="logo">
-            <img src="../img/logo.png" alt="" />
+            <img src="{% static "img/logo.png" %}" alt="" />
           </a>
           <div class="social">
             ODWIEDŹ NAS: 
             <a href="">
-              <img src="../img/social_f.png" alt="" /> 
+              <img src="{% static "img/social_f.png" %}" alt="" /> 
             </a> 
             <a href="">
-              <img src="../img/social_t.png" alt="" /> 
+              <img src="{% static "img/social_t.png" %}" alt="" /> 
             </a> 
             <a href="">
-              <img src="../img/social_g.png" alt="" /> 
+              <img src="{% static "img/social_g.png" %}" alt="" /> 
             </a>  
           </div>
           <div class="search">
@@ -52,21 +105,23 @@
       <div class="index_bottom">
         <div class="index_title">U nas porownasz <b>2222222 ofert z 22 księgarni!</b></div>
         <div class="index_subtitle">
-          <img src="../img/red_line.png" alt="" />BESTSELLERY<img src="../img/red_line.png" alt="" />
+          <img src="{% static "img/red_line.png" %}" alt="" />BESTSELLERY<img src="{% static "img/red_line.png" %}" alt="" />
         </div>
         <div class="index_subtitle">
-          <img src="../img/red_line.png" alt="" />NOWOŚCI<img src="../img/red_line.png" alt="" />
+          <img src="{% static "img/red_line.png" %}" alt="" />NOWOŚCI<img src="{% static "img/red_line.png" %}" alt="" />
         </div>
         <div class="index_subtitle">
-          <img src="../img/red_line.png" alt="" />PROMOCJE<img src="../img/red_line.png" alt="" />
+          <img src="{% static "img/red_line.png" %}" alt="" />PROMOCJE<img src="{% static "img/red_line.png" %}" alt="" />
         </div>
         
   <!--   list book       -->
-      <? for($j=0;$j<3;$j++){ ?>
+      <!--<? for($j=0;$j<3;$j++){ ?> -->
+
         <div class="three_index_box">
-          <? for($i=0;$i<3;$i++){ ?>
+          <!--<? for($i=0;$i<3;$i++){ ?> -->
+
           <div class="index_box">
-            <img src="../img/bok_img_index.png" alt="" />
+            <img src="{% static "img/bok_img_index.png" %}" alt="" />
             <div class="ib_text">
               <div class="ib_text1">
                 <a href="">
@@ -114,20 +169,19 @@
               </div>
             </div>
           </div>
-          <? } ?>
+          <!--% endfor %-->
           <div class="index_more">
             <a href="">
               Zobacz więcej
             </a>
           </div>
         </div>
-      <? } ?>
+        <!--% endfor %-->
         
    <!--  end of list book       -->  
  
      </div>
-     
-     <?php include("footer.php"); ?>
-     
+     <!--% include index_footer.html %-->
+    </div>
   </body>
 </html>
