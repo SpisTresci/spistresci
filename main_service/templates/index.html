@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %}Spis Treści- strona główna{% endblock %}
+{% block title %}Spis Treści - strona główna{% endblock %}
 
-{% block container %} <!--% include index_container.html %--> {% endblock %}
+{% block container %} {% include "index_container.html" %} {% endblock container %}
+{% block footer %} {% include "index_footer.html" %} {% endblock footer %}
