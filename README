@@ -1,0 +1,19 @@
+=== INSTALLING DJANGO ===
+
+To get the latest official version Django first
+download Django-1.5.1.tar.gz (https://www.djangoproject.com/download/1.5.1/tarball/). Then:
+
+tar xzvf Django-1.5.1.tar.gz
+cd Django-1.5.1
+sudo python setup.py install
+
+You can also use pip:
+
+pip install Django==1.5.1
+
+
+=== RUN SERVER ===
+
+To run server in debug mode, simple run:
+
+python manage.py runserver
