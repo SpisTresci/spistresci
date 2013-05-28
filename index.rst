@@ -11,6 +11,9 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
+   docs/frontend/apache2_deployment
+   docs/database_structure
+
 
 
 Indices and tables
