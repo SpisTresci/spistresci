@@ -58,6 +58,10 @@ class DataValidator(object):
                         self.erratum_logger.info("ISBN has wrong format! One of these (%s) unicode character was used instead of '-'. Connector: %s, original_isbn: %s, id: %s, title: %s" % (str(hyphenLike), self.name, original_isbn, id, title))
                         i = re.sub('[%s]' % ''.join(hyphenLike), "-", i)
 
+                    i=i.lower()
+                    if "isbn" in i:
+                        i=i.replace(i[i.find("isbn"):len("isbn")],"")
+
                     isbn_dic['raw'] = i
                     isbn = Isbn(i)
                     if isbn.validate():

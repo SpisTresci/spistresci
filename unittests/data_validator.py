@@ -5,8 +5,12 @@ from utils import DataValidator, DataValidatorError
 
 class MockErratumLogger():
     warned = False
+    informed = False
     def warning(self, str):
         self.warned = True
+
+    def info(self, str):
+        self.informed = True
 
 class TestDataValidator():
 
@@ -35,6 +39,15 @@ class TestDataValidator():
         eq_(self.dv.erratum_logger.warned, True)
         self.dv.erratum_logger.warned = False
         eq_(self.dv.erratum_logger.warned, False)
+
+    @nottest
+    def _test_validate_helper_info(self, functionName, input):
+        eq_(self.dv.erratum_logger.informed, False)
+        validateFun = getattr(self.dv, "validate" + functionName)
+        validateFun(input, "id", "title")
+        eq_(self.dv.erratum_logger.informed, True)
+        self.dv.erratum_logger.informed = False
+        eq_(self.dv.erratum_logger.informed, False)
 
     @nottest
     @raises(DataValidatorError)
@@ -74,7 +87,7 @@ class TestDataValidator():
         yield self._test_validate_helper_warning, "Price", {"price":".00"}
         yield self._test_validate_helper_warning, "Price", {"price":"20 zl"}
 
-    def test_validate_format(self):
+    def test_validate_formats(self):
         yield self._test_validate_helper_eq, "Formats", {}, {"formats":[]}
         yield self._test_validate_helper_eq, "Formats", {"formats":""}, {"formats":[]}
         yield self._test_validate_helper_eq, "Formats", {"formats":"pdf"}, {"formats":["pdf"]}
@@ -99,3 +112,68 @@ class TestDataValidator():
         yield self._test_validate_helper_warning, "Formats", {"formats":"some_not_supported_format"}
         yield self._test_validate_helper_warning, "Formats", {"formats":"X,Y"}
         yield self._test_validate_helper_warning, "Formats", {"formats":"X,Y,Z"}
+
+    def test_validate_isbns(self):
+        yield self._test_validate_helper_eq, "ISBNs", {}, {"isbns":[]}
+        yield self._test_validate_helper_eq, "ISBNs", {"isbns":"978-83-7308-701-9"}, {"isbns":[{    "raw":"978-83-7308-701-9",
+                                                                                                    'valid': True,
+                                                                                                    'isbn10': '837308701X',
+                                                                                                    'isbn13': '9788373087019',
+                                                                                                    'core': '837308701'}]}
+
+        yield self._test_validate_helper_eq, "ISBNs", {"isbns":"978-83-7308-701-9"}, {"isbns":[{    "raw":"978-83-7308-701-9",
+                                                                                                    'valid': True,
+                                                                                                    'isbn10': '837308701X',
+                                                                                                    'isbn13': '9788373087019',
+                                                                                                    'core': '837308701'}]}
+
+        yield self._test_validate_helper_eq, "ISBNs", {"isbns":"9788373087019"}, {"isbns":[{        "raw":"9788373087019",
+                                                                                                    'valid': True,
+                                                                                                    'isbn10': '837308701X',
+                                                                                                    'isbn13': '9788373087019',
+                                                                                                    'core': '837308701'}]}
+
+        yield self._test_validate_helper_not_eq, "ISBNs", {"isbns":"978-83-7308-701-9"}, {"isbns":[{ "raw":"9788373087019",
+                                                                                                    'valid': True,
+                                                                                                    'isbn10': '837308701X',
+                                                                                                    'isbn13': '9788373087019',
+                                                                                                    'core': '837308701'}]}
+
+        yield self._test_validate_helper_not_eq, "ISBNs", {"isbns":"9788373087019"}, {"isbns":[{    "raw":"9788373087019",
+                                                                                                    'valid': True,
+                                                                                                    'isbn10': '',
+                                                                                                    'isbn13': '9788373087019',
+                                                                                                    'core': '837308701'}]}
+
+        #Tests whether raw value is not write as core value
+        yield self._test_validate_helper_not_eq, "ISBNs", {"isbns":"978-83-7308-701-9"}, {"isbns":[{"raw":"978-83-7308-701-9",
+                                                                                                    'valid': True,
+                                                                                                    'isbn10': '837308701X',
+                                                                                                    'isbn13': '9788373087019',
+                                                                                                    'core': '978-83-7308-701-9'}]}
+        #Tests whether checksum digit is not write as 10
+        yield self._test_validate_helper_not_eq, "ISBNs", {"isbns":"9788373087019"}, {"isbns":[{    "raw":"9788373087019",
+                                                                                                    'valid': True,
+                                                                                                    'isbn10': '83730870110',
+                                                                                                    'isbn13': '9788373087019',
+                                                                                                    'core': '837308701'}]}
+
+        yield self._test_validate_helper_eq, "ISBNs", {"isbns":"0137-7566"}, {"isbns":[{'raw': '0137-7566', 'valid': False}]}
+        yield self._test_validate_helper_eq, "ISBNs", {"isbns":"01377566"}, {"isbns":[{'raw': '01377566', 'valid': False}]}
+        yield self._test_validate_helper_eq, "ISBNs", {"isbns":"0"}, {"isbns":[{'raw': '0', 'valid': False}]}
+        yield self._test_validate_helper_eq, "ISBNs", {"isbns":"1"}, {"isbns":[{'raw': '1', 'valid': False}]}
+        yield self._test_validate_helper_eq, "ISBNs", {"isbns":"12345"}, {"isbns":[{'raw': '12345', 'valid': False}]}
+        yield self._test_validate_helper_eq, "ISBNs", {"isbns":"123456789"}, {"isbns":[{'raw': '123456789', 'valid': False}]}
+        yield self._test_validate_helper_eq, "ISBNs", {"isbns":"123456789"}, {"isbns":[{'raw': '123456789', 'valid': False}]}
+        yield self._test_validate_helper_eq, "ISBNs", {"isbns":"1234567890"}, {"isbns":[{'raw': '1234567890', 'valid': False}]}
+        yield self._test_validate_helper_eq, "ISBNs", {"isbns":"12345678901"}, {"isbns":[{'raw': '12345678901', 'valid': False}]}
+        yield self._test_validate_helper_eq, "ISBNs", {"isbns":"1234"}, {"isbns":[{'raw': '1234', 'valid': False}]}
+        yield self._test_validate_helper_eq, "ISBNs", {"isbns":"978-83-61445-20-5"}, {"isbns":[{'raw': '978-83-61445-20-5', 'valid': False}]}
+
+        yield self._test_validate_helper_eq, "ISBNs", {"isbns":"ISBN978-83-936379-9-7"}, {"isbns":[{"raw":"978-83-936379-9-7",
+                                                                                                    'valid': True,
+                                                                                                    'isbn10': '8393637996',
+                                                                                                    'isbn13': '9788393637997',
+                                                                                                    'core': '839363799'}]}
+
+        yield self._test_validate_helper_eq, "ISBNs", {"isbns":"978-83-933966-0-4"}, {"isbns":[{'raw': '978-83-933966-0-4', 'valid': False}]}
