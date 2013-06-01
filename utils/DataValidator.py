@@ -132,9 +132,12 @@ class DataValidator(object):
                 while "  " in person:
                     person = person.replace("  ", " ")
 
-                p=r'([A-Z]).([A-Z])'
+                # "J.T.Tomas" -> "J. T. Tomas"
+                import regex
+                p=ur'([\p{Lu}])\.([\p{Lu}])' #http://stackoverflow.com/q/4050381/
                 s=r'\1. \2'
-                person = re.sub(p, s, re.sub(p, s, person))
+                u=regex.UNICODE
+                person = regex.sub(p, s, regex.sub(p, s, person, u), u)
 
                 pdict["name"] = person
 
@@ -142,12 +145,12 @@ class DataValidator(object):
                 if len(names) == 2: #imie i nazwisko
                     n1 = names[0].strip()
                     n2 = names[1].strip()
-                    pdict["firstName"] = n1 if self.isName(n1) else (n2 if self.isName(n2) else n1)
-                    pdict["lastName"] = n2 if self.isName(n1) else (n1 if self.isName(n2) else n2)
+                    pdict["firstName"] = (n1 if self.isName(n1) else (n2 if self.isName(n2) else n1)).title()
+                    pdict["lastName"] = (n2 if self.isName(n1) else (n1 if self.isName(n2) else n2)).title()
                 elif len(names) == 3:
-                    pdict["firstName"] = names[0].strip()
-                    pdict["middleName"] = names[1].strip()
-                    pdict["lastName"] = names[2].strip()
+                    pdict["firstName"] = names[0].strip().title()
+                    pdict["middleName"] = names[1].strip().title()
+                    pdict["lastName"] = names[2].strip().title()
 #                else:
 #                   TODO: use logger here instead of debug printf
 #                    print str(len(names)) + " - "  + person
@@ -177,7 +180,6 @@ class DataValidator(object):
             self.erratum_logger.info(error_msg)
             string = re.sub('[%s]' % ''.join(hyphenLike), "-", string)
         return string
-
 
 # exception classes
 class DataValidatorError(Exception):

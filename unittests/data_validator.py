@@ -234,15 +234,18 @@ class TestDataValidator():
         yield self._test_validate_helper_eq, "Authors", {"authors":u"S.J.Watson"}, {"authors":[{'name':u'S. J. Watson', 'firstName': 'S.', 'middleName': 'J.', 'lastName': u'Watson'}]}
         yield self._test_validate_helper_eq, "Authors", {"authors":u"George R.R.  Martin"}, {"authors":[{'name':u'George R. R. Martin'}]}
 
+        yield self._test_validate_helper_eq, "Authors", {"authors":u"PIOTR CHOLEWIŃSKI"}, {"authors":[{'lastName': u'Cholewiński', 'name': u'PIOTR CHOLEWIŃSKI', 'firstName': u'Piotr'}]}
+        yield self._test_validate_helper_eq, "Authors", {"authors":u"H.Łabonarska"}, {"authors":[{'lastName': u'Łabonarska', 'name': u'H. Łabonarska', 'firstName': u'H.'}]}
+        yield self._test_validate_helper_eq, "Authors", {"authors":u"Wojciech Piotr  Kwiatek"}, {"authors":[{'lastName': 'Kwiatek', 'name': u'Wojciech Piotr Kwiatek', 'firstName': 'Wojciech', 'middleName': 'Piotr' }]}
+        #yield self._test_validate_helper_eq, "Authors", {"authors":u"INFOA International s.r.o."}, {"authors":[{'name':u'INFOA International s.r.o.'}]}
+
         #ks. dr Krzysztof Marcyński SAC
         #redakcja Pons i Lektorklett
         #Edgar Allan  Poe
         #Beata i Bogdan Oczkowscy
         #E L  James
-        #Wojciech Piotr  Kwiatek
         #George R.R.  Martin
         #Roxanne  St. Claire
-        #Janusz   Szewczak
         #John Ronald R. Tolkien
         #Jakub i Wilhelm Grimm
         #Wilhelm i Jakub Grimm
