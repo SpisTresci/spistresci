@@ -215,3 +215,50 @@ class TestDataValidator():
                                                                                                     'core': '839363799'}]}
 
         yield self._test_validate_helper_eq, "ISBNs", {"isbns":"978-83-933966-0-4"}, {"isbns":[{'raw': '978-83-933966-0-4', 'valid': False}]}
+
+    def test_validate_authors(self):
+        yield self._test_validate_helper_eq, "Authors", {"authors":u"Mariola Jąder"}, {"authors":[{'name':u'Mariola Jąder', 'firstName': 'Mariola', 'lastName': u'Jąder'}]}
+        yield self._test_validate_helper_eq, "Authors", {"authors":u"Mariola  Jąder"}, {"authors":[{'name':u'Mariola Jąder', 'firstName': 'Mariola', 'lastName': u'Jąder'}]}
+        yield self._test_validate_helper_not_eq, "Authors", {"authors":u"Mariola Jąder"}, {"authors":[{'name':u'Mariola Jąder', 'firstName': 'Mariola', 'middleName': '', 'lastName': u'Jąder'}]}
+
+        yield self._test_validate_helper_eq, "Authors", {"authors":u"Małgorzata Żmudzka-Kosała"}, {"authors":[{'name':u'Małgorzata Żmudzka-Kosała', 'firstName': u'Małgorzata', 'lastName': u'Żmudzka-Kosała'}]}
+        yield self._test_validate_helper_not_eq, "Authors", {"authors":u"Małgorzata Żmudzka-Kosała"}, {"authors":[{'name':u'Małgorzata Żmudzka-Kosała', 'firstName': 'Małgorzata', 'lastName': u'Żmudzka-Kosała'}]}
+        yield self._test_validate_helper_eq, "Authors", {"authors":u"Małgorzata Żmudzka - Kosała"}, {"authors":[{'name':u'Małgorzata Żmudzka-Kosała', 'firstName': u'Małgorzata', 'lastName': u'Żmudzka-Kosała'}]}
+        yield self._test_validate_helper_not_eq, "Authors", {"authors":u"Małgorzata Żmudzka - Kosała"}, {"authors":[{'name':u'Małgorzata Żmudzka - Kosała', 'firstName': 'Małgorzata', 'lastName': u'Żmudzka - Kosała'}]}
+        yield self._test_validate_helper_not_eq, "Authors", {"authors":u"Małgorzata Żmudzka - Kosała"}, {"authors":[{'name':u'Małgorzata Żmudzka - Kosała', 'firstName': 'Małgorzata', 'lastName': u'Żmudzka-Kosała'}]}
+        yield self._test_validate_helper_not_eq, "Authors", {"authors":u"Małgorzata Żmudzka - Kosała"}, {"authors":[{'name':u'Małgorzata Żmudzka - Kosała'}]}
+
+        #yield self._test_validate_helper_not_eq, "Authors", {"authors":u"Red. Katarzyna Cymbalista-Hajib"}, {"authors":[{'middleName': u'Katarzyna', 'lastName': u'Cymbalista-Hajib', 'name': u'Red. Katarzyna Cymbalista-Hajib', 'firstName': u'Red.'}]}
+
+        yield self._test_validate_helper_eq, "Authors", {"authors":u"J.Kobuszewski"}, {"authors":[{'name':u'J. Kobuszewski', 'firstName': 'J.', 'lastName': u'Kobuszewski'}]}
+        yield self._test_validate_helper_eq, "Authors", {"authors":u"S.J.Watson"}, {"authors":[{'name':u'S. J. Watson', 'firstName': 'S.', 'middleName': 'J.', 'lastName': u'Watson'}]}
+        yield self._test_validate_helper_eq, "Authors", {"authors":u"George R.R.  Martin"}, {"authors":[{'name':u'George R. R. Martin'}]}
+
+        #ks. dr Krzysztof Marcyński SAC
+        #redakcja Pons i Lektorklett
+        #Edgar Allan  Poe
+        #Beata i Bogdan Oczkowscy
+        #E L  James
+        #Wojciech Piotr  Kwiatek
+        #George R.R.  Martin
+        #Roxanne  St. Claire
+        #Janusz   Szewczak
+        #John Ronald R. Tolkien
+        #Jakub i Wilhelm Grimm
+        #Wilhelm i Jakub Grimm
+        #Św. Jan od Krzyża
+
+        yield self._test_validate_helper_eq, "Authors", {"authors":u"Tomasz Martyniuk;Barbara Dudek;Monika Wąs"}, {"authors":[
+                                                                                                                              {'lastName': u'Martyniuk',
+                                                                                                                               'name': u'Tomasz Martyniuk',
+                                                                                                                               'firstName': u'Tomasz'},
+
+                                                                                                                              {'lastName': u'Dudek',
+                                                                                                                               'name': u'Barbara Dudek',
+                                                                                                                               'firstName': u'Barbara'},
+
+                                                                                                                              {'lastName': u'W\u0105s',
+                                                                                                                               'name': u'Monika W\u0105s',
+                                                                                                                               'firstName': u'Monika'}
+                                                                                                                              ]
+                                                                                                                   }

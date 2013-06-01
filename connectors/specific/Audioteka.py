@@ -5,12 +5,7 @@ from sqlwrapper import *
 Base = SqlWrapper.getBaseClass()
 
 class Audioteka(Afiliant):
-    def validate(self, dic):
-        Afiliant.validate(self, dic)
-
-        id = dic.get('external_id')
-        title = dic.get('title')
-        self.validateAuthors(dic, id, title, 'lectors')
+    pass
 
 class AudiotekaBook(GenericBook, Base):
     id = Column(Integer, primary_key=True)

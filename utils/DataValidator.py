@@ -121,11 +121,23 @@ class DataValidator(object):
 
             persons = dic[tag_name]
             new_list_of_person_dicts = []
-            pdict = {}
             if not (isinstance(persons, list) and not isinstance(persons, str)):
                 persons = [persons]
             for person in persons:
-                pdict["name"] = person.strip()
+                pdict = {}
+                person = person.strip()
+                person = self.simplifyHyphens(person, "Authors has wrong format! Some different unicode character was used instead of '-'. Connector: %s, person: %s, id: %s, title: %s" % (self.name, person, id, title))
+                person = person.replace(" - ","-")
+
+                while "  " in person:
+                    person = person.replace("  ", " ")
+
+                p=r'([A-Z]).([A-Z])'
+                s=r'\1. \2'
+                person = re.sub(p, s, re.sub(p, s, person))
+
+                pdict["name"] = person
+
                 names = [x.strip() for x in person.split(" ")]
                 if len(names) == 2: #imie i nazwisko
                     n1 = names[0].strip()
