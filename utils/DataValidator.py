@@ -53,10 +53,7 @@ class DataValidator(object):
             for i in original_isbn:
                 isbn_dic = {}
                 try:
-                    hyphenLike = [u'\u2010', u'\u2011', u'\u2012', u'\u2013', u'\u2014', u'\u2015']
-                    if any(char in i for char in hyphenLike):
-                        self.erratum_logger.info("ISBN has wrong format! One of these (%s) unicode character was used instead of '-'. Connector: %s, original_isbn: %s, id: %s, title: %s" % (str(hyphenLike), self.name, original_isbn, id, title))
-                        i = re.sub('[%s]' % ''.join(hyphenLike), "-", i)
+                    i=self.simplifyHyphens(i, "ISBN has wrong format! Some different unicode character was used instead of '-'. Connector: %s, original_isbn: %s, id: %s, title: %s" % (self.name, original_isbn, id, title))
 
                     i=i.lower()
                     if "isbn" in i:
@@ -161,6 +158,14 @@ class DataValidator(object):
 
     def validateLength(self, dic, id, title):
         pass
+
+    def simplifyHyphens(self, string, error_msg):
+        hyphenLike = [u'\u2010', u'\u2011', u'\u2012', u'\u2013', u'\u2014', u'\u2015']
+        if any(char in string for char in hyphenLike):
+            self.erratum_logger.info(error_msg)
+            string = re.sub('[%s]' % ''.join(hyphenLike), "-", string)
+        return string
+
 
 # exception classes
 class DataValidatorError(Exception):

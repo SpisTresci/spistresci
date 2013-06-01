@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import nose
 from nose.tools import *
 from utils import NoseUtils
@@ -138,6 +139,43 @@ class TestDataValidator():
                                                                                                     'isbn10': '837308701X',
                                                                                                     'isbn13': '9788373087019',
                                                                                                     'core': '837308701'}]}
+
+        yield self._test_validate_helper_eq, "ISBNs", {"isbns":u"978-83-7308-701-9"}, {"isbns":[{    "raw":u"978-83-7308-701-9",
+                                                                                                    'valid': True,
+                                                                                                    'isbn10': '837308701X',
+                                                                                                    'isbn13': '9788373087019',
+                                                                                                    'core': '837308701'}]}
+
+        yield self._test_validate_helper_eq, "ISBNs", {"isbns":u"978\u201083\u20107308\u2010701\u20109"}, {"isbns":[{"raw":u"978-83-7308-701-9",
+                                                                                                    'valid': True,
+                                                                                                    'isbn10': '837308701X',
+                                                                                                    'isbn13': '9788373087019',
+                                                                                                    'core': '837308701'}]}
+
+        yield self._test_validate_helper_eq, "ISBNs", {"isbns":u"978\u201183-7308-701-9"}, {"isbns":[{    "raw":"978-83-7308-701-9",
+                                                                                                    'valid': True,
+                                                                                                    'isbn10': '837308701X',
+                                                                                                    'isbn13': '9788373087019',
+                                                                                                    'core': '837308701'}]}
+
+
+        yield self._test_validate_helper_eq, "ISBNs", {"isbns":u"978\u201183\u20127308\u2015701\u20159"}, {"isbns":[{    "raw":"978-83-7308-701-9",
+                                                                                                    'valid': True,
+                                                                                                    'isbn10': '837308701X',
+                                                                                                    'isbn13': '9788373087019',
+                                                                                                    'core': '837308701'}]}
+
+
+        yield self._test_validate_helper_eq, "ISBNs", {"isbns":u"978\u201583\u20137308\u2011701\u20129"}, {"isbns":[{    "raw":"978-83-7308-701-9",
+                                                                                                    'valid': True,
+                                                                                                    'isbn10': '837308701X',
+                                                                                                    'isbn13': '9788373087019',
+                                                                                                    'core': '837308701'}]}
+
+        yield self._test_validate_helper_info, "ISBNs", {"isbns":u"978\u201083\u20107308\u2010701\u20109"}
+        yield self._test_validate_helper_info, "ISBNs", {"isbns":u"978\u201183-7308-701-9"}
+        yield self._test_validate_helper_info, "ISBNs", {"isbns":u"978\u201183\u20127308\u2015701\u20159"}
+        yield self._test_validate_helper_info, "ISBNs", {"isbns":u"978\u201583\u20137308\u2011701\u20129"}
 
         yield self._test_validate_helper_not_eq, "ISBNs", {"isbns":"9788373087019"}, {"isbns":[{    "raw":"9788373087019",
                                                                                                     'valid': True,
