@@ -6,10 +6,19 @@ import os
 class JSONConnector(GenericConnector):
 
     skip_offers = 0
+    tag_dict = {}
 
     def __init__(self, name=None, limit_books=0):
         GenericConnector.__init__(self, name=name)
         self.limit_books = limit_books
+
+    def makeDict(self, book):
+        dic = {}
+        for item in self.tag_dict.items():
+            (org_key, (key, default))  = item
+            dic[key] = book.get(org_key, default)
+
+        return dic
 
     def fetchData(self, unpack=True):
         self.downloadFile()
@@ -32,23 +41,26 @@ class JSONConnector(GenericConnector):
         self.before_parse()
         book_number = 0
         for filename in self.fetched_files:
-            json_file=open(filename, 'rU')
-            book_list = json.loads(json_file.read())
+            with open(filename, 'rU') as json_file:
+                book_list = json.load(json_file)
             for book in book_list:
                 book_number += 1
                 if book_number < self.skip_offers + 1:
                     continue
                 elif self.limit_books and book_number > self.limit_books:
                     break
-                self.adjust_parse(book)
-                self.validate(book)
+                dic = self.makeDict(book)
+                self.adjust_parse(dic)
+                self.measureLenghtDict(dic)
                 #uncomment when creating connector
-                self.measureLenghtDict(book)
-                #print book
+                #print dic 
+
+                self.validate(dic)
                 #comment out when creating connector
-                #self.add_record(book)
+                #self.add_record(dic)
 
         self.after_parse()
         #uncomment when creating connector
-        print self.max_len
-        print self.max_len_entry
+        #print self.max_len
+        #print self.max_len_entry
+        

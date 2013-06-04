@@ -37,6 +37,7 @@ from Woblink import Woblink
 from WolneEbooki import WolneEbooki
 from WolneLektury import WolneLektury
 from Zantes import Zantes
+from WolneLektury import WolneLektury
 from ZielonaSowa import ZielonaSowa
 from Zinamon import Zinamon
 from ZloteMysli import ZloteMysli

@@ -94,10 +94,11 @@ class XMLConnector(GenericConnector):
                 dic = self.makeDict(offer)
                 #comment out when creating connector
                 self.adjust_parse(dic)
-                self.validate(dic)
                 #uncomment when creating connector
                 #self.measureLenghtDict(dic)
                 #print dic
+
+                self.validate(dic)
                 #comment out when creating connector
                 self.add_record(dic)
 
