@@ -1,6 +1,6 @@
 from utils import logger_instance
 
-class BaseFilter():
+class BaseFilter(object):
     def __init__(self, logger, params):
         self.params = params
         self.logger = logger

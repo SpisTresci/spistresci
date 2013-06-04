@@ -24,6 +24,16 @@ class Audeo(Ceneo):
         "./attrs/a[@name='Czas (min)']":('time',''),
     }
 
+    #Try getting authors from description
+    def getAuthorsFromDescription(self, dic, name):
+        #TODO: Not implemented yet        
+        pass
+
+    def adjust_parse(self, dic):
+        if dic['authors'] == ['Praca Zbiorowa'] or dic['authors'] == ['Zbiorowy']:
+            self.getAuthorsFromDescription(dic, u"Autor", "authors")
+
+
 class AudeoBook(GenericBook, Base):
     id = Column(Integer, primary_key=True)
     price = Column(Integer)             #GROSZE!!!
@@ -34,13 +44,4 @@ class AudeoBook(GenericBook, Base):
     cover = Column(Unicode(128))        #118
     time = Column(Integer)
     producent = Column(Unicode(64))     #35
-
-    #Try getting authors from description
-    def getAuthorsFromDescription(self, dic, name):
-        #TODO: Not implemented yet        
-        pass
-
-    def inside_parse(self, dic):
-        if dic['authors'] == ['Praca Zbiorowa'] or dic['authors'] == ['Zbiorowy']:
-            self.getAuthorsFromDescription(dic, u"Autor", "authors")
 

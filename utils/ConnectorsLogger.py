@@ -8,7 +8,7 @@ from datetime import datetime
 def logger_instance(config, force_logger_in_tests=False):
     return ConnectorsLogger.logger_instance(config, force_logger_in_tests)
 
-class ConnectorsLogger():
+class ConnectorsLogger(object):
 
     _loggers = {}
     handler_classes = {'FILE':logging.FileHandler,

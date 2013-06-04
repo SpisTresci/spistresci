@@ -1,9 +1,11 @@
 from connectors.generic import *
+from connectors.Tools import notFilterableConnector
 import lxml.etree as et
 import os
 import sys
 from sqlwrapper import *
 
+@notFilterableConnector
 class Selkar(XMLConnector):
 
     def __init__(self, name=None, limit_books=0):
@@ -73,10 +75,6 @@ class Selkar(XMLConnector):
         #print self.max_len
         #for key in self.max_len_entry.keys():
         #    print key+": "+ unicode(self.max_len_entry[key])
-
-
-    def applySingleFilter(self, filter_name, f_params):
-        raise NotImplementedError('One Does Not Simply apply filter on Selkar without implementation')
 
     def fetchData(self, unpack=True):
         params = {'url':self.url,

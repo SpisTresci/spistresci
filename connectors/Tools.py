@@ -33,6 +33,18 @@ def filter_classnames(connector_classnames, filter_list, logger=None):
         final_connector_list[cn] = connector_classnames[cn]
     return final_connector_list
 
+
+''' Class decorator to prevent applaying filters on decorated connector'''
+def notFilterableConnector(org_class):
+    old_applySingleFilter = getattr(org_class, 'applySingleFilter', None)
+
+    def applySingleFilter(self, *args, **kwargs):
+        raise NotImplementedError('One Does Not Simply apply filter on %s without implementation' % org_class.__name__ )
+
+    org_class.applySingleFilter = applySingleFilter
+    return org_class
+
+
 def load_class(modulename, classname):
     modulename=str(modulename)
     classname=str(classname)

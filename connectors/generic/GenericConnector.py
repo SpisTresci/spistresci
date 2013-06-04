@@ -18,7 +18,10 @@ from connectors import Tools
 
 Base = SqlWrapper.getBaseClass()
 
-class InvalidContext(Exception):
+class InvalidContext(RuntimeError):
+    pass
+
+class WrongConnectorModeException(RuntimeError):
     pass
 
 class GenericBase(object):
@@ -67,6 +70,10 @@ class GenericConnector(GenericBase, DataValidator):
             'ZIPPED_XMLS',
             'GZIPPED_XMLS',
             'MULTIPLE_XMLS',
+            'SINGLE_JSON',
+            'MULTIPLE_JSON',
+            'ZIPPED_JSON',
+            'GZIPPED_JSON',
         ]
 
     max_len = {}
@@ -205,7 +212,6 @@ class GenericConnector(GenericBase, DataValidator):
         tar = tarfile.open(tar_name, 'w:%s' % mode)
         tar.add(path, arcname=basename)
 
-
     #@abc.abstractmethod
     def fetchData(self):
         """fetchData method"""
@@ -216,9 +222,15 @@ class GenericConnector(GenericBase, DataValidator):
         """parse method"""
         pass
 
-    #@abc.abstractmethod
-    def updateDatabase(self):
-        """update method"""
+    '''override before_parse, adjust_parse and after_parse to
+        add some connector specific steps to parse method'''
+    def before_parse(self):
+        pass
+
+    def adjust_parse(self, dic):
+        pass
+
+    def after_parse(self):
         pass
 
     def applySingleFilter(self, filter_name, f_params):

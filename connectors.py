@@ -40,6 +40,7 @@ def main():
     if app_name != 'backup':
         SqlWrapper.init(GenericConnector.config_object.get('DEFAULT', 'db_config'), connectors=final_connector_dic.keys())
     connectors = [ Tools.load_connector(connectorname=connector[1], config=GenericConnector.config_object)
+                   #insert any connector constructor parameters here
                    (name=connector[0])
                    for connector in final_connector_dic.items() ]
 
