@@ -38,6 +38,9 @@ class EscapeMagazine(XMLConnector):
                     tag = tag + u", " + unicode(elem)
                 dic[tag_name] = tag
 
+    def adjust_parse(self, dic):
+        dic['formats']='pdf'
+
 Base = SqlWrapper.getBaseClass()
 class EscapeMagazineBook(GenericBook, Base):
     id = Column(Integer, primary_key=True)
