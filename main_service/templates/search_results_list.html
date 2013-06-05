@@ -29,45 +29,49 @@
               </a>
             </div>
           </div>
-          <div class="search_drop" id="list_book1">
-            <div class="sd_top">
-              <div class="sd_top_left">
-                WYŚWIETL PO:
+          <div class="search_drop2" id="list_book_2_1">
+          <!--     width = liczbawierszy w dropdownie * 136 czyli ich wysokość +45 czyli szerokość szarego paska       -->
+            <div class="search_drop" id="list_book1" style="margin-top:-317px;">
+              <div class="sd_top">
+                <div class="sd_top_left">
+                  WYŚWIETL PO:
+                </div>
+                <div class="sd_top_right">
+                  <div class="sort_for sort_for_long">WSZYSTKIE</div>
+                  <div class="sort_for">15</div>
+                  <div class="sort_for">10</div>
+                  <div class="sort_for">5</div>
+                </div>
               </div>
-              <div class="sd_top_right">
-                <div class="sort_for sort_for_long">WSZYSTKIE</div>
-                <div class="sort_for">15</div>
-                <div class="sort_for">10</div>
-                <div class="sort_for">5</div>
+              <div class="sd_format">
+                <img src="{% static "img/woblink.png" %}" alt="" />
+                <div class="sd_format_text">
+                  Formaty: Epub, PDF, MOBI
+                </div>
+                <div class="sd_price">
+                  32.99 <b>zł</b>
+                  <a href="">
+                    BIERZ GO
+                  </a>
+                </div>
               </div>
-            </div>
-            <div class="sd_format">
-              <img src="{% static "img/woblink.png" %}" alt="" />
-              <div class="sd_format_text">
-                Formaty: Epub, PDF, MOBI
-              </div>
-              <div class="sd_price">
-                32.99 <b>zł</b>
-                <a href="">
-                  BIERZ GO
-                </a>
-              </div>
-            </div>
-            <div class="sd_format">
-              <img src="{% static "img/woblink.png" %}" alt="" />
-              <div class="sd_format_text">
-                Formaty: Epub, PDF, MOBI
-              </div>
-              <div class="sd_price">
-                32.99 <b>zł</b>
-                <a href="">
-                  BIERZ GO
-                </a>
+              <div class="sd_format">
+                <img src="{% static "img/woblink.png" %}" alt="" />
+                <div class="sd_format_text">
+                  Formaty: Epub, PDF, MOBI
+                </div>
+                <div class="sd_price">
+                  32.99 <b>zł</b>
+                  <a href="">
+                    BIERZ GO
+                  </a>
+                </div>
               </div>
             </div>
           </div>
           <div class="search_drop_hide">
-            <div class="search_drop_hide_btn" onclick="list_book('1');">
+<!--  dróga cyfra w onclick="list_book('1','2'); to liczba wierszy w dropdownie     -->
+            <div id="hide1" class="search_drop_hide_btn" onclick="list_book('1','2');">
             </div>
           </div>
           
@@ -101,45 +105,49 @@
               </a>
             </div>
           </div>
-          <div class="search_drop" id="list_book2">
-            <div class="sd_top">
-              <div class="sd_top_left">
-                WYŚWIETL PO:
+          <div class="search_drop2" id="list_book_2_2">
+<!--     margintop = liczbawierszy w dropdownie * 136 czyli ich wysokość +45 czyli szerokość szarego paska       -->
+            <div class="search_drop" id="list_book2" style="margin-top:-317px;">
+              <div class="sd_top">
+                <div class="sd_top_left">
+                  WYŚWIETL PO:
+                </div>
+                <div class="sd_top_right">
+                  <div class="sort_for sort_for_long">WSZYSTKIE</div>
+                  <div class="sort_for">15</div>
+                  <div class="sort_for">10</div>
+                  <div class="sort_for">5</div>
+                </div>
               </div>
-              <div class="sd_top_right">
-                <div class="sort_for sort_for_long">WSZYSTKIE</div>
-                <div class="sort_for">15</div>
-                <div class="sort_for">10</div>
-                <div class="sort_for">5</div>
+              <div class="sd_format">
+                <img src="{% static "img/woblink.png" %}" alt="" />
+                <div class="sd_format_text">
+                  Formaty: Epub, PDF, MOBI
+                </div>
+                <div class="sd_price">
+                  32.99 <b>zł</b>
+                  <a href="">
+                    BIERZ GO
+                  </a>
+                </div>
               </div>
-            </div>
-            <div class="sd_format">
-              <img src="{% static "img/woblink.png" %}" alt="" />
-              <div class="sd_format_text">
-                Formaty: Epub, PDF, MOBI
-              </div>
-              <div class="sd_price">
-                32.99 <b>zł</b>
-                <a href="">
-                  BIERZ GO
-                </a>
-              </div>
-            </div>
-            <div class="sd_format">
-              <img src="{% static "img/woblink.png" %}" alt="" />
-              <div class="sd_format_text">
-                Formaty: Epub, PDF, MOBI
-              </div>
-              <div class="sd_price">
-                32.99 <b>zł</b>
-                <a href="">
-                  BIERZ GO
-                </a>
+              <div class="sd_format">
+                <img src="{% static "img/woblink.png" %}" alt="" />
+                <div class="sd_format_text">
+                  Formaty: Epub, PDF, MOBI
+                </div>
+                <div class="sd_price">
+                  32.99 <b>zł</b>
+                  <a href="">
+                    BIERZ GO
+                  </a>
+                </div>
               </div>
             </div>
           </div>
           <div class="search_drop_hide">
-            <div class="search_drop_hide_btn"  onclick="list_book('2');">
+<!--  dróga cyfra w onclick="list_book('1','2'); to liczba wierszy w dropdownie     -->
+            <div id="hide2" class="search_drop_hide_btn"  onclick="list_book('2','2');">
             </div>
           </div>
         </div>

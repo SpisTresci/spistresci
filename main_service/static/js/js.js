@@ -30,10 +30,12 @@ var tmp_sub=[];
 function sub(num){
   if(tmp_sub[num]!="hide"){
     document.getElementById('sub'+num).style.display="none";
+    document.getElementById('menu_arrow'+num).className="s_left_cat_arrow s_left_cat_arrow2";
     tmp_sub[num]="hide";
   }
   else{
     document.getElementById('sub'+num).style.display="block";
+    document.getElementById('menu_arrow'+num).className="s_left_cat_arrow ";
     tmp_sub[num]="";
   }
   return false;
@@ -67,14 +69,19 @@ function li(num){
 }
 
 var listbook=[];
-function list_book(num){
-  if(listbook[num]!="show"){
-    document.getElementById('list_book'+num).style.display="block";
-    listbook[num]="show";
+function list_book(id,count_link){
+    var height_link=45+count_link*136;
+  if(listbook[id]!="show"){
+    document.getElementById('list_book'+id).style.marginTop="0px";
+    document.getElementById('list_book_2_'+id).style.height=height_link+"px";
+    document.getElementById('hide'+id).className='search_drop_hide_btn2';
+    listbook[id]="show";
   }
   else{
-    document.getElementById('list_book'+num).style.display="none";
-    listbook[num]="";
+    document.getElementById('list_book'+id).style.marginTop="-"+height_link+"px";
+    document.getElementById('list_book_2_'+id).style.height="0px";
+    document.getElementById('hide'+id).className='search_drop_hide_btn';
+    listbook[id]="";
   }
   return false;
 }
