@@ -33,4 +33,3 @@ class FantastykaPolskaBook(GenericBook, Base):
     category = Column(Unicode(16))      #11
     notes = Column(Unicode(32))         #22
     genre = Column(Unicode(32))         #29
-    external_id = Column(Integer)

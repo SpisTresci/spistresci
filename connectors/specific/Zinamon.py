@@ -28,6 +28,5 @@ class ZinamonBook(GenericBook, Base):
     #authors
     cover = Column(Unicode(64))         #38
     price = Column(Integer)             #grosze
-    external_id = Column(Unicode(16))   #10
     category = Column(Unicode(512))     #20
     protection = Column(Unicode(16))    #9

@@ -27,7 +27,6 @@ class WoblinkBook(GenericBook, Base):
     title = Column(Unicode(256))	#212
     url = Column(Unicode(64))		#59
     cover = Column(Unicode(256))	#250
-    external_id = Column(Integer)
     price = Column(Integer)
     availability = Column(Boolean)
 

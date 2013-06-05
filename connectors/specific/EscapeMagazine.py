@@ -44,7 +44,6 @@ class EscapeMagazine(XMLConnector):
 Base = SqlWrapper.getBaseClass()
 class EscapeMagazineBook(GenericBook, Base):
     id = Column(Integer, primary_key=True)
-    external_id = Column(Integer)           #6
     title = Column(Unicode(128))            #68
     #description
     status = Column(Integer)                #1

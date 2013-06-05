@@ -62,6 +62,7 @@ class TestSpecificConnectors():
 
             yield self._test_depricated_xml_tags_dict, connector
             yield self._test_depricated_columns, connector
+            yield self._test_unique_columns, connector
 
     @nottest
     def _test_depricated_xml_tags_dict(self, connector):
@@ -80,3 +81,12 @@ class TestSpecificConnectors():
         for column in Book.__table__.columns:
             for depricated_column_name in depricated_columns:
                 assert column.name != depricated_column_name, "%s != %s, connector: %s" % (column.name, depricated_column_name, connector.name)
+
+    def _test_unique_columns(self, connector):
+        unique_columns = ['external_id']
+        Book = connector.getConcretizedClass(connector, "Book")
+
+        for unique_column in unique_columns:
+            for c in Book.__table__.columns:
+                if c.name == unique_column:
+                    ok_(c.unique)

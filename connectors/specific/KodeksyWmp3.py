@@ -26,6 +26,5 @@ class KodeksyWmp3Book(GenericBook, Base):
     title = Column(Unicode(64))     #37
     url = Column(Unicode(256))		#180
     cover = Column(Unicode(64))	    #45
-    external_id = Column(Integer)
     price = Column(Integer)
 
