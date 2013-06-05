@@ -665,12 +665,12 @@ a{
   border-right:2px solid #E3E3E3;
   border-bottom:2px solid #E3E3E3;
   position:relative;
-   -moz-transition: all 0.5s linear;
+   -moz-transition: all 0.5s ease-out;
 
-      -webkit-transition: all 0.5s linear;
-      -ms-transition: all 0.5s linear;
-      -o-transition: all 0.5s linear;
-      transition: all 0.5s linear;
+      -webkit-transition: all 0.5s ease-out;
+      -ms-transition: all 0.5s ease-out;
+      -o-transition: all 0.5s ease-out;
+      transition: all 0.5s ease-out;
 }
 .s_zip{
   margin-left:-290px;
@@ -835,11 +835,11 @@ a{
   width: -o-calc(100% - 400px);
   width: calc(100% - 400px);
   float:left;
-     -moz-transition: all 0.5s linear;
-      -webkit-transition: all 0.5s linear;
-      -ms-transition: all 0.5s linear;
-      -o-transition: all 0.5s linear;
-      transition: all 0.5s linear;
+     -moz-transition: all 0.5s ease-out;
+      -webkit-transition: all 0.5s ease-out;
+      -ms-transition: all 0.5s ease-out;
+      -o-transition: all 0.5s ease-out;
+      transition: all 0.5s ease-out;
 }
 .s_right2{
   width: -moz-calc(100% - 110px);
