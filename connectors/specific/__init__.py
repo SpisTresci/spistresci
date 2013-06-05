@@ -26,6 +26,7 @@ from Virtualo import Virtualo
 from Wikibooks import Wikibooks
 from Woblink import Woblink
 from WolneEbooki import WolneEbooki
+from Zantes import Zantes
 from ZielonaSowa import ZielonaSowa
 from Zinamon import Zinamon
 from ZloteMysli import ZloteMysli
