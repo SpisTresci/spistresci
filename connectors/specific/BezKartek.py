@@ -8,14 +8,14 @@ class BezKartek(XMLConnector):
     depth = 1
     #dict of xml_tag -> db_column_name translations
     xml_tag_dict = {
-        './isbn':('isbn', ''),
+        './isbn':('isbns', ''),
         './ebookId':('external_id', None),
         './name':('title', ''),
         './url':('url', None),
         './authors':('authors', ''),
         './category':('category', ''),
         './description':('description', ''),
-        './format':('format', ''),
+        './format':('formats', ''),
         './image':('cover', ''),
         './languages/lang_short':('lang_short', ''),
         './languages/lang_long': ('lang_long', ''),
@@ -34,8 +34,6 @@ class BezKartekBook(GenericBook, Base):
     category = Column(Unicode(30))      #29
 
     audio_time = Column(Unicode(10))    #9
-    isbn = Column(Unicode(30))          #27, 978-83-63444-25-9/1895-247X
-    format = Column(Unicode(4))         #4
     price = Column(Integer)             #GROSZE!!!
     page_count = Column(Integer)        #508700 - wtf?
     publisher = Column(Unicode(70))     #68

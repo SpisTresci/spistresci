@@ -20,10 +20,10 @@ class eClicto(Ceneo):
         "./imgs/main[@url]":('cover', ''),
         "./desc":('description', ''),
         "./attrs/a[@name='Autor']":('authors', ''),
-        "./attrs/a[@name='ISBN']":('isbn', ''),
+        "./attrs/a[@name='ISBN']":('isbns', ''),
         "./attrs/a[@name='Rok_wydania']":('date', ''),
         "./attrs/a[@name='Producent']":('publisher', ''),
-        "./attrs/a[@name='Format']":('format', ''),
+        "./attrs/a[@name='Format']":('formats', ''),
     }
 
 class eClictoBook(GenericBook, Base):
@@ -34,9 +34,7 @@ class eClictoBook(GenericBook, Base):
     availability = Column(Integer)      #2-"99"
     set = Column(Integer)               #1 - ???
     category = Column(Unicode(60))      #54
-    format = Column(Unicode(80))        #71
     publisher = Column(Unicode(46))     #54
     weight = Column(Unicode(4))         #4 - ???
     title = Column(Unicode(256))        #26
     cover = Column(Unicode(64))         #55
-    isbn = Column(Unicode(13))          #0

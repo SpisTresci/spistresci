@@ -11,7 +11,7 @@ class RW2010(XMLConnector):
         './tytul':('title', ''),
         './url':('url', ''),
         './autor':('authors', ''),
-        './formaty':('format', ''),
+        './formaty':('formats', ''),
         './okladka':('cover', ''),
         './cena':('price', 0),
     }
@@ -70,7 +70,5 @@ class RW2010Book(GenericBook, Base):
     #title
     url = Column(Unicode(160))          #155
     #authors
-    format = Column(Unicode(15))         #15
-    isbn = Column(Unicode(13))          #0
     cover = Column(Unicode(160))        #150
     price = Column(Integer)             #GROSZE!!!

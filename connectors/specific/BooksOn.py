@@ -34,4 +34,3 @@ class BooksOnBook(GenericBook, Base):
     category = Column(Unicode(10))      #7
     title = Column(Unicode(256))        #26
     cover = Column(Unicode(128))        #90
-    isbn = Column(Unicode(13))          #0

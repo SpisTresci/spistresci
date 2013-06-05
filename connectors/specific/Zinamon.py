@@ -9,11 +9,11 @@ class Zinamon(XMLConnector):
         './tytul':('title', ''),
         './url':('url', ''),
         './autorzy':('authors', ''),
-        './format':('format', ''),
+        './format':('formats', ''),
         './okladka':('cover', ''),
         './cena':('price', ''),
         './id':('external_id', ''),
-        './isbn':('isbn', ''),
+        './isbn':('isbns', ''),
         './kategorie':('category',''),
         './zabezpieczenia':('protection',''),
     }
@@ -26,10 +26,8 @@ class ZinamonBook(GenericBook, Base):
     title = Column(Unicode(265))        #207
     url = Column(Unicode(512))          #338
     #authors
-    format = Column(Unicode(8))         #4
     cover = Column(Unicode(64))         #38
     price = Column(Integer)             #grosze
     external_id = Column(Unicode(16))   #10
-    isbn = Column(Unicode(13))          #0
     category = Column(Unicode(512))     #20
     protection = Column(Unicode(16))    #9

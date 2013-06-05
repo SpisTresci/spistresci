@@ -31,7 +31,6 @@ class FantastykaPolskaBook(GenericBook, Base):
     price = Column(Integer)             #GROSZE!!!
     url = Column(Unicode(64))          #50
     category = Column(Unicode(16))      #11
-    isbn = Column(Unicode(13))          #0
     notes = Column(Unicode(32))         #22
     genre = Column(Unicode(32))         #29
     external_id = Column(Integer)

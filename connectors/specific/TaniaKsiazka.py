@@ -22,7 +22,7 @@ class TaniaKsiazka(XMLConnector):
         './awThumb':('thumbnail', ''),
         './awImage':('cover', ''),
         "./price/display":('price', 0),
-        "./atribute[@Name='ISBN']":('isbn', ''),
+        "./atribute[@Name='ISBN']":('isbns', ''),
        }
 
 Base = SqlWrapper.getBaseClass()
@@ -30,7 +30,6 @@ Base = SqlWrapper.getBaseClass()
 class TaniaKsiazkaBook(GenericBook, Base):
     id = Column(Integer, primary_key=True)
     category = Column(Unicode(32))          #22
-    isbn = Column(Unicode(13))              #13
     title = Column(Unicode(256))            #200
     url = Column(Unicode(512))              #284
     type = Column(Unicode(64))              #51

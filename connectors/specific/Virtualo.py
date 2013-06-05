@@ -10,10 +10,10 @@ class Virtualo(XMLConnector):
     xml_tag_dict = {
         './coverId' : ('external_id', ''),
         './title' : ('title', ''),
-        './format' : ('format', ''),
+        './format' : ('formats', ''),
         './security' : ('protection', ''),
         './price' : ('price', 0),
-        './isbn' : ('isbn', ''),
+        './isbn' : ('isbns', ''),
         './authors' : ('authors', ''),
         './url' : ('url', ''),
         './description' : ('description', ''),
@@ -43,10 +43,8 @@ Base = SqlWrapper.getBaseClass()
 class VirtualoBook(GenericBook, Base):
     id = Column(Integer, primary_key=True)
     title = Column(Unicode(256))        #174
-    format = Column(Unicode(8))         #6
     protection = Column(Unicode(8))       #3
     price = Column(Integer)             #*0,01PLN
-    isbn = Column(Unicode(13))          #0
     url = Column(Unicode(128))          #89
     rating = Column(Integer)            #0-100
 

@@ -16,7 +16,7 @@ class DobryEbook(XMLConnector):
         "./cena":('price', ''),
         "./wielkosc_pliku":('file_size', ''),
         "./liczba_stron":('page_count', ''),
-        "./isbn":('isbn', ''),
+        "./isbn":('isbns', ''),
         "./male_zdjecie":('small_cover', ''),
         "./duze_zdjecie":('cover', ''),
     }
@@ -33,7 +33,6 @@ class DobryEbookBook(GenericBook, Base):
     subtitle = Column(Unicode(128))		#70
 
     url = Column(Unicode(256))			#133
-    isbn= Column(Unicode(13))			#13
     page_count = Column(Integer)		#Integer
     cover = Column(Unicode(64))			#60
     small_cover = Column(Unicode(64))		#60

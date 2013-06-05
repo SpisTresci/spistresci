@@ -7,7 +7,7 @@ class Empik(XMLConnector):
 
     #dict of xml_tag -> db_column_name translations
     xml_tag_dict = {
-        './isbn':('isbn', ''),                    #ok
+        './isbn':('isbns', ''),                   #ok
         './ean':('ean', ''),                      #ok
         './TDProductId':('external_id', ''),      #ok
         './name':('title', ''),                   #ok
@@ -23,7 +23,6 @@ Base = SqlWrapper.getBaseClass()
 class EmpikBook(GenericBook, Base):
     id = Column(Integer, primary_key=True)
     ean = Column(Unicode(13))           #13
-    isbn = Column(Unicode(13))          #0
     price = Column(Integer)             #GROSZE!!!
     url = Column(Unicode(65))           #59
     cover = Column(Unicode(280))        #269

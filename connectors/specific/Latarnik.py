@@ -28,14 +28,14 @@ class Latarnik(Ceneo):
         #"":('nosnik', ''),  - nosnik jest umieszczony w czwartym wierszu description
         #"":('rozmiar', ''),  - rozmiar jest umieszczony w szostym wierszu description
         #"":('oprawa', ''),  - oprawa jest umieszczony w szostym wierszu description
-        "./attrs/a[@name='EAN']":('isbn', ''),
+        "./attrs/a[@name='EAN']":('isbns', ''),
         "./attrs/a[@name='Producent']":('publisher', ''),
         "./attrs/a[@name='Kod_producenta']":('publisher_code', ''),
     }
 
     def adjust_parse(self, dic):
         self.createFromDescription(dic, u"Autor", "authors")
-        self.createFromDescription(dic, u"No\xc3nik", "form")
+        self.createFromDescription(dic, u"No\xc3nik", "formats")
         self.createFromDescription(dic, u"Rozmiar", "form")
         self.createFromDescription(dic, u"Oprawa", "type")
 
@@ -62,7 +62,6 @@ class LatarnikBook(GenericBook, Base):
     category = Column(Unicode(32))      #22
     title = Column(Unicode(128))        #72
     cover = Column(Unicode(256))        #256
-    isbn = Column(Unicode(13))          #0
     publisher = Column(Unicode(64))     #33
     publisher_code = Column(Unicode(32))        #17
 

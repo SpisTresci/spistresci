@@ -12,8 +12,8 @@ class Czytio(XMLConnector):
         './title':('title', ''),
         './url':('url', ''),
         './authors':('authors', ''),
-        './format':('format', ''),
-        './isbn':('isbn', ''),
+        './format':('formats', ''),
+        './isbn':('isbns', ''),
         './cover':('cover', ''),
         './price':('price', 0),
         './size':('size', 0),
@@ -26,8 +26,6 @@ class CzytioBook(GenericBook, Base):
     #title
     url = Column(Unicode(120))          #109
     #authors
-    format = Column(Unicode(4))         #4
-    isbn = Column(Unicode(25))          #20, 978-83-02-63935-07-8
     cover = Column(Unicode(128))        #118
     price = Column(Integer)             #GROSZE!!!
     size = Column(Integer)             #GROSZE!!!

@@ -10,7 +10,7 @@ class Nexto(XMLConnector):
     #dict of xml_tag -> db_column_name translations
     xml_tag_dict = {
         './id':('external_id', None),
-        './isbn':('isbn', ''),
+        './isbn':('isbns', ''),
         './language':('lang_short', ''),
         './body':('description', ''),
         './title':('title', ''),
@@ -28,7 +28,7 @@ class Nexto(XMLConnector):
         './issues/issue/net_api_price':('api_price', ''),
         './issues/issue/default_spread':('default_spread', ''),
         './issues/issue/image':('cover', ''),
-        "./issues/issue/format{'./type':('format', ''), './file-protection/type':('protection',''), './file-protection/properties':('properties','')}":('format', ''),
+        "./issues/issue/format{'./type':('format', ''), './file-protection/type':('protection',''), './file-protection/properties':('properties','')}":('formats', ''),
        }
 
 

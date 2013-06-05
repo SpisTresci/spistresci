@@ -18,9 +18,9 @@ class Koobe(XMLConnector):
         "./price":('price', ''),
         "./category":('category', ''),
         "./producer":('publisher', ''),
-        "./property[@name='isbn']":('isbn', ''),
+        "./property[@name='isbn']":('isbns', ''),
         "./property[@name='author']":('authors', ''),
-        "./property[@name='format']":('format', ''),
+        "./property[@name='format']":('formats', ''),
         "./property[@name='protection']":('protection', ''),
     }
 
@@ -31,9 +31,7 @@ class KoobeBook(GenericBook, Base):
     publisher = Column(Unicode(64))     #57
     url = Column(Unicode(512))			#271
     #description
-    isbn = Column(Unicode(13))			#13
     price = Column(Integer)		        #grosze
     cover = Column(Unicode(256))	    #159
-    format = Column(Unicode(16))        #14
     protection = Column(Unicode(16))    #9
 

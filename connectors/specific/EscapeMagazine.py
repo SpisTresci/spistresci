@@ -7,7 +7,7 @@ class EscapeMagazine(XMLConnector):
 
     #dict of xml_tag -> db_column_name translations
     xml_tag_dict = {
-        './producer_ident':('isbn',''),
+        './producer_ident':('isbns',''),
         './id':('external_id',''),
         './title':('title',''),
         './describe_long':('description',''),
@@ -41,7 +41,6 @@ class EscapeMagazine(XMLConnector):
 Base = SqlWrapper.getBaseClass()
 class EscapeMagazineBook(GenericBook, Base):
     id = Column(Integer, primary_key=True)
-    isbn= Column(Unicode(13))               #13
     external_id = Column(Integer)           #6
     title = Column(Unicode(128))            #68
     #description
