@@ -52,7 +52,7 @@ class BibliotekaNarodowa(XMLConnector, MARCConnector, ReferenceConnector):
             persons = dic[tag_name]
             new_list_of_person_dicts=[]
             pdict={}
-            if not (isinstance(persons, list) and not isinstance(persons, str)):
+            if not (isinstance(persons, list) and not isinstance(persons, basestring)):
                 persons = [persons]
             for person in persons:
                 pdict["name"] = person 

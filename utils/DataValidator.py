@@ -23,7 +23,7 @@ class DataValidator(object):
         format_list = []
         if dic.get("formats") != None:
             formats = dic["formats"]
-            if (isinstance(formats, str) or isinstance(formats, unicode)) and formats != "":
+            if isinstance(formats, basestring) and formats != "":
                 if "," in formats:
                     format_list = filter(lambda x: x != "", formats.split(","))
                 elif " " in formats:
@@ -47,7 +47,7 @@ class DataValidator(object):
         original_isbn = dic.get('isbns')
         isbn_list = []
         if original_isbn != None:
-            if not (isinstance(original_isbn, list) and not isinstance(original_isbn, str)):
+            if not (isinstance(original_isbn, list) and not isinstance(original_isbn, basestring)):
                 original_isbn = [original_isbn]
 
             for i in original_isbn:
@@ -114,14 +114,14 @@ class DataValidator(object):
 
     def validateAuthors(self, dic, id, title, tag_name='authors'):
         if dic.get(tag_name) != None:
-            if isinstance(dic.get(tag_name), unicode) or isinstance(dic.get(tag_name), str):
+            if isinstance(dic.get(tag_name), basestring):
                 dic[tag_name] = [unicode(x.strip()) for x in re.split("[,;]", dic[tag_name])]
             elif isinstance(dic.get(tag_name), list):
                 dic[tag_name] = [unicode(x) for x in dic[tag_name]]
 
             persons = dic[tag_name]
             new_list_of_person_dicts = []
-            if not (isinstance(persons, list) and not isinstance(persons, str)):
+            if not (isinstance(persons, list) and not isinstance(persons, basestring)):
                 persons = [persons]
             for person in persons:
                 pdict = {}

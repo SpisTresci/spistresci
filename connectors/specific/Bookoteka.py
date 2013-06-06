@@ -33,7 +33,7 @@ class Bookoteka(XMLConnector):
                     existing[key] = dic[key]
                 elif existing[key] != dic[key]:
                     #is list
-                    if isinstance(existing[key], list) and not isinstance(existing[key], str):
+                    if isinstance(existing[key], list) and not isinstance(existing[key], basestring):
                         existing[key].append(dic[key])
                     else:
                         existing[key] = [existing[key], dic[key]]
