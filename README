@@ -17,3 +17,5 @@ pip install Django==1.5.1
 To run server in debug mode, simple run:
 
 python manage.py runserver
+
+
