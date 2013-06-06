@@ -30,23 +30,20 @@
             Inne
           </a>
         </div>
-        <div class="footer_logos">
-          <a href="">
-            <img src="{% static "img/patrons1.png" %}" alt="" />
-          </a>
-          <a href="">
-            <img src="{% static "img/patrons2.png" %}" alt="" />
-          </a>
-          <a href="">
-            <img src="{% static "img/patrons1.png" %}" alt="" />
-          </a>
-          <a href="">
-            <img src="{% static "img/patrons2.png" %}" alt="" />
-          </a>
-          <a href="">
-            <img src="{% static "img/patrons1.png" %}" alt="" style="border:none;" />
-          </a>
-        </div>
+
+<marquee direction="left" onmouseover='this.stop()' onmouseout='this.start()' behavior="alternate"  speed="7">
+<div class="footer_logos">
+
+{% for resp.name,resp.address in resp%}
+<a href= "{{resp.address}}" >
+<img src={% static resp.name %} alt="" />
+</a>
+{% endfor %}
+
+</div>
+</marquee>
+
+         
         <div class="footer_text ft1">
           <div class="footer_title">
             O SERWISIE

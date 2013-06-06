@@ -1,11 +1,12 @@
 # -*- coding: utf-8 -*-
 # from django.template.loader import POST_template
-from django.template import Context
-from django.http import HttpResponse
+#from django.template import Context
+#from django.http import HttpResponse
+
+#from django.core.context_processors import csrf
+#from django.views.decorators.csrf import csrf_protect
+#import os
 from django.shortcuts import render_to_response
-from django.core.context_processors import csrf
-from django.views.decorators.csrf import csrf_protect
-import os
 
 
 def index(request):
