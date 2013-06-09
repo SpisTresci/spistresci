@@ -8,6 +8,11 @@ class Wydaje(XMLConnector):
 
     depth = 1
 
+    inner_offer_dict = {
+        'formats': ('./formats/format', ''),
+        'price': ('./price', '')
+    }
+
     #dict of xml_tag -> db_column_name translations
     xml_tag_dict = {
         'external_id': ('./id', ''),
@@ -23,7 +28,7 @@ class Wydaje(XMLConnector):
         'rating': ('./rating', ''),
         'votes': ('./votes', ''),
         'description': ('./description', ''),
-        'offers': ("./offers/offer{'formats': ('./formats/format', ''), 'price': ('./price', '')}", ''),
+        'offers': ("./offers/offer" + str(inner_offer_dict), ''),
     }
 
     format_convert_dict = {
@@ -65,8 +70,9 @@ class Wydaje(XMLConnector):
                     for offer in book['offers']:
                         book = dict(book_template)
                         book['external_id'] += '-'+str(i)
-                        book['price'] = offer['price']
-                        book['formats'] = offer['formats']
+                        for key in self.inner_offer_dict.keys():
+                            book[key] = offer[key]
+
                         self.adjust_parse(book)
                         self.validate(book)
                         if self.fulfillRequirements(book):

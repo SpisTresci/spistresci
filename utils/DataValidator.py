@@ -27,16 +27,17 @@ class DataValidator(object):
         self.validateTranslators(dic, id, title)
         self.validateLength(dic, id, title)
 
+    format_sepeparators = [',', ' ']
 
     def validateFormats(self, dic, id, title):
         format_list = []
         if dic.get("formats") != None:
             formats = dic["formats"]
             if isinstance(formats, basestring) and formats != "":
-                if "," in formats:
-                    format_list = filter(lambda x: x != "", formats.split(","))
-                elif " " in formats:
-                    format_list = formats.split(" ")
+                for sep in self.format_sepeparators:
+                    if sep in formats:
+                        format_list = filter(lambda x: x != "", formats.split(sep))
+                        break
                 else:
                     format_list = [formats]
             else:
@@ -47,7 +48,13 @@ class DataValidator(object):
         if len(format_list) != len(set(format_list)):
             self.erratum_logger.warning("This same format declared more than once! connector: %s, id: %s, title: %s, formats: %s" % (self.name, id, title, formats))
 
-        format_list = [(x if not x in self.format_convert_dict.keys() else self.format_convert_dict[x]) for x in format_list]
+
+        tmp = []
+        for format in format_list:
+            for k,v in self.format_convert_dict.items():
+                format = re.sub(k, v, format)
+            tmp.append(format.strip())
+        format_list = tmp
 
         for x in format_list:
             if x not in self.supported_formats:
