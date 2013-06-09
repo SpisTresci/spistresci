@@ -58,7 +58,8 @@ class TestDataValidator():
 
     def test_validate_price(self):
         yield self._test_validate_helper_eq, "Price", {}, {"price":"0"}
-        yield self._test_validate_helper_eq, "Price", {"price":"1000"}, {"price":"1000"}
+        yield self._test_validate_helper_eq, "Price", {"price":"10"}, {"price":"1000"}
+        yield self._test_validate_helper_eq, "Price", {"price":"124"}, {"price":"12400"}
         yield self._test_validate_helper_eq, "Price", {"price":"000"}, {"price":"0"}
         yield self._test_validate_helper_eq, "Price", {"price":"0"}, {"price":"0"}
 
@@ -67,6 +68,8 @@ class TestDataValidator():
         yield self._test_validate_helper_eq, "Price", {"price":"1.00"}, {"price":"100"}
         yield self._test_validate_helper_eq, "Price", {"price":"0,17"}, {"price":"17"}
         yield self._test_validate_helper_eq, "Price", {"price":"0,09"}, {"price":"9"}
+        yield self._test_validate_helper_eq, "Price", {"price":",99"}, {"price":"99"}
+        yield self._test_validate_helper_eq, "Price", {"price":".00"}, {"price":"0"}
 
         yield self._test_validate_helper_eq, "Price", {"price":"9,99"}, {"price":"999"}
         yield self._test_validate_helper_eq, "Price", {"price":"734,00"}, {"price":"73400"}
@@ -85,7 +88,6 @@ class TestDataValidator():
         yield self._test_validate_helper_warning, "Price", {"price":"5,574,547"}
         yield self._test_validate_helper_warning, "Price", {"price":"5.574.547"}
         yield self._test_validate_helper_warning, "Price", {"price":"9.123456"}
-        yield self._test_validate_helper_warning, "Price", {"price":".00"}
         yield self._test_validate_helper_warning, "Price", {"price":"20 zl"}
 
     def test_validate_formats(self):

@@ -16,6 +16,7 @@ from KodeksyWmp3 import KodeksyWmp3
 from Koobe import Koobe
 from Latarnik import Latarnik
 from Legimi import Legimi
+from Merlin import Merlin
 from Nexto import Nexto
 from Pokatne import Pokatne
 from RW2010 import RW2010

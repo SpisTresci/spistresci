@@ -5,7 +5,7 @@ import glob
 class DataValidator(object):
 
     list_of_names = []
-    supported_formats = ["pdf", "mobi", "epub", "txt"]
+    supported_formats = ["pdf", "mobi", "epub", "txt", "mp3"]
 
     def validate(self, dic):
         id = dic.get('external_id')
@@ -16,6 +16,7 @@ class DataValidator(object):
         self.validateSize(dic, id, title)
         self.validateAuthors(dic, id, title)
         self.validateAuthors(dic, id, title, 'lectors')
+        self.validateAuthors(dic, id, title, 'translators')
         self.validateLength(dic, id, title)
 
 
@@ -97,18 +98,28 @@ class DataValidator(object):
             if "," in price_str:
                 price_str = price_str.replace(",", ".")
             try:
-                if "." in price_str:
-                    if price_str.count(".") == 1 and int(price_str.split(".")[0]) >= 0 and len(price_str.split(".")[1]) == 2:
+                if price_str.count(".") == 1:
+                    if len(price_str.split(".")[0]) >= 1 and len(price_str.split(".")[1]) >= 1:
+                        if  int(price_str.split(".")[0]) >= 0 and len(price_str.split(".")[1]) == 2:
+                            price_str = price_str.replace(".", "")
+                        elif int(price_str.split(".")[0]) >= 0 and len(price_str.split(".")[1]) == 1:
+                            price_str = price_str.replace(".", "") + "0"
+
+                    elif price_str.startswith("."): # .99
                         price_str = price_str.replace(".", "")
+                    elif price_str.endswith("."): # 4.
+                            price_str = price_str.replace(".", "") + "00"
                     else:
-                        self.erratum_logger.warning("Entry has price in wrong format! connector: %s, id: %s, title: %s" % (self.name, id, title))
+                        self.erratum_logger.warning("Entry has price in wrong format! connector: %s, id: %s, title: %s, price: %s" % (self.name, id, title, str(original_price)))
+                elif price_str.count(".") == 0:
+                    price_str += "00"
 
                 price = int(price_str)
                 if price < 0:
-                    self.erratum_logger.warning("Price should be positive value! connector: %s, id: %s, title: %s" % (self.name, id, title))
+                    self.erratum_logger.warning("Price should be positive value! connector: %s, id: %s, title: %s, price: %s" % (self.name, id, title, str(original_price)))
 
             except ValueError:
-                self.erratum_logger.warning("Entry has price in wrong format! connector: %s, id: %s, title: %s" % (self.name, id, title))
+                self.erratum_logger.warning("Entry has price in wrong format! connector: %s, id: %s, title: %s, price: %s" % (self.name, id, title, str(original_price)))
 
         dic[price_tag_name] = unicode(price)
 
