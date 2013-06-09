@@ -4,9 +4,9 @@ import lxml.etree as et
 from sqlwrapper import *
 
 
-class Helion(HelionBase):
+class Bezdroza(HelionBase):
     pass
 
 Base = SqlWrapper.getBaseClass()
-class HelionBook(HelionBaseBook, Base):
+class BezdrozaBook(HelionBaseBook, Base):
     pass

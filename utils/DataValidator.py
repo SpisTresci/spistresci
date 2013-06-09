@@ -13,6 +13,7 @@ class DataValidator(object):
         self.validateFormats(dic, id, title)
         self.validateISBNs(dic, id, title)
         self.validatePrice(dic, id, title)
+        self.validatePrice(dic, id, title, 'price_normal')
         self.validateSize(dic, id, title)
         self.validateAuthors(dic, id, title)
         self.validateAuthors(dic, id, title, 'lectors')

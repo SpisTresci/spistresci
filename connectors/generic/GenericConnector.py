@@ -437,11 +437,23 @@ class GenericConnector(GenericBase, DataValidator):
 
         session.close()
 
+    statuses = {
+                0:('unavailable','niedostepna'),
+                1:('available','dostepna'),
+                2:('in preparation','w przygotowaniu'),
+                3:('presale','przedsprzedaz'),
+                4:('print on demand','druk na zadanie'),
+                5:('few pieces left in stock','dostepna w malej ilosci'),
+                }
+
+
 class GenericBook(GenericBase):
     id = Column(Integer, primary_key=True)
     title = Column(Unicode(255))
     external_id = Column(Integer, unique=True)
     price = Column(Integer)                     #GROSZE!!!
+    price_normal = Column(Integer)              #GROSZE!!!
+    status = Column(Integer)
 
     @declared_attr
     def declareTablesFor(cls):
