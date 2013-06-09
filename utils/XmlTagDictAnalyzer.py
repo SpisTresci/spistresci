@@ -14,7 +14,7 @@ def main():
     con_name = "ConnectorName"
     dic = {con_name:" "}
 
-    connectors = sorted(connectors, cmp=lambda x,y: -1 if x.name < y.name else (1 if x.name > y.name else 0))
+    connectors = sorted(connectors, cmp=lambda x,y: -1 if x.name.lower() < y.name.lower() else (1 if x.name.lower() > y.name.lower() else 0))
 
     for c in connectors:
 
@@ -25,25 +25,25 @@ def main():
             if dic.get(nkey) == None:
                 dic[nkey] = ""
                 for i in range(dic[con_name].count(sep)):
-                    dic[nkey] += sep + " "
+                    dic[nkey] += sep
 
-            dic[nkey] += key + sep + " "
+            dic[nkey] += key + sep
             if nkey in list_of_keys:
                 list_of_keys.remove(nkey)
 
-        dic[con_name] += c.name + sep + " "
+        dic[con_name] += c.name + sep
         list_of_keys.remove(con_name)
 
         for key in list_of_keys:
-            dic[key] += sep + " "
+            dic[key] += sep
 
     f = open("xml_tag_dict_analyze.csv", "w")
 
-    f.write(con_name + sep + " " + dic[con_name]+"\n")
+    f.write(con_name + sep + dic[con_name]+"\n")
     del dic[con_name]
     keys = sorted(dic.keys())
     for key in keys:
-        f.write(key + sep + " "+dic[key]+"\n")
+        f.write(key + sep + dic[key]+"\n")
 
     f.close()
 

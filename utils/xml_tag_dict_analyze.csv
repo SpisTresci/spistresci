@@ -1,96 +1,97 @@
-ConnectorName~  Audeo~ Audiobook~ Audioteka~ BezKartek~ Bookoteka~ BooksOn~ CzeskieKlimaty~ Czytio~ DobryEbook~ Empik~ EscapeMagazine~ FantastykaPolska~ Helion~ KodeksyWmp3~ Koobe~ Latarnik~ Legimi~ Merlin~ Nexto~ Pokatne~ RW2010~ Selkar~ TaniaKsiazka~ Tmc~ Virtualo~ Wikibooks~ Woblink~ WolneEbooki~ Zantes~ ZielonaSowa~ Zinamon~ ZloteMysli~ eClicto~ 
-add_to_cart_url~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ./url_koszyk~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-advanced_booking~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ./przedsprzedazDO~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-alert~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ./alert~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-api_price~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ./issues/issue/net_api_price~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-audio_time~ ~ ~ ~ ./audioTime~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-authors~ ./attrs/a[@name='Autor']~ ~ ~ ./authors~ ./*[contains(name(), 'author_')]~ ./n:attrs/n:a[@name='Autor']~ ./attrs/a[@name='Autor']~ ./authors~ ./autor~ ~ ./*[contains(name(), 'authors_')]~ ./description/div[@class='field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix']/ul/li/a~ ./autor~ ~ ./property[@name='author']~ ~ ~ ./autor~ ./issues/issue/author~ ./authors~ ./autor~ author~ ~ ~ ./authors~ ~ ~ ./author~ ./*[contains(name(), 'authors_')]~ ~ ./autorzy~ ~ ./attrs/a[@name='Autor']~ 
-availability~ @avail~ ~ ~ ~ ~ @avail~ ~ ~ ~ ./availability~ ~ ~ ~ ~ ~ @avail~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ @avail~ ~ ~ ~ ~ ~ @avail~ 
-awId~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ @awId~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-baset~ ~ ~ ~ ~ ~ @baset~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-binding~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ./oprawa~ ~ ~ ~ ~ ~ ~ ~ ~ cover~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-book_size~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ./format~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-bookshop~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ./marka~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-brand~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ./brand~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-carrier~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ./nosnik~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-categories~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ./*[contains(name(), 'categories_')]~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ./*[contains(name(), 'categories_')]~ ~ ~ ~ ~ 
-category~ ./cat~ {urn:ExportB2B}categoryId~ {urn:ExportB2B}categoryId~ ./category~ ~ ./n:cat~ ./cat~ ~ ~ ~ ~ ./description/div[@class='field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix']/ul/li/a~ ~ ./cat~ ./category~ ./cat~ {urn:ExportB2B}categoryId~ ./lista_kategorii~ ~ ~ ~ category_id~ ./cat/awCat~ {urn:ExportB2B}categoryId~ ~ ~ ./cat~ ~ ~ {urn:ExportB2B}categoryId~ ./kategorie~ {urn:ExportB2B}categoryId~ ./cat~ 
-category_id~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ./category_refs/id~ ~ ~ ~ ./cat/awCatId~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-comments~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ./comments~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-cover~ ./imgs/main[@url]~ {urn:ExportB2B}image~ {urn:ExportB2B}image~ ./image~ ./coverUrl~ ./n:imgs/n:main[@url]~ ./imgs/main[@url]~ ./cover~ ./duze_zdjecie~ ./imageUrl~ ./*[contains(name(), 'covers_')]~ ~ ./okladka~ ./imgs/main[@url]~ ./image~ ./imgs/main[@url]~ {urn:ExportB2B}image~ ./url_images~ ./issues/issue/image~ ./cover~ ./okladka~ image~ ./awImage~ {urn:ExportB2B}image~ ~ ~ ./imgs/main[@url]~ ./okladka~ ./*[contains(name(), 'covers_')]~ {urn:ExportB2B}image~ ./okladka~ {urn:ExportB2B}image~ ./imgs/main[@url]~ 
-cover_back~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ./okladkatyl~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-date~ ~ ~ ~ ~ ~ ~ ./attrs/a[@name='Rok_wydania']~ ~ ~ ~ ~ ~ ./datawydania~ ~ ~ ~ ~ ./date~ ~ ./date~ ~ ~ ~ ~ ~ ~ ~ ~ ./time~ ~ ~ ~ ./attrs/a[@name='Rok_wydania']~ 
-default_price~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ./issues/issue/default_net_price~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-default_spread~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ./issues/issue/default_spread~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-description~ ./desc~ {urn:ExportB2B}description~ {urn:ExportB2B}description~ ./description~ ~ ./n:desc~ ./desc~ ~ ~ ./description~ ./describe_long~ ~ ./opis~ ./desc~ ./description~ ./desc~ {urn:ExportB2B}description~ ./opis~ ./body~ ~ ~ description~ ./desc~ {urn:ExportB2B}description~ ./description~ ~ ./desc~ ~ ./describe_long~ {urn:ExportB2B}description~ ~ {urn:ExportB2B}description~ ./desc~ 
-descriptionShort~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ./descriptionShort~ ~ ~ ~ ~ ~ ~ ~ ~ 
-description_short~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ./describe_short~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ./describe_short~ ~ ~ ~ ~ 
-discount~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ./znizka~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-ean~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ./ean~ ~ ~ ./ean~ ~ ~ ~ ~ ~ ~ ~ ~ ean~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-external_id~ @id~ {urn:ExportB2B}id~ {urn:ExportB2B}id~ ./ebookId~ ~ @id~ @id~ ./id~ ~ ./TDProductId~ ./id~ ./filteredId~ ./ident~ @id~ ./id~ @id~ {urn:ExportB2B}id~ ./towar_id~ ./id~ ./id~ ~ id~ ./pId~ {urn:ExportB2B}id~ ./coverId~ @id~ @id~ ~ ./id~ {urn:ExportB2B}id~ ./id~ {urn:ExportB2B}id~ @id~ 
-file_size~ ~ ~ ~ ~ ~ ~ ~ ~ ./wielkosc_pliku~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-formats~ ~ ~ ~ ./format~ ./format~ ~ ~ ./format~ ~ ~ ~ ~ ./ebook_formaty/ebook_format~ ~ ./property[@name='format']~ ~ ~ ./nosnik~ ./issues/issue/format{'./type':('format', ''), './file-protection/type':('protection',''), './file-protection/properties':('properties','')}~ ./formats~ ./formaty~ ~ ~ ~ ./format~ ~ ./attrs/a[@name='Format']~ ./formats~ ~ ~ ./format~ ~ ./attrs/a[@name='Format']~ 
-free_fragment~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ./online~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-free_fragment_online_tool~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ./issueurl~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-genre~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ./description/div[@class='field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix']/ul/li/a~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-gross_price~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ./ksiegarnie_nieinter/cena_brutto~ ~ ~ ~ ~ ~ ./issues/issue/gross_nexto_price~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-is_available~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ./status~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-is_bestseller~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ./bestseller~ ~ ~ ~ ~ ~ ~ ~ ~ bestseller~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-is_new~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ./nowosc~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-isbn~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ isbn~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-isbns~ ~ ~ ~ ./isbn~ ./isbn~ ~ ./attrs/a[@name='ISBN']~ ./isbn~ ./isbn~ ./isbn~ ./producer_ident~ ~ ./isbn~ ./attrs/a[@name='EAN']~ ./property[@name='isbn']~ ./attrs/a[@name='EAN']~ ~ ./identyfikator~ ./isbn~ ~ ~ ~ ./atribute[@Name='ISBN']~ ~ ./isbn~ ~ ./attrs/a[@name='ISBN']~ ~ ./producer_ident~ ~ ./isbn~ ~ ./attrs/a[@name='ISBN']~ 
-issue_id~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ./issues/issue/issue_id~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-lang~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ./jezyk~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-lang_long~ ~ ~ ~ ./languages/lang_long~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-lang_short~ ~ ~ ~ ./languages/lang_short~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ./language~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-lectors~ ./attrs/a[@name='Lektor']~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-linked~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ./powiazane/ident_powiazany~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-list_price~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ list_price~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-manufacturer_id~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ./manufacturer_id~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-mass~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ./ksiegarnie_nieinter/waga~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-md5~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ./md5~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-name_of_promotion~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ./promocja~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-net_price~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ./ksiegarnie_nieinter/cena_netto~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-new~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ./new~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-notes~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ./description/div/div[@class='field-items']/div~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-on_demand~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ./nazadanie~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-page_count~ ~ ~ ~ ./pageCount~ ~ ~ ./attrs/a[@name='Ilosc_stron']~ ~ ./liczba_stron~ ~ ~ ~ ./liczbastron~ ~ ~ ~ ~ ./liczba_stron~ ~ ~ ~ pages~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-price~ @price~ {urn:ExportB2B}price~ {urn:ExportB2B}price~ ./price~ ./price~ @price~ @price~ ./price~ ./cena~ ./price~ ./price~ ~ ./cenadetaliczna~ @price~ ./price~ @price~ {urn:ExportB2B}price~ ./cena~ ~ ~ ./cena~ price~ ./price/display~ {urn:ExportB2B}price~ ./price~ ~ @price~ ./cena~ ./price~ {urn:ExportB2B}price~ ./cena~ {urn:ExportB2B}price~ @price~ 
-price_promotion~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ./price_promo~ ~ ./cena~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ./price_promo~ ~ ~ ~ ~ 
-producent~ ./attrs/a[@name='Producent']~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-product_code~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ./product_code~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-programName~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ @programName~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-protection~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ./property[@name='protection']~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ./security~ ~ ~ ~ ~ ~ ./zabezpieczenia~ ~ ~ 
-publication_date~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ published~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-publisher~ ~ ~ ~ ./publisher~ ~ ~ ./attrs/a[@name='Wydawnictwo']~ ~ ~ ~ ./producer_producer~ ~ ~ ~ ./producer~ ./attrs/a[@name='Producent']~ ~ ./wydawnictwo~ ./publisher~ ~ ~ publisher~ ~ ~ ~ ~ ./attrs/a[@name='Wydawnictwo']~ ~ ./producer_producer~ ~ ~ ~ ./attrs/a[@name='Producent']~ 
-publisher_code~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ./attrs/a[@name='Kod_producenta']~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-publisher_id~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ./producer_id~ ~ ~ ~ ~ 
-rating~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ./rating~ ~ ~ ~ ~ ./rating~ ~ ~ ~ ~ ~ ~ ~ ~ 
-redactor~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ./redakcja~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-section~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ./dzial~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-section_id~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ./dzial_id~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-security~ ~ ~ ~ ./securityType~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-series~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ./seriewydawnicze/seriawydawnicza~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-set~ ~ ~ ~ ~ ~ @set~ ~ ~ ~ ~ ~ ~ ~ ~ ~ @set~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ @set~ 
-size~ ~ ~ ~ ~ ~ ~ ~ ./size~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ dimensions~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-small_cover~ ~ ~ ~ ~ ~ ~ ~ ~ ./male_zdjecie~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-stack~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ @stack~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-status~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ./status~ ~ ~ ~ ~ ~ ~ ./status~ ~ ~ ~ status~ ~ ~ ~ ~ ~ ~ ./status~ ~ ~ ~ ~ 
-status2~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ./ksiegarnie_nieinter/status2~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-subtitle~ ~ ~ ~ ~ ~ ~ ~ ~ ./podtytul~ ~ ./title_sub~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ./title_sub~ ~ ~ ~ ~ 
-tags~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ./tags~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-thematic_series~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ./serietematyczne/serietematyczna~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-thumbnail~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ./awThumb~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-time~ ./attrs/a[@name='Czas (min)']~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-title~ ./name~ {urn:ExportB2B}name~ {urn:ExportB2B}name~ ./name~ ./title~ ./n:name~ ./name~ ./title~ ./tytul~ ./name~ ./title~ ./title~ ./tytul[@language='polski']~ ./name~ ./name~ ./name~ {urn:ExportB2B}name~ ./tytul~ ./title~ ./title~ ./tytul~ title~ ./name~ {urn:ExportB2B}name~ ./title~ ./a[@title]~ ./name~ ./title~ ./title~ {urn:ExportB2B}name~ ./tytul~ {urn:ExportB2B}name~ ./name~ 
-title_oryginal~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ./tytul[@language='oryginal']~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-top~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ./top~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-translators~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ./tlumacz~ ~ ~ ~ ~ ./tlumacz~ ~ ~ ~ translator~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-type~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ./typ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ./cat/mCat~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-url~ @url~ {urn:ExportB2B}url~ {urn:ExportB2B}url~ ./url~ ./url~ @url~ @url~ ./url~ ./link~ ./productUrl~ ./url~ ./link~ ./link~ @url~ ./url~ @url~ {urn:ExportB2B}url~ ./url~ ~ ./url~ ./url~ url~ ./awLink~ {urn:ExportB2B}url~ ./url~ ./a[@href]~ @url~ ./link~ ./url~ {urn:ExportB2B}url~ ./url~ {urn:ExportB2B}url~ @url~ 
-utm_term~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ./utm_term~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-vat~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ./ksiegarnie_nieinter/vat~ ~ ~ ~ ~ ~ ./issues/issue/vat~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-vat_percent~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ./ksiegarnie_nieinter/vat_procent~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-views~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ./views~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-votes~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ./votes~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
-weight~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ @weight~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ @weight~ 
+ConnectorName~ Audeo~Audiobook~Audioteka~Bezdroza~BezKartek~Bookoteka~BooksOn~CzeskieKlimaty~Czytio~DlaBystrzakow~DobryEbook~eBookpoint~eClicto~Empik~EscapeMagazine~FantastykaPolska~Helion~KodeksyWmp3~Koobe~Latarnik~Legimi~Merlin~Nexto~OnePress~Pokatne~RW2010~Selkar~Sensus~Septem~TaniaKsiazka~Tmc~Virtualo~Wikibooks~Woblink~WolneEbooki~Zantes~ZielonaSowa~Zinamon~ZloteMysli~
+add_to_cart_url~~~~~~~~~~~~~~~~~~~~~~./url_koszyk~~~~~~~~~~~~~~~~~~
+advanced_booking~~~~./przedsprzedazDO~~~~~~./przedsprzedazDO~~./przedsprzedazDO~~~~~./przedsprzedazDO~~~~~~~./przedsprzedazDO~~~~./przedsprzedazDO~./przedsprzedazDO~~~~~~~~~~~
+alert~~~~~~~~~~~~~~~~~~~~~~~~~./alert~~~~~~~~~~~~~~~
+api_price~~~~~~~~~~~~~~~~~~~~~~~./issues/issue/net_api_price~~~~~~~~~~~~~~~~~
+audio_time~~~~~./audioTime~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+authors~./attrs/a[@name='Autor']~~~./autor~./authors~./*[contains(name(), 'author_')]~./n:attrs/n:a[@name='Autor']~./attrs/a[@name='Autor']~./authors~./autor~./autor~./autor~./attrs/a[@name='Autor']~~./*[contains(name(), 'authors_')]~./description/div[@class='field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix']/ul/li/a~./autor~~./property[@name='author']~~~./autor~./issues/issue/author~./autor~./authors~./autor~author~./autor~./autor~~~./authors~~~./author~./*[contains(name(), 'authors_')]~~./autorzy~~
+availability~@avail~~~~~~@avail~~~~~~@avail~./availability~~~~~~@avail~~~~~~~~~~~~~~@avail~~~~~~
+awId~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~@awId~~~~~~~~~~
+baset~~~~~~~@baset~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+binding~~~~./oprawa~~~~~~./oprawa~~./oprawa~~~~~./oprawa~~~~~~~./oprawa~~~cover~./oprawa~./oprawa~~~~~~~~~~~
+book_size~~~~./format~~~~~~./format~~./format~~~~~./format~~~~~~~./format~~~~./format~./format~~~~~~~~~~~
+bookshop~~~~./marka~~~~~~./marka~~./marka~~~~~./marka~~~~~~~./marka~~~~./marka~./marka~~~~~~~~~~~
+brand~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~./brand~~~~~~~~~~
+categories~~~~~~~~~~~~~~~./*[contains(name(), 'categories_')]~~~~~~~~~~~~~~~~~~~~~./*[contains(name(), 'categories_')]~~~~
+category~./cat~{urn:ExportB2B}categoryId~{urn:ExportB2B}categoryId~~./category~~./n:cat~./cat~~~~~./cat~~~./description/div[@class='field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix']/ul/li/a~~./cat~./category~./cat~{urn:ExportB2B}categoryId~./lista_kategorii~~~~~category_id~~~./cat/awCat~{urn:ExportB2B}categoryId~~~./cat~~~{urn:ExportB2B}categoryId~./kategorie~{urn:ExportB2B}categoryId~
+category_id~~~~~~~~~~~~~~~~~~~~~~~./category_refs/id~~~~~~~./cat/awCatId~~~~~~~~~~
+comments~~~~~~~~~~~~~~~~~~~~~~~~~./comments~~~~~~~~~~~~~~~
+cover~./imgs/main[@url]~{urn:ExportB2B}image~{urn:ExportB2B}image~./okladka~./image~./coverUrl~./n:imgs/n:main[@url]~./imgs/main[@url]~./cover~./okladka~./duze_zdjecie~./okladka~./imgs/main[@url]~./imageUrl~./*[contains(name(), 'covers_')]~~./okladka~./imgs/main[@url]~./image~./imgs/main[@url]~{urn:ExportB2B}image~./url_images~./issues/issue/image~./okladka~./cover~./okladka~image~./okladka~./okladka~./awImage~{urn:ExportB2B}image~~~./imgs/main[@url]~./okladka~./*[contains(name(), 'covers_')]~{urn:ExportB2B}image~./okladka~{urn:ExportB2B}image~
+cover_back~~~~./okladkatyl~~~~~~./okladkatyl~~./okladkatyl~~~~~./okladkatyl~~~~~~~./okladkatyl~~~~./okladkatyl~./okladkatyl~~~~~~~~~~~
+date~~~~./datawydania~~~~./attrs/a[@name='Rok_wydania']~~./datawydania~~./datawydania~./attrs/a[@name='Rok_wydania']~~~~./datawydania~~~~~./date~~./datawydania~./date~~~./datawydania~./datawydania~~~~~~~./time~~~~
+default_price~~~~~~~~~~~~~~~~~~~~~~~./issues/issue/default_net_price~~~~~~~~~~~~~~~~~
+default_spread~~~~~~~~~~~~~~~~~~~~~~~./issues/issue/default_spread~~~~~~~~~~~~~~~~~
+description~./desc~{urn:ExportB2B}description~{urn:ExportB2B}description~./opis~./description~~./n:desc~./desc~~./opis~~./opis~./desc~./description~./describe_long~~./opis~./desc~./description~./desc~{urn:ExportB2B}description~./opis~./body~./opis~~~description~./opis~./opis~./desc~{urn:ExportB2B}description~./description~~./desc~~./describe_long~{urn:ExportB2B}description~~{urn:ExportB2B}description~
+descriptionShort~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~./descriptionShort~~~~~~~~
+description_short~~~~~~~~~~~~~~~./describe_short~~~~~~~~~~~~~~~~~~~~~./describe_short~~~~
+discount~~~~./znizka~~~~~~./znizka~~./znizka~~~~~./znizka~~~~~~~./znizka~~~~./znizka~./znizka~~~~~~~~~~~
+ean~~~~./ean~~~~~~./ean~~./ean~~./ean~~~./ean~~~~~~~./ean~~~ean~./ean~./ean~~~~~~~~~~~
+external_id~@id~{urn:ExportB2B}id~{urn:ExportB2B}id~./ident~./ebookId~~@id~@id~./id~./ident~~./ident~@id~./TDProductId~./id~./filteredId~./ident~@id~./id~@id~{urn:ExportB2B}id~./towar_id~./id~./ident~./id~~id~./ident~./ident~./pId~{urn:ExportB2B}id~./coverId~@id~@id~~./id~{urn:ExportB2B}id~./id~{urn:ExportB2B}id~
+file_size~~~~~~~~~~~./wielkosc_pliku~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+formats~~~~./ebook_formaty/ebook_format~./format~./format~~~./format~./ebook_formaty/ebook_format~~./ebook_formaty/ebook_format~./attrs/a[@name='Format']~~~~./ebook_formaty/ebook_format~~./property[@name='format']~~~./nosnik~./issues/issue/format{'./type':('format', ''), './file-protection/type':('protection',''), './file-protection/properties':('properties','')}~./ebook_formaty/ebook_format~./formats~./formaty~~./ebook_formaty/ebook_format~./ebook_formaty/ebook_format~~~./format~~./attrs/a[@name='Format']~./formats~~~./format~~
+free_fragment_online_tool~~~~./issueurl~~~~~~./issueurl~~./issueurl~~~~~./issueurl~~~~~~~./issueurl~~~~./issueurl~./issueurl~~~~~~~~~~~
+free_sample_url~~~~./online~~~~~~./online~~./online~~~~~./online~~~~~~~./online~~~~./online~./online~~~~~~~~~~~
+genre~~~~~~~~~~~~~~~~./description/div[@class='field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix']/ul/li/a~~~~~~~~~~~~~~~~~~~~~~~~
+gross_price~~~~./ksiegarnie_nieinter/cena_brutto~~~~~~./ksiegarnie_nieinter/cena_brutto~~./ksiegarnie_nieinter/cena_brutto~~~~~./ksiegarnie_nieinter/cena_brutto~~~~~~./issues/issue/gross_nexto_price~./ksiegarnie_nieinter/cena_brutto~~~~./ksiegarnie_nieinter/cena_brutto~./ksiegarnie_nieinter/cena_brutto~~~~~~~~~~~
+is_available~~~~./status~~~~~~./status~~./status~~~~~./status~~~~~~~./status~~~~./status~./status~~~~~~~~~~~
+is_bestseller~~~~./bestseller~~~~~~./bestseller~~./bestseller~~~~~./bestseller~~~~~~~./bestseller~~~bestseller~./bestseller~./bestseller~~~~~~~~~~~
+is_new~~~~./nowosc~~~~~~./nowosc~~./nowosc~~~~~./nowosc~~~~~~~./nowosc~~~~./nowosc~./nowosc~~~~~~~~~~~
+isbn~~~~~~~~~~~~~~~~~~~~~~~~~~~isbn~~~~~~~~~~~~~
+isbns~~~~./isbn~./isbn~./isbn~~./attrs/a[@name='ISBN']~./isbn~./isbn~./isbn~./isbn~./attrs/a[@name='ISBN']~./isbn~./producer_ident~~./isbn~./attrs/a[@name='EAN']~./property[@name='isbn']~./attrs/a[@name='EAN']~~./identyfikator~./isbn~./isbn~~~~./isbn~./isbn~./atribute[@Name='ISBN']~~./isbn~~./attrs/a[@name='ISBN']~~./producer_ident~~./isbn~~
+issue_id~~~~~~~~~~~~~~~~~~~~~~~./issues/issue/issue_id~~~~~~~~~~~~~~~~~
+lang~~~~~~~~~~~~~~~~~~~~~~./jezyk~~~~~~~~~~~~~~~~~~
+lang_long~~~~~./languages/lang_long~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+lang_short~~~~~./languages/lang_short~~~~~~~~~~~~~~~~~~./language~~~~~~~~~~~~~~~~~
+lectors~./attrs/a[@name='Lektor']~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+linked~~~~./powiazane/ident_powiazany~~~~~~./powiazane/ident_powiazany~~./powiazane/ident_powiazany~~~~~./powiazane/ident_powiazany~~~~~~~./powiazane/ident_powiazany~~~~./powiazane/ident_powiazany~./powiazane/ident_powiazany~~~~~~~~~~~
+list_price~~~~~~~~~~~~~~~~~~~~~~~~~~~list_price~~~~~~~~~~~~~
+manufacturer_id~~~~~~~~~~~~~~~~~~~~~~~./manufacturer_id~~~~~~~~~~~~~~~~~
+mass~~~~./ksiegarnie_nieinter/waga~~~~~~./ksiegarnie_nieinter/waga~~./ksiegarnie_nieinter/waga~~~~~./ksiegarnie_nieinter/waga~~~~~~~./ksiegarnie_nieinter/waga~~~~./ksiegarnie_nieinter/waga~./ksiegarnie_nieinter/waga~~~~~~~~~~~
+md5~~~~./md5~~~~~~./md5~~./md5~~~~~./md5~~~~~~~./md5~~~~./md5~./md5~~~~~~~~~~~
+name_of_promotion~~~~./promocja~~~~~~./promocja~~./promocja~~~~~./promocja~~~~~~~./promocja~~~~./promocja~./promocja~~~~~~~~~~~
+net_price~~~~./ksiegarnie_nieinter/cena_netto~~~~~~./ksiegarnie_nieinter/cena_netto~~./ksiegarnie_nieinter/cena_netto~~~~~./ksiegarnie_nieinter/cena_netto~~~~~~~./ksiegarnie_nieinter/cena_netto~~~~./ksiegarnie_nieinter/cena_netto~./ksiegarnie_nieinter/cena_netto~~~~~~~~~~~
+new~~~~~~~~~~~~~~~~~~~~~~~~~./new~~~~~~~~~~~~~~~
+notes~~~~~~~~~~~~~~~~./description/div/div[@class='field-items']/div~~~~~~~~~~~~~~~~~~~~~~~~
+on_demand~~~~./nazadanie~~~~~~./nazadanie~~./nazadanie~~~~~./nazadanie~~~~~~~./nazadanie~~~~./nazadanie~./nazadanie~~~~~~~~~~~
+page_count~~~~./liczbastron~./pageCount~~~./attrs/a[@name='Ilosc_stron']~~./liczbastron~./liczba_stron~./liczbastron~~~~~./liczbastron~~~~~./liczba_stron~~./liczbastron~~~pages~./liczbastron~./liczbastron~~~~~~~~~~~
+place_in_top~~~~./top~~~~~~./top~~./top~~~~~./top~~~~~~~./top~~~~./top~./top~~~~~~~~~~~
+price~@price~{urn:ExportB2B}price~{urn:ExportB2B}price~./cena~./price~./price~@price~@price~./price~./cena~./cena~./cena~@price~./price~./price~~./cena~@price~./price~@price~{urn:ExportB2B}price~./cena~~./cena~~./cena~price~./cena~./cena~./price/display~{urn:ExportB2B}price~./price~~@price~./cena~./price~{urn:ExportB2B}price~./cena~{urn:ExportB2B}price~
+price_normal~~~~./cenadetaliczna~~~~~~./cenadetaliczna~~./cenadetaliczna~~~~~./cenadetaliczna~~~~~~~./cenadetaliczna~~~~./cenadetaliczna~./cenadetaliczna~~~~~~~~~~~
+price_promotion~~~~~~~~~~~~~~~./price_promo~~~~~~~~~~~~~~~~~~~~~./price_promo~~~~
+producent~./attrs/a[@name='Producent']~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+product_code~~~~~~~~~~~~~~~~~~~~~~~./product_code~~~~~~~~~~~~~~~~~
+programName~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~@programName~~~~~~~~~~
+protection~~~~~~~~~~~~~~~~~~~./property[@name='protection']~~~~~~~~~~~~~./security~~~~~~./zabezpieczenia~~
+publication_date~~~~~~~~~~~~~~~~~~~~~~~~~~~published~~~~~~~~~~~~~
+publisher~~~~~./publisher~~~./attrs/a[@name='Wydawnictwo']~~~~~./attrs/a[@name='Producent']~~./producer_producer~~~~./producer~./attrs/a[@name='Producent']~~./wydawnictwo~./publisher~~~~publisher~~~~~~~./attrs/a[@name='Wydawnictwo']~~./producer_producer~~~~
+publisher_code~~~~~~~~~~~~~~~~~~~~./attrs/a[@name='Kod_producenta']~~~~~~~~~~~~~~~~~~~~
+publisher_id~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~./producer_id~~~~
+rating~~~~~~~~~~~~~~~~~~~~~~~~~./rating~~~~~~~./rating~~~~~~~~
+redactor~~~~~~~~~~~~~~~~~~~~~~./redakcja~~~~~~~~~~~~~~~~~~
+section~~~~~~~~~~~~~~~~~~~~~~./dzial~~~~~~~~~~~~~~~~~~
+section_id~~~~~~~~~~~~~~~~~~~~~~./dzial_id~~~~~~~~~~~~~~~~~~
+security~~~~~./securityType~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+series~~~~./seriewydawnicze/seriawydawnicza~~~~~~./seriewydawnicze/seriawydawnicza~~./seriewydawnicze/seriawydawnicza~~~~~./seriewydawnicze/seriawydawnicza~~~~~~~./seriewydawnicze/seriawydawnicza~~~~./seriewydawnicze/seriawydawnicza~./seriewydawnicze/seriawydawnicza~~~~~~~~~~~
+set~~~~~~~@set~~~~~~@set~~~~~~~@set~~~~~~~~~~~~~~~~~~~~
+size~~~~~~~~~./size~~~~~~~~~~~~~~~~~~dimensions~~~~~~~~~~~~~
+small_cover~~~~~~~~~~~./male_zdjecie~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+stack~~~~~~~~~~~~~~~~~~~~@stack~~~~~~~~~~~~~~~~~~~~
+status~~~~~~~~~~~~~~~./status~~~~~~~./status~~~~~status~~~~~~~~~./status~~~~
+status2~~~~./ksiegarnie_nieinter/status2~~~~~~./ksiegarnie_nieinter/status2~~./ksiegarnie_nieinter/status2~~~~~./ksiegarnie_nieinter/status2~~~~~~~./ksiegarnie_nieinter/status2~~~~./ksiegarnie_nieinter/status2~./ksiegarnie_nieinter/status2~~~~~~~~~~~
+storage_type~~~~./nosnik~~~~~~./nosnik~~./nosnik~~~~~./nosnik~~~~~~~./nosnik~~~~./nosnik~./nosnik~~~~~~~~~~~
+subtitle~~~~~~~~~~~./podtytul~~~~./title_sub~~~~~~~~~~~~~~~~~~~~~./title_sub~~~~
+tags~~~~~~~~~~~~~~~~~~~~~~~~~./tags~~~~~~~~~~~~~~~
+thematic_series~~~~./serietematyczne/serietematyczna~~~~~~./serietematyczne/serietematyczna~~./serietematyczne/serietematyczna~~~~~./serietematyczne/serietematyczna~~~~~~~./serietematyczne/serietematyczna~~~~./serietematyczne/serietematyczna~./serietematyczne/serietematyczna~~~~~~~~~~~
+thumbnail~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~./awThumb~~~~~~~~~~
+time~./attrs/a[@name='Czas (min)']~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+title~./name~{urn:ExportB2B}name~{urn:ExportB2B}name~./tytul[@language='polski']~./name~./title~./n:name~./name~./title~./tytul[@language='polski']~./tytul~./tytul[@language='polski']~./name~./name~./title~./title~./tytul[@language='polski']~./name~./name~./name~{urn:ExportB2B}name~./tytul~./title~./tytul[@language='polski']~./title~./tytul~title~./tytul[@language='polski']~./tytul[@language='polski']~./name~{urn:ExportB2B}name~./title~./a[@title]~./name~./title~./title~{urn:ExportB2B}name~./tytul~{urn:ExportB2B}name~
+title_oryginal~~~~./tytul[@language='oryginal']~~~~~~./tytul[@language='oryginal']~~./tytul[@language='oryginal']~~~~~./tytul[@language='oryginal']~~~~~~~./tytul[@language='oryginal']~~~~./tytul[@language='oryginal']~./tytul[@language='oryginal']~~~~~~~~~~~
+translators~~~~./tlumacz~~~~~~./tlumacz~~./tlumacz~~~~~./tlumacz~~~~~./tlumacz~~./tlumacz~~~translator~./tlumacz~./tlumacz~~~~~~~~~~~
+type~~~~./typ~~~~~~./typ~~./typ~~~~~./typ~~~~~~~./typ~~~~./typ~./typ~./cat/mCat~~~~~~~~~~
+url~@url~{urn:ExportB2B}url~{urn:ExportB2B}url~./link~./url~./url~@url~@url~./url~./link~./link~./link~@url~./productUrl~./url~./link~./link~@url~./url~@url~{urn:ExportB2B}url~./url~~./link~./url~./url~url~./link~./link~./awLink~{urn:ExportB2B}url~./url~./a[@href]~@url~./link~./url~{urn:ExportB2B}url~./url~{urn:ExportB2B}url~
+utm_term~~~~~~~~~~~~~~~~~~~~~~./utm_term~~~~~~~~~~~~~~~~~~
+vat~~~~./ksiegarnie_nieinter/vat~~~~~~./ksiegarnie_nieinter/vat~~./ksiegarnie_nieinter/vat~~~~~./ksiegarnie_nieinter/vat~~~~~~./issues/issue/vat~./ksiegarnie_nieinter/vat~~~~./ksiegarnie_nieinter/vat~./ksiegarnie_nieinter/vat~~~~~~~~~~~
+vat_percent~~~~./ksiegarnie_nieinter/vat_procent~~~~~~./ksiegarnie_nieinter/vat_procent~~./ksiegarnie_nieinter/vat_procent~~~~~./ksiegarnie_nieinter/vat_procent~~~~~~~./ksiegarnie_nieinter/vat_procent~~~~./ksiegarnie_nieinter/vat_procent~./ksiegarnie_nieinter/vat_procent~~~~~~~~~~~
+views~~~~~~~~~~~~~~~~~~~~~~~~~./views~~~~~~~~~~~~~~~
+votes~~~~~~~~~~~~~~~~~~~~~~~~~./votes~~~~~~~~~~~~~~~
+weight~~~~~~~~~~~~~@weight~~~~~~~@weight~~~~~~~~~~~~~~~~~~~~
