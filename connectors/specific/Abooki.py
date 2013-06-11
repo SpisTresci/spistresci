@@ -7,14 +7,14 @@ Base = SqlWrapper.getBaseClass()
 
 class Abooki(Ceneo):
     #ks means - paperbook
-    supported_formats = ['cd-mp3', 'cd', 'mp3', 'cd-audio', 'dvd', 'ks']
+    supported_formats = ['cd-mp3','mp3', 'dvd', 'ks', 'cd' ]
     depth = 0
 
 
     def __init__(self, name=None, limit_books=0):
         super(Abooki, self).__init__(name, limit_books)
         self.supported_formats = sorted(self.supported_formats, cmp=lambda x,y: cmp(len(x), len(y)), reverse=True)
-        self.accepted_suffix_patterns = self.config.get('accepted_suffix_patterns','')
+        self.accepted_suffix_patterns  = self.config.get('accepted_suffix_patterns','')
 
     #dict of xml_tag -> db_column_name translations
     xml_tag_dict= {
@@ -65,6 +65,7 @@ class Abooki(Ceneo):
                 format_list.append(sf)
                 format_string = format_string.replace(sf,'')
         cleared_format_string = ''
+        dic['formats'] = format_list
         if format_string:
             format_string = self._clear_suffixes_from_config(format_string)
         if format_string:
