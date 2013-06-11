@@ -80,8 +80,14 @@ class GenericConnector(GenericBase, DataValidator):
         cls.config_object = ConfigParser.SafeConfigParser()
         #TODO: our config should be case sensitive, somehow this does not work
         #cls.config_object.optionxfrom = str
-        if not cls.config_object.read(cls.config_file):
+        #if not cls.config_object.read(cls.config_file):
+        #    raise ConfigParser.Error('Could not read config from file %s' % cls.config_file)
+        import codecs
+        ff = codecs.open(cls.config_file, "r", "utf8")
+        if not ff:
             raise ConfigParser.Error('Could not read config from file %s' % cls.config_file)
+        else:
+            cls.config_object.readfp(ff)
 
     @classmethod
     def class_name(cls):
@@ -471,6 +477,12 @@ class GenericBook(GenericBase):
     def __tablename__(cls):
         cls.register()
         return cls.__name__
+
+#TODO: how to do this?
+#    '''this is title presented to frontend'''
+#    @declared_attr
+#    def org_title(cls):
+#        return cls.title
 
     @declared_attr
     def authors(cls):

@@ -34,6 +34,8 @@ def filter_classnames(connector_classnames, filter_list, logger=None):
     return final_connector_list
 
 def load_class(modulename, classname):
+    modulename=str(modulename)
+    classname=str(classname)
     module =  __import__(modulename, globals(), locals(), [classname])
     return getattr(module, classname)
 

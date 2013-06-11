@@ -30,7 +30,7 @@ class RegexFilter(BaseFilter):
         replace_list = re.split(r'(?<!\\),', self.params.get('replace_list',''))
         content = org.read()
         for (pattern, replace) in zip(pattern_list, replace_list):
-            content = re.sub(pattern, replace, content, flags=flags)
+            content = re.sub(str(pattern), str(replace), content, flags=flags)
         tmp.write(content)
         org.close()
         tmp.close()

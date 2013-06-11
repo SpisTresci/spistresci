@@ -130,6 +130,7 @@ class XMLConnector(GenericConnector):
         self.after_parse()
         #uncomment when creating connector
         #print self.max_len
+        #print self.max_len_entry
 
     def getDictFromElem(self, xml_tag_dict, new_tag, elem, tag, book_dict):
         if elem != None:
