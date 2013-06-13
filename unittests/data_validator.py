@@ -219,6 +219,8 @@ class TestDataValidator():
         yield self._test_validate_helper_eq, "ISBNs", {"isbns":"978-83-933966-0-4"}, {"isbns":[{'raw': '978-83-933966-0-4', 'valid': False}]}
 
     def test_validate_authors(self):
+        yield self._test_validate_helper_eq, "Authors", {"authors":""}, {"authors":[]}
+
         yield self._test_validate_helper_eq, "Authors", {"authors":u"Mariola Jąder"}, {"authors":[{'name':u'Mariola Jąder', 'firstName': 'Mariola', 'lastName': u'Jąder'}]}
         yield self._test_validate_helper_eq, "Authors", {"authors":u"Mariola  Jąder"}, {"authors":[{'name':u'Mariola Jąder', 'firstName': 'Mariola', 'lastName': u'Jąder'}]}
         yield self._test_validate_helper_not_eq, "Authors", {"authors":u"Mariola Jąder"}, {"authors":[{'name':u'Mariola Jąder', 'firstName': 'Mariola', 'middleName': '', 'lastName': u'Jąder'}]}

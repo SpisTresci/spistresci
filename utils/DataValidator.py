@@ -151,23 +151,21 @@ class DataValidator(object):
                 u=regex.UNICODE
                 person = regex.sub(p, s, regex.sub(p, s, person, u), u)
 
-                pdict["name"] = person
+                if person != "":
+                    pdict["name"] = person
 
-                names = [x.strip() for x in person.split(" ")]
-                if len(names) == 2: #imie i nazwisko
-                    n1 = names[0].strip()
-                    n2 = names[1].strip()
-                    pdict["firstName"] = (n1 if self.isName(n1) else (n2 if self.isName(n2) else n1)).title()
-                    pdict["lastName"] = (n2 if self.isName(n1) else (n1 if self.isName(n2) else n2)).title()
-                elif len(names) == 3:
-                    pdict["firstName"] = names[0].strip().title()
-                    pdict["middleName"] = names[1].strip().title()
-                    pdict["lastName"] = names[2].strip().title()
-#                else:
-#                   TODO: use logger here instead of debug printf
-#                    print str(len(names)) + " - "  + person
+                    names = [x.strip() for x in person.split(" ")]
+                    if len(names) == 2: #imie i nazwisko
+                        n1 = names[0].strip()
+                        n2 = names[1].strip()
+                        pdict["firstName"] = (n1 if self.isName(n1) else (n2 if self.isName(n2) else n1)).title()
+                        pdict["lastName"] = (n2 if self.isName(n1) else (n1 if self.isName(n2) else n2)).title()
+                    elif len(names) == 3:
+                        pdict["firstName"] = names[0].strip().title()
+                        pdict["middleName"] = names[1].strip().title()
+                        pdict["lastName"] = names[2].strip().title()
 
-                new_list_of_person_dicts.append(pdict)
+                    new_list_of_person_dicts.append(pdict)
 
             dic[tag_name] = new_list_of_person_dicts
 
