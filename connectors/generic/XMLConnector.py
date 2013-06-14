@@ -14,6 +14,9 @@ class XMLConnector(GenericConnector):
         GenericConnector.__init__(self, name=name)
         self.limit_books = limit_books
 
+    def get_et(self):
+        return et
+
     def fetchData(self, unpack=True):
         self.downloadFile()
         if unpack and self.mode == XMLConnector.BookList_Mode.ZIPPED_XMLS:
@@ -109,7 +112,7 @@ class XMLConnector(GenericConnector):
         self.before_parse()
         book_number = 0
         for filename in self.fetched_files:
-            root = et.parse(filename).getroot()
+            root = self.get_et().parse(filename).getroot()
             offers = list(self.weHaveToGoDeeper(root, self.depth))
             for offer in offers:
                 book_number += 1

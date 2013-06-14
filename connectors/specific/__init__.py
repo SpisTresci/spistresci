@@ -11,6 +11,7 @@ from Czytio import Czytio
 from DlaBystrzakow import DlaBystrzakow
 from DobryEbook import DobryEbook
 from eBookpoint import eBookpoint
+from ebooks43 import ebooks43
 from eClicto import eClicto
 from Empik import Empik
 from EscapeMagazine import EscapeMagazine

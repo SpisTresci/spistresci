@@ -20,7 +20,7 @@ class TestSpecificConnectors():
     @nottest
     def _test_dict(self, connector, xml, dicts, assert_lines):
         f = open(dicts, 'r')
-        root = et.parse(xml).getroot()
+        root = connector.get_et().parse(xml).getroot()
 
         lines = f.readlines()
         offers = connector.weHaveToGoDeeper(root, connector.depth)

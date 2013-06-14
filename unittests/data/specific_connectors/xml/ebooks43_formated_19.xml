@@ -1,0 +1,955 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="Interesujące darmowe ebooki w jednym miejscu. Bezpłatne e-booki do szybkiego pobrania. Sprawdź nasze propozycje." />
+    <meta name="keywords" content="ebooki, epub, mobi, pdf, ebook, darmowe, darmo, książki, e-book" />
+    
+    <!-- blueprint CSS framework -->
+	<link rel="stylesheet" type="text/css" href="/css/screen.css" media="screen, projection" />
+	<link rel="stylesheet" type="text/css" href="/css/print.css" media="print" />
+   	<link rel="stylesheet" type="text/css" href="/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="/css/form.css" />
+	<!--[if lt IE 8]>
+	<link rel="stylesheet" type="text/css" href="/css/ie.css" media="screen, projection" />
+	<![endif]-->
+    
+    <!--[if !IE 7]>
+        <style type="text/css">
+            #layout_wraper {display:table;height:100%}
+        </style>
+    <![endif]-->
+        
+    <link rel="stylesheet" type="text/css" href="/css/jui/custom-theme/jquery-ui-1.8.20.custom.css" />
+<link rel="stylesheet" type="text/css" href="/assets/860ce3ad/highlight.css" />
+<script type="text/javascript" src="/assets/68ef62da/jquery.js"></script>
+<script type="text/javascript" src="/assets/68ef62da/jquery.yiiactiveform.js"></script>
+<title>Dobre Darmowe e-booki - www.ebooks43.pl</title>
+    <script type="text/javascript">
+	
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-32566035-1']);
+	  _gaq.push(['_trackPageview']);
+	
+	  (function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	
+	</script>
+</head>
+
+<body>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/pl_PL/all.js#xfbml=1";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+	<div id="layout_wraper">
+        <div id="layout_top">
+        	<div id="top_layer">
+                <div id="top_content">
+                    <div id="logo_text">
+                    	<!--<h1><a href="/">ebooks43.pl</a></h1> -->
+                        <a href="/" title="Ebooks43.pl"><img src="/img/ebooks_logo.png" alt="ebooks43.pl" /></a>
+                        <h1>dobre darmowe e-booki</h1>
+                    </div>
+                    
+                    <div class="fb-like-box" data-href="http://www.facebook.com/ebooks43" data-width="180" data-height="70" data-show-faces="false" data-stream="false" data-header="true"></div>
+                    <div class="separator"></div>
+                    <div id="topPageTextbox"></div>
+                </div><!-- top_content -->
+            </div><!-- top_layer -->
+        </div><!-- layout_top -->
+        
+        <div id="layout_middle">
+        	<div id="main_content">
+            	<div id="content">
+                	
+<div>
+    <p>Oferujemy Ci na tej stronie możliwość darmowego pobrania interesujących e-booków. Aby nie przeoczyć pojawienia się nowej pozycji <a title="zapisz się" href="http://www.ebooks43.pl/s/newsletter_zapisz.htm">zapisz się </a>na nasz newsletter. Jeśli pobierzesz choć jeden e-book system zapisze Cię na newsletter automatycznie. <br /><br /></p>
+
+<div class="book_box_row" style="height: 360px;">    <div class="book_box">
+        
+            <div class="book_box_content">
+                <div class="book_box_title"><a href="/ksiazka,19,pochwala-po-wolnosci.htm">Pochwała po-wolności</a></div>
+                <div class="separator"></div>
+                <a href="/ksiazka,19,pochwala-po-wolnosci.htm"><img class="book_box_image" src="/images/ksiazka_19_thumb.jpg" alt="Pochwała po-wolności" /></a>                <div class="book_box_autor">Profesor Karol Sauerland</div>
+                <div class="book_box_format">Format: PDF, EPUB, MOBI</div>
+                <div class="book_box_desc">
+                    Ciekawe, i być może znaczące, że w języku polskim słowo „wolność” po dodaniu doń członu „po” daje słowo „powolność”. Żyjemy w czasach ciągłego pośpiechu. Czy zawsze tak było? Okazuje się, że nie. Paradoksalnie ludzie zaczęli odczuwać brak czasu gdy wynaleziono szybkie sposoby poruszania się. Jeśli zależy nam na sukcesie, życie zmusza nas do gonitwy: coraz więcej, coraz szybciej; ale zarazem wiadomo, że bez oddechu, bez zastanawiania się możemy łatwo wpaść w ślepy zaułek, w najlepszym przypadku w zwykłą rutynę.                 </div>
+                <div class="separator"></div>
+            </div>
+            <div class="book_box_buttons">
+                <a class="gray_btn" href="/ksiazka,19,pochwala-po-wolnosci.htm" title="Zobacz pełny opis książki" alt="Zobacz pełny opis książki">Pełny opis</a>
+                <!--<a class="red_btn" href="#" title="Zobacz pełny opis książki" alt="Zobacz pełny opis książki">Pobierz</a>-->
+                <a onclick="$(&quot;#orderBook19&quot;).dialog(&quot;open&quot;); return false;" class="red_btn" href="#">Pobierz</a><div class="dialog" id="orderBook19">
+
+<div class="form">
+    
+<form id="order-form19" action="/book/submitOrder.htm?bookId=19" method="post">
+    <div id="order-form19_es_" class="errorSummary" style="display:none">Wystąpił błąd!
+<ul><li>dummy</li></ul></div>
+    <p>Podaj swój adres email, na który wyślemy Ci wiadomość umożliwiającą pobranie e-booka w każdym, dostępnym u nas formacie. Jeśli ta wiadomość nie dotrze do Ciebie (e-maile z różnych powodów nie zawsze docierają do adresata lub docierają z dużym opóźnieniem), użyj innego adresu.  </p>
+
+    <div class="col1">
+        <label for="Subscriber_email" class="required">Twój adres email <span class="required">*</span></label>     <input size="32" name="Subscriber[email]" id="Subscriber_email" type="text" />          </div>
+    
+    
+            <div class="separator"></div>
+
+    <div class="col1 acceptRules">
+        <input id="ytOrder_acceptRules" type="hidden" value="0" name="Order[acceptRules]" /><input name="Order[acceptRules]" id="Order_acceptRules" value="1" type="checkbox" />        <label for="Order_acceptRules" class="required">Akceptuję regulamin <span class="required">*</span></label>            </div>
+
+    <input class="orderSubmitBtn" type="submit" name="yt0" value="Zamów e-book" />
+</form> 
+</div><!-- form -->
+
+</div>                <div class="separator"></div>
+            </div>
+        
+    </div><!-- book_box -->
+        <div class="book_box">
+        
+            <div class="book_box_content">
+                <div class="book_box_title"><a href="/ksiazka,1,dzikie-anioly-i-inne-opowiadania.htm">Dzikie Anioły i inne opowiadania</a></div>
+                <div class="separator"></div>
+                <a href="/ksiazka,1,dzikie-anioly-i-inne-opowiadania.htm"><img class="book_box_image" src="/images/ksiazka_1_thumb.jpg" alt="Dzikie Anioły i inne opowiadania" /></a>                <div class="book_box_autor">Henryk Bardijewski</div>
+                <div class="book_box_format">Format: PDF, EPUB, MOBI</div>
+                <div class="book_box_desc">
+                    Trzydzieści osiem opowiadań. Tytuł jest paradoksem: czy anioły mogą być dzikie? W tej książce jednak nic nie jest zwyczajne. Opowiadania Bardijewskiego to proza najwyższej próby. Ani jedno zdanie, ba, nawet słowo, nie jest w nich przypadkowe. Sporo w nich humoru. Szczypta filozofii. Ani trochę nudy czy banału. Lektura tych opowiadań podziała na Ciebie uspokajająco, ale nie usypiająco. Skłoni do refleksji i zastanowienia, a także, czasem, rozbawi.                 </div>
+                <div class="separator"></div>
+            </div>
+            <div class="book_box_buttons">
+                <a class="gray_btn" href="/ksiazka,1,dzikie-anioly-i-inne-opowiadania.htm" title="Zobacz pełny opis książki" alt="Zobacz pełny opis książki">Pełny opis</a>
+                <!--<a class="red_btn" href="#" title="Zobacz pełny opis książki" alt="Zobacz pełny opis książki">Pobierz</a>-->
+                <a onclick="$(&quot;#orderBook1&quot;).dialog(&quot;open&quot;); return false;" class="red_btn" href="#">Pobierz</a><div class="dialog" id="orderBook1">
+
+<div class="form">
+    
+<form id="order-form1" action="/book/submitOrder.htm?bookId=1" method="post">
+    <div id="order-form1_es_" class="errorSummary" style="display:none">Wystąpił błąd!
+<ul><li>dummy</li></ul></div>
+    <p>Podaj swój adres email, na który wyślemy Ci wiadomość umożliwiającą pobranie e-booka w każdym, dostępnym u nas formacie. Jeśli ta wiadomość nie dotrze do Ciebie (e-maile z różnych powodów nie zawsze docierają do adresata lub docierają z dużym opóźnieniem), użyj innego adresu.  </p>
+
+    <div class="col1">
+        <label for="Subscriber_email" class="required">Twój adres email <span class="required">*</span></label>     <input size="32" name="Subscriber[email]" id="Subscriber_email" type="text" />          </div>
+    
+    
+            <div class="separator"></div>
+
+    <div class="col1 acceptRules">
+        <input id="ytOrder_acceptRules" type="hidden" value="0" name="Order[acceptRules]" /><input name="Order[acceptRules]" id="Order_acceptRules" value="1" type="checkbox" />        <label for="Order_acceptRules" class="required">Akceptuję regulamin <span class="required">*</span></label>            </div>
+
+    <input class="orderSubmitBtn" type="submit" name="yt1" value="Zamów e-book" />
+</form> 
+</div><!-- form -->
+
+</div>                <div class="separator"></div>
+            </div>
+        
+    </div><!-- book_box -->
+        <div class="book_box">
+        
+            <div class="book_box_content">
+                <div class="book_box_title"><a href="/ksiazka,12,serwantka.htm">Serwantka</a></div>
+                <div class="separator"></div>
+                <a href="/ksiazka,12,serwantka.htm"><img class="book_box_image" src="/images/ksiazka_12_thumb.jpg" alt="Serwantka" /></a>                <div class="book_box_autor">Monika Sawicka</div>
+                <div class="book_box_format">Format: PDF, EPUB, MOBI</div>
+                <div class="book_box_desc">
+                    Ciekawa, zabawna, dynamiczna akcja od pierwszej do ostatniej strony. Wyraziste, nietuzinkowe postacie – przede wszystkim kobiet – mężczyźni tworzą tu tło, ale w myśl zasady: faceci nie są pępkiem świata i kobiety doskonale potrafią sobie bez nich radzić, choć czasami się przydają, i to nawet bardzo. Opowieść o tym czego pragną współczesne kobiety. Inteligentna ironia doprowadzona nieomal do perfekcji. Nieomal, bo i tak nie ukryła wrażliwości autorki.                 </div>
+                <div class="separator"></div>
+            </div>
+            <div class="book_box_buttons">
+                <a class="gray_btn" href="/ksiazka,12,serwantka.htm" title="Zobacz pełny opis książki" alt="Zobacz pełny opis książki">Pełny opis</a>
+                <!--<a class="red_btn" href="#" title="Zobacz pełny opis książki" alt="Zobacz pełny opis książki">Pobierz</a>-->
+                <a onclick="$(&quot;#orderBook12&quot;).dialog(&quot;open&quot;); return false;" class="red_btn" href="#">Pobierz</a><div class="dialog" id="orderBook12">
+
+<div class="form">
+    
+<form id="order-form12" action="/book/submitOrder.htm?bookId=12" method="post">
+    <div id="order-form12_es_" class="errorSummary" style="display:none">Wystąpił błąd!
+<ul><li>dummy</li></ul></div>
+    <p>Podaj swój adres email, na który wyślemy Ci wiadomość umożliwiającą pobranie e-booka w każdym, dostępnym u nas formacie. Jeśli ta wiadomość nie dotrze do Ciebie (e-maile z różnych powodów nie zawsze docierają do adresata lub docierają z dużym opóźnieniem), użyj innego adresu.  </p>
+
+    <div class="col1">
+        <label for="Subscriber_email" class="required">Twój adres email <span class="required">*</span></label>     <input size="32" name="Subscriber[email]" id="Subscriber_email" type="text" />          </div>
+    
+    
+            <div class="separator"></div>
+
+    <div class="col1 acceptRules">
+        <input id="ytOrder_acceptRules" type="hidden" value="0" name="Order[acceptRules]" /><input name="Order[acceptRules]" id="Order_acceptRules" value="1" type="checkbox" />        <label for="Order_acceptRules" class="required">Akceptuję regulamin <span class="required">*</span></label>            </div>
+
+    <input class="orderSubmitBtn" type="submit" name="yt2" value="Zamów e-book" />
+</form> 
+</div><!-- form -->
+
+</div>                <div class="separator"></div>
+            </div>
+        
+    </div><!-- book_box -->
+    <div class="separator"></div></div>
+
+<!-- book_box_row -->
+
+<div class="book_box_row" style="height: 360px;">    <div class="book_box">
+        
+            <div class="book_box_content">
+                <div class="book_box_title"><a href="/ksiazka,10,stosunek-seksualny-nie-istnieje.htm">Stosunek seksualny nie istnieje</a></div>
+                <div class="separator"></div>
+                <a href="/ksiazka,10,stosunek-seksualny-nie-istnieje.htm"><img class="book_box_image" src="/images/ksiazka_10_thumb.jpg" alt="Stosunek seksualny nie istnieje" /></a>                <div class="book_box_autor">Jaś Kapela</div>
+                <div class="book_box_format">Format: PDF, EPUB, MOBI</div>
+                <div class="book_box_desc">
+                    Dobrze się czyta. Książka zabawna i błyskotliwa, awangardowa i oryginalna ale także obrazoburcza, wulgarna i szargająca świętości – bardzo niegrzeczna. Doszukiwano się w niej głębokich treści a także wyśmiewano lub oburzano się – i wszystkie te reakcje mają sens. Bohaterami są dwaj studenci, gadający o byle czym i szwędający się tu i ówdzie. Autor kpi i z czytelnika i z samego siebie. Na okładce wykorzystano fotografie kwiatów: orchidei i kalii.                 </div>
+                <div class="separator"></div>
+            </div>
+            <div class="book_box_buttons">
+                <a class="gray_btn" href="/ksiazka,10,stosunek-seksualny-nie-istnieje.htm" title="Zobacz pełny opis książki" alt="Zobacz pełny opis książki">Pełny opis</a>
+                <!--<a class="red_btn" href="#" title="Zobacz pełny opis książki" alt="Zobacz pełny opis książki">Pobierz</a>-->
+                <a onclick="$(&quot;#orderBook10&quot;).dialog(&quot;open&quot;); return false;" class="red_btn" href="#">Pobierz</a><div class="dialog" id="orderBook10">
+
+<div class="form">
+    
+<form id="order-form10" action="/book/submitOrder.htm?bookId=10" method="post">
+    <div id="order-form10_es_" class="errorSummary" style="display:none">Wystąpił błąd!
+<ul><li>dummy</li></ul></div>
+    <p>Podaj swój adres email, na który wyślemy Ci wiadomość umożliwiającą pobranie e-booka w każdym, dostępnym u nas formacie. Jeśli ta wiadomość nie dotrze do Ciebie (e-maile z różnych powodów nie zawsze docierają do adresata lub docierają z dużym opóźnieniem), użyj innego adresu.  </p>
+
+    <div class="col1">
+        <label for="Subscriber_email" class="required">Twój adres email <span class="required">*</span></label>     <input size="32" name="Subscriber[email]" id="Subscriber_email" type="text" />          </div>
+    
+    
+            <div class="separator"></div>
+
+    <div class="col1 acceptRules">
+        <input id="ytOrder_acceptRules" type="hidden" value="0" name="Order[acceptRules]" /><input name="Order[acceptRules]" id="Order_acceptRules" value="1" type="checkbox" />        <label for="Order_acceptRules" class="required">Akceptuję regulamin <span class="required">*</span></label>            </div>
+
+    <input class="orderSubmitBtn" type="submit" name="yt3" value="Zamów e-book" />
+</form> 
+</div><!-- form -->
+
+</div>                <div class="separator"></div>
+            </div>
+        
+    </div><!-- book_box -->
+        <div class="book_box">
+        
+            <div class="book_box_content">
+                <div class="book_box_title"><a href="/ksiazka,18,minelo-1000-lat-przewodnik-historyczno-krajoznawczy-po-polsce.htm">Minęło 1000 lat. Przewodnik historyczno-krajoznawczy po Polsce</a></div>
+                <div class="separator"></div>
+                <a href="/ksiazka,18,minelo-1000-lat-przewodnik-historyczno-krajoznawczy-po-polsce.htm"><img class="book_box_image" src="/images/ksiazka_18_thumb.jpg" alt="Minęło 1000 lat. Przewodnik historyczno-krajoznawczy po Polsce" /></a>                <div class="book_box_autor">Andrzej Mirski</div>
+                <div class="book_box_format">Format: PDF, EPUB, MOBI</div>
+                <div class="book_box_desc">
+                    Książka ta przedstawia początki naszej państwowości, czyli wydarzenia rozgrywające się około 1000 lat temu. Oprócz opisów historycznych faktów znajdziemy w niej także wskazówki gdzie szukać zabytków z tego okresu – jest więc ona rodzajem przewodnika. Autor książki nie przestrzega zasad poprawności politycznej, której hołdują nudne, szkolne podręczniki. Uwzględnia też wyniki najnowszych badań naukowych, które często przeczą utartym przez stulecia poglądom na wiele istotnych spraw.                  </div>
+                <div class="separator"></div>
+            </div>
+            <div class="book_box_buttons">
+                <a class="gray_btn" href="/ksiazka,18,minelo-1000-lat-przewodnik-historyczno-krajoznawczy-po-polsce.htm" title="Zobacz pełny opis książki" alt="Zobacz pełny opis książki">Pełny opis</a>
+                <!--<a class="red_btn" href="#" title="Zobacz pełny opis książki" alt="Zobacz pełny opis książki">Pobierz</a>-->
+                <a onclick="$(&quot;#orderBook18&quot;).dialog(&quot;open&quot;); return false;" class="red_btn" href="#">Pobierz</a><div class="dialog" id="orderBook18">
+
+<div class="form">
+    
+<form id="order-form18" action="/book/submitOrder.htm?bookId=18" method="post">
+    <div id="order-form18_es_" class="errorSummary" style="display:none">Wystąpił błąd!
+<ul><li>dummy</li></ul></div>
+    <p>Podaj swój adres email, na który wyślemy Ci wiadomość umożliwiającą pobranie e-booka w każdym, dostępnym u nas formacie. Jeśli ta wiadomość nie dotrze do Ciebie (e-maile z różnych powodów nie zawsze docierają do adresata lub docierają z dużym opóźnieniem), użyj innego adresu.  </p>
+
+    <div class="col1">
+        <label for="Subscriber_email" class="required">Twój adres email <span class="required">*</span></label>     <input size="32" name="Subscriber[email]" id="Subscriber_email" type="text" />          </div>
+    
+    
+            <div class="separator"></div>
+
+    <div class="col1 acceptRules">
+        <input id="ytOrder_acceptRules" type="hidden" value="0" name="Order[acceptRules]" /><input name="Order[acceptRules]" id="Order_acceptRules" value="1" type="checkbox" />        <label for="Order_acceptRules" class="required">Akceptuję regulamin <span class="required">*</span></label>            </div>
+
+    <input class="orderSubmitBtn" type="submit" name="yt4" value="Zamów e-book" />
+</form> 
+</div><!-- form -->
+
+</div>                <div class="separator"></div>
+            </div>
+        
+    </div><!-- book_box -->
+        <div class="book_box">
+        
+            <div class="book_box_content">
+                <div class="book_box_title"><a href="/ksiazka,5,pokoj-zensko-meski-na-chwale-patriarchatu.htm">Pokój żeńsko-męski na chwałę patriarchatu</a></div>
+                <div class="separator"></div>
+                <a href="/ksiazka,5,pokoj-zensko-meski-na-chwale-patriarchatu.htm"><img class="book_box_image" src="/images/ksiazka_5_thumb.jpg" alt="Pokój żeńsko-męski na chwałę patriarchatu" /></a>                <div class="book_box_autor">Hanna Samson</div>
+                <div class="book_box_format">Format: PDF, EPUB, MOBI</div>
+                <div class="book_box_desc">
+                    Kapitalna i bardzo śmieszna książka, choć za humorem, jaki z niej emanuje, kryje się ważne przesłanie. Jak może się skończyć książka, która zaczyna się od happy-endu? Właśnie się pobrali. On stabilny emocjonalnie ekstrawertyk z poczuciem humoru, a tak naprawdę zamknięty w klatce patriarchalnych stereotypów dominujący samiec, ona niezmordowana badaczka męskich członków, posiadaczka "złotych ust" i konta z sześcioma zerami.                    </div>
+                <div class="separator"></div>
+            </div>
+            <div class="book_box_buttons">
+                <a class="gray_btn" href="/ksiazka,5,pokoj-zensko-meski-na-chwale-patriarchatu.htm" title="Zobacz pełny opis książki" alt="Zobacz pełny opis książki">Pełny opis</a>
+                <!--<a class="red_btn" href="#" title="Zobacz pełny opis książki" alt="Zobacz pełny opis książki">Pobierz</a>-->
+                <a onclick="$(&quot;#orderBook5&quot;).dialog(&quot;open&quot;); return false;" class="red_btn" href="#">Pobierz</a><div class="dialog" id="orderBook5">
+
+<div class="form">
+    
+<form id="order-form5" action="/book/submitOrder.htm?bookId=5" method="post">
+    <div id="order-form5_es_" class="errorSummary" style="display:none">Wystąpił błąd!
+<ul><li>dummy</li></ul></div>
+    <p>Podaj swój adres email, na który wyślemy Ci wiadomość umożliwiającą pobranie e-booka w każdym, dostępnym u nas formacie. Jeśli ta wiadomość nie dotrze do Ciebie (e-maile z różnych powodów nie zawsze docierają do adresata lub docierają z dużym opóźnieniem), użyj innego adresu.  </p>
+
+    <div class="col1">
+        <label for="Subscriber_email" class="required">Twój adres email <span class="required">*</span></label>     <input size="32" name="Subscriber[email]" id="Subscriber_email" type="text" />          </div>
+    
+    
+            <div class="separator"></div>
+
+    <div class="col1 acceptRules">
+        <input id="ytOrder_acceptRules" type="hidden" value="0" name="Order[acceptRules]" /><input name="Order[acceptRules]" id="Order_acceptRules" value="1" type="checkbox" />        <label for="Order_acceptRules" class="required">Akceptuję regulamin <span class="required">*</span></label>            </div>
+
+    <input class="orderSubmitBtn" type="submit" name="yt5" value="Zamów e-book" />
+</form> 
+</div><!-- form -->
+
+</div>                <div class="separator"></div>
+            </div>
+        
+    </div><!-- book_box -->
+    <div class="separator"></div></div>
+
+<!-- book_box_row -->
+
+<div class="book_box_row" style="height: 360px;">    <div class="book_box">
+        
+            <div class="book_box_content">
+                <div class="book_box_title"><a href="/ksiazka,20,latajacy-talerz-czyli-frisbee---graj-na-punkty.htm">Latający Talerz czyli Frisbee - graj na punkty!</a></div>
+                <div class="separator"></div>
+                <a href="/ksiazka,20,latajacy-talerz-czyli-frisbee---graj-na-punkty.htm"><img class="book_box_image" src="/images/ksiazka_20_thumb.jpg" alt="Latający Talerz czyli Frisbee - graj na punkty!" /></a>                <div class="book_box_autor">Jacek Chołoniewski</div>
+                <div class="book_box_format">Format: PDF</div>
+                <div class="book_box_desc">
+                    Mało kto w Polsce wie, że latający talerz (dysk) zwany też frisbee, który można kupić w każdym sklepie sportowym, to nie tylko rekreacyjna zabawka. Latającym talerzem można też grać na punkty i jest to gra naprawdę fajna i godna polecenia. Jej zasady są bardzo proste a boisko do gry można zrobić praktycznie wszędzie. Pobierz udostępniony tu w formacie pdf plik, który zawiera zasady gry w Ultimate Frisbee (tak oficjalnie nazywa się ta gra). Są to zasady nieco uproszczone i skrócone, aby byś mógł szybko zrozumieć na czym polega ta gra i jak najszybciej w nią zagrać!                 </div>
+                <div class="separator"></div>
+            </div>
+            <div class="book_box_buttons">
+                <a class="gray_btn" href="/ksiazka,20,latajacy-talerz-czyli-frisbee---graj-na-punkty.htm" title="Zobacz pełny opis książki" alt="Zobacz pełny opis książki">Pełny opis</a>
+                <!--<a class="red_btn" href="#" title="Zobacz pełny opis książki" alt="Zobacz pełny opis książki">Pobierz</a>-->
+                <a onclick="$(&quot;#orderBook20&quot;).dialog(&quot;open&quot;); return false;" class="red_btn" href="#">Pobierz</a><div class="dialog" id="orderBook20">
+
+<div class="form">
+    
+<form id="order-form20" action="/book/submitOrder.htm?bookId=20" method="post">
+    <div id="order-form20_es_" class="errorSummary" style="display:none">Wystąpił błąd!
+<ul><li>dummy</li></ul></div>
+    <p>Podaj swój adres email, na który wyślemy Ci wiadomość umożliwiającą pobranie e-booka w każdym, dostępnym u nas formacie. Jeśli ta wiadomość nie dotrze do Ciebie (e-maile z różnych powodów nie zawsze docierają do adresata lub docierają z dużym opóźnieniem), użyj innego adresu.  </p>
+
+    <div class="col1">
+        <label for="Subscriber_email" class="required">Twój adres email <span class="required">*</span></label>     <input size="32" name="Subscriber[email]" id="Subscriber_email" type="text" />          </div>
+    
+    
+            <div class="separator"></div>
+
+    <div class="col1 acceptRules">
+        <input id="ytOrder_acceptRules" type="hidden" value="0" name="Order[acceptRules]" /><input name="Order[acceptRules]" id="Order_acceptRules" value="1" type="checkbox" />        <label for="Order_acceptRules" class="required">Akceptuję regulamin <span class="required">*</span></label>            </div>
+
+    <input class="orderSubmitBtn" type="submit" name="yt6" value="Zamów e-book" />
+</form> 
+</div><!-- form -->
+
+</div>                <div class="separator"></div>
+            </div>
+        
+    </div><!-- book_box -->
+        <div class="book_box">
+        
+            <div class="book_box_content">
+                <div class="book_box_title"><a href="/ksiazka,8,twoj-wredny-szef.htm">Twój wredny szef</a></div>
+                <div class="separator"></div>
+                <a href="/ksiazka,8,twoj-wredny-szef.htm"><img class="book_box_image" src="/images/ksiazka_8_thumb.jpg" alt="Twój wredny szef" /></a>                <div class="book_box_autor">Sławomir Jakima, Piotr Rachtan</div>
+                <div class="book_box_format">Format: PDF, EPUB, MOBI</div>
+                <div class="book_box_desc">
+                    Szczegółowe, inteligentne i pożyteczne studium relacji pracownik – podwładny. Także o innych sprawach z jakimi na co dzień spotykamy się w pracy: o awansach, zwolnieniach, imprezach integracyjnych, rywalizacji. O pracoholikach, alkoholikach i firmowych romansach. Ciekawa i praktycznie przydatna lektura i dla szefów i dla podlegających im pracowników. Napisana lekko i, czasem, z przymrużeniem oka.                 </div>
+                <div class="separator"></div>
+            </div>
+            <div class="book_box_buttons">
+                <a class="gray_btn" href="/ksiazka,8,twoj-wredny-szef.htm" title="Zobacz pełny opis książki" alt="Zobacz pełny opis książki">Pełny opis</a>
+                <!--<a class="red_btn" href="#" title="Zobacz pełny opis książki" alt="Zobacz pełny opis książki">Pobierz</a>-->
+                <a onclick="$(&quot;#orderBook8&quot;).dialog(&quot;open&quot;); return false;" class="red_btn" href="#">Pobierz</a><div class="dialog" id="orderBook8">
+
+<div class="form">
+    
+<form id="order-form8" action="/book/submitOrder.htm?bookId=8" method="post">
+    <div id="order-form8_es_" class="errorSummary" style="display:none">Wystąpił błąd!
+<ul><li>dummy</li></ul></div>
+    <p>Podaj swój adres email, na który wyślemy Ci wiadomość umożliwiającą pobranie e-booka w każdym, dostępnym u nas formacie. Jeśli ta wiadomość nie dotrze do Ciebie (e-maile z różnych powodów nie zawsze docierają do adresata lub docierają z dużym opóźnieniem), użyj innego adresu.  </p>
+
+    <div class="col1">
+        <label for="Subscriber_email" class="required">Twój adres email <span class="required">*</span></label>     <input size="32" name="Subscriber[email]" id="Subscriber_email" type="text" />          </div>
+    
+    
+            <div class="separator"></div>
+
+    <div class="col1 acceptRules">
+        <input id="ytOrder_acceptRules" type="hidden" value="0" name="Order[acceptRules]" /><input name="Order[acceptRules]" id="Order_acceptRules" value="1" type="checkbox" />        <label for="Order_acceptRules" class="required">Akceptuję regulamin <span class="required">*</span></label>            </div>
+
+    <input class="orderSubmitBtn" type="submit" name="yt7" value="Zamów e-book" />
+</form> 
+</div><!-- form -->
+
+</div>                <div class="separator"></div>
+            </div>
+        
+    </div><!-- book_box -->
+        <div class="book_box">
+        
+            <div class="book_box_content">
+                <div class="book_box_title"><a href="/ksiazka,11,slepy-tor-i-inne-opowiadania.htm">Ślepy tor i inne opowiadania</a></div>
+                <div class="separator"></div>
+                <a href="/ksiazka,11,slepy-tor-i-inne-opowiadania.htm"><img class="book_box_image" src="/images/ksiazka_11_thumb.jpg" alt="Ślepy tor i inne opowiadania" /></a>                <div class="book_box_autor">Stefan Grabiński</div>
+                <div class="book_box_format">Format: PDF, EPUB, MOBI</div>
+                <div class="book_box_desc">
+                    Groza, tajemne moce, duchy, wampiry, zjawiska paranormalne, obłęd – we wspaniałych opowiadaniach napisanych blisko sto lat temu. Mimo upływu tak długiego czasu twórczość Grabińskiego nic się nie zestarzała – nadal lśni pełnym blaskiem a nawet zyskuje nowe, współczesne znaczenia. Oprócz mrożącej krew w żyłach akcji teksty Grabińskiego zawierają też pokaźną dawkę interesujących informacji dotyczących realiów międzywojennej Polski. Niezrównany jest też język tego pisarstwa – oryginalny, piękny, czasem wręcz poetycki – doskonale współgrający z treścią przekazu.                 </div>
+                <div class="separator"></div>
+            </div>
+            <div class="book_box_buttons">
+                <a class="gray_btn" href="/ksiazka,11,slepy-tor-i-inne-opowiadania.htm" title="Zobacz pełny opis książki" alt="Zobacz pełny opis książki">Pełny opis</a>
+                <!--<a class="red_btn" href="#" title="Zobacz pełny opis książki" alt="Zobacz pełny opis książki">Pobierz</a>-->
+                <a onclick="$(&quot;#orderBook11&quot;).dialog(&quot;open&quot;); return false;" class="red_btn" href="#">Pobierz</a><div class="dialog" id="orderBook11">
+
+<div class="form">
+    
+<form id="order-form11" action="/book/submitOrder.htm?bookId=11" method="post">
+    <div id="order-form11_es_" class="errorSummary" style="display:none">Wystąpił błąd!
+<ul><li>dummy</li></ul></div>
+    <p>Podaj swój adres email, na który wyślemy Ci wiadomość umożliwiającą pobranie e-booka w każdym, dostępnym u nas formacie. Jeśli ta wiadomość nie dotrze do Ciebie (e-maile z różnych powodów nie zawsze docierają do adresata lub docierają z dużym opóźnieniem), użyj innego adresu.  </p>
+
+    <div class="col1">
+        <label for="Subscriber_email" class="required">Twój adres email <span class="required">*</span></label>     <input size="32" name="Subscriber[email]" id="Subscriber_email" type="text" />          </div>
+    
+    
+            <div class="separator"></div>
+
+    <div class="col1 acceptRules">
+        <input id="ytOrder_acceptRules" type="hidden" value="0" name="Order[acceptRules]" /><input name="Order[acceptRules]" id="Order_acceptRules" value="1" type="checkbox" />        <label for="Order_acceptRules" class="required">Akceptuję regulamin <span class="required">*</span></label>            </div>
+
+    <input class="orderSubmitBtn" type="submit" name="yt8" value="Zamów e-book" />
+</form> 
+</div><!-- form -->
+
+</div>                <div class="separator"></div>
+            </div>
+        
+    </div><!-- book_box -->
+    <div class="separator"></div></div>
+
+<!-- book_box_row -->
+
+<div class="book_box_row" style="height: 360px;">    <div class="book_box">
+        
+            <div class="book_box_content">
+                <div class="book_box_title"><a href="/ksiazka,13,protokoly-medrcow-syjonu---najwieksze-w-dziejach-falszerstwo-i-plagiat.htm">Protokóły Mędrców Syjonu - największe w dziejach fałszerstwo i plagiat</a></div>
+                <div class="separator"></div>
+                <a href="/ksiazka,13,protokoly-medrcow-syjonu---najwieksze-w-dziejach-falszerstwo-i-plagiat.htm"><img class="book_box_image" src="/images/ksiazka_13_thumb.jpg" alt="Protokóły Mędrców Syjonu - największe w dziejach fałszerstwo i plagiat" /></a>                <div class="book_box_autor">Matwiej Gołowiński</div>
+                <div class="book_box_format">Format: PDF, EPUB, MOBI</div>
+                <div class="book_box_desc">
+                    „Protokóły” ukazały się po raz pierwszy w Rosji w 1903 roku. Jednak ich prawdziwa kariera zaczęła się wraz z wybuchem Rewolucji Październikowej (1917), którą wielu uznało, za realizację tajnego planu zawartego w „Protokołach”. Wywołało to wielkie zainteresowanie „Protokołami” na całym świecie mimo, że szybko ujawniono (rok 1920), że „Protokoły” są fałszywką. Od tego momentu książkę wydano praktycznie w każdym kraju świata. Często w ogromnych, milionowych nakładach.                 </div>
+                <div class="separator"></div>
+            </div>
+            <div class="book_box_buttons">
+                <a class="gray_btn" href="/ksiazka,13,protokoly-medrcow-syjonu---najwieksze-w-dziejach-falszerstwo-i-plagiat.htm" title="Zobacz pełny opis książki" alt="Zobacz pełny opis książki">Pełny opis</a>
+                <!--<a class="red_btn" href="#" title="Zobacz pełny opis książki" alt="Zobacz pełny opis książki">Pobierz</a>-->
+                <a onclick="$(&quot;#orderBook13&quot;).dialog(&quot;open&quot;); return false;" class="red_btn" href="#">Pobierz</a><div class="dialog" id="orderBook13">
+
+<div class="form">
+    
+<form id="order-form13" action="/book/submitOrder.htm?bookId=13" method="post">
+    <div id="order-form13_es_" class="errorSummary" style="display:none">Wystąpił błąd!
+<ul><li>dummy</li></ul></div>
+    <p>Podaj swój adres email, na który wyślemy Ci wiadomość umożliwiającą pobranie e-booka w każdym, dostępnym u nas formacie. Jeśli ta wiadomość nie dotrze do Ciebie (e-maile z różnych powodów nie zawsze docierają do adresata lub docierają z dużym opóźnieniem), użyj innego adresu.  </p>
+
+    <div class="col1">
+        <label for="Subscriber_email" class="required">Twój adres email <span class="required">*</span></label>     <input size="32" name="Subscriber[email]" id="Subscriber_email" type="text" />          </div>
+    
+    
+            <div class="separator"></div>
+
+    <div class="col1 acceptRules">
+        <input id="ytOrder_acceptRules" type="hidden" value="0" name="Order[acceptRules]" /><input name="Order[acceptRules]" id="Order_acceptRules" value="1" type="checkbox" />        <label for="Order_acceptRules" class="required">Akceptuję regulamin <span class="required">*</span></label>            </div>
+
+    <input class="orderSubmitBtn" type="submit" name="yt9" value="Zamów e-book" />
+</form> 
+</div><!-- form -->
+
+</div>                <div class="separator"></div>
+            </div>
+        
+    </div><!-- book_box -->
+        <div class="book_box">
+        
+            <div class="book_box_content">
+                <div class="book_box_title"><a href="/ksiazka,21,walesa---czlowiek-na-smyczy.htm">Wałęsa - człowiek na smyczy?</a></div>
+                <div class="separator"></div>
+                <a href="/ksiazka,21,walesa---czlowiek-na-smyczy.htm"><img class="book_box_image" src="/images/ksiazka_21_thumb.jpg" alt="Wałęsa - człowiek na smyczy?" /></a>                <div class="book_box_autor">Krzysztof Wyszkowski</div>
+                <div class="book_box_format">Format: PDF, EPUB, MOBI</div>
+                <div class="book_box_desc">
+                    Czy Lech Wałęsa to heroiczny i niezłomny pogromca komunizmu? Wielki Polak, autorytet, postać bez skazy? A może agent tajnych służb? Lub następca Nikodema Dyzmy, człowiek głupi i prymitywny a do tego chciwy i zawistny? Te ważne pytania, to nie tylko pytania o przeszłość Lecha Wałęsy. To także pytania o genezę Trzeciej Rzeczpospolitej, o historię powstania Polski jako suwerennego, demokratycznego państwa. Wywiad z Krzysztofem Wyszkowskim, który tu publikujemy (przeprowadził go Krzysztof Wołodźko w dniu 20 grudnia 2012 roku) rzuca nowe światło na te zagadnienia.                   </div>
+                <div class="separator"></div>
+            </div>
+            <div class="book_box_buttons">
+                <a class="gray_btn" href="/ksiazka,21,walesa---czlowiek-na-smyczy.htm" title="Zobacz pełny opis książki" alt="Zobacz pełny opis książki">Pełny opis</a>
+                <!--<a class="red_btn" href="#" title="Zobacz pełny opis książki" alt="Zobacz pełny opis książki">Pobierz</a>-->
+                <a onclick="$(&quot;#orderBook21&quot;).dialog(&quot;open&quot;); return false;" class="red_btn" href="#">Pobierz</a><div class="dialog" id="orderBook21">
+
+<div class="form">
+    
+<form id="order-form21" action="/book/submitOrder.htm?bookId=21" method="post">
+    <div id="order-form21_es_" class="errorSummary" style="display:none">Wystąpił błąd!
+<ul><li>dummy</li></ul></div>
+    <p>Podaj swój adres email, na który wyślemy Ci wiadomość umożliwiającą pobranie e-booka w każdym, dostępnym u nas formacie. Jeśli ta wiadomość nie dotrze do Ciebie (e-maile z różnych powodów nie zawsze docierają do adresata lub docierają z dużym opóźnieniem), użyj innego adresu.  </p>
+
+    <div class="col1">
+        <label for="Subscriber_email" class="required">Twój adres email <span class="required">*</span></label>     <input size="32" name="Subscriber[email]" id="Subscriber_email" type="text" />          </div>
+    
+    
+            <div class="separator"></div>
+
+    <div class="col1 acceptRules">
+        <input id="ytOrder_acceptRules" type="hidden" value="0" name="Order[acceptRules]" /><input name="Order[acceptRules]" id="Order_acceptRules" value="1" type="checkbox" />        <label for="Order_acceptRules" class="required">Akceptuję regulamin <span class="required">*</span></label>            </div>
+
+    <input class="orderSubmitBtn" type="submit" name="yt10" value="Zamów e-book" />
+</form> 
+</div><!-- form -->
+
+</div>                <div class="separator"></div>
+            </div>
+        
+    </div><!-- book_box -->
+        <div class="book_box">
+        
+            <div class="book_box_content">
+                <div class="book_box_title"><a href="/ksiazka,9,na-ladach-i-morzach.htm">Na lądach i morzach</a></div>
+                <div class="separator"></div>
+                <a href="/ksiazka,9,na-ladach-i-morzach.htm"><img class="book_box_image" src="/images/ksiazka_9_thumb.jpg" alt="Na lądach i morzach" /></a>                <div class="book_box_autor">Zbigniew Kruszyński</div>
+                <div class="book_box_format">Format: PDF, EPUB, MOBI</div>
+                <div class="book_box_desc">
+                    Świetna, wręcz wirtuozowska proza. Dziesięć opowiadań, których bohaterami są: żebrak, pracownik firmy reklamowej, nauczycielka języków, tłumacz, fanatyk porządku na ulicach, przywódca sekty, cenzor, żona byłego działacza partyjnego, rozwiedzione małżeństwo.  Niezwykły i oryginalny jest styl Kruszyńskiego, który sprawia, że niezależnie od tematu jaki porusza, w umyśle czytelnika mnożą się zaskakujące skojarzenia i metafizyczne wzruszenia. Twórcze i inspirujące pisarstwo kolekcjonującego liczne, zasłużone nagrody autora.                 </div>
+                <div class="separator"></div>
+            </div>
+            <div class="book_box_buttons">
+                <a class="gray_btn" href="/ksiazka,9,na-ladach-i-morzach.htm" title="Zobacz pełny opis książki" alt="Zobacz pełny opis książki">Pełny opis</a>
+                <!--<a class="red_btn" href="#" title="Zobacz pełny opis książki" alt="Zobacz pełny opis książki">Pobierz</a>-->
+                <a onclick="$(&quot;#orderBook9&quot;).dialog(&quot;open&quot;); return false;" class="red_btn" href="#">Pobierz</a><div class="dialog" id="orderBook9">
+
+<div class="form">
+    
+<form id="order-form9" action="/book/submitOrder.htm?bookId=9" method="post">
+    <div id="order-form9_es_" class="errorSummary" style="display:none">Wystąpił błąd!
+<ul><li>dummy</li></ul></div>
+    <p>Podaj swój adres email, na który wyślemy Ci wiadomość umożliwiającą pobranie e-booka w każdym, dostępnym u nas formacie. Jeśli ta wiadomość nie dotrze do Ciebie (e-maile z różnych powodów nie zawsze docierają do adresata lub docierają z dużym opóźnieniem), użyj innego adresu.  </p>
+
+    <div class="col1">
+        <label for="Subscriber_email" class="required">Twój adres email <span class="required">*</span></label>     <input size="32" name="Subscriber[email]" id="Subscriber_email" type="text" />          </div>
+    
+    
+            <div class="separator"></div>
+
+    <div class="col1 acceptRules">
+        <input id="ytOrder_acceptRules" type="hidden" value="0" name="Order[acceptRules]" /><input name="Order[acceptRules]" id="Order_acceptRules" value="1" type="checkbox" />        <label for="Order_acceptRules" class="required">Akceptuję regulamin <span class="required">*</span></label>            </div>
+
+    <input class="orderSubmitBtn" type="submit" name="yt11" value="Zamów e-book" />
+</form> 
+</div><!-- form -->
+
+</div>                <div class="separator"></div>
+            </div>
+        
+    </div><!-- book_box -->
+    <div class="separator"></div></div>
+
+<!-- book_box_row -->
+
+<div class="book_box_row" style="height: 360px;">    <div class="book_box">
+        
+            <div class="book_box_content">
+                <div class="book_box_title"><a href="/ksiazka,17,wiersze-o-kwiatach.htm">Wiersze o kwiatach</a></div>
+                <div class="separator"></div>
+                <a href="/ksiazka,17,wiersze-o-kwiatach.htm"><img class="book_box_image" src="/images/ksiazka_17_thumb.jpg" alt="Wiersze o kwiatach" /></a>                <div class="book_box_autor">praca zbiorowa</div>
+                <div class="book_box_format">Format: PDF, EPUB, MOBI</div>
+                <div class="book_box_desc">
+                    Zebraliśmy w jednym, elektronicznym tomie kilkadziesiąt wierszy napisanych przez polskich poetów mniej więcej sto lat temu, tworzących w konwencji Młodej Polski – kierunku w sztuce (literaturze, malarstwie, muzyce), który wychodził z założenia, że zachodnia cywilizacja nie ma już człowiekowi nic więcej do zaoferowania, a świat zmierza ku nieuchronnej katastrofie. Wiersze, które wybraliśmy z bogatego zbioru ówczesnych utworów, to wiersze o kwiatach. Kryterium było jedne: w tytule musi być nazwa jakiejś rośliny, która kwitnie.                  </div>
+                <div class="separator"></div>
+            </div>
+            <div class="book_box_buttons">
+                <a class="gray_btn" href="/ksiazka,17,wiersze-o-kwiatach.htm" title="Zobacz pełny opis książki" alt="Zobacz pełny opis książki">Pełny opis</a>
+                <!--<a class="red_btn" href="#" title="Zobacz pełny opis książki" alt="Zobacz pełny opis książki">Pobierz</a>-->
+                <a onclick="$(&quot;#orderBook17&quot;).dialog(&quot;open&quot;); return false;" class="red_btn" href="#">Pobierz</a><div class="dialog" id="orderBook17">
+
+<div class="form">
+    
+<form id="order-form17" action="/book/submitOrder.htm?bookId=17" method="post">
+    <div id="order-form17_es_" class="errorSummary" style="display:none">Wystąpił błąd!
+<ul><li>dummy</li></ul></div>
+    <p>Podaj swój adres email, na który wyślemy Ci wiadomość umożliwiającą pobranie e-booka w każdym, dostępnym u nas formacie. Jeśli ta wiadomość nie dotrze do Ciebie (e-maile z różnych powodów nie zawsze docierają do adresata lub docierają z dużym opóźnieniem), użyj innego adresu.  </p>
+
+    <div class="col1">
+        <label for="Subscriber_email" class="required">Twój adres email <span class="required">*</span></label>     <input size="32" name="Subscriber[email]" id="Subscriber_email" type="text" />          </div>
+    
+    
+            <div class="separator"></div>
+
+    <div class="col1 acceptRules">
+        <input id="ytOrder_acceptRules" type="hidden" value="0" name="Order[acceptRules]" /><input name="Order[acceptRules]" id="Order_acceptRules" value="1" type="checkbox" />        <label for="Order_acceptRules" class="required">Akceptuję regulamin <span class="required">*</span></label>            </div>
+
+    <input class="orderSubmitBtn" type="submit" name="yt12" value="Zamów e-book" />
+</form> 
+</div><!-- form -->
+
+</div>                <div class="separator"></div>
+            </div>
+        
+    </div><!-- book_box -->
+        <div class="book_box">
+        
+            <div class="book_box_content">
+                <div class="book_box_title"><a href="/ksiazka,16,raport-placowy-polska-i-swiat.htm">Raport płacowy. Polska i świat</a></div>
+                <div class="separator"></div>
+                <a href="/ksiazka,16,raport-placowy-polska-i-swiat.htm"><img class="book_box_image" src="/images/ksiazka_16_thumb.jpg" alt="Raport płacowy. Polska i świat" /></a>                <div class="book_box_autor">Michał Tomczak</div>
+                <div class="book_box_format">Format: PDF</div>
+                <div class="book_box_desc">
+                    Obszerne, szczegółowe i wszechstronne opracowanie o tym, co każdego interesuje najbardziej: kto, ile zarabia? Przygotowane przez zespół ekspertów pod kierunkiem Michała Tomczaka. Opublikowane przez Związek Przedsiębiorców i Pracodawców oraz Centrum im. Adama Smitha. Znajdziesz w nim dane dotyczące nie tylko Polski ale także wielu innych krajów Europy i świata. Dowiesz się w jakich branżach i na jakich stanowiskach zarabia się najwięcej. Jak zależy pensja od wielkości przedsiębiorstwa? Jak kształtuje się płaca minimalna w Polsce i w innych krajach? I wiele więcej.                 </div>
+                <div class="separator"></div>
+            </div>
+            <div class="book_box_buttons">
+                <a class="gray_btn" href="/ksiazka,16,raport-placowy-polska-i-swiat.htm" title="Zobacz pełny opis książki" alt="Zobacz pełny opis książki">Pełny opis</a>
+                <!--<a class="red_btn" href="#" title="Zobacz pełny opis książki" alt="Zobacz pełny opis książki">Pobierz</a>-->
+                <a onclick="$(&quot;#orderBook16&quot;).dialog(&quot;open&quot;); return false;" class="red_btn" href="#">Pobierz</a><div class="dialog" id="orderBook16">
+
+<div class="form">
+    
+<form id="order-form16" action="/book/submitOrder.htm?bookId=16" method="post">
+    <div id="order-form16_es_" class="errorSummary" style="display:none">Wystąpił błąd!
+<ul><li>dummy</li></ul></div>
+    <p>Podaj swój adres email, na który wyślemy Ci wiadomość umożliwiającą pobranie e-booka w każdym, dostępnym u nas formacie. Jeśli ta wiadomość nie dotrze do Ciebie (e-maile z różnych powodów nie zawsze docierają do adresata lub docierają z dużym opóźnieniem), użyj innego adresu.  </p>
+
+    <div class="col1">
+        <label for="Subscriber_email" class="required">Twój adres email <span class="required">*</span></label>     <input size="32" name="Subscriber[email]" id="Subscriber_email" type="text" />          </div>
+    
+    
+            <div class="separator"></div>
+
+    <div class="col1 acceptRules">
+        <input id="ytOrder_acceptRules" type="hidden" value="0" name="Order[acceptRules]" /><input name="Order[acceptRules]" id="Order_acceptRules" value="1" type="checkbox" />        <label for="Order_acceptRules" class="required">Akceptuję regulamin <span class="required">*</span></label>            </div>
+
+    <input class="orderSubmitBtn" type="submit" name="yt13" value="Zamów e-book" />
+</form> 
+</div><!-- form -->
+
+</div>                <div class="separator"></div>
+            </div>
+        
+    </div><!-- book_box -->
+        <div class="book_box">
+        
+            <div class="book_box_content">
+                <div class="book_box_title"><a href="/ksiazka,15,palma-jajko-i-smigus-w-praktykach-wielkanocnych-ludu-polskiego.htm">Palma, jajko i śmigus w praktykach wielkanocnych ludu polskiego</a></div>
+                <div class="separator"></div>
+                <a href="/ksiazka,15,palma-jajko-i-smigus-w-praktykach-wielkanocnych-ludu-polskiego.htm"><img class="book_box_image" src="/images/ksiazka_15_thumb.jpg" alt="Palma, jajko i śmigus w praktykach wielkanocnych ludu polskiego" /></a>                <div class="book_box_autor">Franciszek Gawełek</div>
+                <div class="book_box_format">Format: PDF, EPUB, MOBI</div>
+                <div class="book_box_desc">
+                    Magiczny, fascynujący świat pogańskich obrzędów, które przejęło chrześcijaństwo. Okazuje się, że wszystkie trzy atrybuty Świąt Wielkanocnych: palma, jajko i śmigus pojawiły się w kulturze wiele tysięcy lat temu. Dzięki tej publikacji dowiesz się jaki był ich sens i znaczenie – dlaczego były ważne. Nie tylko w Polsce ale także w innych krajach Europy i świata. Zobaczysz jak wiele różnorodnych, często bardzo oryginalnych obrzędów było z nimi związanych. Książka ta ukazała się drukiem ponad 100 lat temu co tylko zwiększa jej atrakcyjność dla współczesnego czytelnika.                 </div>
+                <div class="separator"></div>
+            </div>
+            <div class="book_box_buttons">
+                <a class="gray_btn" href="/ksiazka,15,palma-jajko-i-smigus-w-praktykach-wielkanocnych-ludu-polskiego.htm" title="Zobacz pełny opis książki" alt="Zobacz pełny opis książki">Pełny opis</a>
+                <!--<a class="red_btn" href="#" title="Zobacz pełny opis książki" alt="Zobacz pełny opis książki">Pobierz</a>-->
+                <a onclick="$(&quot;#orderBook15&quot;).dialog(&quot;open&quot;); return false;" class="red_btn" href="#">Pobierz</a><div class="dialog" id="orderBook15">
+
+<div class="form">
+    
+<form id="order-form15" action="/book/submitOrder.htm?bookId=15" method="post">
+    <div id="order-form15_es_" class="errorSummary" style="display:none">Wystąpił błąd!
+<ul><li>dummy</li></ul></div>
+    <p>Podaj swój adres email, na który wyślemy Ci wiadomość umożliwiającą pobranie e-booka w każdym, dostępnym u nas formacie. Jeśli ta wiadomość nie dotrze do Ciebie (e-maile z różnych powodów nie zawsze docierają do adresata lub docierają z dużym opóźnieniem), użyj innego adresu.  </p>
+
+    <div class="col1">
+        <label for="Subscriber_email" class="required">Twój adres email <span class="required">*</span></label>     <input size="32" name="Subscriber[email]" id="Subscriber_email" type="text" />          </div>
+    
+    
+            <div class="separator"></div>
+
+    <div class="col1 acceptRules">
+        <input id="ytOrder_acceptRules" type="hidden" value="0" name="Order[acceptRules]" /><input name="Order[acceptRules]" id="Order_acceptRules" value="1" type="checkbox" />        <label for="Order_acceptRules" class="required">Akceptuję regulamin <span class="required">*</span></label>            </div>
+
+    <input class="orderSubmitBtn" type="submit" name="yt14" value="Zamów e-book" />
+</form> 
+</div><!-- form -->
+
+</div>                <div class="separator"></div>
+            </div>
+        
+    </div><!-- book_box -->
+    <div class="separator"></div></div>
+
+<!-- book_box_row -->
+
+<div class="book_box_row" style="height: 360px;">    <div class="book_box">
+        
+            <div class="book_box_content">
+                <div class="book_box_title"><a href="/ksiazka,14,o-umyslowym-i-moralnym-niedorozwoju-kobiety.htm">O umysłowym i moralnym niedorozwoju kobiety</a></div>
+                <div class="separator"></div>
+                <a href="/ksiazka,14,o-umyslowym-i-moralnym-niedorozwoju-kobiety.htm"><img class="book_box_image" src="/images/ksiazka_14_thumb.jpg" alt="O umysłowym i moralnym niedorozwoju kobiety" /></a>                <div class="book_box_autor">Paul Julius Möbius i Katinka von Rosen</div>
+                <div class="book_box_format">Format: PDF, EPUB, MOBI</div>
+                <div class="book_box_desc">
+                    Książka bardzo niepoprawna politycznie – do czytania tylko dla odważnych! Wydany w 1900 roku antyfeministyczny i antykobiecy klasyk. Autorzy uważają, że kobiety są wyraźnie głupsze i mniej twórcze niż mężczyźni, że ich podstawową rolą jest rodzenie i wychowywanie dzieci oraz służenie mężowi, a podstawowym zainteresowaniem upiększanie się i plotkowanie. Wszystko to miałoby wynikać z faktu, że mózgi kobiet są mniejsze niż mózgi mężczyzn. Tekst jest arcyciekawym, bogatym w wielorakie smaczki, dokumentem ówczesnej epoki.                 </div>
+                <div class="separator"></div>
+            </div>
+            <div class="book_box_buttons">
+                <a class="gray_btn" href="/ksiazka,14,o-umyslowym-i-moralnym-niedorozwoju-kobiety.htm" title="Zobacz pełny opis książki" alt="Zobacz pełny opis książki">Pełny opis</a>
+                <!--<a class="red_btn" href="#" title="Zobacz pełny opis książki" alt="Zobacz pełny opis książki">Pobierz</a>-->
+                <a onclick="$(&quot;#orderBook14&quot;).dialog(&quot;open&quot;); return false;" class="red_btn" href="#">Pobierz</a><div class="dialog" id="orderBook14">
+
+<div class="form">
+    
+<form id="order-form14" action="/book/submitOrder.htm?bookId=14" method="post">
+    <div id="order-form14_es_" class="errorSummary" style="display:none">Wystąpił błąd!
+<ul><li>dummy</li></ul></div>
+    <p>Podaj swój adres email, na który wyślemy Ci wiadomość umożliwiającą pobranie e-booka w każdym, dostępnym u nas formacie. Jeśli ta wiadomość nie dotrze do Ciebie (e-maile z różnych powodów nie zawsze docierają do adresata lub docierają z dużym opóźnieniem), użyj innego adresu.  </p>
+
+    <div class="col1">
+        <label for="Subscriber_email" class="required">Twój adres email <span class="required">*</span></label>     <input size="32" name="Subscriber[email]" id="Subscriber_email" type="text" />          </div>
+    
+    
+            <div class="separator"></div>
+
+    <div class="col1 acceptRules">
+        <input id="ytOrder_acceptRules" type="hidden" value="0" name="Order[acceptRules]" /><input name="Order[acceptRules]" id="Order_acceptRules" value="1" type="checkbox" />        <label for="Order_acceptRules" class="required">Akceptuję regulamin <span class="required">*</span></label>            </div>
+
+    <input class="orderSubmitBtn" type="submit" name="yt15" value="Zamów e-book" />
+</form> 
+</div><!-- form -->
+
+</div>                <div class="separator"></div>
+            </div>
+        
+    </div><!-- book_box -->
+        <div class="book_box">
+        
+            <div class="book_box_content">
+                <div class="book_box_title"><a href="/ksiazka,7,9-latwych-kawalkow.htm">9 łatwych kawałków</a></div>
+                <div class="separator"></div>
+                <a href="/ksiazka,7,9-latwych-kawalkow.htm"><img class="book_box_image" src="/images/ksiazka_7_thumb.jpg" alt="9 łatwych kawałków" /></a>                <div class="book_box_autor">Jan Krasnowolski</div>
+                <div class="book_box_format">Format: PDF, EPUB, MOBI</div>
+                <div class="book_box_desc">
+                    Dziewięć dobrze napisanych opowiadań, które dają gorzki, mroczny a nawet demoniczny obraz rzeczywistości. Książka jest zabawna – lecz jest to humor czarny. Jej tytuł sugeruje, że będzie się ją dobrze czytać, że nie będzie w niej wymyślnych eksperymentów – i rzeczywiście tak jest. W każdym z dziewięciu opowiadań występuje bohater o imieniu Stefan – jego uporczywą obecność można interpretować bardzo różnie – podobnie jak sam tekst. Książkę wydano w serii „Stanisław Lem poleca”!                 </div>
+                <div class="separator"></div>
+            </div>
+            <div class="book_box_buttons">
+                <a class="gray_btn" href="/ksiazka,7,9-latwych-kawalkow.htm" title="Zobacz pełny opis książki" alt="Zobacz pełny opis książki">Pełny opis</a>
+                <!--<a class="red_btn" href="#" title="Zobacz pełny opis książki" alt="Zobacz pełny opis książki">Pobierz</a>-->
+                <a onclick="$(&quot;#orderBook7&quot;).dialog(&quot;open&quot;); return false;" class="red_btn" href="#">Pobierz</a><div class="dialog" id="orderBook7">
+
+<div class="form">
+    
+<form id="order-form7" action="/book/submitOrder.htm?bookId=7" method="post">
+    <div id="order-form7_es_" class="errorSummary" style="display:none">Wystąpił błąd!
+<ul><li>dummy</li></ul></div>
+    <p>Podaj swój adres email, na który wyślemy Ci wiadomość umożliwiającą pobranie e-booka w każdym, dostępnym u nas formacie. Jeśli ta wiadomość nie dotrze do Ciebie (e-maile z różnych powodów nie zawsze docierają do adresata lub docierają z dużym opóźnieniem), użyj innego adresu.  </p>
+
+    <div class="col1">
+        <label for="Subscriber_email" class="required">Twój adres email <span class="required">*</span></label>     <input size="32" name="Subscriber[email]" id="Subscriber_email" type="text" />          </div>
+    
+    
+            <div class="separator"></div>
+
+    <div class="col1 acceptRules">
+        <input id="ytOrder_acceptRules" type="hidden" value="0" name="Order[acceptRules]" /><input name="Order[acceptRules]" id="Order_acceptRules" value="1" type="checkbox" />        <label for="Order_acceptRules" class="required">Akceptuję regulamin <span class="required">*</span></label>            </div>
+
+    <input class="orderSubmitBtn" type="submit" name="yt16" value="Zamów e-book" />
+</form> 
+</div><!-- form -->
+
+</div>                <div class="separator"></div>
+            </div>
+        
+    </div><!-- book_box -->
+        <div class="book_box">
+        
+            <div class="book_box_content">
+                <div class="book_box_title"><a href="/ksiazka,6,bazylek-daje-sobie-rade.htm">Bazylek daje sobie radę</a></div>
+                <div class="separator"></div>
+                <a href="/ksiazka,6,bazylek-daje-sobie-rade.htm"><img class="book_box_image" src="/images/ksiazka_6_thumb.jpg" alt="Bazylek daje sobie radę" /></a>                <div class="book_box_autor">Jacek Pałka</div>
+                <div class="book_box_format">Format: PDF, EPUB, MOBI</div>
+                <div class="book_box_desc">
+                    Ojcostwo jako przygoda i wyzwanie. Książka dowcipna i bezpretensjonalna. Inspirująca, bo udowadnia, że zwykłe, codzienne czynności mogą być&nbsp;pasjonujące. Odlotowa ale i mocno osadzona w realiach. Opowieść o męskiej przyjaźni autora i jego siedmioletniego syna. Ich relacje pokazane na tle codziennych zmagań dowodzą, że można się wspaniale bawić, wzajemnie się przy tym wychowując. Autor, specjalnie dla ebooks43.pl, dodał nowe, nigdzie dotąd nie publikowane rozdziały!                 </div>
+                <div class="separator"></div>
+            </div>
+            <div class="book_box_buttons">
+                <a class="gray_btn" href="/ksiazka,6,bazylek-daje-sobie-rade.htm" title="Zobacz pełny opis książki" alt="Zobacz pełny opis książki">Pełny opis</a>
+                <!--<a class="red_btn" href="#" title="Zobacz pełny opis książki" alt="Zobacz pełny opis książki">Pobierz</a>-->
+                <a onclick="$(&quot;#orderBook6&quot;).dialog(&quot;open&quot;); return false;" class="red_btn" href="#">Pobierz</a><div class="dialog" id="orderBook6">
+
+<div class="form">
+    
+<form id="order-form6" action="/book/submitOrder.htm?bookId=6" method="post">
+    <div id="order-form6_es_" class="errorSummary" style="display:none">Wystąpił błąd!
+<ul><li>dummy</li></ul></div>
+    <p>Podaj swój adres email, na który wyślemy Ci wiadomość umożliwiającą pobranie e-booka w każdym, dostępnym u nas formacie. Jeśli ta wiadomość nie dotrze do Ciebie (e-maile z różnych powodów nie zawsze docierają do adresata lub docierają z dużym opóźnieniem), użyj innego adresu.  </p>
+
+    <div class="col1">
+        <label for="Subscriber_email" class="required">Twój adres email <span class="required">*</span></label>     <input size="32" name="Subscriber[email]" id="Subscriber_email" type="text" />          </div>
+    
+    
+            <div class="separator"></div>
+
+    <div class="col1 acceptRules">
+        <input id="ytOrder_acceptRules" type="hidden" value="0" name="Order[acceptRules]" /><input name="Order[acceptRules]" id="Order_acceptRules" value="1" type="checkbox" />        <label for="Order_acceptRules" class="required">Akceptuję regulamin <span class="required">*</span></label>            </div>
+
+    <input class="orderSubmitBtn" type="submit" name="yt17" value="Zamów e-book" />
+</form> 
+</div><!-- form -->
+
+</div>                <div class="separator"></div>
+            </div>
+        
+    </div><!-- book_box -->
+    <div class="separator"></div></div>
+
+<!-- book_box_row -->
+
+<div class="book_box_row" style="height: 360px;">    <div class="book_box">
+        
+            <div class="book_box_content">
+                <div class="book_box_title"><a href="/ksiazka,4,jak-korzystnie-kupic-lub-sprzedac-mieszkanie---praktyczny-poradnik.htm">Jak korzystnie kupić lub sprzedać mieszkanie - praktyczny poradnik</a></div>
+                <div class="separator"></div>
+                <a href="/ksiazka,4,jak-korzystnie-kupic-lub-sprzedac-mieszkanie---praktyczny-poradnik.htm"><img class="book_box_image" src="/images/ksiazka_4_thumb.gif" alt="Jak korzystnie kupić lub sprzedać mieszkanie - praktyczny poradnik" /></a>                <div class="book_box_autor">Jacek Chołoniewski</div>
+                <div class="book_box_format">Format: PDF</div>
+                <div class="book_box_desc">
+                    Bądź mądry przed szkodą! Dzięki lekturze tej książki zaoszczędzisz czas, pieniądze i nerwy. Jednak najważniejszym, trudnym do przecenienia efektem jej przeczytania będzie pomoc w dokonaniu właściwej decyzji jeśli chodzi o znalezienie i wybór najbardziej odpowiedniego mieszkania. W książce omówiono krok po kroku kolejne zagadnienia związane z zakupem mieszkania: od odpowiedzi na pytanie "kupić czy wynająć?" po "instalowanie" się w nowym lokum.                 </div>
+                <div class="separator"></div>
+            </div>
+            <div class="book_box_buttons">
+                <a class="gray_btn" href="/ksiazka,4,jak-korzystnie-kupic-lub-sprzedac-mieszkanie---praktyczny-poradnik.htm" title="Zobacz pełny opis książki" alt="Zobacz pełny opis książki">Pełny opis</a>
+                <!--<a class="red_btn" href="#" title="Zobacz pełny opis książki" alt="Zobacz pełny opis książki">Pobierz</a>-->
+                <a onclick="$(&quot;#orderBook4&quot;).dialog(&quot;open&quot;); return false;" class="red_btn" href="#">Pobierz</a><div class="dialog" id="orderBook4">
+
+<div class="form">
+    
+<form id="order-form4" action="/book/submitOrder.htm?bookId=4" method="post">
+    <div id="order-form4_es_" class="errorSummary" style="display:none">Wystąpił błąd!
+<ul><li>dummy</li></ul></div>
+    <p>Podaj swój adres email, na który wyślemy Ci wiadomość umożliwiającą pobranie e-booka w każdym, dostępnym u nas formacie. Jeśli ta wiadomość nie dotrze do Ciebie (e-maile z różnych powodów nie zawsze docierają do adresata lub docierają z dużym opóźnieniem), użyj innego adresu.  </p>
+
+    <div class="col1">
+        <label for="Subscriber_email" class="required">Twój adres email <span class="required">*</span></label>     <input size="32" name="Subscriber[email]" id="Subscriber_email" type="text" />          </div>
+    
+    
+            <div class="separator"></div>
+
+    <div class="col1 acceptRules">
+        <input id="ytOrder_acceptRules" type="hidden" value="0" name="Order[acceptRules]" /><input name="Order[acceptRules]" id="Order_acceptRules" value="1" type="checkbox" />        <label for="Order_acceptRules" class="required">Akceptuję regulamin <span class="required">*</span></label>            </div>
+
+    <input class="orderSubmitBtn" type="submit" name="yt18" value="Zamów e-book" />
+</form> 
+</div><!-- form -->
+
+</div>                <div class="separator"></div>
+            </div>
+        
+    </div><!-- book_box -->
+    
+<div class="separator"></div></div>
+
+<p><!-- book_box_row -->
+ <br /><br />Każdy e-book, który pobierzesz jest przeznaczony tylko do Twojego własnego użytku osobistego. Będzie Ci o tym przypominać tak zwany znak wodny, zawierający Twój adres email, naniesiony na pobrane przez Ciebie pliki. <br /><br />Skorzystanie z dostępnej na tej stronie możliwości pobrania e-booka oznacza akceptację otrzymywania newslettera z partnerskiego serwisu <a title="www.BooksOn.pl" href="http://www.BooksOn.pl" target="_blank">www.BooksOn.pl</a>.</p>
+</div>
+
+                    
+                    <div class="separator"></div>
+                </div><!-- content -->
+                
+                <div class="separator"></div>
+                
+                <div id="footer">
+                    <p><a href="/s/kontakt.htm">Kontakt</a> &nbsp;&nbsp; <a href="/s/regulamin.htm">Regulamin</a> &nbsp; &nbsp;<a href="/s/newsletter_zapisz.htm">Newsletter zapisz</a> &nbsp; &nbsp; <a href="/s/newsletter_wypisz.htm">Newsletter wypisz</a> &nbsp;&nbsp; <a href="/s/to_i_owo.htm">To i owo</a></p>
+                </div><!-- footer -->
+                
+                <!-- Adsense -->
+                
+                                <div id="bookson" style="text-align:center;">
+                    <a target="_blank" href="http://www.bookson.pl"><img src="http://www.ebooks43.pl/img/BO_750x200.gif" alt="BooksOn - dobre papierowe książki w dobrej cenie" /></a>                </div>
+                                
+                <br/>
+                <div class="fb-like-box" data-href="http://www.facebook.com/ebooks43" data-width="900" data-height="255" data-show-faces="true" data-border-color="#CCC" data-stream="false" data-header="false"></div>
+                
+			</div><!-- main_content -->
+        </div><!-- layout_middle -->
+    </div><!-- layout_wraper -->
+    
+    <div id="layout_bottom">
+    	<div id="bottom_content">
+            Utworzone przez: Marcin Gawski
+        </div><!-- bottom_content -->
+    </div><!-- layout_bottom -->
+
+<!-- Piwik --> 
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://piwik.linuxpl.com/" : "http://piwik.linuxpl.com/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+try {
+  var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 4600);
+  piwikTracker.trackPageView();
+  piwikTracker.enableLinkTracking();
+} catch( err ) {}
+</script><noscript><p><img src="http://piwik.linuxpl.com/piwik.php?idsite=4600" style="border:0" alt="" /></p></noscript>
+<!-- End Piwik Tracking Code -->
+
+<script type="text/javascript" src="/assets/68ef62da/jui/js/jquery-ui.min.js"></script>
+<script type="text/javascript">
+/*<![CDATA[*/
+jQuery(function($) {
+jQuery('#orderBook19').dialog({'title':'Wybrałeś do pobrania e-book: Pochwała po-wolności','autoOpen':false,'draggable':false,'resizable':false,'modal':true,'width':'500','height':'auto','minHeight':50});
+$('#order-form19').yiiactiveform({'validationUrl':'/book/ajaxValidateOrder.htm?bookId=19','validateOnChange':false,'validateOnSubmit':true,'afterValidate':function(form, data, hasError) { return !hasError; },'attributes':[{'id':'Subscriber_email','inputID':'Subscriber_email','errorID':'Subscriber_email_em_','model':'Subscriber','name':'Subscriber[email]','enableAjaxValidation':true},{'id':'Order_acceptRules','inputID':'Order_acceptRules','errorID':'Order_acceptRules_em_','model':'Order','name':'Order[acceptRules]','enableAjaxValidation':true}],'summaryID':'order-form19_es_'});
+jQuery('#orderBook1').dialog({'title':'Wybrałeś do pobrania e-book: Dzikie Anioły i inne opowiadania','autoOpen':false,'draggable':false,'resizable':false,'modal':true,'width':'500','height':'auto','minHeight':50});
+$('#order-form1').yiiactiveform({'validationUrl':'/book/ajaxValidateOrder.htm?bookId=1','validateOnChange':false,'validateOnSubmit':true,'afterValidate':function(form, data, hasError) { return !hasError; },'attributes':[{'id':'Subscriber_email','inputID':'Subscriber_email','errorID':'Subscriber_email_em_','model':'Subscriber','name':'Subscriber[email]','enableAjaxValidation':true},{'id':'Order_acceptRules','inputID':'Order_acceptRules','errorID':'Order_acceptRules_em_','model':'Order','name':'Order[acceptRules]','enableAjaxValidation':true}],'summaryID':'order-form1_es_'});
+jQuery('#orderBook12').dialog({'title':'Wybrałeś do pobrania e-book: Serwantka','autoOpen':false,'draggable':false,'resizable':false,'modal':true,'width':'500','height':'auto','minHeight':50});
+$('#order-form12').yiiactiveform({'validationUrl':'/book/ajaxValidateOrder.htm?bookId=12','validateOnChange':false,'validateOnSubmit':true,'afterValidate':function(form, data, hasError) { return !hasError; },'attributes':[{'id':'Subscriber_email','inputID':'Subscriber_email','errorID':'Subscriber_email_em_','model':'Subscriber','name':'Subscriber[email]','enableAjaxValidation':true},{'id':'Order_acceptRules','inputID':'Order_acceptRules','errorID':'Order_acceptRules_em_','model':'Order','name':'Order[acceptRules]','enableAjaxValidation':true}],'summaryID':'order-form12_es_'});
+jQuery('#orderBook10').dialog({'title':'Wybrałeś do pobrania e-book: Stosunek seksualny nie istnieje','autoOpen':false,'draggable':false,'resizable':false,'modal':true,'width':'500','height':'auto','minHeight':50});
+$('#order-form10').yiiactiveform({'validationUrl':'/book/ajaxValidateOrder.htm?bookId=10','validateOnChange':false,'validateOnSubmit':true,'afterValidate':function(form, data, hasError) { return !hasError; },'attributes':[{'id':'Subscriber_email','inputID':'Subscriber_email','errorID':'Subscriber_email_em_','model':'Subscriber','name':'Subscriber[email]','enableAjaxValidation':true},{'id':'Order_acceptRules','inputID':'Order_acceptRules','errorID':'Order_acceptRules_em_','model':'Order','name':'Order[acceptRules]','enableAjaxValidation':true}],'summaryID':'order-form10_es_'});
+jQuery('#orderBook18').dialog({'title':'Wybrałeś do pobrania e-book: Minęło 1000 lat. Przewodnik historyczno-krajoznawczy po Polsce','autoOpen':false,'draggable':false,'resizable':false,'modal':true,'width':'500','height':'auto','minHeight':50});
+$('#order-form18').yiiactiveform({'validationUrl':'/book/ajaxValidateOrder.htm?bookId=18','validateOnChange':false,'validateOnSubmit':true,'afterValidate':function(form, data, hasError) { return !hasError; },'attributes':[{'id':'Subscriber_email','inputID':'Subscriber_email','errorID':'Subscriber_email_em_','model':'Subscriber','name':'Subscriber[email]','enableAjaxValidation':true},{'id':'Order_acceptRules','inputID':'Order_acceptRules','errorID':'Order_acceptRules_em_','model':'Order','name':'Order[acceptRules]','enableAjaxValidation':true}],'summaryID':'order-form18_es_'});
+jQuery('#orderBook5').dialog({'title':'Wybrałeś do pobrania e-book: Pokój żeńsko-męski na chwałę patriarchatu','autoOpen':false,'draggable':false,'resizable':false,'modal':true,'width':'500','height':'auto','minHeight':50});
+$('#order-form5').yiiactiveform({'validationUrl':'/book/ajaxValidateOrder.htm?bookId=5','validateOnChange':false,'validateOnSubmit':true,'afterValidate':function(form, data, hasError) { return !hasError; },'attributes':[{'id':'Subscriber_email','inputID':'Subscriber_email','errorID':'Subscriber_email_em_','model':'Subscriber','name':'Subscriber[email]','enableAjaxValidation':true},{'id':'Order_acceptRules','inputID':'Order_acceptRules','errorID':'Order_acceptRules_em_','model':'Order','name':'Order[acceptRules]','enableAjaxValidation':true}],'summaryID':'order-form5_es_'});
+jQuery('#orderBook20').dialog({'title':'Wybrałeś do pobrania e-book: Latający Talerz czyli Frisbee - graj na punkty!','autoOpen':false,'draggable':false,'resizable':false,'modal':true,'width':'500','height':'auto','minHeight':50});
+$('#order-form20').yiiactiveform({'validationUrl':'/book/ajaxValidateOrder.htm?bookId=20','validateOnChange':false,'validateOnSubmit':true,'afterValidate':function(form, data, hasError) { return !hasError; },'attributes':[{'id':'Subscriber_email','inputID':'Subscriber_email','errorID':'Subscriber_email_em_','model':'Subscriber','name':'Subscriber[email]','enableAjaxValidation':true},{'id':'Order_acceptRules','inputID':'Order_acceptRules','errorID':'Order_acceptRules_em_','model':'Order','name':'Order[acceptRules]','enableAjaxValidation':true}],'summaryID':'order-form20_es_'});
+jQuery('#orderBook8').dialog({'title':'Wybrałeś do pobrania e-book: Twój wredny szef','autoOpen':false,'draggable':false,'resizable':false,'modal':true,'width':'500','height':'auto','minHeight':50});
+$('#order-form8').yiiactiveform({'validationUrl':'/book/ajaxValidateOrder.htm?bookId=8','validateOnChange':false,'validateOnSubmit':true,'afterValidate':function(form, data, hasError) { return !hasError; },'attributes':[{'id':'Subscriber_email','inputID':'Subscriber_email','errorID':'Subscriber_email_em_','model':'Subscriber','name':'Subscriber[email]','enableAjaxValidation':true},{'id':'Order_acceptRules','inputID':'Order_acceptRules','errorID':'Order_acceptRules_em_','model':'Order','name':'Order[acceptRules]','enableAjaxValidation':true}],'summaryID':'order-form8_es_'});
+jQuery('#orderBook11').dialog({'title':'Wybrałeś do pobrania e-book: Ślepy tor i inne opowiadania','autoOpen':false,'draggable':false,'resizable':false,'modal':true,'width':'500','height':'auto','minHeight':50});
+$('#order-form11').yiiactiveform({'validationUrl':'/book/ajaxValidateOrder.htm?bookId=11','validateOnChange':false,'validateOnSubmit':true,'afterValidate':function(form, data, hasError) { return !hasError; },'attributes':[{'id':'Subscriber_email','inputID':'Subscriber_email','errorID':'Subscriber_email_em_','model':'Subscriber','name':'Subscriber[email]','enableAjaxValidation':true},{'id':'Order_acceptRules','inputID':'Order_acceptRules','errorID':'Order_acceptRules_em_','model':'Order','name':'Order[acceptRules]','enableAjaxValidation':true}],'summaryID':'order-form11_es_'});
+jQuery('#orderBook13').dialog({'title':'Wybrałeś do pobrania e-book: Protokóły Mędrców Syjonu - największe w dziejach fałszerstwo i plagiat','autoOpen':false,'draggable':false,'resizable':false,'modal':true,'width':'500','height':'auto','minHeight':50});
+$('#order-form13').yiiactiveform({'validationUrl':'/book/ajaxValidateOrder.htm?bookId=13','validateOnChange':false,'validateOnSubmit':true,'afterValidate':function(form, data, hasError) { return !hasError; },'attributes':[{'id':'Subscriber_email','inputID':'Subscriber_email','errorID':'Subscriber_email_em_','model':'Subscriber','name':'Subscriber[email]','enableAjaxValidation':true},{'id':'Order_acceptRules','inputID':'Order_acceptRules','errorID':'Order_acceptRules_em_','model':'Order','name':'Order[acceptRules]','enableAjaxValidation':true}],'summaryID':'order-form13_es_'});
+jQuery('#orderBook21').dialog({'title':'Wybrałeś do pobrania e-book: Wałęsa - człowiek na smyczy?','autoOpen':false,'draggable':false,'resizable':false,'modal':true,'width':'500','height':'auto','minHeight':50});
+$('#order-form21').yiiactiveform({'validationUrl':'/book/ajaxValidateOrder.htm?bookId=21','validateOnChange':false,'validateOnSubmit':true,'afterValidate':function(form, data, hasError) { return !hasError; },'attributes':[{'id':'Subscriber_email','inputID':'Subscriber_email','errorID':'Subscriber_email_em_','model':'Subscriber','name':'Subscriber[email]','enableAjaxValidation':true},{'id':'Order_acceptRules','inputID':'Order_acceptRules','errorID':'Order_acceptRules_em_','model':'Order','name':'Order[acceptRules]','enableAjaxValidation':true}],'summaryID':'order-form21_es_'});
+jQuery('#orderBook9').dialog({'title':'Wybrałeś do pobrania e-book: Na lądach i morzach','autoOpen':false,'draggable':false,'resizable':false,'modal':true,'width':'500','height':'auto','minHeight':50});
+$('#order-form9').yiiactiveform({'validationUrl':'/book/ajaxValidateOrder.htm?bookId=9','validateOnChange':false,'validateOnSubmit':true,'afterValidate':function(form, data, hasError) { return !hasError; },'attributes':[{'id':'Subscriber_email','inputID':'Subscriber_email','errorID':'Subscriber_email_em_','model':'Subscriber','name':'Subscriber[email]','enableAjaxValidation':true},{'id':'Order_acceptRules','inputID':'Order_acceptRules','errorID':'Order_acceptRules_em_','model':'Order','name':'Order[acceptRules]','enableAjaxValidation':true}],'summaryID':'order-form9_es_'});
+jQuery('#orderBook17').dialog({'title':'Wybrałeś do pobrania e-book: Wiersze o kwiatach','autoOpen':false,'draggable':false,'resizable':false,'modal':true,'width':'500','height':'auto','minHeight':50});
+$('#order-form17').yiiactiveform({'validationUrl':'/book/ajaxValidateOrder.htm?bookId=17','validateOnChange':false,'validateOnSubmit':true,'afterValidate':function(form, data, hasError) { return !hasError; },'attributes':[{'id':'Subscriber_email','inputID':'Subscriber_email','errorID':'Subscriber_email_em_','model':'Subscriber','name':'Subscriber[email]','enableAjaxValidation':true},{'id':'Order_acceptRules','inputID':'Order_acceptRules','errorID':'Order_acceptRules_em_','model':'Order','name':'Order[acceptRules]','enableAjaxValidation':true}],'summaryID':'order-form17_es_'});
+jQuery('#orderBook16').dialog({'title':'Wybrałeś do pobrania e-book: Raport płacowy. Polska i świat','autoOpen':false,'draggable':false,'resizable':false,'modal':true,'width':'500','height':'auto','minHeight':50});
+$('#order-form16').yiiactiveform({'validationUrl':'/book/ajaxValidateOrder.htm?bookId=16','validateOnChange':false,'validateOnSubmit':true,'afterValidate':function(form, data, hasError) { return !hasError; },'attributes':[{'id':'Subscriber_email','inputID':'Subscriber_email','errorID':'Subscriber_email_em_','model':'Subscriber','name':'Subscriber[email]','enableAjaxValidation':true},{'id':'Order_acceptRules','inputID':'Order_acceptRules','errorID':'Order_acceptRules_em_','model':'Order','name':'Order[acceptRules]','enableAjaxValidation':true}],'summaryID':'order-form16_es_'});
+jQuery('#orderBook15').dialog({'title':'Wybrałeś do pobrania e-book: Palma, jajko i śmigus w praktykach wielkanocnych ludu polskiego','autoOpen':false,'draggable':false,'resizable':false,'modal':true,'width':'500','height':'auto','minHeight':50});
+$('#order-form15').yiiactiveform({'validationUrl':'/book/ajaxValidateOrder.htm?bookId=15','validateOnChange':false,'validateOnSubmit':true,'afterValidate':function(form, data, hasError) { return !hasError; },'attributes':[{'id':'Subscriber_email','inputID':'Subscriber_email','errorID':'Subscriber_email_em_','model':'Subscriber','name':'Subscriber[email]','enableAjaxValidation':true},{'id':'Order_acceptRules','inputID':'Order_acceptRules','errorID':'Order_acceptRules_em_','model':'Order','name':'Order[acceptRules]','enableAjaxValidation':true}],'summaryID':'order-form15_es_'});
+jQuery('#orderBook14').dialog({'title':'Wybrałeś do pobrania e-book: O umysłowym i moralnym niedorozwoju kobiety','autoOpen':false,'draggable':false,'resizable':false,'modal':true,'width':'500','height':'auto','minHeight':50});
+$('#order-form14').yiiactiveform({'validationUrl':'/book/ajaxValidateOrder.htm?bookId=14','validateOnChange':false,'validateOnSubmit':true,'afterValidate':function(form, data, hasError) { return !hasError; },'attributes':[{'id':'Subscriber_email','inputID':'Subscriber_email','errorID':'Subscriber_email_em_','model':'Subscriber','name':'Subscriber[email]','enableAjaxValidation':true},{'id':'Order_acceptRules','inputID':'Order_acceptRules','errorID':'Order_acceptRules_em_','model':'Order','name':'Order[acceptRules]','enableAjaxValidation':true}],'summaryID':'order-form14_es_'});
+jQuery('#orderBook7').dialog({'title':'Wybrałeś do pobrania e-book: 9 łatwych kawałków','autoOpen':false,'draggable':false,'resizable':false,'modal':true,'width':'500','height':'auto','minHeight':50});
+$('#order-form7').yiiactiveform({'validationUrl':'/book/ajaxValidateOrder.htm?bookId=7','validateOnChange':false,'validateOnSubmit':true,'afterValidate':function(form, data, hasError) { return !hasError; },'attributes':[{'id':'Subscriber_email','inputID':'Subscriber_email','errorID':'Subscriber_email_em_','model':'Subscriber','name':'Subscriber[email]','enableAjaxValidation':true},{'id':'Order_acceptRules','inputID':'Order_acceptRules','errorID':'Order_acceptRules_em_','model':'Order','name':'Order[acceptRules]','enableAjaxValidation':true}],'summaryID':'order-form7_es_'});
+jQuery('#orderBook6').dialog({'title':'Wybrałeś do pobrania e-book: Bazylek daje sobie radę','autoOpen':false,'draggable':false,'resizable':false,'modal':true,'width':'500','height':'auto','minHeight':50});
+$('#order-form6').yiiactiveform({'validationUrl':'/book/ajaxValidateOrder.htm?bookId=6','validateOnChange':false,'validateOnSubmit':true,'afterValidate':function(form, data, hasError) { return !hasError; },'attributes':[{'id':'Subscriber_email','inputID':'Subscriber_email','errorID':'Subscriber_email_em_','model':'Subscriber','name':'Subscriber[email]','enableAjaxValidation':true},{'id':'Order_acceptRules','inputID':'Order_acceptRules','errorID':'Order_acceptRules_em_','model':'Order','name':'Order[acceptRules]','enableAjaxValidation':true}],'summaryID':'order-form6_es_'});
+jQuery('#orderBook4').dialog({'title':'Wybrałeś do pobrania e-book: Jak korzystnie kupić lub sprzedać mieszkanie - praktyczny poradnik','autoOpen':false,'draggable':false,'resizable':false,'modal':true,'width':'500','height':'auto','minHeight':50});
+$('#order-form4').yiiactiveform({'validationUrl':'/book/ajaxValidateOrder.htm?bookId=4','validateOnChange':false,'validateOnSubmit':true,'afterValidate':function(form, data, hasError) { return !hasError; },'attributes':[{'id':'Subscriber_email','inputID':'Subscriber_email','errorID':'Subscriber_email_em_','model':'Subscriber','name':'Subscriber[email]','enableAjaxValidation':true},{'id':'Order_acceptRules','inputID':'Order_acceptRules','errorID':'Order_acceptRules_em_','model':'Order','name':'Order[acceptRules]','enableAjaxValidation':true}],'summaryID':'order-form4_es_'});
+});
+/*]]>*/
+</script>
+</body>
+</html>
