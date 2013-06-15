@@ -9,6 +9,7 @@ from datetime import datetime
 import ConfigParser
 from utils import logger_instance
 from utils import DataValidator
+from utils import MultiLevelConfigParser
 from sqlalchemy.ext.associationproxy import association_proxy
 from sqlalchemy.orm import class_mapper
 import utils
@@ -84,17 +85,11 @@ class GenericConnector(GenericBase, DataValidator):
 
     @classmethod
     def read_config(cls):
-        cls.config_object = ConfigParser.SafeConfigParser()
+        cls.config_object = MultiLevelConfigParser()
         #TODO: our config should be case sensitive, somehow this does not work
         #cls.config_object.optionxfrom = str
-        #if not cls.config_object.read(cls.config_file):
-        #    raise ConfigParser.Error('Could not read config from file %s' % cls.config_file)
-        import codecs
-        ff = codecs.open(cls.config_file, "r", "utf8")
-        if not ff:
+        if not cls.config_object.read(cls.config_file, force_utf=True):
             raise ConfigParser.Error('Could not read config from file %s' % cls.config_file)
-        else:
-            cls.config_object.readfp(ff)
 
     @classmethod
     def class_name(cls):

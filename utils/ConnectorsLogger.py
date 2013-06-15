@@ -1,6 +1,7 @@
 import logging
 import logging.handlers
-import ConfigParser
+#from utils import MultiLevelConfigParser
+import utils
 import os
 import sys
 from datetime import datetime
@@ -134,7 +135,7 @@ class ConnectorsLogger(object):
                 raise IOError('Log config file %s, does not exist' % self.log_config)
         else:
             self.log_config = log_config
-            self.config = ConfigParser.SafeConfigParser({'level':'DEBUG', 'logger':'connectors'})
+            self.config = utils.MultiLevelConfigParser({'level':'DEBUG', 'logger':'connectors'})
             self.config.read(self.log_config)
             self.level = self.config.get('DEFAULT', 'level')
             self.logger_name = self.config.get('DEFAULT', 'logger')

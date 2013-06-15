@@ -4,7 +4,6 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import event, DDL
 import urlparse
 
-import ConfigParser
 import utils
 
 MYSQL_TRIGGER_INSERT = '''
@@ -67,7 +66,7 @@ class SqlWrapper(object):
 
     @classmethod
     def init(cls, config_file=None, connectors=[], auto_write_to_db=True):
-        config = ConfigParser.SafeConfigParser(cls.defaults)
+        config = utils.MultiLevelConfigParser(cls.defaults)
         if config_file:
             config.read(config_file)
         cls.scheme = config.get('DEFAULT', 'scheme')
