@@ -15,7 +15,7 @@ class FilterableConnector(GenericConnector):
 class NotFilterableConnector(FilterableConnector):
     pass
 
-class TestNotFilterableConnector():
+class TestNotFilterableConnector(object):
 
     def setUp(self):
         FilterableConnector.config_file = 'unittests/data/connectors_tools/conf/test.ini'

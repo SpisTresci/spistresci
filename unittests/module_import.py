@@ -10,7 +10,7 @@ from connectors import Tools
 
 #Tests if all our modules provides correct api to import from it
 
-class TestModuleImport():
+class TestModuleImport(object):
 
     def assertModuleMember(self, module, member):
         for (name, obj) in inspect.getmembers(module):
@@ -70,7 +70,7 @@ class TestModuleImport():
         self.assertModuleMember(generic, 'XMLConnector')
 
 
-class TestToolsLoadClass():
+class TestToolsLoadClass(object):
 
     def test_tools_load_class(self):
         classname = 'GenericConnector'

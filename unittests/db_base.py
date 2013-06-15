@@ -12,7 +12,7 @@ It's related to python bug http://bugs.python.org/issue5099
 and generally it's not very risky, so screw it.
 '''
 
-class BaseDBTestFixture():
+class BaseDBTestFixture(object):
 
     @classmethod
     def setUpClass(cls):

@@ -25,7 +25,7 @@ class MockBookDescription(MockContext):
     pass
 
 
-class TestGenericBase():
+class TestGenericBase(object):
     @classmethod
     def setUpClass(cls):
         cls.ma = MockAuthor()

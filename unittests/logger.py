@@ -16,7 +16,7 @@ All tests in this file inherit from TestGenericLogger, so all of them has test_l
 It means that for each test these 2 tests will be executed 
 and in most cases the only thing to do is to set config_path and expected result
 '''
-class TestGenericLogger():
+class TestGenericLogger(object):
     config_file = None
     config_path = 'unittests/data/logger/conf'
     expected = 'test_debug\ntest_info\ntest_warning\ntest_error\ntest_critical\n'

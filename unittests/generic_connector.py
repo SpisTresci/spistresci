@@ -15,7 +15,7 @@ import ConfigParser
 class MockConnector(GenericConnector):
     pass
 
-class TestGenericConnector():
+class TestGenericConnector(object):
 
     def setUp(self):
         MockConnector.config_file = 'unittests/data/generic_connector/conf/test.ini'
@@ -139,7 +139,7 @@ class TestGenericConnectorWithGenericReadConfigExecuted(TestGenericConnector):
         GenericConnector.read_config()
         self.mc = MockConnector()
 
-class TestExceptionIfRemovingParrentDir():
+class TestExceptionIfRemovingParrentDir(object):
     def setUp(self):
         MockConnector.config_file = 'unittests/data/generic_connector/conf/test.ini'
         self.mc = MockConnector()
@@ -181,7 +181,7 @@ class TestExceptionIfRemovingParrentDir():
         self._test_rm(self.mc.unpack_dir, 'unpack')
 
 
-class TestParseConfig():
+class TestParseConfig(object):
     def setUp(self):
         MockConnector.config_file = 'unittests/data/generic_connector/conf/test_parse_config.ini'
         self.mc = MockConnector()

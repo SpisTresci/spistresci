@@ -9,7 +9,7 @@ import os
 import glob
 import re
 import sys
-class TestSpecificConnectors():
+class TestSpecificConnectors(object):
 
     def setUp(self):
         pass

@@ -4,7 +4,7 @@ from nose.tools import *
 from utils import NoseUtils
 from utils import DataValidator, DataValidatorError
 
-class MockErratumLogger():
+class MockErratumLogger(object):
     warned = False
     informed = False
     def warning(self, str):
@@ -13,7 +13,7 @@ class MockErratumLogger():
     def info(self, str):
         self.informed = True
 
-class TestDataValidator():
+class TestDataValidator(object):
 
     def setUp(self):
         self.dv = DataValidator()
