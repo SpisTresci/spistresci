@@ -1,8 +1,9 @@
 from utils import logger_instance
+from utils.compatibility import OrderedDict
 import ConfigParser
 
 def get_classnames(config):
-    connector_classnames = {}
+    connector_classnames = OrderedDict()
     for connector in config.sections():
         connector_name = None
         try:
@@ -15,24 +16,17 @@ def get_classnames(config):
             connector_classnames[connector] = connector_name
     return connector_classnames
 
-def filter_classnames(connector_classnames, filter_list, logger=None):
-    if not connector_classnames:
-        return []
-    elif not filter_list:
-        return connector_classnames
+def filter_in_list(connector_classname, filter_list, logger=None):
+    return not filter_list or connector_classname[0] in filter_list
 
-    names_from_filter = []
-    for name in filter_list:
-        if name in connector_classnames.keys():
-            names_from_filter.append(name)
-        elif logger:
-            logger.debug('Connector %s not known'%name)
-
-    final_connector_list = {}
-    for cn in names_from_filter:
-        final_connector_list[cn] = connector_classnames[cn]
-    return final_connector_list
-
+def filter_disabled(connector_classname, config, logger=None):
+    try:
+        disabled = config.getboolean(connector_classname[0], 'disabled')
+        if disabled and logger:
+            logger.info('Connector %s disabled in configuration' % connector_classname[0])
+        return disabled
+    except ConfigParser.NoOptionError:
+        return False
 
 ''' Class decorator to prevent applaying filters on decorated connector'''
 def notFilterableConnector(org_class):

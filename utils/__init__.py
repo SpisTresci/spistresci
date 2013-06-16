@@ -4,3 +4,7 @@ from ConnectorsLogger import logger_instance
 from DataValidator import DataValidator
 from DataValidator import DataValidatorError
 from MultiLevelConfigParser import MultiLevelConfigParser
+
+def filter_varargs(fun, iterable, expected, *args, **kwargs):
+     return [item for item in iterable if fun(item, *args, **kwargs) == expected]
+

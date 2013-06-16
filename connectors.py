@@ -3,7 +3,7 @@ import ConfigParser
 import sys
 import os
 
-from utils import logger_instance
+from utils import logger_instance, filter_varargs
 from connectors import Tools
 from connectors.generic import *
 from sqlwrapper import *
@@ -34,15 +34,17 @@ def main():
     GenericConnector.read_config()
     Logger = logger_instance(GenericConnector.config_object.get('DEFAULT', 'log_config'))
 
-    connector_classnames = Tools.get_classnames(GenericConnector.config_object)
-    final_connector_dic = Tools.filter_classnames(connector_classnames, sys.argv[1:], Logger)
+    #this is dict.items()
+    connector_classnames_list = Tools.get_classnames(GenericConnector.config_object).items()
+    connector_classnames_list = filter_varargs(Tools.filter_in_list, connector_classnames_list, True, sys.argv[1:])
+    connector_classnames_list = filter_varargs(Tools.filter_disabled, connector_classnames_list, False, GenericConnector.config_object, Logger)
 
     if app_name != 'backup':
-        SqlWrapper.init(GenericConnector.config_object.get('DEFAULT', 'db_config'), connectors=final_connector_dic.keys())
+        SqlWrapper.init(GenericConnector.config_object.get('DEFAULT', 'db_config'), connectors=[con[0] for con in connector_classnames_list])
     connectors = [ Tools.load_connector(connectorname=connector[1], config=GenericConnector.config_object)
                    #insert any connector constructor parameters here
                    (name=connector[0])
-                   for connector in final_connector_dic.items() ]
+                   for connector in connector_classnames_list ]
 
     Logger.debug('Created folowing connectors %s' % [connector.name for connector in connectors])
 

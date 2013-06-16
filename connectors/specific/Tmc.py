@@ -5,8 +5,7 @@ from sqlwrapper import *
 Base = SqlWrapper.getBaseClass()
 
 class Tmc(Afiliant):
-    def parse(self):
-        pass
+    pass
 
 class TmcBook(GenericBook, Base):
     pass
