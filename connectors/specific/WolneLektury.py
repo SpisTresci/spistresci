@@ -1,7 +1,7 @@
 from connectors.generic import *
-from connectors.common import *
 from connectors.Tools import notFilterableConnector
 from sqlwrapper import *
+from connectors.generic import GenericBook
 from utils.compatibility import json
 import urllib2
 import os
@@ -35,36 +35,36 @@ class WolneLektury(JSONConnector):
         filename = '%s_%s' % (self.filename, book_name)
         full_filepath = self.downloadFile(book_url, filename)
         return full_filepath
-    
-    def fetchData(self, unpack=True):
+
+    def fetchData(self, unpack = True):
         full_filepath = self.downloadFile()
         if self.mode != GenericConnector.BookList_Mode.MULTIPLE_JSON:
-            raise WrongConnectorModeException('Incorrect mode %s for connector type %s' % 
+            raise WrongConnectorModeException('Incorrect mode %s for connector type %s' %
             (GenericConnector.BookList_Mode.to_str(self.mode), self.__class__.__name__))
 
         self.fetched_files.append(full_filepath)
-        with open(full_filepath,'rU') as json_file:
+        with open(full_filepath, 'rU') as json_file:
             book_list = json.load(json_file)
         for book in book_list:
             self.fetched_files.append(self._fetch_full_book_file(book))
 
     #external id for wolnelektury is a md5 of url.
-    #We believe url to boom is most stable 
+    #We believe url to boom is most stable
     def create_id_from_url(self, dic):
-        dic['external_id'] = unicode(hashlib.md5( urllib2.urlparse.urlparse(dic['url']).path ).hexdigest())
-        
+        dic['external_id'] = unicode(hashlib.md5(urllib2.urlparse.urlparse(dic['url']).path).hexdigest())
+
 
     def validate_number_of_books_in_db(self):
-        session = sessionmaker(bind=SqlWrapper.getEngine())()
-        db_count=session.query(WolneLekturyBook).count()
+        session = sessionmaker(bind = SqlWrapper.getEngine())()
+        db_count = session.query(WolneLekturyBook).count()
         session.close()
 
         book_list_len = len(self.book_list)
         if db_count < book_list_len:
             self.erratum_logger.error('Number of books in database (%d) is less than number got from connector (%d). Check it')
-        elif db_count > book_list_len: 
+        elif db_count > book_list_len:
             self.erratum_logger.warning('Number of books in database (%d) is greater than number got from connector (%d). It is possible that some book exists in db twice')
-        
+
     def adjust_parse(self, dic):
         self.create_id_from_url(dic)
 
@@ -97,18 +97,16 @@ class WolneLektury(JSONConnector):
         #print self.max_len
         #print self.max_len_entry
 
-            
     def validateFormats(self, dic, id, title):
-        formats = [f for f in self.supported_formats if dic.get(f,None)]
+        formats = [f for f in self.supported_formats if dic.get(f, None)]
         dic['formats'] = formats
-
 
 #TODO: add external_id book model
 class WolneLekturyBook(GenericBook, Base):
-    id = Column(Integer, primary_key=True)
+    id = Column(Integer, primary_key = True)
 #    {'url': 121, 'cover': 125, 'thumbnail': 77, 'title': 91 }
     #price - derived
-    external_id = Column(Unicode(32), unique=True) 
+    external_id = Column(Unicode(32), unique = True)
     url = Column(Unicode(256))           #121
     title = Column(Unicode(128))        #91
     cover = Column(Unicode(256))        #125

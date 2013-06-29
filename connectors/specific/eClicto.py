@@ -1,6 +1,6 @@
 from connectors.common import Ceneo
-from connectors.generic import GenericBook
 from sqlwrapper import *
+from connectors.generic import GenericBook
 
 Base = SqlWrapper.getBaseClass()
 
@@ -27,7 +27,7 @@ class eClicto(Ceneo):
     }
 
 class eClictoBook(GenericBook, Base):
-    id = Column(Integer, primary_key=True)
+    id = Column(Integer, primary_key = True)
 
     price = Column(Integer)             #GROSZE!!!
     url = Column(Unicode(512))          #
@@ -38,3 +38,4 @@ class eClictoBook(GenericBook, Base):
     weight = Column(Unicode(4))         #4 - ???
     title = Column(Unicode(256))        #26
     cover = Column(Unicode(64))         #55
+

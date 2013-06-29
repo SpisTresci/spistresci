@@ -1,15 +1,12 @@
 from connectors.common import Ceneo
-from connectors.generic import GenericBook
-from connectors.generic import XMLConnector
-from xml.etree import ElementTree as et
 from sqlwrapper import *
-import os
+from connectors.generic import GenericBook
 
 Base = SqlWrapper.getBaseClass()
 
 class Latarnik(Ceneo):
 
-    depth=0
+    depth = 0
     #dict of xml_tag -> db_column_name translations
     xml_tag_dict = {
         "@id":('external_id', ''),
@@ -35,7 +32,7 @@ class Latarnik(Ceneo):
 
     def adjust_parse(self, dic):
         self.createFromDescription(dic, u"Autor", "authors")
-        self.createFromDescription(dic, u"No\xc3nik", "formats")
+        self.createFromDescription(dic, u"No\xc3nik", "formats")    #TODO: change to utf
         self.createFromDescription(dic, u"Rozmiar", "form")
         self.createFromDescription(dic, u"Oprawa", "type")
 
@@ -50,7 +47,7 @@ class Latarnik(Ceneo):
 
 
 class LatarnikBook(GenericBook, Base):
-    id = Column(Integer, primary_key=True)
+    id = Column(Integer, primary_key = True)
 
     url = Column(Unicode(128))          #104
     price = Column(Integer)             #GROSZE!!!
@@ -63,5 +60,5 @@ class LatarnikBook(GenericBook, Base):
     title = Column(Unicode(128))        #72
     cover = Column(Unicode(256))        #256
     publisher = Column(Unicode(64))     #33
-    publisher_code = Column(Unicode(32))        #17
+    publisher_code = Column(Unicode(32))#17
 

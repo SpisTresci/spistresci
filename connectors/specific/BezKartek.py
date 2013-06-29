@@ -1,7 +1,6 @@
-import os
-from connectors.generic import *
-import lxml.etree as et
+from connectors.generic import XMLConnector
 from sqlwrapper import *
+from connectors.generic import GenericBook
 
 class BezKartek(XMLConnector):
 
@@ -29,7 +28,7 @@ class BezKartek(XMLConnector):
 Base = SqlWrapper.getBaseClass()
 
 class BezKartekBook(GenericBook, Base):
-    id = Column(Integer, primary_key=True)
+    id = Column(Integer, primary_key = True)
 
     category = Column(Unicode(30))      #29
 

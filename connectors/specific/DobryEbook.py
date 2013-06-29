@@ -1,7 +1,6 @@
-import os
-from connectors.generic import *
-import lxml.etree as et
+from connectors.generic import XMLConnector
 from sqlwrapper import *
+from connectors.generic import GenericBook
 
 Base = SqlWrapper.getBaseClass()
 
@@ -28,12 +27,13 @@ class DobryEbook(XMLConnector):
         dic['external_id'] = int(dic['url'].split("-")[-1].split(".")[0])
 
 class DobryEbookBook(GenericBook, Base):
-    id = Column(Integer, primary_key=True)
-    title = Column(Unicode(256))		#101
-    subtitle = Column(Unicode(128))		#70
+    id = Column(Integer, primary_key = True)
+    title = Column(Unicode(256))            #101
+    subtitle = Column(Unicode(128))         #70
 
-    url = Column(Unicode(256))			#133
-    page_count = Column(Integer)		#Integer
-    cover = Column(Unicode(64))			#60
-    small_cover = Column(Unicode(64))		#60
-    file_size = Column(Unicode(16))		#8
+    url = Column(Unicode(256))              #133
+    page_count = Column(Integer)            #Integer
+    cover = Column(Unicode(64))             #60
+    small_cover = Column(Unicode(64))       #60
+    file_size = Column(Unicode(16))         #8
+

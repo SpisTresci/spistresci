@@ -1,8 +1,6 @@
-from connectors.generic import *
-import lxml.etree as et
-import urllib2
-import os
+from connectors.generic import XMLConnector
 from sqlwrapper import *
+from connectors.generic import GenericBook
 
 class Czytio(XMLConnector):
 
@@ -22,10 +20,10 @@ class Czytio(XMLConnector):
 Base = SqlWrapper.getBaseClass()
 
 class CzytioBook(GenericBook, Base):
-    id = Column(Integer, primary_key=True)
+    id = Column(Integer, primary_key = True)
     #title
     url = Column(Unicode(120))          #109
     #authors
     cover = Column(Unicode(128))        #118
     price = Column(Integer)             #GROSZE!!!
-    size = Column(Integer)             #GROSZE!!!
+    size = Column(Integer)              #GROSZE!!!

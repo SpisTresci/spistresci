@@ -1,7 +1,6 @@
-import os
-from connectors.generic import *
-import lxml.etree as et
+from connectors.generic import XMLConnector
 from sqlwrapper import *
+from connectors.generic import GenericBook
 
 Base = SqlWrapper.getBaseClass()
 
@@ -24,7 +23,7 @@ class WolneEbooki(XMLConnector):
         dic['external_id'] = int(dic['url'].split('/')[-1])
 
 class WolneEbookiBook(GenericBook, Base):
-    id = Column(Integer, primary_key=True)
+    id = Column(Integer, primary_key = True)
     #authors
     title = Column(Unicode(256))         #42
     price = Column(Integer)              #GROSZE!!!

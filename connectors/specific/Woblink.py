@@ -1,6 +1,6 @@
-from connectors.generic import *
-from connectors.common import *
+from connectors.common import Ceneo
 from sqlwrapper import *
+from connectors.generic import GenericBook
 
 Base = SqlWrapper.getBaseClass()
 class Woblink(Ceneo):
@@ -21,12 +21,12 @@ class Woblink(Ceneo):
     }
 
 class WoblinkBook(GenericBook, Base):
-    id = Column(Integer, primary_key=True)
-    category = Column(Unicode(64))	#33
+    id = Column(Integer, primary_key = True)
+    category = Column(Unicode(64))      #33
     publisher = Column(Unicode(64))     #32
-    title = Column(Unicode(256))	#212
-    url = Column(Unicode(64))		#59
-    cover = Column(Unicode(256))	#250
+    title = Column(Unicode(256))        #212
+    url = Column(Unicode(64))           #59
+    cover = Column(Unicode(256))        #250
     price = Column(Integer)
     availability = Column(Boolean)
 

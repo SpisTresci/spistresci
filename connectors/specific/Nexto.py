@@ -1,8 +1,7 @@
 from connectors.generic import XMLConnector
-from connectors.generic import *
-from sqlwrapper import *
-import lxml.etree as et
 import os
+from sqlwrapper import *
+from connectors.generic import GenericBook
 import urllib, urllib2
 
 class Nexto(XMLConnector):
@@ -31,10 +30,6 @@ class Nexto(XMLConnector):
         "./issues/issue/format{'./type':('format', ''), './file-protection/type':('protection',''), './file-protection/properties':('properties','')}":('formats', ''),
        }
 
-
-    def __init__(self, name=None):
-        XMLConnector.__init__(self, name=name)
-
     def downloadFile(self):
         values = {'api_id': self.config['api_id'],
              'pass': self.config['pass'],
@@ -48,9 +43,10 @@ class Nexto(XMLConnector):
         filename = os.path.join(self.backup_dir, self.filename)
         open(filename, "wb").write(content)
 
-
 Base = SqlWrapper.getBaseClass()
 
 class NextoBook(GenericBook, Base):
-    id = Column(Integer, primary_key=True)
+    id = Column(Integer, primary_key = True)
+
+#TODO: define whole tables for Nexto
 

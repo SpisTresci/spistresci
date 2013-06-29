@@ -1,7 +1,6 @@
-import os
-from connectors.generic import *
-import lxml.etree as et
+from connectors.generic import XMLConnector
 from sqlwrapper import *
+from connectors.generic import GenericBook
 
 Base = SqlWrapper.getBaseClass()
 
@@ -25,13 +24,12 @@ class Koobe(XMLConnector):
     }
 
 class KoobeBook(GenericBook, Base):
-    id = Column(Integer, primary_key=True)
-    title = Column(Unicode(256))		#202
-    category = Column(Unicode(32))		#17
+    id = Column(Integer, primary_key = True)
+    title = Column(Unicode(256))        #202
+    category = Column(Unicode(32))      #17
     publisher = Column(Unicode(64))     #57
-    url = Column(Unicode(512))			#271
+    url = Column(Unicode(512))          #271
     #description
-    price = Column(Integer)		        #grosze
-    cover = Column(Unicode(256))	    #159
+    price = Column(Integer)             #grosze
+    cover = Column(Unicode(256))        #159
     protection = Column(Unicode(16))    #9
-

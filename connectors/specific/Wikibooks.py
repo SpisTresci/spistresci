@@ -1,7 +1,7 @@
-from connectors.generic import *
-from connectors.common import *
-from sqlwrapper import *
+from connectors.generic import XMLConnector
 import lxml.etree as et
+from sqlwrapper import *
+from connectors.generic import GenericBook
 
 Base = SqlWrapper.getBaseClass()
 class Wikibooks(XMLConnector):
@@ -17,8 +17,8 @@ class Wikibooks(XMLConnector):
         return root.xpath("//div[@lang='pl' and @dir='ltr']/div[@id='mw-pages']/div[@lang='pl' and @dir='ltr' and @class='mw-content-ltr']/ul")
 
     #Wikibooks does not allow download wikipages without defined user-agent
-    def downloadFile(self, url=None, filename=None, headers=None):
-        super(Wikibooks, self).downloadFile(url, headers={'User-Agent':'Mozilla/5.0'})
+    def downloadFile(self, url = None, filename = None, headers = None):
+        super(Wikibooks, self).downloadFile(url, headers = {'User-Agent':'Mozilla/5.0'})
 
     def parse(self):
         self.before_parse()
@@ -58,10 +58,10 @@ class Wikibooks(XMLConnector):
         dic['formats'] = "PDF, EPUB, ODF, ONLINE"
 
 class WikibooksBook(GenericBook, Base):
-    id = Column(Integer, primary_key=True)
+    id = Column(Integer, primary_key = True)
     external_id = None
     publisher = Column(Unicode(16))
-    title = Column(Unicode(64), unique=True)
+    title = Column(Unicode(64), unique = True)
     url = Column(Unicode(64))
     cover = Column(Unicode(256))
     price = Column(Integer)

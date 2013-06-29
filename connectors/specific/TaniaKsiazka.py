@@ -1,9 +1,6 @@
 from connectors.generic import XMLConnector
-from connectors.generic import *
 from sqlwrapper import *
-import lxml.etree as et
-import os
-import urllib, urllib2
+from connectors.generic import GenericBook
 
 class TaniaKsiazka(XMLConnector):
 
@@ -28,7 +25,7 @@ class TaniaKsiazka(XMLConnector):
 Base = SqlWrapper.getBaseClass()
 
 class TaniaKsiazkaBook(GenericBook, Base):
-    id = Column(Integer, primary_key=True)
+    id = Column(Integer, primary_key = True)
     category = Column(Unicode(32))          #22
     title = Column(Unicode(256))            #200
     url = Column(Unicode(512))              #284

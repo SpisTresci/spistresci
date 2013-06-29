@@ -1,6 +1,6 @@
-from connectors.generic import *
-import lxml.etree as et
+from connectors.generic import XMLConnector
 from sqlwrapper import *
+from connectors.generic import GenericBook
 
 class Bookoteka(XMLConnector):
     #dict of xml_tag -> db_column_name translations
@@ -51,14 +51,14 @@ class Bookoteka(XMLConnector):
     def after_parse(self):
         for dic in self.uni_dict.values():
             super(Bookoteka, self).validate(dic)
-            self.measureLenghtDict(dic)
+            #self.measureLenghtDict(dic)
             super(Bookoteka, self).add_record(dic)
 
 
 Base = SqlWrapper.getBaseClass()
 
 class BookotekaBook(GenericBook, Base):
-    id = Column(Integer, primary_key=True)
+    id = Column(Integer, primary_key = True)
 
     title = Column(Unicode(265))        #131
     url = Column(Unicode(128))          #107

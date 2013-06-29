@@ -1,6 +1,6 @@
 from connectors.common import Afiliant
-from connectors.generic import GenericBook
 from sqlwrapper import *
+from connectors.generic import GenericBook
 
 Base = SqlWrapper.getBaseClass()
 
@@ -8,7 +8,7 @@ class ZielonaSowa(Afiliant):
     pass
 
 class ZielonaSowaBook(GenericBook, Base):
-    id = Column(Integer, primary_key=True)
+    id = Column(Integer, primary_key = True)
 
     category = Column(Unicode(90))      #82
     #title(255)                         #82

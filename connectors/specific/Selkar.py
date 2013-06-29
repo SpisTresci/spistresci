@@ -1,15 +1,16 @@
-from connectors.generic import *
+from connectors.generic import XMLConnector
 from connectors.Tools import notFilterableConnector
 import lxml.etree as et
 import os
 import sys
 from sqlwrapper import *
+from connectors.generic import GenericBook
 
 @notFilterableConnector
 class Selkar(XMLConnector):
 
-    def __init__(self, name=None, limit_books=0):
-        XMLConnector.__init__(self, name=name, limit_books=limit_books)
+    def __init__(self, name = None, limit_books = 0):
+        XMLConnector.__init__(self, name = name, limit_books = limit_books)
         self.api_key = self.config['api_key']
         self.method = self.config.get('method', 'getProduct')
         self.aff = self.config['aff']
@@ -25,12 +26,13 @@ class Selkar(XMLConnector):
         total = int(attrs.get('totalPages', 0))
         return page >= total
 
-    def _make_url(self, params, category=None):
+    def _make_url(self, params, category = None):
         ret_url = '%(url)s?apiKey=%(api_key)s&method=%(method)s&aff=%(aff)s&limit=%(limit)d&page=%(page)d' % params
         if category:
             ret_url = ret_url + '&cid=%s' % category
         return ret_url
 
+    #TODO: redefine xml dict, adjust to new makeDict
     xml_tag_dict = {
 
         'id':('external_id', ''),
@@ -76,7 +78,7 @@ class Selkar(XMLConnector):
         #for key in self.max_len_entry.keys():
         #    print key+": "+ unicode(self.max_len_entry[key])
 
-    def fetchData(self, unpack=True):
+    def fetchData(self, unpack = True):
         params = {'url':self.url,
             'api_key':self.api_key,
             'method':self.method,

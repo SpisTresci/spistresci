@@ -1,6 +1,6 @@
-from connectors.generic import *
-import lxml.etree as et
+from connectors.generic import XMLConnector
 from sqlwrapper import *
+from connectors.generic import GenericBook
 
 class Zinamon(XMLConnector):
 
@@ -14,14 +14,14 @@ class Zinamon(XMLConnector):
         './cena':('price', ''),
         './id':('external_id', ''),
         './isbn':('isbns', ''),
-        './kategorie':('category',''),
-        './zabezpieczenia':('protection',''),
+        './kategorie':('category', ''),
+        './zabezpieczenia':('protection', ''),
     }
 
 Base = SqlWrapper.getBaseClass()
 
 class ZinamonBook(GenericBook, Base):
-    id = Column(Integer, primary_key=True)
+    id = Column(Integer, primary_key = True)
 
     title = Column(Unicode(265))        #207
     url = Column(Unicode(512))          #338

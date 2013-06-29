@@ -1,6 +1,6 @@
-from connectors.generic import *
-import lxml.etree as et
+from connectors.generic import XMLConnector
 from sqlwrapper import *
+from connectors.generic import GenericBook
 
 Base = SqlWrapper.getBaseClass()
 
@@ -14,7 +14,7 @@ class Merlin(XMLConnector):
         "./identyfikator":('isbns', ''),
         "./url":('url', ''),
         "./url_images":('cover', ''),
-        "./url_koszyk":('add_to_cart_url',''),
+        "./url_koszyk":('add_to_cart_url', ''),
         "./utm_term":('utm_term', ''), #?
         "./tytul":('title', ''),
         "./status":('status', ''),  #?
@@ -41,8 +41,8 @@ class Merlin(XMLConnector):
             formats = ['PDF', 'EPUB', 'MOBI', 'MP3']
 
             for f in formats:
-                if i.endswith('_'+f):
-                    i=i.replace('_'+f, '')
+                if i.endswith('_' + f):
+                    i = i.replace('_' + f, '')
             dic["isbns"] = i
 
         super(Merlin, self).validateISBNs(dic, id, title)
@@ -55,12 +55,12 @@ class Merlin(XMLConnector):
                        ]
 
             for f in formats:
-                if (' ('+f+')') in t:
-                    t=t.replace(' ('+f+')', '')
+                if (' (' + f + ')') in t:
+                    t = t.replace(' (' + f + ')', '')
             dic['title'] = t
 
 class MerlinBook(GenericBook, Base):
-    id = Column(Integer, primary_key=True)
+    id = Column(Integer, primary_key = True)
     section = Column(Unicode(16))           #9
     section_id = Column(Integer)
     #external_id

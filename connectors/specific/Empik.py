@@ -1,7 +1,6 @@
-import os
-from connectors.generic import *
-import lxml.etree as et
+from connectors.generic import XMLConnector
 from sqlwrapper import *
+from connectors.generic import GenericBook
 
 class Empik(XMLConnector):
 
@@ -21,9 +20,10 @@ class Empik(XMLConnector):
 Base = SqlWrapper.getBaseClass()
 
 class EmpikBook(GenericBook, Base):
-    id = Column(Integer, primary_key=True)
+    id = Column(Integer, primary_key = True)
     ean = Column(Unicode(13))           #13
     price = Column(Integer)             #GROSZE!!!
     url = Column(Unicode(65))           #59
     cover = Column(Unicode(280))        #269
     availability = Column(Unicode(10))  #0
+

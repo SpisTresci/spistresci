@@ -1,8 +1,5 @@
-from connectors.generic import *
 from connectors.common import HelionBase, HelionBaseBook
-import lxml.etree as et
-from sqlwrapper import *
-
+from sqlwrapper import SqlWrapper
 
 class eBookpoint(HelionBase):
     pass
@@ -10,3 +7,4 @@ class eBookpoint(HelionBase):
 Base = SqlWrapper.getBaseClass()
 class eBookpointBook(HelionBaseBook, Base):
     pass
+

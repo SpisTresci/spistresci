@@ -1,11 +1,10 @@
-from connectors.generic import *
+from connectors.generic import XMLConnector
 from sqlwrapper import *
-import os
-
+from connectors.generic import GenericBook
 
 class Virtualo(XMLConnector):
 
-    depth=0
+    depth = 0
     #dict of xml_tag -> db_column_name translations
     xml_tag_dict = {
         './coverId' : ('external_id', ''),
@@ -26,7 +25,7 @@ class Virtualo(XMLConnector):
         super(Virtualo, self).validate(dic)
         self.validateRating(dic)
 
-    def validateRating(self, dic, rating_tag='rating'):
+    def validateRating(self, dic, rating_tag = 'rating'):
         rating = dic.get(rating_tag, '0')
         rating_normalized = 0
         try:
@@ -37,11 +36,10 @@ class Virtualo(XMLConnector):
         finally:
             dic[rating_tag] = rating_normalized
 
-
 Base = SqlWrapper.getBaseClass()
 
 class VirtualoBook(GenericBook, Base):
-    id = Column(Integer, primary_key=True)
+    id = Column(Integer, primary_key = True)
     title = Column(Unicode(256))        #174
     protection = Column(Unicode(8))       #3
     price = Column(Integer)             #*0,01PLN

@@ -1,5 +1,6 @@
-from connectors.generic import *
+from connectors.generic import XMLConnector
 from sqlwrapper import *
+from connectors.generic import GenericBook
 
 Base = SqlWrapper.getBaseClass()
 
@@ -24,30 +25,28 @@ class Pokatne(XMLConnector):
     }
 
     def validate(self, dic):
-        id = dic.get('external_id')
-        title = dic.get('title')
         self.validateRating(dic)
         super(Pokatne, self).validate(dic)
 
     def validateRating(self, dic):
         rating = dic.get('rating')
-	if rating:
-            dic['rating'] = int(round(float(dic['rating']), 1)*10)
+        if rating:
+            dic['rating'] = int(round(float(dic['rating']), 1) * 10)
 
 class PokatneBook(GenericBook, Base):
-    id = Column(Integer, primary_key=True)
+    id = Column(Integer, primary_key = True)
     #external_id
-    title = Column(Unicode(128))		#63
+    title = Column(Unicode(128))        #63
     #authors
-    url = Column(Unicode(64))			#49
-    cover = Column(Unicode(64))			#48
+    url = Column(Unicode(64))           #49
+    cover = Column(Unicode(64))         #48
     #formats
-    date = Column(Unicode(10))			#10
+    date = Column(Unicode(10))          #10
     comments = Column(Integer)
     views = Column(Integer)
     rating = Column(Integer)
     votes = Column(Integer)
     alert = Column(Boolean)
-    tags = Column(Unicode(64))			#59
+    tags = Column(Unicode(64))          #59
     new = Column(Boolean)
 

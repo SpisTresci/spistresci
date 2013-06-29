@@ -1,6 +1,7 @@
 from sqlwrapper import *
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.ext.associationproxy import association_proxy
 from sqlalchemy import event, DDL
 from sqlalchemy.orm import joinedload
 import urlparse

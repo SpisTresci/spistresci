@@ -1,6 +1,6 @@
 from connectors.common import Afiliant
-from connectors.generic import GenericBook
 from sqlwrapper import *
+from connectors.generic import GenericBook
 
 Base = SqlWrapper.getBaseClass()
 
@@ -8,7 +8,7 @@ class Audioteka(Afiliant):
     pass
 
 class AudiotekaBook(GenericBook, Base):
-    id = Column(Integer, primary_key=True)
+    id = Column(Integer, primary_key = True)
 
     category = Column(Unicode(25))      #21
     publisher = Column(Unicode(70))     #57
@@ -19,4 +19,4 @@ class AudiotekaBook(GenericBook, Base):
     cover = Column(Unicode(150))        #145
     length = Column(Unicode(20))        #16
     #lectors
-    external_id = Column(Unicode(90), unique=True) #86
+    external_id = Column(Unicode(90), unique = True) #86    #TODO: why this id is so big?

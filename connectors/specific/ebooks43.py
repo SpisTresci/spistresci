@@ -1,7 +1,7 @@
-import os
-from connectors.generic import *
+from connectors.generic import XMLConnector
 import lxml.html as et
 from sqlwrapper import *
+from connectors.generic import GenericBook
 
 Base = SqlWrapper.getBaseClass()
 
@@ -35,10 +35,11 @@ class ebooks43(XMLConnector):
             dic['description'] = dic['description'].strip()
 
 class ebooks43Book(GenericBook, Base):
-    id = Column(Integer, primary_key=True)
+    id = Column(Integer, primary_key = True)
     title = Column(Unicode(128))            #70
     url = Column(Unicode(128))              #108
     #price
     #price_normal
     #authors
     cover = Column(Unicode(64))             #50
+
