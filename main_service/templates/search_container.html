@@ -11,18 +11,7 @@
               </div>
               <div class="search_input">
                 <div class="search_input2">
-                  <input id="id_q" name="q" type="text" autocomplete="off">
-                  <ul class="search_input_hover" id="hover">
-                    <li>
-                      <a href="">Magda Gessler<span class="sih_who">autor</span></a>
-                    </li>
-                    <li>
-                      <a href="">Magda Gessler<span class="sih_who">autor</span></a>
-                    </li>
-                    <li id="last">
-                      <a href="">Magda Gessler<span class="sih_who">autor</span></a>
-                    </li>
-                  </ul>
+                    {% block search_input %}  {% include "search_input.html" %} {% endblock search_input %}
                 </div>
               </div>
               <input type="submit" value="SZUKAJ">
