@@ -29,7 +29,6 @@ TEMPLATE_DIRS = (
     os.path.join(SITE_ROOT,'templates'),
 )
 
-
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/var/www/example.com/media/"
 #MEDIA_ROOT = '/home/frontend/frontend/imgs'

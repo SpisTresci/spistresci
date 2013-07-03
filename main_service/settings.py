@@ -12,10 +12,10 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',  # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'subscriptions',  # Or path to database file if using sqlite3.
+        'NAME': 'hs',  # Or path to database file if using sqlite3.
         # The following settings are not used with sqlite3:
         'USER': 'root',
-        'PASSWORD': 'Z0oBvgF1R3',
+        'PASSWORD': '',
         'HOST': '',  # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
         'PORT': '',  # Set to empty string for default.
     }
@@ -125,7 +125,11 @@ INSTALLED_APPS = (
     # 'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
+
+    'haystack',
+
     'application',
+    'main_service',
     'logos_stripe',
 )
 
@@ -156,4 +160,14 @@ LOGGING = {
             'propagate': True,
         },
     }
+}
+
+HAYSTACK_LIMIT_TO_REGISTERED_MODELS = False
+HAYSTACK_CONNECTIONS = {
+    'default': {
+        'ENGINE': 'haystack.backends.solr_backend.SolrEngine',
+        'URL': 'http://127.0.0.1:8983/solr/dbmysql'
+        # ...or for multicore...
+        # 'URL': 'http://127.0.0.1:8983/solr/mysite',
+    },
 }

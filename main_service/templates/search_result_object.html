@@ -1,0 +1,70 @@
+{% load staticfiles %}
+<!--{ % with product=product % }-->
+{% with product=result %}
+
+          <div class="search_list_book">
+            <img src="{{ product.image_url }}" alt="" />
+            <div class="s_title">
+              <a href="">{{ product.title }}</a>
+            </div>
+            <div class="s_author">
+              <a href="">{{ product.author }}</a>
+            </div>
+            <div class="s_text">
+              Formaty: Epub, PDF<br />
+              Księgarnie: Woblink, Virtualo.
+            </div>
+             <div class="slb_price">
+              cena od:
+              <div class="slb_price1">
+                {{ product.price_lowest }} zł
+              </div>
+              <a href="">
+                <div class="slb_price_btn">
+                  TROP <img src="{% static "img/hand.png" %}" alt="" />
+                </div>
+              </a>
+              <a href="">
+                <div class="slb_price_btn">
+                  SZCZEGÓŁY
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="search_drop2" id="list_book_2_1">
+          <!--     width = liczbawierszy w dropdownie * 136 czyli ich wysokość +45 czyli szerokość szarego paska       -->
+            <div class="search_drop" id="list_book1" style="margin-top:-317px;">
+              <div class="sd_top">
+                <div class="sd_top_left">
+                  WYŚWIETL PO:
+                </div>
+                <div class="sd_top_right">
+                  <div class="sort_for sort_for_long">WSZYSTKIE</div>
+                  <div class="sort_for">15</div>
+                  <div class="sort_for">10</div>
+                  <div class="sort_for">5</div>
+                </div>
+              </div>
+
+              {% for record in product.record_list %}
+              <div class="sd_format">
+                <img src="{{ record.bookstore_logo }}" alt="" />
+                <div class="sd_format_text">
+                  Formaty: Epub, PDF, MOBI
+                </div>
+                <div class="sd_price">
+                  {{ record.price }} <b>zł</b>
+                  <a href="">
+                    KUP
+                  </a>
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+          <div class="search_drop_hide">
+            <!--  druga cyfra w onclick="list_book('1','2'); to liczba wierszy w dropdownie     -->
+            <div id="hide1" class="search_drop_hide_btn" onclick="list_book('1','{{ product_list|length }}');">
+            </div>
+          </div>
+{% endwith %}
