@@ -148,7 +148,7 @@ a{
 }
 .search_box input[type="text"]{
   border:none;
-  width:467px;
+  width:447px;
   height:66px;
   padding-left:20px;
   font-size:18px;
@@ -595,7 +595,7 @@ a{
   font-size:24px !important;
 }
 .s_index_top_bg .search_box input[type="text"]{
-  width:100%;
+  width: calc(100% - 19px);
   height:32px;
 }
 .s_index_top_bg .search_input{
