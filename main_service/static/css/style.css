@@ -1204,6 +1204,12 @@ a{
   color:#225b98;
 }
 
+.page_active_number{
+  color:#464646  !important;
+  font-size:18px !important;
+}
+
+
 .page_goto{
   float:left;
   padding-bottom:4px;

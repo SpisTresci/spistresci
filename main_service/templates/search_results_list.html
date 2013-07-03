@@ -9,3 +9,59 @@
 
           </div>
         </div>
+
+        {% if page.has_previous or page.has_next %}
+        <div class="page">
+            {% if page.has_previous %}
+                <a href="?q={{ query }}&amp;page={{ page.previous_page_number }}">
+                    <div class="page_img page_img2"></div>
+                </a>
+            {% endif %}
+          <div class="page_number">
+
+            {% if page.number > 3%}
+                <a href="?q={{ query }}&amp;page=1">1</a>
+            {% endif %}
+            {% if page.number > 4%}
+                ...
+            {% endif %}
+
+            {% if page.number == page.paginator.count|add:"-1" %}
+                <a href="?q={{ query }}&amp;page={{ page.number|add:"-3" }}">{{ page.number|add:"-3" }}</a>
+            {% endif %}
+
+            {% if page.number == page.paginator.count %}
+                <a href="?q={{ query }}&amp;page={{ page.number|add:"-4" }}">{{ page.number|add:"-4" }}</a>
+                <a href="?q={{ query }}&amp;page={{ page.number|add:"-3" }}">{{ page.number|add:"-3" }}</a>
+            {% endif %}
+
+            {% for page_no in page.paginator.page_range %}
+                {% if page_no >= page.number|add:"-2" and page_no <= page.number|add:"2" %}
+                    {% if page_no == page.number %}
+                        <a class="page_active_number">{{ page_no }}</a>
+                    {% else %}
+                        <a href="?q={{ query }}&amp;page={{ page_no }}">{{ page_no }}</a>
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
+
+            {% if page.number == 1 %}
+                <a href="?q={{ query }}&amp;page=4">4</a>
+                <a href="?q={{ query }}&amp;page=5">5</a>
+            {% endif %}
+
+            {% if page.number == 2 %}
+                <a href="?q={{ query }}&amp;page=5">5</a>
+            {% endif %}
+
+          </div>
+            {% if page.has_next %}
+                <a href="?q={{ query }}&amp;page={{ page.next_page_number }}">
+                    <div class="page_img page_img3"></div>
+                </a>
+            {% endif %}
+          <div class="page_goto">
+            <label>IDŹ DO</label> <form><input type="text"></form>
+          </div>
+        </div>
+        {% endif %}
