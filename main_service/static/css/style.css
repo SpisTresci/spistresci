@@ -168,7 +168,7 @@ a{
   font-size:22px;
   margin-top:-1000px;
 }
-.search_input2:hover .search_input_hover{
+.search_input2 .search_input_hover{
   margin-top:0px;
 }
 /*.search_input_hover{

@@ -1,14 +1,8 @@
                   <input id="id_q" name="q" type="text" autocomplete="off">
                   <ul class="search_input_hover" id="hover">
-                    {% for result in page.object_list %}
-                        {% if not forloop.last %}
-                            <li>
-                              <a href="">Tomasz Gessler<span class="sih_who">autor</span></a>
+                    {% for autocomplate_record in page.autocomplate_list %}
+                            <li {% if forloop.last %} id="last" {% endif %} >
+                              <a href="">{{ autocomplate_record.title }}<span class="sih_who">{{ autocomplate_record.author }}</span></a>
                             </li>
-                        {% else %}
-                            <li id="last">
-                              <a href="">Proces<span class="sih_who">Franz Kawka</span></a>
-                            </li>
-                        {% endif %}
                     {% endfor %}
                   </ul>
