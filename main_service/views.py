@@ -33,6 +33,11 @@ class STSearchQuerySet(SearchQuerySet):
         to_cache = []
 
         for result in results:
+
+            formats = [attr.replace("format_", "").upper() for attr, value  in result.__dict__.iteritems() if str(attr).startswith("format_") and value]
+            result.formats = formats
+            result._additional_fields.append("formats")
+
             to_cache.append(dict((i, getattr(result, i, None)) for i in result._additional_fields))
 
         return to_cache

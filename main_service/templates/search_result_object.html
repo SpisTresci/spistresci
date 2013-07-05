@@ -8,10 +8,10 @@
               <a href="">{{ product.title }}</a>
             </div>
             <div class="s_author">
-              <a href="">{{ product.author }}</a>
+              {% for author in product.name %}{% if forloop.first %}<a href="">{{ author }}</a>{% else %}, <a href="">{{ author }}</a>{% endif %}{% endfor %}
             </div>
             <div class="s_text">
-              Formaty: Epub, PDF<br />
+              Formaty: {% for format in product.formats %}{% if forloop.first %}{{ format }}{% else %}, {{ format }}{% endif %}{% endfor %}<br />
               Księgarnie: Woblink, Virtualo.
             </div>
              <div class="slb_price">

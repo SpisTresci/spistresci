@@ -162,11 +162,12 @@ LOGGING = {
     }
 }
 
+HAYSTACK_SEARCH_RESULTS_PER_PAGE = 10
 HAYSTACK_LIMIT_TO_REGISTERED_MODELS = False
 HAYSTACK_CONNECTIONS = {
     'default': {
         'ENGINE': 'haystack.backends.solr_backend.SolrEngine',
-        'URL': 'http://127.0.0.1:8983/solr/dbmysql'
+        'URL': 'http://127.0.0.1:8983/solr/db-mysql'
         # ...or for multicore...
         # 'URL': 'http://127.0.0.1:8983/solr/mysite',
     },
