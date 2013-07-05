@@ -1,4 +1,5 @@
 {% load staticfiles %}
+{% load mathtags %}
 <!--{ % with product=product % }-->
 {% with product=result %}
 
@@ -12,7 +13,7 @@
             </div>
             <div class="s_text">
               Formaty: {% for format in product.formats %}{% if forloop.first %}{{ format }}{% else %}, {{ format }}{% endif %}{% endfor %}<br />
-              Księgarnie: Woblink, Virtualo.
+              Księgarnie: {% for bookstore in product.bookstore %}{% if forloop.first %}{{ bookstore }}{% else %}, {{ bookstore }}{% endif %}{% endfor %}.
             </div>
              <div class="slb_price">
               cena od:
@@ -31,9 +32,9 @@
               </a>
             </div>
           </div>
-          <div class="search_drop2" id="list_book_2_1">
+          <div class="search_drop" id="list_book_2_{{ forloop.counter }}">
           <!--     width = liczbawierszy w dropdownie * 136 czyli ich wysokość +45 czyli szerokość szarego paska       -->
-            <div class="search_drop" id="list_book1" style="margin-top:-317px;">
+          <div class="search_drop" id="list_book{{ forloop.counter }}" style="margin-top:-{{ product.price|length|mult:"136"|add:"45" }}px;">
               <div class="sd_top">
                 <div class="sd_top_left">
                   WYŚWIETL PO:
@@ -46,11 +47,11 @@
                 </div>
               </div>
 
-              {% for record in product.record_list %}
+              {% for record in product.records %}
               <div class="sd_format">
-                <img src="{{ record.bookstore_logo }}" alt="" />
+                <img src="{% static "logo/"|add:record.bookstore|lower|add:".png" %}" alt="{{record.bookstore}}" />
                 <div class="sd_format_text">
-                  Formaty: Epub, PDF, MOBI
+                  Formaty: {% for format in record.formats %}{% if forloop.first %}{{ format }}{% else %}, {{ format }}{% endif %}{% endfor %}
                 </div>
                 <div class="sd_price">
                   {{ record.price }} <b>zł</b>
@@ -64,7 +65,7 @@
           </div>
           <div class="search_drop_hide">
             <!--  druga cyfra w onclick="list_book('1','2'); to liczba wierszy w dropdownie     -->
-            <div id="hide1" class="search_drop_hide_btn" onclick="list_book('1','{{ product_list|length }}');">
+            <div id="hide{{ forloop.counter }}" class="search_drop_hide_btn" onclick="list_book('{{ forloop.counter }}','{{ product.price|length }}');">
             </div>
           </div>
 {% endwith %}

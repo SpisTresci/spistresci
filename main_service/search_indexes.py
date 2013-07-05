@@ -18,6 +18,13 @@ class MasterBookIndex(indexes.SearchIndex, indexes.Indexable):
     format_epub =  indexes.MultiValueField()
     format_pdf =  indexes.MultiValueField()
 
+    bookstore =  indexes.MultiValueField()
+    price =  indexes.MultiValueField()
+    mini_format_mobi =  indexes.MultiValueField()
+    mini_format_epub =  indexes.MultiValueField()
+    mini_format_pdf =  indexes.MultiValueField()
+
+
     def get_model(self):
         return MasterBookSolrWrapper
 

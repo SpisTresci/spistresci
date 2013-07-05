@@ -126,10 +126,9 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 
-    'haystack',
-
-    'application',
     'main_service',
+    'haystack',
+    'application',
     'logos_stripe',
 )
 

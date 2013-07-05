@@ -38,6 +38,55 @@ class STSearchQuerySet(SearchQuerySet):
             result.formats = formats
             result._additional_fields.append("formats")
 
+            price_lowest = int(result.price[0])
+            price_corrected = []
+            for price in result.price:
+                if int(price) < price_lowest:
+                    price_lowest = int(price)
+                price_corrected.append(str("%.2f" % (int(price)/100.0)))
+
+            result.price = price_corrected
+            price_lowest = str("%.2f" % (price_lowest/100.0))
+
+            result.price_lowest = price_lowest
+            result._additional_fields.append("price_lowest")
+
+
+            # Very dirty temporary(!!!) hack which allows testing with NULL values in database
+
+            result.price = [] if result.price == None else result.price
+            result.bookstore = [] if result.bookstore == None else result.bookstore
+            result.mini_format_mobi = [] if result.mini_format_mobi == None else result.mini_format_mobi
+            result.mini_format_pdf = [] if result.mini_format_pdf == None else result.mini_format_pdf
+            result.mini_format_epub = [] if result.mini_format_epub == None else result.mini_format_epub
+
+            m = max(len(result.price), len(result.bookstore), len(result.mini_format_mobi), len(result.mini_format_pdf), len(result.mini_format_epub))
+
+            for l in [result.price, result.bookstore, result.mini_format_mobi, result.mini_format_pdf, result.mini_format_epub]:
+
+                while len(l) < m:
+                    l.append("")
+
+            #end of this very dirty shameless hack
+
+
+            records = []
+            for price, bookstore, format_mobi, format_pdf, format_epub in zip (result.price, result.bookstore, result.mini_format_mobi, result.mini_format_pdf, result.mini_format_epub):
+                record={}
+                record["price"]=price
+                record["bookstore"]=bookstore
+                record["format_mobi"]=format_mobi
+                record["format_pdf"]=format_pdf
+                record["format_epub"]=format_epub
+
+                record["formats"] = [attr.replace("format_", "").upper() for attr, value  in record.iteritems() if str(attr).startswith("format_") and value]
+
+                records.append(record)
+
+            result.records = records
+            result._additional_fields.append("records")
+
+
             to_cache.append(dict((i, getattr(result, i, None)) for i in result._additional_fields))
 
         return to_cache
