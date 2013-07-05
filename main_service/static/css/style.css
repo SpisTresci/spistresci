@@ -1030,10 +1030,10 @@ a{
 
 }
 .sd_top{
-  padding-top:15px;
+  padding-top:10px;
   background:url(../img/2gray_long.png) repeat-x;
   width:100%;
-  height:30px;
+  height:25px;
   float:left;
   font-size:13px;
   font-weight:bold;
@@ -1140,6 +1140,16 @@ a{
   margin-top:10px;
   cursor:pointer;
 }
+
+.search_drop_upper_hide_btn{
+  background:url(../img/arrow_up_red.png) no-repeat;
+  width:39px;
+  height:24px;
+  margin-left:47.7%;
+  margin-top:3px;
+  cursor:pointer;
+}
+
 .page{
   float:right;
   font-size:11px;

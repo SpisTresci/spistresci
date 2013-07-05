@@ -34,7 +34,7 @@
           </div>
           <div class="search_drop" id="list_book_2_{{ forloop.counter }}">
           <!--     width = liczbawierszy w dropdownie * 136 czyli ich wysokość +45 czyli szerokość szarego paska       -->
-          <div class="search_drop" id="list_book{{ forloop.counter }}" style="margin-top:-{{ product.price|length|mult:"136"|add:"45" }}px;">
+          <div class="search_drop" id="list_book{{ forloop.counter }}" style="margin-top:-{{ product.price|length|mult:"136"|add:"35" }}px;">
               <div class="sd_top">
                 <div class="sd_top_left">
                   WYŚWIETL PO:
@@ -44,6 +44,8 @@
                   <div class="sort_for">15</div>
                   <div class="sort_for">10</div>
                   <div class="sort_for">5</div>
+                </div>
+                <div id="upper_hide{{ forloop.counter }}" class="search_drop_upper_hide_btn" onclick="list_book('{{ forloop.counter }}','{{ product.price|length }}');">
                 </div>
               </div>
 
