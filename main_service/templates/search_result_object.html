@@ -51,7 +51,7 @@
 
               {% for record in product.records %}
               <div class="sd_format">
-                <img src="{% static "logo/"|add:record.bookstore|lower|add:".png" %}" alt="{{record.bookstore}}" />
+                <img src="{% static "img/logo/"|add:record.bookstore|add:"_150x75.png"|lower %}" alt="{{record.bookstore}}" />
                 <div class="sd_format_text">
                   Formaty: {% for format in record.formats %}{% if forloop.first %}{{ format }}{% else %}, {{ format }}{% endif %}{% endfor %}
                 </div>
