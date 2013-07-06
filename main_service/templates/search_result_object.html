@@ -4,7 +4,7 @@
 {% with product=result %}
 
           <div class="search_list_book">
-            <img src="{{ product.image_url }}" alt="" />
+            <img src="{{ product.cover }}" alt="" style="width:100px" onerror="this.onerror=null;this.src='{% static "img/default_cover.png" %}'" />
             <div class="s_title">
               <a href="">{{ product.title }}</a>
             </div>
@@ -25,11 +25,9 @@
                   TROP <img src="{% static "img/hand.png" %}" alt="" />
                 </div>
               </a>
-              <a href="">
-                <div class="slb_price_btn">
-                  SZCZEGÓŁY
-                </div>
-              </a>
+              <div class="slb_price_btn" onclick="list_book('{{ forloop.counter }}','{{ product.price|length }}');">
+                SZCZEGÓŁY
+              </div>
             </div>
           </div>
           <div class="search_drop" id="list_book_2_{{ forloop.counter }}">
@@ -51,13 +49,13 @@
 
               {% for record in product.records %}
               <div class="sd_format">
-                <img src="{% static "img/logo/"|add:record.bookstore|add:"_150x75.png"|lower %}" alt="{{record.bookstore}}" />
+                <img src="{% static "img/logo/"|add:record.bookstore|add:"_150x75.png"|lower %}" alt="{{record.bookstore}}" onerror="this.onerror=null;this.src='{% static "img/logo/loremipsum_150x75.png" %}'" />
                 <div class="sd_format_text">
                   Formaty: {% for format in record.formats %}{% if forloop.first %}{{ format }}{% else %}, {{ format }}{% endif %}{% endfor %}
                 </div>
                 <div class="sd_price">
                   {{ record.price }} <b>zł</b>
-                  <a href="">
+                  <a href="{{ record.url }}" target="_blank">
                     KUP
                   </a>
                 </div>

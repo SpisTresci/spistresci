@@ -11,19 +11,24 @@ class MasterBookIndex(indexes.SearchIndex, indexes.Indexable):
     middleName = indexes.MultiValueField()
     lastName = indexes.MultiValueField()
 
-    image_url = indexes.CharField(index_fieldname='image_url', stored=True)
+    url = indexes.MultiValueField()
+    cover = indexes.MultiValueField()
+
     formats = indexes.CharField(index_fieldname='formats', stored=True)
 
-    format_mobi =  indexes.MultiValueField()
-    format_epub =  indexes.MultiValueField()
-    format_pdf =  indexes.MultiValueField()
+    format_mobi = indexes.MultiValueField()
+    format_epub = indexes.MultiValueField()
+    format_pdf = indexes.MultiValueField()
+    format_cd = indexes.MultiValueField()
+    format_mp3 = indexes.MultiValueField()
 
-    bookstore =  indexes.MultiValueField()
-    price =  indexes.MultiValueField()
-    mini_format_mobi =  indexes.MultiValueField()
-    mini_format_epub =  indexes.MultiValueField()
-    mini_format_pdf =  indexes.MultiValueField()
-
+    bookstore = indexes.MultiValueField()
+    price = indexes.MultiValueField()
+    mini_format_mobi = indexes.MultiValueField()
+    mini_format_epub = indexes.MultiValueField()
+    mini_format_pdf = indexes.MultiValueField()
+    mini_format_cd = indexes.MultiValueField()
+    mini_format_mp3 = indexes.MultiValueField()
 
     def get_model(self):
         return MasterBookSolrWrapper
