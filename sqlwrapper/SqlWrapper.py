@@ -128,9 +128,9 @@ class SqlWrapper(object):
                 netloc += '@'
             netloc += cls.host
             urlparse.uses_netloc.append(cls.scheme)
-            uri = urlparse.urlunparse((cls.scheme, netloc, cls.database, None, None, None))
+            uri = urlparse.urlunparse((cls.scheme, netloc, cls.database, None, "charset=utf8&use_unicode=1", None))
             urlparse.uses_netloc.pop()
-            cls.engine = create_engine(uri, echo=cls.echo)
+            cls.engine = create_engine(uri, echo = cls.echo, encoding = 'utf-8')
         return cls.engine
 
     @classmethod
