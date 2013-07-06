@@ -17,7 +17,7 @@ class RW2010(XMLConnector):
     }
 
     def __init__(self, name = "RW2010", limit_books = 0):
-        super(XMLConnector, self).__init__(name = name, limit_books = limit_books)
+        super(RW2010, self).__init__(name = name, limit_books = limit_books)
         self.macro_url = self.config['macro_url']
         u = urllib2.urlopen(self.macro_url)
         meta = u.info()
