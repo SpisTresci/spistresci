@@ -59,13 +59,13 @@ Base = SqlWrapper.getBaseClass()
 
 class BookotekaBook(GenericBook, Base):
     id = Column(Integer, primary_key = True)
+    external_id = Column(Unicode(64), unique = True)    #10
 
-    title = Column(Unicode(265))        #131
-    url = Column(Unicode(128))          #107
+    title = Column(Unicode(265))                        #131
+    url = Column(Unicode(128))                          #107
     #authors
-    format = Column(Unicode(8))         #4
-    cover = Column(Unicode(256))         #139
-    price = Column(Integer)             #grosze
-    external_id = Column(Unicode(64))   #10
-    isbn = Column(Unicode(13))          #0
+    format = Column(Unicode(8))                         #4
+    cover = Column(Unicode(256))                        #139
+    price = Column(Integer)                             #grosze
+    isbn = Column(Unicode(13))                          #0
 
