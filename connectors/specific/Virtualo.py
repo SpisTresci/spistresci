@@ -36,6 +36,9 @@ class Virtualo(XMLConnector):
         finally:
             dic[rating_tag] = rating_normalized
 
+    def adjust_parse(self, dic):
+        dic["cover"] = "http://static.virtualo.pl/media_images/normal/" + dic["external_id"] + ".jpg"
+
 Base = SqlWrapper.getBaseClass()
 
 class VirtualoBook(GenericBook, Base):
@@ -44,5 +47,6 @@ class VirtualoBook(GenericBook, Base):
     protection = Column(Unicode(8))       #3
     price = Column(Integer)             #*0,01PLN
     url = Column(Unicode(128))          #89
+    cover = Column(Unicode(128))        #57
     rating = Column(Integer)            #0-100
 
