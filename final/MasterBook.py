@@ -5,9 +5,7 @@ Base = SqlWrapper.getBaseClass()
 
 class MasterBook(final.FinalBase, Base):
     id = Column(Integer, primary_key = True)
-    title = Column(Unicode(512))  # , unique=True)
-    #TODO: remove
-    #title_simplified = Column(STUnicode10(512))  # , unique=True)
+    title = Column(Unicode(512))
 
     format_mobi = Column(Boolean)
     format_epub = Column(Boolean)
@@ -20,28 +18,31 @@ class MasterBook(final.FinalBase, Base):
     miniBooks = relationship("MiniBook", backref = backref("masterBook", uselist = False, lazy = 'joined'))
     words = relationship("TitleWord", secondary = final.master_books_title_words, backref = "masterBook")
 
-    def __init__(self, mini_book):
-        if not isinstance(mini_book, final.MiniBook):
-            raise "MasterBook can be only initialize by MiniBook"
-
-        self.title = mini_book.title
-        #TODO: remove
-        #self.title_simplified = utils.SimilarityCalculator.simplify(mini_book.title)
-
-        for isbn in mini_book.isbns:
-            self.isbns.append(isbn.masterISBN)
-
-        for author in mini_book.authors:
-            self.authors.append(author.masterAuthor)
+    def __init__(self, mini_book = None):
+        if mini_book:
+            raise "not supported any more. Use empty constructor, and next addMiniBook"
 
     def addMiniBook(self, new_miniBook):
+        if not isinstance(new_miniBook, final.MiniBook):
+            raise "MasterBook can be only initialize by MiniBook"
+
+        if len(self.miniBooks) == 0:
+            self.title = new_miniBook.title
+
         if not any(new_miniBook.bookstore == miniBook.bookstore and \
                    new_miniBook.bookstore_boook_id == miniBook.bookstore_boook_id for miniBook in self.miniBooks):
 
             self.miniBooks.append(new_miniBook)
 
-            for key in vars(new_miniBook).keys():
-                if key.startswith("format_"):
-                    value = getattr(new_miniBook, key)
-                    if value == True:
-                        setattr(self, key, value)
+            for isbn in new_miniBook.isbns:
+                self.isbns.append(isbn.masterISBN)
+
+            for author in new_miniBook.authors:
+                self.authors.append(author.masterAuthor)
+
+            vars_all = [attr for attr in dir(self) if not callable(attr) and not attr.startswith("__")]
+            formats = [key for key in vars_all if key.startswith("format_")]
+
+            for f in formats:
+                value = getattr(new_miniBook, f, False)
+                setattr(self, f, value if value else False)

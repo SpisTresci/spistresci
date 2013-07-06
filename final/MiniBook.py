@@ -8,21 +8,23 @@ class MiniBook(final.FinalBase, Base):
     id = Column(Integer, primary_key = True)
     master_id = Column(Integer, ForeignKey('MasterBook.id'))
 
-    title = Column(Unicode(512))
+    title = Column(Unicode(512), nullable = False)
+    url = Column(Unicode(512), nullable = False)
+    cover = Column(Unicode(512), nullable = False)
 
-    bookstore = Column(Unicode(16))
-    bookstore_boook_id = Column(Integer)
+    bookstore = Column(Unicode(16), nullable = False)
+    bookstore_boook_id = Column(Integer, nullable = False)
 
-    price = Column(Integer)
+    price = Column(Integer, nullable = False)
     isbns = relationship("MiniISBN", secondary = final.mini_books_mini_isbns, backref = "mini_book")
     authors = relationship("MiniAuthor", secondary = final.mini_books_mini_authors, backref = "mini_book")
-    words = relationship("TitleWord", secondary = final.mini_books_title_words, backref = backref("mini_book", lazy = "joined"))
+    words = relationship("TitleWord", secondary = final.mini_books_title_words, backref = backref("mini_book", lazy = "joined", cascade = ""))
 
-    format_mobi = Column(Boolean)
-    format_epub = Column(Boolean)
-    format_pdf = Column(Boolean)
-    format_mp3 = Column(Boolean)
-    format_cd = Column(Boolean)
+    format_mobi = Column(Boolean, nullable = False)
+    format_epub = Column(Boolean, nullable = False)
+    format_pdf = Column(Boolean, nullable = False)
+    format_mp3 = Column(Boolean, nullable = False)
+    format_cd = Column(Boolean, nullable = False)
 
     def splitTitle(self, title):
         title = utils.Str.removePunctuation(title)
@@ -31,6 +33,8 @@ class MiniBook(final.FinalBase, Base):
     def __init__(self, session, specific_book):
         self.title = specific_book.title
         self.price = specific_book.price
+        self.url = specific_book.url
+        self.cover = specific_book.cover
 
         self.splited_and_simplified_title = [utils.Str.simplify(word) for word in self.splitTitle(self.title)]
 
@@ -41,9 +45,11 @@ class MiniBook(final.FinalBase, Base):
         self.bookstore = specific_book.__tablename__[:-len("Book")]
         self.bookstore_boook_id = specific_book.id
 
-        formats = specific_book.formats
-        for format in formats:
-            setattr(self, "format_" + format.name, True)
+        vars_all = [attr for attr in dir(self) if not callable(attr) and not attr.startswith("__")]
+        formats = [key for key in vars_all if key.startswith("format_")]
+        specific_formats = [f.name for f in specific_book.formats]
+        for f in formats:
+            setattr(self, f, f.replace("format_", "") in specific_formats)
 
         authors = specific_book.authors
         for author in authors:
@@ -76,14 +82,10 @@ class MiniBook(final.FinalBase, Base):
             master_Book = None
 
             if len(equal_master_Books) == 0:
-                #create masterISBN from miniBook
-                master_Book = final.MasterBook(mini_book)
-                #master_Book.miniBooks.append(mini_book)
+                master_Book = final.MasterBook()
                 master_Book.addMiniBook(mini_book)
             elif len(equal_master_Books) == 1:
-                #add miniBook to masterISBN
                 master_Book = equal_master_Books[0]
-                #master_Book.miniBooks.append(mini_book)
                 master_Book.addMiniBook(mini_book)
             elif len(equal_master_Books) > 1:
                 #master should be probably merged
@@ -95,7 +97,6 @@ class MiniBook(final.FinalBase, Base):
                         best_match = em
                         ratio = r
                 master_Book = best_match
-                #master_Book.miniBooks.append(mini_book)
                 master_Book.addMiniBook(mini_book)
 
             session.add(master_Book)
@@ -112,6 +113,6 @@ class MiniBook(final.FinalBase, Base):
         for titleWord in words:
             for titleWord in titleWord.soundex.words:
                 for miniBook in titleWord.mini_book:
-                    if miniBook.id != mini_book.id:
+                    if miniBook.id != mini_book.id and miniBook.masterBook != None:
                         masters.add(miniBook.masterBook)
         return list(masters)

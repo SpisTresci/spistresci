@@ -7,7 +7,7 @@ class SoundexTitleWord(final.FinalBase, Base):
     id = Column(Integer, primary_key = True)
     code = Column(Unicode(5), index = True, unique = True)
 
-    words = relationship("TitleWord", lazy = 'joined', backref = backref("soundex", uselist = False, lazy = 'joined',))
+    words = relationship("TitleWord", lazy = 'joined', cascade = "", backref = backref("soundex", uselist = False, lazy = 'joined'))
 
     def __init__(self, code):
         self.code = code

@@ -766,7 +766,7 @@ class GenericFormat(GenericBase):
     @declared_attr
     def books(cls):
         name = cls.__tablename__[:-len("Format")]
-        return dynamic_loader(name + "Book", secondary = cls.metadata.tables[name + 'BooksFormats'] , backref = backref("formats", lazy = 'dynamic'), lazy = 'dynamic',)
+        return relationship(name + "Book", secondary = cls.metadata.tables[name + 'BooksFormats'] , backref = backref("formats", lazy = 'joined'), lazy = 'joined')
 
     @staticmethod
     def getConcretizedClass(context):
