@@ -16,11 +16,11 @@ class MasterBookIndex(indexes.SearchIndex, indexes.Indexable):
 
     formats = indexes.CharField(index_fieldname='formats', stored=True)
 
-    format_mobi = indexes.MultiValueField()
-    format_epub = indexes.MultiValueField()
-    format_pdf = indexes.MultiValueField()
-    format_cd = indexes.MultiValueField()
-    format_mp3 = indexes.MultiValueField()
+    format_mobi = indexes.BooleanField(index_fieldname='format_mobi', stored=True)
+    format_epub = indexes.BooleanField(index_fieldname='format_epub', stored=True)
+    format_pdf = indexes.BooleanField(index_fieldname='format_pdf', stored=True)
+    format_cd = indexes.BooleanField(index_fieldname='format_cd', stored=True)
+    format_mp3 = indexes.BooleanField(index_fieldname='format_mp3', stored=True)
 
     bookstore = indexes.MultiValueField()
     price = indexes.MultiValueField()

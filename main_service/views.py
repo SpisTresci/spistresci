@@ -51,43 +51,11 @@ class STSearchQuerySet(SearchQuerySet):
             result.price_lowest = price_lowest
             result._additional_fields.append("price_lowest")
 
-
-            # Very dirty temporary(!!!) hack which allows testing with NULL values in database
-
-            result.price = [] if result.price == None else result.price
-            result.bookstore = [] if result.bookstore == None else result.bookstore
-            result.url = [] if result.url == None else result.url
-            result.cover = [] if result.cover == None else result.cover
-
-            result.mini_format_mobi = [] if result.mini_format_mobi == None else result.mini_format_mobi
-            result.mini_format_pdf = [] if result.mini_format_pdf == None else result.mini_format_pdf
-            result.mini_format_epub = [] if result.mini_format_epub == None else result.mini_format_epub
-            result.mini_format_cd = [] if result.mini_format_cd == None else result.mini_format_cd
-            result.mini_format_mp3 = [] if result.mini_format_mp3 == None else result.mini_format_mp3
-
-            m = max(len(result.price), len(result.bookstore), len(result.url), len(result.cover), len(result.mini_format_mobi), len(result.mini_format_pdf), len(result.mini_format_epub), len(result.mini_format_cd), len(result.mini_format_mp3))
-
-            for l in [result.price, result.bookstore, result.url, result.cover, result.mini_format_mobi, result.mini_format_pdf, result.mini_format_epub, result.mini_format_cd, result.mini_format_mp3]:
-
-                while len(l) < m:
-                    l.append("")
-
-            #end of this very dirty shameless hack
-
-
             records = []
             for price, bookstore, url, cover, format_mobi, format_pdf, format_epub, format_cd, format_mp3 in zip (result.price, result.bookstore, result.url, result.cover, result.mini_format_mobi, result.mini_format_pdf, result.mini_format_epub, result.mini_format_cd, result.mini_format_mp3):
                 record={}
-                record["price"]=price
-                record["bookstore"]=bookstore
-                record["url"]=url
-                record["cover"]=cover
-                record["format_mobi"]=format_mobi
-                record["format_pdf"]=format_pdf
-                record["format_epub"]=format_epub
-                record["format_cd"]=format_cd
-                record["format_mp3"]=format_mp3
-
+                for var_name in ["price", "bookstore", "url", "cover", "format_mobi", "format_pdf", "format_epub", "format_cd", "format_mp3"]:
+                    record[var_name] = eval(var_name)
 
                 record["formats"] = [attr.replace("format_", "").upper() for attr, value  in record.iteritems() if str(attr).startswith("format_") and value]
 
