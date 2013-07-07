@@ -7,11 +7,11 @@ class MasterBook(final.FinalBase, Base):
     id = Column(Integer, primary_key = True)
     title = Column(Unicode(512))
 
-    format_mobi = Column(Boolean)
-    format_epub = Column(Boolean)
-    format_pdf = Column(Boolean)
-    format_mp3 = Column(Boolean)
-    format_cd = Column(Boolean)
+    format_mobi = Column(Boolean, default=False)
+    format_epub = Column(Boolean, default=False)
+    format_pdf = Column(Boolean, default=False)
+    format_mp3 = Column(Boolean, default=False)
+    format_cd = Column(Boolean, default=False)
 
     isbns = relationship("MasterISBN", lazy = 'joined', secondary = final.master_books_master_isbns, backref = "masterBook")
     authors = relationship("MasterAuthor", lazy = 'joined', secondary = final.master_books_master_authors, backref = "masterBook")
@@ -44,5 +44,6 @@ class MasterBook(final.FinalBase, Base):
             formats = [key for key in vars_all if key.startswith("format_")]
 
             for f in formats:
-                value = getattr(new_miniBook, f, False)
-                setattr(self, f, value if value else False)
+                #here can not be just setattr(self, f, getattr(new_miniBook, f, False)), because False from new book could override old True value
+                if getattr(new_miniBook, f, False):
+                    setattr(self, f, True)

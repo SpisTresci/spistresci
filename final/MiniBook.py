@@ -109,7 +109,10 @@ class MiniBook(final.FinalBase, Base):
     def getMasterBookCandidates(session, mini_book):
         masters = set()
         mini_book_id = mini_book.id
-        words = session.query(final.TitleWord).options(lazyload('mini_book')).filter_by(id = mini_book_id).all()
+        #words = session.query(final.TitleWord).options(lazyload('mini_book')).filter(final.TitleWord.mini_book.any()  id = mini_book_id).all()
+
+        words = mini_book.words
+
         for titleWord in words:
             for titleWord in titleWord.soundex.words:
                 for miniBook in titleWord.mini_book:

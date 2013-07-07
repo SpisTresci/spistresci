@@ -5,7 +5,7 @@ from unidecode import unidecode
 
 class SimilarityCalculator():
 
-    accept_threshold = 0.85
+    accept_threshold = 0.70
 
     ############# AUTHORS ##################
     @staticmethod
