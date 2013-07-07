@@ -18,7 +18,15 @@ class MiniBook(final.FinalBase, Base):
     price = Column(Integer, nullable = False)
     isbns = relationship("MiniISBN", secondary = final.mini_books_mini_isbns, backref = "mini_book")
     authors = relationship("MiniAuthor", secondary = final.mini_books_mini_authors, backref = "mini_book")
-    words = relationship("TitleWord", secondary = final.mini_books_title_words, backref = backref("mini_book", lazy = "joined", cascade = ""))
+
+    @declared_attr
+    def words(cls):
+        if SqlWrapper.isEgoistStrategyOn():
+            return relationship("TitleWord", secondary = final.mini_books_title_words, backref = backref("mini_book", lazy = "joined"))
+        else:
+            return relationship("TitleWord", secondary = final.mini_books_title_words, backref = backref("mini_book", lazy = "joined", cascade = ""))
+
+
 
     format_mobi = Column(Boolean, nullable = False)
     format_epub = Column(Boolean, nullable = False)
@@ -35,12 +43,6 @@ class MiniBook(final.FinalBase, Base):
         self.price = specific_book.price
         self.url = specific_book.url
         self.cover = specific_book.cover
-
-        self.splited_and_simplified_title = [utils.Str.simplify(word) for word in self.splitTitle(self.title)]
-
-        for word in self.splited_and_simplified_title:
-            titleWord = final.TitleWord.get_or_create(session, word)
-            self.words.append(titleWord)
 
         self.bookstore = specific_book.__tablename__[:-len("Book")]
         self.bookstore_boook_id = specific_book.id
@@ -60,6 +62,12 @@ class MiniBook(final.FinalBase, Base):
         for isbn in isbns:
             mi = final.MiniISBN(isbn)
             self.isbns.append(mi)
+
+        self.splited_and_simplified_title = [utils.Str.simplify(word) for word in self.splitTitle(self.title)]
+
+        for word in self.splited_and_simplified_title:
+            titleWord = final.TitleWord.get_or_create(session, word)
+            self.words.append(titleWord)
 
     to_normalize = []
 

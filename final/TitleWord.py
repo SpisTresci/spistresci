@@ -19,5 +19,8 @@ class TitleWord(final.FinalBase, Base):
     def get_or_create(cls, session, word):
         obj = SqlWrapper.get_or_create_(session, TitleWord, {"word":word, "session":session}, "word")
         session.add(obj)
-        session.commit()
+
+        if not SqlWrapper.isEgoistStrategyOn():
+            session.commit()
+
         return obj

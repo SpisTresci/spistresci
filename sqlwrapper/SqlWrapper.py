@@ -144,3 +144,7 @@ class SqlWrapper(object):
         if not c:
             c = ClassName(**d)
         return c
+
+    @staticmethod
+    def isEgoistStrategyOn():
+        return True
