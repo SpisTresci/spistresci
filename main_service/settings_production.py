@@ -21,6 +21,17 @@ DATABASES = {
     }
 }
 
+HAYSTACK_CONNECTIONS = {
+    'default': {
+        'ENGINE': 'haystack.backends.solr_backend.SolrEngine',
+        'URL': 'http://127.0.0.1:8090/solr1/alpha3'
+        # ...or for multicore...
+        # 'URL': 'http://127.0.0.1:8983/solr/mysite',
+    },
+}
+
+
+
 EMAIL_SUBJECT_PREFIX= 'Welcome Screen:'
 
 #Note: This seems to be stupid, but in production mode template dir should be absolute path :/
