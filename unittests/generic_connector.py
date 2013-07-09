@@ -106,20 +106,6 @@ class TestGenericConnector(object):
         self.mc.unpack_file = 'sample'
         self.test_unpack_gzip()
 
-    @NoseUtils.skip
-    def test_validateISBN(self):
-        pass
-
-    @NoseUtils.skipIf(True, 'Not implemented yet')
-    def test_validatePrice(self):
-        pass
-
-    @NoseUtils.skipIf(True)
-    def test_validateSize(self):
-        pass
-    @NoseUtils.skipBecause('Not implemented yet')
-    def test_validateAuthors(self):
-        pass
 
 class TestGenericConnectorWithGenericConfigFileField(TestGenericConnector):
     def setUp(self):
