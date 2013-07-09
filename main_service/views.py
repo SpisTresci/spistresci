@@ -6,6 +6,7 @@
 #from django.core.context_processors import csrf
 #from django.views.decorators.csrf import csrf_protect
 #import os
+from django.http.response import HttpResponse, HttpResponseNotAllowed
 from django.shortcuts import render_to_response
 from haystack.query import SearchQuerySet
 from haystack.views import SearchView
@@ -24,6 +25,9 @@ class STSearchView(SearchView):
         services = zip(range(len(servise_names)), servise_names)
         extra["services"] = services
         extra["prefix"] = "s"
+
+        if 'isMenuHidden' in self.request.session:
+            extra["isMenuHidden"] = self.request.session['isMenuHidden']
 
         return extra
 
@@ -74,3 +78,12 @@ class STSearchQuerySet(SearchQuerySet):
             to_cache.append(dict((i, getattr(result, i, None)) for i in result._additional_fields))
 
         return to_cache
+
+
+def hide_menu(request, value):
+    if not request.is_ajax() or not request.method=='POST':
+        return HttpResponseNotAllowed(['POST'])
+
+    request.session['isMenuHidden'] = bool(int(value))
+
+    return HttpResponse('ok')

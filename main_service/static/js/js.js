@@ -1,15 +1,16 @@
-var zip_tmp="";
 function s_zip(){
-  if(zip_tmp!="hide"){
-    document.getElementById('s_left').className='s_left s_zip';
-    document.getElementById('s_right').className='s_right s_right2';
-    zip_tmp="hide";
-  }
-  else{
+  if(document.getElementById('s_left').className.indexOf("s_zip") !== -1){
     document.getElementById('s_left').className='s_left';
     document.getElementById('s_right').className='s_right';
+    $.post('/hide_menu/0/');
     zip_tmp="";
   }
+  else{
+    document.getElementById('s_left').className='s_left s_zip';
+    document.getElementById('s_right').className='s_right s_right2';
+    $.post('/hide_menu/1/');
+  }
+
   return false;
 }
 

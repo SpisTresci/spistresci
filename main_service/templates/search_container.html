@@ -28,7 +28,7 @@
 <!--    LEFT MENU    -->
 	{% include "search_filters.html" %}
 <!-- LEFT MENU END -->
-      <div class="s_right" id="s_right">
+      <div class="s_right{% if isMenuHidden %} s_right2{% endif %}" id="s_right">
         <div class="sort">
           <div class="sort_one">
             <span style="float:left">
