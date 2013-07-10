@@ -135,9 +135,7 @@ class SqlWrapper(object):
                 query='charset=%s' % cls.charset
             if cls.use_unicode:
                 query+='&use_unicode=%d' % cls.use_unicode
-            print query
             uri = urlparse.urlunparse((cls.scheme, netloc, cls.database, None, query, None))
-            print uri
             urlparse.uses_netloc.pop()
             cls.engine = create_engine(uri, echo = cls.echo, encoding = 'utf-8')
         return cls.engine
