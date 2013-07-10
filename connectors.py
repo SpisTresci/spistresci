@@ -34,8 +34,6 @@ def choose_your_destiny(app_name):
 
 def main():
 
-    sys.argv = ['./connectors.py', 'eBookpoint', 'Koobe']#, 'Virtualo'] #'Woblink',
-
     base_name = os.path.basename(sys.argv[0])
     app_name = os.path.splitext(base_name)[0]
     conf_name = '%s.ini' % app_name

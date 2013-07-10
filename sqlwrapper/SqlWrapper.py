@@ -76,6 +76,8 @@ class SqlWrapper(object):
         cls.host = config.get('DEFAULT', 'host')
         cls.database = config.get('DEFAULT', 'database')
         cls.echo = config.getboolean('DEFAULT', 'echo')
+        cls.charset = config.get('DEFAULT', 'charset')
+        cls.use_unicode = config.getint('DEFAULT', 'use_unicode')
         cls.tables = [x for x in cls.getBaseClass().metadata.sorted_tables if any(con in x.name for con in connectors)]
         cls.table_list = [cls.getBaseClass().metadata.tables[x] for x in cls.table_list if cls.getBaseClass().metadata.tables.get(x) != None]
         cls.createTables(cls.table_list)
@@ -128,7 +130,14 @@ class SqlWrapper(object):
                 netloc += '@'
             netloc += cls.host
             urlparse.uses_netloc.append(cls.scheme)
-            uri = urlparse.urlunparse((cls.scheme, netloc, cls.database, None, "charset=utf8&use_unicode=1", None))
+            query = ''
+            if cls.charset:
+                query='charset=%s' % cls.charset
+            if cls.use_unicode:
+                query+='&use_unicode=%d' % cls.use_unicode
+            print query
+            uri = urlparse.urlunparse((cls.scheme, netloc, cls.database, None, query, None))
+            print uri
             urlparse.uses_netloc.pop()
             cls.engine = create_engine(uri, echo = cls.echo, encoding = 'utf-8')
         return cls.engine
