@@ -1043,15 +1043,28 @@ a{
 .sd_top_left{
   float: left;
   margin-left: 25px;
-/*   margin-top: -10px; */
+  margin-top: -10px;
 }
 .sd_top_right{
   float: right;
   margin-right: 20px;
   margin-top: -10px;
 }
+
+.sort_for_title{
+  /*width:29px;*/
+  height:15px;
+  margin-left: 10px;
+  margin-right: 30px;
+  padding:5px;
+  float:right;
+  /*border-bottom:3px solid #8d8d8d;*/
+  text-align:center;
+  margin-top: 5px;
+}
+
 .sort_for{
-  width:29px;
+  /*width:29px;*/
   height:15px;
   margin-left:18px;
   padding:5px;
@@ -1064,7 +1077,7 @@ a{
   color:white;
 }
 .sort_for_long{
-  width:100px;
+  /*width:100px;*/
 }
 .sd_format{
   width:100%;
@@ -1076,6 +1089,23 @@ a{
   color:#464646;
   float:left;
 }
+
+.sd_format_filtered_out{
+  width:100%;
+  background:#F6F6F6;
+  height:25px;
+  font-size:12px;
+  font-weight:bold;
+  color:#888888;
+  float:left;
+}
+
+.sd_format_info{
+  float:left;
+  margin:10px;
+  margin-left:15px;
+}
+
 .sd_format_text{
   float:left;
   margin-top:60px;

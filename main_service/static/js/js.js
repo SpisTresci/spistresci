@@ -55,17 +55,10 @@ function btn(num){
   return false;
 }
 
-
-var li_sub=[];
-function li(num){
-  if(li_sub[num]!="hide"){
-    document.getElementById('li'+num).className='act';
-    li_sub[num]="hide";
-  }
-  else{
-    document.getElementById('li'+num).className='';
-    li_sub[num]="";
-  }
+function mark_format(subgroup, item){
+  elem = document.getElementById('filter_format_li'+subgroup+'_'+item);
+  elem.className=(elem.className.indexOf("act") !== -1)?'':'act';
+  $.post('/set_filter/format/'+elem.innerText+'/'+elem.className+'/');
   return false;
 }
 
@@ -92,9 +85,19 @@ function list_book(id,count_link){
 }
 
 
+function filter_format_clear(){
+    $('li[id^="filter_format_li"]').each(function(index, value) {value.className='';})
+    $.post('/clear_filter/format/');
+  return false;
+}
 
+function filter(){
+  elem = document.getElementById('id_q');
+  query=elem.value;
 
-
+  window.open('?q='+query, '_self');
+  return false;
+}
 
 
 

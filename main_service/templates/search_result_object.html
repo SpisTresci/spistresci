@@ -25,25 +25,28 @@
                   TROP <img src="{% static "img/hand.png" %}" alt="" />
                 </div>
               </a>
-              <div class="slb_price_btn" onclick="list_book('{{ forloop.counter }}','{{ product.price|length }}');">
+              <div class="slb_price_btn" onclick="list_book('{{ forloop.counter }}','{{ product.records|length }}');">
                 SZCZEGÓŁY
               </div>
             </div>
           </div>
           <div class="search_drop2" id="list_book_2_{{ forloop.counter }}">
           <!--     width = liczbawierszy w dropdownie * 136 czyli ich wysokość +45 czyli szerokość szarego paska       -->
-          <div class="search_drop" id="list_book{{ forloop.counter }}" style="margin-top:-{{ product.price|length|mult:"136"|add:"35" }}px;">
+          <div class="search_drop" id="list_book{{ forloop.counter }}" style="margin-top:-{{ product.records|length|mult:"136"|add:"35" }}px;">
               <div class="sd_top">
                 <div class="sd_top_left">
-                  WYŚWIETL PO:
+                    <div class="sort_for sort_for_long">Zabezpieczeń</div>
+                    <div class="sort_for sort_for_long">Liczby formatów</div>
+                    <div class="sort_for ">Ceny</div>
+                    <div class="sort_for_title sort_for_long">SORTUJ WEDŁUG</div>
                 </div>
                 <div class="sd_top_right">
-                  <div class="sort_for sort_for_long">WSZYSTKIE</div>
-                  <div class="sort_for">15</div>
-                  <div class="sort_for">10</div>
-                  <div class="sort_for">5</div>
+                  <div class="sort_for ">WSZYSTKIE</div>
+                  <div class="sort_for ">15</div>
+                  <div class="sort_for ">10</div>
+                  <div class="sort_for ">5</div>
                 </div>
-                <div id="upper_hide{{ forloop.counter }}" class="search_drop_upper_hide_btn" onclick="list_book('{{ forloop.counter }}','{{ product.price|length }}');">
+                <div id="upper_hide{{ forloop.counter }}" class="search_drop_upper_hide_btn" onclick="list_book('{{ forloop.counter }}','{{ product.records|length }}');">
                 </div>
               </div>
 
@@ -51,7 +54,8 @@
               <div class="sd_format">
                 <img src="{% static "img/logo/"|add:record.bookstore|add:"_150x75.png"|lower %}" alt="{{record.bookstore}}" onerror="this.onerror=null;this.src='{% static "img/logo/loremipsum_150x75.png" %}'" />
                 <div class="sd_format_text">
-                  Formaty: {% for format in record.formats %}{% if forloop.first %}{{ format }}{% else %}, {{ format }}{% endif %}{% endfor %}
+                  Dostajesz: <br/>
+                  {% for format in record.formats %}{% if forloop.first %}{{ format }}{% else %}, {{ format }}{% endif %}{% endfor %}
                 </div>
                 <div class="sd_price">
                   {{ record.price }} <b>zł</b>
@@ -61,11 +65,17 @@
                 </div>
               </div>
               {% endfor %}
+
+              <div class="sd_format_filtered_out">
+                  <div class="sd_format_info">
+                  Oferty 2 serwisów nie spełniły wymagań aktywnych filtrów
+                  </div>
+              </div>
             </div>
           </div>
           <div class="search_drop_hide">
             <!--  druga cyfra w onclick="list_book('1','2'); to liczba wierszy w dropdownie     -->
-            <div id="hide{{ forloop.counter }}" class="search_drop_hide_btn" onclick="list_book('{{ forloop.counter }}','{{ product.price|length }}');">
+            <div id="hide{{ forloop.counter }}" class="search_drop_hide_btn" onclick="list_book('{{ forloop.counter }}','{{ product.records|length}}');">
             </div>
           </div>
 {% endwith %}

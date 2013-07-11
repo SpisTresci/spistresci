@@ -1,0 +1,41 @@
+{% load mathtags %}
+{% with group=filter %}
+
+        <div class="s_left_box act" id="blue1">
+          <div class="s_left_blue" onclick="s_blue('1');">
+            {{group.name}}
+            <div class="s_left_arrow">
+            </div>
+          </div>
+          {% for subgroup in group.subgroups %}
+          <div class="s_left_hide{% if forloop.last %} s_left_hide_last{% endif %}" >
+            <div id="menu_arrow{{ forloop.counter }}" class="s_left_cat_arrow" onclick="sub('{{ forloop.counter }}');">
+            </div>
+            <div class="s_left_cat" id="btn{{ forloop.counter }}" onclick="btn('{{ forloop.counter }}');">
+              {{ subgroup.name }}
+            </div>
+            <ul id="sub{{ forloop.counter }}">
+              {% for item in subgroup.items %}
+              <li id="filter_format_li{{ forloop.parentloop.counter }}_{{forloop.counter}}"
+                  onclick="mark_format('{{ forloop.parentloop.counter }}', '{{forloop.counter}}');"
+                  {% if item.value %}class='act'{% endif %}>
+
+                <a>
+                  {{ item.name }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </a>
+
+              </li>
+              {% endfor %}
+            </ul>
+            {% if forloop.last %}
+            <div id="filter_clear_button" class="s_left_btn" onclick="filter_format_clear();">
+              WYCZYŚĆ
+            </div>
+            <div id="filter_button" class="s_left_btn s_left_btn2" onclick="filter();">
+              FILTRUJ
+            </div>
+            {% endif %}
+          </div>
+          {% endfor %}
+        </div>
+{% endwith %}

@@ -1,78 +1,12 @@
     <div class="s_left{% if isMenuHidden %} s_zip{% endif %}" id="s_left">
       <div class="s_arrow_zip" onclick="s_zip();"></div>
-        <div class="s_left_box act" id="blue1">
-          <div class="s_left_blue" onclick="s_blue('1');">
-            GRUPY
-            <div class="s_left_arrow">
-            </div>
-          </div>
-          <div class="s_left_hide" >
-            <div id="menu_arrow1" class="s_left_cat_arrow" onclick="sub('1');">
-            </div>
-            <div class="s_left_cat" id="btn1" onclick="btn('1');">
-              Wszystkie
-            </div>
-            <ul id="sub1">
-              <li id="li1" onclick="li('1');">
-                <a>
-                  Promocje  
-                </a>
-              </li>
-              <li id="li2" onclick="li('2');">
-                <a>
-                  Nowości 
-                </a>
-              </li>
-              <li id="li3" onclick="li('3');">
-                <a>
-                  Bestselery  
-                </a>
-              </li>
-              <li id="li4" onclick="li('4');">
-                <a>
-                  Pozostale
-                </a>
-              </li>
-            </ul>  
-          </div>
-          
-          <div class="s_left_hide s_left_hide_last">
-             <div id="menu_arrow2" class="s_left_cat_arrow" onclick="sub('2');">
-            </div>
-            <div class="s_left_cat" id="btn2" onclick="btn('2');">
-              Wszystkie
-            </div>
-            <ul id="sub2">
-              <li id="li5" onclick="li('5');">
-                <a>
-                  Promocje  
-                </a>
-              </li>
-              <li id="li6" onclick="li('6');">
-                <a>
-                  Nowości 
-                </a>
-              </li>
-              <li id="li7" onclick="li('7');">
-                <a>
-                  Bestselery  
-                </a>
-              </li>
-              <li id="li8" onclick="li('8');">
-                <a>
-                  Pozostale
-                </a>
-              </li>
-            </ul>  
-             <div class="s_left_btn">
-              WYCZYŚĆ
-            </div>
-            <div class="s_left_btn s_left_btn2">
-              FILTRUJ
-            </div>
-          </div>
-        </div>
-        
+
+        {% for filter in filters %}
+
+            {% include 'search_filter_format.html' %}
+
+        {% endfor %}
+
         <div class="s_left_box act" id="blue2">
           <div class="s_left_blue" onclick="s_blue('2');">
             CENA

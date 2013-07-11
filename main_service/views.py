@@ -8,7 +8,7 @@
 #import os
 from django.http.response import HttpResponse, HttpResponseNotAllowed
 from django.shortcuts import render_to_response
-from haystack.query import SearchQuerySet
+from haystack.query import SearchQuerySet, SQ
 from haystack.views import SearchView
 
 def index(request):
@@ -17,6 +17,30 @@ def index(request):
 class STSearchView(SearchView):
 
     template='search.html'
+
+    def __call__(self, request):
+        self.session = request.session
+        return super(STSearchView, self).__call__(request)
+
+    def get_results(self):
+        condition = None
+        for key, value in self.session.items():
+            if key.startswith("filter_format_") and value:
+                if not condition:
+                    condition = SQ(**{key.replace("filter_", ""):value})
+                else:
+                    condition &= SQ(**{key.replace("filter_", ""):value})
+
+        results = self.form.search().filter(condition) if condition else self.form.search()
+
+        for key, value in self.session.items():
+            if key.startswith("filter_format_") and value:
+
+                format=key.replace("filter_", "")
+                for result in results:
+                    result['records'] = [record for record in result['records'] if record[format]]
+
+        return results
 
     def extra_context(self):
         extra = super(STSearchView, self).extra_context()
@@ -29,11 +53,31 @@ class STSearchView(SearchView):
         if 'isMenuHidden' in self.request.session:
             extra["isMenuHidden"] = self.request.session['isMenuHidden']
 
+
+        extra['filters'] = [
+        {'name':'FORMATY',
+         'subgroups':[
+            {'name':'eBooki', 'items':self.load_formats_from_session([u'epub', u'mobi', u'pdf'])},
+            {'name':'AudioBooki', 'items':self.load_formats_from_session([u'mp3', u'cd-audio', u'cd-mp3'])},
+         ]
+        }
+       ]
+
         return extra
+
+    def load_formats_from_session(self, format_list):
+        r=[]
+        for format in format_list:
+            if 'filter_format_'+format in self.session:
+                r.append({'name':format, 'value':self.session['filter_format_'+format]})
+            else:
+                r.append({'name':format, 'value':False})
+        return r
 
 class STSearchQuerySet(SearchQuerySet):
 
     def post_process_results(self, results):
+
         to_cache = []
 
         for result in results:
@@ -85,5 +129,25 @@ def hide_menu(request, value):
         return HttpResponseNotAllowed(['POST'])
 
     request.session['isMenuHidden'] = bool(int(value))
+
+    return HttpResponse('ok')
+
+def set_filter(request, type, key, value):
+
+    if not request.is_ajax() or not request.method=='POST':
+        return HttpResponseNotAllowed(['POST'])
+
+    if type == 'format':
+        request.session['filter_format_' + key.strip()] = bool(value)
+        return HttpResponse('ok')
+
+def clear_filter(request, type):
+    if not request.is_ajax() or not request.method=='POST':
+        return HttpResponseNotAllowed(['POST'])
+
+    if type == 'format':
+        for key in request.session.keys():
+            if key.startswith('filter_format_'):
+                del request.session[key]
 
     return HttpResponse('ok')
