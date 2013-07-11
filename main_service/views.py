@@ -11,8 +11,15 @@ from django.shortcuts import render_to_response
 from haystack.query import SearchQuerySet, SQ
 from haystack.views import SearchView
 
+list_of_services=[
+    {'name':u'Spis Treści', 'url':'/'},
+    {'name':u'eKundelek', 'url':'http://eKundelek.pl'},
+    {'name':u'Ranking', 'url':'#'},
+    {'name':u'Raporty', 'url':'#'},
+]
+
 def index(request):
-    return render_to_response('index.html')
+    return render_to_response('index.html', {'top_menu':list_of_services})
 
 class STSearchView(SearchView):
 
@@ -73,15 +80,10 @@ class STSearchView(SearchView):
     def extra_context(self):
         extra = super(STSearchView, self).extra_context()
 
-        extra['top_menu']=[
-                            {'name':u'Spis Treści', 'url':'/'},
-                            {'name':u'eKundelek', 'url':'http://eKundelek.pl'},
-                            {'name':u'Ranking', 'url':'#'},
-                            {'name':u'Raporty', 'url':'#'},
-                        ]
+        extra['top_menu'] = list_of_services
 
-        servise_names = ["abooki.pl", "albertus.pl", "audeo.pl", "audiobook.pl", "audioteka.pl", "barbelo.com.pl", "bezkartek.pl", "bezokladki.pl", "booki25.pl", "bookio.pl", "bookmaster.pl", "bookoteka.pl", "bookson.pl", "cdp.pl", "czarty.pl", "sklep.czatroom.pl", "czytajtanio.pl", "czeskieklimaty.pl", "czytam.pl", "dobryebook.pl", "ekiosk.pl", "eporadniki.pl", "etekst.pl", "ebooki24.pl", "ebook.memento.pl", "ebook.pl", "ebooki123.pl", "ebooki.allegro.pl", "ebooki.orange.pl", "ebooki.tmobile.pl", "ebookomania.pl", "eBookpoint.pl", "helion.pl", "onepress.pl", "sensus.pl", "septem.pl", "ebookowo.pl", "ebookowo.pl", "ebooks43.pl", "eclicto.pl", "empik.pl", "escapemagazine.pl", "fabryka.pl", "ksiazki.pl", "kodeksywmp3.pl", "fantastykapolska.pl", "gandalf.com.pl", "gutenberg.org", "iBook.net.pl" ]
-        services = zip(range(len(servise_names)), servise_names)
+        service_names = ["abooki.pl", "albertus.pl", "audeo.pl", "audiobook.pl", "audioteka.pl", "barbelo.com.pl", "bezkartek.pl", "bezokladki.pl", "booki25.pl", "bookio.pl", "bookmaster.pl", "bookoteka.pl", "bookson.pl", "cdp.pl", "czarty.pl", "sklep.czatroom.pl", "czytajtanio.pl", "czeskieklimaty.pl", "czytam.pl", "dobryebook.pl", "ekiosk.pl", "eporadniki.pl", "etekst.pl", "ebooki24.pl", "ebook.memento.pl", "ebook.pl", "ebooki123.pl", "ebooki.allegro.pl", "ebooki.orange.pl", "ebooki.tmobile.pl", "ebookomania.pl", "eBookpoint.pl", "helion.pl", "onepress.pl", "sensus.pl", "septem.pl", "ebookowo.pl", "ebookowo.pl", "ebooks43.pl", "eclicto.pl", "empik.pl", "escapemagazine.pl", "fabryka.pl", "ksiazki.pl", "kodeksywmp3.pl", "fantastykapolska.pl", "gandalf.com.pl", "gutenberg.org", "iBook.net.pl" ]
+        services = zip(range(len(service_names)), service_names)
         extra["services"] = services
         extra["prefix"] = "s"
 

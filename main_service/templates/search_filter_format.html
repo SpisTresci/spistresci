@@ -16,14 +16,12 @@
             </div>
             <ul id="sub{{ forloop.counter }}">
               {% for item in subgroup.items %}
-              <li id="filter_format_li{{ forloop.parentloop.counter }}_{{forloop.counter}}"
+              <li id="filter_format_li_{{ forloop.parentloop.counter }}_{{forloop.counter}}"
                   onclick="mark_format('{{ forloop.parentloop.counter }}', '{{forloop.counter}}');"
                   {% if item.value %}class='act'{% endif %}>
-
                 <a>
-                  {{ item.name }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    {{ item.name }}
                 </a>
-
               </li>
               {% endfor %}
             </ul>
