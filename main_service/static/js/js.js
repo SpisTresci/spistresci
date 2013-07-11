@@ -58,7 +58,7 @@ function btn(num){
 function mark_format(subgroup, item){
   var elem = $('#filter_format_li_'+subgroup+'_'+item)[0];
   elem.className=(elem.className.indexOf("act") !== -1)?'':'act';
-  $.post('/set_filter/format/'+elem.children[0].innerHTML+'/'+elem.className+'/');
+  $.post('/set_filter/format/'+elem.children[0].innerHTML+'/'+(elem.className=='act'?'1':'0')+'/');
   return false;
 }
 

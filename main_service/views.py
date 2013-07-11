@@ -94,7 +94,7 @@ class STSearchView(SearchView):
         {'name':'FORMATY',
          'subgroups':[
             {'name':'eBooki', 'items':self.load_formats_from_session([u'epub', u'mobi', u'pdf'])},
-            {'name':'AudioBooki', 'items':self.load_formats_from_session([u'mp3', u'cd-audio', u'cd-mp3'])},
+            {'name':'AudioBooki', 'items':self.load_formats_from_session([u'mp3', u'cd'])},
          ]
         }
        ]
@@ -184,7 +184,7 @@ def set_filter(request, type, key, value):
         return HttpResponseNotAllowed(['POST'])
 
     if type == 'format':
-        request.session['filter_format_' + key.strip()] = bool(value)
+        request.session['filter_format_' + key.strip()] = bool(int(value))
         return HttpResponse('ok')
 
     if type == 'price':
