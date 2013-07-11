@@ -10,7 +10,7 @@ urlpatterns = patterns('',
      ('^$', index),
      ('^main/$', main),
      ('^hide_menu/(?P<value>\d)/$', hide_menu),
-     ('^set_filter/(?P<type>[^/]*)/(?P<key>[^/]*)/(?P<value>\w*)/$', set_filter),
+     ('^set_filter/(?P<type>[^/]*)/(?P<key>[^/]*)/(?P<value>[^/]*)/$', set_filter),
      ('^clear_filter/(?P<type>[^/]*)/$', clear_filter),
 
 )

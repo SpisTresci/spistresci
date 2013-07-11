@@ -15,13 +15,13 @@
           </div>
           <div class="s_left_hide">
             <form action="" method="">
-              Od: <input type="text"> zł <br/>
-              Do: <input type="text"> zł
+              Od: <input id='filter_price_gte' type="text" onkeyup="mark_price('price_gte')" value='{{ filter_price_gte }}'> zł <br/>
+              Do: <input id='filter_price_lte' type="text" onkeyup="mark_price('price_lte')" value='{{ filter_price_lte }}'> zł
             </form>
-            <div class="s_left_btn">
+            <div id="filter_clear_button" class="s_left_btn" onclick="filter_price_clear();">
               WYCZYŚĆ
             </div>
-            <div class="s_left_btn s_left_btn2">
+            <div id="filter_button" class="s_left_btn s_left_btn2" onclick="filter();">
               FILTRUJ
             </div>
           </div>

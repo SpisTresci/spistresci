@@ -22,16 +22,36 @@ class STSearchView(SearchView):
         self.session = request.session
         return super(STSearchView, self).__call__(request)
 
+    class ConditionBuilder(object):
+
+        def __init__(self):
+            self.condition = None
+
+        def add(self, new_condition):
+            if not self.condition:
+                self.condition = SQ(**new_condition)
+            else:
+                self.condition &= SQ(**new_condition)
+
+        def get(self):
+            return self.condition
+
+        def empty(self):
+            return not self.condition
+
     def get_results(self):
-        condition = None
+        condition = STSearchView.ConditionBuilder()
         for key, value in self.session.items():
             if key.startswith("filter_format_") and value:
-                if not condition:
-                    condition = SQ(**{key.replace("filter_", ""):value})
-                else:
-                    condition &= SQ(**{key.replace("filter_", ""):value})
+                condition.add({key.replace("filter_", ""):value})
 
-        results = self.form.search().filter(condition) if condition else self.form.search()
+            if key == "filter_price_lte":
+                condition.add({"price__lte":value})
+
+            if key == "filter_price_gte":
+                condition.add({"price__gte":value})
+
+        results = self.form.search().filter(condition.get()) if not condition.empty() else self.form.search()
 
         for result in results:
             records_num = len(result['records'])
@@ -39,6 +59,12 @@ class STSearchView(SearchView):
                 if key.startswith("filter_format_") and value:
                     format=key.replace("filter_", "")
                     result['records'] = [record for record in result['records'] if record[format]]
+
+                if key == 'filter_price_lte':
+                    result['records'] = [record for record in result['records'] if int(record['price'].replace('.','')) <= value]
+
+                if key == 'filter_price_gte':
+                    result['records'] = [record for record in result['records'] if int(record['price'].replace('.','')) >= value]
 
             result['filtered_records']=records_num-len(result['records'])
 
@@ -52,9 +78,8 @@ class STSearchView(SearchView):
         extra["services"] = services
         extra["prefix"] = "s"
 
-        if 'isMenuHidden' in self.request.session:
-            extra["isMenuHidden"] = self.request.session['isMenuHidden']
-
+        self.load_values_if_exists_in_session(extra, ['isMenuHidden'])
+        self.load_values_if_exists_in_session(extra, ['filter_price_gte', 'filter_price_lte'], lambda x:str("%.2f" % (x/100.0)), '')
 
         extra['filters'] = [
         {'name':'FORMATY',
@@ -66,6 +91,13 @@ class STSearchView(SearchView):
        ]
 
         return extra
+
+    def load_values_if_exists_in_session(self, extra_dict, values, fun=lambda x:x, default=None):
+        for value in values:
+            if value in self.request.session:
+                extra_dict[value] = fun(self.request.session[value])
+            elif default:
+                extra_dict[value]=default
 
     def load_formats_from_session(self, format_list):
         r=[]
@@ -146,6 +178,19 @@ def set_filter(request, type, key, value):
         request.session['filter_format_' + key.strip()] = bool(value)
         return HttpResponse('ok')
 
+    if type == 'price':
+        print key + ' = ' + value
+        value = value.replace(',', '.')
+        if value.count('.') <= 1:
+            value += '' if '.' in value else '00'
+
+            value=value.replace('.', '')
+            if value.isdigit() and int(value) > 0:
+                request.session['filter_' + key] = int(value)
+
+        return HttpResponse('ok')
+
+
 def clear_filter(request, type):
     if not request.is_ajax() or not request.method=='POST':
         return HttpResponseNotAllowed(['POST'])
@@ -153,6 +198,11 @@ def clear_filter(request, type):
     if type == 'format':
         for key in request.session.keys():
             if key.startswith('filter_format_'):
+                del request.session[key]
+
+    if type == 'price':
+        for key in request.session.keys():
+            if key.startswith('filter_price_'):
                 del request.session[key]
 
     return HttpResponse('ok')

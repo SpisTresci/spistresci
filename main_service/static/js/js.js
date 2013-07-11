@@ -56,9 +56,15 @@ function btn(num){
 }
 
 function mark_format(subgroup, item){
-  elem = document.getElementById('filter_format_li'+subgroup+'_'+item);
+  var elem = document.getElementById('filter_format_li'+subgroup+'_'+item);
   elem.className=(elem.className.indexOf("act") !== -1)?'':'act';
   $.post('/set_filter/format/'+elem.innerText+'/'+elem.className+'/');
+  return false;
+}
+
+function mark_price(id){
+  var elem = document.getElementById('filter_' + id);
+  $.post('/set_filter/price/'+id+'/'+elem.value.toString()+'/');
   return false;
 }
 
@@ -85,10 +91,15 @@ function list_book(id, count_link, filter_info){
   return false;
 }
 
-
 function filter_format_clear(){
     $('li[id^="filter_format_li"]').each(function(index, value) {value.className='';})
     $.post('/clear_filter/format/');
+  return false;
+}
+
+function filter_price_clear(){
+    $('input[id^="filter_price_"]').each(function(index, value) {value.value='';})
+    $.post('/clear_filter/price/');
   return false;
 }
 
@@ -99,6 +110,3 @@ function filter(){
   window.open('?q='+query, '_self');
   return false;
 }
-
-
-
