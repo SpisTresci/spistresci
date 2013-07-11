@@ -63,9 +63,10 @@ function mark_format(subgroup, item){
 }
 
 var listbook=[];
-function list_book(id,count_link){
+function list_book(id, count_link, filter_info){
 
-  var height_link=35+count_link*136;
+  var height_link=35+count_link*136 + (filter_info?25:0);
+
   if(listbook[id]!="show"){
     document.getElementById('list_book'+id).style.marginTop="0px";
     document.getElementById('list_book_2_'+id).style.height=height_link+"px";

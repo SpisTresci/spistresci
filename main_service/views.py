@@ -33,12 +33,14 @@ class STSearchView(SearchView):
 
         results = self.form.search().filter(condition) if condition else self.form.search()
 
-        for key, value in self.session.items():
-            if key.startswith("filter_format_") and value:
-
-                format=key.replace("filter_", "")
-                for result in results:
+        for result in results:
+            records_num = len(result['records'])
+            for key, value in self.session.items():
+                if key.startswith("filter_format_") and value:
+                    format=key.replace("filter_", "")
                     result['records'] = [record for record in result['records'] if record[format]]
+
+            result['filtered_records']=records_num-len(result['records'])
 
         return results
 
@@ -108,6 +110,9 @@ class STSearchQuerySet(SearchQuerySet):
                 record["formats"] = [attr.replace("format_", "").upper() for attr, value  in record.iteritems() if str(attr).startswith("format_") and value]
 
                 records.append(record)
+
+            result.filtered_records = 0
+            result._additional_fields.append("filtered_records")
 
             result.records = records
             result._additional_fields.append("records")

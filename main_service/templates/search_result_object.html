@@ -32,7 +32,14 @@
           </div>
           <div class="search_drop2" id="list_book_2_{{ forloop.counter }}">
           <!--     width = liczbawierszy w dropdownie * 136 czyli ich wysokość +45 czyli szerokość szarego paska       -->
-          <div class="search_drop" id="list_book{{ forloop.counter }}" style="margin-top:-{{ product.records|length|mult:"136"|add:"35" }}px;">
+          <div class="search_drop" id="list_book{{ forloop.counter }}"
+                {% if product.filtered_records == 0 %}
+                    style="margin-top:-{{ product.records|length|mult:"136"|add:"35" }}px;"
+                {% else %}
+                    style="margin-top:-{{ product.records|length|mult:"136"|add:"35"|add:"25" }}px;"
+                {% endif %}
+          >
+
               <div class="sd_top">
                 <div class="sd_top_left">
                     <div class="sort_for sort_for_long">Zabezpieczeń</div>
@@ -65,17 +72,22 @@
                 </div>
               </div>
               {% endfor %}
-
+              {% if product.filtered_records > 0 %}
               <div class="sd_format_filtered_out">
                   <div class="sd_format_info">
-                  Oferty 2 serwisów nie spełniły wymagań aktywnych filtrów
+                  {% if product.filtered_records == 1%}
+                  Oferta 1 serwisu nie spełniła wymagań aktywnych filtrów
+                  {% else %}
+                  Oferty {{ product.filtered_records }} serwisów nie spełniły wymagań aktywnych filtrów
+                  {% endif %}
                   </div>
               </div>
+              {% endif %}
             </div>
           </div>
           <div class="search_drop_hide">
             <!--  druga cyfra w onclick="list_book('1','2'); to liczba wierszy w dropdownie     -->
-            <div id="hide{{ forloop.counter }}" class="search_drop_hide_btn" onclick="list_book('{{ forloop.counter }}','{{ product.records|length}}');">
+            <div id="hide{{ forloop.counter }}" class="search_drop_hide_btn" onclick="list_book('{{ forloop.counter }}','{{ product.records|length}}', {{product.filtered_records}});">
             </div>
           </div>
 {% endwith %}
