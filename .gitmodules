@@ -1,6 +1,6 @@
 [submodule "externals/PyZ3950"]
 	path = externals/PyZ3950
-	url = git@github.com:noisy/PyZ3950.git
+	url = git@spistresci.pl:/var/git/PyZ3950.git
 [submodule "data"]
 	path = data
 	url = git@spistresci.pl:/var/git/bigdata.git
