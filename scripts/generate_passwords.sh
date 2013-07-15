@@ -8,7 +8,8 @@ if [ ! -f $filename ] ;
     then touch $filename ; 
 fi
 for ks in $@ ; 
-    do export pass=`makepasswd --chars=8`$ks ; 
-    echo $ks: $pass ; 
+    do export pass=`makepasswd --chars=8`_$ks ;
+    echo "login: $ks"
+    echo "haslo: $pass\n"
     htpasswd -b $filename $ks $pass 2> /dev/null ;
 done
