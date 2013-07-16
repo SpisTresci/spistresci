@@ -13,7 +13,7 @@
             </div>
             <div class="s_text">
               Formaty: {% for format in product.formats %}{% if forloop.first %}{{ format }}{% else %}, {{ format }}{% endif %}{% endfor %}<br />
-              Księgarnie: {% for bookstore in product.bookstore %}{% if forloop.first %}{{ bookstore }}{% else %}, {{ bookstore }}{% endif %}{% endfor %}.
+              Serwisy: {% for service in product.services %}{% if forloop.first %}{{ service }}{% else %}, {{ service }}{% endif %}{% endfor %}.
             </div>
              <div class="slb_price">
               cena od:
@@ -42,7 +42,7 @@
 
               <div class="sd_top">
                 <div class="sd_top_left">
-                    <div class="sort_for sort_for_long">Zabezpieczeń</div>
+                    <!--<div class="sort_for sort_for_long">Zabezpieczeń</div>-->
                     <div class="sort_for sort_for_long">Liczby formatów</div>
                     <div class="sort_for ">Ceny</div>
                     <div class="sort_for_title sort_for_long">SORTUJ WEDŁUG</div>
@@ -76,10 +76,11 @@
               <div class="sd_format_filtered_out">
                   <div class="sd_format_info">
                   {% if product.filtered_records == 1%}
-                  Oferta 1 serwisu nie spełniła wymagań aktywnych filtrów
+                  Oferta 1 serwisu nie spełniła wymagań aktywnych filtrów.
                   {% else %}
-                  Oferty {{ product.filtered_records }} serwisów nie spełniły wymagań aktywnych filtrów
+                  Oferty {{ product.filtered_records }} serwisów nie spełniły wymagań aktywnych filtrów.
                   {% endif %}
+                  Cena od {{ product.price_lowest_before_filtering }} zł.
                   </div>
               </div>
               {% endif %}

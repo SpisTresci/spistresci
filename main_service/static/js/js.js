@@ -1,3 +1,26 @@
+function toggleFormatFilter(){
+    $(this).toggleClass("act");
+}
+
+function setFilter(id, val, name) {
+    if (val){if($(id)){$(id).val(val);}else{$("<input>").attr({"type":"hidden","value":val,"name":name}).appendTo(".search_box");}} else {if($(id)){$(id).remove();}}
+}
+
+function collectFilters(){
+    var formats = []
+    $(".filter_format.act").find("a").each(function() { formats.push($.trim($(this).text()))});
+
+    setFilter("#id_formats", formats.join(','), "formats");
+    setFilter("#id_price_gte", $("#filter_price_from").val(), "from");
+    setFilter("#id_price_lte", $("#filter_price_to").val(), "to");
+}
+
+$(document).ready(function (){
+    $(".filter_format").on("click", toggleFormatFilter);
+    $("#id_submit").on("click", collectFilters);
+    $(".filter_button").on("click", function(){ $("#id_submit").click();});
+});
+
 function s_zip(){
   if(document.getElementById('s_left').className.indexOf("s_zip") !== -1){
     document.getElementById('s_left').className='s_left';
@@ -55,19 +78,6 @@ function btn(num){
   return false;
 }
 
-function mark_format(subgroup, item){
-  var elem = $('#filter_format_li_'+subgroup+'_'+item)[0];
-  elem.className=(elem.className.indexOf("act") !== -1)?'':'act';
-  $.post('/set_filter/format/'+elem.children[0].innerHTML+'/'+(elem.className=='act'?'1':'0')+'/');
-  return false;
-}
-
-function mark_price(id){
-  var elem = document.getElementById('filter_' + id);
-  $.post('/set_filter/price/'+id+'/'+elem.value.toString()+'/');
-  return false;
-}
-
 var listbook=[];
 function list_book(id, count_link, filter_info){
 
@@ -93,20 +103,10 @@ function list_book(id, count_link, filter_info){
 
 function filter_format_clear(){
     $('li[id^="filter_format_li"]').each(function(index, value) {value.className='';})
-    $.post('/clear_filter/format/');
   return false;
 }
 
 function filter_price_clear(){
     $('input[id^="filter_price_"]').each(function(index, value) {value.value='';})
-    $.post('/clear_filter/price/');
-  return false;
-}
-
-function filter(){
-  elem = document.getElementById('id_q');
-  query=elem.value;
-
-  window.open('?q='+query, '_self');
   return false;
 }

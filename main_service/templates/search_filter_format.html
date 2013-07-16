@@ -16,9 +16,7 @@
             </div>
             <ul id="sub{{ forloop.counter }}">
               {% for item in subgroup.items %}
-              <li id="filter_format_li_{{ forloop.parentloop.counter }}_{{forloop.counter}}"
-                  onclick="mark_format('{{ forloop.parentloop.counter }}', '{{forloop.counter}}');"
-                  {% if item.value %}class='act'{% endif %}>
+              <li class="filter_format{% if item.value %} act{% endif %}" id="filter_format_li_{{ forloop.parentloop.counter }}_{{forloop.counter}}">
                 <a>
                     {{ item.name }}
                 </a>
@@ -29,7 +27,7 @@
             <div id="filter_clear_button" class="s_left_btn" onclick="filter_format_clear();">
               WYCZYŚĆ
             </div>
-            <div id="filter_button" class="s_left_btn s_left_btn2" onclick="filter();">
+            <div class="filter_button s_left_btn s_left_btn2" >
               FILTRUJ
             </div>
             {% endif %}

@@ -1,10 +1,15 @@
 from haystack import indexes
 from models import MasterBookSolrWrapper
 
+
+
+class IntegerMultiValueField(indexes.MultiValueField):
+    field_type = 'integer'
+
 class MasterBookIndex(indexes.SearchIndex, indexes.Indexable):
     text = indexes.CharField(document=True, use_template=True)
     title = indexes.CharField(index_fieldname='title', stored=True)
-    price_lowest = indexes.CharField(index_fieldname='price_lowest', stored=True)
+    price_lowest = indexes.IntegerField(index_fieldname='price_lowest', stored=True)
 
     name = indexes.MultiValueField()
     firstName = indexes.MultiValueField()
@@ -23,7 +28,7 @@ class MasterBookIndex(indexes.SearchIndex, indexes.Indexable):
     format_mp3 = indexes.BooleanField(index_fieldname='format_mp3', stored=True)
 
     bookstore = indexes.MultiValueField()
-    price = indexes.MultiValueField()
+    price = IntegerMultiValueField()
     mini_format_mobi = indexes.MultiValueField()
     mini_format_epub = indexes.MultiValueField()
     mini_format_pdf = indexes.MultiValueField()
