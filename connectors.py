@@ -57,8 +57,7 @@ def main():
 
     for connector in connectors:
         try:
-            #choose_your_destiny(app_name)(connector)
-            run_connectors(connector)
+            choose_your_destiny(app_name)(connector)
         except Exception:
             Logger.exception('Error executing %s, in connector %s' % (app_name, connector.name))
     Logger.debug('Execution finished')
