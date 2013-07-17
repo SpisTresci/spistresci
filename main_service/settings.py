@@ -166,7 +166,7 @@ HAYSTACK_LIMIT_TO_REGISTERED_MODELS = False
 HAYSTACK_CONNECTIONS = {
     'default': {
         'ENGINE': 'haystack.backends.solr_backend.SolrEngine',
-        'URL': 'http://127.0.0.1:8983/solr/alpha5'
-        #'URL': 'http://solr1.spistresci.pl:8090/solr1/alpha4'
+        #'URL': 'http://127.0.0.1:8983/solr/alpha5'
+        'URL': 'http://solr1.spistresci.pl:8090/solr1/alpha5'
     },
 }
