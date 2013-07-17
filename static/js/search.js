@@ -167,6 +167,15 @@ function onReady(){
         success: function() {}
     });
 
+    $(document).scroll(function(e) {
+        if($(this).scrollTop() > 120){
+            $(".s_index_top_bg").addClass("sticky");
+        }
+        else{
+            $(".s_index_top_bg").removeClass("sticky");
+        }
+    });
+
     onResultsReady();
 }
 
