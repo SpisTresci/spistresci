@@ -767,6 +767,11 @@ a{
 .s_left_hide ul{
   list-style-position: outside; 
 }
+
+.hide_ul{
+  display: none;
+}
+
 .s_left_hide li{
   margin-left:35px;
   margin-bottom:1px;
@@ -1163,13 +1168,8 @@ a{
   margin-top:10px;
   cursor:pointer;
 }
-.search_drop_hide_btn2{
+.search_drop_hide_btn.act{
   background:url(../img/arrow_up_red.png) no-repeat;
-  width:39px;
-  height:24px;
-  margin-left:48%;
-  margin-top:10px;
-  cursor:pointer;
 }
 
 .search_drop_upper_hide_btn{

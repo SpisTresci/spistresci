@@ -1,7 +1,3 @@
-function toggleFormatFilter(){
-    $(this).toggleClass("act");
-}
-
 function setFilter(id, val, name) {
     if (val){if($(id)){$(id).val(val);}else{$("<input>").attr({"type":"hidden","value":val,"name":name}).appendTo(".search_box");}} else {if($(id)){$(id).remove();}}
 }
@@ -15,98 +11,56 @@ function collectFilters(){
     setFilter("#id_price_lte", $("#filter_price_to").val(), "to");
 }
 
-$(document).ready(function (){
-    $(".filter_format").on("click", toggleFormatFilter);
-    $("#id_submit").on("click", collectFilters);
-    $(".filter_button").on("click", function(){ $("#id_submit").click();});
-});
+function clearFilter(){
+    var filter=$(this).closest(".s_left_box");
+    filter.find('input[class^="filter_"]').val("");
+    filter.find('li[class^="filter_"]').removeClass("act");
+}
 
 function s_zip(){
-  if(document.getElementById('s_left').className.indexOf("s_zip") !== -1){
-    document.getElementById('s_left').className='s_left';
-    document.getElementById('s_right').className='s_right';
-    $.post('/hide_menu/0/');
-    zip_tmp="";
-  }
-  else{
-    document.getElementById('s_left').className='s_left s_zip';
-    document.getElementById('s_right').className='s_right s_right2';
-    $.post('/hide_menu/1/');
-  }
-
-  return false;
+      $(".s_left").toggleClass("s_zip");
+      $(".s_right").toggleClass("s_right2");
 }
 
-var tmp=[];
-function s_blue(num){
-  if(tmp[num]!="hide"){
-    document.getElementById('blue'+num).className='s_left_box';
-    tmp[num]="hide";
-  }
-  else{
-    document.getElementById('blue'+num).className='s_left_box act';
-    tmp[num]="";
-  }
-  return false;
+function prepareRecords(){
+    $(".search_list_item").each(function(){
+        var records_count = $(this).data("records-count");
+        var height = 35 + records_count * 136;
+        $(this).find(".search_drop").css({"marginTop":"-"+height+"px"});
+    });
 }
 
-var tmp_sub=[];
-function sub(num){
-  if(tmp_sub[num]!="hide"){
-    document.getElementById('sub'+num).style.display="none";
-    document.getElementById('menu_arrow'+num).className="s_left_cat_arrow s_left_cat_arrow2";
-    tmp_sub[num]="hide";
-  }
-  else{
-    document.getElementById('sub'+num).style.display="block";
-    document.getElementById('menu_arrow'+num).className="s_left_cat_arrow ";
-    tmp_sub[num]="";
-  }
-  return false;
+function toggleRecords(){
+    var product = $(this).closest(".search_list_item");
+    var records_count = product.data("records-count");
+    var height = 35 + records_count * 136 + (product.find(".sd_format_filtered_out").length > 0?25:0);
+
+    if(product.hasClass("act")){
+        product.find(".search_drop").css({"marginTop":"-"+height+"px"});
+        product.find(".search_drop2").css({"height":"0px"});
+    } else {
+        product.find(".search_drop").css({"marginTop":"0px"});
+        product.find(".search_drop2").css({"height":height+"px"});
+    }
+    product.toggleClass("act");
+    product.find(".search_drop_hide_btn").toggleClass("act");
 }
 
-var btn1=[];
-function btn(num){
-  if(btn1[num]!="hide"){
-    document.getElementById('btn'+num).className='s_left_cat act';
-    btn1[num]="hide";
-  }
-  else{
-    document.getElementById('btn'+num).className='s_left_cat';
-    btn1[num]="";
-  }
-  return false;
-}
+$(document).ready(function (){
+    prepareRecords();
+    $(".s_left_cat, .filter_format, .filter_service").on("click", function(event){ $(this).toggleClass("act"); event.stopPropagation(); });
+    $(".search_drop_hide_btn, .search_drop_upper_hide_btn, .product_details").on("click", toggleRecords);
+    $(".s_left_blue").on("click", function(event){ $(this).closest(".s_left_box").toggleClass("act");});
+    $("#id_submit").on("click", collectFilters);
+    $(".filter_button").on("click", function(){ $("#id_submit").click();});
+    $(".filter_clear_button").on("click", clearFilter);
+    $(".s_arrow_zip").on("click", s_zip);
 
-var listbook=[];
-function list_book(id, count_link, filter_info){
+    $(".s_left_cat_arrow").on("click", function(){
+        $(this).toggleClass("s_left_cat_arrow2");
+        $(this).closest(".s_left_hide").find("ul").toggleClass("hide_ul");
+    });
 
-  var height_link=35+count_link*136 + (filter_info?25:0);
 
-  if(listbook[id]!="show"){
-    document.getElementById('list_book'+id).style.marginTop="0px";
-    document.getElementById('list_book_2_'+id).style.height=height_link+"px";
+});
 
-    document.getElementById('hide'+id).className='search_drop_hide_btn2';
-    listbook[id]="show";
-  }
-  else{
-
-    document.getElementById('list_book'+id).style.marginTop="-"+height_link+"px";
-    document.getElementById('list_book_2_'+id).style.height="0px";
-
-    document.getElementById('hide'+id).className='search_drop_hide_btn';
-    listbook[id]="";
-  }
-  return false;
-}
-
-function filter_format_clear(){
-    $('li[id^="filter_format_li"]').each(function(index, value) {value.className='';})
-  return false;
-}
-
-function filter_price_clear(){
-    $('input[id^="filter_price_"]').each(function(index, value) {value.value='';})
-  return false;
-}

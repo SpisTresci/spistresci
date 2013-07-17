@@ -1,53 +1,8 @@
     <div class="s_left{% if isMenuHidden %} s_zip{% endif %}" id="s_left">
-      <div class="s_arrow_zip" onclick="s_zip();"></div>
-
+      <div class="s_arrow_zip"></div>
         {% for filter in filters %}
-
             {% include 'search_filter_format.html' %}
-
         {% endfor %}
-
-        <div class="s_left_box act" id="blue2">
-          <div class="s_left_blue" onclick="s_blue('2');">
-            CENA
-            <div class="s_left_arrow">
-            </div>
-          </div>
-          <div class="s_left_hide">
-            <form action="" method="">
-              Od: <input id='filter_price_from' type="text" value='{{ filter_price_from }}'> zł <br/>
-              Do: <input id='filter_price_to' type="text" value='{{ filter_price_to }}'> zł
-            </form>
-            <div id="filter_clear_button" class="s_left_btn" onclick="filter_price_clear();">
-              WYCZYŚĆ
-            </div>
-            <div class="filter_button s_left_btn s_left_btn2">
-              FILTRUJ
-            </div>
-          </div>
-        </div>
-
-        <div class="s_left_box act" id="blue3">
-          <div class="s_left_blue" onclick="s_blue('3');">
-            SERWISY
-            <div class="s_left_arrow">
-            </div>
-          </div>
-          <div class="s_left_hide s_left_hide_last" >
-            <div class="s_left_cat_arrow" onclick="sub('3');">
-            </div>
-            <div class="s_left_cat" id="btn3" onclick="btn('3');">
-              Wszystkie
-            </div>
-            <ul id="sub3">
-              {% for i, service_name in services %}
-              <li id="li_{{prefix}}{{i}}" onclick="li('_{{prefix}}{{i}}');">
-                <a>{{service_name}}</a>
-              </li>
-              {% endfor %}
-            </ul>  
-          </div>
-        </div>
-        
-
-      </div>
+        {% include 'search_filter_price.html' %}
+        {% include 'search_filter_service.html' %}
+    </div>
