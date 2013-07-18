@@ -119,70 +119,62 @@ class STSearchView(SearchView):
 
         return condition
 
-    def post_filtering(self, results):
+    def post_filtering(self, products):
 
-        id_to_exclude = []
+        filtered_products = []
 
-        for result in results:
-            records_num = len(result['records'])
+        for product in products:
+            records_num = len(product.records)
 
             if "formats" in self.get_args:
-                result['records'] = [record for record in result['records'] if any(record["format_" + format] for format in self.get_args["formats"])]
+                product.records = [record for record in product.records if any(record["format_" + format] for format in self.get_args["formats"])]
 
             if "from" in self.get_args:
-                result['records'] = [record for record in result['records'] if record['price'] >= self.get_args["from"]]
+                product.records = [record for record in product.records if record['price'] >= self.get_args["from"]]
 
             if "to" in self.get_args:
-                result['records'] = [record for record in result['records'] if record['price'] <= self.get_args["to"]]
+                product.records = [record for record in product.records if record['price'] <= self.get_args["to"]]
 
-            result['filtered_records']=records_num-len(result['records'])
+            product.filtered_records = records_num-len(product.records)
 
-            if len(result['records']) == 0:
-                id_to_exclude.append(result['id'])
+            if len(product.records) != 0:
+                filtered_products.append(product)
 
-        for e_id in id_to_exclude:
-            results = results.exclude(id=e_id)
+        return filtered_products
 
-        return results
-
-    def pre_process_records(self, results):
-        for result in results:
-            min = result['records'][0]['price']
-            for record in result['records']:
+    def pre_process_records(self, products):
+        for product in products:
+            min = product.records[0]['price']
+            for record in product.records:
                 if record['price'] < min:
                     min = record['price']
 
-            result["price_lowest_before_filtering"] = str("%.2f" % (min/100.0))
-        return results
+            product.price_lowest_before_filtering = str("%.2f" % (min/100.0))
+        return products
 
-    def post_process_records(self, results):
-        for result in results:
-            min = result['records'][0]['price'] #we do not need check if element exist, because empty results were excluded earlier
+    def post_process_records(self, products):
+        for product in products:
+            min = product.records[0]['price'] #we do not need check if element exist, because empty products were excluded earlier
             formats=set()
             services=set()
-            for record in result['records']:
+            for record in product.records:
                 if record['price'] < min:
                     min = record['price']
                 record['price'] = str("%.2f" % (int(record['price'])/100.0))
                 formats |= set(record['formats'])
                 services.add(record['bookstore'])
 
-            result["formats"] = formats
-            result["price_lowest"] = str("%.2f" % (min/100.0))
-            result["services"]= services
-        return results
-
+            product.formats = formats
+            product.price_lowest = str("%.2f" % (min/100.0))
+            product.services = services
+            product.cover = next((record["cover"] for record in product.records if record["cover"] != ""), "")
+        return products
 
     def get_results(self):
         self.parse_get_args()
-
         condition = self.pre_filtering()
         test = condition.get()
-        results = self.form.search().filter(condition.get()) if not condition.empty() else self.form.search()
-        results = self.pre_process_records(results)
-        results = self.post_filtering(results)
-        results = self.post_process_records(results)
-        return results
+        return self.form.search().filter(condition.get()) if not condition.empty() else self.form.search()
 
     def extra_context(self):
         extra = super(STSearchView, self).extra_context()
@@ -219,7 +211,6 @@ class STSearchView(SearchView):
             r.append({"name":subgroup_name, "items":[ {'name':format, 'value':(format in get)} for format in subgroup_format_list]})
         return r
 
-
     def load_formats_from_session(self, format_list):
         r=[]
         for format in format_list:
@@ -229,34 +220,60 @@ class STSearchView(SearchView):
                 r.append({'name':format, 'value':False})
         return r
 
-class STSearchQuerySet(SearchQuerySet):
+    def build_page(self):
+        from django.http import Http404
+        from django.core.paginator import Paginator, InvalidPage
+        """
+        Paginates the results appropriately.
 
-    def post_process_results(self, results):
-        to_cache = []
+        In case someone does not want to use Django's built-in pagination, it
+        should be a simple matter to override this method to do what they would
+        like.
+        """
+        try:
+            page_no = int(self.request.GET.get('page', 1))
+        except (TypeError, ValueError):
+            raise Http404("Not a valid number for page.")
 
-        for result in results:
-            records = []
-            for price, bookstore, url, cover, format_mobi, format_pdf, format_epub, format_cd, format_mp3 in zip (result.price, result.bookstore, result.url, result.cover, result.mini_format_mobi, result.mini_format_pdf, result.mini_format_epub, result.mini_format_cd, result.mini_format_mp3):
+        if page_no < 1:
+            raise Http404("Pages should be 1 or greater.")
+
+        start_offset = (page_no - 1) * self.results_per_page
+        self.results[start_offset:start_offset + self.results_per_page]
+
+        products = self.convertResultsToProducts(self.results[start_offset:start_offset + self.results_per_page])
+        products = self.pre_process_records(products)
+        products = self.post_filtering(products)
+        products = self.post_process_records(products)
+
+        paginator = Paginator(products, self.results_per_page)
+
+        try:
+            page = paginator.page(page_no)
+        except InvalidPage:
+            raise Http404("No such page!")
+
+        return (paginator, page)
+
+    def convertResultsToProducts(self, results):
+        products=[]
+        for product in results:
+            product.records = []
+            for price, bookstore, url, cover, format_mobi, format_pdf, format_epub, format_cd, format_mp3 in zip (product.price, product.bookstore, product.url, product.cover, product.mini_format_mobi, product.mini_format_pdf, product.mini_format_epub, product.mini_format_cd, product.mini_format_mp3):
                 record={}
                 for var_name in ["price", "bookstore", "url", "cover", "format_mobi", "format_pdf", "format_epub", "format_cd", "format_mp3"]:
                     record[var_name] = eval(var_name)
 
                 record["formats"] = [attr.replace("format_", "").upper() for attr, value  in record.iteritems() if str(attr).startswith("format_") and value]
-                records.append(record)
+                product.records.append(record)
 
-            result.records = records
-            result._additional_fields.append("records")
+            products.append(product)
 
-            if len(records) > 0:
-                result.cover = records[0]["cover"]
-            else:
-                result.cover = ""
+        return products
 
-            result._additional_fields.append("cover")
-            to_cache.append(dict((i, getattr(result, i, None)) for i in result._additional_fields))
-
-        return to_cache
-
+class STSearchQuerySet(SearchQuerySet):
+    def post_process_results(self, results):
+        return results
 
 def hide_menu(request, value):
     if not request.is_ajax() or not request.method=='POST':
