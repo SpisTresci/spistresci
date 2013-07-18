@@ -76,15 +76,14 @@ class STSearchView(SearchView):
 
     def simplifyPrice(self, price_str):
         price_str = price_str.replace(',', '.')
-        if price_str.count('.') == 0:
+        c = price_str.count('.')
+        if c == 0:
             if price_str.isdigit():
-                price_str += '00'
-                return int(price_str)
-        elif price_str.count('.') == 1:
-            length = price_str.find(".")+len("00")
-            price_str=price_str.replace(".", "")
-            price_str=price_str.ljust(length, "0")[:length]
+                return int(price_str + '00')
+        elif c == 1:
+            length = price_str.find('.')+len('00')
             price_str=price_str.replace('.', '')
+            price_str=price_str.ljust(length, '0')[:length]
             if price_str.isdigit():
                 return int(price_str)
 
