@@ -132,21 +132,34 @@ class STSearchView(SearchView):
         filtered_products = []
 
         for product in products:
-            records_num = len(product.records)
+            filtered_records = list(product.records)
+
+            ### start of filtering records ###
 
             if "formats" in self.get_args:
-                product.records = [record for record in product.records if any(record["format_" + format] for format in self.get_args["formats"])]
+                filtered_records = [record for record in filtered_records if any(record["format_" + format] for format in self.get_args["formats"])]
 
             if "from" in self.get_args:
-                product.records = [record for record in product.records if record['price'] >= self.get_args["from"]]
+                filtered_records = [record for record in filtered_records if record['price'] >= self.get_args["from"]]
 
             if "to" in self.get_args:
-                product.records = [record for record in product.records if record['price'] <= self.get_args["to"]]
-
-            product.filtered_records = records_num-len(product.records)
+                filtered_records = [record for record in filtered_records if record['price'] <= self.get_args["to"]]
 
             if "services" in self.get_args:
-                product.records = [record for record in product.records if record['bookstore'] in self.get_args["services"]]
+                filtered_records = [record for record in filtered_records if record['bookstore'] in self.get_args["services"]]
+
+            ### end of filtering records ###
+
+            product.filtered_formats = []
+            for record in product.records:
+                if not record in filtered_records:
+                    for format in record["formats"]:
+                        if not format in product.filtered_formats:
+                            product.filtered_formats.append(format)
+
+            product.filtered_records_number = len(product.records) - len(filtered_records)
+
+            product.records = filtered_records
 
             if len(product.records) != 0:
                 filtered_products.append(product)
@@ -221,7 +234,7 @@ class STSearchView(SearchView):
                                     'name':'CENA',
                                     'name_id':'price',
                                     'template_file':'search_filter_price.html',
-                                    'data':self.load_price_conditions_from_request(extra, ['from', 'to'])
+                                    'data':self.loadFilterPriceState(['from', 'to'])
                                 },
                                 {
                                     'name':'SERWISY',
@@ -238,10 +251,12 @@ class STSearchView(SearchView):
             if value in self.request.session:
                 extra_dict[value] = self.request.session[value]
 
-    def load_price_conditions_from_request(self, extra_dict, borders):
+    def loadFilterPriceState(self, borders):
+        dic = {}
         for border in borders:
             if border in self.get_args:
-                extra_dict["filter_price_" + border] = str("%.2f" % (self.get_args[border]/100.0))
+                dic["price_" + border] = str("%.2f" % (self.get_args[border]/100.0))
+        return dic
 
     def loadFilterState(self, dic, name):
         get = self.get_args[name] if name in self.get_args else []

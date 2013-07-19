@@ -63,15 +63,16 @@
                 </div>
               </div>
               {% endfor %}
-              {% if product.filtered_records > 0 %}
+              {% if product.filtered_records_number > 0 %}
               <div class="sd_format_filtered_out">
                   <div class="sd_format_info">
-                  {% if product.filtered_records == 1%}
+                  {% if product.filtered_records_number == 1%}
                   Oferta 1 serwisu nie spełniła wymagań aktywnych filtrów.
                   {% else %}
-                  Oferty {{ product.filtered_records }} serwisów nie spełniły wymagań aktywnych filtrów.
+                  Oferty {{ product.filtered_records_number }} serwisów nie spełniły wymagań aktywnych filtrów.
                   {% endif %}
-                  Cena od {{ product.price_lowest_before_filtering }} zł.
+                  Format{% if product.filtered_formats|length > 1  %}y{% endif %} {% for format in product.filtered_formats %}{{ format }}{% if not forloop.last %}, {% endif %}{% endfor %}.
+                  Cena {% if product.filtered_records_number > 1%}od {% endif %}{{ product.price_lowest_before_filtering }} zł.
                   </div>
               </div>
               {% endif %}
