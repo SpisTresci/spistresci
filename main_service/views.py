@@ -101,6 +101,9 @@ class STSearchView(SearchView):
                 if value != None:
                     self.get_args[price_border_name] = value
 
+        if "services" in self.request.GET:
+            self.get_args["services"] = self.request.GET["services"].split(",")
+
     def pre_filtering(self):
         condition = STSearchView.ConditionBuilder()
 
@@ -115,6 +118,12 @@ class STSearchView(SearchView):
 
         if "to" in self.get_args:
             condition.add({"price__lte":self.get_args["to"]})
+
+        condition.next("and")
+
+        if "services" in self.get_args:
+            for service in self.get_args["services"]:
+                condition.add({"bookstore":service})
 
         return condition
 
@@ -135,6 +144,9 @@ class STSearchView(SearchView):
                 product.records = [record for record in product.records if record['price'] <= self.get_args["to"]]
 
             product.filtered_records = records_num-len(product.records)
+
+            if "services" in self.get_args:
+                product.records = [record for record in product.records if record['bookstore'] in self.get_args["services"]]
 
             if len(product.records) != 0:
                 filtered_products.append(product)
@@ -175,20 +187,49 @@ class STSearchView(SearchView):
         test = condition.get()
         return self.form.search().filter(condition.get()) if not condition.empty() else self.form.search()
 
+    def getServicesInfo(self):
+        results = STSearchQuerySet().using('bookstore').auto_query("bookstores").load_all()
+        bookstores=[]
+        for result in results:
+            bs = {}
+            bs['name'] = result.bookstore
+            bs['name_lowercase'] = result.bookstore.lower()
+            bs['miniBookCount'] = result.miniBookCount
+            bookstores.append(bs)
+
+        return bookstores
+
     def extra_context(self):
         extra = super(STSearchView, self).extra_context()
 
+        self.servicesInfo = self.getServicesInfo()
+
         extra['top_menu'] = list_of_services
         extra['supported_formats'] = supported_formats
-
-        services = ["abooki.pl", "albertus.pl", "audeo.pl", "audiobook.pl", "audioteka.pl", "barbelo.com.pl", "bezkartek.pl", "bezokladki.pl", "booki25.pl", "bookio.pl", "bookmaster.pl", "bookoteka.pl", "bookson.pl", "cdp.pl", "czarty.pl", "sklep.czatroom.pl", "czytajtanio.pl", "czeskieklimaty.pl", "czytam.pl", "dobryebook.pl", "ekiosk.pl", "eporadniki.pl", "etekst.pl", "ebooki24.pl", "ebook.memento.pl", "ebook.pl", "ebooki123.pl", "ebooki.allegro.pl", "ebooki.orange.pl", "ebooki.tmobile.pl", "ebookomania.pl", "eBookpoint.pl", "helion.pl", "onepress.pl", "sensus.pl", "septem.pl", "ebookowo.pl", "ebookowo.pl", "ebooks43.pl", "eclicto.pl", "empik.pl", "escapemagazine.pl", "fabryka.pl", "ksiazki.pl", "kodeksywmp3.pl", "fantastykapolska.pl", "gandalf.com.pl", "gutenberg.org", "iBook.net.pl" ]
-        extra["services"] = services
         extra["prefix"] = "s"
 
         self.load_values_if_exists_in_session(extra, ['isMenuHidden'])
-        self.load_price_conditions_from_request(extra, ['from', 'to'])
 
-        extra['filters'] = [{'name':'FORMATY','subgroups':self.load_formats_from_request()}]
+        extra['filters'] = [
+                                {
+                                    'name':'FORMATY',
+                                    'name_id':'format',
+                                    'template_file':'search_filter_list.html',
+                                    'data':self.loadFilterState(supported_formats, "formats")
+                                },
+                                {
+                                    'name':'CENA',
+                                    'name_id':'price',
+                                    'template_file':'search_filter_price.html',
+                                    'data':self.load_price_conditions_from_request(extra, ['from', 'to'])
+                                },
+                                {
+                                    'name':'SERWISY',
+                                    'name_id':'service',
+                                    'template_file':'search_filter_list.html',
+                                    'data':self.loadFilterState({'Wszystkie':[bookstore['name'] for bookstore in self.servicesInfo]}, "services")
+                                },
+                        ]
 
         return extra
 
@@ -202,20 +243,11 @@ class STSearchView(SearchView):
             if border in self.get_args:
                 extra_dict["filter_price_" + border] = str("%.2f" % (self.get_args[border]/100.0))
 
-    def load_formats_from_request(self):
-        get = self.get_args["formats"] if "formats" in self.get_args else []
+    def loadFilterState(self, dic, name):
+        get = self.get_args[name] if name in self.get_args else []
         r = []
-        for subgroup_name, subgroup_format_list in supported_formats.items():
-            r.append({"name":subgroup_name, "items":[ {'name':format, 'value':(format in get)} for format in subgroup_format_list]})
-        return r
-
-    def load_formats_from_session(self, format_list):
-        r=[]
-        for format in format_list:
-            if 'filter_format_'+format in self.session:
-                r.append({'name':format, 'value':self.session['filter_format_'+format]})
-            else:
-                r.append({'name':format, 'value':False})
+        for group_name, group_item_list in dic.items():
+            r.append({"name":group_name, "items":[ {'name':item, 'isFilterActive':(item in get)} for item in group_item_list]})
         return r
 
     def build_page(self):

@@ -1,6 +1,6 @@
 from haystack import indexes
 from models import MasterBookSolrWrapper
-
+from models import BookstoreSolrWrapper
 
 
 class IntegerMultiValueField(indexes.MultiValueField):
@@ -37,6 +37,17 @@ class MasterBookIndex(indexes.SearchIndex, indexes.Indexable):
 
     def get_model(self):
         return MasterBookSolrWrapper
+
+    def index_queryset(self, using=None):
+        return self.get_model().objects.all()
+
+class BookstoreIndex(indexes.SearchIndex, indexes.Indexable):
+    text = indexes.CharField(document=True, use_template=True)
+    bookstore = indexes.CharField(index_fieldname='bookstore', stored=True)
+    miniBookCount = indexes.IntegerField(index_fieldname='miniBookCount', stored=True)
+
+    def get_model(self):
+        return BookstoreSolrWrapper
 
     def index_queryset(self, using=None):
         return self.get_model().objects.all()

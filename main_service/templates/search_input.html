@@ -1,7 +1,4 @@
                   <input id="id_q" name="q" type="text" autocomplete="off" value="{{ query }}">
-                  <input id="id_formats" name="formats" type="hidden">
-                  <input id="id_price_gte" name="from" type="hidden">
-                  <input id="id_price_lte" name="to" type="hidden">
                   <ul class="search_input_hover" id="hover">
                     {% for autocomplate_record in page.autocomplate_list %}
                             <li {% if forloop.last %} id="last" {% endif %} >

@@ -1,8 +1,6 @@
     <div class="s_left{% if isMenuHidden %} s_zip{% endif %}" id="s_left">
       <div class="s_arrow_zip"></div>
         {% for filter in filters %}
-            {% include 'search_filter_format.html' %}
+            {% include filter.template_file %}
         {% endfor %}
-        {% include 'search_filter_price.html' %}
-        {% include 'search_filter_service.html' %}
     </div>

@@ -1,22 +1,20 @@
 {% load mathtags %}
-{% with group=filter %}
-
         <div class="s_left_box act">
           <div class="s_left_blue">
-            {{group.name}}
+            {{filter.name}}
             <div class="s_left_arrow">
             </div>
           </div>
-          {% for subgroup in group.subgroups %}
+          {% for group in filter.data %}
           <div class="s_left_hide{% if forloop.last %} s_left_hide_last{% endif %}" >
             <div id="menu_arrow{{ forloop.counter }}" class="s_left_cat_arrow">
             </div>
             <div class="s_left_cat">
-              {{ subgroup.name }}
+              {{ group.name }}
             </div>
             <ul id="sub{{ forloop.counter }}">
-              {% for item in subgroup.items %}
-              <li class="filter_format{% if item.value %} act{% endif %}">
+              {% for item in group.items %}
+              <li class="filter_{{ filter.name_id }}{% if item.isFilterActive %} act{% endif %}">
                 <a>
                     {{ item.name }}
                 </a>
@@ -34,4 +32,3 @@
           </div>
           {% endfor %}
         </div>
-{% endwith %}

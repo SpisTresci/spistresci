@@ -1,12 +1,26 @@
 function setFilter(id, val, name) {
-    if (val){if($(id)){$(id).val(val);}else{$("<input>").attr({"type":"hidden","value":val,"name":name}).appendTo(".search_box");}} else {if($(id)){$(id).remove();}}
+    if($(id).length > 0){
+        if (val){
+            $(id).val(val);
+        }else{
+            $(id).remove();
+        }
+    } else {
+        if (val){
+            $("<input>").attr({"type":"hidden","value":val,"name":name}).appendTo(".search_box");
+        }
+    }
 }
 
 function collectFilters(){
     var formats = []
     $(".filter_format.act").find("a").each(function() { formats.push($.trim($(this).text()))});
-
     setFilter("#id_formats", formats.join(','), "formats");
+
+    var services = []
+    $(".filter_service.act").find("a").each(function() { services.push($.trim($(this).text()))});
+    setFilter("#id_services", services.join(','), "services");
+
     setFilter("#id_price_gte", $("#filter_price_from").val(), "from");
     setFilter("#id_price_lte", $("#filter_price_to").val(), "to");
 }
