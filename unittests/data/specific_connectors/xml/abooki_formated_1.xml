@@ -46,6 +46,7 @@ się&amp;#34;, złoty osioł i kij samobij &amp;lt;/li&amp;gt;
     </imgs>
     <attrs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <a xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="ShopProductId">1060</a>
+      <a xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Producent">  D.H. Lawrence </a>
     </attrs>
   </o>
 </offers>

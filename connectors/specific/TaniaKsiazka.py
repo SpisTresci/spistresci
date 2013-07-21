@@ -6,20 +6,20 @@ class TaniaKsiazka(XMLConnector):
 
     #dict of xml_tag -> db_column_name translations
     xml_tag_dict = {
-        "@awId":('awId', ''),
-        "@programName":('programName', ''),
-        './pId':('external_id', None),
-        './name':('title', ''),
-        './desc':('description', ''),
-        './cat/awCatId':('category_id', ''),
-        './cat/awCat':('category', ''),
-        './cat/mCat':('type', ''),
-        './brand':('brand', ''),
-        './awLink':('url', ''),
-        './awThumb':('thumbnail', ''),
-        './awImage':('cover', ''),
-        "./price/display":('price', 0),
-        "./atribute[@Name='ISBN']":('isbns', ''),
+        'awId': ("@awId", ''),
+        'programName': ('@programName', ''),
+        'external_id': ('./pId', None),
+        'title': ('./name', ''),
+        'description': ('./desc', ''),
+        'category_id': ('./cat/awCatId', ''),
+        'category': ('./cat/awCat', ''),
+        'type': ('./cat/mCat', ''),
+        'brand': ('./brand', ''),
+        'url': ('./awLink', ''),
+        'thumbnail': ('./awThumb', ''),
+        'cover': ('./awImage', ''),
+        'price': ('./price/display',  0),
+        'isbns': ("./atribute[@Name='ISBN']", ''),
        }
 
 Base = SqlWrapper.getBaseClass()

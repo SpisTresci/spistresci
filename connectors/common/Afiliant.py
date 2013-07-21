@@ -12,13 +12,13 @@ class Afiliant(XMLConnector):
 
     #dict of xml_tag -> db_column_name translations
     xml_tag_dict = {
-        xmls_namespace + 'id':('external_id', ''),
-        xmls_namespace + 'name':('title', ''),
-        xmls_namespace + 'url':('url', ''),
-        xmls_namespace + 'categoryId':('category', ''),
-        xmls_namespace + 'description':('description', ''),
-        xmls_namespace + 'image':('cover', ''),
-        xmls_namespace + 'price':('price', 0),
+        'external_id': (xmls_namespace + 'id', ''),
+        'title': (xmls_namespace + 'name', ''),
+        'url': (xmls_namespace + 'url', ''),
+        'category': (xmls_namespace + 'categoryId', ''),
+        'description': (xmls_namespace + 'description', ''),
+        'cover': (xmls_namespace + 'image', ''),
+        'price': (xmls_namespace + 'price', 0),
     }
 
     xml_attributes_dict = {
@@ -37,7 +37,7 @@ class Afiliant(XMLConnector):
     def make_dict(self, book):
         book_dict = {}
         for tag in self.xml_tag_dict.keys():
-            book_dict[ (self.xml_tag_dict[tag])[0] ] = unicode(book.findtext(tag, (self.xml_tag_dict[tag])[1]))
+            book_dict[ tag ] = unicode(book.findtext( (self.xml_tag_dict[tag])[0], (self.xml_tag_dict[tag])[1]))
 
         attributes = book.find(self.xmls_namespace + 'attributes')
 

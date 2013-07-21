@@ -5,8 +5,12 @@ import glob
 class DataValidator(object):
 
     list_of_names = []
-    supported_formats = ["pdf", "mobi", "epub", "txt", "mp3"]
+    supported_formats = ['cd', 'cd_mp3', 'dvd', 'epub', 'fb2', 'ks', 'mobi', 'mp3', 'pdf', 'txt', 'xml']
+    
+    #ks means - paperbook
     supported_persons = ['author', 'lector', 'redactor', 'translator']
+
+    price_re = re.compile(r'^(\d*)([.,]?)(\d{0,2})$')
 
     def validate(self, dic):
         id = dic.get('external_id')
@@ -14,7 +18,7 @@ class DataValidator(object):
         self.validateFormats(dic, id, title)
         self.validateISBNs(dic, id, title)
         self.validatePrice(dic, id, title)
-        self.validatePrice(dic, id, title, 'price_normal')
+        self.validatePrice(dic, id, title, 'price_normal', -1)
         self.validateSize(dic, id, title)
         self.validateAuthors(dic, id, title)
         self.validateLectors(dic, id, title)
@@ -36,7 +40,7 @@ class DataValidator(object):
             else:
                 format_list = formats
 
-        format_list = [x.strip().lower() for x in format_list]
+        format_list = [x.strip().lower().replace('-','_') for x in format_list]
 
         if len(format_list) != len(set(format_list)):
             self.erratum_logger.warning("This same format declared more than once! connector: %s, id: %s, title: %s, formats: %s" % (self.name, id, title, formats))
@@ -99,38 +103,22 @@ class DataValidator(object):
 
         dic['isbns'] = isbn_list
 
-    def validatePrice(self, dic, id, title, price_tag_name = 'price'):
-        original_price = dic.get(price_tag_name)
-        price = 0
-        if original_price != None:
-            price_str = original_price
-            if "," in price_str:
-                price_str = price_str.replace(",", ".")
-            try:
-                if price_str.count(".") == 1:
-                    if len(price_str.split(".")[0]) >= 1 and len(price_str.split(".")[1]) >= 1:
-                        if  int(price_str.split(".")[0]) >= 0 and len(price_str.split(".")[1]) == 2:
-                            price_str = price_str.replace(".", "")
-                        elif int(price_str.split(".")[0]) >= 0 and len(price_str.split(".")[1]) == 1:
-                            price_str = price_str.replace(".", "") + "0"
-
-                    elif price_str.startswith("."): # .99
-                        price_str = price_str.replace(".", "")
-                    elif price_str.endswith("."): # 4.
-                            price_str = price_str.replace(".", "") + "00"
-                    else:
-                        self.erratum_logger.warning("Entry has price in wrong format! connector: %s, id: %s, title: %s, price: %s" % (self.name, id, title, str(original_price)))
-                elif price_str.count(".") == 0:
-                    price_str += "00"
-
-                price = int(price_str)
-                if price < 0:
-                    self.erratum_logger.warning("Price should be positive value! connector: %s, id: %s, title: %s, price: %s" % (self.name, id, title, str(original_price)))
-
-            except ValueError:
+    def validatePrice(self, dic, id, title, price_tag_name = 'price', default_price=0):
+        if type(default_price) is not int:
+            raise TypeError('Default_price should be integer')
+        
+        original_price = dic.get(price_tag_name, default_price)
+        if original_price != default_price and original_price != '':
+            price_match = self.price_re.match(original_price)
+            if not price_match:
                 self.erratum_logger.warning("Entry has price in wrong format! connector: %s, id: %s, title: %s, price: %s" % (self.name, id, title, str(original_price)))
-
-        dic[price_tag_name] = unicode(price)
+                dic[price_tag_name] = unicode(default_price)
+            else:
+                zl = int(('%1s'%price_match.groups()[0]).replace(' ','0'))*100
+                gr = int(('%2s'%price_match.groups()[2]).replace(' ','0'))
+                dic[price_tag_name] = unicode(zl+gr)
+        else:
+            dic[price_tag_name] = unicode(default_price)
 
     def validatePerson(self, person, id, title):
         pdict = {}

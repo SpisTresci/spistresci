@@ -8,12 +8,12 @@ class WolneEbooki(XMLConnector):
 
     #dict of xml_tag -> db_column_name translations
     xml_tag_dict = {
-        "./author":('authors', ''),
-        "./title":('title', ''),
-        "./cena":('price', 0),
-        "./formats":('formats', ''),
-        "./link":('url', ''),
-        "./okladka":('cover', ''),
+        'authors':('./author', ''),
+        'title':('./title', ''),
+        'price':('./cena', 0),
+        'formats':('./formats', ''),
+        'url':('./link', ''),
+        'cover':('./okladka', ''),
     }
 
     def adjust_parse(self, dic):

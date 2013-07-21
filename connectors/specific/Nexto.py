@@ -8,26 +8,26 @@ class Nexto(XMLConnector):
 
     #dict of xml_tag -> db_column_name translations
     xml_tag_dict = {
-        './id':('external_id', None),
-        './isbn':('isbns', ''),
-        './language':('lang_short', ''),
-        './body':('description', ''),
-        './title':('title', ''),
-        './publisher':('publisher', ''),
-        './manufacturer_id':('manufacturer_id', ''),
-        './product_code':('product_code', ''),
+        'external_id': ('./id', None),
+        'isbns': ('./isbn', ''),
+        'lang_short': ('./language', ''),
+        'description': ('./body', ''),
+        'title': ('./title', ''),
+        'publisher': ('./publisher', ''),
+        'manufacturer_id': ('./manufacturer_id', ''),
+        'product_code': ('./product_code', ''),
 
-        './category_refs/id':('category_id', ''),
+        'category_id': ('./category_refs/id', ''),
 
-        './issues/issue/issue_id':('issue_id', ''),
-        './issues/issue/author':('authors', ''),
-        './issues/issue/gross_nexto_price':('gross_price', ''),
-        './issues/issue/vat':('vat', ''),
-        './issues/issue/default_net_price':('default_price', ''),
-        './issues/issue/net_api_price':('api_price', ''),
-        './issues/issue/default_spread':('default_spread', ''),
-        './issues/issue/image':('cover', ''),
-        "./issues/issue/format{'./type':('format', ''), './file-protection/type':('protection',''), './file-protection/properties':('properties','')}":('formats', ''),
+        'issue_id': ('./issues/issue/issue_id', ''),
+        'authors': ('./issues/issue/author', ''),
+        'gross_price': ('./issues/issue/gross_nexto_price', ''),
+        'vat': ('./issues/issue/vat', ''),
+        'default_price': ('./issues/issue/default_net_price', ''),
+        'api_price': ('./issues/issue/net_api_price', ''),
+        'default_spread': ('./issues/issue/default_spread', ''),
+        'cover': ('./issues/issue/image', ''),
+        'formats': ("./issues/issue/format{'format': ('./type', ''), 'protection': ('./file-protection/type', ''), 'properties': ('./file-protection/properties', '')}", ''),
        }
 
     def downloadFile(self):

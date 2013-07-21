@@ -171,7 +171,8 @@ class GenericConnector(GenericBase, DataValidator):
         self.loadListOfNames()
 
     def __del__(self):
-        self.logger.debug('Cleaning up after executing %s connector' % self.name)
+        if self.logger:
+            self.logger.debug('Cleaning up after executing %s connector' % self.name)
         if self.backup_dir:
             if self.backup_archive in [self.ArchiveType.BZIP, self.ArchiveType.GZ] and \
                self.mode not in [self.BookList_Mode.ZIPPED_XMLS, self.BookList_Mode.GZIPPED_XMLS]:
@@ -472,22 +473,17 @@ class GenericConnector(GenericBase, DataValidator):
 
         #session.close()
 
-    statuses = {
-                0:('unavailable', 'niedostepna'),
-                1:('available', 'dostepna'),
-                2:('in preparation', 'w przygotowaniu'),
-                3:('presale', 'przedsprzedaz'),
-                4:('print on demand', 'druk na zadanie'),
-                5:('few pieces left in stock', 'dostepna w malej ilosci'),
-                }
 
 class GenericBook(GenericBase):
     id = Column(Integer, primary_key=True)
-    title = Column(Unicode(255))
     external_id = Column(Integer, unique=True)
-    price = Column(Integer)                     #GROSZE!!!
-    price_normal = Column(Integer)              #GROSZE!!!
-    status = Column(Integer)
+    title = Column(Unicode(256))
+    price = Column(Integer) #price in grosz
+    #if price_normal == -1 it means there is no special offer for this book
+    price_normal = Column(Integer, default=-1) #price in grosz
+    #status = Column(Integer)
+    url = Column(Unicode(256))
+    cover = Column(Unicode(256))
 
     @declared_attr
     def declareTablesFor(cls):

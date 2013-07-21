@@ -8,22 +8,22 @@ class eClicto(Ceneo):
 
     #dict of xml_tag -> db_column_name translations
     xml_tag_dict = {
-        "@id":('external_id', ''),
-        "@url":('url', ''),
-        "@price":('price', 0),
-        "@set":('set', 0), #???
-        "@avail":('availability', ''),
-        "@weight":('weight', '0.00'),
+        'external_id': ('@id', ''),
+        'url': ('@url', ''),
+        'price': ('@price', 0),
+        'set': ('@set', 0), #???
+        'availability': ('@avail', ''),
+        'weight': ('@weight', '0.00'),
 
-        "./cat":('category', ''),
-        "./name":('title', ''),
-        "./imgs/main[@url]":('cover', ''),
-        "./desc":('description', ''),
-        "./attrs/a[@name='Autor']":('authors', ''),
-        "./attrs/a[@name='ISBN']":('isbns', ''),
-        "./attrs/a[@name='Rok_wydania']":('date', ''),
-        "./attrs/a[@name='Producent']":('publisher', ''),
-        "./attrs/a[@name='Format']":('formats', ''),
+        'category': ('./cat', ''),
+        'title': ('./name', ''),
+        'cover': ('./imgs/main[@url]', ''),
+        'description': ('./desc', ''),
+        'authors': ("./attrs/a[@name='Autor']", ''),
+        'isbns': ("./attrs/a[@name='ISBN']", ''),
+        'date': ("./attrs/a[@name='Rok_wydania']", ''),
+        'publisher': ("./attrs/a[@name='Producent']", ''),
+        'formats': ("./attrs/a[@name='Format']", ''),
     }
 
 class eClictoBook(GenericBook, Base):

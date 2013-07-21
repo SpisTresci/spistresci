@@ -5,13 +5,13 @@ from connectors.generic import GenericBook
 class Bookoteka(XMLConnector):
     #dict of xml_tag -> db_column_name translations
     xml_tag_dict = {
-        './title':('title', ''),
-        './format':('formats', ''),
-        './price':('price', ''),
-        './isbn':('isbns', ''),
-        './coverUrl':('cover', ''),
-        './url':('url', ''),
-        "./*[contains(name(), 'author_')]":('authors', ''),
+        'title':('./title', ''),
+        'formats':('./format', ''),
+        'price':('./price', ''),
+        'isbns':('./isbn', ''),
+        'cover':('./coverUrl', ''),
+        'url':('./url', ''),
+        'authors': ("./*[contains(name(), 'author_')]", ''),
     }
 
     uni_dict = {}

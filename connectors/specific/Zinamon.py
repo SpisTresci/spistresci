@@ -6,16 +6,16 @@ class Zinamon(XMLConnector):
 
     #dict of xml_tag -> db_column_name translations
     xml_tag_dict = {
-        './tytul':('title', ''),
-        './url':('url', ''),
-        './autorzy':('authors', ''),
-        './format':('formats', ''),
-        './okladka':('cover', ''),
-        './cena':('price', ''),
-        './id':('external_id', ''),
-        './isbn':('isbns', ''),
-        './kategorie':('category', ''),
-        './zabezpieczenia':('protection', ''),
+        'title': ('./tytul', ''),
+        'url': ('./url', ''),
+        'authors': ('./autorzy', ''),
+        'formats': ('./format', ''),
+        'cover': ('./okladka', ''),
+        'price': ('./cena', ''),
+        'external_id': ('./id', ''),
+        'isbns': ('./isbn', ''),
+        'category': ('./kategorie', ''),
+        'protection': ('./zabezpieczenia', ''),
     }
 
 Base = SqlWrapper.getBaseClass()

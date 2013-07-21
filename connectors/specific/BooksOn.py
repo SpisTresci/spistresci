@@ -10,17 +10,17 @@ class BooksOn(Ceneo):
 
     #dict of xml_tag -> db_column_name translations
     xml_tag_dict = {
-        "@id":('external_id', ''),
-        "@price":('price', 0),
-        "@url":('url', ''),
-        "@avail":('availability', ''),
-        "@set":('set', 0), #???
-        "@baset":('baset', 0), #???
-        "./n:cat":('category', ''),
-        "./n:name":('title', ''),
-        "./n:imgs/n:main[@url]":('cover', ''),
-        "./n:desc":('description', ''),
-        "./n:attrs/n:a[@name='Autor']":('authors', ''),
+        'external_id': ('@id',  ''),
+        'price': ('@price', 0),
+        'url': ('@url',  ''),
+        'availability': ('@avail', ''),
+        'set': ('@set', 0), #???
+        'baset': ('@baset', 0), #???
+        'category': ('./n:cat', ''),
+        'title': ('./n:name', ''),
+        'cover': ('./n:imgs/n:main[@url]', ''),
+        'description': ('./n:desc', ''),
+        'authors': ("./n:attrs/n:a[@name='Autor']", ''),
     }
 
 class BooksOnBook(GenericBook, Base):

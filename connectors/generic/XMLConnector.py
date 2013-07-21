@@ -18,7 +18,7 @@ class XMLConnector(GenericConnector):
         return et
 
     def fetchData(self, unpack=True):
-        self.downloadFile()
+        #self.downloadFile()
         if unpack and self.mode == XMLConnector.BookList_Mode.ZIPPED_XMLS:
             self.fetched_files.extend(
               self.unpackZIP(os.path.join(self.backup_dir, self.filename))
@@ -51,26 +51,24 @@ class XMLConnector(GenericConnector):
         if xml_tag_dict == None:
             xml_tag_dict = self.xml_tag_dict
 
+
         book_dict = {}
-        for tag in xml_tag_dict.keys():
+        for (dict_key, xpath) in xml_tag_dict.items():
+            (tag, default_0) = xpath
             regex = re.compile("([^{]*)({.*})?")
             recurency = regex.search(tag).groups()
             ntag = recurency[0]
-
             elems = book.xpath(ntag, namespaces=self.xmls_namespace)
             for elem in elems:
                 if recurency[1] != None:
-                    self.getDictFromElem(eval(recurency[1]), xml_tag_dict[tag][0], elem, tag, book_dict)
+                    self.getDictFromElem(eval(recurency[1]), dict_key, elem, tag, book_dict)
                 else:
-                    self.getValueFromElem(xml_tag_dict, elem, ntag, book_dict)
+                    self.getValueFromElem(dict_key, default_0, elem, ntag, book_dict)
 
-            t = xml_tag_dict[tag][0]
+            book_dict.setdefault(dict_key, (unicode(default_0) if default_0 != None else None))
 
-            if book_dict.get(t) == None:
-                book_dict[t] = unicode((xml_tag_dict[tag])[1]) if (xml_tag_dict[tag])[1] != None else (xml_tag_dict[tag])[1];
-            elif len(book_dict[t]) == 1:
-                book_dict[t] = book_dict[t][0]
-
+            if len(book_dict[dict_key]) == 1:
+                book_dict[dict_key] = book_dict[dict_key][0]
 
         return book_dict
 
@@ -114,9 +112,8 @@ class XMLConnector(GenericConnector):
 
             book_dict[new_tag].append(self.makeDict(elem, xml_tag_dict))
 
-    def getValueFromElem(self, xml_tag_dict, elem, tag, book_dict):
+    def getValueFromElem(self, new_tag, default_0, elem, tag, book_dict):
         if elem != None:
-            new_tag = (xml_tag_dict[tag])[0]
             if book_dict.get(new_tag) == None:
                 book_dict[new_tag] = []
 
@@ -126,11 +123,11 @@ class XMLConnector(GenericConnector):
                 atrrib_value = regex.search(tag).groups()
 
                 if atrrib_value[1] == None and isinstance(elem, et._Element):
-                    book_dict[new_tag].append(unicode(elem.attrib.get(atrrib_value[0], (xml_tag_dict[tag])[1])))
+                    book_dict[new_tag].append(unicode(elem.attrib.get(atrrib_value[0], default_0)))
                 elif atrrib_value[1] == None:
                     book_dict[new_tag].append(unicode(elem))
                 else:
-                    book_dict[new_tag].append(unicode(elem.text if elem.text != "" and elem.text != None else (xml_tag_dict[tag])[1]))
+                    book_dict[new_tag].append(unicode(elem.text if elem.text != "" and elem.text != None else default_0))
             else:
-                book_dict[new_tag].append(unicode(elem.text if elem.text != "" and elem.text != None else (xml_tag_dict[tag])[1]))
+                book_dict[new_tag].append(unicode(elem.text if elem.text != "" and elem.text != None else default_0))
 

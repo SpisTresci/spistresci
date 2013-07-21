@@ -8,20 +8,20 @@ class Pokatne(XMLConnector):
 
     #dict of xml_tag -> db_column_name translations
     xml_tag_dict = {
-        "./id":('external_id', ''),
-        "./title":('title', ''),
-        "./authors":('authors', ''),
-        "./url":('url', ''),
-        "./cover":('cover', ''),
-        "./formats":('formats', ''),
-        "./date":('date', ''),
-        "./comments":('comments', ''),
-        "./views":('views', ''),
-        "./rating":('rating', ''),
-        "./votes":('votes', ''),
-        "./alert":('alert', ''),
-        "./tags":('tags', ''),
-        "./new":('new', ''),
+        'external_id': ('./id', ''),
+        'title': ('./title', ''),
+        'authors': ('./authors', ''),
+        'url': ('./url', ''),
+        'cover': ('./cover', ''),
+        'formats': ('./formats', ''),
+        'date': ('./date', ''),
+        'comments': ('./comments', ''),
+        'views': ('./views', ''),
+        'rating': ('./rating', ''),
+        'votes': ('./votes', ''),
+        'alert': ('./alert', ''),
+        'tags': ('./tags', ''),
+        'new': ('./new', ''),
     }
 
     def validate(self, dic):

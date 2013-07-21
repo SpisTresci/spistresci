@@ -6,8 +6,6 @@ import re
 Base = SqlWrapper.getBaseClass()
 
 class Abooki(Ceneo):
-    #ks means - paperbook
-    supported_formats = ['cd-mp3', 'mp3', 'dvd', 'ks', 'cd']
     depth = 0
 
     def __init__(self, name = None, limit_books = 0):
@@ -17,17 +15,17 @@ class Abooki(Ceneo):
 
     #dict of xml_tag -> db_column_name translations
     xml_tag_dict = {
-        "@id":('external_id', ''),
-        "@price":('price', 0),
-        "@url":('url', ''),
-        "./cat":('category', ''),
-        "./name":('title', ''),
+        'external_id':("./attrs/a[@name='ShopProductId']", ''),
+        'afiliant_id':('@id', ''),
+        'price':('@price', 0),
+        'url':('@url', ''),
+        'category':('./cat', ''),
+        'title':('./name', ''),
         #this is to show user orginal (raw) title, cause we are changing it later
-        "./raw_title":('title', ''),
-        "./imgs/main[@url]":('cover', ''),
-        "./desc":('description', ''),
-        "./attrs/a[@name='Producent']":('producent', ''),
-        "./attrs/a[@name='ShopProductId']":('producentId', ''),
+        'raw_title':('./name', ''),
+        'cover':("./imgs/main[@url]", ''),
+        'description':('./desc', ''),
+        'authors':("./attrs/a[@name='Producent']", ''),
     }
 
     def adjust_parse(self, dic):
@@ -42,8 +40,10 @@ class Abooki(Ceneo):
 
         lowered_format = format_string.lower()
         if any(sf in lowered_format for sf in self.supported_formats):
-            title = title.replace(format_string, '')
             dic['formats'] = unicode(lowered_format)
+            title = title.replace(format_string, '')
+            dic['title'] =re.sub(' *, *$','',title)
+            
         else:
             dic['formats'] = ''
 
@@ -67,16 +67,18 @@ class Abooki(Ceneo):
             format_string = self._clear_suffixes_from_config(format_string)
         if format_string:
             self.erratum_logger.warning("Unsupported format! connector: %s, id: %s, title: %s, format: %s" % (self.name, id, title, org_format_string))
+            self.erratum_logger.debug("Unsupported format!. connector %s, id: %s, tile %s, format string left is: %s" % (self.name, id, title, format_string))
+
 
 class AbookiBook(GenericBook, Base):
-    id = Column(Integer, primary_key = True)
-    price = Column(Integer)             #GROSZE!!!
+    #id = Column(Integer, primary_key = True)
+    #external_id
+    afiliant_id = Column(Integer)
+    #title
+    #price
+    #price_normal
     url = Column(Unicode(512))          #372
     category = Column(Unicode(64))      #47
-    title = Column(Unicode(256))        #160
     raw_title = Column(Unicode(256))    #160
     cover = Column(Unicode(128))        #79
-    producent = Column(Unicode(256))    #172
-    producentId = Column(Integer)       #4
-
 

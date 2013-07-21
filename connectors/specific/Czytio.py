@@ -6,15 +6,15 @@ class Czytio(XMLConnector):
 
     #dict of xml_tag -> db_column_name translations
     xml_tag_dict = {
-        './id':('external_id', None),
-        './title':('title', ''),
-        './url':('url', ''),
-        './authors':('authors', ''),
-        './format':('formats', ''),
-        './isbn':('isbns', ''),
-        './cover':('cover', ''),
-        './price':('price', 0),
-        './size':('size', 0),
+        'external_id': ('./id', None),
+        'title': ('./title', ''),
+        'url': ('./url', ''),
+        'authors': ('./authors', ''),
+        'formats': ('./format', ''),
+        'isbns': ('./isbn', ''),
+        'cover': ('./cover', ''),
+        'price': ('./price', 0),
+        'size': ('./size', 0),
     }
 
 Base = SqlWrapper.getBaseClass()

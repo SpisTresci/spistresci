@@ -9,12 +9,12 @@ class ebooks43(XMLConnector):
 
     #dict of xml_tag -> db_column_name translations
     xml_tag_dict = {
-        "./div[@class='book_box_title']/a":('title', ''),
-        "./a[@href]":('url', ''),
-        "./a/img[@src]":('cover', ''),
-        "./div[@class='book_box_autor']":('authors', ''),
-        "./div[@class='book_box_format']":('formats', ''),
-        "./div[@class='book_box_desc']":('description', ''),
+        'title': ("./div[@class='book_box_title']/a", ''),
+        'url': ("./a[@href]", ''),
+        'cover': ("./a/img[@src]", ''),
+        'authors': ("./div[@class='book_box_autor']", ''),
+        'formats': ("./div[@class='book_box_format']", ''),
+        'description': ("./div[@class='book_box_desc']", ''),
     }
 
     def weHaveToGoDeeper(self, root, depth):

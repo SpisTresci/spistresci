@@ -9,14 +9,14 @@ class KodeksyWmp3(Ceneo):
     depth = 0
     #dict of xml_tag -> db_column_name translations
     xml_tag_dict = {
-        "@id":('external_id', ''),
-        "@price":('price', 0),
-        "@url":('url', ''),
-        "./cat":('category', ''),
-        "./name":('title', ''),
-        "./imgs/main[@url]":('cover', ''),
-        "./desc":('description', ''),
-        "./attrs/a[@name='EAN']":('isbns', ''),
+        'external_id': ('@id', ''),
+        'price': ('@price', 0),
+        'url': ('@url', ''),
+        'category': ('./cat', ''),
+        'title': ('./name', ''),
+        'cover': ('./imgs/main[@url]', ''),
+        'description': ('./desc', ''),
+        'isbns': ("./attrs/a[@name='EAN']", ''),
     }
 
 #{'category': 31, 'isbn': 0, 'description': 4261, 'title': 37, 'url': 180, 'price': 5, 'cover': 45, 'external_id': 6}

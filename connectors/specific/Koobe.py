@@ -9,18 +9,18 @@ class Koobe(XMLConnector):
     depth = 1
     #dict of xml_tag -> db_column_name translations
     xml_tag_dict = {
-        "./name":('title', ''),
-        "./id":('external_id', ''),
-        "./url":('url', ''),
-        "./description":('description', ''),
-        "./image":('cover', ''),
-        "./price":('price', ''),
-        "./category":('category', ''),
-        "./producer":('publisher', ''),
-        "./property[@name='isbn']":('isbns', ''),
-        "./property[@name='author']":('authors', ''),
-        "./property[@name='format']":('formats', ''),
-        "./property[@name='protection']":('protection', ''),
+        'title': ('./name', ''),
+        'external_id': ('./id', ''),
+        'url': ('./url', ''),
+        'description': ('./description', ''),
+        'cover': ('./image', ''),
+        'price': ('./price', ''),
+        'category': ('./category', ''),
+        'publisher': ('./producer', ''),
+        'isbns': ("./property[@name='isbn']", ''),
+        'authors': ("./property[@name='author']", ''),
+        'formats': ("./property[@name='format']", ''),
+        'protection': ("./property[@name='protection']", ''),
     }
 
 class KoobeBook(GenericBook, Base):

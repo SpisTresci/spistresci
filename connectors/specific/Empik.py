@@ -6,15 +6,15 @@ class Empik(XMLConnector):
 
     #dict of xml_tag -> db_column_name translations
     xml_tag_dict = {
-        './isbn':('isbns', ''),                   #ok
-        './ean':('ean', ''),                      #ok
-        './TDProductId':('external_id', ''),      #ok
-        './name':('title', ''),                   #ok
-        './productUrl':('url', ''),               #ok
-        './imageUrl':('cover', ''),               #ok
-        './description':('description', ''),
-        './price':('price', 0),                   #ok
-        './availability':('availability', ''),    #ok
+        'isbns': ('./isbn', ''),                   #ok
+        'ean': ('./ean', ''),                      #ok
+        'external_id': ('./TDProductId', ''),      #ok
+        'title': ('./name', ''),                   #ok
+        'url': ('./productUrl', ''),               #ok
+        'cover': ('./imageUrl', ''),               #ok
+        'description': ('./description', ''),
+        'price': ('./price', 0),                   #ok
+        'availability': ('./availability', ''),    #ok
     }
 
 Base = SqlWrapper.getBaseClass()

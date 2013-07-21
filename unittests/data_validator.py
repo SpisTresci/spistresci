@@ -5,13 +5,25 @@ from utils import NoseUtils
 from utils import DataValidator, DataValidatorError
 
 class MockErratumLogger(object):
-    warned = False
-    informed = False
+    def __init__(self):
+        self.warned = False
+        self.informed = False
+        self.debug_informed = False
+        self.warntext = ''
+        self.infotext = ''
+        self.debugtext = ''
+
     def warning(self, str):
         self.warned = True
+        self.warntext = str
 
     def info(self, str):
         self.informed = True
+        self.infotext = str
+
+    def debug(self, str):
+        self.debug_informed = True
+        self.debugtext = str
 
 class TestDataValidator(object):
 
@@ -21,53 +33,47 @@ class TestDataValidator(object):
         self.dv.name = "TestDataValidator"
 
     @nottest
-    def _test_validate_helper_eq(self, functionName, input, expected):
+    def _test_validate_helper_eq(self, functionName, input, expected, *args, **kwargs):
         validateFun = getattr(self.dv, "validate" + functionName)
-        validateFun(input, "id", "title")
-        eq_(input, expected)
-
-    @nottest
-    def _test_validate_tag_name_helper_eq(self, functionName, input, expected):
-        validateFun = getattr(self.dv, "validate" + functionName)
-        validateFun(input, "id", "title")
+        validateFun(input, "id", "title", *args, **kwargs)
         eq_(input, expected)
 
 
     @nottest
-    def _test_validate_helper_not_eq(self, functionName, input, expected):
+    def _test_validate_helper_not_eq(self, functionName, input, expected, *args, **kwargs):
         validateFun = getattr(self.dv, "validate" + functionName)
-        validateFun(input, "id", "title")
+        validateFun(input, "id", "title", *args, **kwargs)
         assert input != expected
 
     @nottest
-    def _test_validate_helper_warning(self, functionName, input):
+    def _test_validate_helper_warning(self, functionName, input, *args, **kwargs):
         eq_(self.dv.erratum_logger.warned, False)
         validateFun = getattr(self.dv, "validate" + functionName)
-        validateFun(input, "id", "title")
+        validateFun(input, "id", "title", *args, **kwargs)
         eq_(self.dv.erratum_logger.warned, True)
         self.dv.erratum_logger.warned = False
         eq_(self.dv.erratum_logger.warned, False)
 
     @nottest
-    def _test_validate_helper_info(self, functionName, input):
+    def _test_validate_helper_info(self, functionName, input, *args, **kwargs):
         eq_(self.dv.erratum_logger.informed, False)
         validateFun = getattr(self.dv, "validate" + functionName)
-        validateFun(input, "id", "title")
+        validateFun(input, "id", "title", *args, **kwargs)
         eq_(self.dv.erratum_logger.informed, True)
         self.dv.erratum_logger.informed = False
         eq_(self.dv.erratum_logger.informed, False)
 
     @nottest
-    @raises(DataValidatorError)
-    def _test_validate_helper_raises(self, functionName, input, tag_name=None):
+    @raises(Exception)
+    def _test_validate_helper_raises(self, functionName, input,  *args, **kwargs):
         validateFun = getattr(self.dv, "validate" + functionName)
-        if tag_name:
-            validateFun(input, "id", "title", tag_name)
-        else:
-            validateFun(input, "id", "title")
+        validateFun(input, "id", "title", *args, **kwargs)
 
     def test_validate_price(self):
         yield self._test_validate_helper_eq, "Price", {}, {"price":"0"}
+        yield self._test_validate_helper_eq, 'Price', {}, {'price': '-1'}, 'price', -1
+        #TODO: consider what should happen id tag is empty, currently it is replaved by defalt_price
+        yield self._test_validate_helper_eq, 'Price', {"price":''}, {'price':'-1'}, 'price', -1
         yield self._test_validate_helper_eq, "Price", {"price":""}, {"price":"0"}
         yield self._test_validate_helper_eq, "Price", {"price":"10"}, {"price":"1000"}
         yield self._test_validate_helper_eq, "Price", {"price":"124"}, {"price":"12400"}
@@ -90,6 +96,7 @@ class TestDataValidator(object):
         yield self._test_validate_helper_eq, "Price", {"price":"0.00"}, {"price":"0"}
 
         yield self._test_validate_helper_not_eq, "Price", {"price":"0,01"}, {"price":"001"}
+        yield self._test_validate_helper_raises, 'Price', {}, 'price', 'NOT_INT'
 
         yield self._test_validate_helper_warning, "Price", {"price":"-5"}
         yield self._test_validate_helper_warning, "Price", {"price":"-5.57"}
@@ -232,13 +239,12 @@ class TestDataValidator(object):
         yield self._test_validate_helper_eq, "ISBNs", {"isbns":"978-83-933966-0-4"}, {"isbns":[{'raw': '978-83-933966-0-4', 'valid': False, 'core': '839339660'}]}
 
     def test_validate_authors(self):
-        import sys
         yield self._test_validate_helper_eq, "Authors", {}, {}
         yield self._test_validate_helper_eq, "Authors", {"authors":""}, {"persons":[{"authors":[]}]}
-        yield self._test_validate_tag_name_helper_eq, "Authors", {"authors":""}, {"persons":[{"authors":[]}]}
-        yield self._test_validate_tag_name_helper_eq, "Translators", {"translators":""}, {"persons":[{"translators":[]}]}
-        yield self._test_validate_tag_name_helper_eq, "Redactors", {"redactors":""}, {"persons":[{"redactors":[]}]}
-        yield self._test_validate_tag_name_helper_eq, "Lectors", {"lectors":""}, {"persons":[{"lectors":[]}]}
+        yield self._test_validate_helper_eq, "Authors", {"authors":""}, {"persons":[{"authors":[]}]}
+        yield self._test_validate_helper_eq, "Translators", {"translators":""}, {"persons":[{"translators":[]}]}
+        yield self._test_validate_helper_eq, "Redactors", {"redactors":""}, {"persons":[{"redactors":[]}]}
+        yield self._test_validate_helper_eq, "Lectors", {"lectors":""}, {"persons":[{"lectors":[]}]}
 
         yield self._test_validate_helper_raises, "Persons", {}, "asfasfas"
         yield self._test_validate_helper_raises, "Persons", {}, "author"

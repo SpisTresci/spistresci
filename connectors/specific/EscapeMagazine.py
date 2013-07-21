@@ -6,20 +6,20 @@ class EscapeMagazine(XMLConnector):
 
     #dict of xml_tag -> db_column_name translations
     xml_tag_dict = {
-        './producer_ident':('isbns', ''),
-        './id':('external_id', ''),
-        './title':('title', ''),
-        './describe_long':('description', ''),
-        './describe_short':('description_short', ''),
-        './status':('status', 0),
-        './price':('price', 0),
-        './price_promo':('price_promotion', 0),
-        "./*[contains(name(), 'authors_')]":('authors', ''),
-        "./*[contains(name(), 'categories_')]":('categories', ''),
-        "./*[contains(name(), 'covers_')]":('cover', ''),
-        './title_sub':('subtitle', ''),
-        './producer_producer':('publisher', ''),
-        './url':('url', ''),
+        'isbns': ('./producer_ident', ''),
+        'external_id': ('./id', ''),
+        'title': ('./title', ''),
+        'description': ('./describe_long', ''),
+        'description_short': ('./describe_short', ''),
+        'status': ('./status', 0),
+        'price': ('./price', 0),
+        'price_promotion': ('./price_promo', 0),
+        'authors': ("./*[contains(name(), 'authors_')]", ''),
+        'categories': ("./*[contains(name(), 'categories_')]", ''),
+        'cover': ("./*[contains(name(), 'covers_')]", ''),
+        'subtitle': ('./title_sub', ''),
+        'publisher': ('./producer_producer', ''),
+        'url': ('./url', ''),
     }
 
     def validate(self, dic):

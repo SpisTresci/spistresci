@@ -7,17 +7,17 @@ class Woblink(Ceneo):
 
     #dict of xml_tag -> db_column_name translations
     xml_tag_dict = {
-        "@id":('external_id', ''),
-        "@price":('price', 0),
-        "@url":('url', ''),
-        "@avail":('availability', ''),
-        "./cat":('category', ''),
-        "./name":('title', ''),
-        "./imgs/main[@url]":('cover', ''),
-        "./desc":('description', ''),
-        "./attrs/a[@name='ISBN']":('isbns', ''),
-        "./attrs/a[@name='Wydawnictwo']":('publisher', ''),
-        "./attrs/a[@name='Format']":('formats', ''),
+        'external_id': ('@id', ''),
+        'price': ('@price', 0),
+        'url': ('@url', ''),
+        'availability': ('@avail', ''),
+        'category': ('./cat', ''),
+        'title': ('./name', ''),
+        'cover': ('./imgs/main[@url]', ''),
+        'description': ('./desc', ''),
+        'isbns': ("./attrs/a[@name='ISBN']", ''),
+        'publisher': ("./attrs/a[@name='Wydawnictwo']", ''),
+        'formats': ("./attrs/a[@name='Format']", ''),
     }
 
 class WoblinkBook(GenericBook, Base):

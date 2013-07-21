@@ -8,19 +8,18 @@ class CzeskieKlimaty(Ceneo):
 
     #dict of xml_tag -> db_column_name translations
     xml_tag_dict = {
-        "@id":('external_id', ''),
-        "@price":('price', 0),
-        "@url":('url', ''),
-
-        "./name":('title', ''),
-        "./desc":('description', ''),
-        "./cat":('category', ''),
-        "./imgs/main[@url]":('cover', ''),
-        "./attrs/a[@name='Autor']":('authors', ''),
-        "./attrs/a[@name='ISBN']":('isbns', ''),
-        "./attrs/a[@name='Ilosc_stron']":('page_count', ''),
-        "./attrs/a[@name='Wydawnictwo']":('publisher', ''),
-        "./attrs/a[@name='Rok_wydania']":('date', ''),
+        'external_id': ("@id", ''),
+        'price': ("@price",  0),
+        'url': ("@url", ''),
+        'title': ("./name", ''),
+        'description': ("./desc", ''),
+        'category': ("./cat", ''),
+        'cover': ("./imgs/main[@url]", ''),
+        'authors': ("./attrs/a[@name='Autor']", ''),
+        'isbns': ("./attrs/a[@name='ISBN']", ''),
+        'page_count': ("./attrs/a[@name='Ilosc_stron']", ''),
+        'publisher': ("./attrs/a[@name='Wydawnictwo']", ''),
+        'date': ("./attrs/a[@name='Rok_wydania']", ''),
     }
 
 

@@ -8,27 +8,27 @@ class Merlin(XMLConnector):
 
     #dict of xml_tag -> db_column_name translations
     xml_tag_dict = {
-        "./dzial":('section', ''),
-        "./dzial_id":('section_id', ''),
-        "./towar_id":('external_id', ''),
-        "./identyfikator":('isbns', ''),
-        "./url":('url', ''),
-        "./url_images":('cover', ''),
-        "./url_koszyk":('add_to_cart_url', ''),
-        "./utm_term":('utm_term', ''), #?
-        "./tytul":('title', ''),
-        "./status":('status', ''),  #?
-        "./date":('date', ''),  #?
-        "./liczba_stron":('page_count', ''),  #?
-        "./jezyk":('lang', ''),  #?
-        "./cena":('price', ''),
-        "./opis":('description', ''),
-        "./lista_kategorii":('category', ''),
-        "./wydawnictwo":('publisher', ''),
-        "./autor":('authors', ''),
-        "./tlumacz":('translators', ''),
-        "./redakcja":('redactor', ''),
-        "./nosnik":('formats', ''),
+        'section': ('./dzial', ''),
+        'section_id': ('./dzial_id', ''),
+        'external_id': ('./towar_id', ''),
+        'isbns': ('./identyfikator', ''),
+        'url': ('./url', ''),
+        'cover': ('./url_images', ''),
+        'add_to_cart_url': ('./url_koszyk', ''),
+        'utm_term': ('./utm_term', ''), #?
+        'title': ('./tytul', ''),
+        'status': ('./status', ''),  #?
+        'date': ('./date', ''),  #?
+        'page_count': ('./liczba_stron', ''),  #?
+        'lang': ('./jezyk', ''),  #?
+        'price': ('./cena', ''),
+        'description': ('./opis', ''),
+        'category': ('./lista_kategorii', ''),
+        'publisher': ('./wydawnictwo', ''),
+        'authors': ('./autor', ''),
+        'translators': ('./tlumacz', ''),
+        'redactor': ('./redakcja', ''),
+        'formats': ('./nosnik', ''),
     }
 
     def validate(self, dic):

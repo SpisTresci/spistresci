@@ -8,12 +8,12 @@ class RW2010(XMLConnector):
 
     #dict of xml_tag -> db_column_name translations
     xml_tag_dict = {
-        './tytul':('title', ''),
-        './url':('url', ''),
-        './autor':('authors', ''),
-        './formaty':('formats', ''),
-        './okladka':('cover', ''),
-        './cena':('price', 0),
+        'title': ('./tytul', ''),
+        'url': ('./url', ''),
+        'authors': ('./autor', ''),
+        'formats': ('./formaty', ''),
+        'cover': ('./okladka', ''),
+        'price': ('./cena', 0),
     }
 
     def __init__(self, name = "RW2010", limit_books = 0):

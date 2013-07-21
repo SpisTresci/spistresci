@@ -7,22 +7,22 @@ class BezKartek(XMLConnector):
     depth = 1
     #dict of xml_tag -> db_column_name translations
     xml_tag_dict = {
-        './isbn':('isbns', ''),
-        './ebookId':('external_id', None),
-        './name':('title', ''),
-        './url':('url', None),
-        './authors':('authors', ''),
-        './category':('category', ''),
-        './description':('description', ''),
-        './format':('formats', ''),
-        './image':('cover', ''),
-        './languages/lang_short':('lang_short', ''),
-        './languages/lang_long': ('lang_long', ''),
-        './price':('price', 0),
-        './pageCount':('page_count', 0),
-        './publisher':('publisher', ''),
-        './securityType':('security', ''),
-        './audioTime':('audio_time', ''),
+        'isbns': ('./isbn', ''),
+        'external_id': ('./ebookId', None),
+        'title': ('./name', ''),
+        'url': ('./url', None),
+        'authors': ('./authors', ''),
+        'category': ('./category', ''),
+        'description': ('./description', ''),
+        'formats': ('./format', ''),
+        'cover': ('./image', ''),
+        'lang_short': ('./languages/lang_short', ''),
+        'lang_long': ('./languages/lang_long', ''),
+        'price': ('./price', 0),
+        'page_count': ('./pageCount', 0),
+        'publisher': ('./publisher', ''),
+        'security': ('./securityType', ''),
+        'audio_time': ('./audioTime', ''),
     }
 
 Base = SqlWrapper.getBaseClass()

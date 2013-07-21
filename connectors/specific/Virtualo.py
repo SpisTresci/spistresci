@@ -7,18 +7,18 @@ class Virtualo(XMLConnector):
     depth = 0
     #dict of xml_tag -> db_column_name translations
     xml_tag_dict = {
-        './coverId' : ('external_id', ''),
-        './title' : ('title', ''),
-        './format' : ('formats', ''),
-        './security' : ('protection', ''),
-        './price' : ('price', 0),
-        './isbn' : ('isbns', ''),
-        './authors' : ('authors', ''),
-        './url' : ('url', ''),
-        './description' : ('description', ''),
+        'external_id': ('./coverId', ''),
+        'title' : ('./title', ''),
+        'formats' : ('./format', ''),
+        'protection': ('./security', ''),
+        'price' : ('./price', 0),
+        'isbns' : ('./isbn', ''),
+        'authors' : ('./authors', ''),
+        'url' : ('./url', ''),
+        'description' : ('./description', ''),
         #not added to database
-        './descriptionShort' : ('descriptionShort', ''),
-        './rating' : ('rating', ''),
+        'descriptionShort' : ('./descriptionShort', ''),
+        'rating' : ('./rating', ''),
      }
 
     def validate(self, dic):

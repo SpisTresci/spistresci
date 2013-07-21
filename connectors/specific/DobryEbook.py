@@ -8,16 +8,16 @@ class DobryEbook(XMLConnector):
 
     #dict of xml_tag -> db_column_name translations
     xml_tag_dict = {
-        "./tytul":('title', ''),
-        "./podtytul":('subtitle', ''),
-        "./autor":('authors', ''),
-        "./link":('url', ''),
-        "./cena":('price', ''),
-        "./wielkosc_pliku":('file_size', ''),
-        "./liczba_stron":('page_count', ''),
-        "./isbn":('isbns', ''),
-        "./male_zdjecie":('small_cover', ''),
-        "./duze_zdjecie":('cover', ''),
+        'title': ('./tytul', ''),
+        'subtitle': ('./podtytul', ''),
+        'authors': ('./autor', ''),
+        'url': ('./link', ''),
+        'price': ('./cena', ''),
+        'file_size': ('./wielkosc_pliku', ''),
+        'page_count': ('./liczba_stron', ''),
+        'isbns': ('./isbn', ''),
+        'small_cover': ('./male_zdjecie', ''),
+        'cover': ('./duze_zdjecie', ''),
     }
 
     def adjust_parse(self, dic):

@@ -27,12 +27,19 @@ class MiniBook(final.FinalBase, Base):
             return relationship("TitleWord", secondary = final.mini_books_title_words, backref = backref("mini_book", lazy = "joined", cascade = ""))
 
 
+    #supported_formats = ['cd', 'cd-mp3', 'dvd', 'epub', 'fb2', 'ks', 'mobi', 'mp3', 'pdf', 'txt', 'xml']
 
-    format_mobi = Column(Boolean, nullable = False)
-    format_epub = Column(Boolean, nullable = False)
-    format_pdf = Column(Boolean, nullable = False)
-    format_mp3 = Column(Boolean, nullable = False)
-    format_cd = Column(Boolean, nullable = False)
+    format_cd = Column(Boolean, default=False)
+    format_cd_mp3 = Column(Boolean, default=False)
+    format_dvd = Column(Boolean, default=False)
+    format_epub = Column(Boolean, default=False)
+    format_fb2 = Column(Boolean, default=False)
+    format_ks = Column(Boolean, default=False)
+    format_mobi = Column(Boolean, default=False)
+    format_mp3 = Column(Boolean, default=False)
+    format_pdf = Column(Boolean, default=False)
+    format_txt = Column(Boolean, default=False)
+    format_xml = Column(Boolean, default=False)
 
     def splitTitle(self, title):
         title = utils.Str.removePunctuation(title)

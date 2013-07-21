@@ -7,18 +7,18 @@ Base = SqlWrapper.getBaseClass()
 class Audeo(Ceneo):
     #dict of xml_tag -> db_column_name translations
     xml_tag_dict = {
-        "@id":('external_id', ''),
-        "@price":('price', 0),
-        "@url":('url', ''),
-        "@avail":('availability', ''),
-        "./cat":('category', ''),
-        "./name":('title', ''),
-        "./imgs/main[@url]":('cover', ''),
-        "./desc":('description', ''),
-        "./attrs/a[@name='Producent']":('producent', ''),
-        "./attrs/a[@name='Autor']":('authors', ''),
-        "./attrs/a[@name='Lektor']":('lectors', ''),
-        "./attrs/a[@name='Czas (min)']":('time', ''),
+        'external_id':('@id', ''),
+        'price':('@price', 0),
+        'url':('@url', ''),
+        'availability': ('@avail', ''),
+        'category':('./cat', ''),
+        'title':('./name', ''),
+        'cover':("./imgs/main[@url]", ''),
+        'description':('./desc', ''),
+        'producent':("./attrs/a[@name='Producent']", ''),
+        'authors':("./attrs/a[@name='Autor']", ''),
+        'lectors':("./attrs/a[@name='Lektor']", ''),
+        'time':("./attrs/a[@name='Czas (min)']", ''),
     }
 
     #Try getting authors from description

@@ -15,13 +15,13 @@ class FantastykaPolska(XMLConnector):
     genre_class_name = 'field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix'
     #dict of xml_tag -> db_column_name translations
     xml_tag_dict = {
-        "./title":('title', ''),
-        "./filteredId":('external_id', ''),
-        "./link":('url', ''),
-        "./description/div[@class='%s']/ul/li/a" % author_class_name:('authors', ''),
-        "./description/div/div[@class='field-items']/div":('notes', ''),
-        "./description/div[@class='%s']/ul/li/a" % category_class_name:('category', ''),
-        "./description/div[@class='%s']/ul/li/a" % genre_class_name:('genre', ''),
+        'title': ('./title', ''),
+        'external_id': ('./filteredId', ''),
+        'url': ('./link', ''),
+        'authors': ("./description/div[@class='%s']/ul/li/a" % author_class_name, ''),
+        'notes': ("./description/div/div[@class='field-items']/div", ''),
+        'category': ("./description/div[@class='%s']/ul/li/a" % category_class_name, ''),
+        'genre': ("./description/div[@class='%s']/ul/li/a" % genre_class_name, ''),
     }
 
 class FantastykaPolskaBook(GenericBook, Base):

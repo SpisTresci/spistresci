@@ -9,25 +9,25 @@ class Latarnik(Ceneo):
     depth = 0
     #dict of xml_tag -> db_column_name translations
     xml_tag_dict = {
-        "@id":('external_id', ''),
-        "@url":('url', ''),
-        "@price":('price', 0),
-        "@avail":('availability', ''),
-        "@set":('set', 0), #???
-        "@stack":('stack', 0), #???
-        "@weight":('weight', '0.00'),
+        'external_id': ('@id', ''),
+        'url': ('@url', ''),
+        'price': ('@price', 0),
+        'availability': ('@avail', ''),
+        'set': ('@set', 0), #???
+        'stack': ('@stack', 0), #???
+        'weight': ('@weight', '0.00'),
 
-        "./cat":('category', ''),
-        "./name":('title', ''),
-        "./imgs/main[@url]":('cover', ''),
-        "./desc":('description', ''),
-        #"":('authors', ''),  - autor jest umieszczony w drugim wierszu description
-        #"":('nosnik', ''),  - nosnik jest umieszczony w czwartym wierszu description
-        #"":('rozmiar', ''),  - rozmiar jest umieszczony w szostym wierszu description
-        #"":('oprawa', ''),  - oprawa jest umieszczony w szostym wierszu description
-        "./attrs/a[@name='EAN']":('isbns', ''),
-        "./attrs/a[@name='Producent']":('publisher', ''),
-        "./attrs/a[@name='Kod_producenta']":('publisher_code', ''),
+        'category': ('./cat', ''),
+        'title': ('./name', ''),
+        'cover': ('./imgs/main[@url]', ''),
+        'description': ('./desc', ''),
+        #'authors': ('', ''),  - autor jest umieszczony w drugim wierszu description
+        #'nosnik': ('', ''),  - nosnik jest umieszczony w czwartym wierszu description
+        #'rozmiar': ('', ''),  - rozmiar jest umieszczony w szostym wierszu description
+        #'oprawa': ('', ''),  - oprawa jest umieszczony w szostym wierszu description
+        'isbns': ("./attrs/a[@name='EAN']", ''),
+        'publisher': ("./attrs/a[@name='Producent']", ''),
+        'publisher_code': ("./attrs/a[@name='Kod_producenta']", ''),
     }
 
     def adjust_parse(self, dic):

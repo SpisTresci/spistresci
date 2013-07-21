@@ -7,11 +7,21 @@ class MasterBook(final.FinalBase, Base):
     id = Column(Integer, primary_key = True)
     title = Column(Unicode(512))
 
-    format_mobi = Column(Boolean, default=False)
-    format_epub = Column(Boolean, default=False)
-    format_pdf = Column(Boolean, default=False)
-    format_mp3 = Column(Boolean, default=False)
+    #supported_formats = ['cd', 'cd_mp3', 'dvd', 'epub', 'fb2', 'ks', 'mobi', 'mp3', 'pdf', 'txt', 'xml']
+
     format_cd = Column(Boolean, default=False)
+    format_cd_mp3 = Column(Boolean, default=False)
+    format_dvd = Column(Boolean, default=False)
+    format_epub = Column(Boolean, default=False)
+    format_fb2 = Column(Boolean, default=False)
+    format_ks = Column(Boolean, default=False)
+    format_mobi = Column(Boolean, default=False)
+    format_mp3 = Column(Boolean, default=False)
+    format_pdf = Column(Boolean, default=False)
+    format_txt = Column(Boolean, default=False)
+    format_xml = Column(Boolean, default=False)
+
+
 
     isbns = relationship("MasterISBN", lazy = 'joined', secondary = final.master_books_master_isbns, backref = "masterBook")
     authors = relationship("MasterAuthor", lazy = 'joined', secondary = final.master_books_master_authors, backref = "masterBook")

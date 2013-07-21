@@ -6,22 +6,22 @@ class Zantes(XMLConnector):
 
     #dict of xml_tag -> db_column_name translations
     xml_tag_dict = {
-        './id':('external_id', ''),
-        './time':('date', ''),
-        './title':('title', ''),
-        './producer_ident':('isbns', ''),
-        './describe_short':('description_short', ''),
-        './describe_long':('description', ''),
-        './status':('status', 0),
-        './price':('price', 0),
-        './price_promo':('price_promotion', 0),
-        "./*[contains(name(), 'authors_')]":('authors', ''),
-        "./*[contains(name(), 'covers_')]":('cover', ''),
-        './title_sub':('subtitle', ''),
-        "./*[contains(name(), 'categories_')]":('categories', ''),
-        './producer_id':('publisher_id', ''),
-        './producer_producer':('publisher', ''),
-        './url':('url', ''),
+        'external_id': ('./id', ''),
+        'date': ('./time', ''),
+        'title': ('./title', ''),
+        'isbns': ('./producer_ident', ''),
+        'description_short': ('./describe_short', ''),
+        'description': ('./describe_long', ''),
+        'status': ('./status', 0),
+        'price': ('./price', 0),
+        'price_promotion': ('./price_promo', 0),
+        'authors': ("./*[contains(name(), 'authors_')]", ''),
+        'cover': ("./*[contains(name(), 'covers_')]", ''),
+        'subtitle': ('./title_sub', ''),
+        'categories': ("./*[contains(name(), 'categories_')]", ''),
+        'publisher_id': ('./producer_id', ''),
+        'publisher': ('./producer_producer', ''),
+        'url': ('./url', ''),
     }
 
     def validate(self, dic):
