@@ -162,7 +162,7 @@ class STSearchView(SearchView):
         extra['filters'] = [
                                 {
                                     'name':'FORMATY',
-                                    'name_id':'format',
+                                    'name_id':'formats',
                                     'template_file':'search_filter_list.html',
                                     'data':self.loadFilterState(supported_formats, "formats")
                                 },
@@ -174,7 +174,7 @@ class STSearchView(SearchView):
                                 },
                                 {
                                     'name':'SERWISY',
-                                    'name_id':'service',
+                                    'name_id':'services',
                                     'template_file':'search_filter_list.html',
                                     'data':self.loadFilterState({'Wszystkie':[bookstore['name'] for bookstore in self.servicesInfo]}, "services")
                                 },

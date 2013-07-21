@@ -1277,5 +1277,34 @@ a{
   margin-top: -12px;
 }
 
+div#s_right.loading{
+    opacity: 0.4;
+}
 
+img#loading_img {
+    display: none;
+}
 
+.loading img#loading_img{
+    position: fixed;
+    z-index: 1020;
+    margin: 50% 50%;
+}
+
+.no_results{
+    margin-top: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    color:#6D6D6D;
+}
+
+.no_results p.msg{
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+.no_results p.submsg{
+    margin-top: 20px;
+    font-size: 14px;
+}

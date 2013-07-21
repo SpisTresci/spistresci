@@ -71,7 +71,7 @@
                   {% else %}
                   Oferty {{ product.filtered_records_number }} serwisów nie spełniły wymagań aktywnych filtrów.
                   {% endif %}
-                  Format{% if product.filtered_formats|length > 1  %}y{% endif %} {% for format in product.filtered_formats %}{{ format }}{% if not forloop.last %}, {% endif %}{% endfor %}.
+                  Format{% if product.filtered_formats|length > 1 %}y{% endif %} {% for format in product.filtered_formats %}{{ format }}{% if not forloop.last %}, {% endif %}{% endfor %}.
                   Cena {% if product.filtered_records_number > 1%}od {% endif %}{{ product.price_lowest_before_filtering }} zł.
                   </div>
               </div>

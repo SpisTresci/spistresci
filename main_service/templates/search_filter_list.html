@@ -14,7 +14,7 @@
             </div>
             <ul id="sub{{ forloop.counter }}">
               {% for item in group.items %}
-              <li class="filter_{{ filter.name_id }}{% if item.isFilterActive %} act{% endif %}">
+              <li class="filter_{{ filter.name_id }}{% if item.isFilterActive %} act{% endif %}" data-q="{{ item.name }}">
                 <a>
                     {{ item.name }}
                 </a>
