@@ -602,10 +602,10 @@ a{
   background:url(../img/input_center.png);
 /*   width:45% !important; */
   height:50px;
-  width: -moz-calc(100% - 423px);
-  width: -webkit-calc(100% - 423px);
-  width: -o-calc(100% - 423px);
-  width: calc(100% - 423px);
+  width: -moz-calc(100% - 250px);
+  width: -webkit-calc(100% - 250px);
+  width: -o-calc(100% - 250px);
+  width: calc(100% - 250px);
 }
 .right_input_bg{
   float:left;
@@ -813,7 +813,7 @@ a{
   font-weight:bold;
 }
 .s_left_btn2{
-  margin-left:5px;
+  margin-left:140px;
   background:url(../img/2btn_red.png) no-repeat;
 }
 .s_left_hide form{
@@ -1188,6 +1188,14 @@ a{
   margin-bottom:30px;
   margin-top:15px;
 }
+
+.sort .page{
+  margin-bottom:5px;
+  margin-top:6px;
+}
+
+
+
 .page_img {
   float:left;
   padding-bottom:4px;

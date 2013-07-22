@@ -1,0 +1,43 @@
+{% load mathtags %}
+
+{% if page.has_previous or page.has_next %}
+<div class="page">
+
+    {% if page.number > 1 %}
+        <a class="pageLink" href="" data-p="{{ page.number|sub:"1"}}"><div class="page_img page_img2"></div></a>
+    {% endif %}
+
+    <div class="page_number">
+
+        <a class="pageLink{% if page.number == 1 %} page_active_number{% endif %}" href="" data-p="1">1</a>
+
+        {% if page.number > 2 %}
+           ...
+           {% if page.number == page.paginator.num_pages and page.paginator.num_pages > 3 %}
+              <a class="pageLink" href="" data-p="{{ page.number|sub:"2" }}">{{ page.number|sub:"2" }}</a>
+           {% endif %}
+           <a class="pageLink" href="" data-p="{{ page.number|sub:"1" }}">{{ page.number|sub:"1" }}</a>
+        {% endif %}
+
+        {% if page.number != 1 and page.number != page.paginator.num_pages %}
+           <a class="pageLink page_active_number" href="" data-p="{{ page.number }}">{{ page.number }}</a>
+        {% endif %}
+
+        {% if page.number < page.paginator.num_pages|sub:"1" %}
+           <a class="pageLink" href="" data-p="{{ page.number|add:"1" }}">{{ page.number|add:"1" }}</a>
+           {% if page.number == 1 and page.paginator.num_pages > 3 %}
+              <a class="pageLink" href="" data-p="{{ page.number|add:"2" }}">{{ page.number|add:"2" }}</a>
+           {% endif %}
+           ...
+        {% endif %}
+
+        <a class="pageLink{% if page.number == page.paginator.num_pages %} page_active_number{% endif %}" href="" data-p="{{ page.paginator.num_pages }}">{{ page.paginator.num_pages }}</a>
+
+    </div>
+
+    {% if page.number < page.paginator.num_pages %}
+        <a class="pageLink" href="" data-p="{{ page.number|add:"1"}}"><div class="page_img page_img3"></div></a>
+    {% endif %}
+
+</div>
+{% endif %}

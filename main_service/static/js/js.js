@@ -12,7 +12,8 @@ function setFilter(id, val, name) {
     }
 }
 
-function rebuildLinks(){
+function rebuildLinks(reset){
+    reset = typeof reset !== 'undefined' ? reset : false;
     var dic = {};
     $('li[class^="filter_"]').each(function(){
         var filter_name = $(this).attr('class').split(' ').filter(function(element, index, array){return element.substring(0, 7) == 'filter_';})[0].substring(7);
@@ -29,10 +30,29 @@ function rebuildLinks(){
 
     $('input[class^="filter_"]').each(function(){
         var filter_name = $(this).attr('class').split(' ').filter(function(element, index, array){return element.substring(0, 7) == 'filter_';})[0].substring(7);
+        if(reset){
+            $("#filter_price_from").val($("#search_list").attr("data-price-from"));
+            $("#filter_price_to").val($("#search_list").attr("data-price-to"));
+        }
+
         if($(this).val()){
             dic[$(this).attr("data-q")]=$(this).val()
         }
     });
+
+    var page_number_input = $('#page_number_input');
+    if(page_number_input.length > 0){
+        var page=1;
+        if(reset){
+            page=page_number_input.attr("data-loaded")
+            page_number_input.val(page);
+        } else{
+            page = page_number_input.val();
+        }
+        if(page != 1){
+            dic["page"]= page;
+        }
+    }
 
     var link = $.param(dic);
     $("#id_q").attr("data-q", link);
@@ -41,11 +61,13 @@ function rebuildLinks(){
     link = $.param(dic);
 
     $(".pageLink").each(function(){
-        if($(this).attr("data-q")){
-            link+="&page="+$(this).attr("data-p");
+        if($(this).attr("data-p")){
+            var a ="?" + link+ "&page="+$(this).attr("data-p");
+            $(this).attr("href", a);
         }
-        $(this).attr("href", link);
     });
+
+    refreshURL(link);
 }
 
 function reloadResults(){
@@ -55,13 +77,11 @@ function reloadResults(){
     $("#search_results").load("../q/"+href, function(){
         $(".search_drop_hide_btn, .search_drop_upper_hide_btn, .product_details").on("click", toggleRecords);
     });
-
-    refreshURL(href);
 }
 
 function refreshURL(urlPath){
     document.title = $("#id_q").val() + " - SpisTresci.pl";
-    window.history.replaceState("object or string", document.title, urlPath);
+    window.history.replaceState("object or string", document.title, "?"+urlPath);
 }
 
 
@@ -79,10 +99,10 @@ function collectFilters(){
 }
 
 function clearFilter(){
-    rebuildLinks();
     var filter=$(this).closest(".s_left_box");
     filter.find('input[class^="filter_"]').val("");
     filter.find('li[class^="filter_"]').removeClass("act");
+    rebuildLinks();
     reloadResults();
 }
 
@@ -117,16 +137,16 @@ function toggleRecords(){
 
 function debounce(fn, delay) {
   var timer = null;
-  return function () {
+  return function (event) {
     var context = this, args = arguments;
     clearTimeout(timer);
     timer = setTimeout(function () {
       fn.apply(context, args);
-    }, delay);
+    }, event.keyCode==13?0:delay);
   };
 }
 
-$(document).ready(function (){
+function onReady(){
     prepareRecords();
     $(".s_left_cat, .filter_formats, .filter_services").on("click", function(event){ $(this).toggleClass("act"); event.stopPropagation(); rebuildLinks();reloadResults();});
     $(".search_drop_hide_btn, .search_drop_upper_hide_btn, .product_details").on("click", toggleRecords);
@@ -141,11 +161,10 @@ $(document).ready(function (){
         $(this).closest(".s_left_hide").find("ul").toggleClass("hide_ul");
     });
 
-    $("#filter_price_from, #filter_price_to").keyup(debounce(function (event) {
+    $("#filter_price_from, #filter_price_to, #page_number_input").keyup(debounce(function(){
         rebuildLinks();
         reloadResults();
-        //$("#id_submit").click();
-    }, 1000));
+    }, 600));
 
     rebuildLinks();
     $('form').submit(function(){
@@ -160,8 +179,20 @@ $(document).ready(function (){
         },
         complete: function(){
             $('#s_right').removeClass("loading");
+            rebuildLinks(true);
+            onReadyResults();
         },
         success: function() {}
     });
-});
+}
 
+function onReadyResults() {
+    $("#page_number_input").keyup(debounce(function(){
+        rebuildLinks();
+        reloadResults();
+    }, 600));
+}
+
+
+
+$(document).ready(onReady);

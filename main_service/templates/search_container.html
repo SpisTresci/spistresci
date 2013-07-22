@@ -15,11 +15,11 @@
                 </div>
               </div>
               <input id="id_submit" type="submit" value="SZUKAJ">
-              <div class="search_more s_search_more">
+              <!--<div class="search_more s_search_more">
                 <a href="">
                   WYSZUKIWANIE ZAAWANSOWANE
                 </a>
-              </div>
+              </div>-->
             </form>
           </div>
         </div>
@@ -29,42 +29,8 @@
 	{% include "search_filters.html" %}
 <!-- LEFT MENU END -->
       <div class="s_right{% if isMenuHidden %} s_right2{% endif %}" id="s_right">
-        {% if page.object_list|length > 0 %}
-        <div class="sort">
-          <div class="sort_one">
-            <span style="float:left">
-              CENA 
-            </span>
-            <div class="sort_arrow act"></div>
-            <div class="sort_arrow sort_arrow_d"></div>
-          </div>
-          <div class="sort_one">
-            <span style="float:left">
-              ALFABETYCZNIE 
-            </span>
-            <div class="az">Az</div>
-          </div>
-          <div class="sort_one">
-            <span style="float:left">
-              PROMOCJA 
-            </span>
-            <div class="sort_arrow act"></div>
-            <div class="sort_arrow sort_arrow_d"></div>
-          </div>
-          <div class="sort_one sort_one_last">
-            <span style="float:left">
-              ILOŚĆ FORMATÓW 
-            </span>
-            <div class="sort_arrow act"></div>
-            <div class="sort_arrow sort_arrow_d"></div>
-          </div>
-          <div class="sort_ico sort_ico3"></div>
-          <div class="sort_ico sort_ico2"></div>
-          <div class="sort_ico sort_ico1 act"></div>
-        </div>
-        {% endif %}
         <div id="search_results">
-        {% block search_results %}  {% include "search_results_list.html" %} {% endblock search_results %}
+            {% include "search_results_list.html" %}
         </div>
       </div>
    </div>
