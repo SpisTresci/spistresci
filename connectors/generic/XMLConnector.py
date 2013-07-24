@@ -18,7 +18,7 @@ class XMLConnector(GenericConnector):
         return et
 
     def fetchData(self, unpack=True):
-        #self.downloadFile()
+        self.downloadFile()
         if unpack and self.mode == XMLConnector.BookList_Mode.ZIPPED_XMLS:
             self.fetched_files.extend(
               self.unpackZIP(os.path.join(self.backup_dir, self.filename))
