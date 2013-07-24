@@ -21,23 +21,23 @@ class Audeo(Ceneo):
         'time':("./attrs/a[@name='Czas (min)']", ''),
     }
 
-    #Try getting authors from description
-    def getAuthorsFromDescription(self, dic, name):
-        #TODO: Not implemented yet
-        pass
-
     def adjust_parse(self, dic):
-        if dic['authors'] == ['Praca Zbiorowa'] or dic['authors'] == ['Zbiorowy']:
-            self.getAuthorsFromDescription(dic, u"Autor", "authors")
+        if dic.get('authors') == ['Zbiorowy']:
+            dic['authors'] = ['Praca Zbiorowa']
+        #Audeo has only books in mp3 format.
+        #We have this hardcoded.
+        dic['formats'] = ['mp3']
 
 class AudeoBook(GenericBook, Base):
-    id = Column(Integer, primary_key = True)
-    price = Column(Integer)             #GROSZE!!!
-    url = Column(Unicode(256))          #152
+    #id = Column(Integer, primary_key = True)
+    #external_id
+    #title = Column(Unicode(256))
+    #price = Column(Integer)
+    #price_normal
+    #url = Column(Unicode(256))          #152
+    cover = Column(Unicode(128))        #118
     availability = Column(Integer)
     category = Column(Unicode(64))      #33
-    title = Column(Unicode(256))        #136
-    cover = Column(Unicode(128))        #118
     time = Column(Integer)
     producent = Column(Unicode(64))     #35
 
