@@ -1,6 +1,7 @@
 {% extends "base.html" %}
+{% load staticfiles %}
 
-{% block title %}Spis Treści - wyniki wyszukiwania{% endblock %}
-
+{% block title %}Spis Treści - wyniki wyszukiwania{% endblock title %}
+{% block js %} <script type="text/javascript" src="{% static "js/search.js" %}"></script> {% endblock js %}
 {% block container %} {% include "search_container.html" %} {% endblock container %}
 {% block footer %} {% include "search_footer.html" %} {% endblock footer %}

@@ -1,7 +1,6 @@
 {% load mathtags %}
 
 {% if page.has_previous or page.has_next %}
-<div class="page">
 
     {% if page.number > 1 %}
         <a class="pageLink" href="" data-p="{{ page.number|sub:"1"}}"><div class="page_img page_img2"></div></a>
@@ -39,5 +38,9 @@
         <a class="pageLink" href="" data-p="{{ page.number|add:"1"}}"><div class="page_img page_img3"></div></a>
     {% endif %}
 
-</div>
+    <div class="page_number">
+        Idź do
+        <input type="text" class="pageLink page_active_number" data-p="{{ page.number }}" value="{{ page.number }}"/>
+    </div>
+
 {% endif %}

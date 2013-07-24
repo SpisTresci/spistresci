@@ -5,7 +5,7 @@
         <a class="pageLink" href="" data-p="{{ page.number|sub:"1"}}"><div class="page_img page_img2"></div></a>
     {% endif %}
     <div class="page_number">
-        <input id="page_number_input" type="text" class="pageLink" data-loaded="{{ page.number }}" value="{{ page.number }}"/>
+        <input type="text" class="pageLink page_active_number" data-p="{{ page.number }}" value="{{ page.number }}"/>
         z
         <a class="pageLink" href="" data-p="{{ page.paginator.num_pages }}">{{ page.paginator.num_pages }}</a>
     </div>

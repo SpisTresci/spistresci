@@ -952,6 +952,7 @@ a{
 }
 .s_title a{
   color:#464646;
+  cursor:pointer;
 }
 .s_author{
   margin-bottom:10px;
@@ -1235,6 +1236,7 @@ a{
   background:url(../img/page_r2h.png) center no-repeat;
 }
 .page_number{
+  color:#8D8D8D;
   float:left;
   margin-left:20px;
   padding-bottom:4px;
@@ -1258,6 +1260,10 @@ a{
   font-size:18px !important;
 }
 
+input.page_active_number{
+  font-size:14px !important;
+  font-weight: bold;
+}
 
 .page_goto{
   float:left;

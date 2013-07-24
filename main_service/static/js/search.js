@@ -1,19 +1,4 @@
-function setFilter(id, val, name) {
-    if($(id).length > 0){
-        if (val){
-            $(id).val(val);
-        }else{
-            $(id).remove();
-        }
-    } else {
-        if (val){
-            $("<input>").attr({"type":"hidden","value":val,"name":name}).appendTo(".search_box");
-        }
-    }
-}
-
-function rebuildLinks(reset){
-    reset = typeof reset !== 'undefined' ? reset : false;
+function collectFilters(){
     var dic = {};
     $('li[class^="filter_"]').each(function(){
         var filter_name = $(this).attr('class').split(' ').filter(function(element, index, array){return element.substring(0, 7) == 'filter_';})[0].substring(7);
@@ -30,80 +15,45 @@ function rebuildLinks(reset){
 
     $('input[class^="filter_"]').each(function(){
         var filter_name = $(this).attr('class').split(' ').filter(function(element, index, array){return element.substring(0, 7) == 'filter_';})[0].substring(7);
-        if(reset){
-            $("#filter_price_from").val($("#search_list").attr("data-price-from"));
-            $("#filter_price_to").val($("#search_list").attr("data-price-to"));
-        }
-
-        if($(this).val()){
+         if($(this).val()){
             dic[$(this).attr("data-q")]=$(this).val()
         }
     });
+    return dic;
+}
 
-    var page_number_input = $('#page_number_input');
-    if(page_number_input.length > 0){
-        var page=1;
-        if(reset){
-            page=page_number_input.attr("data-loaded")
-            page_number_input.val(page);
-        } else{
-            page = page_number_input.val();
-        }
-        if(page != 1){
-            dic["page"]= page;
-        }
-    }
+function refreshLinks(link, page){
+    refreshPaginationLinks(link)
+    refreshURL(link, page);
+}
 
-    var link = $.param(dic);
-    $("#id_q").attr("data-q", link);
-
-    dic["q"]=$("#id_q").val();
-    link = $.param(dic);
-
+function refreshPaginationLinks(link){
     $(".pageLink").each(function(){
-        if($(this).attr("data-p")){
-            var a ="?" + link+ "&page="+$(this).attr("data-p");
-            $(this).attr("href", a);
-        }
+        $(this).attr("href", "?"+link+"&page="+$(this).attr("data-p"));
     });
 
-    refreshURL(link);
-}
-
-function reloadResults(){
-    var q=$("#id_q").attr("data-q");
-    var href = '?q='+ $("#id_q").val() + (q?"&"+q:"");
-
-    $("#search_results").load("../q/"+href, function(){
-        $(".search_drop_hide_btn, .search_drop_upper_hide_btn, .product_details").on("click", toggleRecords);
+    $("input.pageLink").each(function(){
+        $(this).val($(this).attr("data-p"));
     });
 }
 
-function refreshURL(urlPath){
+function refreshURL(urlPath, page){
     document.title = $("#id_q").val() + " - SpisTresci.pl";
+    if(page != 1 && page !== 'undefined'){
+        urlPath+="&page="+page;
+    }
     window.history.replaceState("object or string", document.title, "?"+urlPath);
 }
 
-
-function collectFilters(){
-    var formats = []
-    $(".filter_formats.act").find("a").each(function() { formats.push($(this).data("q"))});
-    setFilter("#id_formats", formats.join(','), "formats");
-
-    var services = []
-    $(".filter_services.act").find("a").each(function() { services.push($(this).data("q"))});
-    setFilter("#id_services", services.join(','), "services");
-
-    setFilter("#id_price_gte", $("#filter_price_from").val(), "from");
-    setFilter("#id_price_lte", $("#filter_price_to").val(), "to");
+function loadResults(link, fun){
+    $("#search_results").load("../q/?"+link, fun);
 }
 
 function clearFilter(){
     var filter=$(this).closest(".s_left_box");
     filter.find('input[class^="filter_"]').val("");
     filter.find('li[class^="filter_"]').removeClass("act");
-    rebuildLinks();
-    reloadResults();
+    rebuildResults();
 }
 
 function s_zip(){
@@ -146,13 +96,28 @@ function debounce(fn, delay) {
   };
 }
 
+function rebuildResults(page){
+    var dic = collectFilters();
+    dic["q"] = $("#id_q").val();
+    dic["page"] = typeof page !== 'undefined' ? page : 1;
+    var link = $.param(dic);
+
+    loadResults(link, onResultsReady);
+}
+
 function onReady(){
-    prepareRecords();
-    $(".s_left_cat, .filter_formats, .filter_services").on("click", function(event){ $(this).toggleClass("act"); event.stopPropagation(); rebuildLinks();reloadResults();});
-    $(".search_drop_hide_btn, .search_drop_upper_hide_btn, .product_details").on("click", toggleRecords);
+    $(".s_left_cat, .filter_formats, .filter_services").on("click", function(event){
+        $(this).toggleClass("act");
+        event.stopPropagation();
+        rebuildResults();
+    });
+
+    $("#filter_price_from, #filter_price_to").keyup(debounce(function(){
+        rebuildResults();
+    }, 600));
+
     $(".s_left_blue").on("click", function(event){ $(this).closest(".s_left_box").toggleClass("act");});
-    $("#id_submit").on("click", collectFilters);
-    $(".filter_button").on("click", function(){ $("#id_submit").click();});
+
     $(".filter_clear_button").on("click", clearFilter);
     $(".s_arrow_zip").on("click", s_zip);
 
@@ -161,16 +126,9 @@ function onReady(){
         $(this).closest(".s_left_hide").find("ul").toggleClass("hide_ul");
     });
 
-    $("#filter_price_from, #filter_price_to, #page_number_input").keyup(debounce(function(){
-        rebuildLinks();
-        reloadResults();
-    }, 600));
-
-    rebuildLinks();
-    $('form').submit(function(){
-        var q=$("#id_q").attr("data-q")
-        var href = '?q='+ $("#id_q").val() + (q?"&"+q:"");
-        location.href = href
+    $('form').submit(function(event){
+        event.preventDefault();
+        rebuildResults();
     });
 
     jQuery.ajaxSetup({
@@ -179,20 +137,30 @@ function onReady(){
         },
         complete: function(){
             $('#s_right').removeClass("loading");
-            rebuildLinks(true);
-            onReadyResults();
         },
         success: function() {}
     });
+
+    onResultsReady();
 }
 
-function onReadyResults() {
-    $("#page_number_input").keyup(debounce(function(){
-        rebuildLinks();
-        reloadResults();
+function onResultsReady() {
+    prepareRecords();
+
+    $(".search_drop_hide_btn, .search_drop_upper_hide_btn, .product_details").on("click", toggleRecords);
+
+    $("input.pageLink").keyup(debounce(function(){
+        rebuildResults($(this).val());
     }, 600));
+
+    if($(".page_active_number").length > 0){
+        var dic = collectFilters();
+        dic["q"] = $("#id_q").val();
+
+        var link = $.param(dic);
+        var page = $(".page_active_number").attr("data-p");
+        refreshLinks(link, page);
+    }
 }
-
-
 
 $(document).ready(onReady);
