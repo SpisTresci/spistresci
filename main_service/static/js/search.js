@@ -106,9 +106,29 @@ function rebuildResults(page){
 }
 
 function onReady(){
-    $(".s_left_cat, .filter_formats, .filter_services").on("click", function(event){
+    $(".filter_formats, .filter_services").on("click", function(event){
         $(this).toggleClass("act");
         event.stopPropagation();
+        rebuildResults();
+    });
+
+    $(".s_left_cat").on("click", function(event){
+        var p = $(this)
+
+        if(p.closest(".s_left_hide").find("li.act").length == p.closest(".s_left_hide").find("li").length){
+            p.addClass("act_group");
+        } else if(p.closest(".s_left_hide").find("li.act").length == 0){
+            p.removeClass("act_group");
+        }
+
+        p.toggleClass("act_group");
+        p.closest(".s_left_hide").find("li").each(function(event){
+            if (p.hasClass("act_group")){
+                $(this).addClass("act");
+            }else{
+                $(this).removeClass("act");
+            }
+        });
         rebuildResults();
     });
 
