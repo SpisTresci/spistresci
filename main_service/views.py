@@ -286,6 +286,56 @@ class STSearchQuerySet(SearchQuerySet):
 
         return filtered_products
 
+
+    def _fill_cache(self, start, end, **kwargs):
+        self.query._reset()
+
+        needed = end - start
+        ac = 0
+
+        cache_container = []
+
+        while needed != ac:
+
+            s_start = start + self.filtered_offset + ac
+            s_end   = start + self.filtered_offset + ac + (needed - ac)
+
+            self.query.set_limits(s_start, s_end)
+            results = self.query.get_results(**kwargs)
+            c = self.query.get_count()
+
+            if results == None or len(results) == 0:
+                return False
+
+            if len(self._result_cache) == 0:
+                self._result_cache = [None for i in xrange(c)]
+
+            #if start is None:
+            #    start = 0
+
+            #if end is None:
+            #    end = self.query.get_count()
+
+            to_cache = self.post_process_results(results)
+            filtered = len(results) - len(to_cache)
+
+            self.filtered_offset += filtered
+            for i in range(filtered):
+                del self._result_cache[-1]
+
+            ac += len(to_cache)
+
+            cache_container += to_cache
+
+            if s_end >= c:
+                break
+
+
+        self._result_cache[start:start + ac] = cache_container
+
+        return True
+
+
     def post_process_results(self, results):
         if self.query._using == 'default':
             results = self.convertResultsToProducts(results)
@@ -294,6 +344,10 @@ class STSearchQuerySet(SearchQuerySet):
             results = self.post_process_records(results)
 
         return results
+
+    def __init__(self, using=None, query=None):
+        self.filtered_offset = 0
+        return super(STSearchQuerySet, self).__init__(using, query)
 
 def hide_menu(request, value):
     if not request.is_ajax() or not request.method=='POST':
