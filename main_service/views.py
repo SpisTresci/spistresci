@@ -119,7 +119,7 @@ class STSearchView(SearchView):
         if "to" in self.get_args:
             condition.add({"price__lte":self.get_args["to"]})
 
-        condition.next("and")
+        condition.next("or")
 
         if "services" in self.get_args:
             for service in self.get_args["services"]:
