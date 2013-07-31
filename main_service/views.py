@@ -3,15 +3,18 @@
 #from django.template import Context
 #from django.http import HttpResponse
 
-#from django.core.context_processors import csrf
-#from django.views.decorators.csrf import csrf_protect
-#import os
 from django.http.response import HttpResponse, HttpResponseNotAllowed
 from django.shortcuts import render_to_response
 from haystack.forms import ModelSearchForm
 from haystack.query import SearchQuerySet, SQ
 from haystack.views import SearchView
 from haystack.forms import *
+
+from django.http import HttpResponseRedirect
+from django.contrib import auth
+from django.core.context_processors import csrf
+
+from forms import RegistrationForm
 
 list_of_services=[
     {'name':u'Spis Treści', 'url':'/'},
@@ -27,9 +30,66 @@ supported_formats = {
 
 supported_formats_flat = [format for subgroup_format_list in supported_formats.values() for format in subgroup_format_list]
 
+def authorization(request, c):
+    c.update(csrf(request))
+
+    if not request.user.is_authenticated():
+        username = request.POST.get('username', '')
+        password = request.POST.get('password', '')
+
+        user = auth.authenticate(username=username, password=password)
+        if user is not None:
+            auth.login(request, user)
+
+    c.update({'user': request.user})
 
 def index(request):
-    return render_to_response('index.html', {'top_menu':list_of_services})
+    c = {'top_menu':list_of_services}
+    c.update({'path':request.path})
+    authorization(request, c)
+
+    return render_to_response('index.html', c)
+
+def logout(request):
+    auth.logout(request)
+    return HttpResponseRedirect('/')
+
+def register_user(request):
+    c = {'top_menu':list_of_services}
+    c.update({'path':request.path})
+    if request.method == 'POST':
+        form = RegistrationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect('/accounts/register_success')
+
+    else:
+        form = RegistrationForm()
+
+    c.update(csrf(request))
+
+    c['form'] = form
+
+    return render_to_response('register.html', c)
+
+def egazeciarz_register_user(request):
+    c = {'top_menu':list_of_services}
+    c.update({'path':request.path})
+    if request.method == 'POST':
+        form = RegistrationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect('/accounts/register_success')
+
+    else:
+        form = RegistrationForm()
+
+    c.update(csrf(request))
+
+    c['form'] = form
+
+    return render_to_response('egazeciarz_register.html', c)
+
 
 
 class STSearchForm(ModelSearchForm):
@@ -179,6 +239,8 @@ class STSearchView(SearchView):
                                     'data':self.loadFilterState({'Wszystkie':[bookstore['name'] for bookstore in self.servicesInfo]}, "services")
                                 },
                         ]
+
+        authorization(self.request, extra)
 
         return extra
 

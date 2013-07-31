@@ -122,7 +122,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # Uncomment the next line to enable the admin:
-    # 'django.contrib.admin',
+     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 
@@ -181,4 +181,9 @@ HAYSTACK_CONNECTIONS = {
             'main_service.search_indexes.MasterBookIndex',
         ]
     },
+}
+
+AUTHENTICATION_BACKENDS = {
+     'main_service.auth_backends.eGazeciarzAuthenticationBackend',
+     'django.contrib.auth.backends.ModelBackend',
 }

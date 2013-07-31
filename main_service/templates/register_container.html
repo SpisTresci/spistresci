@@ -1,0 +1,30 @@
+{% load staticfiles %}
+    <div class="container">
+      <div class="index_top_bg s_index_top_bg">
+        <div class="index_top">
+          <a href="/" class="logo">
+            <img src="{% static "img/logo2.png" %}" alt="" />
+          </a>
+        </div>
+      </div>
+      <div class="register_bottom_container">
+        <div class="register_bottom_left_container">
+          <form action="/accounts/register/" method="post">{% csrf_token %}
+            <fieldset id="inputs">
+              <p>{{ form.username }}</p>
+              <p>{{ form.email }}</p>
+              <p>{{ form.password1 }}</p>
+              <p>{{ form.password2 }}</p>
+            </fieldset>
+            <fieldset id="actions">
+              <input type="submit" id="submit" value="Zarejestruj">
+            </fieldset>
+          </form>
+        </div>
+        <div class="register_bottom_right_container">
+            <p><img src="{% static "img/auth_facebook.png" %}" /></p>
+            <p><img src="{% static "img/auth_gplus.png" %}" /></p>
+            <p><img src="{% static "img/auth_twitter.png" %}" /></p>
+        </div>
+      </div>
+   </div>

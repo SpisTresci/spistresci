@@ -1,21 +1,49 @@
     <ul class="menu">
       {% for service in top_menu %}
-      <li{% if forloop.first %} class="act"{% endif %}>
+      <li{% if path == service.url%} class="act"{% endif %}>
         <a href="{{ service.url }}">
           {{ service.name }}
         </a>
       </li>
       {% endfor %}
-      <!--
-      <li class="menu2 menu2b">
-        <a href="">
+
+
+      {% if user == None or not user.is_authenticated %}
+      <li id="login" class="menu2 menu2b">
+        <a>
           ZALOGUJ SIĘ
         </a>
       </li>
-      <li class="menu2 menu2a">
-        <a href="">
+      <li id="register" class="menu2 menu2a">
+        <a href="/accounts/register/">
           ZAREJESTRUJ SIĘ
         </a>
       </li>
-      -->
+      {% else %}
+      <li id="logout" class="menu2 menu2b">
+        <a href="/logout/" style="display: block; width: 100%; height: 100%">
+          WYLOGUJ
+        </a>
+      </li>
+      <li id="account" class="menu2 menu2a">
+        <a style="display: block">
+          {{ user.email }}
+        </a>
+      </li>
+      {% endif %}
+
+
     </ul>
+    <div class="loginform">
+        <form id="login" action="" method="post">{% csrf_token %}
+            <fieldset id="inputs">
+                <input id="username" name="username" type="text" placeholder="Adres email" autofocus="" required="">
+                <input id="password" name="password" type="password" placeholder="Hasło" required="">
+            </fieldset>
+            <fieldset id="actions">
+                <input type="submit" id="submit" value="Zaloguj">
+            </fieldset>
+        </form>
+    </div>
+    <div class="registerform">
+    </div>

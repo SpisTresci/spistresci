@@ -112,6 +112,12 @@ function onReady(){
         rebuildResults();
     });
 
+    $("#login").on("click", function(event){
+        $(".loginform").toggleClass("act");
+        event.preventDefault();
+        event.stopPropagation();
+    });
+
     $(".s_left_cat").on("click", function(event){
         var p = $(this)
 
@@ -146,7 +152,7 @@ function onReady(){
         $(this).closest(".s_left_hide").find("ul").toggleClass("hide_ul");
     });
 
-    $('form').submit(function(event){
+    $('#search_box_form').submit(function(event){
         event.preventDefault();
         rebuildResults();
     });
