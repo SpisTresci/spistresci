@@ -4,7 +4,7 @@ from django.conf.urls import patterns, include, url
 # from django.contrib import admin
 # admin.autodiscover()
 from main_service.views import index, STSearchView, STSearchQuerySet, hide_menu, STSearchForm
-from main_service.views import logout, register_user, egazeciarz_register_user
+from main_service.views import logout, register_user, egazeciarz_register_user, accounts_social_signup, accounts_profile
 from logos_stripe.views import main
 
 
@@ -27,6 +27,9 @@ urlpatterns += patterns('haystack.views',
 
     #url(r'^accounts/login/$',  login),
     url(r'^accounts/logout/$', logout),
+    url(r'^accounts/social/signup/$', accounts_social_signup),
+    url(r'^accounts/profile/$', accounts_profile),
+
     #url(r'^accounts/loggedin/$', loggedin),
     #url(r'^accounts/invalid/$', invalid_login),
     url(r'^accounts/register/$', register_user),
@@ -34,5 +37,8 @@ urlpatterns += patterns('haystack.views',
 
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
+
+
+    (r'^accounts/', include('allauth.urls')),
 
 )

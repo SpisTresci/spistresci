@@ -47,11 +47,17 @@ def index(request):
     c = {'top_menu':list_of_services}
     c.update({'path':request.path})
     authorization(request, c)
-
+    c['request'] = request
     return render_to_response('index.html', c)
 
 def logout(request):
     auth.logout(request)
+    return HttpResponseRedirect('/')
+
+def accounts_social_signup(request):
+    return HttpResponseRedirect('/')
+
+def accounts_profile(request):
     return HttpResponseRedirect('/')
 
 def register_user(request):
@@ -69,6 +75,7 @@ def register_user(request):
     c.update(csrf(request))
 
     c['form'] = form
+    c['request'] = request
 
     return render_to_response('register.html', c)
 

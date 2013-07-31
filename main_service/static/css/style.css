@@ -1520,3 +1520,12 @@ fieldset
 .register_bottom_right_container p {
     margin: 10px 0px 14px 20px;
 }
+
+.auth_icons{
+    display: inline;
+    margin-left: 18px;
+}
+
+.auth_icons a {
+    margin: 0 2px;
+}

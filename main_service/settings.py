@@ -130,6 +130,16 @@ INSTALLED_APPS = (
     'haystack',
     'application',
     'logos_stripe',
+
+    # allauth
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+
+    # allauth providers
+    'allauth.socialaccount.providers.facebook',
+    'allauth.socialaccount.providers.google',
+    'allauth.socialaccount.providers.twitter',
 )
 
 # A sample logging configuration. The only tangible logging
@@ -185,5 +195,32 @@ HAYSTACK_CONNECTIONS = {
 
 AUTHENTICATION_BACKENDS = {
      'main_service.auth_backends.eGazeciarzAuthenticationBackend',
+     'allauth.account.auth_backends.AuthenticationBackend',
      'django.contrib.auth.backends.ModelBackend',
+}
+
+TEMPLATE_CONTEXT_PROCESSORS = {
+    'django.contrib.auth.context_processors.auth',
+    'django.core.context_processors.request',
+    'allauth.account.context_processors.account',
+    'allauth.socialaccount.context_processors.socialaccount',
+}
+
+SOCIALACCOUNT_PROVIDERS = {
+    'facebook':
+    {
+        'SCOPE': ['email'],
+        'AUTH_PARAMS': { 'auth_type': 'https' },
+        'METHOD': 'oauth2' ,
+        'LOCALE_FUNC': lambda request: 'pl-pl',
+    },
+    'google':
+    {
+        'SCOPE': ['https://www.googleapis.com/auth/userinfo.profile', 'email'],
+        'AUTH_PARAMS': { 'access_type': 'online' },
+    },
+    'twitter':
+    {
+        'SCOPE': ['r_emailaddress'],
+    },
 }
