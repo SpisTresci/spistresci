@@ -3,8 +3,8 @@ from django.conf.urls import patterns, include, url
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
 # admin.autodiscover()
-from main_service.views import index, STSearchView, STSearchQuerySet, hide_menu, STSearchForm
-from main_service.views import logout, register_user, egazeciarz_register_user, accounts_social_signup, accounts_profile
+from spistresci.views import index, STSearchView, STSearchQuerySet, hide_menu, STSearchForm
+from spistresci.views import logout, register_user, egazeciarz_register_user, accounts_social_signup, accounts_profile
 from logos_stripe.views import main
 
 

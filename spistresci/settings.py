@@ -105,13 +105,13 @@ MIDDLEWARE_CLASSES = (
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'main_service.urls'
+ROOT_URLCONF = 'spistresci.urls'
 
 # Python dotted path to the WSGI application used by Django's runserver.
-WSGI_APPLICATION = 'main_service.wsgi.application'
+WSGI_APPLICATION = 'spistresci.wsgi.application'
 
 TEMPLATE_DIRS = (
-    'main_service/templates/',
+    'spistresci/templates/',
 )
 
 INSTALLED_APPS = (
@@ -126,7 +126,7 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 
-    'main_service',
+    'spistresci',
     'haystack',
     'application',
     'logos_stripe',
@@ -179,7 +179,7 @@ HAYSTACK_CONNECTIONS = {
         #'URL': 'http://127.0.0.1:8983/solr/alpha6',
         'URL': 'http://solr1.spistresci.pl:8090/solr1/alpha6',
         'EXCLUDED_INDEXES': [
-            'main_service.search_indexes.BookstoreIndex',
+            'spistresci.search_indexes.BookstoreIndex',
         ]
     },
 
@@ -188,13 +188,13 @@ HAYSTACK_CONNECTIONS = {
         #'URL': 'http://127.0.0.1:8983/solr/bookstore-alpha6',
         'URL': 'http://solr1.spistresci.pl:8090/solr1/bookstore-alpha6',
         'EXCLUDED_INDEXES': [
-            'main_service.search_indexes.MasterBookIndex',
+            'spistresci.search_indexes.MasterBookIndex',
         ]
     },
 }
 
 AUTHENTICATION_BACKENDS = {
-     'main_service.auth_backends.eGazeciarzAuthenticationBackend',
+     'spistresci.auth_backends.eGazeciarzAuthenticationBackend',
      'allauth.account.auth_backends.AuthenticationBackend',
      'django.contrib.auth.backends.ModelBackend',
 }

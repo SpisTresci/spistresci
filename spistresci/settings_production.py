@@ -26,7 +26,7 @@ HAYSTACK_CONNECTIONS = {
         'ENGINE': 'haystack.backends.solr_backend.SolrEngine',
         'URL': 'http://solr1.spistresci.pl:8090/solr1/alpha6',
         'EXCLUDED_INDEXES': [
-            'main_service.search_indexes.BookstoreIndex',
+            'spistresci.search_indexes.BookstoreIndex',
         ]
     },
 
@@ -34,7 +34,7 @@ HAYSTACK_CONNECTIONS = {
         'ENGINE': 'haystack.backends.solr_backend.SolrEngine',
         'URL': 'http://solr1.spistresci.pl:8090/solr1/bookstore-alpha6',
         'EXCLUDED_INDEXES': [
-            'main_service.search_indexes.MasterBookIndex',
+            'spistresci.search_indexes.MasterBookIndex',
         ]
     },
 
