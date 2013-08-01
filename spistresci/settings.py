@@ -128,8 +128,6 @@ INSTALLED_APPS = (
 
     'spistresci',
     'haystack',
-    'application',
-    'logos_stripe',
 
     # allauth
     'allauth',
