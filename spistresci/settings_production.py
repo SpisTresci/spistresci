@@ -4,7 +4,6 @@ DEBUG = False
 
 ADMINS = (
     # ('Your Name', 'your_email@example.com'),
-    ('Anita Wysokinska', 'awysokinska@spistresci.pl'),
     ('Krzysztof Szumny', 'kszumny@spistresci.pl'),
     ('Piotr Zawislak', 'pzawislak@spistresci.pl'),
 )
@@ -12,7 +11,7 @@ ADMINS = (
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',  # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'django_alpha_5',  # Or path to database file if using sqlite3.
+        'NAME': 'django_alpha_10',  # Or path to database file if using sqlite3.
         # The following settings are not used with sqlite3:
         'USER': 'root',
         'PASSWORD': '',
@@ -24,17 +23,17 @@ DATABASES = {
 HAYSTACK_CONNECTIONS = {
     'default': {
         'ENGINE': 'haystack.backends.solr_backend.SolrEngine',
-        'URL': 'http://solr1.spistresci.pl:8090/solr1/alpha6',
+        'URL': 'http://solr1.spistresci.pl:8090/solr1/masterbook_alpha_10',
         'EXCLUDED_INDEXES': [
-            'spistresci.search_indexes.BookstoreIndex',
+            'main_service.search_indexes.BookstoreIndex',
         ]
     },
 
     'bookstore': {
         'ENGINE': 'haystack.backends.solr_backend.SolrEngine',
-        'URL': 'http://solr1.spistresci.pl:8090/solr1/bookstore-alpha6',
+        'URL': 'http://solr1.spistresci.pl:8090/solr1/bookstore_alpha_10',
         'EXCLUDED_INDEXES': [
-            'spistresci.search_indexes.MasterBookIndex',
+            'main_service.search_indexes.MasterBookIndex',
         ]
     },
 

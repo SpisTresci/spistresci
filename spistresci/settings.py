@@ -176,8 +176,8 @@ HAYSTACK_LIMIT_TO_REGISTERED_MODELS = False
 HAYSTACK_CONNECTIONS = {
     'default': {
         'ENGINE': 'haystack.backends.solr_backend.SolrEngine',
-        #'URL': 'http://127.0.0.1:8983/solr/alpha6',
-        'URL': 'http://solr1.spistresci.pl:8090/solr1/alpha6',
+        #'URL': 'http://127.0.0.1:8983/solr/masterbook_alpha_10',
+        'URL': 'http://solr1.spistresci.pl:8090/solr1/masterbook_alpha_10',
         'EXCLUDED_INDEXES': [
             'spistresci.search_indexes.BookstoreIndex',
         ]
@@ -185,8 +185,8 @@ HAYSTACK_CONNECTIONS = {
 
     'bookstore': {
         'ENGINE': 'haystack.backends.solr_backend.SolrEngine',
-        #'URL': 'http://127.0.0.1:8983/solr/bookstore-alpha6',
-        'URL': 'http://solr1.spistresci.pl:8090/solr1/bookstore-alpha6',
+        #'URL': 'http://127.0.0.1:8983/solr/bookstore_alpha_10',
+        'URL': 'http://solr1.spistresci.pl:8090/solr1/bookstore_alpha_10',
         'EXCLUDED_INDEXES': [
             'spistresci.search_indexes.MasterBookIndex',
         ]
