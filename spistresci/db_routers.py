@@ -10,3 +10,8 @@ class DBRouter(object):
             return 'baza_calibre'
         else:
             return 'default'
+
+    def allow_syncdb(self, db, model):
+        if model._meta.object_name == 'eGazeciarzUser':
+            return False
+        return db == 'default'
