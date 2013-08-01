@@ -11,7 +11,7 @@ ADMINS = (
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',  # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'django_alpha_10',  # Or path to database file if using sqlite3.
+        'NAME': 'django_spistresci_alpha_10',  # Or path to database file if using sqlite3.
         # The following settings are not used with sqlite3:
         'USER': 'root',
         'PASSWORD': '',
@@ -38,8 +38,6 @@ HAYSTACK_CONNECTIONS = {
     },
 
 }
-
-
 
 EMAIL_SUBJECT_PREFIX= 'Welcome Screen:'
 
