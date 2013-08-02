@@ -1,0 +1,131 @@
+/**
+ * @package		Joomla Bamboo Zen Grid Framework
+ * @Type        Core CSS
+ * @version		v2.0
+ * @author		Joomlabamboo http://www.joomlabamboo.com
+ * @copyright 	Copyright (C) 2007 - 2010 Joomla Bamboo
+ * @license		http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only
+ */
+ 
+/* Grid Layout - Can remove in zgf v2
+-----------------------------------------------------------------------------*/
+.container {
+width: 960px;
+}
+
+body.center .container {margin: 0 auto;}
+body.left .container {float: left;}
+body.right .container {float: right;}
+
+.row {
+width: 94%;
+margin: 0 auto;
+overflow: hidden;
+}
+
+.container.left .row,.container.right .row {
+margin: 0;
+}
+
+.grid_one,.grid_two,.grid_three,.grid_four,.grid_five,.grid_six,.grid_seven,.grid_eight,.grid_nine,.grid_ten,.grid_eleven,.grid_3,.grid_4,.grid_2,.grid_1
+{
+margin-right: 2.8%;
+*margin-right: 3.7%; /* Targeting IE7 only*/
+float: left;
+position: relative;
+min-height: 1px
+;
+margin-left: 8px;
+}
+
+.grid_one
+{
+width: 4.85%
+}
+
+.grid_two
+{
+width: 13.45%
+}
+
+.grid_three,.grid_4
+{
+width: 22.05%
+}
+
+.grid_four,.grid_3
+{
+width: 30.75%
+}
+
+.grid_five
+{
+width: 39.45%
+}
+
+.grid_six,.grid_2
+{
+width: 48%
+}
+
+.grid_seven
+{
+width: 56.75%
+}
+
+.grid_eight
+{
+width: 65.4%
+}
+
+.grid_nine
+{
+width: 74.05%
+}
+
+.grid_ten
+{
+width: 82.7%
+}
+
+.grid_eleven
+{
+width: 91.35%
+}
+
+.grid_twelve,grid_,.grid_1
+{
+width: 100%;
+float: left
+}
+
+.zenlast,#midCol.twoL,#midCol.threeLC,.jblast  {
+float: right;margin: 0;
+} 
+
+#mobilemenu {display: none;}
+
+
+.onecols_push {left: 8.85%;}
+.twocols_push {left: 17.25%;}
+.threecols_push {left: 25.85%;}
+.fourcols_push {left: 60.55%;}
+.fivecols_push {left: 43.25%}
+.sixcols_push {left: 51.80%;}
+.sevencols_push {left: 60.55%;}
+.eightcols_push {left: 69.20%;}
+.ninecols_push {left: 77.85%;}
+.tencols_push {left: 86.5%;}
+.elevencols_push {left: 94.85%}
+
+.onecols_pull{left: -8.85%;}
+.twocols_pull{left: -17.25%;}
+.threecols_pull{left: -25.85%;}
+.fourcols_pull{left: -34.55%;}
+.fivecols_pull{left: -43.25%;}
+.sixcols_pull {left: -51%;}
+.sevencols_pull{left: -60.55%;}
+.eightcols_pull{left: -69.20%;}
+.ninecols_pull{left: -77.85%;}
+.tencols_pull{left: -86.25%;}
+.elevencols_pull{left: -94.85%;}

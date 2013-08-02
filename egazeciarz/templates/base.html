@@ -1,0 +1,96 @@
+{% load static %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pl-pl" lang="pl-pl">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="shortcut icon" href="{% static "img/favicon.ico" %}">
+        <meta name="robots" content="index, follow">
+        <meta name="keywords" content="joomla, pcj1x5y2z">
+        <meta name="description" content="eGazeciarz to projekt, który pozwala Ci w łatwy sposób zasubskrybować interesujące Cię treści wprost na Twój czytnik.">
+        <meta name="generator" content="">
+        <title>{% block title %}eGazeciarz{% endblock %}</title>
+        <link href="{% static "img/favicon.ico" %}" rel="shortcut icon" type="image/x-icon">
+        <link rel="stylesheet" href="{% static "css/modal.css" %}" type="text/css">
+        <link rel="stylesheet" href="{% static "css/base.css" %}" type="text/css" media="screen">
+        <link rel="stylesheet" href="{% static "css/grid.css" %}" type="text/css" media="screen">
+        <link rel="stylesheet" href="{% static "css/type.css" %}" type="text/css" media="screen">
+        <link rel="stylesheet" href="{% static "css/forms.css" %}" type="text/css" media="screen">
+        <link rel="stylesheet" href="{% static "css/superfish.css" %}" type="text/css" media="screen">
+        <link rel="stylesheet" href="{% static "css/theme.css" %}" type="text/css" media="screen">
+        <link rel="stylesheet" href="{% static "css/hiliteBrownBlue.css" %}" type="text/css" media="screen">
+        <link rel="stylesheet" href="{% static "css/mediaqueries.css" %}" type="text/css" media="screen">
+        <link rel="stylesheet" href="{% static "css/style.css" %}" type="text/css">
+        <style type="text/css">
+        <!--
+        body {font-size: 80%} .container {width: 980px;} body {color:#red}#tagline span{top: 10px;left:0;background:none}
+        -->
+        </style>
+        <script type="text/javascript" src="../static/js/mootools.js"></script><style type="text/css"></style>
+        <script type="text/javascript" src="../static/js/jquery.min.js"></script>
+        <script type="text/javascript" src="../static/js/noconflict.js"></script>
+        <script type="text/javascript" src="../static/js/accordionMenuTree.js"></script>
+        <script type="text/javascript" src="../static/js/jquery.cookie.js"></script>
+        <script type="text/javascript" src="../static/js/superfish.js"></script>
+        <script type="text/javascript" src="../static/js/jquery.hoverIntent.minified.js"></script>
+        <script type="text/javascript" src="../static/js/slide.js"></script>
+        <script type="text/javascript" src="../static/js/template.js"></script>
+        <script type="text/javascript" src="../static/js/modal.js"></script>
+        <script type="text/javascript" src="../static/js/k2.js"></script>
+        <script type="text/javascript" src="../static/js/caption.js"></script>
+        <script type="text/javascript">
+            window.addEvent("domready", function() {
+                SqueezeBox.initialize({});
+                $$("a.modal").each(function(el) {
+                el.addEvent("click", function(e) {
+                new Event(e).stop();
+                SqueezeBox.fromElement(el);
+                });
+                });
+            });
+            var K2SitePath = '/';
+            var paneltype = 'opacity';
+            jQuery(document).ready(function(){jQuery('.moduletable-superfish ul,#nav ul')
+                .supersubs({
+                minWidth:    '14',   // minimum width of sub-menus in em units
+                maxWidth:    '17',   // maximum width of sub-menus in em units
+                disableHI:   true,  // set to true to disable hoverIntent detection
+                extraWidth:  1     //
+                })
+                .superfish({
+                animation : {opacity:"show"},
+                speed:       'normal',
+                delay : 800
+                });
+
+            });
+        </script>
+    </head>
+    <body class=" com_content frontpage   itemid1 center">
+        <div id="fontHeadings">
+            <div class="fullwrap">
+                {% block logowrap %}{% endblock logowrap%}
+                {% block navwrap %}{% endblock navwrap%}
+                {% block clear %}<div class="clear"></div>{% endblock clear%}
+                {% block messageswrap %}{% endblock messageswrap%}
+                {% block bannerwrap %}{% endblock bannerwrap%}
+                {% block footerwrap %}{% endblock footerwrap%}
+            </div>
+            <div class="clear">
+            </div>
+            <div class="moduletable">
+                <div class="jbmoduleBody">
+                    <p style="text-align: center;">
+                        <span style="text-align: center font-size: 6px;">eGazeciarz jest darmowym serwisem opartym na licencji <a href="http://www.gnu.org/licenses/agpl-3.0.html">AGPL<br></a>Logo by Marta Stachecka</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div id="sbox-overlay" style="display: none; z-index: 65555; position: fixed; top: 0px; left: 0px; visibility: hidden; zoom: 1; opacity: 0;">
+        </div>
+        <div id="sbox-window" style="display: none; z-index: 65557; position: fixed; top: 50%; left: 50%;">
+            <a id="sbox-btn-close" href="http://egazeciarz.pl/#"></a>
+            <div id="sbox-content" style="visibility: hidden; zoom: 1; opacity: 0;">
+            </div>
+        </div>
+    </body>
+</html>
