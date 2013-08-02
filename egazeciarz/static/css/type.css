@@ -1,0 +1,261 @@
+/**
+ * @package		Joomla Bamboo Zen Grid Framework
+ * @Type        Core CSS
+ * @version		v2.0
+ * @author		Joomlabamboo http://www.joomlabamboo.com
+ * @copyright 	Copyright (C) 2007 - 2010 Joomla Bamboo
+ * @license		http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only
+ */
+
+
+/*------------------------------------*\
+	TYPE
+\*------------------------------------*/
+/*--- HEADINGS ---*/
+h1,.componentheading{
+	font-size:2em;			/* 32px */
+	margin-bottom:0.75em;	/* 24px */
+	line-height:1.5;		/* 48px */
+}
+h2{
+	font-size:1.5em;		/* 24px */
+	/*margin-bottom:1em;*/		/* 24px */
+	line-height:1.5;			/* 24px */
+}
+h3{
+	font-size:1.25em;		/* 20px */
+	margin-bottom:1.2em;	/* 24px */
+	line-height:1.2;		/* 24px */
+}
+h4{
+	font-size:1.125em;		/* 18px */
+	margin-bottom:1.333em;	/* 24px */
+	line-height:1.333;		/* 24px */
+}
+h5{
+	font-weight:bold;
+}
+h5,
+h6{
+	font-size:1em;			/* 16px */
+	margin-bottom:1.5em;	/* 24px */
+	line-height:1.5;		/* 24px */
+}
+
+
+
+h3.centered {
+width: 70%;margin: 20px auto;clear: both;
+font-style: italic;line-height: 2em;font-variant: small-caps;letter-spacing:0.1em;
+}
+
+h3.centered:first-letter {
+font-size: 3.75em;padding: 0.30em 10px 0 0 ;float: left;
+}
+
+/*--- PARAGRAPHS ---*/
+p,
+address{
+	font-size: 1em;
+	margin-bottom:1.5em;
+	line-height: 1.5em;
+}
+ 
+
+/*--- LINKS ---*/
+/*
+Say no to negative hovers: http://csswizardry.com/2011/05/on-negative-hovers/
+A negative hover is one whose appearance is subtracted from on hover rather than added to.
+*/
+a{
+	text-decoration:none;
+}
+a:visited{
+	opacity:0.8; /* A bit basic, but it’s a bare minumum... */
+}
+a:hover{
+	text-decoration:underline;
+}
+a:active,
+a:focus{
+	/* Give clicked links a depressed effect. */
+	position:relative;
+	top:1px;
+}
+
+
+
+/*--- Images ---*/
+
+img {
+max-width: 100%;
+height: auto;
+}
+
+.border {
+box-shadow: 0 0 3px rgba(0, 0, 0, .2);
+-moz-box-shadow: 0 0 3px rgba(0, 0, 0, .2);
+-webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, .3);
+background: #fff;padding: 4px;
+max-width: 98%;margin-bottom: 20px;
+}
+.video embed,
+.video object,
+.video iframe {
+	width: 100%;
+	height: auto;
+}
+
+
+.floatleft {
+float: left;margin:0 20px 20px 0;
+}
+
+.floatright {
+float: right;margin: 0 0 20px 20px;
+}
+/*--- LISTS ---*/
+ul,
+ol{
+	margin:0 0 1.5em 20px;
+}
+ul ul,
+ol ol,
+ul ol,
+ol ul{
+	/* Let’s take care of lists in lists */
+	margin:0 0 0 20px;
+}
+
+/*
+A numbered list is NOT the same as an ordered one.
+Use this class when you want a list to be numbered but it has no order.
+See http://jsfiddle.net/csswizardry/sdrth/
+*/
+ul.numbered{
+	list-style:decimal outside;
+}
+dl{
+	margin-bottom:1.5em;
+}
+dt{
+	font-weight:bold;
+}
+
+dd{
+	margin-left:60px;
+}
+
+/*--- QUOTES ---*/
+blockquote{
+
+	font-size: 2em;
+	font-family: georgia;
+	font-style: italic;
+	margin: 1em 0;
+}
+blockquote b,
+blockquote .source{
+	/* Mark the source up with either a <b> or another element of your choice with a class of source. */
+	display:block;
+	text-indent:0;
+}
+
+
+
+/*--- GENERAL ---*/
+q,
+i,
+em,
+cite{
+	font-style:italic;
+	font-weight:inherit;
+}
+b,
+strong{
+	font-weight:bold;
+	font-style:inherit;
+}
+mark											{ background: rgba(255, 255, 0, 0.4); padding: 0 .25em; }
+
+s,
+del{
+	text-decoration:line-through;
+}
+
+
+ins	{ color: #f00; }
+small, sup, sub	{ font-size: 80%; }
+
+abbr, acronym									{ font-size: 85%; text-transform: uppercase; letter-spacing: .1em; }
+
+abbr[title], acronym[title], dfn[title]			{ border-bottom: 1px dotted black; cursor: help; }
+sup, sub										{ line-height: 0; }
+sup												{ vertical-align: super; }
+sub												{ vertical-align: sub; }
+
+/*--- CODE ---*/
+pre, code {
+	overflow-x: auto;max-height: 200px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	background: #eee;
+	border: 1px solid #ddd;display: block;
+	font-family: monaco, courier, "courier new", monospace;
+	font-size: 11px;
+	margin: 0;
+	padding: 9px;
+	white-space: pre;
+}
+
+
+
+/* notices
+-------------------------------------------------------------- */
+
+.notice,.error,.success {
+	margin: 0 0 17px 0; 
+	padding: 0 4px;
+	font-size: 11px;
+	line-height: 18px;
+}
+
+.notice {
+	background: #FFF6BF; 
+	color: #514721; 
+	border-bottom: 1px solid #FFD324;
+}
+
+.error,.invalid {
+	background: #FBE3E4; 
+	color: #8a1f11; 
+	border-bottom: 1px solid #FBC2C4;
+}
+
+.success {
+	background: #E6EFC2; 
+	color: #264409; 
+	border-bottom: 1px solid #C6D880;	
+}
+
+.inputbox.invalid {
+border: 1px solid #FBC2C4;
+}
+label.invalid {
+color: inherit;background: none;border: 0;
+}
+
+
+
+/* Page Layouts
+-------------------------------------------------------------- */
+.box {
+padding: 10px;border: 1px solid #ddd;background: #fafafa;margin-bottom: 20px;
+}
+
+.shortintro em {
+color: #bbb;text-transform: lowercase;
+}
+.shortintro h2{
+margin-top: -15px;text-transform: uppercase;word-spacing: 0.2em;font-size: 2em;margin-bottom: 30px;
+}

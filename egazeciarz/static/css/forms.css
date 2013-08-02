@@ -1,0 +1,145 @@
+/**
+ * @package		Joomla Bamboo Zen Grid Framework
+ * @Type        Core CSS
+ * @version		v2.0
+ * @author		Joomlabamboo http://www.joomlabamboo.com
+ * @copyright 	Copyright (C) 2007 - 2010 Joomla Bamboo
+ * @license		http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only
+ */
+ 
+
+
+/*------------------------------------*\
+	FORMS
+\*------------------------------------*/
+
+
+fieldset{
+	margin:1.5em 0;
+	max-width: 100%;
+}
+
+#josForm th,#josForm td{
+border: 0;
+}
+fieldset div {
+margin-bottom: 1.5em;
+}
+
+fieldset legend {
+font-weight: bold;font-size: 1.2em;padding-bottom: 0.67em;
+}
+label{
+	display: block;
+	cursor:pointer;
+}
+
+input,select,
+textarea{
+	font-family:inherit;
+	font-size:1em;
+	line-height:1.5;
+	background: #fff;
+}
+
+input:hover {
+background: #f0eeea;
+}
+
+input.button {
+width: auto;
+font-size: 14px;
+}
+
+
+textarea {
+width: 96%;
+}
+
+
+/* Reset on remember button in Joomla forms */
+.contact label.copy,form.form-login label.remember,form#login .remember label {
+display: inline
+}
+
+form#login input#rem.inputbox {
+width: auto;
+}
+
+/* Reset on mod_login fieldset */
+form.form-login fieldset,form#login fieldset {
+border: 0;padding: 0;
+}
+
+form.josForm input {
+width: 70%;margin-right: 20px;
+}
+
+/* Reset on mod_login link */
+form.form-login a {
+display: block;
+}  
+
+form.form-login p {
+margin: 0;
+}
+
+.form-login .inputbox {
+width: 96%;
+}
+/* Reset on polls */
+.poll label {
+display: inline
+}
+
+.poll th {
+text-align: left;
+}
+
+.poll dd {
+margin: 0 0 30px;
+}
+
+.poll select { 
+clear: both;display: block;margin-bottom: 40px;
+}
+
+
+/* Reset on search forms */
+#searchpage fieldset {
+padding: 0;
+}
+
+.search label,.search input,.search_result label,.search_result input {
+display: inline;
+height: 29px;
+margin-bottom: -20px;
+margin-right: 10px;
+width: 193px;
+background-color: #F0EEEA;
+}
+
+#searchpage input#search_searchword.inputbox {
+width: 96%;margin: 0;
+}
+
+.results ol li {
+margin-bottom: 20px;padding-bottom: 20px
+}
+
+
+/* Joomla 1.7 Specific resets
+---------------------------------------------------*/
+
+form#member-registration label,form#user-registration label,form#member-profile label,.contact-form label {
+display: inline;
+}
+
+.profile dl dd,form#member-profile dl dd,form#member-registration dl dd,.contact-form dl dd {
+margin-bottom: 10px;
+}
+
+
+
+
+
