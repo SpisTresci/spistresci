@@ -64,3 +64,7 @@ TEMPLATE_DIRS = (
 # trailing slash.
 # Examples: "http://example.com/media/", "http://media.example.com/"
 #MEDIA_URL = ''
+
+import shutil, sys
+if len(sys.argv) >=2 and sys.argv[1] == 'syncdb':
+    shutil.copyfile(os.path.join(SITE_ROOT,'fixtures/authentication-production.json'), os.path.join(SITE_ROOT,'../initial_data.json'))

@@ -124,7 +124,7 @@ ROOT_URLCONF = 'spistresci.urls'
 WSGI_APPLICATION = 'spistresci.wsgi.application'
 
 TEMPLATE_DIRS = (
-    'spistresci/templates/',
+    os.path.join(SITE_ROOT,'templates/'),
 )
 
 INSTALLED_APPS = (
@@ -217,6 +217,10 @@ TEMPLATE_CONTEXT_PROCESSORS = {
     'allauth.socialaccount.context_processors.socialaccount',
 }
 
+# SOCIALACCOUNT_PROVIDERS are needed for social authentication, which is currently implemented using django-allauth.
+# Each provider needs to be defined in INSTALLED_APPS, and usually require inserting to database special information
+# about secret key/app id of particular provider, which is done by django-fixtures loaded dynamically in settings file
+
 SOCIALACCOUNT_PROVIDERS = {
     'facebook':
     {
@@ -235,3 +239,7 @@ SOCIALACCOUNT_PROVIDERS = {
         'SCOPE': ['r_emailaddress'],
     },
 }
+
+import shutil, sys
+if len(sys.argv) >=2 and sys.argv[1] == 'syncdb':
+    shutil.copyfile(os.path.join(SITE_ROOT,'fixtures/authentication-dev.json'), os.path.join(SITE_ROOT,'../initial_data.json'))
