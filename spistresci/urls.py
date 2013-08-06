@@ -1,8 +1,11 @@
 from django.conf.urls import patterns, include, url
-from spistresci.views import index, STSearchView, STSearchQuerySet, hide_menu, STSearchForm
-from spistresci.views import logout, register_user, egazeciarz_register_user, accounts_social_signup, accounts_profile
-
 from django.contrib import admin
+
+from spistresci.views.index import index
+from spistresci.views.search import STSearchView, STSearchQuerySet, hide_menu, STSearchForm
+from spistresci.views.auth import logout, accounts_social_signup, accounts_profile
+from spistresci.views.register import register_user, egazeciarz_register_user
+
 admin.autodiscover()
 
 urlpatterns = patterns('',
@@ -10,7 +13,6 @@ urlpatterns = patterns('',
      ('^logout/$', logout),
      ('^hide_menu/(?P<value>\d)/$', hide_menu),
 )
-
 
 #TODO: check thread safe version of this
 # Without threading...

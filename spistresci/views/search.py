@@ -1,103 +1,10 @@
-# -*- coding: utf-8 -*-
-# from django.template.loader import POST_template
-#from django.template import Context
-#from django.http import HttpResponse
-
 from django.http.response import HttpResponse, HttpResponseNotAllowed
-from django.shortcuts import render_to_response
 from haystack.forms import ModelSearchForm
 from haystack.query import SearchQuerySet, SQ
 from haystack.views import SearchView
 from haystack.forms import *
-
-from django.http import HttpResponseRedirect
-from django.contrib import auth
-from django.core.context_processors import csrf
-
-from forms import RegistrationForm
-
-list_of_services=[
-    {'name':u'Spis Treści', 'url':'/'},
-    {'name':u'eKundelek', 'url':'http://eKundelek.pl'},
-    {'name':u'Ranking', 'url':'#'},
-    {'name':u'Raporty', 'url':'#'},
-]
-
-supported_formats = {
-    "ebook":["mobi", "epub", "pdf"],
-    "audiobook":["mp3", "cd"],
-}
-
-supported_formats_flat = [format for subgroup_format_list in supported_formats.values() for format in subgroup_format_list]
-
-def authorization(request, c):
-    c.update(csrf(request))
-
-    if not request.user.is_authenticated():
-        username = request.POST.get('username', '')
-        password = request.POST.get('password', '')
-
-        user = auth.authenticate(username=username, password=password)
-        if user is not None:
-            auth.login(request, user)
-
-    c.update({'user': request.user})
-
-def index(request):
-    c = {'top_menu':list_of_services}
-    c.update({'path':request.path})
-    authorization(request, c)
-    c['request'] = request
-    return render_to_response('index.html', c)
-
-def logout(request):
-    auth.logout(request)
-    return HttpResponseRedirect('/')
-
-def accounts_social_signup(request):
-    return HttpResponseRedirect('/')
-
-def accounts_profile(request):
-    return HttpResponseRedirect('/')
-
-def register_user(request):
-    c = {'top_menu':list_of_services}
-    c.update({'path':request.path})
-    if request.method == 'POST':
-        form = RegistrationForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return HttpResponseRedirect('/accounts/register_success')
-
-    else:
-        form = RegistrationForm()
-
-    c.update(csrf(request))
-
-    c['form'] = form
-    c['request'] = request
-
-    return render_to_response('register.html', c)
-
-def egazeciarz_register_user(request):
-    c = {'top_menu':list_of_services}
-    c.update({'path':request.path})
-    if request.method == 'POST':
-        form = RegistrationForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return HttpResponseRedirect('/accounts/register_success')
-
-    else:
-        form = RegistrationForm()
-
-    c.update(csrf(request))
-
-    c['form'] = form
-
-    return render_to_response('egazeciarz_register.html', c)
-
-
+from auth import authorization
+from _constants import *
 
 class STSearchForm(ModelSearchForm):
     formats = forms.CharField(required=False, widget=forms.HiddenInput)
@@ -425,4 +332,3 @@ def hide_menu(request, value):
     request.session['isMenuHidden'] = bool(int(value))
 
     return HttpResponse('ok')
-
