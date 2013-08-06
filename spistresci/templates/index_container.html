@@ -40,33 +40,28 @@
       </div>
       <div class="index_bottom">
         <div class="index_title">U nas porównasz <b>355 782 ofert z 48 serwisów!</b></div>
-        <div class="index_subtitle">
-          <img src="{% static "img/red_line.png" %}" alt="" />BESTSELLERY<img src="{% static "img/red_line.png" %}" alt="" />
-        </div>
-        <div class="index_subtitle">
-          <img src="{% static "img/red_line.png" %}" alt="" />NOWOŚCI<img src="{% static "img/red_line.png" %}" alt="" />
-        </div>
-        <div class="index_subtitle">
-          <img src="{% static "img/red_line.png" %}" alt="" />PROMOCJE<img src="{% static "img/red_line.png" %}" alt="" />
-        </div>
-        
-  <!--   list book       -->
-      <!--<? for($j=0;$j<3;$j++){ ?> -->
 
+        {% for group in group_of_books %}
+        <div class="index_subtitle">
+          <img src="{% static "img/red_line.png" %}" alt="" />{{ group.name }}<img src="{% static "img/red_line.png" %}" alt="" />
+        </div>
+        {% endfor %}
+
+        {% for group in group_of_books %}
         <div class="three_index_box">
-          <!--<? for($i=0;$i<3;$i++){ ?> -->
+          {% for book in group.list %}
 
           <div class="index_box">
-            <img src="{% static "img/bok_img_index.png" %}" alt="" />
+            <img src="{{ book.cover }}" style="width: 91px; height: 137px" alt="" />
             <div class="ib_text">
               <div class="ib_text1">
                 <a href="">
-                  Więzień nieba. Książe Parnasu
+                  {{ book.title }}
                 </a>
               </div>
-              <div class="ib_text2">
+              <div class="ib_text2 s_author">
                 <a href="">
-                  Zafon Carlos Louis
+                  {{ book.author }}
                 </a>
               </div>
               <div class="ib_text_pos">
@@ -74,7 +69,7 @@
                   cena od:
                 </div>
                 <div class="ib_price">
-                  29.99<span class="ib_price2">zł</span>
+                  {{ book.price }}<span class="ib_price2">zł</span>
                 </div>
                 <div class="ib_line">
                 </div>
@@ -95,9 +90,9 @@
                   Dostępne<br /> 
                   formaty:
                   <div class="ibh_image_format">
-                    epub<br />
-                    pdf<br />
-                    mp3
+                    {% for format in book.formats %}
+                    {{ format }}{% if not forloop.last %}<br />{% endif %}
+                    {% endfor %}
                   </div>
                 </a>  
               </div>
@@ -105,14 +100,14 @@
               </div>
             </div>
           </div>
-          <!--% endfor %-->
+          {% endfor %}
           <div class="index_more">
             <a href="">
               Zobacz więcej
             </a>
           </div>
         </div>
-        <!--% endfor %-->
+        {% endfor %}
         
    <!--  end of list book       -->  
      </div>
