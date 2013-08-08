@@ -15,10 +15,10 @@ class Audeo(Ceneo):
         'title':('./name', ''),
         'cover':("./imgs/main[@url]", ''),
         'description':('./desc', ''),
-        'producent':("./attrs/a[@name='Producent']", ''),
+        'publisher':("./attrs/a[@name='Producent']", ''),
         'authors':("./attrs/a[@name='Autor']", ''),
         'lectors':("./attrs/a[@name='Lektor']", ''),
-        'time':("./attrs/a[@name='Czas (min)']", ''),
+        'length':("./attrs/a[@name='Czas (min)']", ''),
     }
 
     def adjust_parse(self, dic):
@@ -29,15 +29,10 @@ class Audeo(Ceneo):
         dic['formats'] = ['mp3']
 
 class AudeoBook(GenericBook, Base):
-    #id = Column(Integer, primary_key = True)
-    #external_id
-    #title = Column(Unicode(256))
-    #price = Column(Integer)
-    #price_normal
     #url = Column(Unicode(256))          #152
     cover = Column(Unicode(128))        #118
     availability = Column(Integer)
     category = Column(Unicode(64))      #33
-    time = Column(Integer)
-    producent = Column(Unicode(64))     #35
+    length = Column(Integer)
+    publisher = Column(Unicode(64))     #35
 
