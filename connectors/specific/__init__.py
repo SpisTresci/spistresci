@@ -1,4 +1,5 @@
 from Abooki import Abooki
+from Allegro import Allegro
 from Audeo import Audeo
 from Audiobook import Audiobook
 from Audioteka import Audioteka
