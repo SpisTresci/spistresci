@@ -18,7 +18,7 @@ class Audeo(Ceneo):
         'publisher':("./attrs/a[@name='Producent']", ''),
         'authors':("./attrs/a[@name='Autor']", ''),
         'lectors':("./attrs/a[@name='Lektor']", ''),
-        'length':("./attrs/a[@name='Czas (min)']", ''),
+        'length':("./attrs/a[@name='Czas (min)']", 0),
     }
 
     def adjust_parse(self, dic):
