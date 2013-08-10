@@ -2,6 +2,7 @@
 from django.shortcuts import render_to_response
 from spistresci.auth.views import authorization
 from spistresci.constants import *
+from constants import *
 
 group_of_books=[
     {
@@ -89,5 +90,14 @@ def index(request):
     c.update({'path':request.path})
     authorization(request, c)
     c['request'] = request
+
+    import random
+
+    for group in group_of_books:
+        random.shuffle(group['list'])
+
     c['group_of_books']=group_of_books
+
+    random.shuffle(blogger_reviews)
+    c['blogger_reviews']=blogger_reviews[:3]
     return render_to_response('index.html', c)

@@ -4,3 +4,4 @@
 *.swo
 *.swp
 /solr/
+.sass-cache

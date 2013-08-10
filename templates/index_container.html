@@ -109,6 +109,13 @@
         </div>
         {% endfor %}
         
-   <!--  end of list book       -->  
+      <div class="index_bloggers">
+        <img class="b_left" src="{% static "img/red_line_b.png" %}" alt="" /><img class="b_center" src="{% static "img/red_line_c.png" %}" alt="" /><img class="b_right" src="{% static "img/red_line_e.png" %}" alt="" />
+          BLOGERZY POLECAJĄ
+        <img class="b_left" src="{% static "img/red_line_b.png" %}" alt="" /><img class="b_center" src="{% static "img/red_line_c.png" %}" alt="" /><img class="b_right" src="{% static "img/red_line_e.png" %}" alt="" />
+        {% for review in blogger_reviews %}
+            {% include "index_bloger_box.html" %}
+        {% endfor %}
+      </div>
      </div>
     </div>
