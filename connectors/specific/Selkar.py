@@ -9,8 +9,8 @@ from connectors.generic import GenericBook
 @notFilterableConnector
 class Selkar(XMLConnector):
 
-    def __init__(self, name = None, limit_books = 0):
-        XMLConnector.__init__(self, name = name, limit_books = limit_books)
+    def __init__(self, *args, **kwargs):
+        XMLConnector.__init__(self, *args, **kwargs)
         self.api_key = self.config['api_key']
         self.method = self.config.get('method', 'getProduct')
         self.aff = self.config['aff']

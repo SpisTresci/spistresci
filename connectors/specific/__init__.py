@@ -25,6 +25,7 @@ from Merlin import Merlin
 from Nexto import Nexto
 from OnePress import OnePress
 from Pokatne import Pokatne
+from Polona import Polona
 from Publio import Publio
 from RW2010 import RW2010
 from Selkar import Selkar

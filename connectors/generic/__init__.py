@@ -21,3 +21,5 @@ from ReferenceConnector import ReferenceConnector
 from MARCConnector import MARCConnector
 
 from JSONConnector import JSONConnector
+
+from OAIConnector import OAIConnector

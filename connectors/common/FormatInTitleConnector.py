@@ -4,8 +4,8 @@ import re
 
 class FormatInTitleConnector(Ceneo):
 
-    def __init__(self, name = None, limit_books = 0):
-        super(FormatInTitleConnector, self).__init__(name, limit_books)
+    def __init__(self, *args, **kwargs):
+        super(FormatInTitleConnector, self).__init__(*args, **kwargs)
         self.supported_formats = sorted(self.supported_formats, cmp = lambda x, y: cmp(len(x), len(y)), reverse = True)
         self.accepted_suffix_patterns = self.config.get('accepted_suffix_patterns', '')
         self.format_in_title_split_regex = self.config.get('format_in_title_split_regex', '!|\?|,|\.|')

@@ -9,11 +9,6 @@ class XMLConnector(GenericConnector):
 
     xml_tag_dict = {}
     depth = 0
-    skip_offers = 0
-
-    def __init__(self, name=None, limit_books=0):
-        super(XMLConnector, self).__init__(name=name)
-        self.limit_books = limit_books
 
     def get_et(self):
         return et

@@ -16,8 +16,8 @@ class RW2010(XMLConnector):
         'price': ('./cena', 0),
     }
 
-    def __init__(self, name = "RW2010", limit_books = 0):
-        super(RW2010, self).__init__(name = name, limit_books = limit_books)
+    def __init__(self, *args, **kwargs):
+        super(RW2010, self).__init__(*args, **kwargs)
         self.macro_url = self.config['macro_url']
         if self.macro_url:
             u = urllib2.urlopen(self.macro_url)

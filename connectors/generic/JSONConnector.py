@@ -5,12 +5,7 @@ import os
 
 class JSONConnector(GenericConnector):
 
-    skip_offers = 0
     tag_dict = {}
-
-    def __init__(self, name=None, limit_books=0):
-        GenericConnector.__init__(self, name=name)
-        self.limit_books = limit_books
 
     def makeDict(self, book):
         dic = {}

@@ -81,7 +81,8 @@ class GenericConnector(GenericBase, DataValidator):
     config_file = 'conf/update.ini'
     config_object = None
 
-    rows_initialized = True;#False
+    rows_initialized = True#False
+    skip_offers = 0
 
     session_obj_limit = 1000
 
@@ -138,11 +139,12 @@ class GenericConnector(GenericBase, DataValidator):
             splited = key.split('.')
             self.config[splited[0]] = self._get_conf_option(splited, value, self.config)
 
-    def __init__(self, name=None):
+    def __init__(self, name=None, limit_books=0):
         if not name:
             self._name = self.class_name()
         else:
             self._name = name
+        self.limit_books = limit_books
         self.register()
         self.parse_config(self.config_file)
         self.url = self.config['url']
