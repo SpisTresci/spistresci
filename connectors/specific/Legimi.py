@@ -5,6 +5,14 @@ from connectors.generic import GenericBook
 Base = SqlWrapper.getBaseClass()
 
 class Legimi(Afiliant):
+    xml_tag_dict = Afiliant.xml_tag_dict + {
+        'authors' : ("./n:attribute[name='Autor']/value", ''),
+        'formats' : ("./n:attribute[name='Format']/value", ''),
+        'publisher' : ("./n:attribute[name='Wydawnictwo']/value", ''),
+        'year' : ("./n:attribute[name='Rok_wydania']/value", ''),
+        'isbn' : ("./n:attribute[name='ISBN']", ''),
+        'subscription' : ("./n:attribute[name='Abonament']/value", ''),
+    }
     pass
 
 class LegimiBook(GenericBook, Base):

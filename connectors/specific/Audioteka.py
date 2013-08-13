@@ -5,7 +5,11 @@ from connectors.generic import GenericBook
 Base = SqlWrapper.getBaseClass()
 
 class Audioteka(Afiliant):
-    pass
+    xml_tag_dict = Afiliant.xml_tag_dict + {
+        'authors' : ("./n:attribute[name='Autor']/value", ''),
+        'publisher' : ("./n:attribute[name='wydawca']/value", ''),
+        'length' : ("./n:attribute[name='Dugo\u015b\u0107']/value", ''),
+    }
 
 class AudiotekaBook(GenericBook, Base):
     id = Column(Integer, primary_key = True)

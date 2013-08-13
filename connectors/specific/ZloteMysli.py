@@ -5,24 +5,32 @@ from connectors.generic import GenericBook
 Base = SqlWrapper.getBaseClass()
 
 class ZloteMysli(Afiliant):
+ #        #TODO: książki tylko z odpowiednim categoryId
+ # #       'authors' : ("./n:attribute[name='Autor']/value", ''),
+ #        'formats' : ("./n:attribute[name='Format pliku']/value", ''),
+ #        'publisher' : ("./n:attribute[name='Wydawnictwo']/value", ''),#??
+ #        'year' : ("./n:attribute[name='Rok_wydania']/value", ''),
+ #        'lectors' : ("./n:attribute[name='Czyta']/value", ''),
+ #        'manudacturer' : ("./n:attribute[name='Producent']/value", ''),#??
+ #        'length' : ("./n:attribute[name='Dugo\u015b\u0107']/value", ''),
+ #
+ #    xml_attributes_dict = {
+ #        'Autor':('authors', ''),
+ #        'ISBN':('isbn', ''),
+ #        'Wydawnictwo':('publisher', ''),
+ #        'Rok wydania':('date', ''),
+ #        'Format':('object_format', ''),
+ #        u'Ilo\u015b\u0107 stron':('length', ''),
+ #        'Oprawa':('binding', ''),
+ #        #it may be sth different than image tag
+ #        'zm:imageParent':('cover_zm', ''),
+ #        'zm:imageMedium':('cover_medium', ''),
+ #        'zm:imageSmall':('cover_small', ''),
+ #        #it may be sth different than category
+ #        'zm:categoryId':('category_id', ''),
+ #        'zm:productTypeId':('product_type_id', ''),
+ #    }
 
-    xml_attributes_dict = {
-        'Autor':('authors', ''),
-        'ISBN':('isbn', ''),
-        'Wydawnictwo':('publisher', ''),
-        'Rok wydania':('date', ''),
-        'Format':('object_format', ''),
-        'Format pliku':('format', ''),
-        u'Ilo\u015b\u0107 stron':('length', ''),
-        'Oprawa':('binding', ''),
-        #it may be sth different than image tag
-        'zm:imageParent':('cover_zm', ''),
-        'zm:imageMedium':('cover_medium', ''),
-        'zm:imageSmall':('cover_small', ''),
-        #it may be sth different than category
-        'zm:categoryId':('category_id', ''),
-        'zm:productTypeId':('product_type_id', ''),
-    }
 
 class ZloteMysliBook(GenericBook, Base):
 

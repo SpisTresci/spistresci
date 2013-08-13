@@ -48,9 +48,15 @@ class XMLConnector(GenericConnector):
     xmls_namespace = ""
 
     def makeDict(self, book, xml_tag_dict=None):
-        if xml_tag_dict == None:
-            xml_tag_dict = self.xml_tag_dict
+        """
+        Translate book xml into dictionary used to insert into database
+        :param book: book xml root
+        :param xml_tag_dict: dictionary of xpaths used to translate
+        :return: created dictionary
+        """
 
+        if xml_tag_dict is None:
+            xml_tag_dict = self.xml_tag_dict
 
         book_dict = {}
         for (dict_key, xpath) in xml_tag_dict.items():
