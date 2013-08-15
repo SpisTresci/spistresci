@@ -10,7 +10,7 @@ class Abooki(FormatInTitleConnector):
     #dict of xml_tag -> db_column_name translations
     xml_tag_dict = {
         'external_id':("./attrs/a[@name='ShopProductId']", ''),
-        'afiliant_id':('@id', ''),
+        'program_id':('@id', ''),
         'price':('@price', 0),
         'url':('@url', ''),
         'category':('./cat', ''),
@@ -25,7 +25,7 @@ class Abooki(FormatInTitleConnector):
 class AbookiBook(GenericBook, Base):
     #id = Column(Integer, primary_key = True)
     #external_id
-    afiliant_id = Column(Integer)
+    program_id = Column(Integer)
     #title
     #price
     #price_normal

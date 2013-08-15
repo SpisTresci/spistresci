@@ -5,7 +5,8 @@ from connectors.generic import GenericBook
 Base = SqlWrapper.getBaseClass()
 
 class ZloteMysli(Afiliant):
- #        #TODO: książki tylko z odpowiednim categoryId
+    pass
+ #        #TODO: ksiazki tylko z odpowiednim categoryId
  # #       'authors' : ("./n:attribute[name='Autor']/value", ''),
  #        'formats' : ("./n:attribute[name='Format pliku']/value", ''),
  #        'publisher' : ("./n:attribute[name='Wydawnictwo']/value", ''),#??

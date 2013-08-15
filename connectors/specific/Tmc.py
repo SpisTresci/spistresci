@@ -5,9 +5,7 @@ from connectors.generic import GenericBook
 Base = SqlWrapper.getBaseClass()
 
 class Tmc(Afiliant):
-    xml_tag_dict = Afiliant.xml_tag_dict + {
-        'publisher' : ("./n:attribute[name='Producen']/value", ''),
-    }
+    xml_tag_dict = dict (Afiliant.xml_tag_dict.items() + [('publisher', ("./n:attribute[name='Producent']/value", ''))])
 
 class TmcBook(GenericBook, Base):
     pass

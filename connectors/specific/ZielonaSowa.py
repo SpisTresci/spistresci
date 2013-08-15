@@ -5,11 +5,9 @@ from connectors.generic import GenericBook
 Base = SqlWrapper.getBaseClass()
 
 class ZielonaSowa(Afiliant):
-    xml_tag_dict = Afiliant.xml_tag_dict + {
-        'authors' : ("./n:attribute[name='Producent']/value", ''),
-    }
+    xml_tag_dict = dict (Afiliant.xml_tag_dict.items() + [('authors', ("./n:attributes/n:attribute[n:name='Producent']/n:value", ''))])
 
-    #TODO: książki tylko z odpowiednim categoryId
+    #TODO: ksiazki tylko z odpowiednim categoryId
 class ZielonaSowaBook(GenericBook, Base):
     id = Column(Integer, primary_key = True)
 

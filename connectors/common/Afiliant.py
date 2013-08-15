@@ -9,7 +9,7 @@ class Afiliant(XMLConnector):
     depth = 3
 
     #dict of xml_tag -> db_column_name translations
-    xml_tag_dict = {-
+    xml_tag_dict = {
         'external_id': ('./n:id', ''),
         'price': ('./n:price', 0),
         'title': ('./n:name', ''),
@@ -17,6 +17,5 @@ class Afiliant(XMLConnector):
         'category': ('./n:categoryId', ''),
         'description': ('./n:description', ''),
         'cover': ('./n:image', ''),
-        'isbn' : ("./n:attribute@name='ISBN']/value", ''),
     }
 
