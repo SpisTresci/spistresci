@@ -9,23 +9,20 @@ class Legimi(Afiliant):
         ('authors', ("./n:attributes/n:attribute[n:name='Autor']/n:value", '')),
         ('formats', ("./n:attributes/n:attribute[n:name='Format']/n:value", '')),
         ('publisher', ("./n:attributes/n:attribute[n:name='Wydawnictwo']/n:value", '')),
-        ('year', ("./n:attributes/n:attribute[n:name='Rok_wydania']/n:value", '')),
-        ('isbn', ("./n:attributes/n:attribute[n:name='ISBN']", '')),
+        ('date', ("./n:attributes/n:attribute[n:name='Rok_wydania']/n:value", '')),
+        ('isbns', ("./n:attributes/n:attribute[n:name='ISBN']/n:value", '')),
         ('subscription', ("./n:attributes/n:attribute[n:name='Abonament']/n:value", '')),
     ] )
 
 class LegimiBook(GenericBook, Base):
-    id = Column(Integer, primary_key = True)
-
-    category = Column(Unicode(90))      #82
-    publisher = Column(Unicode(80))     #73
-    title = Column(Unicode(165))       #155
-    #description                        #0
-    url = Column(Unicode(70))           #60
-    price = Column(Integer)             #GROSZE!!!
-    cover = Column(Unicode(60))         #52
-    year = Column(Unicode(4))           #4 #TODO: correct name of collumnq
-    length = Column(Unicode(20))        #16
-    #lectors
-    format = Column(Unicode(25))        #23 #TODO: store format in proper way
+    #id = Column(Integer, primary_key = True)
+    #external_id = Column(Integer, unique=True)
+    #title
+    #price
+    #price_normal
+    url = Column(Unicode(128))           #60
+    cover = Column(Unicode(64))         #52
+    category = Column(Unicode(128))      #82
+    publisher = Column(Unicode(128))     #73
+    date = Column(Unicode(4))           #4
 
