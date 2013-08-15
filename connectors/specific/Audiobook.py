@@ -28,7 +28,7 @@ class Audiobook(FormatInTitleConnector):
             title = title.replace(authors, '')
             dic['title'] =re.sub('^ *, *', '', title)
         super(Audiobook, self).adjust_parse(dic)
-        #FIXME: there is no cover info in xml, hardcoded for now
+        #FIXME: there is no cover info in xml, hardcoded for now - T370
         dic['cover'] = ''
         
 

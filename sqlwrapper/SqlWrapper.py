@@ -60,6 +60,7 @@ class Triggers(utils.Enum):
 class SqlWrapper(object):
     Base = None
     engine = None
+    broadEngine = None
     defaults = {'scheme':'mysql', 'username':'root', 'password':'',
                 'host':'localhost', 'database':'test', 'echo': 'False'}
 
@@ -78,6 +79,7 @@ class SqlWrapper(object):
         cls.echo = config.getboolean('DEFAULT', 'echo')
         cls.charset = config.get('DEFAULT', 'charset')
         cls.use_unicode = config.getint('DEFAULT', 'use_unicode')
+        cls.create_db_if_not_exist = config.getboolean('DEFAULT', 'create_db_if_not_exist')
         cls.tables = [x for x in cls.getBaseClass().metadata.sorted_tables if any(con in x.name for con in connectors)]
         cls.table_list = [cls.getBaseClass().metadata.tables[x] for x in cls.table_list if cls.getBaseClass().metadata.tables.get(x) != None]
         cls.createTables(cls.table_list)
@@ -118,18 +120,29 @@ class SqlWrapper(object):
         return cls.Base
 
     @classmethod
+    def getNetLoc(cls):
+        netloc = ''
+        if cls.username:
+            netloc += cls.username
+            if cls.password:
+                netloc += ':'
+                netloc += cls.password
+            netloc += '@'
+        netloc += cls.host
+        return netloc
+
+    @classmethod
     def getEngine(cls):
+        """
+        This engine points to database which is specified in file[s] db[[.production/devel][.hostname]].ini
+        """
         if cls.engine == None:
-            #cls.engine = create_engine('mysql://root:Z0oBvgF1R3@localhost/st', echo=True)
-            netloc = ''
-            if cls.username:
-                netloc += cls.username
-                if cls.password:
-                    netloc += ':'
-                    netloc += cls.password
-                netloc += '@'
-            netloc += cls.host
+            netloc = cls.getNetLoc()
             urlparse.uses_netloc.append(cls.scheme)
+
+            if cls.create_db_if_not_exist:
+                SqlWrapper.getBroadEngine().execute("CREATE DATABASE IF NOT EXISTS %s" % cls.database)
+
             query = ''
             if cls.charset:
                 query='charset=%s' % cls.charset
@@ -138,7 +151,23 @@ class SqlWrapper(object):
             uri = urlparse.urlunparse((cls.scheme, netloc, cls.database, None, query, None))
             urlparse.uses_netloc.pop()
             cls.engine = create_engine(uri, echo = cls.echo, encoding = 'utf-8')
+
         return cls.engine
+
+    @classmethod
+    def getBroadEngine(cls):
+        """
+        This engine points to database by schema://user@hostname according to specified information from
+        file[s] db[[.production/devel][.hostname]].ini, HOWEVER without specifying database, which allows
+        create/drop various databases.
+        """
+        if cls.broadEngine == None:
+            netloc = cls.getNetLoc()
+            urlparse.uses_netloc.append(cls.scheme)
+            uri = urlparse.urlunparse((cls.scheme, netloc, '', None, None, None))
+            cls.broadEngine = create_engine(uri, echo = cls.echo, encoding = 'utf-8')
+
+        return cls.broadEngine
 
     @classmethod
     def get_or_create_(cls, session, ClassName, d, param_name = None):

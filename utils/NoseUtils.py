@@ -47,3 +47,10 @@ def network_available_for_tests():
     finally:
         g_network_set = True
     return g_network_available
+
+
+
+def neq_(a, b, msg=None):
+    """Shorthand for 'assert a == b, "%r != %r" % (a, b)
+    """
+    assert a != b, msg or "%r == %r" % (a, b)

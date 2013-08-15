@@ -556,6 +556,14 @@ class GenericBook(GenericBase):
 
                 elif key == 'isbns':
                     pass
+                elif key == 'description':
+                    if self.description.description != new_data[key]:
+                        self.description.description = new_data[key]
+
+                elif key == 'price':
+                    #special case of updating price is handle by trigger
+                    if un != new_data[key]:
+                        setattr(self, key, new_data[key])
                 elif un != new_data[key]:
                     setattr(self, key, new_data[key])
 
