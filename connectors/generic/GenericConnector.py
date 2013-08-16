@@ -456,7 +456,7 @@ class GenericConnector(GenericBase, DataValidator):
                     role = role_dict.keys()[0]
                     list_of_person_dicts = role_dict[role]
 
-                    role_ = PersonRole.get(session, role)
+                    role_ = PersonRole.get_or_create(session, role)
                     for person_dict in list_of_person_dicts:
                         author = Author.get_or_create(session, person_dict)
                         books_authors = BooksAuthors()
@@ -527,10 +527,8 @@ class GenericBook(GenericBase):
 
     #DoNotLetCommit
     def update(self, new_data, session):
-        new_book = type(self)(new_data)
         for key in new_data:
             try:
-                atr_type = type(getattr(self, key))
                 un = unicode(getattr(self, key))
 
                 if key == 'persons':
@@ -544,7 +542,6 @@ class GenericBook(GenericBase):
                         for str_author in new_data['authors']:
                             if str_author not in str_author_list:
                                 a = Author.get_or_create(session, str_author)
-                                #a.books.append(self)
                                 self.authors.append(a)
                                 session.add(a)
 
@@ -552,7 +549,6 @@ class GenericBook(GenericBase):
                             if str_author not in new_data['authors']:
                                 a = Author.get_or_create(session, str_author)
                                 self.authors.remove(a)
-                                session.commit()
 
                 elif key == 'isbns':
                     pass
