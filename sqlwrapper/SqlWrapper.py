@@ -141,7 +141,7 @@ class SqlWrapper(object):
             urlparse.uses_netloc.append(cls.scheme)
 
             if cls.create_db_if_not_exist:
-                SqlWrapper.getBroadEngine().execute("CREATE DATABASE IF NOT EXISTS %s" % cls.database)
+                cls.getBroadEngine().execute("CREATE DATABASE IF NOT EXISTS %s" % cls.database)
 
             query = ''
             if cls.charset:

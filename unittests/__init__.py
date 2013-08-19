@@ -6,4 +6,4 @@ from module_import import *
 from similarity_calculator import *
 from specific_connectors import *
 from data_validator import *
-from unittests.db.db_insert_test import *
+

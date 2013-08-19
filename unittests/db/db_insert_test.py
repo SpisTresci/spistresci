@@ -4,7 +4,6 @@ from connectors.specific.Audiobook import Audiobook
 
 class TestAudiobookUpdate(DBInsertTestBase):
     config_file = 'unittests/data/db/update/conf/audiobook.ini'
-    config_db_file = 'unittests/data/db/update/conf/test_db.ini'
     connector_class = Audiobook
 
     def test_Audiobook(self):

@@ -1,25 +1,12 @@
 from nose.tools import *
-from connectors.generic import GenericConnector, GenericBook
-from sqlwrapper import SqlWrapper
-from sqlalchemy.orm import sessionmaker
-import utils
+from connectors.generic import GenericBook
+from . import LocalSqlWrapper
 from utils.NoseUtils import neq_
 
 class DBInsertTestBase(object):
-
-    @classmethod
-    def setUpClass(cls):
-        cls.connectors = [cls.connector_class.class_name()]
-        cls.connector = cls.connector_class()
-
-        SqlWrapper.init(config_file=cls.config_db_file, connectors=cls.connectors)
-        cls.engine = SqlWrapper.getEngine()
-        cls.Session = sessionmaker(bind=cls.engine, autoflush=False)
-        cls.connector.createSession()
-
-    @classmethod
-    def tearDownClass(cls):
-        cls.connector.closeSession()
+    def setUp(self):
+        self.connector = self.connector_class()
+        self.connector.session = LocalSqlWrapper.getSession()
 
     def __init__(self):
         self.check_counter = 0
@@ -32,7 +19,6 @@ class DBInsertTestBase(object):
         self.connector.fetched_files = [insert_file]
         self.connector.parse()
         self.connector.session.commit()
-
         self._check(list_of_dicts, eq_)
 
     def _check_if_not_eq(self, list_of_dicts):
@@ -54,11 +40,10 @@ class DBInsertTestBase(object):
                 elif key != "external_id":
                     op_(dic[key], getattr(book, key))
 
-
     def test_tables_created(self):
-        eq_(self.engine.name, 'mysql')
-        t1 = self.engine.table_names()
-        t2 = ['%s%s' % (self.connector_class.class_name(), table) for table in 'Author', 'Book', 'BookDescription', 'BookPrice', 'BooksAuthors', 'ISBN', 'BooksFormats', 'Format']
+        eq_(LocalSqlWrapper.getEngine().name, 'mysql')
+        t1 = LocalSqlWrapper.getEngine().table_names()
+        t2 = ['%s%s' % (self.connector.name, table) for table in 'Author', 'Book', 'BookDescription', 'BookPrice', 'BooksAuthors', 'ISBN', 'BooksFormats', 'Format']
 
         t2 += [
                     'MasterAuthor',
@@ -75,7 +60,7 @@ class DBInsertTestBase(object):
                     'master_books_title_words',
                     'mini_books_mini_authors',
                     'mini_books_mini_isbns',
-                    'mini_books_title_words'
+                    'mini_books_title_words',
                 ]
 
         t1.sort()
