@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+from datetime import datetime
+
 from unittests.db.db_insert_test_base import DBInsertTestBase
 from connectors.specific.Audiobook import Audiobook
 
@@ -7,6 +9,10 @@ class TestAudiobookUpdate(DBInsertTestBase):
     connector_class = Audiobook
 
     def test_Audiobook(self):
+
+        self.us.start = datetime.now()
+        self.us.manual = True
+        self.us.partial = True
 
         self._check_if_eq( [{
             "external_id":256,
@@ -45,3 +51,10 @@ class TestAudiobookUpdate(DBInsertTestBase):
                 "external_id":256,
                 "price": 1000,
         }])
+
+        self.us.end = datetime.now()
+        self.us.success = True
+        self.us.finished = True
+
+        self.us.session.commit()
+        self.us.session.close()

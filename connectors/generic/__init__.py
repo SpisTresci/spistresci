@@ -10,6 +10,8 @@ from GenericConnector import GenericBookPrice
 from GenericConnector import GenericBooksAuthors
 from GenericConnector import GenericBase
 
+from GenericConnector import UpdateStatus, UpdateStatusService
+
 from GenericConnector import WrongConnectorModeException
 
 from XMLConnector import XMLConnector

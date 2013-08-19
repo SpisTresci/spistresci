@@ -3,6 +3,7 @@ from utils import Enum
 import lxml.etree as et
 import os
 import re
+import hashlib
 
 class XMLConnector(GenericConnector):
 
@@ -17,8 +18,11 @@ class XMLConnector(GenericConnector):
     def get_et(self):
         return et
 
-    def fetchData(self, unpack=True):
-        self.downloadFile()
+    def fetchData(self, unpack=True, download=True):
+        self.save_time_of_("download_date")
+        if download:
+            self.downloadFile()
+
         if unpack and self.mode == XMLConnector.BookList_Mode.ZIPPED_XMLS:
             self.fetched_files.extend(
               self.unpackZIP(os.path.join(self.backup_dir, self.filename))
@@ -26,6 +30,10 @@ class XMLConnector(GenericConnector):
         elif unpack and self.mode == XMLConnector.BookList_Mode.GZIPPED_XMLS:
             self.fetched_files.extend(
               self.unpackGZIP(os.path.join(self.backup_dir, self.filename))
+            )
+        elif unpack and self.mode == XMLConnector.BookList_Mode.BZIPPED_XMLS:
+            self.fetched_files.extend(
+              self.unpackBZIP(os.path.join(self.backup_dir, self.filename))
             )
         elif self.mode == XMLConnector.BookList_Mode.SINGLE_XML:
             self.fetched_files.append(os.path.join(self.backup_dir, self.filename))
@@ -87,6 +95,13 @@ class XMLConnector(GenericConnector):
         root = self.get_et().parse(filename).getroot()
         return list(self.weHaveToGoDeeper(root, self.depth))
 
+    def calculateChecksum(self):
+        m = hashlib.md5()
+        for file in self.fetched_files:
+            with open(file, "r") as f:
+                m.update(f.read())
+
+        return m.hexdigest()
 
     def getDictFromElem(self, xml_tag_dict, new_tag, elem, tag, book_dict):
         if elem != None:

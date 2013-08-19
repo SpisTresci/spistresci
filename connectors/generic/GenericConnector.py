@@ -2,6 +2,7 @@ import urllib2
 import zipfile
 import tarfile
 import gzip
+import bz2
 import os.path
 import shutil
 import re
@@ -38,18 +39,10 @@ class GenericBase(object):
     def getConcretizedClass(context, className):
         if not isinstance(context, GenericBase):
             raise InvalidContext("Only not abstract classes that inherit from GenericBase cat use this method")
-        if context.name.endswith('Author'):
-            return GenericBase.registered[context.name[:-len('Author')] + className]
-        elif context.name.endswith('Book'):
-            return GenericBase.registered[context.name[:-len('Book')] + className]
-        elif context.name.endswith('BookDescription'):
-            return GenericBase.registered[context.name[:-len('BookDescription')] + className]
-        elif context.name.endswith('BooksAuthors'):
-            return GenericBase.registered[context.name[:-len('BooksAuthors')] + className]
-        elif context.name.endswith('ISBN'):
-            return GenericBase.registered[context.name[:-len('ISBN')] + className]
-        elif context.name.endswith('Format'):
-            return GenericBase.registered[context.name[:-len('Format')] + className]
+
+        for name in ['Author', 'Book', 'BookDescription', 'BooksAuthors', 'ISBN', 'Format', 'UpdateStatus']:
+            if context.name.endswith(name):
+                return GenericBase.registered[context.name[:-len(name)] + className]
         else: #Connector
             return GenericBase.registered[context.name + className]
 
@@ -67,14 +60,18 @@ class GenericConnector(GenericBase, DataValidator):
     class BookList_Mode(utils.Enum):
         values = [
             'UNKNOWN',
+
             'SINGLE_XML',
             'ZIPPED_XMLS',
             'GZIPPED_XMLS',
+            'BZIPPED_XMLS',
             'MULTIPLE_XMLS',
+
             'SINGLE_JSON',
-            'MULTIPLE_JSON',
             'ZIPPED_JSON',
             'GZIPPED_JSON',
+            'BZIPPED_JSON',
+            'MULTIPLE_JSON',
         ]
 
     max_len = {}
@@ -169,7 +166,8 @@ class GenericConnector(GenericBase, DataValidator):
             self.filters = self.filters_config
             self.filters_config = {}
         self.fetched_files = []
-        
+        self.update_status = None
+        self.update_status_service = None
         self.loadListOfNames()
 
     def __del__(self):
@@ -212,6 +210,35 @@ class GenericConnector(GenericBase, DataValidator):
         tar = tarfile.open(tar_name, 'w:%s' % mode)
         tar.add(path, arcname=basename)
 
+    def decompress_backup_dir(self, path, archive_type):
+        mode="r:"
+        if archive_type == self.ArchiveType.GZ:
+            mode += 'gz'
+        else:
+            mode += 'bz2'
+
+        cwd = os.getcwd()
+        dir  = os.path.dirname(path)
+        basename = os.path.basename(path)
+
+        os.chdir(dir)
+        try:
+            file = tarfile.open(basename, mode)
+            try:
+                file.extractall()
+                for member in file.getmembers():
+                    d = os.path.join(cwd, dir, member.path)
+                    if os.path.isfile(d):
+                        self.fetched_files.append(d)
+            finally:
+                file.close()
+        finally:
+            os.chdir(cwd)
+
+        self.unpack_dir
+        self.unpack_file
+
+
     def createSession(self):
         Session = sessionmaker(bind = SqlWrapper.getEngine())
         self.session = Session()
@@ -228,31 +255,35 @@ class GenericConnector(GenericBase, DataValidator):
         pass
 
     def parse(self):
+        self.save_time_of_("parse_start")
         self.before_parse()
         book_number = 0
-        for filename in self.fetched_files:
-            for offer in self.getBookList(filename):
-                book_number += 1
-                if book_number < self.skip_offers + 1:
-                    continue
-                elif self.limit_books and book_number > self.limit_books:
-                    break
-                book = self.makeDict(offer)
-                #comment out when creating connector
-                self.adjust_parse(book)
-                #uncomment when creating connector
-                #self.measureLenghtDict(book)
-                #print book
+        if self.areDataDifferentThanPrevious():
+            for filename in self.fetched_files:
+                for offer in self.getBookList(filename):
+                    book_number += 1
+                    if book_number < self.skip_offers + 1:
+                        continue
+                    elif self.limit_books and book_number > self.limit_books:
+                        break
+                    book = self.makeDict(offer)
+                    #comment out when creating connector
+                    self.adjust_parse(book)
+                    #uncomment when creating connector
+                    #self.measureLenghtDict(book)
+                    #print book
 
-                self.validate(book)
-                #comment out when creating connector
-                if self.fulfillRequirements(book):
-                    self.add_record(book)
+                    self.validate(book)
+                    #comment out when creating connector
+                    if self.fulfillRequirements(book):
+                        self.add_record(book)
 
-        self.after_parse()
-        #uncomment when creating connector
-        #print self.max_len
-        #print self.max_len_entry
+            self.after_parse()
+            #uncomment when creating connector
+            #print self.max_len
+            #print self.max_len_entry
+        self.save_time_of_("parse_end")
+
 
     '''override before_parse, adjust_parse and after_parse to
         add some connector specific steps to parse method'''
@@ -391,20 +422,26 @@ class GenericConnector(GenericBase, DataValidator):
         self.logger.debug('Download of %s completed, downloaded %d bytes' % (filename, file_size_dl))
         return filename
 
+    def unpackBZIP(self, bz2name):
+        return self.unpack_GZIP_BZIP(bz2name, bz2.BZ2File)
+
     def unpackGZIP(self, gzipname):
-        fh = gzip.GzipFile(gzipname, "r")
+        return self.unpack_GZIP_BZIP(gzipname, gzip.GzipFile)
+
+    def unpack_GZIP_BZIP(self, zipname, unpack_fun):
+        fh = unpack_fun(zipname, "r")
 
         file_content = fh.read()
         fh.close()
 
         if not self.unpack_file:
-            self.unpack_file, ext = os.path.splitext(os.path.basename(gzipname))
+            self.unpack_file, ext = os.path.splitext(os.path.basename(zipname))
         if self.unpack_dir and not os.path.exists(self.unpack_dir):
                 os.makedirs(self.unpack_dir)
 
         unpack_file_name = os.path.join(self.unpack_dir, self.unpack_file)
         self.fetched_files.append(unpack_file_name)
-        self.logger.debug('Unpacking gzip %s into %s' % (gzipname, unpack_file_name))
+        self.logger.debug('Unpacking %s into %s' % (zipname, unpack_file_name))
         file = open(unpack_file_name, "w")
         file.write(file_content)
         file.close()
@@ -426,6 +463,34 @@ class GenericConnector(GenericBase, DataValidator):
             fd.close()
             unpacked_files.append(unpacked_file)
         return unpacked_files
+
+    def save_time_of_(self, column__event_name):
+        setattr(self.update_status_service, column__event_name, datetime.now())
+        self.update_status_service.session.commit()
+
+    def howManyOffers(self):
+        pass
+
+    def howManyNewOffers(self):
+        pass
+
+    def howManyOffersInPromotion(self):
+        pass
+
+    def calculateChecksum(self):
+        pass
+
+    def save_info_about_offers(self, offers = None, offers_new = None, offers_promotion = None):
+        self.update_status_service.offers = offers if offers else self.howManyOffers()
+        self.update_status_service.offers_new = offers_new if offers_new else self.howManyNewOffers()
+        self.update_status_service.offers_promotion = offers_promotion if offers_promotion else self.howManyOffersInPromotion()
+
+    def areDataDifferentThanPrevious(self):
+        self.update_status_service.checksum = self.calculateChecksum()
+        first = self.session.query(UpdateStatusService).filter(UpdateStatusService.id != self.update_status_service.id, UpdateStatusService.success == True).order_by(UpdateStatusService.download_date.desc()).first()
+        if not first:
+            return True
+        return first.checksum != self.update_status_service.checksum
 
     #TODO: move to SqlWrapper
     @classmethod
@@ -815,3 +880,76 @@ class GenericFormat(GenericBase):
     @classmethod
     def get_or_create(cls, session, format):
         return GenericConnector.get_or_create_(session, cls, {"name":format}, "name")
+
+class UpdateStatus(Base):
+    __tablename__ = "UpdateStatus"
+
+    id = Column(Integer, primary_key=True)
+    start = Column(DateTime)
+    end = Column(DateTime)
+    manual = Column(Boolean)
+    partial = Column(Boolean)
+    update_status_services = relationship("UpdateStatusService")
+    finished = Column(Boolean, default=False)
+    success = Column(Boolean, default=False)
+
+    session = None
+    def __init__(self, session = None):
+        self.session = session if session else sessionmaker(bind = SqlWrapper.getEngine(), autoflush=True)()
+        self.session.add(self)
+
+SqlWrapper.table_list += ["UpdateStatus"]
+
+class UpdateStatusService(Base):
+    __tablename__ = "UpdateStatusService"
+
+    id = Column(Integer, primary_key=True)
+    update_status_id = Column(Integer, ForeignKey('UpdateStatus.id'))
+
+    service_id = Column(Integer, ForeignKey('Service.id'))
+    service = relationship('Service', uselist=False)
+
+    success = Column(Boolean, default=False)
+
+    checksum = Column(Unicode(32))
+
+    download_date = Column(DateTime)
+
+    offers = Column(Integer)
+    offers_new = Column(Integer)
+    offers_promotion = Column(Integer)
+
+    parse_start = Column(DateTime)
+    parse_end = Column(DateTime)
+
+    final_start = Column(DateTime)
+    final_end = Column(DateTime)
+
+    session = None
+
+    def __init__(self, us, connector):
+        us.update_status_services.append(self)
+        self.service = Service.get_or_create(us.session, connector)
+        connector.update_status_service = self
+        self.session = us.session
+
+SqlWrapper.table_list += ["UpdateStatusService"]
+
+class Service(Base):
+    __tablename__ = "Service"
+
+    id = Column(Integer, primary_key=True)
+    name = Column(Unicode(32), unique=True)
+    website = Column(Unicode(32))
+
+    @classmethod
+    def get_or_create(cls, session, connector):
+        service = session.query(Service).filter_by(name = connector.name).first()
+        return service if service else Service(connector)
+
+    def __init__(self, connector):
+        self.name = connector.name
+        self.website = u"#"   #TODO: add reading info from additional config
+
+
+SqlWrapper.table_list += ["Service"]

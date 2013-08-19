@@ -21,10 +21,12 @@ import final
 class Final(object):
 
     def insert(self, connector):
+        connector.save_time_of_("final_start")
         if isinstance(connector, ReferenceConnector):
             self.insertReferenceConnectorData(connector)
         else:
             self.insertSpecificConnectorData(connector)
+        connector.save_time_of_("final_end")
 
     @staticmethod
     def addNormalizeList(session, flush_context):

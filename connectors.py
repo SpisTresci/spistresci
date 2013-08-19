@@ -7,18 +7,20 @@ from utils import logger_instance, filter_varargs
 from connectors import Tools
 from connectors.generic import *
 from sqlwrapper import *
+from datetime import datetime
 from final import Final
 
 def run_connectors(connector):
+    connector.createSession()
+
     connector.fetchData()
     connector.applyFilters()
 
-    connector.createSession()
     connector.parse()
-    connector.closeSession()
+
     f = Final()
     f.insert(connector)
-
+    connector.closeSession()
 
 def run_reference_connectors(connector):
     connector.fetchData()
@@ -31,6 +33,19 @@ def run_backup(connector):
 
 def choose_your_destiny(app_name):
     return getattr(sys.modules[__name__], 'run_%s' % app_name)
+
+
+def run_load_backup(connector):
+    import glob
+    connector.backup_dir = os.path.join("backup", connector.name.lower())
+    for archive in glob.glob(os.path.join(connector.backup_dir, "*")):
+        connector.fetched_files = []
+        connector.decompress_backup_dir(archive, connector.backup_archive)
+
+        connector.applyFilters()
+        connector.createSession()
+        connector.parse()
+        connector.closeSession()
 
 def main():
 
@@ -55,11 +70,30 @@ def main():
 
     Logger.debug('Created folowing connectors %s' % [connector.name for connector in connectors])
 
+    us = UpdateStatus()
+
+    us.start = datetime.now()
+    us.manual = True
+    us.partial = len(connector_classnames_list) > 0
+
+    fail = False
     for connector in connectors:
         try:
+            uss = UpdateStatusService(us, connector)
             choose_your_destiny(app_name)(connector)
+            uss.success = True
         except Exception:
+            fail = True
             Logger.exception('Error executing %s, in connector %s' % (app_name, connector.name))
+
+    us.end = datetime.now()
+    if not fail:
+        us.success = True
+    us.finished = True
+
+    us.session.commit()
+    us.session.close()
+
     Logger.debug('Execution finished')
 
 if __name__ == '__main__':

@@ -1,5 +1,6 @@
 from nose.tools import *
 from connectors.generic import GenericBook
+from connectors.generic import UpdateStatus, UpdateStatusService
 from . import LocalSqlWrapper
 from utils.NoseUtils import neq_
 
@@ -7,11 +8,14 @@ class DBInsertTestBase(object):
     def setUp(self):
         self.connector = self.connector_class()
         self.connector.session = LocalSqlWrapper.getSession()
+        self.us = UpdateStatus(session=self.connector.session)
 
     def __init__(self):
         self.check_counter = 0
 
     def _check_if_eq(self, list_of_dicts, insert_file=None):
+        uss = UpdateStatusService(self.us, self.connector)
+
         if insert_file == None:
             insert_file = 'unittests/data/db/update/xml/' + self.connector.name.lower() + str(self.check_counter) + '.xml'
 
@@ -20,6 +24,8 @@ class DBInsertTestBase(object):
         self.connector.parse()
         self.connector.session.commit()
         self._check(list_of_dicts, eq_)
+
+        uss.success = True
 
     def _check_if_not_eq(self, list_of_dicts):
         self._check(list_of_dicts, neq_)
@@ -61,6 +67,9 @@ class DBInsertTestBase(object):
                     'mini_books_mini_authors',
                     'mini_books_mini_isbns',
                     'mini_books_title_words',
+                    'UpdateStatus',
+                    'UpdateStatusService',
+                    'Service',
                 ]
 
         t1.sort()
