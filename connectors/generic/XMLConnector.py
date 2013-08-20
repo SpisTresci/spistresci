@@ -83,33 +83,10 @@ class XMLConnector(GenericConnector):
             root = root[0]
         return root
 
-    def parse(self):
-        self.before_parse()
-        book_number = 0
-        for filename in self.fetched_files:
-            root = self.get_et().parse(filename).getroot()
-            offers = list(self.weHaveToGoDeeper(root, self.depth))
-            for offer in offers:
-                book_number += 1
-                if book_number < self.skip_offers + 1:
-                    continue
-                elif self.limit_books and book_number > self.limit_books:
-                    break
-                dic = self.makeDict(offer)
-                #comment out when creating connector
-                self.adjust_parse(dic)
-                #uncomment when creating connector
-                #self.measureLenghtDict(dic)
-                #print dic
+    def getBookList(self, filename):
+        root = self.get_et().parse(filename).getroot()
+        return list(self.weHaveToGoDeeper(root, self.depth))
 
-                self.validate(dic)
-                #comment out when creating connector
-                self.add_record(dic)
-
-        self.after_parse()
-        #uncomment when creating connector
-        #print self.max_len
-        #print self.max_len_entry
 
     def getDictFromElem(self, xml_tag_dict, new_tag, elem, tag, book_dict):
         if elem != None:

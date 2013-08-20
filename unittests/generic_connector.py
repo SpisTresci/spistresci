@@ -197,3 +197,55 @@ class TestParseConfig(object):
         {'test1':'val1.test1', 
         'test2':{'':'val1.test2','test3':'val1.test2.test3'}, 
         '':'val1'})
+
+class TestFulfillRequirements(object):
+    def setUp(self):
+        MockConnector.config_file = 'unittests/data/generic_connector/conf/test.ini'
+        self.mc = MockConnector()
+     
+    def test_correct_config(self):
+        eq_(self.mc.fulfill,  {'condition': 'dummy && dummy1', 'search': {'dummy': 'dummy_regex', 'dummy1': 'dummy_regex1'}})
+    
+    def test_no_requirements_defined(self):
+        self.mc.fulfill = None
+        ok_(self.mc.fulfillRequirements({}))
+        ok_(self.mc.fulfillRequirements({'not_empty':'book'}))
+
+    @raises(KeyError)
+    def test_exception_on_empty_book(self):
+        self.mc.fulfill = {'condition': 'condition', 'search': {'search': '^regex'}}
+        ok_(self.mc.fulfillRequirements({}))
+
+    @raises(KeyError)
+    def test_exception_on_wrong_search(self):
+        self.mc.fulfill = {'condition': 'condition', 'search': {'not_existing_key': '^regex'}}
+        ok_(self.mc.fulfillRequirements({'some_key':'some_value'}))
+
+    @raises(SyntaxError)
+    def test_exception_on_wrong_condition(self):
+        self.mc.fulfill = {'condition': 'condition that will not evaluate', 'search': {'some_key': '^some_value'}}
+        ok_(self.mc.fulfillRequirements({'some_key':'some_value'}))
+
+    def test_single_condition(self):
+        self.mc.fulfill = {'condition': 'search', 'search': {'search': '^regex'}}
+        ok_(self.mc.fulfillRequirements({'search': 'regex11', 'other': 'dummy'}))
+
+    def test_and_condition(self):
+        self.mc.fulfill = {'condition': 'search & other', 'search': {'search': '^regex', 'other': '^dummy'}}
+        ok_(self.mc.fulfillRequirements({'search': 'regex11', 'other': 'dummy'}))
+
+    def test_or_condition(self):
+        self.mc.fulfill = {'condition': 'search | other', 'search': {'search': '^regex', 'other': '^dummy'}}
+        ok_(self.mc.fulfillRequirements({'search': 'regex11', 'other': 'sth_else'}))
+
+    def test_or_and_condition(self):
+        self.mc.fulfill = {'condition': 'search | other & search', 'search': {'search': '^regex', 'other': '^dummy'}}
+        ok_(self.mc.fulfillRequirements({'search': 'regex11', 'other': 'sth_else'}))
+
+    def test_not_searched_condition(self):
+        self.mc.fulfill = {'condition': 'search', 'search': {'search': '^regex'}}
+        ok_(not self.mc.fulfillRequirements({'search': 'r11', 'other': 'dummy'}))
+
+    def test_not_searched_and_condition(self):
+        self.mc.fulfill = {'condition': 'search & other', 'search': {'search': '^regex', 'other': '^dummy'}}
+        ok_(not self.mc.fulfillRequirements({'search': 'regex11', 'other': 'not_dummy'}))

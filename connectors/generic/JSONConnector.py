@@ -37,30 +37,8 @@ class JSONConnector(GenericConnector):
         elif self.mode == GenericConnector.BookList_Mode.SINGLE_JSON:
             self.fetched_files.append(os.path.join(self.backup_dir, self.filename))
 
-    def parse(self):
-        self.before_parse()
-        book_number = 0
-        for filename in self.fetched_files:
-            with open(filename, 'rU') as json_file:
-                book_list = json.load(json_file)
-            for book in book_list:
-                book_number += 1
-                if book_number < self.skip_offers + 1:
-                    continue
-                elif self.limit_books and book_number > self.limit_books:
-                    break
-                dic = self.makeDict(book)
-                self.adjust_parse(dic)
-                self.measureLenghtDict(dic)
-                #uncomment when creating connector
-                #print dic 
+    def getBookList(self, filename):
+        with open(filename, 'rU') as json_file:
+            book_list = json.load(json_file)
+        return book_list
 
-                self.validate(dic)
-                #comment out when creating connector
-                #self.add_record(dic)
-
-        self.after_parse()
-        #uncomment when creating connector
-        #print self.max_len
-        #print self.max_len_entry
-        

@@ -4,6 +4,7 @@ import tarfile
 import gzip
 import os.path
 import shutil
+import re
 from datetime import datetime
 
 import ConfigParser
@@ -16,7 +17,6 @@ import utils
 #interesting thing: utils.Enum is hide by sql_wrapper.Enum
 from sqlwrapper import *
 from connectors import Tools
-
 Base = SqlWrapper.getBaseClass()
 
 class InvalidContext(RuntimeError):
@@ -162,12 +162,14 @@ class GenericConnector(GenericBase, DataValidator):
         self.logger.debug('%s connector created' % self.name)
         self.mode = self.BookList_Mode.int(self.config.get('mode', 'UNKNOWN'))
         self.filters_config = self.config.get('filters', {})
+        self.fulfill = self.config.get('fulfill')
         if type(self.filters_config) is dict:
             self.filters = self.filters_config.get('')
         else:
             self.filters = self.filters_config
             self.filters_config = {}
         self.fetched_files = []
+        
         self.loadListOfNames()
 
     def __del__(self):
@@ -218,15 +220,39 @@ class GenericConnector(GenericBase, DataValidator):
         self.session.commit()
         self.session.close()
 
-    #@abc.abstractmethod
     def fetchData(self):
         """fetchData method"""
         pass
-
-    #@abc.abstractmethod
-    def parse(self):
-        """parse method"""
+    
+    def getBookList(self, filename):
         pass
+
+    def parse(self):
+        self.before_parse()
+        book_number = 0
+        for filename in self.fetched_files:
+            for offer in self.getBookList(filename):
+                book_number += 1
+                if book_number < self.skip_offers + 1:
+                    continue
+                elif self.limit_books and book_number > self.limit_books:
+                    break
+                book = self.makeDict(offer)
+                #comment out when creating connector
+                self.adjust_parse(book)
+                #uncomment when creating connector
+                #self.measureLenghtDict(book)
+                #print book
+
+                self.validate(book)
+                #comment out when creating connector
+                if self.fulfillRequirements(book):
+                    self.add_record(book)
+
+        self.after_parse()
+        #uncomment when creating connector
+        #print self.max_len
+        #print self.max_len_entry
 
     '''override before_parse, adjust_parse and after_parse to
         add some connector specific steps to parse method'''
@@ -238,6 +264,20 @@ class GenericConnector(GenericBase, DataValidator):
 
     def after_parse(self):
         pass
+
+
+    def fulfillRequirements(self, book):
+        if not self.fulfill:
+            return True
+        else:
+            conditions = {}
+            for (key, regex) in self.fulfill.get('search').items():
+                conditions[key] = str(bool(re.search(regex, book[key], flags=re.IGNORECASE)))
+            condition = self.fulfill['condition']
+            for (k, b) in conditions.items():
+                condition = condition.replace(k, b)
+            return eval(condition) 
+            
 
     def applySingleFilter(self, filter_name, f_params):
         try:
