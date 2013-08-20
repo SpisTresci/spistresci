@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pasaz:Envelope SYSTEM "loadOffers.dtd">
+<pasaz:Envelope xmlns:pasaz="http://schemas.xmlsoap.org/soap/envelope/">
+  <pasaz:Body>
+    <loadOffers xmlns="urn:ExportB2B">
+      <offers>
+        <offer>
+          <id>5245</id>
+          <name><![CDATA[Działaj skutecznie]]></name>
+          <price>19.9</price>
+          <url>https://ssl.afiliant.com/affskrypt,c4265a06,37f416,,11483,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Podręczniki akademickie,Ekonomia i biznes]]></categoryId>
+          <description><![CDATA[Jak realizować swoje cele ze 100% skutecznością i jak skuteczniej działać w każdej dziedzinie swojego życia?  Czy chciałbyś potrafić spełniać swoje marzenia i kończyć to, co zacząłeś? Czy masz w swoim życiu cel, ktrego nie możesz osiągnąć, albo marzenie, ktre się jeszcze nie spełniło? Czy chciałbyś skuteczniej działać w swoim życiu i zrobić to, co zawsze chciałeś zrobić? Czy brakuje Ci czasami sił i energii do osiągnięcia tego, czego bardzo pragniesz?  Czy boisz się porażek albo paraliżuje Cię strach przed porażką? Jeśli odpowiedziałeś &bdquo;tak&rdquo; na ktreś z tych pytań, to mam dla Ciebie dobrą wiadomość. TAK, możesz zacząć osiągać cele, ktre sobie wyznaczyłeś. TAK, możesz nie bać się porażek i z odwaga dążyć do wyznaczonego celu TAK, możesz działać skuteczniej i osiągnąć w swoim życiu to wszystko, co do tej pory wydawało Ci się nieosiągalne. &bdquo;Każdy &ndash; nie tylko ten, kto myśli o sukcesie &ndash; powinien codziennie rano, zaraz po przebudzeniu, przeczytać tę książkę&rdquo; Każdy &ndash; nie tylko ten, kto myśli o sukcesie - powinien codziennie rano, zaraz po przebudzeniu, przeczytać tę książkę. Nauczyć się jej na pamięć i cytować sobie w każdym stosownym momencie: czy to planując dzień, czy całe życie, czy w sytuacji, kiedy coś się nie udaje. To zdecydowanie najlepszy ebook na temat komunikacji, autoprezentacji, zarządzania sobą w czasie i kontroli emocji, jaki dotychczas czytałam.  Ale to tylko fundamentalne zagadnienia tego fascynującego wydawnictwa, ponieważ &ndash; jak zwykle u tego autora &ndash; wszechstronność prezentowanej wiedzy wzbudza głęboki i należny mu szacunek. Daje się też odczuć, że mamy do czynienia z Trenerem najwyższej klasy. Przekaz jest klarowny, uporządkowany, a cała książka ma mj ulubiony charakter praktycznego poradnika. Książka Andrzeja Bubrowieckiego &ndash; jak zresztą sam autor &ndash; inspiruje, motywuje i daje wskazwki. Może być natchnieniem, dodać pewności siebie i entuzjazmu na całe życie każdemu czytelnikowi. Wielkie brawa!  dr Irena Kamińska-Radomska The Protocol School of Poland www.protocol.pl Powiem więcej &ndash; aby tego wszystkiego dokonać, wcale nie musisz zapracować się na śmierć albo ciężko pracować i odmawiać sobie wszystkich przyjemności życia. Wszystko, czego potrzebujesz, to nauczyć się &bdquo;Jak działać skutecznie?&rdquo; Oto przed Tobą pojawia się możliwość, na ktrą być może długo czekałeś. Być może do tej pory nie zrealizowałeś żadnego ze swoich marzeń. Być może marzenia, ktre do tej pory udało Ci się zrealizować, okazały się nic niewarte &ndash; to wszystko jest nieważne, ponieważ już za chwilę poznasz dokładny i sprawdzony sposb, ktry pozwoli Ci realizować cele, ktre dadzą Ci satysfakcje i spełnienie. Zanim jednak to zrobisz, powinieneś wiedzieć, że&hellip; Aby zastosować rady zawarte w tej książce, nie potrzebujesz mieć skończonych dwch fakultetw albo mieć przeczytanych 120 książek o motywacji, zarządzaniu czasem i sukcesie. Nie musisz też być osobą bardzo mocno zapracowaną (ale możesz), ktra ma na głowie trzy firmy i zarządzanie 50 pracownikami. Wręcz przeciwnie. Możesz dużo skorzystać z rad zawartych w tej książce tylko dlatego, że są to uniwersalne, zawsze działające sposoby na bycie bardziej skutecznym w życiu.  Być może teraz sobie myślisz: &bdquo;Jak coś jest uniwersalne i do wszystkiego, to jest do niczego&rdquo;. Jednak prawda jest taka, że te zasady, o ktrych dowiesz się z książki &bdquo;Działaj skutecznie!&rdquo;, są do zastosowania przez wszystkich. Dlaczego? Przede wszystkim dlatego, że Zasady bycia skutecznym są nieskomplikowane i łatwe do zastosowania Bycie skutecznym w życiu to nie jest czarna magia zarezerwowana tylko dla nielicznych i tylko dla wybrańcw. Wręcz przeciwnie. Ta książka udowadnia to, że każdy z nas &ndash; niezależnie od tego, czy jest mechanikiem samochodowym, czy właścicielem funduszu emerytalnego &ndash; może działać skutecznie i osiągać cele, ktre przed sobą postawił.  Jakie są Twoje cele i co Ty chcesz osiągnąć? Nawet jeśli teraz jeszcze nie wiesz, co chcesz robić, co osiągnąć w życiu i jakie są Twoje marzenia, to dzięki tej książce możesz się tego dowiedzieć. W końcu ten poradnik nie miałby żadnej wartości, gdyby nie fakt, że najpierw pozwoli Ci dokładnie określić, czego pragniesz i jaki cel da Ci spełnienie i szczęście. Jest to bardzo ważne, a mimo to wielu ludzi o tym zapomina.  Koncentrują się na działaniu, ciężkiej pracy, zdobywaniu nowych umiejętności, jednak to wszystko prowadzi ich w ślepy zaułek. Ktregoś dnia spostrzegają, że cele, ktre sobie wyznaczyli i realizowali z takim zapałem, tak naprawdę nie są dla nich satysfakcjonujące. Jeśli Ty chcesz uniknąć podobnego losu i nie pracować na darmo, to powinieneś skorzystać z wiedzy zawartej w tej książce.  O autorze... Andrzej Bubrowiecki jest absolwentem Wydziału Pedagogicznego Uniwersytetu Warszawskiego.  Ceniony Coach Rozwoju Osobistego, Trener w Biznesie, Trener Szybkiego Czytania i Technik Pamięciowych. Ekspert w dziedzinie twrczego wykorzystania umysłu; pamięci i kreatywnego myślenia, a także komunikacji interpersonalnej i autoprezentacji.  Specjalizuje się rwnież w szkoleniach z psychologii sprzedaży, zarządzania sobą w czasie oraz kontroli emocji i zarządzania stresem. Jest autorem książek &bdquo;Popraw swoją pamięć&rdquo; i &bdquo;Popraw swoją kreatywność&rdquo;, ebookw &bdquo;Sekrety kreatywnego myślenia&rdquo; i &bdquo;Techniki pamięciowe dla każdego&rdquo;. Dużą popularnością cieszy się jego autorski program szkoleniowy &bdquo;Pamięć i Kreatywność &ndash; wrota do sukcesu XXI wieku&rdquo;. Był wielokrotnie ekspertem w programach telewizyjnych i radiowych. W jego szkoleniach i prezentacjach uczestniczyło już ponad 6000 osb. Jak sam o sobie mwi, jest trenerem pasjonatem, a jego praca &ndash; najlepszym dowodem na to, że marzenia się spełniają.  Jak określić i zrealizować cele w swoim życiu?  Wyznaczanie celw i skuteczna ich realizacja to nie jest prosta sztuka, nie wystarczy tylko pomyśleć przez chwilę, co by się chciało mieć, i przyjąć to za cel. W tym poradniku poznasz aż trzy praktyczne ćwiczenia, ktre pozwolą Ci dokładnie i szczegłowo wyznaczyć cel, ktry osiągniesz.  Jak określić priorytety w życiu? Od tego, aby robić więcej, ważniejsze jest to, aby skupić się na rzeczach najważniejszych. Zanim zaczniesz działać, musisz wiedzieć, co powinieneś robić, aby osiągnąć maksimum rezultatw. Co zrobić, aby przy mniejszej ilości pracy osiągać większe i lepsze rezultaty? Nie sztuką jest ciężko pracować. Sztuką jest mądrze pracować i robić tylko te rzeczy, ktre przynoszą Ci największy zysk. Jak zarządzać swoim czasem i co zrobić, aby mieć go więcej na to, co tylko chcesz (zabawa, nauka, rodzina)? Dowiedz się, jak dzięki prostym technikom oszczędzić marnowany dotąd czas i jednocześnie bardziej zbliżać się do osiągnięcia sukcesu. Co łączy absolutnie wszystkich ludzi sukcesu i jak tę wiedzę wykorzystać, żeby szybciej osiągnąć to, czego pragniesz? Ta jedna jedyna cecha dotyczy każdego człowieka sukcesu &ndash; od milionera, przez wybitnych naukowcw, po sportowcw. Dlaczego jedni ludzie są o wiele bardziej skuteczni w tym, co robią (niezależnie za co się wezmą), a inni nie potrafią niczego doprowadzić do końca? Jak radzić sobie z porażkami i jak się nie załamać? Nie]]></description>
+          <image><![CDATA[http://www.legimi.com/imageshandler/5245/miniature/]]></image>
+          <attributes>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Andrzej Bubrowiecki]]></value>
+            </attribute>
+            <attribute>
+              <name>ISBN</name>
+              <value><![CDATA[978-83-7582-695-1]]></value>
+            </attribute>
+            <attribute>
+              <name>Wydawnictwo</name>
+              <value><![CDATA[Złote Myśli Sp. z o.o.]]></value>
+            </attribute>
+            <attribute>
+              <name>Rok_wydania</name>
+              <value><![CDATA[2011]]></value>
+            </attribute>
+            <attribute>
+              <name>Format</name>
+              <value><![CDATA[EPUB]]></value>
+            </attribute>
+            <attribute>
+              <name>Abonament</name>
+              <value><![CDATA[9.9]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+      </offers>
+    </loadOffers>
+  </pasaz:Body>
+</pasaz:Envelope>

@@ -5,3 +5,4 @@ backup
 *.*~
 PyZ3950_parsetab.py
 *.py.swo
+.idea

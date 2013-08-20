@@ -5,8 +5,9 @@ from connectors.generic import GenericBook
 Base = SqlWrapper.getBaseClass()
 
 class ZielonaSowa(Afiliant):
-    pass
+    xml_tag_dict = dict (Afiliant.xml_tag_dict.items() + [('authors', ("./n:attributes/n:attribute[n:name='Producent']/n:value", ''))])
 
+    #TODO: testy
 class ZielonaSowaBook(GenericBook, Base):
     id = Column(Integer, primary_key = True)
 

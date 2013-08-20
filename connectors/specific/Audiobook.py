@@ -36,6 +36,7 @@ class AudiobookBook(GenericBook, Base):
     #id = Column(Integer, primary_key = True)
     #external_id
     #title = Column(Unicode(256))       #168
+    raw_title = Column(Unicode(256))    #168
     #price = Column(Integer)
     #price_normal
     url = Column(Unicode(512))          #294

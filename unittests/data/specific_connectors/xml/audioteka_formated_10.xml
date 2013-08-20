@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pasaz:Envelope SYSTEM "loadOffers.dtd">
+<pasaz:Envelope xmlns:pasaz="http://schemas.xmlsoap.org/soap/envelope/">
+  <pasaz:Body>
+    <loadOffers xmlns="urn:ExportB2B">
+      <offers>
+        <offer>
+          <id>a-tale-of-two-cities</id>
+          <name><![CDATA[A Tale Of Two Cities]]></name>
+          <price>12,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f36ea6,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/charles-dickens/a-tale-of-two-cities-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Macmillan]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Charles Dickens]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[1 godz. 9 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>anna-and-the-fighter</id>
+          <name><![CDATA[Anna and the Fighter]]></name>
+          <price>12,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f3728b,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/elizabeth-laird/anna-and-the-fighter-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Macmillan]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Elizabeth Laird]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[0 godz. 24 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>bristol-murder</id>
+          <name><![CDATA[Bristol Murder]]></name>
+          <price>18,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f37670,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/philip-prowse/bristol-murder-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Macmillan]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Philip Prowse]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[1 godz. 49 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>daisy-miller</id>
+          <name><![CDATA[Daisy Miller]]></name>
+          <price>18,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f37a55,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/henry-james/daisy-miller-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Macmillan]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Henry James]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[2 godz. 13 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>dangerous-journey</id>
+          <name><![CDATA[Dangerous Journey]]></name>
+          <price>12,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f37e3a,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/alwyn-cox/dangerous-journey-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Macmillan]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Alwyn Cox]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[0 godz. 19 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>dracula-readers</id>
+          <name><![CDATA[Dracula]]></name>
+          <price>18,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f3821f,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/bram-stoker/dracula-readers-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Macmillan]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Bram Stoker]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[1 godz. 15 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>emma</id>
+          <name><![CDATA[Emma]]></name>
+          <price>18,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f38604,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/jane-austen/emma-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Macmillan]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Jane Austen]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[3 godz. 34 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>far-from-the-madding-crowd</id>
+          <name><![CDATA[Far from the Madding Crowd]]></name>
+          <price>18,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f389e9,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/thomas-hardy/far-from-the-madding-crowd-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Macmillan]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Thomas Hardy]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[2 godz. 39 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>frankenstein</id>
+          <name><![CDATA[Frankenstein]]></name>
+          <price>12,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f38dce,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/mary-shelley/frankenstein-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Macmillan]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Mary Shelley]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[0 godz. 53 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>great-expectations</id>
+          <name><![CDATA[Great Expectations]]></name>
+          <price>18,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f391b3,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/charles-dickens/great-expectations-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Macmillan]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Charles Dickens]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[2 godz. 33 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+      </offers>
+    </loadOffers>
+  </pasaz:Body>
+</pasaz:Envelope>
