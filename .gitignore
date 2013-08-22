@@ -1,5 +1,5 @@
 /backends/spistresci/
 /backends/egazeciarz/
 /frontends/egazeciarz/
-*.pyc
 /frontends/spistresci/
+*.pyc
