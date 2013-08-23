@@ -9,13 +9,9 @@ class ZielonaSowa(Afiliant):
 
     #TODO: testy
 class ZielonaSowaBook(GenericBook, Base):
-    id = Column(Integer, primary_key = True)
+    category = Column(Unicode(32))      #18
+    #title(256)                         #71
+    #price = Column(Integer)       
+    url = Column(Unicode(128))           #60
+    #cover = Column(Unicode(256))        #114
 
-    category = Column(Unicode(90))      #82
-    #title(255)                         #82
-    #description                        #0
-    url = Column(Unicode(70))           #60
-    price = Column(Integer)             #GROSZE!!!
-    cover = Column(Unicode(120))        #115
-    #lectors
-    manufacturer = Column(Unicode(70)) #63

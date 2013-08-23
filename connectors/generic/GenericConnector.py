@@ -270,12 +270,14 @@ class GenericConnector(GenericBase, DataValidator):
                     #comment out when creating connector
                     self.adjust_parse(book)
                     #uncomment when creating connector
-                    #self.measureLenghtDict(book)
                     #print book
 
                     self.validate(book)
                     #comment out when creating connector
                     if self.fulfillRequirements(book):
+                        #uncomment when creating connector
+                        #self.measureLenghtDict(book)
+                        #comment out when creating connector
                         self.add_record(book)
 
             self.after_parse()
@@ -348,21 +350,6 @@ class GenericConnector(GenericBase, DataValidator):
                 #our config keys should be lower_case
                 f_params = params.get(filter_name, self.filters_config.get(filter_name.lower(), {}))
                 self.applySingleFilter(filter_name, f_params)
-
-    def measureLenght(self, list):
-        if self.max_len == []:
-            for i in range(len(list)):
-                if not list[i]:
-                    self.max_len.append(0)
-                    self.max_len_entry.append('')
-                else:
-                    self.max_len.append(len(list[i]))
-                    self.max_len_entry.append(list[i])
-        else:
-            for i in range(len(list)):
-                if list[i] != None and self.max_len[i] < len(list[i]):
-                    self.max_len[i] = len(list[i])
-                    self.max_len_entry[i] = list[i]
 
     def measureLenghtDict(self, dic):
         if self.max_len == {}:

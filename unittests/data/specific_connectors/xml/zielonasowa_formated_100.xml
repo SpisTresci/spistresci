@@ -1,0 +1,1510 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pasaz:Envelope SYSTEM "loadOffers.dtd">
+<pasaz:Envelope xmlns:pasaz="http://schemas.xmlsoap.org/soap/envelope/">
+  <pasaz:Body>
+    <loadOffers xmlns="urn:ExportB2B">
+      <offers>
+        <offer>
+          <id>2</id>
+          <name><![CDATA[100 wyjątkowych miejsc. Zobacz, zanim znikną]]></name>
+          <price>29.90</price>
+          <url>https://ssl.afiliant.com/affskrypt,db90cbc0,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia]]></categoryId>
+          <description><![CDATA[\"Książka &bdquo;100 wyjątkowych miejsc. Zobacz, zanim znikną&rdquo; ma ważną misję &ndash; przypominać nam o tym, co możemy stracić za kilka pokoleń, a czasem już za kilka lat. 100 niesamowitych zdjęć autorstwa światowej klasy fotografikw zabierze nas w podrż dookoła świata. Fotografie ukazują wyjątkowe piękno przyrody w najodleglejszych zakątkach Ziemi. Niestety istnienie tych miejsc jest bezpośrednio zagrożone, dlatego znalazły się one w raporcie Międzyrządowego Zespołu ds. Zmian Klimatu przy ONZ, ktrego twrcom przyznano Pokojową Nagrodę Nobla. Ta książka to nie tylko piękny album. Zawiera ona wypowiedzi ekspertw, a także znanych osb, ktre mwią, w jaki sposb zmiany klimatu dotykają ich samych. O tym, jak zatrzymać niebezpieczne zmiany, piszą m.in.: aktorka Connie Nielsen, lider zespołu Eurythmics Dave Stewart, na co dzień zajmujący się klimatem Tomasz Zubilewicz oraz Jarosław Kret, a także podrżnik i polarnik Marek Kamiński. Na szczęście na liście 100 najbardziej zagrożonych zmianami klimatycznymi miejsc na świecie nie ma Polski. Nie oznacza to jednak, że możemy spać spokojnie, bo nie mamy się o co martwić. Musimy pamiętać, że takie miejsca jak Tatry, Żuławy Wiślane, Płwysep Helski czy Gdańsk także wymagają naszej szczeglnej troski.Opisanie 100 miejsc, ktre warto zobaczyć, zanim znikną, to według mnie doskonały sposb uzmysłowienia ludziom, jak wiele szkd mogą wyrządzić zmiany klimatyczne. Rajendra K. Pachauri  Ten album musi być dla nas inspiracją do konkretnych działań &ndash; i nie wmawiaj sobie, że nie masz na to czasu. Za chwilę się przekonasz, co może nam umknąć i już nie wrcić. I pamiętaj: w życiu są rzeczy ważne i ważniejsze. Tomasz Zubilewicz  Opierając się na powierzchownej wiedzy, sceptycy często podważają (stosując logikę na &bdquo;chłopski rozum&rdquo;) rzetelne opinie będące efektem badań setek poważnych naukowcw. [&hellip;] Słowa często ulatują. Obrazy zapamiętuje się na bardzo długo. Niech więc obrazy przemwią! Jarosław Kret  Jak każda podrż zaczyna się od małego kroku, tak wszystkie wielkie zmiany zaczynają się od drobiazgw, o ktrych zawsze powinniśmy pamiętać. W przypadku walki ze zmianami klimatycznymi chodzi przede wszystkim o poszanowanie energii. Marek Kamiński  Partnerem polskiej edycji projektu &bdquo;100 wyjątkowych miejsc. Zobacz, zanim znikną&rdquo; jest WWF Polska &ndash; międzynarodowa organizacja ekologiczna, ktrej misją jest przeciwdziałanie degradacji środowiska naturalnego i kształtowanie przyszłości, w ktrej ludzie będą żyli w harmonii z przyrodą. 1% ceny każdego sprzedanego albumu zostanie przekazane na rzecz WWF Polska. \"]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/2/100_wyjatkowych_miejsc_Zobacz_zanim_znikna_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[  ]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>3</id>
+          <name><![CDATA[Odkrycia i wynalazki]]></name>
+          <price>19.71</price>
+          <url>https://ssl.afiliant.com/affskrypt,db929369,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Podręczniki szkolne]]></categoryId>
+          <description><![CDATA[Idealna i fascynująca książka dla małych odkrywców uwielbiających czytać o wielkich odkryciach i wynalazkach, szukających ciekawostek na temat podróżników, odległych krajów i nieznanych planet. Książka ujawnia i odkrywa wiele nowych, zaskakujących informacji! Pokazuje, jak człowiek w ciągu wieków postrzegał niebo, morze i ziemię. Podział na dwie części  jedną poświęconą odkryciom, a drugą wynalazkom  ukazuje nowy punkt widzenia na rzeczywistość i rzeczy codziennego użytku. Młody czytelnik znajdzie tu ciekawostki ze świata archeologii, astronomii, paleontologii aż po biologię i geografię. Dzięki książce pozna wiele znanych osób i odkryje ich genialne osiągnięcia, które zmieniły losy ludzkości. Zrozumie, jak zmienił się świat dzięki pracy człowieka i otrzyma odpowiedź na wszystkie nurtujące pytania. Na końcu każdego rozdziału przeczyta ciekawostki, dotyczące każdej dziedziny ludzkiej wiedzy, które ujawnią ukryte prawdy i tajemnice, do tej pory nierozszyfrowane!]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/3/Odkrycia_i_wynalazki_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[  ]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>6</id>
+          <name><![CDATA[Zwierzęta]]></name>
+          <price>19.71</price>
+          <url>https://ssl.afiliant.com/affskrypt,db929f18,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Podręczniki szkolne]]></categoryId>
+          <description><![CDATA["Idealna i fascynująca książka dla małych odkrywców, którzy nieustannie szukają ciekawostek o rybach, ssakach, ptakach i owadach. Książka daje możliwość odkrycia wielu nowych, interesujących informacji o zwierzętach, pozwala poznać z bliska ich wspaniały świat. Dzięki informacjom zawartym w książce młody czytelnik odkryje wiele interesujących gatunków zwierząt, pozna zaskakujące ciekawostki o zwierzętach, odkryje te rzadko opisywane czy zagrożone wyginięciem. Odkryje ich zwyczaje, pochodzenie, sposób porozumiewania się, pozna zwierzęta, które latają, pływają, biegają, pełzają i skaczą! Na końcu każdego rozdziału przeczyta o rekordach w świecie zwierząt: o zwierzętach śmiesznych, wielkich, szybkich, sprytnych, a nawet dziwnych!"]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/6/Zwierzeta_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[  ]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>12</id>
+          <name><![CDATA[300 krówek na gigancie]]></name>
+          <price>20.61</price>
+          <url>https://ssl.afiliant.com/affskrypt,db92b676,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Literatura piękna i popularna,Literatura dla dzieci i młodzieży]]></categoryId>
+          <description><![CDATA[W spokojne dni zajmuje się prowadzeniem hotelu w Dolinie Emmy, ale kiedy ktoś jej potrzebuje&hellip;ona jest gotowa do akcji w swym prochowcu-talizmanie. żadna zagadka nie stanowi problemu dla Krffki Emmy!]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/12/300_krowek_na_gigancie_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[Peter Coolbak]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>13</id>
+          <name><![CDATA[365 dobranocek]]></name>
+          <price>17.91</price>
+          <url>https://ssl.afiliant.com/affskrypt,db92ba5b,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Literatura piękna i popularna,Literatura dla dzieci i młodzieży]]></categoryId>
+          <description><![CDATA[Gdy otworzysz tę wyjątkową książeczkę, to co dzień inną przeczytasz bajeczkę, są tu też historyjki i wierszyki śmiesznewięc je po kolei przeczytaj koniecznie.]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/13/365_dobranocek_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[  ]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>20</id>
+          <name><![CDATA[Poznaję cyfry i litery. Akademia zabaw przedszkolaka]]></name>
+          <price>7.11</price>
+          <url>https://ssl.afiliant.com/affskrypt,db92d59e,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Literatura piękna i popularna,Literatura dla dzieci i młodzieży]]></categoryId>
+          <description><![CDATA["Nowa seria edukacyjnych kolorowanek dla najmłodszych. Zakres zadań i tematyka kolorowanek zostały dostosowane do zainteresowań i możliwości przedszkolaków. Zadania zawarte w tych książkach gwarantują doskonałą zabawę. Rozwiązywanie zadań, kolorowanie, szukanie przejść przez labirynty, przyklejanie naklejek  te czynności nie tylko bawią, ale również uczą, ćwiczą logiczne myślenie, doskonalą spostrzegawczość i mowę, rozwijają wyobraźnię. Dziecko poszerza i zdobywa nową wiedzę o otaczającym je świecie, uczy się liczyć, poznaje kształty, porównuje wielkości przedmiotów i określa ich położenie w przestrzeni.Ilustracje: Monika Karaśkiewicz."]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/20/Poznaje_cyfry_i_litery_Akademia_zabaw_przedszkolaka_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[  ]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>21</id>
+          <name><![CDATA[Poznaję świat. Akademia zabaw przedszkolaka]]></name>
+          <price>7.11</price>
+          <url>https://ssl.afiliant.com/affskrypt,db92d983,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Literatura piękna i popularna,Literatura dla dzieci i młodzieży]]></categoryId>
+          <description><![CDATA["Nowa seria edukacyjnych kolorowanek dla najmłodszych. Zakres zadań i tematyka kolorowanek zostały dostosowane do zainteresowań i możliwości przedszkolaków. Zadania zawarte w tych książkach gwarantują doskonałą zabawę. Rozwiązywanie zadań, kolorowanie, szukanie przejść przez labirynty, przyklejanie naklejek  te czynności nie tylko bawią, ale również uczą, ćwiczą logiczne myślenie, doskonalą spostrzegawczość i mowę, rozwijają wyobraźnię. Dziecko poszerza i zdobywa nową wiedzę o otaczającym je świecie, uczy się liczyć, poznaje kształty, porównuje wielkości przedmiotów i określa ich położenie w przestrzeni.Ilustracje: Monika Karaśkiewicz."]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/21/Poznaje_swiat_Akademia_zabaw_przedszkolaka_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[  ]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>24</id>
+          <name><![CDATA[Austeria]]></name>
+          <price>17.91</price>
+          <url>https://ssl.afiliant.com/affskrypt,db92e532,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Literatura piękna i popularna]]></categoryId>
+          <description><![CDATA[\"Do nagrania głosu użyczyli znakomici polscy aktorzy i lektorzy:Kazimierz Kaczor - lektura, Krystyna Czubwna &ndash; opracowanie. Lektura z opracowaniem i audiobookiem prezentuje lektury uwzględnione w programach nauczania szkł wszystkich typw i szczebli. Książki zostały opracowane.przez nauczycieli specjalistw zgodnie z obowiązującą podstawą programową. Każda z nich zawiera: &bull; starannie przygotowany, opatrzony przypisami pełny tekst utworu, &bull; oznaczone symbolami graficznymi komentarze do tekstu, zamieszczone na marginesach, &bull; biogram autora, &bull; streszczenie utworu, &bull; obszerne, wyczerpujące omwienie treści i problematyki, &bull; wnikliwe charakterystyki bohaterw, &bull; tematy i plany najczęściej pojawiających się wypracowań związanych z lekturą, Do każdej książki gratis dodany został audiobook w przyjaznym formacie mp3, zawierający pełny tekst lektury oraz opracowanie.\"]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/24/Austeria_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[Julian Stryjkowski]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>25</id>
+          <name><![CDATA[Bajki o wielkich i małych przygodach]]></name>
+          <price>17.91</price>
+          <url>https://ssl.afiliant.com/affskrypt,db92e917,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Literatura piękna i popularna,Literatura dla dzieci i młodzieży]]></categoryId>
+          <description><![CDATA[Posłuchajcie opowieści o przygodach niezwykłych bohaterów: mrówki, która szukała szczęścia, mieszkającej w grzybiej nóżce biedronkii jej nieproszonego gościa, skromnego szewczyka, który uratował zaklętą pannę, dzielnego zdobywcy Sobotniej Góry i wielu innych. Każdy z nich przeżywa przygody na swoją miarę, dlatego jedne przygody są wielkie, a inne małe, lecz wszystkie fascynujące i pełne niespodzianek. Seria Biblioteczka Przedszkolaka zawiera baśnie, bajki i bajeczki dobrane specjalnie z myślą o najmłodszych. Obok utworów należących do klasyki literatury dziecięcej mali czytelnicy znajdą tu utwory pisarzy współczesnych, bliskie zainteresowaniom i wrażliwości dziecka w wieku przedszkolnym. Wesołe, pogodne i mądre teksty nadają się znakomicie do wspólnej głośnej lektury w domu i w przedszkolu.]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/25/Bajki_o_wielkich_i_malych_przygodach_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[  ]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>29</id>
+          <name><![CDATA[Ballady i romanse]]></name>
+          <price>8.91</price>
+          <url>https://ssl.afiliant.com/affskrypt,db92f8ab,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Literatura piękna i popularna]]></categoryId>
+          <description><![CDATA[\"Do nagrania głosu użyczyli znakomici polscy aktorzy i lektorzy:Olgierd Łukaszewicz - lektura, Krystyna Czubwna &ndash; opracowanie. Lektura z opracowaniem i audiobookiem prezentuje lektury uwzględnione w programach nauczania szkł wszystkich typw i szczebli. Książki zostały opracowane przez nauczycieli specjalistw zgodnie z obowiązującą podstawą programową. Każda z nich zawiera: &bull; starannie przygotowany, opatrzony przypisami pełny tekst utworu, &bull; oznaczone symbolami graficznymi komentarze do tekstu, zamieszczone na marginesach, &bull; biogram autora, &bull; streszczenie utworu, &bull; obszerne, wyczerpujące omwienie treści i problematyki, &bull; wnikliwe charakterystyki bohaterw, &bull; tematy i plany najczęściej pojawiających się wypracowań związanych z lekturą, Do każdej książki gratis dodany został audiobook w przyjaznym formacie mp3, zawierający pełny tekst lektury oraz opracowanie.\"]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/29/Ballady_i_romanse_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[Adam Mickiewicz]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>31</id>
+          <name><![CDATA[Balladyna]]></name>
+          <price>16.11</price>
+          <url>https://ssl.afiliant.com/affskrypt,db930075,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Literatura piękna i popularna,Literatura dla dzieci i młodzieży]]></categoryId>
+          <description><![CDATA[\"Seria obejmuje najważniejsze utwory z klasyki literatury polskiej. Wybr, jakiego dokonaliśmy, przypomni najlepsze historie, najciekawszych bohaterw i wiersze, ktre weszły do kanonu czytelniczego. Naszą serię wyrżniają nowoczesna szata graficzna i przyjazny format. Jesteśmy przekonani, że lektura światowej klasyki stanie się teraz prawdziwą przyjemnością.  Juliusz Słowacki w Balladynie (1839) przywołał klimat Snu nocy letniej Szekspira i wykorzystał temat z ballady Aleksandra Chodźki, o dwch siostrach Balladynie i Alinie, ktre rywalizowały w zbieraniu malin, aby rozstrzygnąć, ktra z nich ma poślubić księcia. Dramat ten nie jest tylko opowieścią o dobrej i złej siostrze, lecz baśnią o zbrodni popełnionej dla zdobycia władzy. Balladyna zapoczątkowała cykl kronik o bajecznych dziejach narodu, ktrego kontynuacją była Lilla Weneda i zachowany we fragmentach Krak.\"]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/31/Balladyna_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[Juliusz Słowacki]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>34</id>
+          <name><![CDATA[Baśnie]]></name>
+          <price>26.91</price>
+          <url>https://ssl.afiliant.com/affskrypt,db93045a,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Literatura piękna i popularna,Literatura dla dzieci i młodzieży]]></categoryId>
+          <description><![CDATA[\"Cudowne, klasyczne baśnie opowiedziane na nowo. Pięknie zilustrowane przez znanych, wspłczesnych ilustratorw. Magiczne opowieści, ktre towarzyszą nam od wiekw, przekazując kolejnym pokoleniom nieprzemijające prawdy i wartości.\"]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/34/Basnie_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[Hans Christian Andersen, bracia Grimm, Perrault]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>41</id>
+          <name><![CDATA[Bezgrzeszne lata]]></name>
+          <price>17.91</price>
+          <url>https://ssl.afiliant.com/affskrypt,db9317d3,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Podręczniki szkolne]]></categoryId>
+          <description><![CDATA[\"Seria prezentuje najwybitniejsze utwory literatury polskiej i obcej przeznaczone dla młodego czytelnika. Wybrane przez nas książki przedstawiają pasjonujące przygody niezwykłych bohaterw. Nowoczesna szata graficzna i przyjazny format sprawią, że lektura stanie się teraz prawdziwą przyjemnością.  Autobiograficzna powieść, ktra dowodzi, że na szkołę i szkolne perypetie można spojrzeć z przymrużeniem oka. Każdy rozdział tej książki przybliża czytelnikom inny fragment młodzieńczego świata. I choć jest to świat sprzed niemal stu lat, opowieść o nim wciąż bawi i brzmi znajomo. Zabawy w Indian, pierwsze miłości, trudy uczniowskiego bytu ( np. nauka niełatwej sztuki... podpowiadania) wyprawy do teatru, młodzieńcze fascynacje i prby literackie - opisywane z ciepłym humorem i tęsknotą - skłonią niejednego młodego czytelnika do innego spojrzenia na własne szkolne ( a przede wszystkim: pozaszkolne) życie.\"]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/41/Bezgrzeszne_lata_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[Kornel Makuszyński]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>59</id>
+          <name><![CDATA[Biesy]]></name>
+          <price>26.91</price>
+          <url>https://ssl.afiliant.com/affskrypt,db935ded,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Literatura piękna i popularna,Literatura dla dzieci i młodzieży]]></categoryId>
+          <description><![CDATA[Biesy są powieścią alegoryczną, dotyczącą dramatycznych wydarzeń w Rosji i Europie. Oś fabularną stanowi przedstawienie metod działania antypaństwowego terroryzmu oraz struktury organizacyjnej rosyjskich wywrotowcw. Chcąc osadzić swą powieść jak najbardziej we wspłczesnych realiach, Dostojewski przenisł na jej karty wiele elementw wczesnego życia społeczno-politycznego.]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/59/Biesy_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[Fiodor Dostojewski]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>61</id>
+          <name><![CDATA[Bitwa pod Grunwaldem]]></name>
+          <price>8.01</price>
+          <url>https://ssl.afiliant.com/affskrypt,db9365b7,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Podręczniki szkolne]]></categoryId>
+          <description><![CDATA["Twoje dziecko się nudzi? Nie ma pomysłu na zabawę?Sięgnij po kolorowankę z naklejkami Kropka w kropkę - bitwa pod Grunwaldem!"]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/61/Bitwa_pod_Grunwaldem_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[  ]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>66</id>
+          <name><![CDATA[Ciało człowieka]]></name>
+          <price>17.91</price>
+          <url>https://ssl.afiliant.com/affskrypt,db937166,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Literatura piękna i popularna,Literatura dla dzieci i młodzieży]]></categoryId>
+          <description><![CDATA[Zwykle ciekawi nas to, co jest daleko od nas. Tymczasem autorzy książki Ciało człowieka pokazują, że równie pasjonujące może być to, co jest... w nas i co decyduje o naszej sprawności, zdrowiu czy dobrym samopoczuciu. Ciało człowieka to nie tylko publikacja dla tych, którzy interesują się biologią, ale też dla wszystkich, którzy chcieliby lepiej poznać własny organizm i zrozumieć procesy w nim zachodzące, dowiedzieć się więcej o możliwościach i ograniczeniach ludzkiego ciała. Na końcu książki przydatny słownik najważniejszych terminów.]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/66/Cialo_czlowieka_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[  ]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>67</id>
+          <name><![CDATA[Planeta Ziemia]]></name>
+          <price>17.91</price>
+          <url>https://ssl.afiliant.com/affskrypt,db93754b,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Literatura piękna i popularna,Literatura dla dzieci i młodzieży]]></categoryId>
+          <description><![CDATA[Skoro poszukiwania śladów innych istot poza naszą planetą nie przyniosły na razie żadnych spektakularnych rezultatów, warto po raz kolejny zadać sobie pytanie o to, co sprawia, że to właśnie na Ziemi powstało życie. Autorzy książki zapraszają młodych naukowców na wyprawę do wnętrza Ziemi i na dno oceanu, przypominają historię naszego świata, odkrywają tajemnice geologii, tłumaczą przyczyny wielkich katastrof ekologicznych Planeta Ziemia to doskonała pozycja dla wszystkich tych, których interesuje przeszłość i przyszłość świata. Na końcu książki przydatny słownik najważniejszych terminów.]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/67/Planeta_Ziemia_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[  ]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>68</id>
+          <name><![CDATA[Świat zwierząt]]></name>
+          <price>17.91</price>
+          <url>https://ssl.afiliant.com/affskrypt,db937930,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Literatura piękna i popularna,Literatura dla dzieci i młodzieży]]></categoryId>
+          <description><![CDATA[Najmniejsze i największe, najszybsze i najwolniejsze, te najmądrzejsze i te... mniej inteligentne  co kryje świat zwierząt? Jakie rządzą w nim prawa? Dzięki lekturze tej książki młodzi czytelnicy lepiej zrozumieją otaczający ich świat. Bogato ilustrowana publikacja, zawierająca mnóstwo ciekawostek i szczegółów (w tym tak fascynujące jak te dotyczące np. języka zwierząt czy tworzonych przez nie społeczności), spodoba się każdemu, kto lubi przyrodę i kogo interesują bliżsi i dalsi, starsi i nowsi krewni człowieka. Na końcu książki przydatny słownik najważniejszych terminów.]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/68/Swiat_zwierzat_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[  ]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>69</id>
+          <name><![CDATA[Wielcy naukowcy]]></name>
+          <price>17.91</price>
+          <url>https://ssl.afiliant.com/affskrypt,db937d15,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Literatura piękna i popularna,Literatura dla dzieci i młodzieży]]></categoryId>
+          <description><![CDATA[Książka umożliwia podróż w fascynujący świat nauki, oferując mnóstwo informacji, przyciągających wzrok zdjęć, diagramów i ilustracji, które zapadają w pamięć. Dzięki niej młody czytelnik z łatwością pozna tajniki przeróżnych nauk. W jaki sposób sporządzono atlas gwiazd? Kto rozwikłał tajemnicę DNA? Co pomogło Newtonowi odkryć siłę grawitacji? Kto jako pierwszy rozszczepił atom? Te i inne fakty z historii nauki podane w atrakcyjnej formie zachęcą czytelników publikacji pt. Wielcy naukowcy do dalszych poszukiwań odpowiedzi na ważne naukowe pytania. Na końcu książki przydatny słownik najważniejszych terminów.]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/69/Wielcy_naukowcy_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[  ]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>77</id>
+          <name><![CDATA[Czaruś mały uciekinier]]></name>
+          <price>12.59</price>
+          <url>https://ssl.afiliant.com/affskrypt,db93908e,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Literatura piękna i popularna,Literatura dla dzieci i młodzieży]]></categoryId>
+          <description><![CDATA[Zosia często widuje starszego pana wyprowadzającego na spacer labradora Czarusia. Dziewczynka od dawna marzy właśnie o takim szczeniaku! Energiczny, żywiołowy Czaruś uwielbia długie spacery, często wychodzi do ogrodu i ucieka, chociaż wie, że nie powinien. Pewnego dnia Zosia widzi Czarusia na ulicy bez właściciela. Myśli, że szczenię znowu uciekło,  ale tym razem to coś zupełnie innego... W domu u pana Nowaka, stało się coś złego, ale jak szczeniak ma o tym powiadomić Zosię?Recenzje:http://sladami-ksiazki.blogspot.com/2012/01/czarus-may-uciekinier-holly-webb.htmlhttp://nakanapie.pl/books/496468/reviews/23416.czarus-ma-y-uciekinierWszystkich fanw książek Holly Webb i miłośnikw czworonogw zapraszamy na stronę:zaopiekujsiemna.com.plŚwietna zabawa dla wirtualnych opiekunw, forum i wiele konkursw!]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/77/Czarus_maly_uciekinier_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[Holly Webb]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>79</id>
+          <name><![CDATA[Czytam, więc wiem. Testy przygotowujące do sprawdzianu szóstoklasisty]]></name>
+          <price>13.49</price>
+          <url>https://ssl.afiliant.com/affskrypt,db939858,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Podręczniki szkolne]]></categoryId>
+          <description><![CDATA[Zbir testw z czytania ze zrozumieniem i pisania. Książka uczy znajdywania informacji w tekście i ich przyswajania, motywuje do intensywnej pracy zarwno z tekstem literackim, jak i użytkowym. Dzięki zgromadzonym w publikacji testom młody czytelnik może przećwiczyć nie tylko umiejętności przydatne na lekcjach języka polskiego, ale też te, ktre potrzebne są na historii (np. czytanie mapy historycznej), geografii czy biologii (np. wyszukiwanie informacji w encyklopedii), a także w codziennym życiu (np. czytanie przekazw ikonograficznych). Dzięki książce &bdquo;Czytam, więc wiem&rdquo; uczeń szkoły podstawowej może przekonać się, że czytanie nie jest trudną sztuką &ndash; wystarczy poznać sposoby. Świat pełen jest tekstw do czytania &ndash; nie tylko literackich, nie tylko czemuś służących, na przykład sprawnej obsłudze mp4, ale też wielu innych przekazw, ktre są zbudowane, jak język, ze znakw. Dlatego czytanie to umiejętność ważna i potrzebna, nie tylko szstoklasistom, ktrych czeka &bdquo;ten straszny sprawdzian&rdquo;, ale i uczniom klas młodszych. Ta książka oferuje intensywny kurs czytania, dostosowany do potrzeb i poziomu uczniw klas IV-VI. Oprcz czytania zbir &bdquo;Czyta, więc wiem&rdquo; proponuje też kurs pisania.]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/79/Czytam_wiec_wiem_Testy_przygotowujace_do_sprawdzianu_szostoklasisty_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[Wojciech Nawrocki]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>99</id>
+          <name><![CDATA[Domowe laboratorium wiedzy]]></name>
+          <price>26.91</price>
+          <url>https://ssl.afiliant.com/affskrypt,db93b780,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Podręczniki szkolne]]></categoryId>
+          <description><![CDATA[Biblia młodego eksperymentatora! Opisy 60 łatwych i bezpiecznych doświadczeń, ktre dziecku ciekawemu świata pomogą zrozumieć tajemnicze zjawiska natury, a rodzicom - wyjaśnić je. Szczegłowa instrukcja, jak korzystając z dostępnych materiałw, ukazać prawa rządzące ciepłem, powietrzem, wodą, światłem, elektrycznością i zjawiskami magnetycznymi, uzupełniona o krtkie wyjaśnienie obserwowanych zjawisk - to prawdziwa gratka dla każdego młodego Einsteina.]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/99/Domowe_laboratorium_wiedzy_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[  ]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>105</id>
+          <name><![CDATA[Dzieje Tristana i Izoldy]]></name>
+          <price>15.21</price>
+          <url>https://ssl.afiliant.com/affskrypt,db93caf9,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Literatura piękna i popularna]]></categoryId>
+          <description><![CDATA[\"Do nagrania głosu użyczyli znakomici polscy aktorzy i lektorzy:Marcin Bosak - lektura, Krystyna Czubwna &ndash; opracowanie. Lektura z opracowaniem i audiobookiem prezentuje lektury uwzględnione w programach nauczania szkł wszystkich typw i szczebli. Książki zostały opracowane przez nauczycieli specjalistw zgodnie z obowiązującą podstawą programową. Każda z nich zawiera: &bull; starannie przygotowany, opatrzony przypisami pełny tekst utworu, &bull; oznaczone symbolami graficznymi komentarze do tekstu, zamieszczone na marginesach, &bull; biogram autora, &bull; streszczenie utworu, &bull; obszerne, wyczerpujące omwienie treści i problematyki, &bull; wnikliwe charakterystyki bohaterw, &bull; tematy i plany najczęściej pojawiających się wypracowań związanych z lekturą, Do każdej książki gratis dodany został audiobook w przyjaznym formacie mp3, zawierający pełny tekst lektury oraz opracowanie.\"]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/105/Dzieje_Tristana_i_Izoldy_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[Joseph Bédier]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>111</id>
+          <name><![CDATA[Przedszkolak na szóstkę]]></name>
+          <price>17.91</price>
+          <url>https://ssl.afiliant.com/affskrypt,db93e257,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Podręczniki szkolne]]></categoryId>
+          <description><![CDATA[\"Jeżeli szukasz ciekawych pomysłw do zabaw ze swoim dzieckiem, a lubi ono rysować, malować, wycinać, to sięgnij po zeszyty z serii \"\"Edulatki\"\". Znajdziesz tu rżnorodne propozycje ćwiczeń plastycznych, dzięki ktrym Twoje dziecko będzie miało okazję kształtować swoją wyobraźnię i zdolności manualne. Układ książki wymaga, by dziecku towarzyszyła osoba dorosła, ktra odczytuje polecenia, wyjaśnia sposb wykonywania prac plastycznych &ndash; to wszystko stwarza doskonałą okazję do licznych rozmw, wypowiadania się na temat wykonywanych ćwiczeń, oceny prac, dzielenia się własnymi spostrzeżeniami.\"]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/111/Przedszkolak_na_szostke_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[Opracowanie: Małgorzata Czyżowska]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>116</id>
+          <name><![CDATA[Żółta przygoda Zenobiusza]]></name>
+          <price>8.91</price>
+          <url>https://ssl.afiliant.com/affskrypt,db93f5d0,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Podręczniki szkolne]]></categoryId>
+          <description><![CDATA[\"Ekoludki z Zielonej Planety, czyli świat ludzi widziany oczami niezwykłych istot! Mądra, niezwykle przyjazna seria edukacyjna o tematyce ekologicznej, przeznaczona dla dzieci w wieku przedszkolnym i wczesnoszkolnym. W każdej książeczce: 1. opowiadanie o przygodach jednego Ekoludka podczas wizyty na Ziemi; 2. Z księgi mądrości Ekoludkw czyli ciekawostki ekologiczne; 3. rebusy, krzyżwki, eliminatki, rysuje historyjki obrazkowe, zabawka do samodzielnego wykonania.\"]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/116/Zolta_przygoda_Zenobiusza_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[Iwona Czarkowska]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>118</id>
+          <name><![CDATA[Elementarz czterolatka]]></name>
+          <price>11.69</price>
+          <url>https://ssl.afiliant.com/affskrypt,db93fd9a,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Podręczniki szkolne]]></categoryId>
+          <description><![CDATA[Drodzy Rodzice, Opiekunowie, Wychowawcy! Chcecie, Aby Wasze maluchy jak najszybciej stały się samodzielnymi przedszkolakami? Jeśli tak, zapraszamy do wspólnej zabawy i nauki z naszymi elementarzami. Atrakcyjna szata graficzna, kolorowe naklejki, ciekawe zadania do wykonania, zagadki, ciekawostki, wierszyki to wszystko sprawi, że poprzez zabawę dziecko pozna otaczający je świat. Znakomita książka dla Rodziców, ciekawy podręcznik do wczesnej edukacji dla nauczycieli wychowania przedszkolnego.]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/118/Elementarz_czterolatka_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[Małgorzata Czyżowska]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>119</id>
+          <name><![CDATA[Elementarz pięciolatka]]></name>
+          <price>11.69</price>
+          <url>https://ssl.afiliant.com/affskrypt,db94017f,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Podręczniki szkolne]]></categoryId>
+          <description><![CDATA[Drodzy Rodzice, Opiekunowie, Wychowawcy! Chcecie, Aby Wasze maluchy jak najszybciej stały się samodzielnymi przedszkolakami? Jeśli tak, zapraszamy do wspólnej zabawy i nauki z naszymi elementarzami. Atrakcyjna szata graficzna, kolorowe naklejki, ciekawe zadania do wykonania, zagadki, ciekawostki, wierszyki to wszystko sprawi, że poprzez zabawę dziecko pozna otaczający je świat. Znakomita książka dla Rodziców, ciekawy podręcznik do wczesnej edukacji dla nauczycieli wychowania przedszkolnego.]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/119/Elementarz_pieciolatka_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[Małgorzata Czyżowska]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>120</id>
+          <name><![CDATA[Elementarz sześciolatka. Cyferki]]></name>
+          <price>11.69</price>
+          <url>https://ssl.afiliant.com/affskrypt,db940564,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Podręczniki szkolne]]></categoryId>
+          <description><![CDATA[Elementarz sześciolatka. Cyferki to pozycja zapewniająca doskonałe przygotowanie do nauki liczenia i pisania liczb w klasie I. Proponowane zadania rozwijają i doskonalą logiczne myślenie, zdolność koncentracji, sprawność motoryczną, spostrzegawczość oraz koordynację wzrokowo-ruchową. Barwne obrazki, zabawne wiersze i ciekawe zgadywanki zachęcają do wspaniałej przygody z matematyką. Ćwiczenia nawiązują do treści programowych wychowania przedszkolnego i zawierają krótki opis celów, do których mają prowadzić. Do każdej poznawanej liczby został opracowany zestaw ćwiczeń i zadań dostosowany do potrzeb i możliwości sześciolatków. Jasne polecenia i struktura zadań gwarantują dziecku prawidłowe ich wykonanie z własnej inicjatywy lub przy asyście dorosłego. W książce odnajdziemy wiele interesujących zadań polegających między innymi na klasyfikacji przedmiotów, dostrzeganiu ich podobieństw i różnic, wycinaniu i wklejaniu figur geometrycznych z kolorowego papieru. z recenzji psycholog Joanny Cieślik]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/120/Elementarz_szesciolatka_Cyferki_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[Małgorzata Czyżowska]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>126</id>
+          <name><![CDATA[Feniks i dywan]]></name>
+          <price>22.41</price>
+          <url>https://ssl.afiliant.com/affskrypt,db9414f8,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Podręczniki szkolne]]></categoryId>
+          <description><![CDATA[\"Seria prezentuje najwybitniejsze utwory literatury polskiej i obcej przeznaczone dla młodego czytelnika. Wybrane przez nas książki przedstawiają pasjonujące przygody niezwykłych bohaterw. Nowoczesna szata graficzna i przyjazny format sprawią, że lektura stanie się teraz prawdziwą przyjemnością.   Kolejna wielka przygoda piątki rodzeństwa, ktre czytelnicy poznali z książki \"\"Pięcioro dzieci i coś\"\". A zaczęło się to wszystko, kiedy Piąty Listopada był już prawie za pasem i w czyimś sercu - zdaje się Roberta - zrodziła się wątpliwość co do gatunku fajerwerkw przygotowanych na uroczystość rocznicy Spisku Prochowego. - Są bardzo liche - powiedział ten ktoś ( prawie na pewno Robert) - i jeżeli w ogle nie wystrzelą, to mali Prosserowie z przeciwka dopiero będą się z nas nabijać.\"]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/126/Feniks_i_dywan_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[Edith Nesbit]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>127</id>
+          <name><![CDATA[Figa tęskni za domem]]></name>
+          <price>12.59</price>
+          <url>https://ssl.afiliant.com/affskrypt,db9418dd,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Literatura piękna i popularna,Literatura dla dzieci i młodzieży]]></categoryId>
+          <description><![CDATA[Głwna bohaterka jest podekscytowana przenosinami do nowego domu na wieś. Nie może się doczekać, kiedy dołączy do niej jej suczka &ndash; labradorka. Rodzice postanowili, że suczkę na czas przeprowadzki wezmą do siebie dziadkowie.  Dziewczynka i suczka nigdy jeszcze nie rozstawały się na tak długo. Dziewczynka okropnie tęskni za swoją małą przyjaciłką, a i suczka chciałaby już być w nowym domu swojej pani&hellip;Wszystkich fanw książek Holly Webb i miłośnikw czworonogw zapraszamy na stronę:zaopiekujsiemna.com.plŚwietna zabawa dla wirtualnych opiekunw, forum i wiele konkursw!]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/127/Figa_teskni_za_domem_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[Holly Webb]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>130</id>
+          <name><![CDATA[Fraszki. Pieśni. Treny]]></name>
+          <price>12.51</price>
+          <url>https://ssl.afiliant.com/affskrypt,db9420a7,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Literatura piękna i popularna]]></categoryId>
+          <description><![CDATA[\"Do nagrania głosu użyczyli znakomici polscy aktorzy i lektorzy:Krzysztof Globisz - lektura, Krystyna Czubwna &ndash; opracowanie. Lektura z opracowaniem i audiobookiem prezentuje lektury uwzględnione w programach nauczania szkł wszystkich typw i szczebli. Książki zostały opracowane przez nauczycieli specjalistw zgodnie z obowiązującą podstawą programową. Każda z nich zawiera: &bull; starannie przygotowany, opatrzony przypisami pełny tekst utworu, &bull; oznaczone symbolami graficznymi komentarze do tekstu, zamieszczone na marginesach, &bull; biogram autora, &bull; streszczenie utworu, &bull; obszerne, wyczerpujące omwienie treści i problematyki, &bull; wnikliwe charakterystyki bohaterw, &bull; tematy i plany najczęściej pojawiających się wypracowań związanych z lekturą, Do każdej książki gratis dodany został audiobook w przyjaznym formacie mp3, zawierający pełny tekst lektury oraz opracowanie.\"]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/130/Fraszki_Piesni_Treny_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[Jan Kochanowski]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>131</id>
+          <name><![CDATA[Frida Kahlo]]></name>
+          <price>22.41</price>
+          <url>https://ssl.afiliant.com/affskrypt,db94248c,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Literatura piękna i popularna,Literatura dla młodzieży]]></categoryId>
+          <description><![CDATA[Frida Kahlo przyjęła za datę swych urodzin dzień wybuchu rewolucji meksykańskiej. Wypadek, ktrego doznała jako młoda dziewczyna, zamienił jej dalsze życie w pasmo nieustającego blu. Cierpienie, miłość, wielkie ideały nadały jej obrazom niezrwnaną siłę i autentyzm.]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/131/Frida_Kahlo_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[Vanna Cercena]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>135</id>
+          <name><![CDATA[Gdzie jest Rudek?]]></name>
+          <price>12.59</price>
+          <url>https://ssl.afiliant.com/affskrypt,db943420,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Literatura piękna i popularna,Literatura dla dzieci i młodzieży]]></categoryId>
+          <description><![CDATA[Rzia uwielbia odwiedzać bezpańskie koty, ktre mieszkają na farmie w pobliżu domu jej babci. Jej ulubieńcem jest kotek, ktrego nazywa Rudkiem z powodu ślicznego koloru sierści. Z początku Rudek jest bardzo nieśmiały, lecz potem stopniowo uczy się ufać Rzi. Gdy jednak farma zostaje sprzedana pod osiedle mieszkaniowe i robotnicy zaczynają pracę, kotek jest przerażony: pozostałe koty zniknęły, a on został sam. Nagle świat stał się bardzo groźnym miejscem...Wszystkich fanw książek Holly Webb i miłośnikw czworonogw zapraszamy na stronę:zaopiekujsiemna.com.plŚwietna zabawa dla wirtualnych opiekunw, forum i wiele konkursw!]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/135/Gdzie_jest_Rudek_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[Holly Webb]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>139</id>
+          <name><![CDATA[Granica]]></name>
+          <price>22.41</price>
+          <url>https://ssl.afiliant.com/affskrypt,db943fcf,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Literatura piękna i popularna,Literatura dla młodzieży]]></categoryId>
+          <description><![CDATA[\"Granica (1935) jest jednym z największych osiągnięć prozy psychologicznej dwudziestolecia międzywojennego. Początkowo powieść nosiła tytuł Schematy. Jej najważniejszym tematem jest \"\"analiza życia i postaw głwnego bohatera, ktry z ambitnego studenta, głoszącego radykalne poglądy społeczne i etyczne, w miarę upływu czasu przeradza się w człowieka dwuznacznego pod względem moralnym, stopniowo ulegającego presji rozmaitych schematw sytuacyjnych, ktre doprowadzają go w końcu do samobjczej śmierci\"\" (M. Bernacki) Na podstawie powieści Nałkowskiej nakręcono filmy w roku 1938 i 1977.\"]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/139/Granica_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[Zofia Nałkowska]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>145</id>
+          <name><![CDATA[Historia amuletu]]></name>
+          <price>22.41</price>
+          <url>https://ssl.afiliant.com/affskrypt,db944f63,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Podręczniki szkolne]]></categoryId>
+          <description><![CDATA[\"Seria prezentuje najwybitniejsze utwory literatury polskiej i obcej przeznaczone dla młodego czytelnika. Wybrane przez nas książki przedstawiają pasjonujące przygody niezwykłych bohaterw. Nowoczesna szata graficzna i przyjazny format sprawią, że lektura stanie się teraz prawdziwą przyjemnością.   W książce \"\"Pięcioro dzieci i coś\"\" nieprzemyślane życzenia doprowadziły do tego, że dzieci znalazły się \"\"w paskudnym położeniu\"\", jak to określił Robert, a Piaskoludek zgodził się im pomc w zamian za obietnicę, że nigdy, ale to nigdy nie będą zwracali się do niego z nowymi życzeniami. Obiecał jednak spełnić ostatnie życzenie, wypowiedziane przez Janeczkę w wyniku czego dochodzi do ponownego spotkania dzieci z duszkiem, a to zapowiada nowe, niezwykłe przygody.\"]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/145/Historia_amuletu_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[Edith Nesbit]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>154</id>
+          <name><![CDATA[Indira Gandhi]]></name>
+          <price>22.41</price>
+          <url>https://ssl.afiliant.com/affskrypt,db945ef7,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Literatura piękna i popularna,Literatura dla młodzieży]]></categoryId>
+          <description><![CDATA[INDIRA GANDHI marzy o zwyczajnym życiu, rodzinie i kraju. Pragnie chodzić do szkoły, jeździć tramwajem, wyjść na spacer. Chce się zakochać, zostać żoną i matką. Ale los postanowił inaczej. Rodziną staną się dla niej całe Indie, niezmierzone i chaotyczne, domem &ndash; rządowe pałace, dziećmi &ndash; miliony Hindusw, ktrzy w kobiecie ubranej w białe sari, spoglądającej płomiennymi oczami ujrzeli znak nadziei.]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/154/Indira_Gandhi_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[Paola Capriolo]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>158</id>
+          <name><![CDATA[Statki i łodzie podwodne]]></name>
+          <price>17.91</price>
+          <url>https://ssl.afiliant.com/affskrypt,db946e8b,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Podręczniki szkolne]]></categoryId>
+          <description><![CDATA["Seria JAK TO DZIAŁA odkrywa poufne informacje, fascynujące ciekawostki i nowinki ze świata techniki. Idealna propozycja dla wszystkich, którzy szukają odpowiedzi na pytania: jak funkcjonują i działają m.in. statki kosmiczne, łodzie podwodne czy maszyny latające. Każda książka zawiera szczegółowy opis 15 pojazdów. W książkach znajdziesz informacje o historii pojazdów, opisy, w jaki sposób się poruszają, jakie posiadają wewnętrzne mechanizmy, a także odkryjesz perspektywy i kierunki ich rozwoju w przyszłości.Każda książka zawiera: szczegółowe ilustracje w formie przekrojów rysunki zespołów rozebranych poszczególnych mechanizmów najważniejsze pojęcia opatrzone szkicami jasne objaśnienia techniczne"]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/158/Statki_i_lodzie_podwodne_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[  ]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>160</id>
+          <name><![CDATA[Jak wysoko jest niebo?]]></name>
+          <price>26.91</price>
+          <url>https://ssl.afiliant.com/affskrypt,db947655,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Literatura piękna i popularna,Literatura dla dzieci i młodzieży]]></categoryId>
+          <description><![CDATA[Kolejna książeczka opowiadająca o przygodach pingwinka Oskara, ktry szuka odpowiedzi na trudne pytania. Tym razem Oskar chce się dowiedzieć, jak wysoko jest niebo. Jeśli też zastanawiałeś się, jaka jest odpowiedź na to pytanie, wyrusz z pingwinkiem i jego towarzyszami w niezwykłą podrż, aż na Księżyc. Przekonaj się, czy i tym razem Oskarowi udało się znaleźć odpowiedź na nurtujące go pytanie. Do książki dołączony jest ogromny, kolorowy plakat.]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/160/Jak_wysoko_jest_niebo_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[Anna Milbourne]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>162</id>
+          <name><![CDATA[Jak zostać idealną Księżniczką]]></name>
+          <price>26.91</price>
+          <url>https://ssl.afiliant.com/affskrypt,db947a3a,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Literatura piękna i popularna,Literatura dla dzieci i młodzieży]]></categoryId>
+          <description><![CDATA[Czy chcesz zostać idealną Księżniczką ?? Chcesz odkryć jak zostać NAJ-najlepszą przyjaciłką, w co się ubierać i jak być uprzejmą ?. Chciałabyś się dowiedzieć jak wykonać IDEALNY ukłon oraz w jaki sposb przygotować świetne prezenty i przyrządzić pyszne przysmaki?. Księżniczki z Klubu Tiary pokażą Ci, jak to wszystko zrobić - gwarantując przy tym DOSKONAŁĄ zabawę.Drogie członkinie Klubu Tiary,niestety, jesteśmy zmuszeni wprowadzić pewne zmiany w naszym konkursie:od tej pory za zakup część 1-6 zamiast \"Dzienniczka Księżniczki\" do wygrania będzie \"Opaska Księżniczki\".Przepraszamy wszystkie księżniczki za zmianę i życzymy udanej zabawy!www.klubtiary.pl]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/162/Jak_zostac_idealna_Ksiezniczka_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[Vivan French]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>165</id>
+          <name><![CDATA[Jądro ciemności]]></name>
+          <price>15.21</price>
+          <url>https://ssl.afiliant.com/affskrypt,db9485e9,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Literatura piękna i popularna]]></categoryId>
+          <description><![CDATA[\"Do nagrania głosu użyczyli znakomici polscy aktorzy i lektorzy: Adam Ferency - lektura, Krystyna Czubwna &ndash; opracowanie. Lektura z opracowaniem i audiobookiem prezentuje lektury uwzględnione w programach nauczania szkł wszystkich typw i szczebli. Książki zostały opracowane przez nauczycieli specjalistw zgodnie z obowiązującą podstawą programową. Każda z nich zawiera: &bull; starannie przygotowany, opatrzony przypisami pełny tekst utworu, &bull; oznaczone symbolami graficznymi komentarze do tekstu, zamieszczone na marginesach, &bull; biogram autora, &bull; streszczenie utworu, &bull; obszerne, wyczerpujące omwienie treści i problematyki, &bull; wnikliwe charakterystyki bohaterw, &bull; tematy i plany najczęściej pojawiających się wypracowań związanych z lekturą, Do każdej książki gratis dodany został audiobook w przyjaznym formacie mp3, zawierający pełny tekst lektury oraz opracowanie.\"]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/165/Jadro_ciemnosci_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[Joseph Conrad]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>168</id>
+          <name><![CDATA[Jaś i Małgosia]]></name>
+          <price>8.01</price>
+          <url>https://ssl.afiliant.com/affskrypt,db9489ce,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Podręczniki szkolne]]></categoryId>
+          <description><![CDATA[Seria Już czytam! to wyjątkowa propozycja dla młodych czytelników, stawiających pierwsze kroki w samodzielnym czytaniu. Opracowana przy współpracy światowej klasy nauczycieli czytania oraz znawców literatury dziecięcej. Już czytam! jest nową, unikatową serią książek dla rodziców i dzieci, która daje dziecku możliwość samodzielnego czytania bajki, specjalnie opracowanej pod tym kątem. Jedna strona książki opowiada całą historię, do przeczytania przed dorosłego, druga  jedno wybrane zdanie, odpowiednio skonstruowane i łatwe do przeczytania przez dziecko. Książka zawiera również zadania, które pomagają ćwiczyć wyobraźnię i pamięć dziecka. Teraz Ty i Twoje dziecko możecie czytać razem, a nauka czytania będzie bajkową zabawą!]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/168/Jas_i_Malgosia_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[Liz Holliday]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>169</id>
+          <name><![CDATA[Kopciuszek]]></name>
+          <price>8.01</price>
+          <url>https://ssl.afiliant.com/affskrypt,db948db3,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Podręczniki szkolne]]></categoryId>
+          <description><![CDATA["Seria  Już czytam! to wyjątkowa propozycja dla młodych czytelników, stawiających pierwsze kroki w samodzielnym czytaniu.Opracowana przy współpracy światowej klasy nauczycieli czytania oraz znawców literatury dziecięcej.Już czytam! jest nową, unikatową serią książek dla rodziców i dzieci,która daje dziecku możliwość samodzielnego czytania bajki, specjalnie opracowanej pod tym kątem.Jedna strona książki opowiada całą historię, do przeczytania przed dorosłego, druga  jedno wybrane zdanie, odpowiednio skonstruowane i łatwe do przeczytania przez dziecko.Książka zawiera również zadania, które pomagają ćwiczyć wyobraźnię i pamięć dziecka.Teraz Ty i Twoje dziecko możecie czytać razem, a nauka czytania będzie bajkową zabawą!"]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/169/Kopciuszek_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[Liz Holliday]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>170</id>
+          <name><![CDATA[Królewna Śnieżka]]></name>
+          <price>8.01</price>
+          <url>https://ssl.afiliant.com/affskrypt,db949198,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Podręczniki szkolne]]></categoryId>
+          <description><![CDATA["Seria Już czytam! to wyjątkowa propozycja dla młodych czytelników, stawiających pierwsze kroki w samodzielnym czytaniu.Opracowana przy współpracy światowej klasy nauczycieli czytania oraz znawców literatury dziecięcej.Już czytam! jest nową, unikatową serią książek dla rodziców i dzieci,która daje dziecku możliwość samodzielnego czytania bajki, specjalnie opracowanej pod tym kątem.Jedna strona książki opowiada całą historię, do przeczytania przed dorosłego, druga  jedno wybrane zdanie, odpowiednio skonstruowane i łatwe do przeczytania przez dziecko.Książka zawiera również zadania, które pomagają ćwiczyć wyobraźnię i pamięć dziecka.Teraz Ty i Twoje dziecko możecie czytać razem, a nauka czytania będzie bajkową zabawą!"]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/170/Krolewna_Sniezka_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[Liz Holliday]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>171</id>
+          <name><![CDATA[Piękna i Bestia]]></name>
+          <price>8.01</price>
+          <url>https://ssl.afiliant.com/affskrypt,db94957d,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Podręczniki szkolne]]></categoryId>
+          <description><![CDATA[\"Seria Już czytam! to wyjątkowa propozycja dla młodych czytelnikw, stawiających pierwsze kroki w samodzielnym czytaniu. Opracowana przy wspłpracy światowej klasy nauczycieli czytania oraz znawcw literatury dziecięcej. &bdquo;Już czytam!&rdquo; jest nową, unikatową serią książek dla rodzicw i dzieci, ktra daje dziecku możliwość samodzielnego czytania bajki, specjalnie opracowanej pod tym kątem. Jedna strona książki opowiada całą historię, do przeczytania przed dorosłego, druga &ndash; jedno wybrane zdanie, odpowiednio skonstruowane i łatwe do przeczytania przez dziecko. Książka zawiera rwnież zadania, ktre pomagają ćwiczyć wyobraźnię i pamięć dziecka. Teraz Ty i Twoje dziecko możecie czytać razem, a nauka czytania będzie bajkową zabawą!\"]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/171/Piekna_i_Bestia_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[Liz Holliday]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>178</id>
+          <name><![CDATA[Lato]]></name>
+          <price>4.49</price>
+          <url>https://ssl.afiliant.com/affskrypt,db94acdb,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Podręczniki szkolne]]></categoryId>
+          <description><![CDATA[Drodzy Nauczyciele, Rodzice, Wychowawcy!  Seria kolorowanek Już wiem! Potrafię! jest adresowana do dzieci w wieku przedszkolnym. Zadania w książeczkach nie tylko bawią, ale i uczą, ćwiczą logiczne myślenie, doskonalą spostrzegawczość i mowę, poszerzając wiedzę dziecka. Kolorowanie ilustracji usprawnia zdolności manualne. Seria została przygotowana na podstawie aktualnego programu wychowania przedszkolnego.]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/178/Lato_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[  ]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>179</id>
+          <name><![CDATA[Moja rodzina]]></name>
+          <price>4.49</price>
+          <url>https://ssl.afiliant.com/affskrypt,db94b0c0,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Podręczniki szkolne]]></categoryId>
+          <description><![CDATA["Drodzy Nauczyciele, Rodzice, Wychowawcy!Seria kolorowanek Już wiem! Potrafię! jest adresowana do dzieci w wieku przedszkolnym.Zadania w książeczkach nie tylko bawią, ale i uczą, ćwiczą logiczne myślenie, doskonalą spostrzegawczość i mowę, poszerzając wiedzę dziecka.Kolorowanie ilustracji usprawnia zdolności manualne.Seria została przygotowana na podstawie aktualnego programu wychowania przedszkolnego."]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/179/Moja_rodzina_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[Opracowanie: Małgorzata Czyżowska]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>180</id>
+          <name><![CDATA[Owoce i warzywa]]></name>
+          <price>4.49</price>
+          <url>https://ssl.afiliant.com/affskrypt,db94b4a5,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Podręczniki szkolne]]></categoryId>
+          <description><![CDATA[Seria kolorowanek Już wiem! Potrafię! jest adresowana do dzieci w wieku przedszkolnym. Zadania w książeczkach nie tylko bawią, ale i uczą, ćwiczą logiczne myślenie, doskonalą spostrzegawczość i mowę, poszerzając wiedzę dziecka. Kolorowanie ilustracji usprawnia zdolności manualne. Seria została przygotowana na podstawie aktualnego programu wychowania przedszkolnego.]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/180/Owoce_i_warzywa_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[  ]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>181</id>
+          <name><![CDATA[Poznaję cyfry]]></name>
+          <price>4.49</price>
+          <url>https://ssl.afiliant.com/affskrypt,db94b88a,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Podręczniki szkolne]]></categoryId>
+          <description><![CDATA["Drodzy Nauczyciele, Rodzice, Wychowawcy!Seria kolorowanek Już wiem! Potrafię! jest adresowana do dzieci w wieku przedszkolnym.Zadania w książeczkach nie tylko bawią, ale i uczą, ćwiczą logiczne myślenie, doskonalą spostrzegawczość i mowę, poszerzając wiedzę dziecka.Kolorowanie ilustracji usprawnia zdolności manualne.Seria została przygotowana na podstawie aktualnego programu wychowania przedszkolnego."]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/181/Poznaje_cyfry_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[Opracowanie: Małgorzata Czyżowska]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>183</id>
+          <name><![CDATA[W lesie]]></name>
+          <price>4.49</price>
+          <url>https://ssl.afiliant.com/affskrypt,db94c054,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Podręczniki szkolne]]></categoryId>
+          <description><![CDATA[Seria kolorowanek Już wiem! Potrafię! jest adresowana do dzieci w wieku przedszkolnym. Zadania w książeczkach nie tylko bawią, ale i uczą, ćwiczą logiczne myślenie, doskonalą spostrzegawczość i mowę, poszerzając wiedzę dziecka. Kolorowanie ilustracji usprawnia zdolności manualne. Seria została przygotowana na podstawie aktualnego programu wychowania przedszkolnego.]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/183/W_lesie_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[  ]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>184</id>
+          <name><![CDATA[W przedszkolu]]></name>
+          <price>4.49</price>
+          <url>https://ssl.afiliant.com/affskrypt,db94c439,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Podręczniki szkolne]]></categoryId>
+          <description><![CDATA["Drodzy Nauczyciele, Rodzice, Wychowawcy!Seria kolorowanek Już wiem! Potrafię! jest adresowana do dzieci w wieku przedszkolnym. Zadania w książeczkach nie tylko bawią, ale i uczą, ćwiczą logiczne myślenie, doskonalą spostrzegawczość i mowę, poszerzając wiedzę dziecka. Kolorowanie ilustracji usprawnia zdolności manualne. Seria została przygotowana na podstawie aktualnego programu wychowania przedszkolnego."]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/184/W_przedszkolu_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[Opracowanie: Małgorzata Czyżowska]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>185</id>
+          <name><![CDATA[Wiosna]]></name>
+          <price>4.49</price>
+          <url>https://ssl.afiliant.com/affskrypt,db94c81e,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Podręczniki szkolne]]></categoryId>
+          <description><![CDATA[Seria kolorowanek Już wiem! Potrafię! jest adresowana do dzieci w wieku przedszkolnym. Zadania w książeczkach nie tylko bawią, ale i uczą, ćwiczą logiczne myślenie, doskonalą spostrzegawczość i mowę, poszerzając wiedzę dziecka. Kolorowanie ilustracji usprawnia zdolności manualne. Seria została przygotowana na podstawie aktualnego programu wychowania przedszkolnego.]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/185/Wiosna_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[  ]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>194</id>
+          <name><![CDATA[Zima. Kolorowe literki]]></name>
+          <price>4.49</price>
+          <url>https://ssl.afiliant.com/affskrypt,db94e361,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Literatura piękna i popularna,Literatura dla dzieci i młodzieży]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/194/Zima_Kolorowe_literki_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[  ]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>197</id>
+          <name><![CDATA[Konrad Wallenrod]]></name>
+          <price>8.91</price>
+          <url>https://ssl.afiliant.com/affskrypt,db94e746,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Literatura piękna i popularna]]></categoryId>
+          <description><![CDATA[\"Do nagrania głosu użyczyli znakomici polscy aktorzy i lektorzy: Krzysztof Kolberger - lektura, Krystyna Czubwna &ndash; opracowanie. Lektura z opracowaniem i audiobookiem prezentuje lektury uwzględnione w programach nauczania szkł wszystkich typw i szczebli. Książki zostały opracowane przez nauczycieli specjalistw zgodnie z obowiązującą podstawą programową. Każda z nich zawiera: &bull; starannie przygotowany, opatrzony przypisami pełny tekst utworu, &bull; oznaczone symbolami graficznymi komentarze do tekstu, zamieszczone na marginesach, &bull; biogram autora, &bull; streszczenie utworu, &bull; obszerne, wyczerpujące omwienie treści i problematyki, &bull; wnikliwe charakterystyki bohaterw, &bull; tematy i plany najczęściej pojawiających się wypracowań związanych z lekturą, Do każdej książki gratis dodany został audiobook w przyjaznym formacie mp3, zawierający pełny tekst lektury oraz opracowanie. \"]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/197/Konrad_Wallenrod_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[Adam Mickiewicz]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>199</id>
+          <name><![CDATA[Kropka w kropkę. Biblijne kolorowanki z naklejkami cz.1]]></name>
+          <price>8.01</price>
+          <url>https://ssl.afiliant.com/affskrypt,db94ef10,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Literatura piękna i popularna,Literatura dla dzieci i młodzieży]]></categoryId>
+          <description><![CDATA[Proponujemy świetną zabawę w tworzeniu własnych wersji biblijnych historii. Wystarczy połączyć kropki, znaleźć odpowiednie naklejki i pokolorować obrazki. Książka zawiera pytania i odniesienia do Biblii, ktre pomogą wyjaśnić dzieciom wszystkie opowieści z Nowego i Starego Testamentu.]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/199/Kropka_w_kropke_Biblijne_kolorowanki_z_naklejkami_cz_1_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[  ]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>203</id>
+          <name><![CDATA[Książę i żebrak]]></name>
+          <price>22.41</price>
+          <url>https://ssl.afiliant.com/affskrypt,db94fabf,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Podręczniki szkolne]]></categoryId>
+          <description><![CDATA[\"Seria prezentuje najwybitniejsze utwory literatury polskiej i obcej przeznaczone dla młodego czytelnika. Wybrane przez nas książki przedstawiają pasjonujące przygody niezwykłych bohaterw. Nowoczesna szata graficzna i przyjazny format sprawią, że lektura stanie się teraz prawdziwą przyjemnością.  \"\"On to ma dobrze\"\", \"\"Chciałbym być na jego miejscu\"\" - chyba każdy z nas czasem tak myśli. Chcielibyśmy być bogaci, mieć władzę... Żyć jak krl lub książę. Tomek - chłopiec z ubogiej dzielnicy Londynu - sprawdził, jak to jest naprawdę. Kiedy on i Edward, syn krla Henryka VIII, stwierdzili ze zdziwieniem, że są bardzo do siebie podobni, postanowili dla zabawy zamienić się ubraniami. Lawina wydarzeń, ktrą w ten sposb wywołali, wywrciła do gry nogami nie tylko ich życie...\"]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/203/Ksiaze_i_zebrak_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[Mark Twain]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>204</id>
+          <name><![CDATA[Księga dżungli]]></name>
+          <price>17.91</price>
+          <url>https://ssl.afiliant.com/affskrypt,db94fea4,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Podręczniki szkolne]]></categoryId>
+          <description><![CDATA[\"Seria prezentuje najwybitniejsze utwory literatury polskiej i obcej przeznaczone dla młodego czytelnika. Wybrane przez nas książki przedstawiają pasjonujące przygody niezwykłych bohaterw. Nowoczesna szata graficzna i przyjazny format sprawią, że lektura stanie się teraz prawdziwą przyjemnością.  Jak wyglądałoby Twoje życie, gdybyś jako dziecko trafił do zupełnie innej niż Twoja rodziny, w zupełnie inne miejsce świata? A gdyby tą inną rodziną były zwierzęta? Gdyby tym innym miejscem była najciemniejsza głębia tropikalnej dżungli? Jaki wtedy staje się człowiek? Kim się staje? Mauli, ktry jako niemowlę trafił do jamy wilkw, miał okazję to sprawdzić. To zwierzęta były jego rodziną, a dżungla jego domem. Nie znał innych praw niż prawo dżungli. Nie znał innych językw niż języki dzikich zwierząt. Groźne dla nas bestie, np. pantera czy niedźwiedź, zostały jego przyjaciłmi, a ludzie &ndash; nieznanymi, więc strasznymi istotami. Jaki stał się Mauli? Kim Ty byś był, gdybyś miał okazję przeżyć to samo, co on?\"]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/204/Ksiega_dzungli_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[Rudyard Kipling]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>225</id>
+          <name><![CDATA[Kto pokocha Psotkę?]]></name>
+          <price>12.59</price>
+          <url>https://ssl.afiliant.com/affskrypt,db950e38,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Literatura piękna i popularna,Literatura dla dzieci i młodzieży]]></categoryId>
+          <description><![CDATA[Maja jest nieszczęśliwa, bo musi się przeprowadzić i zostawić wszystkie koleżanki. Rodzice liczą, że kot mgłby pomc dziewczynce przywyknąć do nowego miejsca, więc sprawiają jej niespodziankę i przynoszą Psotkę - prześliczną kotkę syjamską. Maja kocha Psotkę, ale ciągle gniewa się na rodzicw i udaje, że kotka wcale jej nie interesuje. Biedna Psotka czuje się zdezorientowana i opuszczona. Dlaczego Maja jej nie chce?Wszystkich fanw książek Holly Webb i miłośnikw czworonogw zapraszamy na stronę:zaopiekujsiemna.com.plŚwietna zabawa dla wirtualnych opiekunw, forum i wiele konkursw!]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/225/Kto_pokocha_Psotke_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[Holly Webb]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>232</id>
+          <name><![CDATA[Lalka]]></name>
+          <price>26.91</price>
+          <url>https://ssl.afiliant.com/affskrypt,db952596,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Literatura piękna i popularna,Literatura dla dzieci i młodzieży]]></categoryId>
+          <description><![CDATA[\"Lalka (1890) ukazywała się pierwotnie w odcinkach na łamach warszawskiego \"\"Kuriera Codziennego\"\". Pisarz podjął w niej m.in. dyskusję o idealistach i romantycznej miłości. Stanisław Wokulski zakochał się w arystokratce Izabeli Łęckiej i całe swoje życie podporządkował zdobyciu tej kobiety. Zrezygnował z pracy naukowej, zaczął gromadzić majątek, starał się wejść do wyższych sfer, gdyż wydawało mu się, że tym sposobem zbliży się do ukochanej. Jednak powieść Prusa można odczytywać rżnie. Jego historia \"\"działa za sprawą swojej magicznej podwjności, ktrą mają tylko arcydzieła\"\", pisała Olga Tokarczuk. Autor przekazuje czytelnikom wiedzę o schyłku XIX wieku, lecz także ujawnia podstawowe \"\"prawdy psychologiczne\"\", ktre nie uległy działaniu czasu.\"]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/232/Lalka_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[Bolesław Prus]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>239</id>
+          <name><![CDATA[Liczę ja, policz ty /Edukacja z naklejkami]]></name>
+          <price>8.91</price>
+          <url>https://ssl.afiliant.com/affskrypt,db9540d9,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Podręczniki szkolne]]></categoryId>
+          <description><![CDATA["""Liczę ja, policz Ty"" to książeczka z ćwiczeniami (ponad 60 różnorodnych zadań) dla uczniów z klas IIII. Główni bohaterowie publikacji, Ola i Dominik, zmagają się z problemami matematycznymi. Zadaniem czytelników jest im pomóc. ""Liczę ja, policz Ty"" to pozycja przeznaczona zarówno dla tych dzieci, które chcą utrwalać wiedzę matematyczną nabytą w szkole, jak i dla tych, które mają trudności w uczeniu się matematyki.Pracując w domu i rozwiązując zadania, dziecko samodzielnie uczy się i zaczyna rozumieć trudne dla niego zagadnienia. Odpowiednio dobrane ćwiczenia pozwalają na uczenie się przez zabawę. Dziecko, rozwiązując zadania, które przypominają znane z codzienności sytuacje, zaczyna uważać matematykę nie za ciężki szkolny obowiązek, ale za przyjemność. Wykonując ćwiczenia, najmłodsi uczniowie doskonalą swoje umiejętności manualne i spostrzegawczość, uczą się logicznego myślenia, dostrzegania cech wspólnych i różnicujących, identyfikacji, klasyfikacji.Czytelnik jest motywowany do wykonywania kolejnych ćwiczeń: za rozwiązanie zestawu zadań zamieszczonego na jednej stronie czeka go nagroda  naklejka. Uzupełniając naklejkami zgodnie z instrukcją ostatnią stronę książki, dziecko otrzyma swoją Planszę Sukcesów.Ilustrator: Joanna Babula."]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/239/Licze_ja_policz_ty_Edukacja_z_naklejkami_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[Joanna Dubiecka-Zabierzowska]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>242</id>
+          <name><![CDATA[Lord Jim]]></name>
+          <price>17.91</price>
+          <url>https://ssl.afiliant.com/affskrypt,db954c88,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Literatura piękna i popularna]]></categoryId>
+          <description><![CDATA[\"Do nagrania głosu użyczyli znakomici polscy aktorzy i lektorzy:Marek Konopczak - lektura, Krystyna Czubwna &ndash; opracowanie. Lektura z opracowaniem i audiobookiem prezentuje lektury uwzględnione w programach nauczania szkł wszystkich typw i szczebli. Książki zostały opracowane przez nauczycieli specjalistw zgodnie z obowiązującą podstawą programową. Każda z nich zawiera: &bull; starannie przygotowany, opatrzony przypisami pełny tekst utworu, &bull; oznaczone symbolami graficznymi komentarze do tekstu, zamieszczone na marginesach, &bull; biogram autora, &bull; streszczenie utworu, &bull; obszerne, wyczerpujące omwienie treści i problematyki, &bull; wnikliwe charakterystyki bohaterw, &bull; tematy i plany najczęściej pojawiających się wypracowań związanych z lekturą, Do każdej książki gratis dodany został audiobook w przyjaznym formacie mp3, zawierający pełny tekst lektury oraz opracowanie.\"]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/242/Lord_Jim_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[Joseph Conrad]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>265</id>
+          <name><![CDATA[Mgiełka, porzucona kotka]]></name>
+          <price>12.59</price>
+          <url>https://ssl.afiliant.com/affskrypt,db95737a,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Literatura piękna i popularna,Literatura dla dzieci i młodzieży]]></categoryId>
+          <description><![CDATA[Głwna bohaterka zawsze chciała mieć kotka, ale jej rodzice uważają, że jest na to jeszcze za mała. Jednak pewnego mglistego poranka dziewczynka zauważa maleńką kicię &ndash; zwierzątko jest wychudzone i nie ma obroży, więc dziewczynka uznaje, że kotka jest bezdomna. Nazywa ją Mgiełką.  Mgiełka jest bardzo płochliwa, ale stopniowo zaczyna coraz bardziej ufać dziewczynce i przywiązuje się do niej. Jak długo naszej bohaterce uda się utrzymać w sekrecie przyjaźń z kotką? Co się stanie, kiedy jej rodzice odkryją, że ich crka ma już swoje zwierzątko?Recenzje:http://sladami-ksiazki.blogspot.com/2012/02/mgieka-porzucona-kotka-holly-webb.htmlWszystkich fanw książek Holly Webb i miłośnikw czworonogw zapraszamy na stronę:zaopiekujsiemna.com.plŚwietna zabawa dla wirtualnych opiekunw, forum i wiele konkursw!]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/265/Mgielka_porzucona_kotka_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[Holly Webb]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>266</id>
+          <name><![CDATA[Między wierszami. Słownik poezji. Szkoła ponadgimazjalna]]></name>
+          <price>17.91</price>
+          <url>https://ssl.afiliant.com/affskrypt,db95775f,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Podręczniki szkolne]]></categoryId>
+          <description><![CDATA[\"Między wierszami. Słownik poezji to opracowanie, ktre przyda się każdemu uczniowi szkoły ponadgimnazjalnej, ktry chce nauczyć się interpretować i analizować wiersze. Książka może być wykorzystywana nie tylko jako pomoc w przygotowywaniu się do lekcji lub jako inspiracja do własnych analiz poezji, ale i jako podpowiedź czy przypomnienie treści czytanych na lekcjach utworw przed sprawdzianem lub maturą. Między wierszami. Słownik poezji to: &bull; przygotowane przez specjalistw omwienie treści utworw poetyckich &ndash; lektur obowiązkowych i uzupełniających, z poziomu podstawowego i rozszerzonego &bull; biogramy najważniejszych poetw z historii literatury, uzupełnione o opinie krytykw literackich &bull; siatka motyww literackich, ułatwiająca szybkie znalezienie utworw o podobnej tematyce. &bdquo;Niektrzy lubią poezję&rdquo; &ndash; pisała w jednym ze swoich najbardziej znanych wierszy Wisława Szymborska. Mamy nadzieję, że lektura tej publikacji przekona naszych czytelnikw, że interpretowanie poezji może być przyjemnością. Wierzymy też, że dzięki tej książce pytanie &bdquo;co poeta miał na myśli?&rdquo; zniknie z uczniowskich sennych koszmarw &ndash; na zawsze.\"]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/266/Miedzy_wierszami_Slownik_poezji_Szkola_ponadgimazjalna_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[Artur Dzigański]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>267</id>
+          <name><![CDATA[Między wierszami. Słownik poezji. Gimnazjum]]></name>
+          <price>17.91</price>
+          <url>https://ssl.afiliant.com/affskrypt,db957b44,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Podręczniki szkolne]]></categoryId>
+          <description><![CDATA[\"Między wierszami. Słownik poezji to nowoczesne repetytorium dla gimnazjalistw, pomocne na lekcjach języka polskiego i przydatne w czasie przygotowywania się do części humanistycznej egzaminu gimnazjalnego. Opracowanie zawiera: - przygotowane przez specjalistw omwienie treści utworw poetyckich - lektur obowiązkowych i uzupełniających, omawianych w gimnazjum - biogramy najważniejszych poetw z historii literatury, uzupełnione o opinie krytykw literackich -słownik najważniejszych środkw poetyckich i gatunkw literackich - siatka motyww literackich, ułatwiająca szybkie znalezienie utworw o podobnej tematyce.\"]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/267/Miedzy_wierszami_Slownik_poezji_Gimnazjum_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[Artur Dzigański]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>268</id>
+          <name><![CDATA[Mikołaj Kopernik. Chłopak, który sięgnął do gwiazd]]></name>
+          <price>26.91</price>
+          <url>https://ssl.afiliant.com/affskrypt,db957f29,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Literatura piękna i popularna,Literatura dla dzieci i młodzieży]]></categoryId>
+          <description><![CDATA[\"Pierwsza książka o Mikołaju Koperniku dla dzieci. To książka, ktra w bardzo zabawny, lekki sposb opowiada o życiu, dokonaniach i czasach jednego z najwybitniejszych Polakw. Dzięki niej można nie tylko poznać życiorys i dokonania Kopernika, ale także dowiedzieć się, jak się ubierał, co jadł, jak mieszkał, z kim walczył, gdzie podrżował. Mnstwo pięknych, poglądowych ilustracji i zdjęć pozwoli poczuć klimat tych niezwykłych czasw. Fantastyczna propozycja dla młodych ciekawskich. Autorem książki jest Marcin Przewoźniak, od lat niezwykle popularny autor dziecięcy, twrca takich bestsellerw jak &bdquo;Wielka encyklopedia krasnoludkw&rdquo;, &bdquo;Mali piraci&rdquo; czy &bdquo;Poradnik młodego skauta&rdquo; wyrżnionego w 2009 r. w konkursie &bdquo;Nagroda Donga&rdquo; przyznawanej przez polską sekcję IBBY. Jego książki cechuje lekki styl i ogromna dawka dobrego humoru.\"]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/268/Mikolaj_Kopernik_Chlopak_ktory_siegnal_do_gwiazd_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[Marcin Przewoźniak]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>269</id>
+          <name><![CDATA[Mikołajowe Historie]]></name>
+          <price>7.11</price>
+          <url>https://ssl.afiliant.com/affskrypt,db95830e,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Literatura piękna i popularna,Literatura dla dzieci i młodzieży]]></categoryId>
+          <description><![CDATA[Kiedy wreszcie przyjdzie Święty Mikołaj? Dzieci z zagrody Birkenhof nie mogą się już doczekać. Rwnież Pawełek się niecierpliwi. A co będzie, jeśli Święty Mikołaj do niego nie trafi? Oskar z kolei podczas świątecznych zakupw gubi mamę i zostaje uratowany przez wielkiego, siwobrodego anioła w czerwonym płaszczu.]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/269/Mikolajowe_Historie_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[Antonia Michaelis]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>280</id>
+          <name><![CDATA[Najpiękniejsze wiersze dla dzieci]]></name>
+          <price>17.91</price>
+          <url>https://ssl.afiliant.com/affskrypt,db95a61b,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Literatura piękna i popularna,Literatura dla dzieci i młodzieży]]></categoryId>
+          <description><![CDATA[\"Ktż z nas nie zna Murzynka Bambo, Zosi Samosi, perypetii Grzesia z dziurawym workiem lub kłopotw z pamięcią Słonia Trąbalskiego, Kaczki Dziwaczki czy Sjki. Piękne wiersze przeplatają się tu z nowoczesnymi, ciekawymi ilustracjami, ktre pobudzą wyobraźnię każdego dziecka.\"]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/280/Najpiekniejsze_wiersze_dla_dzieci_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[Jan Brzechwa]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>286</id>
+          <name><![CDATA[Najpiękniejsze baśnie]]></name>
+          <price>22.49</price>
+          <url>https://ssl.afiliant.com/affskrypt,db95bd79,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Literatura piękna i popularna,Literatura dla dzieci i młodzieży]]></categoryId>
+          <description><![CDATA[\"Zapraszamy na wyprawę w baśniowy świat braci Grimm. W ciemnym lesie łatwo zabłądzić i natknąć się na groźnego wilka, złą czarownicę lub dobre krasnoludki. Kto nie słucha mamy, może popaść w nie lada tarapaty, a los sieroty bywa ciężki. Na szczęście straszne przygody dobrze się kończą. Źli zostają ukarani, a ludzie szlachetni wynagrodzeni. Potem żyją długo, długo i szczęśliwie, bo tak to bywa w baśni&hellip;  Przed wieloma laty Jakub i Wilhelm Grimm przemierzali Niemcy, spisując baśnie, ktre wcześniej krążyły tylko jako ustne opowieści. Bracia Grimm byli znanymi pisarzami i wybitnymi uczonymi, twrcami nauki o literaturze i języku niemieckim, członkami Akademii Nauk w Berlinie. A jednak nieśmiertelną sławę zyskali właśnie jako zbieracze i wydawcy baśni ludowych, tłumaczonych na wiele językw i do dziś fascynujących czytelnikw w każdym wieku. \"]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/286/Najpiekniejsze_basnie_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[Jakub i Wilhelm Grimm]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>302</id>
+          <name><![CDATA[Święta Bożego Narodzenia]]></name>
+          <price>8.99</price>
+          <url>https://ssl.afiliant.com/affskrypt,db95f7e4,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Podręczniki szkolne]]></categoryId>
+          <description><![CDATA[Ta książka jest zupełnie inna niż wszystkie, jakie do tej pory widziałeś. To książka z naklejkami, w ktrej każda naklejka pojawia się zarwno w wersji dużej, jak i malutkiej. Poznaj świąteczne zwyczaje, prezenty i postacie, przylepiając malutkie naklejki na swoje miejsca. Baw się do woli dużymi naklejkami! Ta pełna fascynujących informacji, łamigłwek, a nawet żartw książka dostarczy Ci świetnej zabawy na wiele godzin!]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/302/Swieta_Bozego_Narodzenia_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[  ]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>306</id>
+          <name><![CDATA[Nie tylko Grunwald]]></name>
+          <price>17.91</price>
+          <url>https://ssl.afiliant.com/affskrypt,db960393,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Podręczniki szkolne]]></categoryId>
+          <description><![CDATA["Pierwsza pozycja z serii książek ""Największe bitwy świata"". Seria, przeznaczona dla uczniów szkół podstawowych (IV-VI klasa), pozwala czytelnikowi wczuć się w rolę badacza dziejów - kartografa, stratega, znawcę barw i broni, krytyka historycznych źródeł. Pomaga także zrozumieć i pokochać historię. W każdej z książek serii: mapy historyczne i ćwiczenia do pracy z mapą, teksty źródłowe i ćwiczenia z czytania ze zrozumieniem, gra planszowa, naklejki. Nie tylko Grunwald to książka prezentująca dzieje konfliktu polsko-krzyżackiego ( bitwa pod Płowcami, bitwa pod Grunwaldem, wojna trzynastoletnia)."]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/306/Nie_tylko_Grunwald_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[Marta Łosiak]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>309</id>
+          <name><![CDATA[Niezwykły przypadek Żabostwa i ogrodowych krasnali]]></name>
+          <price>20.61</price>
+          <url>https://ssl.afiliant.com/affskrypt,db960b5d,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Literatura piękna i popularna,Literatura dla dzieci i młodzieży]]></categoryId>
+          <description><![CDATA[Krffka Emma odbiera telefon, w ktrym anonimowy rozmwca informuje o porwaniu Marysi, dziewczynki z okolicznej wioski. Czy to prawda? A może to zwykły blef jakiegoś mitomana, jak uważa komisarz Miś... Krffka Emma nie chce ryzykować, że przepowiednia się sprawdzi i rozpoczyna śledztwo. Wspierana przez siostry i Berta, stawi czoło nowym niebezpieczeństwom i pozna tajemnice Narodowej Brygady Wyzwolenia Ogrodowego Krasnoludka.]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/309/Niezwykly_przypadek_Zabostwa_i_ogrodowych_krasnali_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[Peter Coolback]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>313</id>
+          <name><![CDATA[Nowele i opowiadania]]></name>
+          <price>19.71</price>
+          <url>https://ssl.afiliant.com/affskrypt,db96170c,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Podręczniki szkolne]]></categoryId>
+          <description><![CDATA[\"Do nagrania głosu użyczyli znakomici polscy aktorzy i lektorzy:Wojciech Malajkat - lektura, Krystyna Czubwna &ndash; opracowanie. Lektura z opracowaniem i audiobookiem prezentuje lektury uwzględnione w programach nauczania szkł wszystkich typw i szczebli. Książki zostały opracowane przez nauczycieli specjalistw zgodnie z obowiązującą podstawą programową. Każda z nich zawiera: &bull; starannie przygotowany, opatrzony przypisami pełny tekst utworu, &bull; oznaczone symbolami graficznymi komentarze do tekstu, zamieszczone na marginesach, &bull; biogram autora, &bull; streszczenie utworu, &bull; obszerne, wyczerpujące omwienie treści i problematyki, &bull; wnikliwe charakterystyki bohaterw, &bull; tematy i plany najczęściej pojawiających się wypracowań związanych z lekturą, Do każdej książki gratis dodany został audiobook w przyjaznym formacie mp3, zawierający pełny tekst lektury oraz opracowanie.\"]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/313/Nowele_i_opowiadania_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[Henryk Sienkiewicz]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>315</id>
+          <name><![CDATA[Numerowanki - kolorowanki]]></name>
+          <price>8.99</price>
+          <url>https://ssl.afiliant.com/affskrypt,db961af1,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Literatura piękna i popularna,Literatura dla dzieci i młodzieży]]></categoryId>
+          <description><![CDATA[Numerowanki - kolorowanki to zupełnie nowy sposób na kolorowanie. Rysunki należy pokolorować według numerowego kodu. To idealny sposób, aby dziecko nauczyło się rozpoznawać kolory i liczby poprzez zabawę. To ambitne i dające satysfakcję zadanie dla naszych milusińskich, by odkryć i zapamiętać, jaki kolor odpowiada, jakiej liczbie. Te zadania doskonalą spostrzegawczość, logiczne myślenie, pamięć i koncentrację. Rezultat zabawy to przepięknie pokolorowane obrazki, a dodatkową atrakcją są naklejki, które dziecko ma dopasować w odpowiednie miejsca.]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/315/Numerowanki_kolorowanki_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[  ]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>316</id>
+          <name><![CDATA[O dwóch takich, co ukradli księżyc]]></name>
+          <price>22.41</price>
+          <url>https://ssl.afiliant.com/affskrypt,db961ed6,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Literatura piękna i popularna]]></categoryId>
+          <description><![CDATA[\"Seria prezentuje najwybitniejsze utwory literatury polskiej i obcej przeznaczone dla młodego czytelnika. Wybrane przez nas książki przedstawiają pasjonujące przygody niezwykłych bohaterw. Nowoczesna szata graficzna i przyjazny format sprawią, że lektura stanie się teraz prawdziwą przyjemnością.  Jacek i Placek urodzili się w małej i bardzo biednej miejscowości Zapiecek. Radość z przyjścia na świat bliźniakw była jednak krtka, chłopcy okazali się źli i bez serca. Pewnego dnia postanowili odejść z rodzinnej wioski i poszukać kraju, w ktrym ludzie nie muszą pracować. Jakie przygody przeżyli po drodze i czego nauczyła ich ta niebezpieczna wędrwka, dowiesz się po przeczytaniu \"\"O dwch takich co ukradli księżyc\"\".\"]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/316/O_dwoch_takich_co_ukradli_ksiezyc_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[Kornel Makuszyński]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>321</id>
+          <name><![CDATA[Obrazkowe zgadywanki 5-6 lata]]></name>
+          <price>8.01</price>
+          <url>https://ssl.afiliant.com/affskrypt,db962e6a,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Podręczniki szkolne]]></categoryId>
+          <description><![CDATA[Obrazkowe zgadywanki to książeczka, która każdemu dziecku przyniesie wiele radości. Książka zawiera wierszyki-zagadki: nie tylko trzeba odgadnąć ich rozwiązanie, ale jeszcze na tej podstawie zbudować obrazek. Do pracy dziecko dostaje naklejki, a dodatkowo ma wykonać zadania rysunkowe. Zatem Obrazkowe zgadywanki proponują wszystko to, co dzieci lubią najbardziej. Obrazkowe zgadywanki bawią i uczą. Rozwijają zdolności twórcze, budzą ciekawość świata, ćwiczą spostrzegawczość. Polecamy wszystkim dzieciom!]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/321/Obrazkowe_zgadywanki_5_6_lata_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[Małgorzata Czyżowska]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>322</id>
+          <name><![CDATA[Odyseja]]></name>
+          <price>17.91</price>
+          <url>https://ssl.afiliant.com/affskrypt,db96324f,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Literatura piękna i popularna,Literatura dla dzieci i młodzieży]]></categoryId>
+          <description><![CDATA[\"Seria prezentuje najwybitniejsze utwory literatury powszechnej. Wybr, jakiego dokonaliśmy, przypomni najlepsze historie, najciekawszych bohaterw i wiersze, ktre weszły do kanonu czytelniczego. Naszą serię wyrżniają nowoczesna szata graficzna i przyjazny format. Jesteśmy przekonani, że lektura światowej klasyki stanie się teraz prawdziwą przyjemnością. Dokładnie nie wiadomo, kim był Homer, grecki aojda z VIII wieku p.n.e., ktry zebrał pieśni swoich poprzednikw, wędrownych pieśniarzy, i stworzył z nich dwa wiekopomne dzieła &ndash; Iliadę i Odyseję. Być może w ogle nie istniał, a utwory są dziełem kilku pokoleń śpiewakw. Niewątpliwie oba eposy wywarły ogromny wpływa na całą pźniejszą kulturę i literaturę europejską, stając się wzorem dla następnych pokoleń twrcw. Odyseja opisuje dalsze losy jednego z bohaterw Iliady &ndash; greckiego herosa Odyseusza, powracającego po zwycięskiej wojnie pod Troją do rodzinnej Itaki. Dziesięć lat tułaczki po lądach i morzach układa się w barwną mozaikę przygd, z ktrej wyłania się obraz życia starożytnych Grekw, ich obyczaje, wierzenia oraz kultura duchowość i materialna.\"]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/322/Odyseja_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[Homer]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>325</id>
+          <name><![CDATA[Ogniem i mieczem]]></name>
+          <price>26.91</price>
+          <url>https://ssl.afiliant.com/affskrypt,db963dfe,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Literatura piękna i popularna,Literatura dla dzieci i młodzieży]]></categoryId>
+          <description><![CDATA[\"Seria obejmuje najważniejsze utwory z klasyki literatury polskiej. Wybr, jakiego dokonaliśmy, przypomni najlepsze historie, najciekawszych bohaterw i wiersze, ktre weszły do kanonu czytelniczego. Naszą serię wyrżniają nowoczesna szata graficzna i przyjazny format. Jesteśmy przekonani, że lektura światowej klasyki stanie się teraz prawdziwą przyjemnością. Ogniem i mieczem, pierwsza z powieści tworzących Trylogię, przedstawia dzieje Polski w dobie powstania Chmielnickiego (1648&ndash;1654). Pisarz, starając się wzbudzić w czytelnikach patriotyczne uczucia, nadał prozie cechy rycerskiego eposu, wprowadził baśniowość oraz wyrazistych bohaterw reprezentujących dobre i złe postawy. Zbuntowani Kozacy pod wodzą Chmielnickiego zostali przedstawieni jako żądni krwi barbarzyńcy, a Polacy jako prawi i odważni obrońcy ojczyzny. W czarno-biały schemat zostali wpisani także (wbrew prawdzie historycznej) przywdcy walczących stron. Głwnym wątkiem spajającym fabułę pierwszej części Trylogii uczynił pisarz burzliwe dzieje miłości rycerza bez skazy &ndash; Jana Skrzetuskiego i urodziwej szlachcianki &ndash; Heleny Kurcewiczwny, ktrzy rozdzieleni przez wrogw i przeciwności losu, przeżywają liczne perypetie.\"]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/325/Ogniem_i_mieczem_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[Henryk Sienkiewicz]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>330</id>
+          <name><![CDATA[Opowiadania i nowele]]></name>
+          <price>17.91</price>
+          <url>https://ssl.afiliant.com/affskrypt,db9641e3,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Podręczniki szkolne]]></categoryId>
+          <description><![CDATA[\"Do nagrania głosu użyczyli znakomici polscy aktorzy i lektorzy: Anna Dereszowska - lektura, Krystyna Czubwna &ndash; opracowanie. Lektura z opracowaniem i audiobookiem prezentuje lektury uwzględnione w programach nauczania szkł wszystkich typw i szczebli. Książki zostały opracowane przez nauczycieli specjalistw zgodnie z obowiązującą podstawą programową. Każda z nich zawiera: &bull; starannie przygotowany, opatrzony przypisami pełny tekst utworu, &bull; oznaczone symbolami graficznymi komentarze do tekstu, zamieszczone na marginesach, &bull; biogram autora, &bull; streszczenie utworu, &bull; obszerne, wyczerpujące omwienie treści i problematyki, &bull; wnikliwe charakterystyki bohaterw, &bull; tematy i plany najczęściej pojawiających się wypracowań związanych z lekturą, Do każdej książki gratis dodany został audiobook w przyjaznym formacie mp3, zawierający pełny tekst lektury oraz opracowanie.\"]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/330/Opowiadania_i_nowele_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[Eliza Orzeszkowa]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>338</id>
+          <name><![CDATA[Pan Tadeusz]]></name>
+          <price>22.41</price>
+          <url>https://ssl.afiliant.com/affskrypt,db96555c,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Literatura piękna i popularna,Literatura dla dzieci i młodzieży]]></categoryId>
+          <description><![CDATA[\"Seria obejmuje najważniejsze utwory z klasyki literatury polskiej. Wybr, jakiego dokonaliśmy, przypomni najlepsze historie, najciekawszych bohaterw i wiersze, ktre weszły do kanonu czytelniczego. Naszą serię wyrżniają nowoczesna szata graficzna i przyjazny format. Jesteśmy przekonani, że lektura światowej klasyki stanie się teraz prawdziwą przyjemnością.  Pan Tadeuszjest jednym z najbardziej znanych utworw Mickiewicza. Autor odtworzył w Historii szlacheckiej z roku 1811 i 1812 obraz ukochanej Litwy, w czasie pobytu na emigracji. Mistrzowsko połączył rżne wątki: utrzymane w lekkim tonie perypetie miłosne młodego Tadeusza, szlacheckie spory o zamek, a wreszcie - dzieje upadku, pokuty i rehabilitacji Jacka Soplicy. Opowieść jest pełna dramatycznych zwrotw, lecz całość wypełnia \"\"pogodna aprobata istnienia\"\" (Czesław Miłosz i nostalgiczne wspomnienia z kraju lat dziecinnych.\"]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/338/Pan_Tadeusz_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[Adam Mickiewicz]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>339</id>
+          <name><![CDATA[Pan Wołodyjowski]]></name>
+          <price>26.91</price>
+          <url>https://ssl.afiliant.com/affskrypt,db965941,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Literatura piękna i popularna,Literatura dla dzieci i młodzieży]]></categoryId>
+          <description><![CDATA[\"Seria obejmuje najważniejsze utwory z klasyki literatury polskiej. Wybr, jakiego dokonaliśmy, przypomni najlepsze historie, najciekawszych bohaterw i wiersze, ktre weszły do kanonu czytelniczego. Naszą serię wyrżniają nowoczesna szata graficzna i przyjazny format. Jesteśmy przekonani, że lektura światowej klasyki stanie się teraz prawdziwą przyjemnością.  Pan Wołodyjowski jest ostatnią powieścią Trylogii (pozostałe to Ogniem i mieczem i Potop). Akcja toczy się na Kresach podczas wojny polsko-tureckiej, za panowania Michała Wiśniowieckiego. Michał Wołodyjowski pojawiał się we wcześniejszych częściach cyklu, zyskując coraz bardziej na znaczeniu. Pisarz, tworząc swego bohatera, wzorował się na autentycznej osobie - podolskim rycerzu Jerzym Wołodyjowskim ktry zginął podczas obrony Kamieńca. Powieść Sienkiewicza wypełniają dzieje potyczek, pościgw, pojedynkw i licznych romansw składających się na porywającą lekturę.\"]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/339/Pan_Wolodyjowski_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[Henryk Sienkiewicz]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>346</id>
+          <name><![CDATA[Pieśń o Rolandzie]]></name>
+          <price>11.61</price>
+          <url>https://ssl.afiliant.com/affskrypt,db96610b,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Literatura piękna i popularna]]></categoryId>
+          <description><![CDATA[\"Do nagrania głosu użyczyli znakomici polscy aktorzy i lektorzy:Andrzej Ferenc i Krzysztof Banaszyk - lektura, Krystyna Czubwna &ndash; opracowanie. Lektura z opracowaniem i audiobookiem prezentuje lektury uwzględnione w programach nauczania szkł wszystkich typw i szczebli. Książki zostały opracowane przez nauczycieli specjalistw zgodnie z obowiązującą podstawą programową. Każda z nich zawiera: &bull; starannie przygotowany, opatrzony przypisami pełny tekst utworu, &bull; oznaczone symbolami graficznymi komentarze do tekstu, zamieszczone na marginesach, &bull; biogram autora, &bull; streszczenie utworu, &bull; obszerne, wyczerpujące omwienie treści i problematyki, &bull; wnikliwe charakterystyki bohaterw, &bull; tematy i plany najczęściej pojawiających się wypracowań związanych z lekturą, Do każdej książki gratis dodany został audiobook w przyjaznym formacie mp3, zawierający pełny tekst lektury oraz opracowanie.\"]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/346/Piesn_o_Rolandzie_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[Joseph Bédier]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>348</id>
+          <name><![CDATA[Pinokio]]></name>
+          <price>12.51</price>
+          <url>https://ssl.afiliant.com/affskrypt,db9668d5,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Podręczniki szkolne]]></categoryId>
+          <description><![CDATA[\"Do nagrania głosu użyczyli znakomici polscy aktorzy i lektorzy:Artur Barciś - lektura, Krystyna Czubwna &ndash; opracowanie. Lektura z opracowaniem i audiobookiem prezentuje lektury uwzględnione w programach nauczania szkł wszystkich typw i szczebli. Książki zostały opracowane przez nauczycieli specjalistw zgodnie z obowiązującą podstawą programową. Każda z nich zawiera: &bull; starannie przygotowany, opatrzony przypisami pełny tekst utworu, &bull; oznaczone symbolami graficznymi komentarze do tekstu, zamieszczone na marginesach, &bull; biogram autora, &bull; streszczenie utworu, &bull; obszerne, wyczerpujące omwienie treści i problematyki, &bull; wnikliwe charakterystyki bohaterw, &bull; tematy i plany najczęściej pojawiających się wypracowań związanych z lekturą, Do każdej książki gratis dodany został audiobook w przyjaznym formacie mp3, zawierający pełny tekst lektury oraz opracowanie.\"]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/348/Pinokio_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[Carlo Collodi]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>357</id>
+          <name><![CDATA[Podręcznik detektywa]]></name>
+          <price>26.91</price>
+          <url>https://ssl.afiliant.com/affskrypt,db968be2,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Literatura piękna i popularna,Literatura dla dzieci i młodzieży]]></categoryId>
+          <description><![CDATA[Chcesz zostać Dobrym Detektywem? To jest książka właśnie dla Ciebie! Opanujesz dzięki niej różne umiejętności, które są niezbędne Dobremu Detektywowi. Dowiesz się, jak rozpoznawać odciski palców i charakter pisma, jak przesłuchiwać Świadków i odczytywać ślady. Nigdy nie rozstawaj się z tą książką! Noś ją zawsze przy sobie, a w każdej chwili będziesz mógł wkroczyć do akcji i przymknąć nawet najsprytniejszego Przestępcę!]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/357/Podrecznik_detektywa_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[Anne Civardi]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>358</id>
+          <name><![CDATA[Zadziwiające przygody kapitana Antifera]]></name>
+          <price>22.41</price>
+          <url>https://ssl.afiliant.com/affskrypt,db968fc7,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Literatura piękna i popularna,Literatura dla młodzieży]]></categoryId>
+          <description><![CDATA[\"\"\"Nowa seria wydawnicza Wydawnictwa Zielona Sowa &bdquo;Podrże z Verne&rsquo;em&rdquo; zawiera 14 powieści Juliusza Verne&rsquo;a. Obok utworw należących do kanonu twrczości francuskiego klasyka, prekursora science fiction, znalazły się w niej rwnież pozycje mniej znane polskiemu czytelnikowi, jak utrzymane w konwencji powieści utopijnej \"\"\"\"Pięćset milionw hinduskiej księżniczki\"\"\"\" czy \"\"\"\"Dramat w Inflantach\"\"\"\", ktrego akcja toczy się wokł zbrodni i następującego po niej śledztwa. Starannie opracowane, opatrzone rzetelnymi przypisami książki, w nowych pełnych przekładach z języka francuskiego. Rekomenduje Polskie Towarzystwo Juliusza Verne&rsquo;a.\"\" \"]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/358/Zadziwiajace_przygody_kapitana_Antifera_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[Juliusz Verne]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>362</id>
+          <name><![CDATA[Dzieci kapitana Granta T.2]]></name>
+          <price>22.41</price>
+          <url>https://ssl.afiliant.com/affskrypt,db969f5b,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Literatura piękna i popularna,Literatura dla młodzieży]]></categoryId>
+          <description><![CDATA[\"Nowa seria wydawnicza Wydawnictwa Zielona Sowa &bdquo;Podrże z Verne&rsquo;em&rdquo; zawiera 14 powieści Juliusza Verne&rsquo;a. Obok utworw należących do kanonu twrczości francuskiego klasyka, prekursora science fiction, znalazły się w niej rwnież pozycje mniej znane polskiemu czytelnikowi, jak utrzymane w konwencji powieści utopijnej \"\"Pięćset milionw hinduskiej księżniczki\"\" czy \"\"Dramat w Inflantach\"\", ktrego akcja toczy się wokł zbrodni i następującego po niej śledztwa. Starannie opracowane, opatrzone rzetelnymi przypisami książki, w nowych pełnych przekładach z języka francuskiego, rekomenduje Polskie Towarzystwo Juliusza Verne&rsquo;a.\"]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/362/Dzieci_kapitana_Granta_T_2_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[Juliusz Verne]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>363</id>
+          <name><![CDATA[Napowietrzna wioska]]></name>
+          <price>22.41</price>
+          <url>https://ssl.afiliant.com/affskrypt,db96a340,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Literatura piękna i popularna,Literatura dla młodzieży]]></categoryId>
+          <description><![CDATA[\"Nowa seria wydawnicza Wydawnictwa Zielona Sowa &bdquo;Podrże z Verne&rsquo;em&rdquo; zawiera 14 powieści Juliusza Verne&rsquo;a. Obok utworw należących do kanonu twrczości francuskiego klasyka, prekursora science fiction, znalazły się w niej rwnież pozycje mniej znane polskiemu czytelnikowi, jak utrzymane w konwencji powieści utopijnej \"\"Pięćset milionw hinduskiej księżniczki\"\" czy \"\"Dramat w Inflantach\"\", ktrego akcja toczy się wokł zbrodni i następującego po niej śledztwa. Starannie opracowane, opatrzone rzetelnymi przypisami książki, w nowych pełnych przekładach z języka francuskiego, rekomenduje Polskie Towarzystwo Juliusza Verne&rsquo;a.\"]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/363/Napowietrzna_wioska_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[Juliusz Verne]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>364</id>
+          <name><![CDATA[W 80 dni dookoła świata]]></name>
+          <price>22.41</price>
+          <url>https://ssl.afiliant.com/affskrypt,db96a725,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Literatura piękna i popularna,Literatura dla młodzieży]]></categoryId>
+          <description><![CDATA[\"Nowa seria wydawnicza Wydawnictwa Zielona Sowa &bdquo;Podrże z Verne&rsquo;em&rdquo; zawiera 14 powieści Juliusza Verne&rsquo;a. Obok utworw należących do kanonu twrczości francuskiego klasyka, prekursora science fiction, znalazły się w niej rwnież pozycje mniej znane polskiemu czytelnikowi, jak utrzymane w konwencji powieści utopijnej \"\"Pięćset milionw hinduskiej księżniczki\"\" czy \"\"Dramat w Inflantach\"\", ktrego akcja toczy się wokł zbrodni i następującego po niej śledztwa. Starannie opracowane, opatrzone rzetelnymi przypisami książki, w nowych pełnych przekładach z języka francuskiego, rekomenduje Polskie Towarzystwo Juliusza Verne&rsquo;a.\"]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/364/W_80_dni_dookola_swiata_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[Juliusz Verne]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>365</id>
+          <name><![CDATA[500 milionów hinduskiej księżniczki]]></name>
+          <price>22.41</price>
+          <url>https://ssl.afiliant.com/affskrypt,db96ab0a,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Literatura piękna i popularna,Literatura dla młodzieży]]></categoryId>
+          <description><![CDATA[\"Nowa seria wydawnicza Wydawnictwa Zielona Sowa &bdquo;Podrże z Verne&rsquo;em&rdquo; zawiera 14 powieści Juliusza Verne&rsquo;a. Obok utworw należących do kanonu twrczości francuskiego klasyka, prekursora science fiction, znalazły się w niej rwnież pozycje mniej znane polskiemu czytelnikowi, jak utrzymane w konwencji powieści utopijnej \"\"Pięćset milionw hinduskiej księżniczki\"\" czy \"\"Dramat w Inflantach\"\", ktrego akcja toczy się wokł zbrodni i następującego po niej śledztwa. Starannie opracowane, opatrzone rzetelnymi przypisami książki, w nowych pełnych przekładach z języka francuskiego, rekomenduje Polskie Towarzystwo Juliusza Verne&rsquo;a.\"]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/365/500_milionow_hinduskiej_ksiezniczki_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[Juliusz Verne]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>366</id>
+          <name><![CDATA[Dramat w Inflantach]]></name>
+          <price>22.41</price>
+          <url>https://ssl.afiliant.com/affskrypt,db96aeef,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Literatura piękna i popularna,Literatura dla młodzieży]]></categoryId>
+          <description><![CDATA[\"Nowa seria wydawnicza Wydawnictwa Zielona Sowa &bdquo;Podrże z Verne&rsquo;em&rdquo; zawiera 14 powieści Juliusza Verne&rsquo;a. Obok utworw należących do kanonu twrczości francuskiego klasyka, prekursora science fiction, znalazły się w niej rwnież pozycje mniej znane polskiemu czytelnikowi, jak utrzymane w konwencji powieści utopijnej \"\"Pięćset milionw hinduskiej księżniczki\"\" czy \"\"Dramat w Inflantach\"\", ktrego akcja toczy się wokł zbrodni i następującego po niej śledztwa. Starannie opracowane, opatrzone rzetelnymi przypisami książki, w nowych pełnych przekładach z języka francuskiego, rekomenduje Polskie Towarzystwo Juliusza Verne&rsquo;a.\"]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/366/Dramat_w_Inflantach_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[Juliusz Verne]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>367</id>
+          <name><![CDATA[Dwa lata wakacji]]></name>
+          <price>22.41</price>
+          <url>https://ssl.afiliant.com/affskrypt,db96b2d4,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Literatura piękna i popularna,Literatura dla młodzieży]]></categoryId>
+          <description><![CDATA[\"Nowa seria wydawnicza Wydawnictwa Zielona Sowa &bdquo;Podrże z Verne&rsquo;em&rdquo; zawiera 14 powieści Juliusza Verne&rsquo;a. Obok utworw należących do kanonu twrczości francuskiego klasyka, prekursora science fiction, znalazły się w niej rwnież pozycje mniej znane polskiemu czytelnikowi, jak utrzymane w konwencji powieści utopijnej \"\"Pięćset milionw hinduskiej księżniczki\"\" czy \"\"Dramat w Inflantach\"\", ktrego akcja toczy się wokł zbrodni i następującego po niej śledztwa. Starannie opracowane, opatrzone rzetelnymi przypisami książki, w nowych pełnych przekładach z języka francuskiego, rekomenduje Polskie Towarzystwo Juliusza Verne&rsquo;a.\"]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/367/Dwa_lata_wakacji_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[Julisz Verne]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>368</id>
+          <name><![CDATA[Pięć tygodni w balonie]]></name>
+          <price>22.41</price>
+          <url>https://ssl.afiliant.com/affskrypt,db96b6b9,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Literatura piękna i popularna,Literatura dla młodzieży]]></categoryId>
+          <description><![CDATA[\"Nowa seria wydawnicza Wydawnictwa Zielona Sowa &bdquo;Podrże z Verne&rsquo;em&rdquo; zawiera 14 powieści Juliusza Verne&rsquo;a. Obok utworw należących do kanonu twrczości francuskiego klasyka, prekursora science fiction, znalazły się w niej rwnież pozycje mniej znane polskiemu czytelnikowi, jak utrzymane w konwencji powieści utopijnej \"\"Pięćset milionw hinduskiej księżniczki\"\" czy \"\"Dramat w Inflantach\"\", ktrego akcja toczy się wokł zbrodni i następującego po niej śledztwa. Starannie opracowane, opatrzone rzetelnymi przypisami książki, w nowych pełnych przekładach z języka francuskiego, rekomenduje Polskie Towarzystwo Juliusza Verne&rsquo;a.\"]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/368/Piec_tygodni_w_balonie_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[Juliusz Verne]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>371</id>
+          <name><![CDATA[Szkoła Robinsonów]]></name>
+          <price>22.41</price>
+          <url>https://ssl.afiliant.com/affskrypt,db96c268,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Literatura piękna i popularna,Literatura dla młodzieży]]></categoryId>
+          <description><![CDATA[\"Nowa seria wydawnicza Wydawnictwa Zielona Sowa &bdquo;Podrże z Verne&rsquo;em&rdquo; zawiera 14 powieści Juliusza Verne&rsquo;a. Obok utworw należących do kanonu twrczości francuskiego klasyka, prekursora science fiction, znalazły się w niej rwnież pozycje mniej znane polskiemu czytelnikowi, jak utrzymane w konwencji powieści utopijnej \"\"Pięćset milionw hinduskiej księżniczki\"\" czy \"\"Dramat w Inflantach\"\", ktrego akcja toczy się wokł zbrodni i następującego po niej śledztwa. Starannie opracowane, opatrzone rzetelnymi przypisami książki, w nowych pełnych przekładach z języka francuskiego, rekomenduje Polskie Towarzystwo Juliusza Verne&rsquo;a.\"]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/371/Szkola_Robinsonow_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[Juliusz Verne]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>372</id>
+          <name><![CDATA[Tajemnicza wyspa. I]]></name>
+          <price>22.41</price>
+          <url>https://ssl.afiliant.com/affskrypt,db96c64d,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Literatura piękna i popularna,Literatura dla młodzieży]]></categoryId>
+          <description><![CDATA[\"Nowa seria wydawnicza Wydawnictwa Zielona Sowa &bdquo;Podrże z Verne&rsquo;em&rdquo; zawiera 14 powieści Juliusza Verne&rsquo;a. Obok utworw należących do kanonu twrczości francuskiego klasyka, prekursora science fiction, znalazły się w niej rwnież pozycje mniej znane polskiemu czytelnikowi, jak utrzymane w konwencji powieści utopijnej \"\"Pięćset milionw hinduskiej księżniczki\"\" czy \"\"Dramat w Inflantach\"\", ktrego akcja toczy się wokł zbrodni i następującego po niej śledztwa. Starannie opracowane, opatrzone rzetelnymi przypisami książki, w nowych pełnych przekładach z języka francuskiego, rekomenduje Polskie Towarzystwo Juliusza Verne&rsquo;a.\"]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/372/Tajemnicza_wyspa_I_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[Juliusz Verne]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>374</id>
+          <name><![CDATA[Wąż morski]]></name>
+          <price>22.41</price>
+          <url>https://ssl.afiliant.com/affskrypt,db96ce17,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Literatura piękna i popularna,Literatura dla młodzieży]]></categoryId>
+          <description><![CDATA[\"Nowa seria wydawnicza Wydawnictwa Zielona Sowa &bdquo;Podrże z Verne&rsquo;em&rdquo; zawiera 14 powieści Juliusza Verne&rsquo;a. Obok utworw należących do kanonu twrczości francuskiego klasyka, prekursora science fiction, znalazły się w niej rwnież pozycje mniej znane polskiemu czytelnikowi, jak utrzymane w konwencji powieści utopijnej \"\"Pięćset milionw hinduskiej księżniczki\"\" czy \"\"Dramat w Inflantach\"\", ktrego akcja toczy się wokł zbrodni i następującego po niej śledztwa. Starannie opracowane, opatrzone rzetelnymi przypisami książki, w nowych pełnych przekładach z języka francuskiego, rekomenduje Polskie Towarzystwo Juliusza Verne&rsquo;a.\"]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/374/Waz_morski_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[Juliusz Verne]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>379</id>
+          <name><![CDATA[Polska południowa]]></name>
+          <price>6.29</price>
+          <url>https://ssl.afiliant.com/affskrypt,db96e190,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Literatura piękna i popularna,Literatura dla dzieci i młodzieży]]></categoryId>
+          <description><![CDATA["Twoje dziecko się nudzi? Nie ma pomysłu na zabawę? Sięgnij po serię malowanek ""Pokoloruj Polskę"""]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/379/Polska_poludniowa_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[  ]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>384</id>
+          <name><![CDATA[Pokoloruj zimę]]></name>
+          <price>6.29</price>
+          <url>https://ssl.afiliant.com/affskrypt,db96f509,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Literatura piękna i popularna,Literatura dla dzieci i młodzieży]]></categoryId>
+          <description><![CDATA[\"Twoje dziecko się nudzi? Nie ma pomysłu na zabawę? Sięgnij po inne zimowe malowanki! W środku malowanki gra planszowa.\"]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/384/Pokoloruj_zime_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[  ]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>387</id>
+          <name><![CDATA[Poznaję cyferki i koloruję, cz. 1]]></name>
+          <price>4.49</price>
+          <url>https://ssl.afiliant.com/affskrypt,db9700b8,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Podręczniki szkolne]]></categoryId>
+          <description><![CDATA["Seria wydawnicza Poznaję cyferki i koloruję pomoc dla rodziców pragnących przygotować swoje dziecko do szkoły atrakcyjna propozycja edukacyjna dla dzieci kratki pomocnicze do samodzielnego ćwiczenia pisania cyfr ilustracje do kolorowaniaKsiążeczki Poznaję cyferki i koloruję zachęcą dziecko do nauki liczenia i wspomogą jego rozwój poznawczy. Ciekawe zadania i atrakcyjne rysunki do kolorowania stwarzają okazję do świetnej zabawy, która jest najlepszym sposobem rozwijania percepcji wzrokowej i spostrzegawczości, umożliwia doskonalenie jego sprawności manualnej i grafomotorycznej."]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/387/Poznaje_cyferki_i_koloruje_cz_1_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[Opracowanie: Małgorzata Czyżowska]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>389</id>
+          <name><![CDATA[Poznaję cyferki i koloruję, cz. 3]]></name>
+          <price>4.49</price>
+          <url>https://ssl.afiliant.com/affskrypt,db970882,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Podręczniki szkolne]]></categoryId>
+          <description><![CDATA["Seria wydawnicza Poznaję cyferki i koloruję pomoc dla rodziców pragnących przygotować swoje dziecko do szkoły atrakcyjna propozycja edukacyjna dla dzieci kratki pomocnicze do samodzielnego ćwiczenia pisania cyfr ilustracje do kolorowaniaKsiążeczki Poznaję cyferki i koloruję zachęcą dziecko do nauki liczenia i wspomogą jego rozwój poznawczy. Ciekawe zadania i atrakcyjne rysunki do kolorowania stwarzają okazję do świetnej zabawy, która jest najlepszym sposobem rozwijania percepcji wzrokowej i spostrzegawczości, umożliwia doskonalenie jego sprawności manualnej i grafomotorycznej."]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/389/Poznaje_cyferki_i_koloruje_cz_3_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[Opracowanie: Małgorzata Czyżowska]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>390</id>
+          <name><![CDATA[Poznaję literki i koloruję, część 1]]></name>
+          <price>4.49</price>
+          <url>https://ssl.afiliant.com/affskrypt,db970c67,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Podręczniki szkolne]]></categoryId>
+          <description><![CDATA["Seria wydawnicza Poznaję literki i koloruję? pomoc dla rodziców pragnących przygotować swoje dziecko do szkoły? atrakcyjna propozycja edukacyjna dla dzieci? linie pomocnicze do samodzielnego ćwiczenia pisania dużych i małych liter? ilustracje do kolorowaniaMateriał zawarty w kolorowankach Poznaję literki i koloruję korzystnie wpływa na rozwój poznawczy dziecka, poszerza słownictwo z różnych dziedzin życia, sprzyja aktywnemu rozpoznawaniu i przyswajaniu sobie wyrazów rozpoczynających się na poszczególne litery. Stymuluje sprawność manualną i grafomotoryczną, stanowi doskonałą formę zabawy.z recenzji psycholog Joanny Cieślik"]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/390/Poznaje_literki_i_koloruje_czesc_1_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[Opracowanie: Małgorzata Czyżowska]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>391</id>
+          <name><![CDATA[Poznaję literki i koloruję, część 2]]></name>
+          <price>4.49</price>
+          <url>https://ssl.afiliant.com/affskrypt,db97104c,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Podręczniki szkolne]]></categoryId>
+          <description><![CDATA["Seria wydawnicza Poznaję literki i koloruję? pomoc dla rodziców pragnących przygotować swoje dziecko do szkoły? atrakcyjna propozycja edukacyjna dla dzieci? linie pomocnicze do samodzielnego ćwiczenia pisania dużych i małych liter? ilustracje do kolorowaniaMateriał zawarty w kolorowankach Poznaję literki i koloruję korzystnie wpływa na rozwój poznawczy dziecka, poszerza słownictwo z różnych dziedzin życia, sprzyja aktywnemu rozpoznawaniu i przyswajaniu sobie wyrazów rozpoczynających się na poszczególne litery. Stymuluje sprawność manualną i grafomotoryczną, stanowi doskonałą formę zabawy.z recenzji psycholog Joanny Cieślik"]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/391/Poznaje_literki_i_koloruje_czesc_2_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[Opracowanie: Małgorzata Czyżowska]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>392</id>
+          <name><![CDATA[Poznaję literki i koloruję, część 3]]></name>
+          <price>4.49</price>
+          <url>https://ssl.afiliant.com/affskrypt,db971431,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Podręczniki szkolne]]></categoryId>
+          <description><![CDATA["Seria wydawnicza Poznaję literki i koloruję? pomoc dla rodziców pragnących przygotować swoje dziecko do szkoły? atrakcyjna propozycja edukacyjna dla dzieci? linie pomocnicze do samodzielnego ćwiczenia pisania dużych i małych liter? ilustracje do kolorowaniaMateriał zawarty w kolorowankach Poznaję literki i koloruję korzystnie wpływa na rozwój poznawczy dziecka, poszerza słownictwo z różnych dziedzin życia, sprzyja aktywnemu rozpoznawaniu i przyswajaniu sobie wyrazów rozpoczynających się na poszczególne litery. Stymuluje sprawność manualną i grafomotoryczną, stanowi doskonałą formę zabawy.z recenzji psycholog Joanny Cieślik"]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/392/Poznaje_literki_i_koloruje_czesc_3_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[Opracowanie: Małgorzata Czyżowska]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+      </offers>
+    </loadOffers>
+  </pasaz:Body>
+</pasaz:Envelope>

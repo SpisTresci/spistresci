@@ -6,8 +6,8 @@ from connectors.generic import GenericBook
 Base = SqlWrapper.getBaseClass()
 
 class ZloteMysli(Afiliant):
-        #TODO: testy
-        xml_tag_dict = dict(Afiliant.xml_tag_dict.items() + [
+    #TODO: testy
+    xml_tag_dict = dict(Afiliant.xml_tag_dict.items() + [
         ('authors', ("./n:attributes/n:attribute[n:name='Autor']/value", '')),
         ('isbns', ("./n:attributes/n:attribute[n:name='ISBN']/n:value", '')),
         ('publisher', ("./n:attributes/n:attribute[n:name='Wydawnictwo']/n:value", '')),
@@ -23,7 +23,7 @@ class ZloteMysli(Afiliant):
         #the last value under key 'category' will be set to dict
         ('category', ("./n:attributes/n:attribute[n:name='zm:categoryId']/n:value", '')),
         ('product_type_id', ("./n:attributes/n:attribute[n:name='zm:productTypeId']/n:value", '')),
-        ])
+    ])
 
 
 class ZloteMysliBook(GenericBook, Base):
@@ -34,12 +34,11 @@ class ZloteMysliBook(GenericBook, Base):
     publisher = Column(Unicode(22))     #22
     isbn = Column(Unicode(13))          #13
     #price
-    binding = Column(Unicode(6))        #6
     date = Column(Unicode(4))           #4   
     #title
     url = Column(Unicode(165))          #165
     cover = Column(Unicode(70))         #70
-    cover_parent = Column(Unicode(70))      #70    #TODO: what is it zm?
+    cover_parent = Column(Unicode(70))  #70    #TODO: what is it zm?
     cover_small = Column(Unicode(70))   #69
     cover_medium = Column(Unicode(70))  #70
     product_type_id = Column(Integer)
