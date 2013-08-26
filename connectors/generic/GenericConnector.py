@@ -77,7 +77,7 @@ class GenericConnector(GenericBase, DataValidator):
     max_len = {}
     max_len_entry = {}
 
-    config_file = 'conf/connectors.ini'
+    config_file = 'conf/update.ini'
     config_object = None
 
     rows_initialized = True;#False
@@ -115,7 +115,7 @@ class GenericConnector(GenericBase, DataValidator):
         return old_value
 
 
-    def parse_config(self, config_file='conf/connectors.ini', section=None, config_object=None):
+    def parse_config(self, config_file='conf/update.ini', section=None, config_object=None):
         if not config_object:
             self.read_config()
         else:
@@ -152,7 +152,7 @@ class GenericConnector(GenericBase, DataValidator):
         self.unpack_file = self.config.get('unpack_file', '')
         self.unpack_dir = self.config.get('unpack_dir', '')
         self.remove_unpacked = int(self.config.get('remove_unpacked', 1))
-        self.log_config = self.config.get('log_config', 'conf/log.connectors.ini')
+        self.log_config = self.config.get('log_config', 'conf/log.update.ini')
         self.logger = logger_instance(self.log_config)
         self.log_erratum_config = self.config.get('log_erratum_config', 'conf/log.erratum.ini')
         self.erratum_logger = logger_instance(self.log_erratum_config)

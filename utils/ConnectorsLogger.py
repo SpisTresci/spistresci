@@ -76,7 +76,7 @@ class ConnectorsLogger(object):
             handlers = handlers_list.split(',')
             for handler in handlers:
                 if handler == 'FILE':
-                    log_file = config.get('file', 'log/connectors.log')
+                    log_file = config.get('file', 'log/update.log')
                     log_dir = os.path.dirname(log_file)
                     if log_dir and not os.path.exists(log_dir):
                         os.makedirs(log_dir)
@@ -127,7 +127,7 @@ class ConnectorsLogger(object):
 
     def reload_config(self, log_config):
         if not log_config:
-            self.logger_name = 'connectors'
+            self.logger_name = 'update'
             self.level = 'DEBUG'
             self.log_config = ''
             self.config = None
@@ -135,7 +135,7 @@ class ConnectorsLogger(object):
                 raise IOError('Log config file %s, does not exist' % self.log_config)
         else:
             self.log_config = log_config
-            self.config = utils.MultiLevelConfigParser({'level':'DEBUG', 'logger':'connectors'})
+            self.config = utils.MultiLevelConfigParser({'level':'DEBUG', 'logger':'update'})
             self.config.read(self.log_config)
             self.level = self.config.get('DEFAULT', 'level')
             self.logger_name = self.config.get('DEFAULT', 'logger')

@@ -4,7 +4,7 @@ from connectors.generic import *
 from sqlwrapper import *
 
 def main():
-    GenericConnector.config_file = "xml_tag_conf/connectors.ini"
+    GenericConnector.config_file = "xml_tag_conf/update.ini"
     GenericConnector.read_config()
 
     connector_classnames = Tools.get_classnames(GenericConnector.config_object)
