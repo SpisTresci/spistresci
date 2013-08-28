@@ -2,10 +2,10 @@ from django.shortcuts import render_to_response
 from django.http import HttpResponseRedirect
 from django.core.context_processors import csrf
 from spistresci.forms import RegistrationForm
-from spistresci.views._constants import *
+from spistresci.constants import *
 
 def register_user(request, template = 'register.html'):
-    c = {'top_menu':list_of_services}
+    c = {'top_menu':getListOfTopMenuServices(request)}
     c.update({'path':request.path})
     if request.method == 'POST':
         form = RegistrationForm(request.POST)

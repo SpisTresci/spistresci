@@ -5,13 +5,16 @@ from spistresci.index.views import index
 from spistresci.search.views import STSearchView, STSearchQuerySet, hide_menu, STSearchForm
 from spistresci.auth.views import logout, accounts_social_signup, accounts_profile
 from spistresci.register.views import register_user, egazeciarz_register_user
+from spistresci.monitor.views import monitor
+
 
 admin.autodiscover()
 
 urlpatterns = patterns('',
-     ('^$', index),
-     ('^logout/$', logout),
-     ('^hide_menu/(?P<value>\d)/$', hide_menu),
+     url('^$', index),
+     url('^logout/$', logout),
+     url('^hide_menu/(?P<value>\d)/$', hide_menu),
+     url('^monitor/$', monitor),
 )
 
 #TODO: check thread safe version of this
@@ -33,7 +36,6 @@ urlpatterns += patterns('haystack.views',
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
 
-
-    (r'^accounts/', include('allauth.urls')),
+    url(r'^accounts/', include('allauth.urls')),
 
 )

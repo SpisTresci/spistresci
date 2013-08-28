@@ -1,0 +1,65 @@
+{% load static %}
+<div>
+   <table>
+      <tr>
+         <td class="lp"><div>ID</div></td>
+         <td class="date"><div>Start</div></td>
+         <td class="date"><div>Koniec</div></td>
+         <td class="type"><div>Typ</div></td>
+      </tr>
+      {% for update_status in update_statuses %}
+        <tr class="us{% if update_status.finished %} finished{% endif %}{% if update_status.success %} success{% endif %}">
+            <td>{{ update_status.id }}</td>
+            <td>{{ update_status.start|date:"d-m-Y H:i" }}</td>
+            <td>{{ update_status.end|date:"d-m-Y H:i" }}</td>
+            <td>{% if update_status.manual %}manual{% else %}auto{% endif %}</td>
+        </tr>
+      {% endfor %}
+      <tr>
+          <td colspan="4" style="text-align: left">
+              <button id="new_update">Nowy</button>
+              <button id="all" class="new_update checked">Wszystkie</button>
+              <button id="update" class="new_update">Update!</button>
+              <input id="autorefresh" type="checkbox" value="autorefresh" checked> autorefresh
+          </td>
+      </tr>
+   </table>
+   <table class="connectors">
+           <tr>
+           {% for service in services %}
+             <td class='rotated_cell'>
+                <div class='rotate_text'>{{ service.name }}</div>
+             </td>
+           {% endfor %}
+           </tr>
+        {% for update_status in data %}
+           <tr>
+           {% for update_status_service in update_status %}
+                <td
+{% if update_status_service %}
+title="
+id: {{ update_status_service.id }}
+checksum: {{ update_status_service.checksum }}
+download_date: {{ update_status_service.download_date|date:"d-m-Y H:i" }}
+offers: {{ update_status_service.offers }}
+offers_new: {{ update_status_service.offers_new }}
+offers_promotion: {{ update_status_service.offers_promotion }}
+parse_start: {{ update_status_service.parse_start|date:"d-m-Y H:i" }}
+parse_end: {{ update_status_service.parse_end|date:"d-m-Y H:i" }}
+final_start: {{ update_status_service.final_start|date:"d-m-Y H:i" }}
+final_end: {{ update_status_service.final_end|date:"d-m-Y H:i" }}
+"
+{% endif%}
+                class="{% if update_status_service %}{% if update_status_service.success %}success{% else %}fail{% endif %}{% else %}no{% endif %}"></td>
+           {% endfor %}
+           </tr>
+        {% endfor %}
+           <tr class="new_update">
+           {% for service in services %}
+             <td>
+                <input class="update_checkbox" type="checkbox" checked value="{{ service.name }}">
+             </td>
+           {% endfor %}
+           </tr>
+   </table>
+</div>

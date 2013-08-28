@@ -1,0 +1,79 @@
+.rotate_text {
+    writing-mode: tb-rl;
+    filter: flipH() flipV();
+}
+.rotate_text {
+    -moz-transform:rotate(-90deg);
+    -moz-transform-origin: top left;
+    -webkit-transform: rotate(-90deg);
+    -webkit-transform-origin: top left;
+    -o-transform: rotate(-90deg);
+    -o-transform-origin:  top left;
+    position:relative;
+    top:15px;
+}
+
+table{
+    display: inline-table;
+    border: 1px solid black;
+    table-layout: fixed;
+    border-spacing: 0;
+    border-collapse:collapse;
+    text-align: center;
+    width: 69px; /*Table width must be set or it wont resize the cells*/
+}
+
+th, td{
+    border: 1px solid black;
+    width: 26px;
+    height: 26px;
+    background-position: left 5px;
+}
+
+td.lp{
+    width: 30px;
+}
+
+td.date{
+    width: 120px;
+}
+
+td.type{
+    width: 50px;
+}
+
+td.fail{
+    background: url(../img/red.png) no-repeat 3px;
+}
+td.success{
+    background: url(../img/green.png) no-repeat 3px;
+}
+td.no{
+    background: url(../img/grey.png) no-repeat 3px;
+}
+
+
+tr.us{
+    background-color: #B61A1A;
+}
+
+tr.us.finished{
+    background-color: orange;
+}
+
+tr.us.finished.success{
+    background-color: #419B28;
+}
+
+.rotated_cell {
+    height:120px;
+    vertical-align:bottom
+}
+
+.new_update{
+    display: none;
+}
+#update{
+    background-color: lawngreen;
+    color: #000000;
+}

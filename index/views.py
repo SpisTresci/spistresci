@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from django.shortcuts import render_to_response
 from spistresci.auth.views import authorization
-from spistresci.views._constants import *
+from spistresci.constants import *
 
 group_of_books=[
     {
@@ -85,7 +85,7 @@ group_of_books=[
 ]
 
 def index(request):
-    c = {'top_menu':list_of_services}
+    c = {'top_menu':getListOfTopMenuServices(request)}
     c.update({'path':request.path})
     authorization(request, c)
     c['request'] = request

@@ -4,7 +4,7 @@ from haystack.query import SearchQuerySet, SQ
 from haystack.views import SearchView
 from haystack.forms import *
 from spistresci.auth.views import authorization
-from spistresci.views._constants import *
+from spistresci.constants import *
 
 class STSearchForm(ModelSearchForm):
     formats = forms.CharField(required=False, widget=forms.HiddenInput)
@@ -127,7 +127,7 @@ class STSearchView(SearchView):
 
         self.servicesInfo = self.getServicesInfo()
 
-        extra['top_menu'] = list_of_services
+        extra['top_menu'] = getListOfTopMenuServices(self.request)
         extra['supported_formats'] = supported_formats
         extra["prefix"] = "s"
 
