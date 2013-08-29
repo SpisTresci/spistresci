@@ -40,7 +40,7 @@ class MasterBook(final.FinalBase, Base):
             self.title = new_miniBook.title
 
         if not any(new_miniBook.bookstore == miniBook.bookstore and \
-                   new_miniBook.bookstore_boook_id == miniBook.bookstore_boook_id for miniBook in self.miniBooks):
+                   new_miniBook.bookstore_book_id == miniBook.bookstore_book_id for miniBook in self.miniBooks):
 
             self.miniBooks.append(new_miniBook)
 

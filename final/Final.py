@@ -40,10 +40,14 @@ class Final(object):
         from sqlalchemy import event
         event.listen(Session, "after_flush", self.addNormalizeList)
 
-        specific_books = session.query(connector.getConcretizedClass(connector, "Book")).all()
+        SpecificBook = connector.getConcretizedClass(connector, "Book")
+        specific_books = session.query(SpecificBook).filter(SpecificBook.mini_id == None).all()
         for specific_book in specific_books:
             mini_book = final.MiniBook(session, specific_book)
             session.add(mini_book)
+
+            specific_book.mini_id = mini_book.id
+
             session.commit()
             final.MiniBook.normalize(session)
 

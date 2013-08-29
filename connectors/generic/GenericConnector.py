@@ -282,6 +282,7 @@ class GenericConnector(GenericBase, DataValidator):
             #uncomment when creating connector
             #print self.max_len
             #print self.max_len_entry
+            self.session.commit()
             self.save_info_about_offers(offers = book_number)
 
         self.save_time_of_("parse_end")
@@ -474,7 +475,8 @@ class GenericConnector(GenericBase, DataValidator):
         pass
 
     def howManyNewOffers(self):
-        pass
+        Book = GenericBook.getConcretizedClass(context=self)
+        return  self.session.query(Book).filter(Book.mini_id == None).count()
 
     def howManyOffersInPromotion(self):
         pass
@@ -532,6 +534,7 @@ class GenericConnector(GenericBase, DataValidator):
 
         search_keys = [c.name for c in Book.__table__.columns if c.unique or c.primary_key]
         search_keys.remove('id')
+        search_keys.remove('mini_id')
         get_dict = {}
         for key in search_keys:
             get_dict[key] = d[key]
@@ -584,6 +587,7 @@ class GenericConnector(GenericBase, DataValidator):
 class GenericBook(GenericBase):
     id = Column(Integer, primary_key=True)
     external_id = Column(Integer, unique=True)
+    mini_id = Column(Integer, unique=True)
     title = Column(Unicode(256))
     price = Column(Integer) #price in grosz
     #if price_normal == -1 it means there is no special offer for this book

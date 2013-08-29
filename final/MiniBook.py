@@ -13,7 +13,7 @@ class MiniBook(final.FinalBase, Base):
     cover = Column(Unicode(512), nullable = False)
 
     bookstore = Column(Unicode(16), nullable = False)
-    bookstore_boook_id = Column(Integer, nullable = False)
+    bookstore_book_id = Column(Integer, nullable = False)
 
     price = Column(Integer, nullable = False)
     isbns = relationship("MiniISBN", secondary = final.mini_books_mini_isbns, backref = "mini_book")
@@ -52,7 +52,7 @@ class MiniBook(final.FinalBase, Base):
         self.cover = specific_book.cover
 
         self.bookstore = specific_book.__tablename__[:-len("Book")]
-        self.bookstore_boook_id = specific_book.id
+        self.bookstore_book_id = specific_book.id
 
         vars_all = [attr for attr in dir(self) if not callable(attr) and not attr.startswith("__")]
         formats = [key for key in vars_all if key.startswith("format_")]
