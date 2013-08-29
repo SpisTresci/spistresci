@@ -282,6 +282,8 @@ class GenericConnector(GenericBase, DataValidator):
             #uncomment when creating connector
             #print self.max_len
             #print self.max_len_entry
+            self.save_info_about_offers(offers = book_number)
+
         self.save_time_of_("parse_end")
 
 
