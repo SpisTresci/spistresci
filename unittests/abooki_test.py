@@ -12,6 +12,7 @@ class MockAbooki(Abooki):
         self.accepted_suffix_patterns = ' *,-'
         self.erratum_logger = MockErratumLogger()
         self._name = 'MockAbooki'
+        self.format_in_title_split_regex = ','
 
 
 class TestAbookiConnector(FormatInTitleTestFixture):

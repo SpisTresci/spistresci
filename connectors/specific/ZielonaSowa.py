@@ -7,7 +7,6 @@ Base = SqlWrapper.getBaseClass()
 class ZielonaSowa(Afiliant):
     xml_tag_dict = dict (Afiliant.xml_tag_dict.items() + [('authors', ("./n:attributes/n:attribute[n:name='Producent']/n:value", ''))])
 
-    #TODO: testy
 class ZielonaSowaBook(GenericBook, Base):
     category = Column(Unicode(32))      #18
     #title(256)                         #71

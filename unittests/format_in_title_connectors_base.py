@@ -22,6 +22,7 @@ class FormatInTitleTestFixture(object):
        {'title':'cd'},
        {'title':'cd,cd,11'},
        {'title':'cd,cd,11mp3'},
+       {'title':'cd,cd,11mp3', 'formats':'dvd'}
        ]
        expected = [{'title': 'dummy1', 'formats': ''},
        {'title':'dummy', 'formats':'123cd'},
@@ -30,6 +31,7 @@ class FormatInTitleTestFixture(object):
        {'title':'cd', 'formats':''},
        {'title':'cd,cd,11', 'formats':''},
        {'title':'cd,cd', 'formats':'11mp3'},
+       {'title':'cd,cd', 'formats':'dvd'}
        ]
        for (dic, exp) in zip(titles, expected):
            yield self._test_adjust_parse, dic, exp

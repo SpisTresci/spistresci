@@ -12,6 +12,7 @@ class MockAudiobook(Audiobook):
         self.accepted_suffix_patterns = ' *,-'
         self.erratum_logger = MockErratumLogger()
         self._name = 'MockAudiobook'
+        self.format_in_title_split_regex = ',|\+'
 
 
 class TestAudiobookConnector(FormatInTitleTestFixture):
@@ -26,6 +27,9 @@ class TestAudiobookConnector(FormatInTitleTestFixture):
        {'title':'cd'},
        {'title':'cd,cd,11'},
        {'title':'cd,cd,11mp3'},
+       {'title':'cd+cd+11mp3-  '},
+       {'title':'cd+cd+11mp3-  '},
+       {'title':'cd-cd+11mp3-  '},
        ]
        expected = [{'title': 'dummy1', 'formats': '', 'cover': ''},
        {'title':'dummy', 'formats':'123cd', 'cover': ''},
@@ -34,6 +38,10 @@ class TestAudiobookConnector(FormatInTitleTestFixture):
        {'title':'cd', 'formats':'', 'cover': ''},
        {'title':'cd,cd,11', 'formats':'', 'cover': ''},
        {'title':'cd,cd', 'formats':'11mp3', 'cover': ''},
+       {'title':'cd+cd', 'formats':'11mp3-', 'cover': ''},
+       {'title':'cd+cd', 'formats':'11mp3-', 'cover': ''},
+       {'title':'cd-cd', 'formats':'11mp3-', 'cover': ''},
+
        ]
        for (dic, exp) in zip(titles, expected):
            yield self._test_adjust_parse, dic, exp

@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE pasaz:Envelope SYSTEM "loadOffers.dtd">
+<pasaz:Envelope xmlns:pasaz="http://schemas.xmlsoap.org/soap/envelope/"> 
+ <pasaz:Body> 
+  <loadOffers xmlns="urn:ExportB2B"> 
+   <offers> 
+    <offer>
+        <id>12135</id>
+        <name><![CDATA[Legendy naszej motoryzacji (Wersja elektroniczna (PDF))]]></name>
+        <price>20.00</price>
+        <url><![CDATA[http://www.zlotemysli.pl/ekundelek,RSS/prod/12134/legendy-naszej-motoryzacji-aleksander-sowa.html]]></url>
+        <categoryId><![CDATA[Księgarnia/E-booki]]></categoryId>
+        <description><![CDATA[Dzięki tej publikacji wybierzesz się, dobrze się bawiąc, w pasjonującą podróż przez ponad 100 lat historii polskiej motoryzacji.]]></description>
+        <image><![CDATA[http://get.zlotemysli.pl/products/image/000/012/134/600x848.jpg?201308]]></image>
+        <attributes>
+                <attribute>
+                    <name><![CDATA[zm:imageParent]]></name>
+                    <value><![CDATA[http://get.zlotemysli.pl/products/image/000/012/134/600x848.jpg?201308]]></value>
+                </attribute>
+			<attribute>
+                <name><![CDATA[zm:imageMedium]]></name>
+                <value><![CDATA[http://get.zlotemysli.pl/products/image/000/012/134/152x200.jpg?201308]]></value>
+            </attribute>
+            <attribute>
+                <name><![CDATA[zm:imageSmall]]></name>
+                <value><![CDATA[http://get.zlotemysli.pl/products/image/000/012/134/82x122.jpg?201308]]></value>
+            </attribute>
+            <attribute>
+                <name><![CDATA[zm:categoryId]]></name>
+                                	                <value><![CDATA[13]]></value>
+                	                            </attribute>
+            <attribute>
+                <name><![CDATA[zm:productTypeId]]></name>
+                <value><![CDATA[2]]></value>
+            </attribute>
+                <attribute>
+                    <name><![CDATA[Autor]]></name>
+                    <value><![CDATA[Aleksander Sowa]]></value>
+                </attribute>
+                <attribute>
+                    <name><![CDATA[ISBN]]></name>
+                    <value><![CDATA[978-83-932553-9-9]]></value>
+                </attribute>
+                <attribute>
+                    <name><![CDATA[Wydawnictwo]]></name>
+                    <value><![CDATA[Złote Myśli Sp. z o.o.]]></value>
+                </attribute>
+                <attribute>
+                    <name><![CDATA[Rok wydania]]></name>
+                    <value><![CDATA[2011]]></value>
+                </attribute>
+                <attribute>
+                    <name><![CDATA[Ilość stron]]></name>
+                    <value><![CDATA[426]]></value>
+                </attribute>
+                <attribute>
+                    <name><![CDATA[Format pliku]]></name>
+                    <value><![CDATA[PDF]]></value>
+                </attribute>
+        </attributes>
+        <availability>1</availability>
+    </offer>
+    <offer>
+        <id>12283</id>
+        <name><![CDATA[Praca. Kochaj albo rzuć! (Wersja audio (Audio CD))]]></name>
+        <price>24.90</price>
+        <url><![CDATA[http://www.zlotemysli.pl/ekundelek,RSS/prod/12273/praca-kochaj-albo-rzuc-justyna-barska.html]]></url>
+        <categoryId><![CDATA[Księgarnia/Audiobooki]]></categoryId>
+        <description><![CDATA[Poznaj historie ludzi, którym pomimo wieloletnich potyczek, udało się znaleźć zadowolenie z pracy.]]></description>
+        <image><![CDATA[http://get.zlotemysli.pl/products/image/000/012/283/600x848.jpg?201308]]></image>
+        <attributes>
+                <attribute>
+                    <name><![CDATA[zm:imageParent]]></name>
+                    <value><![CDATA[http://get.zlotemysli.pl/products/image/000/012/273/600x848.jpg?201308]]></value>
+                </attribute>
+			<attribute>
+                <name><![CDATA[zm:imageMedium]]></name>
+                <value><![CDATA[http://get.zlotemysli.pl/products/image/000/012/283/152x200.jpg?201308]]></value>
+            </attribute>
+            <attribute>
+                <name><![CDATA[zm:imageSmall]]></name>
+                <value><![CDATA[http://get.zlotemysli.pl/products/image/000/012/283/82x122.jpg?201308]]></value>
+            </attribute>
+            <attribute>
+                <name><![CDATA[zm:categoryId]]></name>
+                                	                <value><![CDATA[14]]></value>
+                	                <value><![CDATA[16]]></value>
+                	                            </attribute>
+            <attribute>
+                <name><![CDATA[zm:productTypeId]]></name>
+                <value><![CDATA[16]]></value>
+            </attribute>
+                <attribute>
+                    <name><![CDATA[Autor]]></name>
+                    <value><![CDATA[Justyna Barska]]></value>
+                </attribute>
+                <attribute>
+                    <name><![CDATA[ISBN]]></name>
+                    <value><![CDATA[978-83-7701-576-6]]></value>
+                </attribute>
+                <attribute>
+                    <name><![CDATA[Wydawnictwo]]></name>
+                    <value><![CDATA[Złote Myśli Sp. z o.o.]]></value>
+                </attribute>
+                <attribute>
+                    <name><![CDATA[Rok wydania]]></name>
+                    <value><![CDATA[2012]]></value>
+                </attribute>
+        </attributes>
+        <availability>1</availability>
+    </offer>
+    <offer>
+        <id>3802</id>
+        <name><![CDATA[Rada pracowników w firmie (Wersja elektroniczna (PDF))]]></name>
+        <price>47.58</price>
+        <url><![CDATA[http://www.zlotemysli.pl/ekundelek,RSS/prod/6276/rada-pracownikow-w-firmie-przemyslaw-ciszek-i-maciej-chakowski.html]]></url>
+        <categoryId><![CDATA[Księgarnia/E-booki]]></categoryId>
+        <description><![CDATA[20 gotowych wzorów dokumentów, które ułatwiają organizację wyborów i sprawne funkcjonowanie rady pracowniczej w firmie]]></description>
+        <image><![CDATA[http://get.zlotemysli.pl/products/image/000/003/802/600x848.jpg?201308]]></image>
+        <attributes>
+                <attribute>
+                    <name><![CDATA[zm:imageParent]]></name>
+                    <value><![CDATA[http://get.zlotemysli.pl/products/image/000/006/276/600x848.jpg?201308]]></value>
+                </attribute>
+			<attribute>
+                <name><![CDATA[zm:imageMedium]]></name>
+                <value><![CDATA[http://get.zlotemysli.pl/products/image/000/003/802/152x200.jpg?201308]]></value>
+            </attribute>
+            <attribute>
+                <name><![CDATA[zm:imageSmall]]></name>
+                <value><![CDATA[http://get.zlotemysli.pl/products/image/000/003/802/82x122.jpg?201308]]></value>
+            </attribute>
+            <attribute>
+                <name><![CDATA[zm:categoryId]]></name>
+                                	                <value><![CDATA[13]]></value>
+                	                            </attribute>
+            <attribute>
+                <name><![CDATA[zm:productTypeId]]></name>
+                <value><![CDATA[2]]></value>
+            </attribute>
+                <attribute>
+                    <name><![CDATA[Autor]]></name>
+                    <value><![CDATA[Przemysław Ciszek i Maciej Chakowski]]></value>
+                </attribute>
+                <attribute>
+                    <name><![CDATA[ISBN]]></name>
+                    <value><![CDATA[83-7483-297-5]]></value>
+                </attribute>
+                <attribute>
+                    <name><![CDATA[Wydawnictwo]]></name>
+                    <value><![CDATA[Złote Myśli Sp. z o.o.]]></value>
+                </attribute>
+                <attribute>
+                    <name><![CDATA[Rok wydania]]></name>
+                    <value><![CDATA[2007]]></value>
+                </attribute>
+                <attribute>
+                    <name><![CDATA[Ilość stron]]></name>
+                    <value><![CDATA[49]]></value>
+                </attribute>
+                <attribute>
+                    <name><![CDATA[Format pliku]]></name>
+                    <value><![CDATA[PDF]]></value>
+                </attribute>
+        </attributes>
+        <availability>1</availability>
+    </offer>
+    <offer>
+        <id>3831</id>
+        <name><![CDATA[Hipnotyczny Marketing (Wersja elektroniczna (PDF))]]></name>
+        <price>39.90</price>
+        <url><![CDATA[http://www.zlotemysli.pl/ekundelek,RSS/prod/6296/hipnotyczny-marketing-joe-vitale.html]]></url>
+        <categoryId><![CDATA[Księgarnia/E-booki]]></categoryId>
+        <description><![CDATA[Jak dzięki trzem krokom strategii hipnotycznego marketingu autorstwa Joe Vitale zrobić fortunę online?]]></description>
+        <image><![CDATA[http://get.zlotemysli.pl/products/image/000/003/831/600x848.jpg?201308]]></image>
+        <attributes>
+                <attribute>
+                    <name><![CDATA[zm:imageParent]]></name>
+                    <value><![CDATA[http://get.zlotemysli.pl/products/image/000/006/296/600x848.jpg?201308]]></value>
+                </attribute>
+			<attribute>
+                <name><![CDATA[zm:imageMedium]]></name>
+                <value><![CDATA[http://get.zlotemysli.pl/products/image/000/003/831/152x200.jpg?201308]]></value>
+            </attribute>
+            <attribute>
+                <name><![CDATA[zm:imageSmall]]></name>
+                <value><![CDATA[http://get.zlotemysli.pl/products/image/000/003/831/82x122.jpg?201308]]></value>
+            </attribute>
+            <attribute>
+                <name><![CDATA[zm:categoryId]]></name>
+                                	                <value><![CDATA[4]]></value>
+                	                <value><![CDATA[10]]></value>
+                	                            </attribute>
+            <attribute>
+                <name><![CDATA[zm:productTypeId]]></name>
+                <value><![CDATA[2]]></value>
+            </attribute>
+                <attribute>
+                    <name><![CDATA[Autor]]></name>
+                    <value><![CDATA[Joe Vitale]]></value>
+                </attribute>
+                <attribute>
+                    <name><![CDATA[ISBN]]></name>
+                    <value><![CDATA[978-83-7582-267-0]]></value>
+                </attribute>
+                <attribute>
+                    <name><![CDATA[Wydawnictwo]]></name>
+                    <value><![CDATA[Złote Myśli Sp. z o.o.]]></value>
+                </attribute>
+                <attribute>
+                    <name><![CDATA[Rok wydania]]></name>
+                    <value><![CDATA[2008]]></value>
+                </attribute>
+                <attribute>
+                    <name><![CDATA[Ilość stron]]></name>
+                    <value><![CDATA[225]]></value>
+                </attribute>
+                <attribute>
+                    <name><![CDATA[Format pliku]]></name>
+                    <value><![CDATA[PDF]]></value>
+                </attribute>
+        </attributes>
+        <availability>1</availability>
+    </offer>
+    <offer>
+        <id>4944</id>
+        <name><![CDATA[Zmotywuj pracownika (Wersja elektroniczna (PDF))]]></name>
+        <price>0.00</price>
+        <url><![CDATA[http://www.zlotemysli.pl/ekundelek,RSS/prod/6635/zmotywuj-pracownika-anna-grabka.html]]></url>
+        <categoryId><![CDATA[Księgarnia/E-booki]]></categoryId>
+        <description><![CDATA[Jak zmotywować ludzi do tego, żeby byli efektywniejsi w pracy? Zadbaj o dobry wizerunek swojej firmy, sprawiając, aby Twoi pracownicy czuli się w niej dobrze. ]]></description>
+        <image><![CDATA[http://get.zlotemysli.pl/products/image/000/004/944/600x848.jpg?201308]]></image>
+        <attributes>
+                <attribute>
+                    <name><![CDATA[zm:imageParent]]></name>
+                    <value><![CDATA[http://get.zlotemysli.pl/products/image/000/006/635/600x848.jpg?201308]]></value>
+                </attribute>
+			<attribute>
+                <name><![CDATA[zm:imageMedium]]></name>
+                <value><![CDATA[http://get.zlotemysli.pl/products/image/000/004/944/152x200.jpg?201308]]></value>
+            </attribute>
+            <attribute>
+                <name><![CDATA[zm:imageSmall]]></name>
+                <value><![CDATA[http://get.zlotemysli.pl/products/image/000/004/944/82x122.jpg?201308]]></value>
+            </attribute>
+            <attribute>
+                <name><![CDATA[zm:categoryId]]></name>
+                                	                <value><![CDATA[20]]></value>
+                	                <value><![CDATA[18]]></value>
+                	                            </attribute>
+            <attribute>
+                <name><![CDATA[zm:productTypeId]]></name>
+                <value><![CDATA[2]]></value>
+            </attribute>
+                <attribute>
+                    <name><![CDATA[Autor]]></name>
+                    <value><![CDATA[Anna Grabka]]></value>
+                </attribute>
+                <attribute>
+                    <name><![CDATA[ISBN]]></name>
+                    <value><![CDATA[darmowa publikacja]]></value>
+                </attribute>
+                <attribute>
+                    <name><![CDATA[Wydawnictwo]]></name>
+                    <value><![CDATA[Złote Myśli Sp. z o.o.]]></value>
+                </attribute>
+                <attribute>
+                    <name><![CDATA[Rok wydania]]></name>
+                    <value><![CDATA[2010]]></value>
+                </attribute>
+                <attribute>
+                    <name><![CDATA[Ilość stron]]></name>
+                    <value><![CDATA[30]]></value>
+                </attribute>
+                <attribute>
+                    <name><![CDATA[Format pliku]]></name>
+                    <value><![CDATA[PDF]]></value>
+                </attribute>
+        </attributes>
+        <availability>1</availability>
+    </offer>
+    <offer>
+        <id>3709</id>
+        <name><![CDATA[Praktyczny Kurs Pisarstwa (Wersja elektroniczna (PDF))]]></name>
+        <price>21.90</price>
+        <url><![CDATA[http://www.zlotemysli.pl/ekundelek,RSS/prod/6213/praktyczny-kurs-pisarstwa-katarzyna-krzan.html]]></url>
+        <categoryId><![CDATA[Księgarnia/E-booki]]></categoryId>
+        <description><![CDATA[Ty także możesz napisać fascynującą książkę z intrygującą fabułą i odnieść sukces. Poznaj sekrety autorów bestsellerów.]]></description>
+        <image><![CDATA[http://get.zlotemysli.pl/products/image/000/003/709/600x848.jpg?201308]]></image>
+        <attributes>
+                <attribute>
+                    <name><![CDATA[zm:imageParent]]></name>
+                    <value><![CDATA[http://get.zlotemysli.pl/products/image/000/006/213/600x848.jpg?201308]]></value>
+                </attribute>
+			<attribute>
+                <name><![CDATA[zm:imageMedium]]></name>
+                <value><![CDATA[http://get.zlotemysli.pl/products/image/000/003/709/152x200.jpg?201308]]></value>
+            </attribute>
+            <attribute>
+                <name><![CDATA[zm:imageSmall]]></name>
+                <value><![CDATA[http://get.zlotemysli.pl/products/image/000/003/709/82x122.jpg?201308]]></value>
+            </attribute>
+            <attribute>
+                <name><![CDATA[zm:categoryId]]></name>
+                                	                <value><![CDATA[7]]></value>
+                	                            </attribute>
+            <attribute>
+                <name><![CDATA[zm:productTypeId]]></name>
+                <value><![CDATA[2]]></value>
+            </attribute>
+                <attribute>
+                    <name><![CDATA[Autor]]></name>
+                    <value><![CDATA[Katarzyna Krzan]]></value>
+                </attribute>
+                <attribute>
+                    <name><![CDATA[ISBN]]></name>
+                    <value><![CDATA[978-83-7582-807-8]]></value>
+                </attribute>
+                <attribute>
+                    <name><![CDATA[Wydawnictwo]]></name>
+                    <value><![CDATA[Złote Myśli Sp. z o.o.]]></value>
+                </attribute>
+                <attribute>
+                    <name><![CDATA[Rok wydania]]></name>
+                    <value><![CDATA[2009]]></value>
+                </attribute>
+                <attribute>
+                    <name><![CDATA[Ilość stron]]></name>
+                    <value><![CDATA[112]]></value>
+                </attribute>
+                <attribute>
+                    <name><![CDATA[Format pliku]]></name>
+                    <value><![CDATA[PDF]]></value>
+                </attribute>
+        </attributes>
+        <availability>1</availability>
+    </offer>
+    <offer>
+        <id>3655</id>
+        <name><![CDATA[Szybkie czytanie dla wytrwałych (Wersja elektroniczna (PDF))]]></name>
+        <price>24.90</price>
+        <url><![CDATA[http://www.zlotemysli.pl/ekundelek,RSS/prod/6174/szybkie-czytanie-dla-wytrwalych-pawel-sygnowski.html]]></url>
+        <categoryId><![CDATA[Księgarnia/E-booki]]></categoryId>
+        <description><![CDATA[Dowiedz się w jaki sposób możesz czytać co najmniej 2000 słów na minutę, z pełnym zrozumieniem czytanego tekstu.]]></description>
+        <image><![CDATA[http://get.zlotemysli.pl/products/image/000/003/655/600x848.jpg?201308]]></image>
+        <attributes>
+                <attribute>
+                    <name><![CDATA[zm:imageParent]]></name>
+                    <value><![CDATA[http://get.zlotemysli.pl/products/image/000/006/174/600x848.jpg?201308]]></value>
+                </attribute>
+			<attribute>
+                <name><![CDATA[zm:imageMedium]]></name>
+                <value><![CDATA[http://get.zlotemysli.pl/products/image/000/003/655/152x200.jpg?201308]]></value>
+            </attribute>
+            <attribute>
+                <name><![CDATA[zm:imageSmall]]></name>
+                <value><![CDATA[http://get.zlotemysli.pl/products/image/000/003/655/82x122.jpg?201308]]></value>
+            </attribute>
+            <attribute>
+                <name><![CDATA[zm:categoryId]]></name>
+                                	                <value><![CDATA[17]]></value>
+                	                            </attribute>
+            <attribute>
+                <name><![CDATA[zm:productTypeId]]></name>
+                <value><![CDATA[2]]></value>
+            </attribute>
+                <attribute>
+                    <name><![CDATA[Autor]]></name>
+                    <value><![CDATA[Paweł Sygnowski]]></value>
+                </attribute>
+                <attribute>
+                    <name><![CDATA[ISBN]]></name>
+                    <value><![CDATA[978-83-7582-246-5]]></value>
+                </attribute>
+                <attribute>
+                    <name><![CDATA[Wydawnictwo]]></name>
+                    <value><![CDATA[Złote Myśli Sp. z o.o.]]></value>
+                </attribute>
+                <attribute>
+                    <name><![CDATA[Rok wydania]]></name>
+                    <value><![CDATA[2008]]></value>
+                </attribute>
+                <attribute>
+                    <name><![CDATA[Ilość stron]]></name>
+                    <value><![CDATA[214]]></value>
+                </attribute>
+                <attribute>
+                    <name><![CDATA[Format pliku]]></name>
+                    <value><![CDATA[PDF]]></value>
+                </attribute>
+        </attributes>
+        <availability>1</availability>
+    </offer>
+    <offer>
+        <id>4156</id>
+        <name><![CDATA[Wyrażenia przyimkowe w języku angielskim (Wersja elektroniczna (PDF))]]></name>
+        <price>14.97</price>
+        <url><![CDATA[http://www.zlotemysli.pl/ekundelek,RSS/prod/6405/wyrazenia-przyimkowe-w-jezyku-angielskim-sylwia-bartkowiak.html]]></url>
+        <categoryId><![CDATA[Księgarnia/E-booki]]></categoryId>
+        <description><![CDATA[Najczęściej używane wyrażenia przyimkowe w 10 zestawach ćwiczeń wraz z odpowiedziami!]]></description>
+        <image><![CDATA[http://get.zlotemysli.pl/products/image/000/004/156/600x848.jpg?201308]]></image>
+        <attributes>
+                <attribute>
+                    <name><![CDATA[zm:imageParent]]></name>
+                    <value><![CDATA[http://get.zlotemysli.pl/products/image/000/006/405/600x848.jpg?201308]]></value>
+                </attribute>
+			<attribute>
+                <name><![CDATA[zm:imageMedium]]></name>
+                <value><![CDATA[http://get.zlotemysli.pl/products/image/000/004/156/152x200.jpg?201308]]></value>
+            </attribute>
+            <attribute>
+                <name><![CDATA[zm:imageSmall]]></name>
+                <value><![CDATA[http://get.zlotemysli.pl/products/image/000/004/156/82x122.jpg?201308]]></value>
+            </attribute>
+            <attribute>
+                <name><![CDATA[zm:categoryId]]></name>
+                                	                <value><![CDATA[8]]></value>
+                	                            </attribute>
+            <attribute>
+                <name><![CDATA[zm:productTypeId]]></name>
+                <value><![CDATA[2]]></value>
+            </attribute>
+                <attribute>
+                    <name><![CDATA[Autor]]></name>
+                    <value><![CDATA[Sylwia Bartkowiak]]></value>
+                </attribute>
+                <attribute>
+                    <name><![CDATA[ISBN]]></name>
+                    <value><![CDATA[978-83-7582-444-5]]></value>
+                </attribute>
+                <attribute>
+                    <name><![CDATA[Wydawnictwo]]></name>
+                    <value><![CDATA[Złote Myśli Sp. z o.o.]]></value>
+                </attribute>
+                <attribute>
+                    <name><![CDATA[Rok wydania]]></name>
+                    <value><![CDATA[2008]]></value>
+                </attribute>
+                <attribute>
+                    <name><![CDATA[Ilość stron]]></name>
+                    <value><![CDATA[97]]></value>
+                </attribute>
+                <attribute>
+                    <name><![CDATA[Format pliku]]></name>
+                    <value><![CDATA[PDF]]></value>
+                </attribute>
+        </attributes>
+        <availability>1</availability>
+    </offer>
+    <offer>
+        <id>5031</id>
+        <name><![CDATA[Sztuka bycia zdrowym (Wersja audio (Audio CD))]]></name>
+        <price>33.70</price>
+        <url><![CDATA[http://www.zlotemysli.pl/ekundelek,RSS/prod/6665/sztuka-bycia-zdrowym-wallace-d-wattles.html]]></url>
+        <categoryId><![CDATA[Księgarnia/Audiobooki]]></categoryId>
+        <description><![CDATA[Poznaj, w jaki sposób dbać o swoje zdrowie, kierując się właściwym nastawieniem i myśleniem, na zawsze stając się pełnym sił i energii. ]]></description>
+        <image><![CDATA[http://get.zlotemysli.pl/products/image/000/005/031/600x848.jpg?201308]]></image>
+        <attributes>
+                <attribute>
+                    <name><![CDATA[zm:imageParent]]></name>
+                    <value><![CDATA[http://get.zlotemysli.pl/products/image/000/006/665/600x848.jpg?201308]]></value>
+                </attribute>
+			<attribute>
+                <name><![CDATA[zm:imageMedium]]></name>
+                <value><![CDATA[http://get.zlotemysli.pl/products/image/000/005/031/152x200.jpg?201308]]></value>
+            </attribute>
+            <attribute>
+                <name><![CDATA[zm:imageSmall]]></name>
+                <value><![CDATA[http://get.zlotemysli.pl/products/image/000/005/031/82x122.jpg?201308]]></value>
+            </attribute>
+            <attribute>
+                <name><![CDATA[zm:categoryId]]></name>
+                                	                <value><![CDATA[19]]></value>
+                	                            </attribute>
+            <attribute>
+                <name><![CDATA[zm:productTypeId]]></name>
+                <value><![CDATA[16]]></value>
+            </attribute>
+                <attribute>
+                    <name><![CDATA[Autor]]></name>
+                    <value><![CDATA[]]></value>
+                </attribute>
+                <attribute>
+                    <name><![CDATA[ISBN]]></name>
+                    <value><![CDATA[978-83-7701-080-8 ]]></value>
+                </attribute>
+                <attribute>
+                    <name><![CDATA[Wydawnictwo]]></name>
+                    <value><![CDATA[Złote Myśli Sp. z o.o.]]></value>
+                </attribute>
+                <attribute>
+                    <name><![CDATA[Rok wydania]]></name>
+                    <value><![CDATA[2010]]></value>
+                </attribute>
+        </attributes>
+        <availability>1</availability>
+    </offer>
+    <offer>
+        <id>4412</id>
+        <name><![CDATA[Mądre szczęśliwe życie (Wersja audio (MP3))]]></name>
+        <price>22.97</price>
+        <url><![CDATA[http://www.zlotemysli.pl/ekundelek,RSS/prod/6462/madre-szczesliwe-zycie-piotr-adamczyk.html]]></url>
+        <categoryId><![CDATA[Księgarnia/Audiobooki]]></categoryId>
+        <description><![CDATA[Jak radzić sobie z każdą sytuacją w życiu i codziennie być bliżej sukcesu?]]></description>
+        <image><![CDATA[http://get.zlotemysli.pl/products/image/000/004/412/600x848.jpg?201308]]></image>
+        <attributes>
+                <attribute>
+                    <name><![CDATA[zm:imageParent]]></name>
+                    <value><![CDATA[http://get.zlotemysli.pl/products/image/000/006/462/600x848.jpg?201308]]></value>
+                </attribute>
+			<attribute>
+                <name><![CDATA[zm:imageMedium]]></name>
+                <value><![CDATA[http://get.zlotemysli.pl/products/image/000/004/412/152x200.jpg?201308]]></value>
+            </attribute>
+            <attribute>
+                <name><![CDATA[zm:imageSmall]]></name>
+                <value><![CDATA[http://get.zlotemysli.pl/products/image/000/004/412/82x122.jpg?201308]]></value>
+            </attribute>
+            <attribute>
+                <name><![CDATA[zm:categoryId]]></name>
+                                	                <value><![CDATA[16]]></value>
+                	                            </attribute>
+            <attribute>
+                <name><![CDATA[zm:productTypeId]]></name>
+                <value><![CDATA[8]]></value>
+            </attribute>
+                <attribute>
+                    <name><![CDATA[Autor]]></name>
+                    <value><![CDATA[Piotr Adamczyk]]></value>
+                </attribute>
+                <attribute>
+                    <name><![CDATA[ISBN]]></name>
+                    <value><![CDATA[978-83-7582-124-6]]></value>
+                </attribute>
+                <attribute>
+                    <name><![CDATA[Wydawnictwo]]></name>
+                    <value><![CDATA[Złote Myśli Sp. z o.o.]]></value>
+                </attribute>
+                <attribute>
+                    <name><![CDATA[Rok wydania]]></name>
+                    <value><![CDATA[2008]]></value>
+                </attribute>
+        </attributes>
+        <availability>1</availability>
+    </offer>
+   </offers> 
+  </loadOffers> 
+ </pasaz:Body> 
+</pasaz:Envelope>
