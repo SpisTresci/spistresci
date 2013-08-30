@@ -31,7 +31,7 @@ class ZloteMysli(Afiliant, FormatInTitleConnector):
         #hack to convert category to list
         category = dic['category']
         if not isinstance(category, basestring):
-            dic['category'] = ' ,'.join([unicode(x) for x in category])
+            dic['category'] = ', '.join([unicode(x) for x in category])
 
 
 class ZloteMysliBook(GenericBook, Base):
