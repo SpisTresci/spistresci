@@ -41,15 +41,22 @@ class Final(object):
         event.listen(Session, "after_flush", self.addNormalizeList)
 
         SpecificBook = connector.getConcretizedClass(connector, "Book")
-        specific_books = session.query(SpecificBook).filter(SpecificBook.mini_id == None).all()
-        for specific_book in specific_books:
+        new_specific_books = session.query(SpecificBook).filter(SpecificBook.mini_id == None).all()
+        for specific_book in new_specific_books:
             mini_book = final.MiniBook(session, specific_book)
             session.add(mini_book)
-
+            session.commit()
             specific_book.mini_id = mini_book.id
 
-            session.commit()
             final.MiniBook.normalize(session)
+
+        updated_specific_books = session.query(SpecificBook).filter(SpecificBook.update_minidata_timestamp == connector.update_status_service.timestamp).all()
+        for specific_book in updated_specific_books:
+            mini_book = SqlWrapper.get_(session, final.MiniBook, {"id":SpecificBook.mini_id})
+            mini_book.update(session, specific_book)
+            session.commit()
+            #final.MiniBook.normalize(session)
+
 
         session.commit()
         session.close()

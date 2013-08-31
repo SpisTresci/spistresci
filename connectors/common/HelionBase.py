@@ -58,6 +58,11 @@ class HelionBase(XMLConnector):
         self.validatePrice(dic, id, title, 'discount')
         super(HelionBase, self).validate(dic)
 
+
+    def adjust_parse(self, dic):
+        if dic.get('name_of_promotion'):
+            if not isinstance(dic['name_of_promotion'], basestring) and len(dic['name_of_promotion']) > 1:
+                dic['name_of_promotion'] =  ', '.join(dic['name_of_promotion'])
     
     #statuses = {
     #            0:('unavailable', 'niedostepna'),

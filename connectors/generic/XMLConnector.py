@@ -19,7 +19,8 @@ class XMLConnector(GenericConnector):
         return et
 
     def fetchData(self, unpack=True, download=True):
-        self.save_time_of_("download_date")
+        self.save_time_of_("fetch_start")
+
         if download:
             self.downloadFile()
 
@@ -37,6 +38,8 @@ class XMLConnector(GenericConnector):
             )
         elif self.mode == XMLConnector.BookList_Mode.SINGLE_XML:
             self.fetched_files.append(os.path.join(self.backup_dir, self.filename))
+
+        self.save_time_of_("fetch_end")
 
     def getTagValue(self, product, tagName, default=""):
         tag = product.getElementsByTagName(tagName)[0]
@@ -81,7 +84,7 @@ class XMLConnector(GenericConnector):
 
             book_dict.setdefault(dict_key, (unicode(default_0) if default_0 != None else None))
 
-            if len(book_dict[dict_key]) == 1:
+            if book_dict[dict_key] != None and len(book_dict[dict_key]) == 1:
                 book_dict[dict_key] = book_dict[dict_key][0]
 
         return book_dict

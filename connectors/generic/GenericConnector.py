@@ -7,6 +7,7 @@ import os.path
 import shutil
 import re
 from datetime import datetime
+import time
 
 import ConfigParser
 from utils import logger_instance
@@ -286,6 +287,8 @@ class GenericConnector(GenericBase, DataValidator):
             #print self.max_len_entry
             self.session.commit()
             self.save_info_about_offers(offers = book_number)
+        else:
+            self.save_info_about_offers(offers_new = 0)
 
         self.save_time_of_("parse_end")
 
@@ -459,7 +462,8 @@ class GenericConnector(GenericBase, DataValidator):
         self.update_status_service.session.commit()
 
     def howManyOffers(self):
-        pass
+        Book = GenericBook.getConcretizedClass(context=self)
+        return  self.session.query(Book).count()
 
     def howManyNewOffers(self):
         Book = GenericBook.getConcretizedClass(context=self)
@@ -478,7 +482,7 @@ class GenericConnector(GenericBase, DataValidator):
 
     def areDataDifferentThanPrevious(self):
         self.update_status_service.checksum = self.calculateChecksum()
-        first = self.session.query(UpdateStatusService).filter(UpdateStatusService.id != self.update_status_service.id, UpdateStatusService.success == True).order_by(UpdateStatusService.download_date.desc()).first()
+        first = self.session.query(UpdateStatusService).filter(UpdateStatusService.service_id == self.update_status_service.service_id, UpdateStatusService.id != self.update_status_service.id, UpdateStatusService.success == True).order_by(UpdateStatusService.timestamp.desc()).first()
         if not first:
             return True
         return first.checksum != self.update_status_service.checksum
@@ -496,6 +500,7 @@ class GenericConnector(GenericBase, DataValidator):
             c = ClassName(**d)
         return c
 
+    #TODO: move to SqlWrapper
     @classmethod
     def get_(cls, session, ClassName, d, param_name=None):
         if param_name == None:
@@ -562,10 +567,11 @@ class GenericConnector(GenericBase, DataValidator):
                         books_authors.author = author
                         session.add(books_authors)
 
+            book.update_timestamp = book.update_minidata_timestamp = self.update_status_service.timestamp
             session.add(book)
             #session.commit()
         else:
-            book.update(d, session)
+            book.update(d, session, self)
             #session.commit()
 
         #session.close()
@@ -574,7 +580,6 @@ class GenericConnector(GenericBase, DataValidator):
 class GenericBook(GenericBase):
     id = Column(Integer, primary_key=True)
     external_id = Column(Integer, unique=True)
-    mini_id = Column(Integer, unique=True)
     title = Column(Unicode(256))
     price = Column(Integer) #price in grosz
     #if price_normal == -1 it means there is no special offer for this book
@@ -604,6 +609,11 @@ class GenericBook(GenericBase):
         cls.register()
         return cls.__name__
 
+    mini_id = Column(Integer, unique=True)
+    update_timestamp = Column(Integer)
+    update_minidata_timestamp = Column(Integer)
+
+
 #TODO: how to do this?
 #    '''this is title presented to frontend'''
 #    @declared_attr
@@ -624,45 +634,70 @@ class GenericBook(GenericBase):
                 pass
 
     #DoNotLetCommit
-    def update(self, new_data, session):
+    def update(self, new_data, session, connector):
         for key in new_data:
             try:
                 un = unicode(getattr(self, key))
 
+                updated_minidata = False
+                updated = False
+
                 if key == 'persons':
-                    str_author_list = []
-                    for author in self.authors:
-                        str_author_list.append(unicode(author))
-
-                    if sorted(str_author_list) != sorted(new_data['authors']):
-                        Author = GenericAuthor.getConcretizedClass(context=self)
-
-                        for str_author in new_data['authors']:
-                            if str_author not in str_author_list:
-                                a = Author.get_or_create(session, str_author)
-                                self.authors.append(a)
-                                session.add(a)
-
-                        for str_author in str_author_list:
-                            if str_author not in new_data['authors']:
-                                a = Author.get_or_create(session, str_author)
-                                self.authors.remove(a)
-
+                    updated_minidata |= self.update_relation(session, new_data, "authors", GenericAuthor.getConcretizedClass(context=self))
                 elif key == 'isbns':
-                    pass
+                    updated_minidata |= self.update_relation(session, new_data, "isbns", GenericISBN.getConcretizedClass(context=self))
+                elif key == 'formats':
+                    updated_minidata |= self.update_relation(session, new_data, "formats", GenericFormat.getConcretizedClass(context=self))
                 elif key == 'description':
                     if self.description.description != new_data[key]:
                         self.description.description = new_data[key]
-
+                        updated = True
                 elif key == 'price':
                     #special case of updating price is handle by trigger
                     if un != new_data[key]:
                         setattr(self, key, new_data[key])
+                        updated_minidata |= True
+
                 elif un != new_data[key]:
                     setattr(self, key, new_data[key])
+                    from final import MiniBook
+                    updated_minidata |= key in MiniBook.__table__.columns._data.keys()
+
+                if updated_minidata:
+                    self.update_minidata_timestamp = connector.update_status_service.timestamp
+                    self.update_timestamp = connector.update_status_service.timestamp
+                elif updated:
+                    self.update_timestamp = connector.update_status_service.timestamp
 
             except AttributeError:
                 pass
+
+    def update_relation(self, session, new_data, foos, Foo):
+        updated = False
+        str_foos = []
+        self_foos = getattr(self, foos)
+
+        for foo in self_foos:
+            str_foos.append(unicode(foo))
+
+        if sorted(str_foos) != sorted(new_data[foos]):
+
+            for foo in new_data[foos]:
+                if foo not in str_foos:
+                    f = Foo.get_or_create(session, foo)
+                    self_foos.append(f)
+                    session.add(f)
+                    updated = True
+
+            for foo in str_foos:
+                if foo not in new_data[foos]:
+                    f = Foo.get_or_create(session, foo)
+                    self_foos.remove(f)
+                    updated = True
+
+        return updated
+
+
 
     @staticmethod
     def getConcretizedClass(context):
@@ -786,7 +821,7 @@ class PersonRole(Base):
     __tablename__ = "PersonRole"
 
     id = Column(Integer, primary_key=True)
-    name = Column(Unicode(10), unique=True)
+    name = Column(Unicode(15), unique=True)
 
     @classmethod
     def get(cls, session, role):
@@ -906,11 +941,14 @@ class UpdateStatusService(Base):
 
     checksum = Column(Unicode(32))
 
-    download_date = Column(DateTime)
-
     offers = Column(Integer)
     offers_new = Column(Integer)
     offers_promotion = Column(Integer)
+
+    timestamp = Column(Integer)
+
+    fetch_start = Column(DateTime)
+    fetch_end = Column(DateTime)
 
     parse_start = Column(DateTime)
     parse_end = Column(DateTime)
@@ -921,6 +959,7 @@ class UpdateStatusService(Base):
     session = None
 
     def __init__(self, us, connector):
+        self.timestamp = int(time.time())
         us.update_status_services.append(self)
         self.service = Service.get_or_create(us.session, connector)
         connector.update_status_service = self

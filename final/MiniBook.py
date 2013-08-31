@@ -119,6 +119,10 @@ class MiniBook(final.FinalBase, Base):
 
         MiniBook.to_normalize = []
 
+    def update(self, session, specific_book):
+        #TODO: implement update of other fields
+        if self.price != specific_book.price:
+            self.price = specific_book.price
 
     @staticmethod
     def getMasterBookCandidates(session, mini_book):

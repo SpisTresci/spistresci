@@ -36,7 +36,7 @@ class FormatInTitleConnector(Ceneo):
             format_string = self._clear_suffixes_from_config(format_string)
         if format_string:
             self.erratum_logger.warning("Unsupported format! connector: %s, id: %s, title: %s, format: %s" % (self.name, id, title, org_format_string))
-            self.erratum_logger.debug("Unsupported format!. connector %s, id: %s, tile %s, format string left is: %s" % (self.name, id, title, format_string))
+            self.erratum_logger.debug("Unsupported format! connector: %s, id: %s, title: %s, format string left is: %s" % (self.name, id, title, format_string))
 
     def adjust_parse(self, dic):
         title = dic['title']
