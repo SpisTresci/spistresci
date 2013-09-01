@@ -1,8 +1,6 @@
 .rotate_text {
     writing-mode: tb-rl;
     filter: flipH() flipV();
-}
-.rotate_text {
     -moz-transform:rotate(-90deg);
     -moz-transform-origin: top left;
     -webkit-transform: rotate(-90deg);
@@ -11,6 +9,7 @@
     -o-transform-origin:  top left;
     position:relative;
     top:15px;
+    white-space: nowrap;
 }
 
 table{
@@ -66,7 +65,7 @@ tr.us.finished.success{
 }
 
 .rotated_cell {
-    height:120px;
+    height:160px;
     vertical-align:bottom
 }
 

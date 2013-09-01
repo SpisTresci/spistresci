@@ -18,10 +18,16 @@ class UpdateStatusService(models.Model):
     service = models.ForeignKey("Service", null=True, blank=True)
     success = models.IntegerField(null=True, blank=True)
     checksum = models.CharField(max_length=32L, blank=True)
-    download_date = models.DateTimeField(null=True, blank=True)
+
     offers = models.IntegerField(null=True, blank=True)
+    offers_parsed = models.IntegerField(null=True, blank=True)
     offers_new = models.IntegerField(null=True, blank=True)
     offers_promotion = models.IntegerField(null=True, blank=True)
+
+    timestamp = models.IntegerField(null=True, blank=True)
+
+    fetch_start = models.DateTimeField(null=True, blank=True)
+    fetch_end = models.DateTimeField(null=True, blank=True)
     parse_start = models.DateTimeField(null=True, blank=True)
     parse_end = models.DateTimeField(null=True, blank=True)
     final_start = models.DateTimeField(null=True, blank=True)

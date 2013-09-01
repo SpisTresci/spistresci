@@ -65,6 +65,7 @@ EMAIL_SUBJECT_PREFIX= 'Welcome Screen:'
 SITE_ROOT = os.path.dirname(os.path.realpath(__file__))
 TEMPLATE_DIRS = (
     os.path.join(SITE_ROOT,'templates'),
+    os.path.join(SITE_ROOT,'../common/templates/'),
 )
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.

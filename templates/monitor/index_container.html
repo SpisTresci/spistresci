@@ -28,11 +28,12 @@
            <tr>
            {% for service in services %}
              <td class='rotated_cell'>
-                <div class='rotate_text'>{{ service.name }}</div>
+                <div class='rotate_text'>{{ forloop.counter }} - {{ service.name }}</div>
              </td>
            {% endfor %}
            </tr>
-        {% for update_status in data %}
+           <tr>
+         {% for update_status in data %}
            <tr>
            {% for update_status_service in update_status %}
                 <td
@@ -40,10 +41,13 @@
 title="
 id: {{ update_status_service.id }}
 checksum: {{ update_status_service.checksum }}
-download_date: {{ update_status_service.download_date|date:"d-m-Y H:i" }}
+timestamp: {{ update_status_service.timestamp }}
 offers: {{ update_status_service.offers }}
+offers_parsed: {{ update_status_service.offers_parsed }}
 offers_new: {{ update_status_service.offers_new }}
 offers_promotion: {{ update_status_service.offers_promotion }}
+fetch_start: {{ update_status_service.fetch_start|date:"d-m-Y H:i" }}
+fetch_end: {{ update_status_service.fetch_end|date:"d-m-Y H:i" }}
 parse_start: {{ update_status_service.parse_start|date:"d-m-Y H:i" }}
 parse_end: {{ update_status_service.parse_end|date:"d-m-Y H:i" }}
 final_start: {{ update_status_service.final_start|date:"d-m-Y H:i" }}
