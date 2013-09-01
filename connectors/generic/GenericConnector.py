@@ -286,7 +286,7 @@ class GenericConnector(GenericBase, DataValidator):
             #print self.max_len
             #print self.max_len_entry
             self.session.commit()
-            self.save_info_about_offers(offers = book_number)
+            self.save_info_about_offers(offers_parsed = book_number)
         else:
             self.save_info_about_offers(offers_new = 0)
 
@@ -469,14 +469,18 @@ class GenericConnector(GenericBase, DataValidator):
         Book = GenericBook.getConcretizedClass(context=self)
         return  self.session.query(Book).filter(Book.mini_id == None).count()
 
+    def howManyOffersParsed(self):
+        pass
+
     def howManyOffersInPromotion(self):
         pass
 
     def calculateChecksum(self):
         pass
 
-    def save_info_about_offers(self, offers = None, offers_new = None, offers_promotion = None):
+    def save_info_about_offers(self, offers = None, offers_parsed = None, offers_new = None, offers_promotion = None):
         self.update_status_service.offers = offers if offers else self.howManyOffers()
+        self.update_status_service.offers_parsed = offers_parsed if offers_parsed else self.howManyOffersParsed()
         self.update_status_service.offers_new = offers_new if offers_new else self.howManyNewOffers()
         self.update_status_service.offers_promotion = offers_promotion if offers_promotion else self.howManyOffersInPromotion()
 
@@ -942,6 +946,7 @@ class UpdateStatusService(Base):
     checksum = Column(Unicode(32))
 
     offers = Column(Integer)
+    offers_parsed = Column(Integer)
     offers_new = Column(Integer)
     offers_promotion = Column(Integer)
 
