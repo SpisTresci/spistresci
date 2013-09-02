@@ -63,14 +63,16 @@ class DataValidator(object):
                 isbn_dic = {}
                 try:
                     i = self.simplifyHyphens(i, "ISBN has wrong format! Some different unicode character was used instead of '-'. Connector: %s, original_isbn: %s, id: %s, title: %s" % (self.name, original_isbn, id, title))
-
-                    i = i.lower()
+                    i = i.lower().replace("-", "")
                     if "isbn" in i:
                         i = i.replace(i[i.find("isbn"):len("isbn")], "")
 
                     isbn_dic['raw'] = i
                     isbn = Isbn(i)
-                    if isbn.validate():
+                    if isbn.validate() and (len(isbn.isbn) != 13 or (len(isbn.isbn) == 13 and isbn.isbn[0:3] in ['978', '979'])):
+                        #without (len(isbn.isbn) != 13 or (len(isbn.isbn) == 13 and isbn.isbn[0:3] in ['978', '979'])) condition
+                        #validate pass numbers which are EAN-13 but are not ISBN-13
+
                         isbn_dic['valid'] = True
                         if len(isbn.isbn) == 10:
                             isbn_dic['isbn10'] = isbn.isbn
@@ -85,10 +87,9 @@ class DataValidator(object):
                             self.erratum_logger.info("ISBN validation failed! connector: %s, original_isbn: %s, cannonical ISBN: %s, id: %s, title: %s" % (self.name, original_isbn, isbn.isbn, id, title))
                     else:
                         isbn_dic['valid'] = False
-                        c = i.replace("-", "")
-                        if len(c) == 10:
+                        if len(i) == 10:
                             isbn_dic['core'] = isbn.isbn[:-1]
-                        elif len(c) == 13:
+                        elif len(i) == 13:
                             isbn_dic['core'] = isbn.isbn[3:-1]
                         self.erratum_logger.info("ISBN validation failed! connector: %s, original_isbn: %s, cannonical ISBN: %s, id: %s, title: %s" % (self.name, original_isbn, isbn.isbn, id, title))
 
