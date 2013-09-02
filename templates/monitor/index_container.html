@@ -54,7 +54,9 @@ final_start: {{ update_status_service.final_start|date:"d-m-Y H:i" }}
 final_end: {{ update_status_service.final_end|date:"d-m-Y H:i" }}
 "
 {% endif%}
-                class="{% if update_status_service %}{% if update_status_service.success %}success{% else %}fail{% endif %}{% else %}no{% endif %}"></td>
+                class="{% if update_status_service %}{% if update_status_service.success %}
+                success {% if update_status_service.offers_parsed %}updated{% endif %}
+                {% else %}fail{% endif %}{% else %}no{% endif %}"></td>
            {% endfor %}
            </tr>
         {% endfor %}

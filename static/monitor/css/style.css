@@ -47,6 +47,9 @@ td.fail{
 td.success{
     background: url(../img/green.png) no-repeat 3px;
 }
+td.success.updated{
+    background: url(../img/green_updated.png) no-repeat 3px;
+}
 td.no{
     background: url(../img/grey.png) no-repeat 3px;
 }
