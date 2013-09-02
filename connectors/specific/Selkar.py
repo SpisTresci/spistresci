@@ -107,7 +107,6 @@ class Selkar(XMLConnector):
         id = dic.get('external_id')
         title = dic.get('title')
         self.validatePrice(dic, id, title, 'list_price')
-        self.validateAuthors(dic, id, title, 'translators')
 
 Base = SqlWrapper.getBaseClass()
 
