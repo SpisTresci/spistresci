@@ -74,7 +74,9 @@ def choose_your_destiny(args, connectors, partial, Logger):
 def parse_args():
     config_object = MultiLevelConfigParser()
     config_object.read('conf/update.ini', force_utf=True)
-    connectors = [c[0] for c in Tools.get_classnames(config_object).items()]
+
+    connector_classnames_list = Tools.get_classnames(config_object).items()
+    connectors = [c[0] for c in connector_classnames_list]
 
     parser = argparse.ArgumentParser(formatter_class=RawTextHelpFormatter)
     parser.add_argument('-m', '--mode', action="store", default="update", choices=['update', 'update-reference', 'backup', 'load-backup'],
@@ -103,10 +105,20 @@ def parse_args():
 
     args.mode = args.mode.replace('-', '_')  # (°̯ʖ°) o_O (°͜ʖ°) ;)
 
-    args.available_connectors = len(connectors)
     if args.connectors == '':
         args.connectors = connectors
+
     return args
+
+
+def isPartialRun(connectors, args, Logger):
+    config_object = MultiLevelConfigParser()
+    config_object.read('conf/update.ini', force_utf=True)
+
+    connector_classnames_list = Tools.get_classnames(config_object).items()
+    connector_classnames_list = filter_varargs(Tools.filter_disabled, connector_classnames_list, False, config_object, Logger)
+
+    return len(connectors) < len(connector_classnames_list)
 
 
 def main():
@@ -130,7 +142,7 @@ def main():
 
     Logger.debug('Created folowing connectors %s' % [connector.name for connector in connectors])
 
-    choose_your_destiny(args, connectors, len(connectors) < args.available_connectors, Logger)
+    choose_your_destiny(args, connectors, isPartialRun(connectors, args, Logger), Logger)
 
     Logger.debug('Execution finished')
 
