@@ -6,9 +6,11 @@ class DataValidator(object):
 
     list_of_names = []
     supported_formats = ['cd', 'cd_mp3', 'dvd', 'epub', 'fb2', 'ks', 'mobi', 'mp3', 'pdf', 'txt', 'xml']
-    
+
     #ks means - paperbook
     supported_persons = ['author', 'lector', 'redactor', 'translator']
+
+    format_convert_dict = {}
 
     price_re = re.compile(r'^(\d*)([.,]?)(\d{0,2})$')
 
@@ -44,6 +46,8 @@ class DataValidator(object):
 
         if len(format_list) != len(set(format_list)):
             self.erratum_logger.warning("This same format declared more than once! connector: %s, id: %s, title: %s, formats: %s" % (self.name, id, title, formats))
+
+        format_list = [(x if not x in self.format_convert_dict.keys() else self.format_convert_dict[x]) for x in format_list]
 
         for x in format_list:
             if x not in self.supported_formats:
