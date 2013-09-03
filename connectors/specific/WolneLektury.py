@@ -72,6 +72,7 @@ class WolneLektury(JSONConnector):
         self.validate_number_of_books_in_db()
 
     def parse(self):
+        self.save_time_of_("parse_start")
         self.before_parse()
         book_number = 0
         with open(self.fetched_files[0], 'rU') as json_file:
@@ -96,6 +97,9 @@ class WolneLektury(JSONConnector):
         #uncomment when creating connector
         #print self.max_len
         #print self.max_len_entry
+
+        self.save_info_about_offers(offers_parsed = len(self.book_list))
+        self.save_time_of_("parse_end")
 
     def validateFormats(self, dic, id, title):
         formats = [f for f in self.supported_formats if dic.get(f, None)]
