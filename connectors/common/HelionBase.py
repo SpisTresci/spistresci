@@ -1,6 +1,7 @@
 from connectors.generic import *
 import lxml.etree as et
 from sqlwrapper import *
+import utils.Str
 
 
 class HelionBase(XMLConnector):
@@ -29,7 +30,7 @@ class HelionBase(XMLConnector):
         'free_sample_url': ('./online', ''),
         'cover': ('./okladka', ''),
         'cover_back': ('./okladkatyl', ''),
-        'free_fragment_online_tool': ('./issueurl', ''),
+        'free_sample_online_tool': ('./issueurl', ''),
         'is_bestseller': ('./bestseller', ''),
         'is_new': ('./nowosc', ''),
         'name_of_promotion': ('./promocja', ''),
@@ -60,9 +61,8 @@ class HelionBase(XMLConnector):
 
 
     def adjust_parse(self, dic):
-        if dic.get('name_of_promotion'):
-            if not isinstance(dic['name_of_promotion'], basestring) and len(dic['name_of_promotion']) > 1:
-                dic['name_of_promotion'] =  ', '.join(dic['name_of_promotion'])
+        dic['name_of_promotion'] = utils.Str.listToUnicode(dic.get('name_of_promotion'))
+
     
     #statuses = {
     #            0:('unavailable', 'niedostepna'),
@@ -93,7 +93,7 @@ class HelionBaseBook(GenericBook):
     #formats
     type = Column(Integer)
     binding = Column(Unicode(8))                       #6
-    page_count = Column(Integer)
+    page_count = Column(Unicode(8))
     date = Column(Date)
     free_sample_url = Column(Unicode(64))              #44
     cover = Column(Unicode(64))                        #49

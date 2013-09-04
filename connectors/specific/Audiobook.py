@@ -18,7 +18,7 @@ class Audiobook(FormatInTitleConnector):
         'description':('./description', ''),
         'publisher':("./attribute[@name='wydawnictwo']", ''),
         'authors':("./attribute[@name='autor']", ''),
-        'length':("./attribute[@name='czas']", 0),
+        'audio_time':("./attribute[@name='czas']", 0),
     }
 
     def adjust_parse(self, dic):
@@ -43,6 +43,6 @@ class AudiobookBook(GenericBook, Base):
     #there is no cover info
 #    cover = Column(Unicode(128))        #118
     category = Column(Unicode(128))      #63
-    length = Column(Integer)
+    audio_time = Column(Unicode(16))
     publisher = Column(Unicode(64))     #49
 

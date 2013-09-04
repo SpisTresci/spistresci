@@ -12,9 +12,9 @@ class ZloteMysli(Afiliant, FormatInTitleConnector):
         ('isbns', ("./n:attributes/n:attribute[n:name='ISBN']/n:value", '')),
         ('publisher', ("./n:attributes/n:attribute[n:name='Wydawnictwo']/n:value", '')),
         ('formats', ("./n:attributes/n:attribute[n:name='Format pliku']/n:value", '')),
-        ('year', ("./n:attributes/n:attribute[n:name='Rok wydania']/n:value", '')),
+        ('date', ("./n:attributes/n:attribute[n:name='Rok wydania']/n:value", '')),
         #('object_format', ("./n:attributes/n:attribute[n:name='Format']/n:value", '')),
-        ('length', (u"./n:attributes/n:attribute[n:name='Ilość stron']/n:value", '')),
+        ('page_count', (u"./n:attributes/n:attribute[n:name='Ilość stron']/n:value", '')),
         #('binding', ("./n:attributes/n:attribute[n:name='Oprawa']/n:value", '')),
         ('cover_parent', ("./n:attributes/n:attribute[n:name='zm:imageParent']/n:value", '')),
         ('cover_medium', ("./n:attributes/n:attribute[n:name='zm:imageMedium']/n:value", '')),
@@ -28,10 +28,8 @@ class ZloteMysli(Afiliant, FormatInTitleConnector):
 
     def adjust_parse(self, dic):
         super(ZloteMysli, self).adjust_parse(dic)
-        #hack to convert category to list
-        category = dic['category']
-        if not isinstance(category, basestring):
-            dic['category'] = ', '.join([unicode(x) for x in category])
+        #convert category to list
+        dic['category'] = utils.Str.listToUnicode(dic.get('category'))
 
 
 class ZloteMysliBook(GenericBook, Base):
@@ -42,11 +40,11 @@ class ZloteMysliBook(GenericBook, Base):
     category = Column(Unicode(32))      #6
     publisher = Column(Unicode(32))     #22
     #price
-    year = Column(Unicode(4))           #4   
+    date = Column(Unicode(4))           #4   
     #url = Column(Unicode(256))          #154
     cover = Column(Unicode(128))         #70
     cover_parent = Column(Unicode(128))  #70    
     cover_small = Column(Unicode(128))   #69
     cover_medium = Column(Unicode(128))  #70
     product_type_id = Column(Integer)
-    length = Column(Unicode(25))        #32
+    page_count = Column(Unicode(25))        #32

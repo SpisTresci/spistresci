@@ -1,4 +1,5 @@
 from utils import filter_varargs
+from utils import Str
 from nose.tools import *
 
 class TestFilterVarargs(object):
@@ -14,4 +15,16 @@ class TestFilterVarargs(object):
         eq_(filter_varargs(self.same, [0,False,1,True], False, 'dummy','dummy'),[0 , False])
         eq_(filter_varargs(self.same, [0,False,1,True], True, 'dummy','dummy'),[1, True])
 
+
+
+class TestStr(object):
+    def setUp(self):
+        pass
+    def test_list_to_unicode(self):
+        eq_(Str.listToUnicode(None), None)
+        eq_(Str.listToUnicode('dummy'), u'dummy')
+        eq_(Str.listToUnicode(1), u'1')
+        eq_(Str.listToUnicode(['one', 'two', 'three']), u'one, two, three')
+        eq_(Str.listToUnicode([1,2,3]), u'1, 2, 3')
+        eq_(Str.listToUnicode([1,2,3],'_separator_'), u'1_separator_2_separator_3')
 

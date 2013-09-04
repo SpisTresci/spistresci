@@ -32,12 +32,12 @@ class BezKartekBook(GenericBook, Base):
 
     category = Column(Unicode(30))      #29
 
-    audio_time = Column(Unicode(10))    #9
-    price = Column(Integer)             #GROSZE!!!
-    page_count = Column(Integer)        #508700 - wtf?
-    publisher = Column(Unicode(70))     #68
-    url = Column(Unicode(270))          #265
-    cover = Column(Unicode(256))        #184
-    security = Column(Unicode(10))      #9
+    audio_time= Column(Unicode(16))    #9
+    #price = Column(Integer)             #GROSZE!!!
+    page_count = Column(Unicode(16))        #508700 - wtf?
+    publisher = Column(Unicode(128))     #68
+    url = Column(Unicode(512))          #265
+    #cover = Column(Unicode(256))        #184
+    security = Column(Unicode(16))      #9
     lang_short = Column(Unicode(2))     #2
-    lang_long = Column(Unicode(10))     #9
+    lang_long = Column(Unicode(16))     #9

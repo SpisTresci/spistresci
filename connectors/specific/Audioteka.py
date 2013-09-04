@@ -12,7 +12,7 @@ class Audioteka(Afiliant):
     xml_tag_dict = dict(Afiliant.xml_tag_dict.items() + [
         ('authors', (u"./n:attributes/n:attribute[n:name='Autor']/n:value", '')),
         ('publisher', (u"./n:attributes/n:attribute[n:name='Wydawca']/n:value", '')),
-        ('length', (u"./n:attributes/n:attribute[n:name='Dugość']/n:value", '')),
+        ('audio_time', (u"./n:attributes/n:attribute[n:name='Dugość']/n:value", '')),
         ('lectors', (u"./n:attributes/n:attribute[n:name='Czyta']/n:value", '')),
     ])
 
@@ -26,4 +26,4 @@ class AudiotekaBook(GenericBook, Base):
     #cover = Column(Unicode(256))       #145
     category = Column(Unicode(32))      #21
     publisher = Column(Unicode(128))    #79
-    length = Column(Unicode(32))        #16
+    audio_time = Column(Unicode(32))        #16

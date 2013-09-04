@@ -18,7 +18,7 @@ class Audeo(Ceneo):
         'publisher':("./attrs/a[@name='Producent']", ''),
         'authors':("./attrs/a[@name='Autor']", ''),
         'lectors':("./attrs/a[@name='Lektor']", ''),
-        'length':("./attrs/a[@name='Czas (min)']", 0),
+        'audio_time':("./attrs/a[@name='Czas (min)']", 0),
     }
 
     def adjust_parse(self, dic):
@@ -33,6 +33,6 @@ class AudeoBook(GenericBook, Base):
     cover = Column(Unicode(128))        #118
     availability = Column(Integer)
     category = Column(Unicode(64))      #33
-    length = Column(Integer)
+    audio_time = Column(Unicode(8))
     publisher = Column(Unicode(64))     #35
 

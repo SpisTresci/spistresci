@@ -21,3 +21,14 @@ def simplifyHyphens(string, error_msg = None):
     if any(char in string for char in hyphenLike):
         string = re.sub('[%s]' % ''.join(hyphenLike), "-", string)
     return string
+
+def listToUnicode(_list, separator=', ',):
+    if isinstance(_list, basestring):
+        return unicode(_list)
+    try:
+        return separator.join([unicode(x) for x in  _list])
+    except TypeError:
+        if _list:
+            return unicode(_list)
+        else:
+            return None
