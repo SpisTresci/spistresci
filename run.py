@@ -90,7 +90,7 @@ def parse_args():
     parser.add_argument('-m', '--mode', action="store", default="update", choices=['update', 'update-reference', 'backup', 'load-backup'],
                         help=   'Modes:\n\n'
                                 '\tupdate           - [DEFAULT] run update for mentioned services\n'
-                                 '\tupdate-reference - run update for mentioned reference services\n'
+                                '\tupdate-reference - run update for mentioned reference services\n'
                                 '\tbackup           - fetch data for each of service. Do not run update.\n'
                                 '\tload-backup      - load backups from backup directory.\n'
 

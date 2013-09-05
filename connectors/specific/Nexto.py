@@ -78,6 +78,14 @@ class Nexto(XMLConnector):
                             #self.measureLenghtDict(book)
                             #comment out when creating connector
                             self.add_record(book)
+
+                            self.books_to_commit_counter+=1
+                            if self.books_to_commit_counter == self.books_commit_capacity:
+                                self.save_info_about_offers(offers_parsed = -book_number)
+                                self.update_status_service.session.commit()
+                                self.session.commit()
+                                self.books_to_commit_counter = 0
+
                         i+=1
 
             self.after_parse()

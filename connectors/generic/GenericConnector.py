@@ -83,6 +83,8 @@ class GenericConnector(GenericBase, DataValidator):
 
     rows_initialized = True;#False
 
+    books_commit_capacity = 1000
+
     @classmethod
     def read_config(cls):
         cls.config_object = MultiLevelConfigParser()
@@ -170,6 +172,7 @@ class GenericConnector(GenericBase, DataValidator):
         self.update_status = None
         self.update_status_service = None
         self.loadListOfNames()
+        self.books_to_commit_counter = 0
 
     def __del__(self):
         if self.logger:
