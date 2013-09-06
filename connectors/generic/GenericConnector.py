@@ -262,8 +262,6 @@ class GenericConnector(GenericBase, DataValidator):
 
     def _parse_measure_length(self):
 
-        import rpdb2
-        rpdb2.setbreak()
         book_number = 0
         for filename in self.fetched_files:
             for offer in self.getBookList(filename):
@@ -277,11 +275,9 @@ class GenericConnector(GenericBase, DataValidator):
         #print self.max_len_entry
 
     def _parse_make_test_dict(self, adjust=False):
-        import rpdb2
-        rpdb2.setbreak()
         if adjust:
             self.before_parse()
-    
+        book_number = 0 
         for filename in self.fetched_files:
             for offer in self.getBookList(filename):
                 book_number += 1

@@ -36,11 +36,11 @@ def run_backup(connector):
 
 #use when creating tests
 def run_test_create(connector):
-    connector.fetchData(download=False)
+    connector.fetchData()
     connector._parse_make_test_dict()
 
 def run_measure_length(connector):
-    connector.fetchData(download=False)
+    connector.fetchData()
     connector._parse_measure_length()
 
 def run_load_backup(connector):
@@ -148,8 +148,6 @@ def main():
     if args.mode not in ['backup', 'test_create', 'measure_length']: 
         SqlWrapper.init(GenericConnector.config_object.get('DEFAULT', 'db_config'), connectors=[con[0] for con in connector_classnames_list])
 
-    import rpdb2
-    rpdb2.start_embedded_debugger('dupa')
     connectors = [ Tools.load_connector(connectorname=connector[1], config=GenericConnector.config_object)
                    #insert any connector constructor parameters here
                    (name=connector[0], limit_books = args.limit_books)
