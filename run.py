@@ -34,6 +34,15 @@ def run_backup(connector):
     #only download, do not unpack
     connector.fetchData(unpack=False)
 
+#use when creating tests
+def run_test_create(connector):
+    connector.fetchData(download=False)
+    connector._parse_make_test_dict()
+
+def run_measure_length(connector):
+    connector.fetchData(download=False)
+    connector._parse_measure_length()
+
 def run_load_backup(connector):
     connector.backup_dir = os.path.join("backup", connector.name.lower())
     for archive in glob.glob(os.path.join(connector.backup_dir, "*")):
@@ -46,14 +55,13 @@ def run_load_backup(connector):
         connector.closeSession()
 
 def update_status(args, partial):
-    if args.mode not in ['backup']:
+    if args.mode not in ['backup', 'test_create', 'measure_length']: 
         us = UpdateStatus()
     
         us.start = datetime.now()
         us.manual = args.manual
         us.partial = partial
         return us
-
 
 def choose_your_destiny(args, connectors, partial, Logger, us):
     fail = False
@@ -87,12 +95,14 @@ def parse_args():
     connectors = [c[0] for c in connector_classnames_list]
 
     parser = argparse.ArgumentParser(formatter_class=RawTextHelpFormatter)
-    parser.add_argument('-m', '--mode', action="store", default="update", choices=['update', 'update-reference', 'backup', 'load-backup'],
+    parser.add_argument('-m', '--mode', action="store", default="update", choices=['update', 'update-reference', 'backup', 'load-backup', 'test-create', 'measure-length'],
                         help=   'Modes:\n\n'
                                 '\tupdate           - [DEFAULT] run update for mentioned services\n'
                                 '\tupdate-reference - run update for mentioned reference services\n'
                                 '\tbackup           - fetch data for each of service. Do not run update.\n'
                                 '\tload-backup      - load backups from backup directory.\n'
+                                '\ttest-create      - create dict for unittests.\n'
+                                '\tmeasure-length   - count size of.\n'
 
                        )
     parser.add_argument('--auto', action="store_false", dest="manual", help='Should be used only by cron.')
@@ -100,6 +110,8 @@ def parse_args():
     parser.add_argument('connectors', action="store", nargs="*", choices=connectors + [''], default='', metavar='service_name',
                         help='Names of service to handle, positioned into list of names. Empty list means "FOR EACH".\n\n'
                              'Possible values are:\n\n' + ', '.join(connectors))
+    parser.add_argument('-l', '--limit-books', type=int, default=0, 
+                        help='Limit books processed for each connector. 0 (default) means process all books')
     args = parser.parse_args()
 
     base_name = os.path.basename(sys.argv[0])
@@ -133,11 +145,14 @@ def main():
 
     partial = connector_classnames_list >= filter_varargs(Tools.filter_disabled, config_connector_classnames_list, False, GenericConnector.config_object, Logger)
 
-    if args.mode not in ['backup']:
+    if args.mode not in ['backup', 'test_create', 'measure_length']: 
         SqlWrapper.init(GenericConnector.config_object.get('DEFAULT', 'db_config'), connectors=[con[0] for con in connector_classnames_list])
+
+    import rpdb2
+    rpdb2.start_embedded_debugger('dupa')
     connectors = [ Tools.load_connector(connectorname=connector[1], config=GenericConnector.config_object)
                    #insert any connector constructor parameters here
-                   (name=connector[0])
+                   (name=connector[0], limit_books = args.limit_books)
                    for connector in connector_classnames_list ]
 
     Logger.debug('Created folowing connectors %s' % [connector.name for connector in connectors])

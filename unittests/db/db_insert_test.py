@@ -21,7 +21,7 @@ class TestAudiobookUpdate(DBInsertTestBase):
             "price": 3591,
             "url": "https://www.a4b-tracking.com/pl/stat-click-feed/20602637/33",
             "authors":[u"Antoine de Saint-Exupery"],
-            "length": 108,
+            "audio_time": "108",
             "publisher": "AudioLiber",
         }])
 
@@ -29,21 +29,21 @@ class TestAudiobookUpdate(DBInsertTestBase):
                 "external_id":256,
                 "title": u"MAŁY KSIĄŻĘ",
                 "category": u"LITERATURA ŚWIATOWA/Klasyka światowa",
-            "price": 1000,
+                "price": 1000,
                 "url": "https://www.a4b-tracking.com/pl/stat-click-feed/20602637/33",
                 "authors":[u"Antoine de Saint-Exupery"],
-            "length": 128,
+                "audio_time": "128",
                 "publisher": "AudioLiber",
         }])
 
         self._check_if_eq([{
                 "external_id":256,
-            "title": u"Mały Książe",
+                "title": u"Mały Książe",
                 "category": u"LITERATURA ŚWIATOWA/Klasyka światowa",
-            "price": 4000,
+                "price": 4000,
                 "url": "https://www.a4b-tracking.com/pl/stat-click-feed/20602637/33",
                 "authors":[u"Antoine de Saint-Exupery"],
-                "length": 128,
+                "audio_time": "128",
                 "publisher": "AudioLiber",
         }])
 

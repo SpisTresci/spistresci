@@ -181,7 +181,7 @@ class GenericConnector(GenericBase, DataValidator):
             self.logger.debug('Cleaning up after executing %s connector' % self.name)
         if self.backup_dir:
             if self.backup_archive in [self.ArchiveType.BZIP, self.ArchiveType.GZ] and \
-               self.mode not in [self.BookList_Mode.ZIPPED_XMLS, self.BookList_Mode.GZIPPED_XMLS]:
+               self.mode not in [self.BookList_Mode.ZIPPED_XMLS, self.BookList_Mode.GZIPPED_XMLS, self.BookList_Mode.BZIPPED_XMLS]:
                 self.compress_dir(self.backup_dir, self.backup_archive)
                 self.backup_archive = self.ArchiveType.NONE
 
@@ -260,6 +260,41 @@ class GenericConnector(GenericBase, DataValidator):
     def getBookList(self, filename):
         pass
 
+    def _parse_measure_length(self):
+
+        import rpdb2
+        rpdb2.setbreak()
+        book_number = 0
+        for filename in self.fetched_files:
+            for offer in self.getBookList(filename):
+                book_number += 1
+                if self.limit_books and book_number > self.limit_books:
+                    break
+                book = self.makeDict(offer)
+                self.measureLenghtDict(book)
+
+        print self.max_len
+        #print self.max_len_entry
+
+    def _parse_make_test_dict(self, adjust=False):
+        import rpdb2
+        rpdb2.setbreak()
+        if adjust:
+            self.before_parse()
+    
+        for filename in self.fetched_files:
+            for offer in self.getBookList(filename):
+                book_number += 1
+                if self.limit_books and book_number > self.limit_books:
+                    break
+                book = self.makeDict(offer)
+                if adjust:
+                    self.adjust_parse(book)
+                print book
+            if adjust:
+                self.after_parse()
+
+
     def parse(self):
         self.save_time_of_("parse_start")
         self.before_parse()
@@ -268,28 +303,22 @@ class GenericConnector(GenericBase, DataValidator):
             for filename in self.fetched_files:
                 for offer in self.getBookList(filename):
                     book_number += 1
+                    #TODO:remove skip_offer option, 
+                    #if necessary  override getBookList
                     if book_number < self.skip_offers + 1:
                         continue
                     elif self.limit_books and book_number > self.limit_books:
                         break
                     book = self.makeDict(offer)
-                    #comment out when creating connector
                     self.adjust_parse(book)
                     #uncomment when creating connector
                     #print book
 
                     self.validate(book)
-                    #comment out when creating connector
                     if self.fulfillRequirements(book):
-                        #uncomment when creating connector
-                        #self.measureLenghtDict(book)
-                        #comment out when creating connector
                         self.add_record(book)
 
             self.after_parse()
-            #uncomment when creating connector
-            #print self.max_len
-            #print self.max_len_entry
             self.session.commit()
             self.save_info_about_offers(offers_parsed = book_number)
         else:

@@ -20,6 +20,8 @@ class Wikibooks(XMLConnector):
     def downloadFile(self, url = None, filename = None, headers = None):
         super(Wikibooks, self).downloadFile(url, headers = {'User-Agent':'Mozilla/5.0'})
 
+
+    #TODO: use generic PARSE 
     def parse(self):
         self.before_parse()
         book_number = 0
