@@ -132,7 +132,6 @@ def main():
     connector_classnames_list = filter_varargs(Tools.filter_disabled, args_connector_classnames_list, False, GenericConnector.config_object, Logger)
 
     partial = connector_classnames_list >= filter_varargs(Tools.filter_disabled, config_connector_classnames_list, False, GenericConnector.config_object, Logger)
-    print partial
 
     if args.mode not in ['backup']:
         SqlWrapper.init(GenericConnector.config_object.get('DEFAULT', 'db_config'), connectors=[con[0] for con in connector_classnames_list])
