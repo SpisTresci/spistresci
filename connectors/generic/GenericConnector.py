@@ -458,8 +458,9 @@ class GenericConnector(GenericBase, DataValidator):
         return unpacked_files
 
     def save_time_of_(self, column__event_name):
-        setattr(self.update_status_service, column__event_name, datetime.now())
-        self.update_status_service.session.commit()
+        if self.update_status_service:
+            setattr(self.update_status_service, column__event_name, datetime.now())
+            self.update_status_service.session.commit()
 
     def howManyOffers(self):
         Book = GenericBook.getConcretizedClass(context=self)
@@ -478,13 +479,18 @@ class GenericConnector(GenericBase, DataValidator):
     def calculateChecksum(self):
         pass
 
+    #FIXME: refactoring, DataStorageWrapper
     def save_info_about_offers(self, offers = None, offers_parsed = None, offers_new = None, offers_promotion = None):
-        self.update_status_service.offers = offers if offers else self.howManyOffers()
-        self.update_status_service.offers_parsed = offers_parsed if offers_parsed else self.howManyOffersParsed()
-        self.update_status_service.offers_new = offers_new if offers_new else self.howManyNewOffers()
-        self.update_status_service.offers_promotion = offers_promotion if offers_promotion else self.howManyOffersInPromotion()
+        if self.update_status_service:
+            self.update_status_service.offers = offers if offers else self.howManyOffers()
+            self.update_status_service.offers_parsed = offers_parsed if offers_parsed else self.howManyOffersParsed()
+            self.update_status_service.offers_new = offers_new if offers_new else self.howManyNewOffers()
+            self.update_status_service.offers_promotion = offers_promotion if offers_promotion else self.howManyOffersInPromotion()
 
+    #FIXME: refactoring, DataStorageWrapper
     def areDataDifferentThanPrevious(self):
+        if not self.update_status_service:
+            return True
         self.update_status_service.checksum = self.calculateChecksum()
         first = self.session.query(UpdateStatusService).filter(UpdateStatusService.service_id == self.update_status_service.service_id, UpdateStatusService.id != self.update_status_service.id, UpdateStatusService.success == True).order_by(UpdateStatusService.timestamp.desc()).first()
         if not first:

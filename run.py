@@ -45,31 +45,39 @@ def run_load_backup(connector):
         connector.parse()
         connector.closeSession()
 
-def choose_your_destiny(args, connectors, partial, Logger):
-    us = UpdateStatus()
+def update_status(args, partial):
+    if args.mode not in ['backup']:
+        us = UpdateStatus()
+    
+        us.start = datetime.now()
+        us.manual = args.manual
+        us.partial = partial
+        return us
 
-    us.start = datetime.now()
-    us.manual = args.manual
-    us.partial = partial
 
-
+def choose_your_destiny(args, connectors, partial, Logger, us):
     fail = False
     for connector in connectors:
         try:
-            uss = UpdateStatusService(us, connector)
+            if us:
+                uss = UpdateStatusService(us, connector)
             getattr(sys.modules[__name__], 'run_%s' % args.mode)(connector)
-            uss.success = True
+            if us:
+                uss.success = True
         except Exception:
             fail = True
             Logger.exception('Error executing %s, in connector %s' % (args.mode, connector.name))
+    return not fail
 
-    us.end = datetime.now()
-    if not fail:
-        us.success = True
-    us.finished = True
-
-    us.session.commit()
-    us.session.close()
+def close_update_status(us, succeed):
+    if us:
+        us.end = datetime.now()
+        if succeed:
+            us.success = True
+        us.finished = True
+    
+        us.session.commit()
+        us.session.close()
 
 def parse_args():
     config_object = MultiLevelConfigParser()
@@ -111,16 +119,6 @@ def parse_args():
     return args
 
 
-def isPartialRun(connectors, args, Logger):
-    config_object = MultiLevelConfigParser()
-    config_object.read('conf/update.ini', force_utf=True)
-
-    connector_classnames_list = Tools.get_classnames(config_object).items()
-    connector_classnames_list = filter_varargs(Tools.filter_disabled, connector_classnames_list, False, config_object, Logger)
-
-    return len(connectors) < len(connector_classnames_list)
-
-
 def main():
     args = parse_args()
 
@@ -129,11 +127,14 @@ def main():
     Logger = logger_instance(GenericConnector.config_object.get('DEFAULT', 'log_config'))
 
     #this is dict.items()
-    connector_classnames_list = Tools.get_classnames(GenericConnector.config_object).items()
-    connector_classnames_list = filter_varargs(Tools.filter_in_list, connector_classnames_list, True, args.connectors)
-    connector_classnames_list = filter_varargs(Tools.filter_disabled, connector_classnames_list, False, GenericConnector.config_object, Logger)
+    config_connector_classnames_list = Tools.get_classnames(GenericConnector.config_object).items()
+    args_connector_classnames_list = filter_varargs(Tools.filter_in_list, config_connector_classnames_list, True, args.connectors)
+    connector_classnames_list = filter_varargs(Tools.filter_disabled, args_connector_classnames_list, False, GenericConnector.config_object, Logger)
 
-    if args.mode != 'backup':
+    partial = connector_classnames_list >= filter_varargs(Tools.filter_disabled, config_connector_classnames_list, False, GenericConnector.config_object, Logger)
+    print partial
+
+    if args.mode not in ['backup']:
         SqlWrapper.init(GenericConnector.config_object.get('DEFAULT', 'db_config'), connectors=[con[0] for con in connector_classnames_list])
     connectors = [ Tools.load_connector(connectorname=connector[1], config=GenericConnector.config_object)
                    #insert any connector constructor parameters here
@@ -141,8 +142,10 @@ def main():
                    for connector in connector_classnames_list ]
 
     Logger.debug('Created folowing connectors %s' % [connector.name for connector in connectors])
-
-    choose_your_destiny(args, connectors, isPartialRun(connectors, args, Logger), Logger)
+    
+    us = update_status(args, partial)
+    succeed = choose_your_destiny(args, connectors, partial, Logger, us)
+    close_update_status(us, succeed)
 
     Logger.debug('Execution finished')
 
