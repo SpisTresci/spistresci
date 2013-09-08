@@ -83,7 +83,7 @@ class GenericConnector(GenericBase, DataValidator):
 
     rows_initialized = True;#False
 
-    books_commit_capacity = 1000
+    session_obj_limit = 1000
 
     @classmethod
     def read_config(cls):
@@ -172,7 +172,7 @@ class GenericConnector(GenericBase, DataValidator):
         self.update_status = None
         self.update_status_service = None
         self.loadListOfNames()
-        self.books_to_commit_counter = 0
+        self.session_obj_counter = 0
 
     def __del__(self):
         if self.logger:
@@ -536,6 +536,7 @@ class GenericConnector(GenericBase, DataValidator):
 
         #Session = sessionmaker(bind=SqlWrapper.getEngine())
         session = self.session #Session()
+        self.session_obj_counter += 1
 
         search_keys = [c.name for c in Book.__table__.columns if c.unique or c.primary_key]
         search_keys.remove('id')
@@ -582,10 +583,12 @@ class GenericConnector(GenericBase, DataValidator):
 
             book.update_timestamp = book.update_minidata_timestamp = self.update_status_service.timestamp
             session.add(book)
-            #session.commit()
         else:
             book.update(d, session, self)
-            #session.commit()
+
+        if self.session_obj_counter == self.session_obj_limit:
+            session.commit()
+            self.session_obj_counter = 0
 
         #session.close()
 

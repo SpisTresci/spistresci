@@ -6,6 +6,8 @@ class Nexto(XMLConnector):
     #dict of xml_tag -> db_column_name translations
 
     inner_offer_dict = {
+        'issue_id':('@issue-id',''),
+        'issue_title':('./title', ''),
         'date':('./publication-date', ''),
         'activation_date':('./activation-date', ''),
         'price_normal':('./price/price-original', ''),
@@ -23,6 +25,7 @@ class Nexto(XMLConnector):
 
     xml_tag_dict = {
         'external_id':('@product-id',''),
+        'product_id':('@product-id',''),
         'title':('./name', ''),
         'type':('./type', ''),
         'url':('./url',''),
@@ -37,6 +40,7 @@ class Nexto(XMLConnector):
 
     format_convert_dict = dict(XMLConnector.format_convert_dict.items() + {
         '\(znak wodny\)':'',
+        ' \(fileopen\)':'-drm',
     }.items())
 
     format_sepeparators = [',']
@@ -64,29 +68,20 @@ class Nexto(XMLConnector):
 
                     del book['offers']
                     book_template = book
-                    i = 0
+
                     for offer in offers:
                         book = dict(book_template)
-                        book['external_id'] += '-'+str(i)
                         for key in self.inner_offer_dict.keys():
                             book[key] = offer[key] if not default_inner_offer else self.inner_offer_dict[key][1]
+
+                        if book['issue_id'] != self.inner_offer_dict['issue_id'][1]:
+                            book['external_id'] += '-'+ book['issue_id']
 
                         self.adjust_parse(book)
                         self.validate(book)
                         if self.fulfillRequirements(book):
-                            #uncomment when creating connector
                             #self.measureLenghtDict(book)
-                            #comment out when creating connector
                             self.add_record(book)
-
-                            self.books_to_commit_counter+=1
-                            if self.books_to_commit_counter == self.books_commit_capacity:
-                                self.save_info_about_offers(offers_parsed = -book_number)
-                                self.update_status_service.session.commit()
-                                self.session.commit()
-                                self.books_to_commit_counter = 0
-
-                        i+=1
 
             self.after_parse()
             #uncomment when creating connector
@@ -107,18 +102,27 @@ class Nexto(XMLConnector):
         if dic.get('rating'):
             dic['rating'] = int(round(float(dic['rating'])/5, 2) * 100)
 
-    def adjust_parse(self, dic):
+    program_id = '159574'
 
+    def adjust_parse(self, dic):
         for key in ['cover', 'free_fragment']:
             if not isinstance(dic[key], basestring) and isinstance(dic[key], list):
                 dic[key] = dic[key][0]
 
+        if dic['issue_id'] != self.inner_offer_dict['issue_id'][1]:
+            dic['url'] = 'http://www.nexto.pl/rf/pr?i=%s&pid=%s' % (dic['issue_id'], self.program_id)
+        else:
+            dic['url'] = 'http://www.nexto.pl/rf/pr?p=%s&pid=%s' % (dic['product_id'], self.program_id)
+
+        if dic.get('issue_title') and dic['issue_title'] != self.inner_offer_dict['issue_title'][1]:
+            dic['title'] += " - " + dic['issue_title']
 
 Base = SqlWrapper.getBaseClass()
 
 class NextoBook(GenericBook, Base):
     id = Column(Integer, primary_key=True)
-    external_id = Column(Unicode(10), unique=True)
+    external_id = Column(Unicode(21), unique=True)
+    issue_id = Column(Unicode(10))
     title = Column(Unicode(512))            #293
     url = Column(Unicode(512))              #331
     #categories #TODO
