@@ -3,6 +3,7 @@ import sys, os, inspect
 
 #found here 
 #http://stackoverflow.com/questions/279237/import-a-module-from-a-folder/6098238#6098238
+#author: sorin http://stackoverflow.com/users/99834/sorin
 # use this if you want to include modules from a subforder
 cmd_upfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe() ))[0],'..')))
 if cmd_upfolder not in sys.path:
@@ -10,7 +11,6 @@ if cmd_upfolder not in sys.path:
 
 from connectors import Tools
 from connectors.generic import *
-from sqlwrapper import *
 import csv
 
 def main():

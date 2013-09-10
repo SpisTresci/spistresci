@@ -74,6 +74,7 @@ class HelionBase(XMLConnector):
     #            }
 
 class HelionBaseBook(GenericBook):
+#{'series': 28, 'bookshop': 2, 'binding': 6, 'is_new': 1, 'date': 10, 'storage_type': 4, 'is_bestseller': 1, 'free_sample_online_tool': 44, 'linked': 12, 'title': 120, 'place_in_top': 2, 'net_price': 6, 'book_size': 33, 'gross_price': 5, 'free_sample_url': 44, 'type': 1, 'vat': 5, 'page_count': 3, 'description': 10696, 'ean': 14, 'thematic_series': 0, 'price': 6, 'discount': 5, 'is_available': 1, 'authors': 78, 'vat_percent': 2, 'price_normal': 6, 'md5': 32, 'on_demand': 1, 'status2': 1, 'url': 181, 'name_of_promotion': 20, 'cover_back': 49, 'cover': 47, 'mass': 4, 'isbns': 18, 'formats': 5, 'advanced_booking': 10, 'external_id': 12, 'title_oryginal': 136, 'translators': 87}
 
     external_id = Column(Unicode(16), unique=True)
     #isbn
@@ -81,6 +82,7 @@ class HelionBaseBook(GenericBook):
     title = Column(Unicode(256))                       #186
     title_oryginal = Column(Unicode(256))              #177
     url = Column(Unicode(512))                         #278
+    #pp_url = Column(Unicode(256))
     #authors
     #translators
     status = Column(Integer)

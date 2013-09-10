@@ -165,6 +165,7 @@ class GenericConnector(GenericBase, DataValidator):
         self.mode = self.BookList_Mode.int(self.config.get('mode', 'UNKNOWN'))
         self.filters_config = self.config.get('filters', {})
         self.fulfill = self.config.get('fulfill')
+        self.pp_url = self.config.get('pp_url')
         if type(self.filters_config) is dict:
             self.filters = self.filters_config.get('')
         else:
@@ -312,6 +313,7 @@ class GenericConnector(GenericBase, DataValidator):
 
                     self.validate(book)
                     if self.fulfillRequirements(book):
+                        self.create_pp_url(book)
                         self.add_record(book)
 
             self.after_parse()
@@ -334,6 +336,18 @@ class GenericConnector(GenericBase, DataValidator):
     def after_parse(self):
         pass
 
+    def create_pp_url(self, book):
+        if self.pp_url:
+            my_book = book.copy()
+            for x in my_book.keys():
+                #this is pythonic way :)
+                try:
+                    val = my_book[x]
+                    my_book[x] = re.sub(self.pp_url[x]['pattern'], self.pp_url[x]['replace'], val)
+                except KeyError, TypeError:
+                    pass
+            my_book['partner_id'] =  self.pp_url['partner_id']
+            book['pp_url'] = self.pp_url[''] % my_book
 
     def fulfillRequirements(self, book):
         if not self.fulfill:
@@ -630,6 +644,7 @@ class GenericBook(GenericBase):
     price_normal = Column(Integer, default=-1) #price in grosz
     #status = Column(Integer)
     url = Column(Unicode(256))
+    pp_url = Column(Unicode(256))
     cover = Column(Unicode(256))
 
     @declared_attr

@@ -198,6 +198,21 @@ class TestParseConfig(object):
         'test2':{'':'val1.test2','test3':'val1.test2.test3'}, 
         '':'val1'})
 
+class TestCreatePPUrl(object):
+    def setUp(self):
+        MockConnector.config_file = 'unittests/data/generic_connector/conf/test.ini'
+        self.mc = MockConnector()
+
+    def test_correct_config(self):
+        eq_(self.mc.pp_url, {'' : 'this_is_%(test)s_%(partner_id)s', 
+                            'partner_id' : 'partner_id', 
+                            'test' : {'pattern':'(this_is)', 'replace':'\\1_not'}})
+
+    def test_create_pp_url(self):
+        book = {'test': 'this_is'}
+        self.mc.create_pp_url(book)
+        eq_(book['pp_url'], 'this_is_this_is_not_partner_id')
+
 class TestFulfillRequirements(object):
     def setUp(self):
         MockConnector.config_file = 'unittests/data/generic_connector/conf/test.ini'
