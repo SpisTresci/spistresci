@@ -9,6 +9,7 @@ class OAIConnector(GenericConnector):
     translate_tag_dict = {}
 
     def fetchData(self):
+        self.save_time_of_("fetch_start")
         registry = MetadataRegistry()
         registry.registerReader('oai_dc', oai_dc_reader)
         client = Client(self.url, registry)
@@ -31,6 +32,7 @@ class OAIConnector(GenericConnector):
         f.write(str(self.records))
         f.close()
         self.fetched_files.append(filename)
+        self.save_time_of_("fetch_end")
 
     def makeDict(self, offer):
         for new_name, (old_name, default) in self.translate_tag_dict.items():
