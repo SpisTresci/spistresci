@@ -13,6 +13,7 @@ from DobryEbook import DobryEbook
 from eBookpoint import eBookpoint
 from ebooks43 import ebooks43
 from eClicto import eClicto
+from Gandalf import Gandalf
 from Empik import Empik
 from EscapeMagazine import EscapeMagazine
 from FantastykaPolska import FantastykaPolska
