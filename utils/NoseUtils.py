@@ -1,5 +1,14 @@
 import nose
 import urllib2
+import rpdb2
+import Rpdb
+
+class debug(Rpdb.debug):
+    def __call__(self, test):
+        def wrapped(*args, **kwargs):
+            Rpdb.debug._break(self.remote, self.unencrypted)
+            test(*args, **kwargs)
+        return nose.tools.make_decorator(test)(wrapped)
 
 def skip(test):
     def newtest(*args, **kwargs):

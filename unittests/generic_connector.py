@@ -2,7 +2,7 @@ import nose
 from nose.tools import *
 
 from connectors.generic import GenericConnector, GenericBase
-from utils import NoseUtils
+from utils import NoseUtils, debug
 
 from datetime import datetime
 import os
@@ -202,16 +202,33 @@ class TestCreatePPUrl(object):
     def setUp(self):
         MockConnector.config_file = 'unittests/data/generic_connector/conf/test.ini'
         self.mc = MockConnector()
+        self.book = {'test_key': 'testvalue'}
 
     def test_correct_config(self):
-        eq_(self.mc.pp_url, {'' : 'this_is_%(test)s_%(partner_id)s', 
+        eq_(self.mc.pp_url, {'' : 'this_is_%(test_key)s_%(partner_id)s', 
                             'partner_id' : 'partner_id', 
-                            'test' : {'pattern':'(this_is)', 'replace':'\\1_not'}})
+                            'test_key' : {'pattern':'(test)', 'replace':'\\1_replace_'}})
 
-    def test_create_pp_url(self):
-        book = {'test': 'this_is'}
-        self.mc.create_pp_url(book)
-        eq_(book['pp_url'], 'this_is_this_is_not_partner_id')
+    def test_run_standard_config(self):
+        self.mc.create_pp_url(self.book)
+        eq_(self.book['pp_url'], 'this_is_test_replace_value_partner_id')
+
+    def test_run_empty_config(self):
+        book_copy= self.book.copy()
+        self.mc.pp_url = None
+        self.mc.create_pp_url(book_copy)
+        eq_(book_copy, self.book)
+    
+    def test_run_no_replace_patterns(self):
+        del self.mc.pp_url['test_key']
+        self.mc.create_pp_url(self.book)
+        eq_(self.book['pp_url'], 'this_is_testvalue_partner_id')
+
+
+    def test_run_more_keys_in_config(self):
+        self.mc.pp_url['other_key'] = {'pattern':'dummy', 'replace':'dummy'}
+        self.mc.create_pp_url(self.book)
+        eq_(self.book['pp_url'], 'this_is_test_replace_value_partner_id')
 
 class TestFulfillRequirements(object):
     def setUp(self):
