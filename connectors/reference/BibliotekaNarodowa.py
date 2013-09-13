@@ -27,8 +27,10 @@ class BibliotekaNarodowa(XMLConnector, MARCConnector, ReferenceConnector):
     QUERY = 'isbn="9788300*"'
 
     def fetchData(self):
+        self.save_time_of_("fetch_start")
         self.conn = self.makeConnection()
         self.fetchMods(self.QUERY)
+        self.save_time_of_("fetch_end")
 
     def validate(self, dic):
         id = dic.get('external_id')

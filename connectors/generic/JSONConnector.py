@@ -16,6 +16,7 @@ class JSONConnector(GenericConnector):
         return dic
 
     def fetchData(self, unpack=True):
+        self.save_time_of_("fetch_start")
         self.downloadFile()
         #TODO: this definatelly should not be here ..... or... let's not use 'definatelly' here
         if GenericConnector.BookList_Mode.to_str(self.mode).endswith('XML') or GenericConnector.BookList_Mode.to_str(self.mode).endswith('XMLS'):
@@ -31,6 +32,8 @@ class JSONConnector(GenericConnector):
             )
         elif self.mode == GenericConnector.BookList_Mode.SINGLE_JSON:
             self.fetched_files.append(os.path.join(self.backup_dir, self.filename))
+
+        self.save_time_of_("fetch_end")
 
     def getBookList(self, filename):
         with open(filename, 'rU') as json_file:

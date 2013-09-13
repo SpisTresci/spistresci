@@ -37,6 +37,7 @@ class WolneLektury(JSONConnector):
         return full_filepath
 
     def fetchData(self, unpack = True):
+        self.save_time_of_("fetch_start")
         full_filepath = self.downloadFile()
         if self.mode != GenericConnector.BookList_Mode.MULTIPLE_JSON:
             raise WrongConnectorModeException('Incorrect mode %s for connector type %s' %
@@ -47,6 +48,8 @@ class WolneLektury(JSONConnector):
             book_list = json.load(json_file)
         for book in book_list:
             self.fetched_files.append(self._fetch_full_book_file(book))
+
+        self.save_time_of_("fetch_end")
 
     #external id for wolnelektury is a md5 of url.
     #We believe url to boom is most stable

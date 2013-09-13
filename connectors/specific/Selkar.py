@@ -58,6 +58,7 @@ class Selkar(XMLConnector):
     }
 
     def parse(self):
+        self.save_time_of_("parse_start")
         for (key, root) in self.fetched_xmls.items():
             itemstag = root.find('items')
             if itemstag:
@@ -77,8 +78,10 @@ class Selkar(XMLConnector):
         #print self.max_len
         #for key in self.max_len_entry.keys():
         #    print key+": "+ unicode(self.max_len_entry[key])
+        self.save_time_of_("parse_end")
 
     def fetchData(self, unpack = True):
+        self.save_time_of_("fetch_start")
         params = {'url':self.url,
             'api_key':self.api_key,
             'method':self.method,
@@ -100,6 +103,8 @@ class Selkar(XMLConnector):
                 last_file = self._is_last(root)
                 i += 1
                 page += 1
+
+        self.save_time_of_("fetch_end")
 
     def validate(self, dic):
         XMLConnector.validate(self, dic)
