@@ -75,12 +75,10 @@ class TestToolsLoadClass(object):
     def test_tools_load_class(self):
         classname = 'GenericConnector'
         attrib_class = 'BookList_Mode'
-        attrib_method = 'parse_config'
         attrib_property = 'name'
         c = Tools.load_class('connectors.generic', classname)
         ok_(inspect.isclass(c), '%s should be a class' % classname)
         ok_(hasattr(c, attrib_class), '%s should have attrib class %s' % (classname, attrib_class))
-        ok_(hasattr(c, attrib_method), '%s should have attrib method %s' % (classname, attrib_method))
         ok_(hasattr(c, attrib_property), '%s should have attrib property %s' % (classname, attrib_property))
         eq_(c.class_name(), classname)
 
@@ -88,12 +86,10 @@ class TestToolsLoadClass(object):
     def test_tools_load_connector(self):
         classname = 'BezKartek'
         attrib_class = 'BookList_Mode'
-        attrib_method = 'parse_config'
         attrib_property = 'name'
         c = Tools.load_connector(classname)
         ok_(inspect.isclass(c), '%s should be a class' % classname)
         ok_(hasattr(c, attrib_class), '%s should have attrib class %s' % (classname, attrib_class))
-        ok_(hasattr(c, attrib_method), '%s should have attrib method %s' % (classname, attrib_method))
         ok_(hasattr(c, attrib_property), '%s should have attrib property %s' % (classname, attrib_property))
         eq_(c.class_name(), classname)
 

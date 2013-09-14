@@ -13,8 +13,9 @@ mini_books_mini_isbns = Table('mini_books_mini_isbns', Base.metadata,
 )
 SqlWrapper.table_list.append('mini_books_mini_isbns')
 
-mini_books_title_words = Table('mini_books_title_words', Base.metadata,
-    Column('book_id', Integer, ForeignKey('MiniBook.id')),
-    Column('title_id', Integer, ForeignKey('TitleWord.id'))
-)
-SqlWrapper.table_list.append('mini_books_title_words')
+
+#mini_books_title_words = Table('mini_books_title_words', Base.metadata,
+#    Column('book_id', Integer, ForeignKey('MiniBook.id')),
+#    Column('title_id', Integer, ForeignKey('TitleWord.id'))
+#)
+#SqlWrapper.table_list.append('mini_books_title_words')

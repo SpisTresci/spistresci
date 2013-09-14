@@ -5,6 +5,7 @@ from connectors import Tools
 import lxml.etree as et
 from connectors.generic import GenericConnector
 from connectors.specific import *
+from utils import ConfigReader
 import os
 import glob
 import re
@@ -48,7 +49,7 @@ class TestSpecificConnectors(object):
     def test_connectors(self):
     	self.inputpath='unittests/data/specific_connectors/'
         GenericConnector.config_file = os.path.join(self.inputpath, 'conf/test.ini')
-        GenericConnector.read_config()
+        GenericConnector.config_object = ConfigReader.read_config(GenericConnector.config_file)
 
         connector_classnames = Tools.get_classnames(GenericConnector.config_object)
         connectors = [ Tools.load_connector(connectorname=connector[1], config=GenericConnector.config_object)(name=connector[0]) for connector in connector_classnames .items() ]

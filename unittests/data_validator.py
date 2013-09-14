@@ -109,21 +109,33 @@ class TestDataValidator(object):
         yield self._test_validate_helper_warning, "Price", {"price":"20 zl"}
 
     def test_validate_formats(self):
-        yield self._test_validate_helper_eq, "Formats", {}, {"formats":[]}
-        yield self._test_validate_helper_eq, "Formats", {"formats":""}, {"formats":[]}
-        yield self._test_validate_helper_eq, "Formats", {"formats":"pdf"}, {"formats":["pdf"]}
-        yield self._test_validate_helper_eq, "Formats", {"formats":"Pdf"}, {"formats":["pdf"]}
-        yield self._test_validate_helper_eq, "Formats", {"formats":"PDF"}, {"formats":["pdf"]}
-        yield self._test_validate_helper_eq, "Formats", {"formats":"PDF,"}, {"formats":["pdf"]}
-        yield self._test_validate_helper_eq, "Formats", {"formats":"PDF,mobi"}, {"formats":["pdf", "mobi"]}
-        yield self._test_validate_helper_eq, "Formats", {"formats":"PDF, mobi"}, {"formats":["pdf", "mobi"]}
-        yield self._test_validate_helper_eq, "Formats", {"formats":"Pdf, Mobi"}, {"formats":["pdf", "mobi"]}
-        yield self._test_validate_helper_eq, "Formats", {"formats":"Pdf, Mobi, ePub"}, {"formats":["pdf", "mobi", "epub"]}
-        yield self._test_validate_helper_eq, "Formats", {"formats":"Pdf, Mobi, ePub"}, {"formats":["pdf", "mobi", "epub"]}
+        from models.BookType import BookType
+        yield self._test_validate_helper_eq, "Formats", {}, {"formats":[], 'book_type': BookType.BookType.NOINFO}
+        yield self._test_validate_helper_eq, "Formats", {"formats":""}, {"formats":[], 'book_type': BookType.BookType.NOINFO}
+        yield self._test_validate_helper_eq, "Formats", {"formats":"pdf"}, {"formats":["pdf"], 'book_type': BookType.BookType.EBOOK}
+        yield self._test_validate_helper_eq, "Formats", {"formats":"Pdf"}, {"formats":["pdf"], 'book_type': BookType.BookType.EBOOK}
+        yield self._test_validate_helper_eq, "Formats", {"formats":"PDF"}, {"formats":["pdf"], 'book_type': BookType.BookType.EBOOK}
+        yield self._test_validate_helper_eq, "Formats", {"formats":"PDF,"}, {"formats":["pdf"], 'book_type': BookType.BookType.EBOOK}
+        yield self._test_validate_helper_eq, "Formats", {"formats":"PDF,mobi"}, {"formats":["pdf", "mobi"], 'book_type': BookType.BookType.EBOOK}
+        yield self._test_validate_helper_eq, "Formats", {"formats":"PDF, mobi"}, {"formats":["pdf", "mobi"], 'book_type': BookType.BookType.EBOOK}
+        yield self._test_validate_helper_eq, "Formats", {"formats":"Pdf, Mobi"}, {"formats":["pdf", "mobi"], 'book_type': BookType.BookType.EBOOK}
+        yield self._test_validate_helper_eq, "Formats", {"formats":"Pdf, Mobi, ePub"}, {"formats":["pdf", "mobi", "epub"], 'book_type': BookType.BookType.EBOOK}
+        yield self._test_validate_helper_eq, "Formats", {"formats":"Pdf, Mobi, ePub"}, {"formats":["pdf", "mobi", "epub"], 'book_type': BookType.BookType.EBOOK}
 
-        yield self._test_validate_helper_eq, "Formats", {"formats":"pdf mobi epub"}, {"formats":["pdf", "mobi", "epub"]}
+        yield self._test_validate_helper_eq, "Formats", {"formats":"pdf mobi epub"}, {"formats":["pdf", "mobi", "epub"], 'book_type': BookType.BookType.EBOOK}
 
-        yield self._test_validate_helper_eq, "Formats", {"formats":[u'pdf', u'epub', u'mobi']}, {"formats":[u"pdf", u"epub", u"mobi"]}
+        yield self._test_validate_helper_eq, "Formats", {"formats":[u'pdf', u'epub', u'mobi']}, {"formats":[u"pdf", u"epub", u"mobi"], 'book_type': BookType.BookType.EBOOK}
+
+        yield self._test_validate_helper_eq, "Formats", {"formats":"cd"}, {"formats":["cd"], 'book_type': BookType.BookType.AUDIOBOOK}
+        yield self._test_validate_helper_eq, "Formats", {"formats":"Mp3"}, {"formats":["mp3"], 'book_type': BookType.BookType.AUDIOBOOK}
+        yield self._test_validate_helper_eq, "Formats", {"formats":"online_audio, CD-mp3"}, {"formats":["online_audio", "cd_mp3"], 'book_type': BookType.BookType.AUDIOBOOK}
+
+        yield self._test_validate_helper_eq, "Formats", {"formats":"ks"}, {"formats":["ks"], 'book_type': BookType.BookType.BOOK}
+
+        yield self._test_validate_helper_eq, "Formats", {"formats":"Mp3, Pdf, Mobi, ePub"}, {"formats":["mp3", "pdf", "mobi", "epub"], 'book_type': BookType.BookType.HYBRID}
+        yield self._test_validate_helper_eq, "Formats", {"formats":"CD, ePub"}, {"formats":["cd", "epub"], 'book_type': BookType.BookType.HYBRID}
+        yield self._test_validate_helper_eq, "Formats", {"formats":"ks, Mp3, Pdf, Mobi, ePub"}, {"formats":["ks", "mp3", "pdf", "mobi", "epub"], 'book_type': BookType.BookType.HYBRID}
+        yield self._test_validate_helper_eq, "Formats", {"formats":"ks, Mobi"}, {"formats":["ks","mobi"], 'book_type': BookType.BookType.HYBRID}
 
         yield self._test_validate_helper_warning, "Formats", {"formats":"Pdf, Mobi, Mobi"}
         yield self._test_validate_helper_warning, "Formats", {"formats":"Pdf, Mobi, MOBI"}

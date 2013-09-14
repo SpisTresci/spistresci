@@ -1,7 +1,10 @@
+# -*- coding: utf-8 -*-
+from sqlalchemy.orm import joinedload
 from connectors.generic import ReferenceConnector
 import utils
 from sqlwrapper import *
 import final
+from Comparable import *
 
 #######################################################################################
 #          Master          #            Mini              #          Specific         #
@@ -19,111 +22,155 @@ import final
 #######################################################################################
 
 class Final(object):
+    session = None
 
-    def insert(self, connector):
+    @staticmethod
+    def insert(connector):
         connector.save_time_of_("final_start")
         if isinstance(connector, ReferenceConnector):
-            self.insertReferenceConnectorData(connector)
+            Final.insertReferenceConnectorData(connector)
         else:
-            self.insertSpecificConnectorData(connector)
+            Final.insertSpecificConnectorData(connector)
+        connector.session.commit()
         connector.save_time_of_("final_end")
 
     @staticmethod
-    def addNormalizeList(session, flush_context):
-        for new in session.new:
-            if isinstance(new, (final.MiniBook, final.MiniAuthor, final.MiniISBN)):
-                new.to_normalize.append(new)
-
-    def insertSpecificConnectorData(self, connector):
-        Session = sessionmaker(bind = SqlWrapper.getEngine())
-        session = Session()
-        from sqlalchemy import event
-        event.listen(Session, "after_flush", self.addNormalizeList)
+    def insertSpecificConnectorData(connector):
+        session = connector.session
 
         SpecificBook = connector.getConcretizedClass(connector, "Book")
-        new_specific_books = session.query(SpecificBook).filter(SpecificBook.mini_id == None).all()
+        new_specific_books = session.query(SpecificBook).filter(SpecificBook.mini_book_id == None).all()
+        i = 0
         for specific_book in new_specific_books:
             mini_book = final.MiniBook(session, specific_book)
             session.add(mini_book)
-            session.commit()
-            specific_book.mini_id = mini_book.id
 
-            final.MiniBook.normalize(session)
+            i += 1
+            print str(i)
+            if i % 1000 == 0: session.commit()
 
+
+        """
         updated_specific_books = session.query(SpecificBook).filter(SpecificBook.update_minidata_timestamp == connector.update_status_service.timestamp).all()
         for specific_book in updated_specific_books:
             mini_book = SqlWrapper.get_(session, final.MiniBook, {"id":SpecificBook.mini_id})
             mini_book.update(session, specific_book)
             session.commit()
             #final.MiniBook.normalize(session)
-
+        """
 
         session.commit()
         session.close()
 
-    def addToMasterBook(self, session, mini_book, master_book):
-        master_book.mini_book.append(mini_book)
-        session.add(master_book)
-        session.commit()
+    @staticmethod
+    def mergeFromBigOrderedQuery(minibooks, atr_extractor):
+        last = ''
+        to_merge = []
+        for mini in minibooks:
+            if last != atr_extractor(mini):
+                last = atr_extractor(mini)
+                master_books = [m.master for m in to_merge[1:]]
+                if len(to_merge) > 0:
+                    to_merge[0].master.cmp_with_list(master_books)
+                to_merge=[mini]
+            else:
+                to_merge.append(mini)
 
-    def matchSpecificBookWithMasterBooks(self, session, specific_book, master_books):
-        matched = []
-        for master_book in master_books:
+            #print '[' + str(mini.master_id) + ']' + mini.title
 
-            #if all(any(eq_authors(specific_author, master_author) for master_author in master_book.authors) for specific_author in specific_book.authors) and
-            #all(any(eq_authors(master_author, specific_author) for specific_author in specific_book.authors) for master_author in master_book.authors):
-            #    pass
+    @staticmethod
+    def mergeByISBN(connector, inner_merge=False):
+        if connector:
+            minis = connector.session.query(final.MiniBook).filter(final.MiniBook.bookstore == connector.name).all()
+            for mini in minis:
+                master_books = mini.getMasterBooksCandidatesByISBN(connector.session, mini.master.isbn, inner_merge)
+                mini.master.cmp_with_list(master_books)
+        else:#  Optimized version for all connector at once
+            subq = Final.session.query(final.MiniISBN, func.count()).group_by(final.MiniISBN.core).having(func.count()>1).subquery()
+            subq2 = Final.session.query(final.MiniISBN).join(subq, subq.c.core == final.MiniISBN.core).order_by(subq.c.core).subquery()
+            minibooks = Final.session.query(final.MiniBook).join(subq2, subq2.c.mini_book_id == final.MiniBook.id).order_by(subq2.c.core).all()
 
-            m_as = list(master_book.authors)
-            s_as = list(specific_book.authors)
+            Final.mergeFromBigOrderedQuery(minibooks, lambda mini: mini.isbns[0].core)
+            """
+            last_isbn = ''
+            to_merge = []
+            for mini in minibooks:
+                if last_isbn != mini.isbns[0].core:
+                    last_isbn = mini.isbns[0].core
+                    master_books = [m.master for m in to_merge[1:]]
+                    if len(to_merge) > 0:
+                        to_merge[0].master.cmp_with_list(master_books)
+                    to_merge=[mini]
+                else:
+                    to_merge.append(mini)
+            """
+        Final.session.commit()
 
-            authors_are_equal = True
-            for ma, sa in zip(sorted(m_as), sorted(s_as)):
-                if not utils.SimilarityCalculator.eq_authors(ma, sa):
-                    authors_are_equal = False
+    @staticmethod
+    def mergeByTitle(connector):
+        if connector:
+            minis = connector.session.query(final.MiniBook).filter(final.MiniBook.bookstore == connector.name).all()
+            for mini in minis:
+                master_books = mini.getMasterBooksCandidatesByTitle(connector.session, mini.master.title)
+                mini.master.cmp_with_list(master_books)
+        else:#  Optimized version for all connector at once
+            subq = Final.session.query(final.MiniBook, func.count()).group_by(final.MiniBook.title).having(func.count()>1).subquery()
+            minibooks = Final.session.query(final.MiniBook).join(subq, subq.c.title == final.MiniBook.title).order_by(final.MiniBook.title).all()
 
-            isbns_are_equal = True
-            #len(list(master_book.isbns)) == len(list(specific_book.isbns)) and
-            for mi, si in zip(sorted(master_book.isbns), sorted(specific_book.isbns)):
-                if not utils.SimilarityCalculator.eq_isbns(si, mi):
-                    isbns_are_equal
+            Final.mergeFromBigOrderedQuery(minibooks, lambda mini: mini.title)
 
-
-            titles_are_equal = utils.SimilarityCalculator.eq_titles(master_book.title, specific_book.title)
-
-            if authors_are_equal and isbns_are_equal and titles_are_equal: #super easy case!
-                matched.append(master_book)
-
-        return matched
-
-    def getMasterBooksCandidates(self, session, specific_book):
-        r = []
-
-        #EXACT ISBN
-        for isbn in specific_book.isbns:
-            r.append([mi.master_book for mi in session.query(final.MasterISBN).filter_by(core = isbn.core).all()])
-
-        #TODO: add support for:
-        #Similar ISBN, levenstain() <= 2
-
-
-        #EXACT TITLE
-        r.append(session.query(final.MasterBook).filter_by(title = specific_book.title).all())
-
-        #final.MasterBook.title cointains specific_book.title
-
-        r.append(session.query(final.MasterBook).filter(final.MasterBook.title.contains(specific_book.title)).all())
-        #specific_book.title cointainsfinal.MasterBook.title
-        r.append(session.query(final.MasterBook).filter(bindparam('btitle', specific_book.title).contains(final.MasterBook.title)).all())
-
-        #union on all lists in the list 'r'
-        result = []
-        for list_elem in r:
-            result = list(set(result) | set(list_elem))
-
-        return result
+        Final.session.commit()
 
 
+    @staticmethod
+    def inner_merge(connector):
+        Final.session = connector.session
+
+        #minis = Final.session.query(final.MiniBook).options(joinedload('isbns')).filter(final.MiniBook.bookstore == connector.name).all()
+        minis = Final.session.query(final.MiniBook).options(joinedload('words')).filter(final.MiniBook.bookstore == connector.name).all()
+        #minis = Final.session.query(final.MiniBook).filter(final.MiniBook.bookstore == connector.name).all()
+
+        i = 0
+        no_of_candidates = []
+        no_of_words = []
+        no_of_stop_words = []
+        for mini in minis:
+
+            #candidates = mini.getCandidatesByISBN(connector.session, inner=True)
+            candidates = mini.getCandidatesByTitleWord(connector.session, inner=True)
+            print "inner_merge_mini: " + str(i) + ", len(candidates): " + str(len(candidates))
+
+            no_st = len([word for word in mini.words if word.stopword])
+            no_of_words.append(len(mini.words)-no_st)
+            no_of_stop_words.append(no_st)
+
+
+            for candidate in candidates:
+                #print "inner_merge_mini: " + str(i) + "\t" + str(j)
+                cmp(mini, candidate)
+
+            no_of_candidates.append(len(candidates))
+            i += 1
+
+            if i % 1000== 0:
+                print str(i)
+                print "Srednia liczba kandydatow: " + str(sum(no_of_candidates)/float(len(no_of_candidates)))
+                print "Mediana liczby kandydatow: " + str(sorted(no_of_candidates)[len(no_of_candidates)/2])
+
+                print "Srednia liczba słów w tytule: " + str(sum(no_of_words)/float(len(no_of_words)))
+                print "Mediana liczby słów w tytule: " + str(sorted(no_of_words)[len(no_of_words)/2])
+
+                print "Srednia liczba stopsłów w tytule: " + str(sum(no_of_stop_words)/float(len(no_of_stop_words)))
+                print "Mediana liczby stopsłów w tytule: " + str(sorted(no_of_stop_words)[len(no_of_stop_words)/2])
+
+                Final.session.commit()
+
+
+        Final.session.commit()
+
+    @staticmethod
+    def merge(connector):
+        Final.mergeByISBN(connector)
 
 class FinalBase(object):
     @declared_attr

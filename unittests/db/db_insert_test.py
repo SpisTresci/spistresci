@@ -3,6 +3,7 @@ from datetime import datetime
 
 from unittests.db.db_insert_test_base import DBInsertTestBase
 from connectors.specific.Audiobook import Audiobook
+from models.BookType import BookType
 
 class TestAudiobookUpdate(DBInsertTestBase):
     config_file = 'unittests/data/db/update/conf/audiobook.ini'
@@ -23,6 +24,7 @@ class TestAudiobookUpdate(DBInsertTestBase):
             "authors":[u"Antoine de Saint-Exupery"],
             "audio_time": "108",
             "publisher": "AudioLiber",
+            'book_type_id': BookType.BookType.AUDIOBOOK,
         }])
 
         self._check_if_eq([{
@@ -34,6 +36,7 @@ class TestAudiobookUpdate(DBInsertTestBase):
                 "authors":[u"Antoine de Saint-Exupery"],
                 "audio_time": "128",
                 "publisher": "AudioLiber",
+                'book_type_id': BookType.BookType.AUDIOBOOK,
         }])
 
         self._check_if_eq([{
@@ -45,6 +48,7 @@ class TestAudiobookUpdate(DBInsertTestBase):
                 "authors":[u"Antoine de Saint-Exupery"],
                 "audio_time": "128",
                 "publisher": "AudioLiber",
+                'book_type_id': BookType.BookType.AUDIOBOOK,
         }])
 
         self._check_if_not_eq([{

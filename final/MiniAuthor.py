@@ -1,28 +1,27 @@
 import final
 import utils
+from final.Base.BaseAuthor import *
+from final.Base.BaseMini import *
 from sqlwrapper import *
+
 Base = SqlWrapper.getBaseClass()
 
-class MiniAuthor(final.FinalBase, Base):
-    id = Column(Integer, primary_key = True)
+class MiniAuthor(BaseMini, BaseAuthor, Base):
     master_id = Column(Integer, ForeignKey('MasterAuthor.id'))
-
-    name = Column(STUnicode(255))
-    firstName = Column(Unicode(32))
-    middleName = Column(Unicode(32))
-    lastName = Column(STUnicode(32))
+    #master by backref
 
     firstName_soundex = Column(Integer, index = True, default = 0)
     middleName_soundex = Column(Integer, index = True, default = 0)
     lastName_soundex = Column(Integer, index = True, default = 0)
 
-    name_simplified = Column(STUnicode(255), index = True)
     #lastName_simplified = Column(STUnicode(32))
 
     bookstore = Column(Unicode(16))
     bookstore_author_id = Column(Integer)
 
-    def __init__(self, specificAuthor):
+    def __init__(self, session, specificAuthor):
+        self.session = session
+
         self.name = specificAuthor.name
         self.firstName = specificAuthor.firstName
         self.middleName = specificAuthor.middleName
@@ -44,51 +43,9 @@ class MiniAuthor(final.FinalBase, Base):
         self.bookstore = specificAuthor.__tablename__[:-len("Author")]
         self.bookstore_author_id = specificAuthor.id
 
-    to_normalize = []
-
-    @staticmethod
-    def normalize(session):
-        for mini_author in MiniAuthor.to_normalize:
-            #print "To normalize: " + mini_author.name
-
-            master_authors = MiniAuthor.getMasterAuthorCandidates(session, mini_author)
-
-            equal_master_authors = []
-
-            for master_author in master_authors:
-                if utils.SimilarityCalculator.eq_authors(mini_author, master_author):
-                    equal_master_authors.append(master_author)
-
-            master_author = None
-
-            if len(equal_master_authors) == 0:
-                #create masterAuthor from miniAuthor
-                master_author = final.MasterAuthor(mini_author)
-                master_author.miniAuthors.append(mini_author)
-            elif len(equal_master_authors) == 1:
-                #add miniAuthor to masterAuthor
-                master_author = equal_master_authors[0]
-                master_author.miniAuthors.append(mini_author)
-            elif len(equal_master_authors) > 1:
-                #master should be probably merged
-                ratio = 0.0
-                best_match = None
-                for em in equal_master_authors:
-                    r = utils.SimilarityCalculator.authors_ratio(mini_author, em)
-                    if r > ratio:
-                        best_match = em
-                        ratio = r
-                master_author = best_match
-                master_author.miniAuthors.append(mini_author)
-
-            session.add(master_author)
-            #session.commit()
-
-        MiniAuthor.to_normalize = []
-
-    @staticmethod
-    def normalize_find_candidates(mini_author):
-        pass
+        master_author = final.MasterAuthor(self)
+        master_author.minis.append(self)
+        self.session.add(master_author)
 
     @staticmethod
     def getMasterAuthorCandidates(session, mini_author):

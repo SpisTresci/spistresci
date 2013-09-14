@@ -4,14 +4,10 @@
 from GenericConnector import GenericConnector
 from GenericConnector import GenericBook
 from GenericConnector import GenericISBN
-from GenericConnector import GenericBookDescription
 from GenericConnector import GenericAuthor
 from GenericConnector import GenericBookPrice
 from GenericConnector import GenericBooksAuthors
 from GenericConnector import GenericBase
-
-from GenericConnector import UpdateStatus, UpdateStatusService
-
 from GenericConnector import WrongConnectorModeException
 
 from XMLConnector import XMLConnector

@@ -1,14 +1,13 @@
 import re
 from pyisbn import *
 import glob
+from models.BookType import BookType
+from models.BookType import book_types
 
 class DataValidator(object):
 
     list_of_names = []
-
-    #ks means - paperbook
-    supported_formats = ['cd', 'cd_mp3', 'dvd', 'epub', 'fb2', 'ks', 'mobi', 'mp3', 'pdf', 'txt', 'xml', 'pdf_drm', 'online', 'ebook_unknown', 'audiobook_unknown', 'unknown']
-
+    supported_formats = [x for v in book_types.itervalues() for x in v]
     supported_persons = ['author', 'lector', 'redactor', 'translator']
 
     format_convert_dict = {}
@@ -61,6 +60,7 @@ class DataValidator(object):
             if x not in self.supported_formats:
                 self.erratum_logger.warning("Unsupported format! connector: %s, id: %s, title: %s, formats: %s" % (self.name, id, title, formats))
 
+        dic['book_type'] = BookType.fromFormats(format_list)
         dic['formats'] = format_list
 
 

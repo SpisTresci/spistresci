@@ -13,12 +13,16 @@ import ConfigParser
 from utils import logger_instance
 from utils import DataValidator
 from utils import MultiLevelConfigParser
+from utils.GetOrCreateCache import GetOrCreateCache
 from sqlalchemy.ext.associationproxy import association_proxy
 from sqlalchemy.orm import class_mapper
 import utils
 #interesting thing: utils.Enum is hide by sql_wrapper.Enum
 from sqlwrapper import *
 from connectors import Tools
+from models import *
+from utils.ConfigReader import ConfigReader
+
 Base = SqlWrapper.getBaseClass()
 
 class InvalidContext(RuntimeError):
@@ -41,7 +45,7 @@ class GenericBase(object):
         if not isinstance(context, GenericBase):
             raise InvalidContext("Only not abstract classes that inherit from GenericBase cat use this method")
 
-        for name in ['Author', 'Book', 'BookDescription', 'BooksAuthors', 'ISBN', 'Format', 'UpdateStatus']:
+        for name in ['Author', 'Book', 'BooksAuthors', 'ISBN', 'Format', 'UpdateStatus']:
             if context.name.endswith(name):
                 return GenericBase.registered[context.name[:-len(name)] + className]
         else: #Connector
@@ -57,6 +61,9 @@ class GenericConnector(GenericBase, DataValidator):
     '''
     class ArchiveType(utils.Enum):
         values = ['NONE', 'UNCOMPRESSED', 'BZIP', 'GZ']
+
+    class InnerMerge(utils.Enum):
+        values = ['NONE', 'ALL', 'GROUP']
 
     class BookList_Mode(utils.Enum):
         values = [
@@ -87,57 +94,12 @@ class GenericConnector(GenericBase, DataValidator):
     session_obj_limit = 1000
 
     @classmethod
-    def read_config(cls):
-        cls.config_object = MultiLevelConfigParser()
-        #TODO: our config should be case sensitive, somehow this does not work
-        #cls.config_object.optionxfrom = str
-        if not cls.config_object.read(cls.config_file, force_utf=True):
-            raise ConfigParser.Error('Could not read config from file %s' % cls.config_file)
-
-    @classmethod
     def class_name(cls):
         return cls.__name__
 
     @property
     def name(self):
         return self._name
-
-    def _get_conf_option(self, _list, value, dic):
-        key = _list[0]
-        _list = _list[1:]
-        old_value = {}
-        if type(dic) is dict:
-            old_value = dic.get(key, {})
-        if not type(old_value) is dict:
-            old_value = {'':old_value}
-        if _list:
-            old_value[_list[0]] = self._get_conf_option(_list, value, old_value)
-        else:
-            old_value[''] = value
-        if old_value.keys() == ['']:
-            old_value = old_value['']
-        return old_value
-
-
-    def parse_config(self, config_file='conf/update.ini', section=None, config_object=None):
-        if not config_object:
-            self.read_config()
-        else:
-             self.config_object = config_object
-        if not section:
-           section = self.name
-        self.section = section
-        self.config = {}
-        for item in self.config_object.items(self.section,
-                        vars={'date':datetime.now().strftime('%Y%m%d%H%M%S'),
-                              'connector_lowcase':self.name.lower(),
-                              'connector':self.name}):
-
-            #this is for managaging config options like
-            #option.suboption = 11
-            (key, value) = item
-            splited = key.split('.')
-            self.config[splited[0]] = self._get_conf_option(splited, value, self.config)
 
     def __init__(self, name=None, limit_books=0):
         if not name:
@@ -146,7 +108,10 @@ class GenericConnector(GenericBase, DataValidator):
             self._name = name
         self.limit_books = limit_books
         self.register()
-        self.parse_config(self.config_file)
+        self.config_object = ConfigReader.read_config(self.config_file)
+        self.config = ConfigReader.parse_config(config_object=self.config_object, section = self.name, vars= {'date':datetime.now().strftime('%Y%m%d%H%M%S'),
+                                                                         'connector_lowcase':self.name.lower(),
+                                                                         'connector':self.name})
         self.url = self.config['url']
         self.port = self.config.get('port', '')
         self.database_name = self.config.get('database_name', '')
@@ -166,13 +131,13 @@ class GenericConnector(GenericBase, DataValidator):
         self.filters_config = self.config.get('filters', {})
         self.fulfill = self.config.get('fulfill')
         self.pp_url = self.config.get('pp_url')
+        self.inner_merge = self.InnerMerge.int(self.config.get('inner_merge', 'NONE'))
         if type(self.filters_config) is dict:
             self.filters = self.filters_config.get('')
         else:
             self.filters = self.filters_config
             self.filters_config = {}
         self.fetched_files = []
-        self.update_status = None
         self.update_status_service = None
         self.loadListOfNames()
         self.session_obj_counter = 0
@@ -300,7 +265,9 @@ class GenericConnector(GenericBase, DataValidator):
         self.save_time_of_("parse_start")
         self.before_parse()
         book_number = 0
-        if self.areDataDifferentThanPrevious():
+        if True:#self.areDataDifferentThanPrevious():
+            #for filename in ['unittests/data/master/inner_merge/xml/' + self.name.lower() + ".xml"]:
+            #for filename in ['unittests/data/master_table/alpha_2/' + self.name.lower() + ".xml"]:#self.fetched_files:
             for filename in self.fetched_files:
                 for offer in self.getBookList(filename):
                     book_number += 1
@@ -516,7 +483,7 @@ class GenericConnector(GenericBase, DataValidator):
 
     def howManyNewOffers(self):
         Book = GenericBook.getConcretizedClass(context=self)
-        return  self.session.query(Book).filter(Book.mini_id == None).count()
+        return  self.session.query(Book).filter(Book.mini_book_id == None).count()
 
     def howManyOffersParsed(self):
         pass
@@ -541,7 +508,12 @@ class GenericConnector(GenericBase, DataValidator):
             return True
         self.update_status_service.checksum = self.calculateChecksum()
         self.update_status_service.session.commit()
-        first = self.session.query(UpdateStatusService).filter(UpdateStatusService.service_id == self.update_status_service.service_id, UpdateStatusService.id != self.update_status_service.id, UpdateStatusService.success == True).order_by(UpdateStatusService.timestamp.desc()).first()
+        first = self.session.query(UpdateStatusService)\
+            .filter(UpdateStatusService.service_name == self.update_status_service.service_name,
+                    UpdateStatusService.id != self.update_status_service.id,
+                    UpdateStatusService.success == True)\
+            .order_by(UpdateStatusService.timestamp.desc()).first()
+
         if not first:
             return True
         return first.checksum != self.update_status_service.checksum
@@ -574,7 +546,6 @@ class GenericConnector(GenericBase, DataValidator):
             GenericConnector.rows_initialized = True
 
         Book = GenericBook.getConcretizedClass(context=self)
-        Description = GenericBookDescription.getConcretizedClass(context=self)
         Author = GenericAuthor.getConcretizedClass(context=self)
         BooksAuthors = GenericBooksAuthors.getConcretizedClass(context=self)
         ISBN = GenericISBN.getConcretizedClass(context=self)
@@ -584,9 +555,7 @@ class GenericConnector(GenericBase, DataValidator):
         session = self.session #Session()
         self.session_obj_counter += 1
 
-        search_keys = [c.name for c in Book.__table__.columns if c.unique or c.primary_key]
-        search_keys.remove('id')
-        search_keys.remove('mini_id')
+        search_keys = [c.name for c in Book.__table__.columns if (c.unique or c.primary_key) and c.name not in ['id', 'mini_book_id', 'description_id']]
         get_dict = {}
         for key in search_keys:
             get_dict[key] = d[key]
@@ -596,21 +565,24 @@ class GenericConnector(GenericBase, DataValidator):
         if not book:
             book = Book(d)
             if d.get('description') != None:
-                desc = Description(d)
+                desc = BookDescription(d)
                 book.description = desc
+
+            from models import BookType
+            book.book_type = BookType.get_or_create(session, d['book_type'])
 
             if d.get('isbns') != None:
                 for isbn_d in d['isbns']:
-                    if self.get_(session, ISBN, isbn_d, 'raw',) != None:
-                        isbn = ISBN.get_or_create(session, isbn_d, 'raw')
-                    else:
-                        isbn = ISBN.get_or_create(session, isbn_d, 'core')
-
+                    #if self.get_(session, ISBN, isbn_d, 'raw',) != None:
+                    #    isbn = ISBN.get_or_create(session, isbn_d, 'raw')
+                    #else:
+                    #    isbn = ISBN.get_or_create(session, isbn_d, 'core')
+                    isbn = ISBN(**isbn_d)
                     book.isbns.append(isbn)
 
             if d.get('formats') != None:
                 for format in d['formats']:
-                    f = Format.get_or_create(session, format)
+                    f = Format.get_or_create(session, format, {"name":format})
                     book.formats.append(f)
 
             if d.get('persons') != None:
@@ -618,7 +590,7 @@ class GenericConnector(GenericBase, DataValidator):
                     role = role_dict.keys()[0]
                     list_of_person_dicts = role_dict[role]
 
-                    role_ = PersonRole.get_or_create(session, role)
+                    role_ = PersonRole.get_or_create(session, role, {"name":role})
                     for person_dict in list_of_person_dicts:
                         author = Author.get_or_create(session, person_dict)
                         books_authors = BooksAuthors()
@@ -652,16 +624,28 @@ class GenericBook(GenericBase):
     cover = Column(Unicode(256))
 
     @declared_attr
+    def book_type_id(cls):
+        return Column(Integer, ForeignKey('BookType.id'))
+
+    @declared_attr
+    def book_type(cls):
+        return relationship("BookType")
+
+    @declared_attr
     def declareTablesFor(cls):
         connector_name = cls.__tablename__[:-len("Book")]
-        for table_name in ["BookDescription", "Author", "BookPrice", "BooksAuthors", "ISBN", "BooksFormats", "Format"]:
+        for table_name in ["Author", "BookPrice", "BooksAuthors", "ISBN", "BooksFormats", "Format"]:
             t = 'class %s%s(%s%s, Base): pass' % (connector_name, table_name, "Generic", table_name)
 #            print t
             exec(t)
 
     @declared_attr
+    def description_id(cls):
+        return Column(Integer, ForeignKey('BookDescription.id'), unique=True)
+
+    @declared_attr
     def description(cls):
-        return relationship(cls.__tablename__ + "Description", uselist=False, backref="book")
+        return relationship("BookDescription", uselist=False)
 
     @declared_attr
     def isbns(cls):
@@ -672,7 +656,14 @@ class GenericBook(GenericBase):
         cls.register()
         return cls.__name__
 
-    mini_id = Column(Integer, unique=True)
+    @declared_attr
+    def mini_book_id(cls):
+        return Column(Integer, ForeignKey('MiniBook.id'), unique=True)
+
+    @declared_attr
+    def mini_book(cls):
+        return relationship("MiniBook", uselist=False)
+
     update_timestamp = Column(Integer)
     update_minidata_timestamp = Column(Integer)
 
@@ -760,38 +751,9 @@ class GenericBook(GenericBase):
 
         return updated
 
-
-
     @staticmethod
     def getConcretizedClass(context):
         return GenericBase.getConcretizedClass(context, 'Book')
-
-
-class GenericBookDescription(GenericBase):
-    id = Column(Integer, primary_key=True)
-    description = Column(Unicode(20000)) #TODO: parametr musi byc dynamicznie ustawiany
-
-    @declared_attr
-    def __tablename__(cls):
-        cls.register()
-        return cls.__name__
-
-    @declared_attr
-    def book_id(cls):
-        return Column(Integer, ForeignKey(cls.__tablename__[:-len("Description")] + '.id'))
-
-    def __init__(self, initial_data):
-        try:
-            self.description = initial_data['description']
-        except:
-            exit('Record ' + initial_data + ' doesn\'t have defined desription')
-
-    def __unicode__(self):
-        return unicode(self.description)
-
-    @staticmethod
-    def getConcretizedClass(context):
-        return GenericBase.getConcretizedClass(context, 'BookDescription')
 
 class GenericAuthor(GenericBase):
     id = Column(Integer, primary_key=True)
@@ -846,12 +808,12 @@ class GenericBooksAuthors(GenericBase):
     id = Column(Integer, primary_key=True)
 
     @declared_attr
-    def role_id(cls):
-        return Column(Integer, ForeignKey('PersonRole.id'))
+    def role_name(cls):
+        return Column(Unicode(15), ForeignKey('PersonRole.name'))
 
     @declared_attr
     def role(cls):
-        return relationship(PersonRole)
+        return relationship("PersonRole", uselist=False)
 
     @staticmethod
     def getConcretizedClass(context):
@@ -879,30 +841,6 @@ class GenericBooksAuthors(GenericBase):
         table = cls.registered[name + 'Author']
         return relationship(table, backref=name + "_authorship")
 
-
-class PersonRole(Base):
-    __tablename__ = "PersonRole"
-
-    id = Column(Integer, primary_key=True)
-    name = Column(Unicode(15), unique=True)
-
-    @classmethod
-    def get(cls, session, role):
-        return GenericConnector.get_(session, cls, {"name":role[:-1]}, 'name')
-
-    @classmethod
-    def get_or_create(cls, session, role):
-        return GenericConnector.get_or_create_(session, cls, {"name":role}, 'name')
-
-    @classmethod
-    def init_rows(cls):
-        session = sessionmaker(bind=SqlWrapper.getEngine())()
-        for role in DataValidator.supported_persons:
-            session.add(PersonRole(name=role))
-        session.commit()
-
-SqlWrapper.table_list += ["PersonRole"]
-
 class GenericISBN(GenericBase):
     id = Column(Integer, primary_key=True)
 
@@ -923,10 +861,10 @@ class GenericISBN(GenericBase):
     def get_or_create(cls, session, isbn_dict, param_name):
         return GenericConnector.get_or_create_(session, cls, isbn_dict, param_name)
 
-    raw = Column(Unicode(50), unique=True)
+    raw = Column(Unicode(50))
     core = Column(Unicode(9))
-    isbn10 = Column(Unicode(10), unique=True)
-    isbn13 = Column(Unicode(13), unique=True)
+    isbn10 = Column(Unicode(10))
+    isbn13 = Column(Unicode(13))
     valid = Column(Boolean)
 
 class GenericBooksFormats(GenericBase):
@@ -951,9 +889,10 @@ class GenericBooksFormats(GenericBase):
         name = cls.__tablename__[:-len("BooksFormats")]
         return Column(Integer, ForeignKey(name + 'Format.id'))
 
-class GenericFormat(GenericBase):
+class GenericFormat(GetOrCreateCache, GenericBase):
     id = Column(Integer, primary_key=True)
     name = Column(Unicode(10))
+
     @declared_attr
     def __tablename__(cls):
         cls.register()
@@ -967,85 +906,3 @@ class GenericFormat(GenericBase):
     @staticmethod
     def getConcretizedClass(context):
         return GenericBase.getConcretizedClass(context, 'Format')
-
-    @classmethod
-    def get_or_create(cls, session, format):
-        return GenericConnector.get_or_create_(session, cls, {"name":format}, "name")
-
-class UpdateStatus(Base):
-    __tablename__ = "UpdateStatus"
-
-    id = Column(Integer, primary_key=True)
-    start = Column(DateTime)
-    end = Column(DateTime)
-    manual = Column(Boolean)
-    partial = Column(Boolean)
-    update_status_services = relationship("UpdateStatusService")
-    finished = Column(Boolean, default=False)
-    success = Column(Boolean, default=False)
-
-    session = None
-    def __init__(self, session = None):
-        self.session = session if session else sessionmaker(bind = SqlWrapper.getEngine(), autoflush=True)()
-        self.session.add(self)
-
-SqlWrapper.table_list += ["UpdateStatus"]
-
-class UpdateStatusService(Base):
-    __tablename__ = "UpdateStatusService"
-
-    id = Column(Integer, primary_key=True)
-    update_status_id = Column(Integer, ForeignKey('UpdateStatus.id'))
-
-    service_id = Column(Integer, ForeignKey('Service.id'))
-    service = relationship('Service', uselist=False)
-
-    success = Column(Boolean, default=False)
-
-    checksum = Column(Unicode(32))
-
-    offers = Column(Integer)
-    offers_parsed = Column(Integer)
-    offers_new = Column(Integer)
-    offers_promotion = Column(Integer)
-
-    timestamp = Column(Integer)
-
-    fetch_start = Column(DateTime)
-    fetch_end = Column(DateTime)
-
-    parse_start = Column(DateTime)
-    parse_end = Column(DateTime)
-
-    final_start = Column(DateTime)
-    final_end = Column(DateTime)
-
-    session = None
-
-    def __init__(self, us, connector):
-        self.timestamp = int(time.time())
-        us.update_status_services.append(self)
-        self.service = Service.get_or_create(us.session, connector)
-        connector.update_status_service = self
-        self.session = us.session
-
-SqlWrapper.table_list += ["UpdateStatusService"]
-
-class Service(Base):
-    __tablename__ = "Service"
-
-    id = Column(Integer, primary_key=True)
-    name = Column(Unicode(32), unique=True)
-    website = Column(Unicode(32))
-
-    @classmethod
-    def get_or_create(cls, session, connector):
-        service = session.query(Service).filter_by(name = connector.name).first()
-        return service if service else Service(connector)
-
-    def __init__(self, connector):
-        self.name = connector.name
-        self.website = u"#"   #TODO: add reading info from additional config
-
-
-SqlWrapper.table_list += ["Service"]

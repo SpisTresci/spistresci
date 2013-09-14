@@ -6,6 +6,8 @@ from unidecode import unidecode
 class SimilarityCalculator():
 
     accept_threshold = 0.85
+    session = None
+
 
     ############# AUTHORS ##################
     @staticmethod
@@ -32,15 +34,37 @@ class SimilarityCalculator():
     @staticmethod
     def authors_ratio(a1, a2):
 
-        h = SimilarityCalculator.Helper()
-        if a1.name == a2.name:
+        if a1.master_id == a2.master_id:
             return 1.0
-        else:
-            SimilarityCalculator.lastName(h, a1.lastName, a2.lastName)
-            SimilarityCalculator.firstName(h, a1.firstName, a2.firstName)
-            SimilarityCalculator.middleName(h, a1.middleName, a2.middleName)
 
-            return max(h.result(), ratio(a1.name, a2.name) * 0.8)
+
+        l_id = a1.id if a1.id < a2.id else a2.id
+        h_id = a2.id if a2.id > a1.id else a1.id
+
+
+        cmp_obj = SimilarityCalculator.session.query(final.MiniAuthorCompare)\
+            .filter(final.MiniAuthorCompare.mini_low_id == l_id & final.MiniAuthorCompare.mini_high_id == h_id).first()
+
+        if cmp_obj:
+            return cmp_obj.result
+        else:
+
+            h = SimilarityCalculator.Helper()
+            if a1.name == a2.name:
+                return 1.0
+            else:
+                SimilarityCalculator.lastName(h, a1.lastName, a2.lastName)
+                SimilarityCalculator.firstName(h, a1.firstName, a2.firstName)
+                SimilarityCalculator.middleName(h, a1.middleName, a2.middleName)
+
+                result = max(h.result(), ratio(a1.name, a2.name) * 0.8)
+
+                ma_cmp = final.MiniAuthorCompare(a1, a2, result)
+                session.add(ma_cmp)
+                session.commit()
+
+                return result
+
 
     @staticmethod
     def lastName(h, n1, n2):
@@ -216,6 +240,30 @@ class SimilarityCalculator():
             h.add(p)
 
         return h.result()
+
+
+    @staticmethod
+    def master_master_books_ratio(master_book1, master_book2):
+        if not (isinstance(master_book1, final.MasterBook) and isinstance(master_book2, final.MasterBook)):
+            raise Exception("master_master_books_ratio - wrong argument")
+
+
+
+        matched_authors = mini_MA_len = master_MA_len = 0
+        for ma1 in master_book1.authors:
+            for master_MA in master_book.authors:
+                if mini_MA.master_id == master_MA.id:
+                    matched_authors += 1
+
+
+        h = SimilarityCalculator.Helper()
+        h.add(SimilarityCalculator.titles_ratio(master_book1.title, master_book2.title))
+
+
+
+
+        return h.result()
+
 
     ########### OTHER TOOLS ##################
 

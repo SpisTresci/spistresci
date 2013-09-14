@@ -1,16 +1,10 @@
 import final
 from sqlwrapper import *
 Base = SqlWrapper.getBaseClass()
+from final.Base.BaseAuthor import *
+from final.Base.BaseMaster import *
 
-
-class MasterAuthor(final.FinalBase, Base):
-    id = Column(Integer, primary_key = True)
-    name = Column(STUnicode(255))
-    firstName = Column(Unicode(32))
-    middleName = Column(Unicode(32))
-    lastName = Column(STUnicode(32))
-
-    name_simplified = Column(STUnicode(255))
+class MasterAuthor(BaseMaster, BaseAuthor, Base):
     #lastName_simplified = Column(STUnicode(32))
 
     #TODO: remove
@@ -18,7 +12,7 @@ class MasterAuthor(final.FinalBase, Base):
     #middleName_soundex = Column(Integer, index = True, default = 0)
     lastName_soundex = Column(Integer, index = True, default = 0)
 
-    miniAuthors = relationship("MiniAuthor", backref = backref("masterAuthor", uselist = False))
+    minis = relationship("MiniAuthor", backref = backref("master", uselist = False))
 
     def __init__(self, mini_author):
         if not isinstance(mini_author, final.MiniAuthor):
@@ -36,3 +30,14 @@ class MasterAuthor(final.FinalBase, Base):
         #self.middleName_soundex = mini_author.middleName_soundex
         self.lastName_soundex = mini_author.lastName_soundex
 
+    def mergeWith(self, masterauthors):
+        #todo REMOVE
+        pass
+
+    #########################
+
+    def addMini(self, other):
+        pass
+
+    def removeMini(self, other):
+        pass

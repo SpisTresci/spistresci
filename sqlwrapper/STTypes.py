@@ -1,5 +1,5 @@
 import sqlalchemy
-import sqlalchemy.sql
+
 
 class STUnicode(sqlalchemy.Unicode):
     class comparator_factory(sqlalchemy.Unicode.Comparator):

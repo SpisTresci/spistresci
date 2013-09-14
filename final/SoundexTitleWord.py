@@ -2,10 +2,9 @@ import final
 import utils
 from sqlwrapper import *
 Base = SqlWrapper.getBaseClass()
-
+"""
 class SoundexTitleWord(final.FinalBase, Base):
-    id = Column(Integer, primary_key = True)
-    code = Column(Unicode(5), index = True, unique = True)
+    code = Column(Integer, primary_key = True, index = True)#, unique = True)
 
     @declared_attr
     def words(cls):
@@ -19,10 +18,11 @@ class SoundexTitleWord(final.FinalBase, Base):
 
     @classmethod
     def get_or_create(cls, session, code):
-        obj = SqlWrapper.get_or_create_(session, SoundexTitleWord, {"code":code})
+        obj = SqlWrapper.create_(session, SoundexTitleWord, {"code":code})
         session.add(obj)
 
         if not SqlWrapper.isEgoistStrategyOn():
             session.commit()
 
         return obj
+"""

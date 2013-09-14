@@ -1,18 +1,14 @@
 import final
 from sqlwrapper import *
+from Comparable import *
+from final.Base.BaseISBN import *
+from final.Base.BaseMaster import *
+
 Base = SqlWrapper.getBaseClass()
 
-class MasterISBN(final.FinalBase, Base):
-    id = Column(Integer, primary_key = True)
-
-    raw = Column(Unicode(50))
-    #raw_simplified = Column(STUnicode(50))
-    core = Column(STUnicode(9))
-    isbn10 = Column(Unicode(10))
-    isbn13 = Column(Unicode(13))
-    valid = Column(Boolean)
-
-    miniISBNs = relationship("MiniISBN", backref = backref("masterISBN", uselist = False))
+class MasterISBN(BaseMaster, BaseISBN, Base):
+    book_id = Column(Integer, ForeignKey('MasterBook.id'))
+    minis = relationship("MiniISBN", backref = backref("master", uselist = False))
 
     def __init__(self, mini_isbn):
         if not isinstance(mini_isbn, final.MiniISBN):
@@ -24,3 +20,14 @@ class MasterISBN(final.FinalBase, Base):
         self.isbn10 = mini_isbn.isbn10
         self.isbn13 = mini_isbn.isbn13
         self.valid = mini_isbn.valid
+
+    def __repr__(self):
+        return "[%d](%s)%s" % (self.id, ", ".join([str(mini.id) for mini in self.minis]), self.raw)
+
+    #########################
+
+    def addMini(self, other):
+        pass
+
+    def removeMini(self, other):
+        pass

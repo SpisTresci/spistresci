@@ -182,6 +182,12 @@ class SqlWrapper(object):
         return c
 
     @classmethod
+    def create_(cls, session, ClassName, d, param_name = None):
+        c = ClassName(**d)
+        return c
+
+
+    @classmethod
     def get_(cls, session, ClassName, d, param_name=None):
         if param_name == None:
             return session.query(ClassName).filter_by(**d).first()

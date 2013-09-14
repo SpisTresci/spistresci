@@ -38,6 +38,9 @@ class FormatInTitleConnector(Ceneo):
             self.erratum_logger.warning("Unsupported format! connector: %s, id: %s, title: %s, format: %s" % (self.name, id, title, org_format_string))
             self.erratum_logger.debug("Unsupported format! connector: %s, id: %s, title: %s, format string left is: %s" % (self.name, id, title, format_string))
 
+        from models import BookType
+        dic['book_type'] = BookType.fromFormats(format_list)
+
     def adjust_parse(self, dic):
         title = dic['title']
         split_regex = self.format_in_title_split_regex

@@ -47,7 +47,7 @@ def soundexPL(word):
     word = strtr(word, code_table)
     word = strtr(word, reduce_codes_table)
     word = strtr(word, [('0', '')])
-    word = word[:4] + ('0' * (4 - len(word)))
+    word = word[:5] + ('0' * (5 - len(word)))
     return int(word)
 
 def main():

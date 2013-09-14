@@ -5,22 +5,34 @@ Base = SqlWrapper.getBaseClass()
 
 class TitleWord(final.FinalBase, Base):
     id = Column(Integer, primary_key = True)
-    word = Column(Unicode(32), index = True, unique = True)
+    word = Column(Unicode(32), index = True)
+    soundex = Column(Integer, index = True)
+    mini_book_id = Column(Integer, ForeignKey('MiniBook.id'))
+    stopword = Column(Boolean)
 
-    soundex_id = Column(Integer, ForeignKey('SoundexTitleWord.id'))
+    stopwords = None
 
-    def __init__(self, session, word):
+    def __init__(self, word):
         self.word = word
-        soundex_code = utils.soundexPL(word)
-        soundexTitleWord = final.SoundexTitleWord.get_or_create(session, soundex_code)
-        soundexTitleWord.words.append(self)
+        self.soundex = utils.soundexPL(word)
 
-    @classmethod
-    def get_or_create(cls, session, word):
-        obj = SqlWrapper.get_or_create_(session, TitleWord, {"word":word, "session":session}, "word")
-        session.add(obj)
+        if not self.stopwords:
+            self.loadStopWordList()
 
-        if not SqlWrapper.isEgoistStrategyOn():
-            session.commit()
+        self.stopword = word in self.stopwords
 
-        return obj
+    def loadStopWordList(self):
+        with open("stopwords.txt") as sw:
+            self.stopwords = []
+
+            for line in sw:
+                word = line.strip()
+                if not word.startswith("#"):
+                    self.stopwords.append(word)
+
+            for i in range(0, 9):
+                self.stopwords.append(str(i))
+
+            for letter_code in range(ord('a'), ord('z')+1):
+                self.stopwords.append(chr(letter_code))
+

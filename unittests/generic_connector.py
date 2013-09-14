@@ -3,7 +3,7 @@ from nose.tools import *
 
 from connectors.generic import GenericConnector, GenericBase
 from utils import NoseUtils
-
+from utils import ConfigReader
 from datetime import datetime
 import os
 import shutil
@@ -116,13 +116,13 @@ class TestGenericConnectorWithGenericConfigFileField(TestGenericConnector):
 class TestGenericConnectorWithMockupReadConfigExecuted(TestGenericConnector):
     def setUp(self):
         MockConnector.config_file = 'unittests/data/generic_connector/conf/test.ini'
-        MockConnector.read_config()
+        MockConnector.config_object = ConfigReader.read_config(MockConnector.config_file)
         self.mc = MockConnector()
 
 class TestGenericConnectorWithGenericReadConfigExecuted(TestGenericConnector):
     def setUp(self):
         MockConnector.config_file = 'unittests/data/generic_connector/conf/test.ini'
-        GenericConnector.read_config()
+        MockConnector.config_object = ConfigReader.read_config(MockConnector.config_file)
         self.mc = MockConnector()
 
 class TestExceptionIfRemovingParrentDir(object):

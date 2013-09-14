@@ -1,6 +1,6 @@
 from nose.tools import *
 from connectors.generic import GenericBook
-from connectors.generic import UpdateStatus, UpdateStatusService
+from models import UpdateStatus, UpdateStatusService
 from . import LocalSqlWrapper
 from utils.NoseUtils import neq_
 
@@ -46,33 +46,9 @@ class DBInsertTestBase(object):
                 elif key != "external_id":
                     op_(dic[key], getattr(book, key))
 
+
     def test_tables_created(self):
         eq_(LocalSqlWrapper.getEngine().name, 'mysql')
-        t1 = LocalSqlWrapper.getEngine().table_names()
-        t2 = ['%s%s' % (self.connector.name, table) for table in 'Author', 'Book', 'BookDescription', 'BookPrice', 'BooksAuthors', 'ISBN', 'BooksFormats', 'Format']
-
-        t2 += [
-                    'MasterAuthor',
-                    'MasterBook',
-                    'MasterISBN',
-                    'MiniAuthor',
-                    'MiniBook',
-                    'MiniISBN',
-                    'PersonRole',
-                    'SoundexTitleWord',
-                    'TitleWord',
-                    'master_books_master_authors',
-                    'master_books_master_isbns',
-                    'master_books_title_words',
-                    'mini_books_mini_authors',
-                    'mini_books_mini_isbns',
-                    'mini_books_title_words',
-                    'UpdateStatus',
-                    'UpdateStatusService',
-                    'Service',
-                ]
-
-        t1.sort()
-        t2.sort()
-        for tb1, tb2 in zip(t1, t2):
-            eq_(tb1, tb2)
+        defined_tables = LocalSqlWrapper.getEngine().table_names()
+        generic_tables = ['%s%s' % (self.connector.name, table) for table in 'Author', 'Book', 'BookPrice', 'BooksAuthors', 'ISBN', 'BooksFormats', 'Format']
+        ok_(all(generic in defined_tables for generic in generic_tables))

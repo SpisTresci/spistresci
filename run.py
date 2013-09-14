@@ -9,11 +9,13 @@ from utils.MultiLevelConfigParser import MultiLevelConfigParser
 from utils import logger_instance, filter_varargs
 from connectors import Tools
 from connectors.generic import *
+from models import *
 from sqlwrapper import *
 from datetime import datetime
 from final import Final
+from utils import ConfigReader
 
-def run_update(connector):
+def run_update(connector, args):
     connector.createSession()
 
     connector.fetchData()
@@ -21,21 +23,42 @@ def run_update(connector):
 
     connector.parse()
 
-    f = Final()
-    f.insert(connector)
+    Final.session = connector.session
+    Final.insert(connector)
+    #Final.inner_merge(connector)
+
     connector.closeSession()
 
-def run_update_reference(connector):
+def run_update_reference(connector, args):
     connector.fetchData()
     connector.applyFilters()
     connector.parse()
 
-def run_backup(connector):
+def run_merge(connector, args):
+    connector.createSession()
+    Final.session = connector.session
+
+    from final import MiniBook
+    bookstores = Final.session.query(MiniBook.bookstore).group_by(MiniBook.bookstore).all()
+    bookstores = [bookstore[0] for bookstore in bookstores]
+
+    if all(bookstore in args.connectors for bookstore in bookstores):
+        connector =  None # means, that merge will be done for all connectors
+
+    if args.by == 'isbn':
+        Final.mergeByISBN(connector)
+    elif args.by == 'title':
+        Final.mergeByTitle(connector)
+
+    if not connector:
+        exit()
+
+def run_backup(connector, args):
     #only download, do not unpack
     connector.fetchData(unpack=False)
 
 #use when creating tests
-def run_test_create(connector):
+def run_test_create(connector, args):
     connector.fetchData(download=False)
     connector._parse_make_test_dict()
 
@@ -43,7 +66,7 @@ def run_measure_length(connector):
     connector.fetchData()
     connector._parse_measure_length()
 
-def run_load_backup(connector):
+def run_load_backup(connector, args):
     connector.backup_dir = os.path.join("backup", connector.name.lower())
     for archive in glob.glob(os.path.join(connector.backup_dir, "*")):
         connector.fetched_files = []
@@ -69,7 +92,7 @@ def choose_your_destiny(args, connectors, partial, Logger, us):
         try:
             if us:
                 uss = UpdateStatusService(us, connector)
-            getattr(sys.modules[__name__], 'run_%s' % args.mode)(connector)
+            globals()['run_%s' % args.mode](connector, args)
             if us:
                 uss.success = True
         except Exception:
@@ -96,17 +119,23 @@ def parse_args():
     connectors = [c[0] for c in connector_classnames_list]
 
     parser = argparse.ArgumentParser(formatter_class=RawTextHelpFormatter)
-    parser.add_argument('-m', '--mode', action="store", default="update", choices=['update', 'update-reference', 'backup', 'load-backup', 'test-create', 'measure-length'],
+    parser.add_argument('-m', '--mode', action="store", default="update", choices=['update', 'update-reference', 'merge', 'backup', 'load-backup', 'test-create', 'measure-length'],
                         help=   'Modes:\n\n'
-                                '\tupdate           - [DEFAULT] run update for mentioned services\n'
-                                '\tupdate-reference - run update for mentioned reference services\n'
-                                '\tbackup           - fetch data for each of service. Do not run update.\n'
-                                '\tload-backup      - load backups from backup directory.\n'
-                                '\ttest-create      - create dict for unittests.\n'
-                                '\tmeasure-length   - count size of.\n'
+                                '\tupdate               - [DEFAULT] run update for mentioned services\n'
+                                '\tupdate-reference     - run update for mentioned reference services\n'
+                                '\tmerge                - run proper merge algorithm according to argument <--by>\n'
+                                '\tbackup               - fetch data for each of service. Do not run update.\n'
+                                '\tload-backup          - load backups from backup directory.\n'
+                                '\ttest-create          - create dict for unittests.\n'
+                                '\tmeasure-length       - count size of.\n'
+                                '\tload-services-info   - read information from services.ini\n'
 
                        )
     parser.add_argument('--auto', action="store_false", dest="manual", help='Should be used only by cron.')
+    parser.add_argument('--by', help='Values for --by:\n'
+                                '\tisbn\n'
+                                '\ttitle\n'
+                        )
 
     parser.add_argument('connectors', action="store", nargs="*", choices=connectors + [''], default='', metavar='service_name',
                         help='Names of service to handle, positioned into list of names. Empty list means "FOR EACH".\n\n'
@@ -136,7 +165,7 @@ def main():
     args = parse_args()
 
     GenericConnector.config_file = os.path.join('conf', '%s.ini' % args.mode)
-    GenericConnector.read_config()
+    GenericConnector.config_object = ConfigReader.read_config(GenericConnector.config_file)
     Logger = logger_instance(GenericConnector.config_object.get('DEFAULT', 'log_config'))
 
     #this is dict.items()

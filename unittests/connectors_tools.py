@@ -4,6 +4,7 @@ from nose.tools import *
 from connectors.Tools import *
 from connectors import GenericConnector
 from utils import filter_varargs
+from utils import ConfigReader
 
 
 class FilterableConnector(GenericConnector):
@@ -41,9 +42,7 @@ class TestNotFilterableConnector(object):
 class TestFilterFunctions(object):
 
     def setUp(self):
-        GenericConnector.config_file = 'unittests/data/connectors_tools/conf/test.ini'
-        GenericConnector.read_config()
-        self.config = GenericConnector.config_object
+        self.config = ConfigReader.read_config('unittests/data/connectors_tools/conf/test.ini')
 
     def test_filter_in_list(self):
         eq_(filter_in_list((1,'x'), [2,3]), False)
