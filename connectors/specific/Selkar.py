@@ -1,8 +1,6 @@
 from connectors.generic import XMLConnector
 from connectors.Tools import notFilterableConnector
 import lxml.etree as et
-import os
-import sys
 from sqlwrapper import *
 from connectors.generic import GenericBook
 
@@ -59,25 +57,26 @@ class Selkar(XMLConnector):
 
     def parse(self):
         self.save_time_of_("parse_start")
-        for (key, root) in self.fetched_xmls.items():
-            itemstag = root.find('items')
-            if itemstag:
-                items = list(itemstag)
-            else:
-                items = []
-            if self.limit_books:
-                itemss = items[:self.limit_books]
-            for book in items:
-                dic = self.makeDict(book)
-                #print dic
-                self.validate(dic)
-                #print dic
-                #self.measureLenghtDict(dic)
-                self.add_record(dic)
+        book_number = 0
+        if self.areDataDifferentThanPrevious():
+            for (key, root) in self.fetched_xmls.items():
+                itemstag = root.find('items')
+                if itemstag:
+                    items = list(itemstag)
+                else:
+                    items = []
+                if self.limit_books:
+                    items = items[:self.limit_books]
+                for book in items:
+                    book_number += 1
+                    dic = self.makeDict(book)
+                    self.validate(dic)
+                    self.add_record(dic)
 
-        #print self.max_len
-        #for key in self.max_len_entry.keys():
-        #    print key+": "+ unicode(self.max_len_entry[key])
+            self.session.commit()
+            self.save_info_about_offers(offers_parsed = book_number)
+        else:
+            self.save_info_about_offers(offers_new = 0)
         self.save_time_of_("parse_end")
 
     def fetchData(self, unpack = True):
@@ -104,6 +103,7 @@ class Selkar(XMLConnector):
                 i += 1
                 page += 1
 
+        self.fetched_files = self.fetched_xmls.keys() #calculateChecksum reads data from self.fetched_files
         self.save_time_of_("fetch_end")
 
     def validate(self, dic):

@@ -497,6 +497,7 @@ class GenericConnector(GenericBase, DataValidator):
         if not self.update_status_service:
             return True
         self.update_status_service.checksum = self.calculateChecksum()
+        self.update_status_service.session.commit()
         first = self.session.query(UpdateStatusService).filter(UpdateStatusService.service_id == self.update_status_service.service_id, UpdateStatusService.id != self.update_status_service.id, UpdateStatusService.success == True).order_by(UpdateStatusService.timestamp.desc()).first()
         if not first:
             return True
