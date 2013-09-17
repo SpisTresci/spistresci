@@ -39,7 +39,7 @@ class Selkar(XMLConnector):
         'authors': ('author', ''),
         'translators': ('translator', ''),
         'cover': ('image', ''),
-        'publication_date': ('published', ''),
+        'date': ('published', ''),
         'publisher': ('publisher', ''),
         'page_count': ('pages', 0),
         'size': ('dimensions', ''),
@@ -118,7 +118,7 @@ Base = SqlWrapper.getBaseClass()
 class SelkarBook(GenericBook, Base):
     status = Column(Boolean)
     isbn = Column(Unicode(13))          #13
-    publication_date = Column(Date)
+    date = Column(Date)
     ean = Column(Unicode(13))           #15
     price = Column(Integer)             #GROSZE!!!
     page_count = Column(Integer)

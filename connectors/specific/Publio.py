@@ -10,7 +10,7 @@ class Publio(XMLConnector):
         'title':('./title', ''),
         'authors':('./authors', ''),
         'formats':('./formats', ''),
-        'protectionType':('./protectionType', ''),  #???
+        'protection':('./protectionType', ''),  #???
         'price':('./price', ''),
         'url':('./productUrl', ''),
         'cover':('./imageUrl', ''),
@@ -32,5 +32,5 @@ class PublioBook(GenericBook, Base):
     #isbns
     publisher = Column(Unicode(128))
 
-    #protectionType - TODO T331
+    #protection - TODO T331
     #categories - TODO T334

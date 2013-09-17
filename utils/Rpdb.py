@@ -16,7 +16,7 @@ class debug(object):
         self.unencrypted = unencrypted
 
     def __call__(self, f):
-        def wrapped(*args):
+        def wrapped(*args, **kwargs):
             debug._break(self.remote, self.unencrypted)
             f(*args, **kwargs)
         return wrapped

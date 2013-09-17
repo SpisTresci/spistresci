@@ -36,7 +36,7 @@ def run_backup(connector):
 
 #use when creating tests
 def run_test_create(connector):
-    connector.fetchData()
+    connector.fetchData(download=False)
     connector._parse_make_test_dict()
 
 def run_measure_length(connector):
@@ -88,6 +88,7 @@ def close_update_status(us, succeed):
         us.session.close()
 
 def parse_args():
+
     config_object = MultiLevelConfigParser()
     config_object.read('conf/update.ini', force_utf=True)
 
@@ -140,6 +141,7 @@ def main():
 
     #this is dict.items()
     config_connector_classnames_list = Tools.get_classnames(GenericConnector.config_object).items()
+
     args_connector_classnames_list = filter_varargs(Tools.filter_in_list, config_connector_classnames_list, True, args.connectors)
     connector_classnames_list = filter_varargs(Tools.filter_disabled, args_connector_classnames_list, False, GenericConnector.config_object, Logger)
 

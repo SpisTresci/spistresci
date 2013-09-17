@@ -14,7 +14,8 @@ class Czytio(XMLConnector):
         'isbns': ('./isbn', ''),
         'cover': ('./cover', ''),
         'price': ('./price', 0),
-        'size': ('./size', 0),
+        'file_size': ('./size', 0),
+        'page_count' : ('./length', 0),
     }
 
 Base = SqlWrapper.getBaseClass()
@@ -26,4 +27,5 @@ class CzytioBook(GenericBook, Base):
     #authors
     cover = Column(Unicode(128))        #118
     price = Column(Integer)             #GROSZE!!!
-    size = Column(Integer)              #GROSZE!!!
+    file_size = Column(Integer)
+    page_count = Column(Integer)           
