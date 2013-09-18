@@ -35,7 +35,7 @@ class HelionBase(XMLConnector):
         'is_new': ('./nowosc', ''),
         'promotion_name': ('./promocja', ''),
         'linked': ('./powiazane/ident_powiazany', ''), 
-        'thematic_series': ('./serietematyczne/serietematyczna', ''),
+        'thematic_series': ('./serietematyczne/seriatematyczna', ''),
         'series': ('./seriewydawnicze/seriawydawnicza', ''),
         'mass': ('./ksiegarnie_nieinter/waga', ''),
         'status2': ('./ksiegarnie_nieinter/status2', ''),
@@ -59,9 +59,9 @@ class HelionBase(XMLConnector):
         self.validatePrice(dic, id, title, 'discount')
         super(HelionBase, self).validate(dic)
 
-
     def adjust_parse(self, dic):
-        dic['name_of_promotion'] = utils.Str.listToUnicode(dic.get('name_of_promotion'))
+        for key in ['promotion_name', 'thematic_series', 'series', 'linked']:
+            dic[key] = utils.Str.listToUnicode(dic.get(key))
 
     
     #statuses = {
@@ -103,7 +103,7 @@ class HelionBaseBook(GenericBook):
     is_bestseller = Column(Boolean)
     is_new = Column(Boolean)
     name_of_promotion = Column(Unicode(128))           #29
-    linked = Column(Unicode(32))                                            #12 #TODO: T285
+    linked = Column(Unicode(128))                                            #12 X 5 #TODO: T285
     #thematic_series
     #series
 

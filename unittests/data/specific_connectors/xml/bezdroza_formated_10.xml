@@ -1,0 +1,792 @@
+<?xml version="1.0" encoding="iso-8859-2"?>
+<!--
+	    Dane z dnia: śro, 18 wrz 2013, 02:08:22 CEST
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ Ze względu na wielkość pliku XML, proszę o ściąganie wersji produkty-bezdroza.xml.zip
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+            Jeśli będziesz sprzedawał książki w PP, to użyj pola <status>:
+
+		0 - niedostepna
+		1 - dostepna
+		2 - w przygotowaniu
+		5 - druk na żądanie
+		7 - przedsprzedaz
+	    oraz <cena>, <cenadetaliczna> (ceny takie jak na stronach GW Helion : moga zawierac znizki itp.)
+
+	    dla ksiegarni internetowych (wspolpraca z dzialem handlowym, ehelion) użyj pola <status2>:
+
+    		1 - dostępna
+		2 - dostępna w małej ilości
+		3 - chwilowo niedostępna
+		4 - niedostępna
+		5 - POD
+		6 - w przygotowaniu
+		7 - w przedsprzedaży
+            oraz pola <ksiegarnie_nieinter> gdzie znajduja sie wszystkie dane odnosnie ceny netto, brutto, stawka VAT
+
+		<typ>:
+			1 - ksiazka
+			2 - ebook
+			3 - audiobook mp3
+			4 - audiocd mp3
+
+		<marka>:
+			1 - helion
+			2 - onepress
+			3 - editio
+			4 - sensus
+			5 - septem
+			6 - bezdroza
+			8 - podrecznik
+			11 - bezdroża obce
+
+Zmiany:
+09.02.2011 @MJJ dolożenie elementu <typ>
+15.06.2011 @MJJ dodanie pliku lista2-statusy.xml z samymi statusami, cenami
+21.12.2011 @TKr seolinki, zagregowane formaty ebooków
+23.01.2012 @TKr info o promocjach, lista promocji serwis.pl/xml/lista-promocje.cgi
+15.06.2012 @TKr dodane info o audiobookach
+29.08.2012 @TKr dodane md5 jako wßkaźnik zmiany informacji w książce
+
+		Kontakt: Michal Jęczalik <michal.jeczalik@helion.pl>
+-->
+<details>
+  <lista baza="bezdroza">
+    <ksiazka ident="AKTSTU">
+      <isbn>83-246-2472-4</isbn>
+      <ean>9788324624720</ean>
+      <ident>AKTSTU</ident>
+      <tytul language="polski">Fotografia obnażona. Mistrzowskie sesje aktu</tytul>
+      <link>http://bezdroza.pl/ksiazki/fotografia-obnazona-mistrzowskie-sesje-aktu-radoslaw-brzozowski,aktstu.htm</link>
+      <autor>Radosław Brzozowski</autor>
+      <status>1</status>
+      <cena>39.00</cena>
+      <cenadetaliczna>39.00</cenadetaliczna>
+      <znizka>0.00</znizka>
+      <marka>1</marka>
+      <nazadanie>0</nazadanie>
+      <format>200x230</format>
+      <typ>1</typ>
+      <oprawa>miękka</oprawa>
+      <wydawca>Helion</wydawca>
+      <liczbastron>192</liczbastron>
+      <datawydania>2011-05-04</datawydania>
+      <online>http://pdf.helion.pl/aktstu/aktstu-6.pdf</online>
+      <okladka>http://bezdroza.pl/okladki/326x466/aktstu.jpg</okladka>
+      <okladkatyl>http://bezdroza.pl/okladki-tyl/326x466/aktstu.jpg</okladkatyl>
+      <issueurl>http://bezdroza.pl/eksiazki/aktstu.htm</issueurl>
+      <bestseller>0</bestseller>
+      <nowosc>0</nowosc>
+      <serietematyczne>
+        <seriatematyczna id="21">Fotografia</seriatematyczna>
+      </serietematyczne>
+      <ksiegarnie_nieinter>
+        <waga>0.54</waga>
+        <status2>4</status2>
+        <cena_netto>37.14</cena_netto>
+        <cena_brutto>39</cena_brutto>
+        <vat>1.86</vat>
+        <vat_procent>5</vat_procent>
+      </ksiegarnie_nieinter>
+      <opis><![CDATA[<blockquote><i>
+Akt nie jest zwykłym przedstawieniem ciała, lecz odnosząc je przez analogie do wszystkich struktur, jakie stały się częścią naszego doświadczenia wyobrażeniowego, uświadamia nam istnienie uniwersalnego porządku 
+<br><div align="right">Tomasz Lewicki</div></i>
+</blockquote>
+
+<div align="center"><h4><b> Piękna kompozycja ciała: </b></h4></div>
+<ul>
+<li>Modelowanie bryły ludzkiego ciała</li>
+<li>Mistrzowskie manipulacje światłem i cieniem</li>
+<li>Tworzenie atmosfery zaufania na sesji zdjęciowej</li>
+<li>Wykorzystywanie kreatywnych zabiegów fotograficznych </li>
+</ul>
+
+<br />
+<div align="center"><h4><b>Dowiedz się, jak stworzyć profesjonalne studio fotograficzne. Opanuj światło, wykorzystaj opcje, które daje Ci Twój sprzęt, i osiągaj zamierzone efekty.</b></h4></div>
+
+
+<p>Akt to nie tylko golizna. To zaklęte w obrazie za pomocą techniki fotograficznej najgłębsze ludzkie emocje. A brak ubrania jest jedynie dosadnym narzędziem wyrazu.
+Ludzka fizyczność od zawsze fascynowała, inspirowała i niepokoiła artystów, rozwijała ich warsztat i wzbogacała dziedzictwo historii sztuki. Nie ma drugiego tak wdzięcznego i kontrowersyjnego tematu jak nagie ciało. Odrzucane w średniowieczu, gloryfikowane przez renesans, w końcu na stałe rozgościło się w malarstwie i rzeźbie, by wreszcie w 1840 roku zawędrować na kliszę fotograficzną. </p>
+<p>Akt jest swoistym hołdem dla piękna ludzkiego (najczęściej kobiecego) ciała. Dzięki solidnemu warsztatowi fotografika, właściwemu sprzętowi, umiejętnemu operowaniu światłem i cieniem oraz zaufaniu między artystą a modelką powstają zachwycające dzieła. Delikatne, subtelne, eteryczne... lub też prowokujące, wyrafinowane i drapieżne. Zdjęcia mówiące więcej niż tysiąc słów. Obrazy przedstawiające żywe emocje, pragnienia, oddanie, erotyczną pasję. Kuszące seksem, kokietujące zmysły i wyobraźnię, zapraszające do intymnego świata. Albo wykorzystujące nagość i bryłę ludzkiego ciała jedynie jako instrumenty tworzące niebanalny obraz.</p>
+
+<div align="center"><h4><b> Odczaruj zaklęty świat studia </b></h4></div>
+<ul>
+<li>Przygotowanie sesji: dbałość o odpowiednie warunki i aspekty techniczne oraz współpraca z modelką.</li>
+<li>Sprzęt: statyw, teleobiektyw, blenda, sprzęt oświetleniowy, tła, meble, kosmetyki i dodatki.</li>
+<li>Światło i możliwości manipulowania cieniem: praca z jedną lub kilkoma lampami i końcówkami modelującymi światło.</li>
+<li>Efekty specjalne: zmiana kontrastu, korekty, konwersja do obrazu czarno-białego, tonowanie i wyostrzanie zdjęcia.</li>
+</ul>	
+
+<hr />
+<a href="http://swiatobrazu.pl" target="blank"><img src="http://helion.pl/img/rozne/patroni/swiatobrazu.jpg" />
+</a><img src="http://helion.pl/img/rozne/patroni/swiataktu.jpg" />
+</a><img src="http://helion.pl/img/rozne/patroni/plfoto.jpg" />
+</a><img src="http://helion.pl/img/rozne/patroni/obiektywni.jpg" />	]]></opis>
+      <md5>0ccab381d335813bceeb3ba30595906f</md5>
+    </ksiazka>
+    <ksiazka ident="AKTY">
+      <isbn>978-83-246-0789-1</isbn>
+      <ean>9788324607891</ean>
+      <ident>AKTY</ident>
+      <tytul language="polski">Akty. Fotografia cyfrowa dla profesjonalistów</tytul>
+      <tytul language="oryginal">Mastering Digital Nude Photography: The Serious Photographer</tytul>
+      <link>http://bezdroza.pl/ksiazki/akty-fotografia-cyfrowa-dla-profesjonalistow-roderick-macdonald,akty.htm</link>
+      <autor>Roderick Macdonald</autor>
+      <tlumacz>Tomasz Żmijewski</tlumacz>
+      <status>0</status>
+      <cena>79.00</cena>
+      <cenadetaliczna>79.00</cenadetaliczna>
+      <znizka>0.00</znizka>
+      <marka>1</marka>
+      <nazadanie>0</nazadanie>
+      <format>B5</format>
+      <typ>1</typ>
+      <oprawa>twarda</oprawa>
+      <wydawca>Helion</wydawca>
+      <liczbastron>408</liczbastron>
+      <datawydania>2007-04-03</datawydania>
+      <online>http://pdf.helion.pl/akty/akty-3.pdf</online>
+      <okladka>http://bezdroza.pl/okladki/326x466/akty.jpg</okladka>
+      <bestseller>0</bestseller>
+      <nowosc>0</nowosc>
+      <powiazane>
+        <ident_powiazany>AMERYK</ident_powiazany>
+        <ident_powiazany>BEBBH5</ident_powiazany>
+        <ident_powiazany>BEBIAL</ident_powiazany>
+        <ident_powiazany>BEMAJA</ident_powiazany>
+        <ident_powiazany>BEMAL1</ident_powiazany>
+        <ident_powiazany>BESARD</ident_powiazany>
+        <ident_powiazany>BEVVC6</ident_powiazany>
+        <ident_powiazany>BEZAMO</ident_powiazany>
+        <ident_powiazany>BMLMZ7</ident_powiazany>
+        <ident_powiazany>BRSYC1</ident_powiazany>
+        <ident_powiazany>BZCSB1</ident_powiazany>
+        <ident_powiazany>MATRIO</ident_powiazany>
+      </powiazane>
+      <serietematyczne>
+        <seriatematyczna id="21">Fotografia</seriatematyczna>
+      </serietematyczne>
+      <ksiegarnie_nieinter>
+        <waga>0.96</waga>
+        <status2>3</status2>
+        <cena_netto>75.24</cena_netto>
+        <cena_brutto>79</cena_brutto>
+        <vat>3.76</vat>
+        <vat_procent>5</vat_procent>
+      </ksiegarnie_nieinter>
+      <opis><![CDATA[<div align="center"><h4><b> Poszerz swoje artystyczne horyzonty </b></h4></div> 
+<ul>
+<li> Dowiedz się, jak przygotować i przeprowadzić sesję </li>
+<li> Naucz się wydobywać piękno z modelki </li>
+<li> Zobacz, co można zrobić ze zdjęciem przy użyciu komputera </li>
+</ul>
+<p> Ciało człowieka od zawsze wzbudzało zainteresowanie artystów i było jednym z najważniejszych tematów w malarstwie oraz rzeźbie. Także w fotografii artystycznej akty, fotografie glamour, zdjęcia erotyczne czy pejzaże ciała dają artystom możliwość ekspresji i kreowania niepowtarzalnych dzieł. Obecnie, dzięki popularności aparatów cyfrowych, fotograficy zyskali dużo większą swobodę w zakresie eksperymentowania ze swoimi pracami. Jednak wciąż tworzenie profesjonalnych i artystycznych zdjęć wymaga dużej wiedzy oraz kreatywności. </p>
+
+<P> Czytając książkę "Akty. Fotografia cyfrowa dla profesjonalistów", rozwiniesz swój warsztat w zakresie fotografowania aktów. Dowiesz się, jak dobrać odpowiedni sprzęt do wykonywania aktów i jak wydobyć z modelki to "coś", co sprawi, że Twoje zdjęcia będą unikalne. Nauczysz się manipulować oświetleniem, wykorzystywać cienie do tworzenia ciekawszych fotografii oraz przygotowywać i prowadzić sesje zarówno w plenerze, jak i w profesjonalnym studio. Poznasz techniki, które pomogą Ci rozwinąć swoją kreatywność, a także opanujesz metody obróbki zdjęć. </p>
+<ul>
+<li> Dobór parametrów aparatu </li>
+<li> Korzystanie z oprogramowania </li>
+<li> Współpraca z modelką </li>
+<li> Manipulowanie oświetleniem </li>
+<li> Sesje w studio i w plenerze </li>
+<li> Ciekawe tematy i pozy </li>
+<li> Cyfrowa obróbka zdjęć </li>
+</ul>
+<div align="center"><h4><b> Rozwiń swój warsztat i odkryj świat aktów. </b></h4></div> 
+<br /> <center><img src="/img/rozne/rozne/inne.jpg" alt="" border=0></center><br /> 	]]></opis>
+      <md5>a376f32d27c3fb342ead4f42c7e9f025</md5>
+    </ksiazka>
+    <ksiazka ident="ALMAFO">
+      <isbn>978-83-246-2778-3</isbn>
+      <ean>9788324627783</ean>
+      <ident>ALMAFO</ident>
+      <tytul language="polski">Almanach fotografii. Wydanie X</tytul>
+      <tytul language="oryginal">Photography (10th Edition)</tytul>
+      <link>http://bezdroza.pl/ksiazki/almanach-fotografii-wydanie-x-barbara-london-john-upton-jim-stone,almafo.htm</link>
+      <autor>Barbara London, John Upton, Jim Stone</autor>
+      <tlumacz>Marcin Machnik</tlumacz>
+      <status>1</status>
+      <cena>119.00</cena>
+      <cenadetaliczna>119.00</cenadetaliczna>
+      <znizka>0.00</znizka>
+      <marka>1</marka>
+      <nazadanie>0</nazadanie>
+      <format>260x273</format>
+      <typ>1</typ>
+      <oprawa>miękka</oprawa>
+      <wydawca>Helion</wydawca>
+      <liczbastron>416</liczbastron>
+      <datawydania>2011-05-23</datawydania>
+      <online>http://pdf.helion.pl/almafo/almafo-13.pdf</online>
+      <okladka>http://bezdroza.pl/okladki/326x466/almafo.jpg</okladka>
+      <okladkatyl>http://bezdroza.pl/okladki-tyl/326x466/almafo.jpg</okladkatyl>
+      <issueurl>http://bezdroza.pl/eksiazki/almafo.htm</issueurl>
+      <bestseller>0</bestseller>
+      <nowosc>0</nowosc>
+      <powiazane>
+        <ident_powiazany>BEALB1</ident_powiazany>
+        <ident_powiazany>BEBBH5</ident_powiazany>
+        <ident_powiazany>BECYP1</ident_powiazany>
+        <ident_powiazany>BEIZR1</ident_powiazany>
+        <ident_powiazany>BEMAJA</ident_powiazany>
+        <ident_powiazany>BEMAL1</ident_powiazany>
+        <ident_powiazany>BEWKA1</ident_powiazany>
+        <ident_powiazany>BKTKR4</ident_powiazany>
+        <ident_powiazany>BRANF2</ident_powiazany>
+        <ident_powiazany>BZCSB1</ident_powiazany>
+        <ident_powiazany>MATRIO</ident_powiazany>
+        <ident_powiazany>O_04B5</ident_powiazany>
+      </powiazane>
+      <serietematyczne>
+        <seriatematyczna id="21">Fotografia</seriatematyczna>
+      </serietematyczne>
+      <ksiegarnie_nieinter>
+        <waga>1.70</waga>
+        <status2>1</status2>
+        <cena_netto>113.33</cena_netto>
+        <cena_brutto>119</cena_brutto>
+        <vat>5.67</vat>
+        <vat_procent>5</vat_procent>
+      </ksiegarnie_nieinter>
+      <opis><![CDATA[<blockquote><i>Myśl o zdjęciu zawsze przed jego zrobieniem i potem. Nigdy w trakcie. Sekretem jest czas. Nie musisz działać szybko. Fotografowany model musi zapomnieć o tobie, a gdy już to się stanie, musisz działać bardzo szybko.
+<br><div align="right">Henri Cartier-Bresson</div></i>
+</blockquote>
+ 
+<blockquote><i>
+Fotografia nie jest związana z patrzeniem, lecz z czuciem. Jeżeli nie czujesz nic w tym, na co patrzysz, nigdy nie uda Ci się sprawić, aby ludzie patrząc na Twoje zdjęcia, cokolwiek odczuwali. 
+<br><div align="right">Don McCullin </div></i>
+</blockquote>
+
+<p>Fotografia jest pasją, sztuką i rzemiosłem. Czasem staje się obsesją, która szukając twórczego ujścia, zmienia zwyczajne zdjęcia w prawdziwe dzieła sztuki. Ta książka powstała po to, by zwiększyć Twoją wrażliwość wizualną, nadać Twojemu warsztatowi niezbędny szlif i pokazać Ci możliwości, jakie stoją przed głodnym wiedzy pasjonatem, takim jak Ty. </p>
+<p>To prawdziwa biblia w dziedzinie fotografii. Pozwoli Ci ona udoskonalić umiejętności, a przede wszystkim będzie stanowiła źródło niewyczerpanych inspiracji. Niezależnie od tego, co chcesz fotografować, ta książka nauczy Cię wszystkiego, co niezbędne, żeby skutecznie i pewnie poruszać się po świecie nieruchomych obrazów. To idealny przewodnik dla początkujących i idealne źródło informacji dla zaawansowanych fotografów.</p>
+<p>Znajdziesz tu wiadomości na temat konwencjonalnej fotografii analogowej i tej nowszej, cyfrowej. Setki zdjęć wykonanych przez najlepszych światowych fotografów pozwolą Ci zrozumieć, jak w swojej pracy z aparatem wykorzystywać różnego typu pomysły techniczne. </p>
+
+<div align="center"><h4><b> Nowy, doskonały świat w Twoim obiektywie </b></h4></div>
+<ul>
+<li>Aparaty cyfrowe i analogowe: obiektywy, matryce i filmy, naświetlanie, wywoływanie i uzyskiwanie zdjęć z czarno-białych klisz oraz teoria koloru i jej wykorzystanie w praktyce.</li>
+<li>Cyfrowa ciemnia: obrabianie i drukowanie zdjęć, tworzenie systemu pozwalającego na ich bezpieczne przechowywanie i łatwe wyszukiwanie.</li>
+<li>Fotografie współczesne i historyczne: pomoc w osiągnięciu technicznej i artystycznej doskonałości.</li>
+<li>Oglądanie fotografii: kompozycja, tonalność, ostrość i inne elementy wizualne, których poznanie sprawi, że będziesz robić lepsze zdjęcia oraz oglądać prace innych okiem wytrawnego konesera.</li>
+<li>Historia: poznaj historię fotografii, dzięki czemu będziesz w stanie umieścić współczesne prace - w tym własne - w kontekście historycznym.</li>
+<li>Ilustrowany dodatek: różne problemy techniczne, ich przyczyny oraz sposoby zapobiegania.</li>
+</ul>
+<div style="background-color:white;"><hr><b>Książkę poleca redakcja Digital Foto Video:</b><br><br>
+<img src="http://helion.pl/img/rozne/patroni/almafo/almafo.png">
+<hr />
+<a href="http://swiatobrazu.pl" target="blank"><img src="http://helion.pl/img/rozne/patroni/FOTSLU/swiatobrazu.jpg" />
+<a href="http://www.foto.com.pl/" target="blank"><img src="http://helion.pl/img/rozne/patroni/FOTSLU/foto.jpg" />
+</a><img src="http://helion.pl/img/rozne/patroni/FOTSLU/swiataktu.jpg" />
+</a><img src="http://helion.pl/img/rozne/patroni/FOTSLU/plfoto.jpg" />
+</a><img src="http://helion.pl/img/rozne/patroni/FOTSLU/obiektywni.jpg" /></div>	]]></opis>
+      <md5>9b59de4236dd5e1b53d082ff9342e449</md5>
+    </ksiazka>
+    <ksiazka ident="AMERTW">
+      <isbn>978-83-246-6389-7</isbn>
+      <ean>9788324663897</ean>
+      <ident>AMERTW</ident>
+      <tytul language="polski">Wałkowanie Ameryki (twarda oprawa)</tytul>
+      <link>http://bezdroza.pl/ksiazki/walkowanie-ameryki-twarda-oprawa-marek-walkuski,amertw.htm</link>
+      <autor>Marek Wałkuski</autor>
+      <status>1</status>
+      <cena>44.90</cena>
+      <cenadetaliczna>44.90</cenadetaliczna>
+      <znizka>0.00</znizka>
+      <marka>3</marka>
+      <nazadanie>0</nazadanie>
+      <format>140x208</format>
+      <typ>1</typ>
+      <oprawa>twarda</oprawa>
+      <wydawca/>
+      <liczbastron>312</liczbastron>
+      <datawydania>2012-09-17</datawydania>
+      <online>http://pdf.helion.pl/amertw/amertw.pdf</online>
+      <okladka>http://bezdroza.pl/okladki/326x466/amertw.jpg</okladka>
+      <okladkatyl>http://bezdroza.pl/okladki-tyl/326x466/amertw.jpg</okladkatyl>
+      <issueurl>http://bezdroza.pl/eksiazki/amertw.htm</issueurl>
+      <bestseller>0</bestseller>
+      <nowosc>0</nowosc>
+      <powiazane>
+        <ident_powiazany>BEBBH5</ident_powiazany>
+        <ident_powiazany>BECYP1</ident_powiazany>
+        <ident_powiazany>BEIZR1</ident_powiazany>
+        <ident_powiazany>BEMAJA</ident_powiazany>
+        <ident_powiazany>BEWKA1</ident_powiazany>
+        <ident_powiazany>BIEGAN</ident_powiazany>
+        <ident_powiazany>BRANF2</ident_powiazany>
+        <ident_powiazany>BRATE1</ident_powiazany>
+        <ident_powiazany>BRSYC1</ident_powiazany>
+        <ident_powiazany>FOTPOD</ident_powiazany>
+        <ident_powiazany>O_038A</ident_powiazany>
+        <ident_powiazany>POLMAR</ident_powiazany>
+      </powiazane>
+      <serietematyczne>
+        <seriatematyczna id="3">Książki podróżnicze</seriatematyczna>
+      </serietematyczne>
+      <ksiegarnie_nieinter>
+        <waga>0.48</waga>
+        <status2>1</status2>
+        <cena_netto>42.76</cena_netto>
+        <cena_brutto>44.9</cena_brutto>
+        <vat>2.14</vat>
+        <vat_procent>5</vat_procent>
+      </ksiegarnie_nieinter>
+      <opis><![CDATA[<div align="right"><h4><b>Książka dostępna również w miękkiej oprawie >></font></b></h4></div>
+
+
+<div align="center"><h4><b>Ameryka w oczach (i uszach) korespondenta Polskiego Radia</b></h4></div>
+<p>Światowe supermocarstwo czy kolos na glinianych nogach? Ostoja wolności i demokracji czy dżungla, w której ludzie sami wymierzają sprawiedliwość? Przystań dla imigrantów czy miejsce, gdzie przybysze z zagranicy są obywatelami drugiej kategorii? Neutralne światopoglądowo państwo czy kraj fanatyków religijnych? Jakie naprawdę są Stany Zjednoczone? I jacy są Amerykanie? Inteligentni, życzliwi, otwarci, bezpośredni i optymistyczni? A może niedouczeni, zarozumiali, ograniczeni, nietolerancyjni i aroganccy? Otwarci na świat czy zaściankowi? Pewni siebie czy zakompleksieni? </p><br /><br />
+
+<div align="center"><iframe width="400" height="247" src="http://www.youtube.com/embed/kVk7_IE9CZE" frameborder="0" allowfullscreen></iframe></div><br />
+
+
+<p>Oddajemy w ręce Czytelnika książkę Marka Wałkuskiego, dziennikarza radiowej "Trójki" i wieloletniego korespondenta Polskiego Radia w Waszyngtonie. W charakterystyczny dla siebie, dowcipny i przenikliwy sposób autor opowiada o życiu w Stanach Zjednoczonych i specyfice tego wielkiego kraju, z jego ogromną powierzchnią, liczbą mieszkańców, różnorodnością kulturową, kontrastami społecznymi i wyzwaniami, jakie Ameryka stawia przed przybyszem z Europy.</p><br /><br />
+
+<div align="center"><iframe width="400" height="247" src="http://www.youtube.com/embed/Dm917iJ6RJw" frameborder="0" allowfullscreen></iframe></div><br />
+
+
+<p>Zamiast łatwego krytykowania Stanów Zjednoczonych Marek Wałkuski stara się, aby czytelnik zrozumiał Amerykę. Pisze ciekawie, ale nie ogranicza się do samych ciekawostek. Przełamuje stereotypy na temat Amerykanów i ich kraju. Patrzy na USA z życzliwością i nie wierzy w ogłaszany przez wielu "mędrców" schyłek Ameryki. </p>
+
+
+<div align="center"><h4><b>Zatem... jak to robią w USA?</b></h4></div>
+
+<ul><li>Przeciętny Smith </li>
+<li>Patriotyzm</li>
+<li>Po co im broń</li>
+<li>Język amerykański</li> 
+<li>Światowe mocarstwo</li>
+<li>Amerykańska wolność </li>
+<li>Muzyka country</li>
+<li>Samochody i kierowcy</li>
+<li>Tygiel etniczny</li>
+<li>Napięcia rasowe</li>
+<li>Religia</li>
+<li>Charakter narodowy </li>
+<li>Ameryka a sprawa Polska</li></ul>
+
+
+
+<br /><hr />
+<h4><b>Patroni wydania:</b></h4>
+
+<div align="center" style="background-color:white;">
+
+<a href="http://www.polskieradio.pl/9,Trojka" target="blank"><img src="http://helion.pl/img/rozne/patroni/AMERYK/Program_3.jpg" />
+</a><br /><br /><img src="http://helion.pl/img/rozne/patroni/AMERYK/Logo Lektury Reportera-04.jpg" /><a href="https://www.facebook.com/pl.lubie.czytac" target="blank"><img src="http://helion.pl/img/rozne/patroni/AMERYK/lubie-czytac-logo.jpg" />
+</a>
+
+</div>
+	]]></opis>
+      <md5>3d933d24c83db4649045d0b420baf151</md5>
+    </ksiazka>
+    <ksiazka ident="AMERYK">
+      <isbn>978-83-246-3594-8</isbn>
+      <ean>9788324635948</ean>
+      <ident>AMERYK</ident>
+      <tytul language="polski">Wałkowanie Ameryki</tytul>
+      <link>http://bezdroza.pl/ksiazki/walkowanie-ameryki-marek-walkuski,ameryk.htm</link>
+      <autor>Marek Wałkuski</autor>
+      <status>1</status>
+      <cena>34.90</cena>
+      <cenadetaliczna>34.90</cenadetaliczna>
+      <znizka>0.00</znizka>
+      <marka>3</marka>
+      <nazadanie>0</nazadanie>
+      <format>140x208</format>
+      <typ>1</typ>
+      <oprawa>miękka</oprawa>
+      <wydawca/>
+      <liczbastron>312</liczbastron>
+      <datawydania>2012-09-17</datawydania>
+      <online>http://pdf.helion.pl/ameryk/ameryk.pdf</online>
+      <okladka>http://bezdroza.pl/okladki/326x466/ameryk.jpg</okladka>
+      <okladkatyl>http://bezdroza.pl/okladki-tyl/326x466/ameryk.jpg</okladkatyl>
+      <issueurl>http://bezdroza.pl/eksiazki/ameryk.htm</issueurl>
+      <bestseller>0</bestseller>
+      <nowosc>0</nowosc>
+      <powiazane>
+        <ident_powiazany>BEBBH5</ident_powiazany>
+        <ident_powiazany>BECYP1</ident_powiazany>
+        <ident_powiazany>BEMAD1</ident_powiazany>
+        <ident_powiazany>BEMAJA</ident_powiazany>
+        <ident_powiazany>BEZAMO</ident_powiazany>
+        <ident_powiazany>BIESPA</ident_powiazany>
+        <ident_powiazany>BRANF2</ident_powiazany>
+        <ident_powiazany>BRSYC1</ident_powiazany>
+        <ident_powiazany>BZCSB1</ident_powiazany>
+        <ident_powiazany>MATRIO</ident_powiazany>
+        <ident_powiazany>O_0025</ident_powiazany>
+        <ident_powiazany>O_04B5</ident_powiazany>
+      </powiazane>
+      <seriewydawnicze>
+        <seriawydawnicza id="8">Książki podróżnicze Bezdroży</seriawydawnicza>
+      </seriewydawnicze>
+      <serietematyczne>
+        <seriatematyczna id="3">Książki podróżnicze</seriatematyczna>
+      </serietematyczne>
+      <ksiegarnie_nieinter>
+        <waga>0.38</waga>
+        <status2>1</status2>
+        <cena_netto>33.24</cena_netto>
+        <cena_brutto>34.9</cena_brutto>
+        <vat>1.66</vat>
+        <vat_procent>5</vat_procent>
+      </ksiegarnie_nieinter>
+      <opis><![CDATA[<div align="right"><h4><b>Książka dostępna również w twardej oprawie >></font></b></h4></div>
+
+<div align="center"><h4><b>Ameryka w oczach (i uszach) korespondenta Polskiego Radia</b></h4></div>
+<p>Światowe supermocarstwo czy kolos na glinianych nogach? Ostoja wolności i demokracji czy dżungla, w której ludzie sami wymierzają sprawiedliwość? Przystań dla imigrantów czy miejsce, gdzie przybysze z zagranicy są obywatelami drugiej kategorii? Neutralne światopoglądowo państwo czy kraj fanatyków religijnych? Jakie naprawdę są Stany Zjednoczone? I jacy są Amerykanie? Inteligentni, życzliwi, otwarci, bezpośredni i optymistyczni? A może niedouczeni, zarozumiali, ograniczeni, nietolerancyjni i aroganccy? Otwarci na świat czy zaściankowi? Pewni siebie czy zakompleksieni?  </p><br /><br />
+
+<div align="center"><iframe width="400" height="247" src="http://www.youtube.com/embed/kVk7_IE9CZE" frameborder="0" allowfullscreen></iframe></div><br />
+
+
+<p>Oddajemy w ręce Czytelnika książkę Marka Wałkuskiego, dziennikarza radiowej "Trójki" i wieloletniego korespondenta Polskiego Radia w Waszyngtonie. W charakterystyczny dla siebie, dowcipny i przenikliwy sposób autor opowiada o życiu w Stanach Zjednoczonych i specyfice tego wielkiego kraju, z jego ogromną powierzchnią, liczbą mieszkańców, różnorodnością kulturową, kontrastami społecznymi i wyzwaniami, jakie Ameryka stawia przed przybyszem z Europy.</p><br /><br />
+
+<div align="center"><iframe width="400" height="247" src="http://www.youtube.com/embed/Dm917iJ6RJw" frameborder="0" allowfullscreen></iframe></div><br />
+
+
+<p>Zamiast łatwego krytykowania Stanów Zjednoczonych Marek Wałkuski stara się, aby czytelnik zrozumiał Amerykę. Pisze ciekawie, ale nie ogranicza się do samych ciekawostek. Przełamuje stereotypy na temat Amerykanów i ich kraju. Patrzy na USA z życzliwością i nie wierzy w ogłaszany przez wielu "mędrców" schyłek Ameryki. </p>
+
+
+<div align="center"><h4><b>Zatem... jak to robią w USA?</b></h4></div>
+
+<ul><li>Przeciętny Smith </li>
+<li>Patriotyzm</li>
+<li>Po co im broń</li>
+<li>Język amerykański</li> 
+<li>Światowe mocarstwo</li>
+<li>Amerykańska wolność </li>
+<li>Muzyka country</li>
+<li>Samochody i kierowcy</li>
+<li>Tygiel etniczny</li>
+<li>Napięcia rasowe</li>
+<li>Religia</li>
+<li>Charakter narodowy </li>
+<li>Ameryka a sprawa Polska</li></ul>
+
+
+<br /><hr />
+<h4><b>Patroni wydania:</b></h4>
+
+
+<div align="center" style="background-color:white;">
+
+<a href="http://www.polskieradio.pl/9,Trojka" target="blank"><img src="http://helion.pl/img/rozne/patroni/AMERYK/Program_3.jpg" />
+</a><br /><br /><img src="http://helion.pl/img/rozne/patroni/AMERYK/Logo Lektury Reportera-04.jpg" /><a href="https://www.facebook.com/pl.lubie.czytac" target="blank"><img src="http://helion.pl/img/rozne/patroni/AMERYK/lubie-czytac-logo.jpg" />
+</a>
+
+</div>
+
+
+
+
+	]]></opis>
+      <md5>6b7606d3e92a74faf352c3153d0b307b</md5>
+    </ksiazka>
+    <ksiazka ident="ARTPOZ">
+      <isbn>978-83-246-3970-0</isbn>
+      <ean>9788324639700</ean>
+      <ident>ARTPOZ</ident>
+      <tytul language="polski">Sztuka pozowania w fotografii portretowej</tytul>
+      <tytul language="oryginal">The Art of Posing: Techniques for Digital Portrait Photographers (Pro Photo Workshop)</tytul>
+      <link>http://bezdroza.pl/ksiazki/sztuka-pozowania-w-fotografii-portretowej-lou-jacobs,artpoz.htm</link>
+      <autor>Lou Jacobs</autor>
+      <tlumacz>Dominika Kurek</tlumacz>
+      <status>1</status>
+      <cena>39.90</cena>
+      <cenadetaliczna>39.90</cenadetaliczna>
+      <znizka>0.00</znizka>
+      <marka>1</marka>
+      <nazadanie>0</nazadanie>
+      <format>215x280</format>
+      <typ>1</typ>
+      <oprawa>miękka</oprawa>
+      <wydawca/>
+      <liczbastron>128</liczbastron>
+      <datawydania>2012-12-03</datawydania>
+      <online>http://pdf.helion.pl/artpoz/artpoz.pdf</online>
+      <okladka>http://bezdroza.pl/okladki/326x466/artpoz.jpg</okladka>
+      <okladkatyl>http://bezdroza.pl/okladki-tyl/326x466/artpoz.jpg</okladkatyl>
+      <issueurl>http://bezdroza.pl/eksiazki/artpoz.htm</issueurl>
+      <bestseller>0</bestseller>
+      <nowosc>0</nowosc>
+      <powiazane>
+        <ident_powiazany>BEBBH5</ident_powiazany>
+        <ident_powiazany>BECYP1</ident_powiazany>
+        <ident_powiazany>BEIZR1</ident_powiazany>
+        <ident_powiazany>BEMAD1</ident_powiazany>
+        <ident_powiazany>BEMAL1</ident_powiazany>
+        <ident_powiazany>BEPOPR</ident_powiazany>
+        <ident_powiazany>BIEGAN</ident_powiazany>
+        <ident_powiazany>BRSYC1</ident_powiazany>
+        <ident_powiazany>BZCSB1</ident_powiazany>
+        <ident_powiazany>FOTDZI</ident_powiazany>
+        <ident_powiazany>O_01AD</ident_powiazany>
+        <ident_powiazany>SEKLEK</ident_powiazany>
+      </powiazane>
+      <serietematyczne>
+        <seriatematyczna id="21">Fotografia</seriatematyczna>
+      </serietematyczne>
+      <ksiegarnie_nieinter>
+        <waga>0.48</waga>
+        <status2>1</status2>
+        <cena_netto>38</cena_netto>
+        <cena_brutto>39.9</cena_brutto>
+        <vat>1.9</vat>
+        <vat_procent>5</vat_procent>
+      </ksiegarnie_nieinter>
+      <opis><![CDATA[<div align="center"><h4><b>Zajrzyj za kulisy studiów najlepszych fotografów i naucz się planować pozy atrakcyjne oraz przyciągające wzrok!</b></h4></div>
+
+<p>Upozowanie ludzi do portretów to sztuka, która wymaga umiejętności i doświadczenia. Niezbędne jest w niej wyczucie taktu i kompozycji, a także doskonały refleks, aby uchwycić dokładnie ten moment, na którym nam zależy. Ba, trzeba nawet zaplanować pozy najlepsze dla fotografowanej osoby! Do tej pory nikt nie przygotował książki, która skupiałaby się na pozowaniu do fotografii. Wbrew pozorom nie jest to temat prosty, ale bardzo istotny. Dzięki ustawieniu modela we właściwej pozie możesz ukryć jego wady i uwydatnić zalety, a to tylko jeden z przykładów wykorzystania tej umiejętności.</p>
+
+<p>W tej unikalnej książce znajdziesz najlepsze pozy dla różnych grup wiekowych - od dzieci, przez nastolatki i dorosłych, po osoby starsze. Dowiesz się, jak ustawić fotografowanego człowieka w trakcie tworzenia portretu oraz jak zaaranżować zdjęcie grupowe. Sprawdzisz, jakich rekwizytów użyć, jak zaplanować sesję oraz jak idealnie dobrać oświetlenie. Wszystkie przykłady upozowania ludzi w studio czy plenerze zostały omówione przez dziesięcioro ekspertów oraz zilustrowane ich fotografiami. Każdy rozdział zawiera wiele osobistych porad i sztuczek, które pomogą Ci stworzyć niesamowite ujęcia.</p>
+
+
+<ul><li>Spraw, by klient czuł się swobodnie w trakcie twórczej sesji, pełnej naturalnie wyglądających póz</li>
+<li>Używaj pozowania do tuszowania problemów z wyglądem klientów</li>
+<li>Poznaj wskazówki dotyczące pozowania państwa młodych, rodzin, nastolatków, dzieci i innych</li>
+<li>Wykorzystuj na zdjęciach rekwizyty i zrozum ich wpływ na pozę</li>
+<li>Uwieczniaj odpowiedni nastrój i wyraz twarzy</li>
+<li>Stosuj modyfikacje cyfrowe do udoskonalenia zdjęcia</li>
+<li>Sprawdź pomysły dotyczące naprowadzania modeli na odpowiednie pozy</li>
+<li>Poszerz wiedzę o kwestiach dotyczących prowadzenia działalności fotograficznej</li></ul>
+
+<div align="center"><h4><b>Dobrze dobrana poza to pierwszy krok ku udanej fotografii!</b></h4></div>	]]></opis>
+      <md5>50b2e1708b4b67b744f9e6964d5096bb</md5>
+    </ksiazka>
+    <ksiazka ident="BABAR1">
+      <isbn>978-83-7661-088-7</isbn>
+      <ean>9788376610887</ean>
+      <ident>BABAR1</ident>
+      <tytul language="polski">Barcelona. Przewodnik - Celownik. Wydanie 1</tytul>
+      <link>http://bezdroza.pl/ksiazki/barcelona-przewodnik-celownik-wydanie-1-dominika-zareba,babar1.htm</link>
+      <autor>Dominika Zaręba</autor>
+      <status>1</status>
+      <cena>29.90</cena>
+      <cenadetaliczna>29.90</cenadetaliczna>
+      <znizka>0.00</znizka>
+      <marka>6</marka>
+      <nazadanie>0</nazadanie>
+      <format/>
+      <typ>1</typ>
+      <oprawa>miękka</oprawa>
+      <wydawca>Wydawnictwo Bezdroża</wydawca>
+      <liczbastron>208</liczbastron>
+      <datawydania/>
+      <okladka>http://bezdroza.pl/okladki/326x466/babar1.jpg</okladka>
+      <bestseller>0</bestseller>
+      <nowosc>0</nowosc>
+      <seriewydawnicze>
+        <seriawydawnicza id="6">Przewodniki celowniki</seriawydawnicza>
+      </seriewydawnicze>
+      <serietematyczne>
+        <seriatematyczna id="1">Przewodniki</seriatematyczna>
+      </serietematyczne>
+      <ksiegarnie_nieinter>
+        <waga>0.36</waga>
+        <status2>1</status2>
+        <cena_netto>28.48</cena_netto>
+        <cena_brutto>29.9</cena_brutto>
+        <vat>1.42</vat>
+        <vat_procent>5</vat_procent>
+      </ksiegarnie_nieinter>
+      <opis><![CDATA[<p>Przewodniki-celowniki to nowatorskie publikacje turystyczne, opisujące najciekawsze miasta i regiony Europy. Ich wyróżnikiem są dokładne mapy oraz zwięzłe, przygotowane w formie leksykonu i ilustrowane zdjęciami opisy atrakcji turystycznych. Nowe przewodniki dają swobodę podczas zwiedzania, wolność i niezależność podczas wycieczek i podroży. Pozwalają w prosty sposób odnajdywać w terenie interesujące miejsca i identyfikować obiekty. Mapa, tekst i zdjęcia uzupełniają się i tworzą wzajemnie powiązaną całość, która sprawi, że samodzielna wędrówka po mieście stanie się prawdziwą przyjemnością! Przewodnik-celownik Barcelona  to: atlas centrum miasta 1:10 000, alfabetyczny leksykon ponad 100 największych atrakcji turystycznych Barcelony ponad 150 kolorowych fotografii, a także zwięzłe informacje praktyczne, przejrzysty system odsyłaczy i słowniczek  ... a wszystko po to, by w nieskrępowany sposób cieszyć się Barceloną, bezbłędnie trafiać do wybranych przez siebie celów, ułożyć własny plan zwiedzania, poznać i zobaczyć najciekawsze zabytki w mieście.
+</p>	]]></opis>
+      <md5>e0fdd282daac83c2de48aee0bd0cbe19</md5>
+    </ksiazka>
+    <ksiazka ident="BABER1">
+      <isbn>978-83-7661-124-2</isbn>
+      <ean>9788376611242</ean>
+      <ident>BABER1</ident>
+      <tytul language="polski">Berlin. Przewodnik - Celownik. Wydanie 1</tytul>
+      <link>http://bezdroza.pl/ksiazki/berlin-przewodnik-celownik-wydanie-1-katarzyna-gluc,baber1.htm</link>
+      <autor>Katarzyna Głuc</autor>
+      <status>1</status>
+      <cena>29.90</cena>
+      <cenadetaliczna>29.90</cenadetaliczna>
+      <znizka>0.00</znizka>
+      <marka>6</marka>
+      <nazadanie>0</nazadanie>
+      <format>130x210</format>
+      <typ>1</typ>
+      <oprawa>miękka</oprawa>
+      <wydawca>Wydawnictwo Bezdroża</wydawca>
+      <liczbastron>184</liczbastron>
+      <datawydania>2011-04-19</datawydania>
+      <okladka>http://bezdroza.pl/okladki/326x466/baber1.jpg</okladka>
+      <bestseller>0</bestseller>
+      <nowosc>0</nowosc>
+      <powiazane>
+        <ident_powiazany>BEBBH5</ident_powiazany>
+        <ident_powiazany>BEBIAL</ident_powiazany>
+        <ident_powiazany>BECYP1</ident_powiazany>
+        <ident_powiazany>BEMAJA</ident_powiazany>
+        <ident_powiazany>BEMAL1</ident_powiazany>
+        <ident_powiazany>BEVVC6</ident_powiazany>
+        <ident_powiazany>BRANF2</ident_powiazany>
+        <ident_powiazany>BRSYC1</ident_powiazany>
+        <ident_powiazany>FOCWSV</ident_powiazany>
+        <ident_powiazany>FODADO</ident_powiazany>
+        <ident_powiazany>MATRIO</ident_powiazany>
+        <ident_powiazany>POLMAR</ident_powiazany>
+      </powiazane>
+      <seriewydawnicze>
+        <seriawydawnicza id="6">Przewodniki celowniki</seriawydawnicza>
+      </seriewydawnicze>
+      <serietematyczne>
+        <seriatematyczna id="1">Przewodniki</seriatematyczna>
+      </serietematyczne>
+      <ksiegarnie_nieinter>
+        <waga>0.30</waga>
+        <status2>1</status2>
+        <cena_netto>28.48</cena_netto>
+        <cena_brutto>29.9</cena_brutto>
+        <vat>1.42</vat>
+        <vat_procent>5</vat_procent>
+      </ksiegarnie_nieinter>
+      <opis><![CDATA[<p><b>Przewodniki-Celowniki</b> to nowatorskie publikacje turystyczne, opisujące najciekawsze miasta i regiony Europy. Ich wyróżnikiem są dokładne mapy oraz zwięzłe, przygotowane w formie leksykonu i ilustrowane zdjęciami opisy atrakcji turystycznych. Nowe przewodniki dają swobodę podczas zwiedzania, wolność i niezależność podczas wycieczek i podroży. Pozwalają w prosty sposób odnajdywać w terenie interesujące miejsca i identyfikować obiekty. Mapa, tekst i zdjęcia uzupełniają się i tworzą wzajemnie powiązaną całość, która sprawi, że samodzielne zwiedzanie miasta stanie się prawdziwą przyjemnością!</p>
+
+<hr />
+<p><b>Przewodnik-Celownik Berlin to:</b></p>
+<ul><li>Atlas Berlina 1 : 10 000</li>
+<li>Alfabetyczny leksykon 110 największych atrakcji turystycznych</li>
+<li>ponad 180 kolorowych fotografi i</li>
+<li>Zwięzłe informacje praktyczne</li>
+<li>Przejrzysty system odsyłaczy</li></ul>
+<p>... a wszystko po to, by w nieskrępowany sposób cieszyć się
+Berlinem, bezbłędnie trafi ać do wybranych przez siebie celów,
+ułożyć własny plan zwiedzania, poznać i zobaczyć
+najciekawsze zabytki w mieście.</p>
+
+<hr />
+
+<div align="left"><h4><b>Patron medialny:</b></h4></div>
+<div align="center"><a href="http://turystyka.gazeta.pl" target="blank"><img src="http://helion.pl/img/rozne/patroni/bezdroza/gazeta_podr.png" /></div>	]]></opis>
+      <md5>c8194f905efd28faa5ebf0c54fc09dc9</md5>
+    </ksiazka>
+    <ksiazka ident="BABIE1">
+      <isbn>978-83-7661-125-9</isbn>
+      <ean>9788376611259</ean>
+      <ident>BABIE1</ident>
+      <tytul language="polski">Bieszczady. Przewodnik - Celownik. Wydanie 1</tytul>
+      <link>http://bezdroza.pl/ksiazki/bieszczady-przewodnik-celownik-wydanie-1-praca-zbiorowa,babie1.htm</link>
+      <autor>Praca zbiorowa</autor>
+      <status>1</status>
+      <cena>29.90</cena>
+      <cenadetaliczna>29.90</cenadetaliczna>
+      <znizka>0.00</znizka>
+      <marka>6</marka>
+      <nazadanie>0</nazadanie>
+      <format>130x210</format>
+      <typ>1</typ>
+      <oprawa>miękka</oprawa>
+      <wydawca>Wydawnictwo Bezdroża</wydawca>
+      <liczbastron>168</liczbastron>
+      <datawydania>2011-03-22</datawydania>
+      <okladka>http://bezdroza.pl/okladki/326x466/babie1.jpg</okladka>
+      <bestseller>0</bestseller>
+      <nowosc>0</nowosc>
+      <seriewydawnicze>
+        <seriawydawnicza id="6">Przewodniki celowniki</seriawydawnicza>
+      </seriewydawnicze>
+      <serietematyczne>
+        <seriatematyczna id="8">Europa</seriatematyczna>
+        <seriatematyczna id="1">Przewodniki</seriatematyczna>
+      </serietematyczne>
+      <ksiegarnie_nieinter>
+        <waga>0.28</waga>
+        <status2>1</status2>
+        <cena_netto>28.48</cena_netto>
+        <cena_brutto>29.9</cena_brutto>
+        <vat>1.42</vat>
+        <vat_procent>5</vat_procent>
+      </ksiegarnie_nieinter>
+      <opis><![CDATA[<p><b>Przewodniki-Celowniki</b> to nowatorskie publikacje turystyczne, opisujące najciekawsze miasta i regiony Europy. Ich wyróżnikiem są dokładne mapy oraz zwięzłe, przygotowane w formie leksykonu i ilustrowane zdjęciami opisy atrakcji turystycznych. Nowe przewodniki dają swobodę podczas zwiedzania, wolność i niezależność podczas wycieczek i podroży. Pozwalają w prosty sposób odnajdywać w terenie interesujące
+miejsca i identyfikować obiekty. Mapa, tekst i zdjęcia uzupełniają się i tworzą wzajemnie powiązaną całość, która sprawi, że samodzielne  zwiedzanie regionu stanie się prawdziwą przyjemnością!</p>
+
+<p>Przewodnik-Celownik Bieszczady to:</p>
+
+<ul><li>Atlas Bieszczadów</li>
+<li>Alfabetyczny leksykon</li>
+<li>89 największych atrakcji turystycznych</li>
+<li>130 kolorowych fotografii </li>
+<li>Zwięzły szkic krajoznawczy</li>
+<li>Podstawowe informacje praktyczne</li>
+<li>Przejrzysty system odsyłaczy</li></ul>
+
+<p>... a wszystko po to, by w nieskrępowany sposób cieszyć się Bieszczadami, bezbłędnie trafiać do wybranych przez siebie celów, ułożyć własny plan zwiedzania, poznać i zobaczyć najciekawsze zabytki w regionie.</p>
+
+<hr />
+
+<div align="left"><h4><b>Patron medialny:</b></h4></div>
+<div align="center"><img src="http://helion.pl/img/rozne/patroni/bezdroza/gazeta_podr.png" /></div>	]]></opis>
+      <md5>1e0aabf42d34c68d762001f498ad3ebf</md5>
+    </ksiazka>
+    <ksiazka ident="BABUD1">
+      <isbn>978-83-7661-089-4</isbn>
+      <ean>9788376610894</ean>
+      <ident>BABUD1</ident>
+      <tytul language="polski">Budapeszt. Przewodnik - Celownik. Wydanie 1</tytul>
+      <link>http://bezdroza.pl/ksiazki/budapeszt-przewodnik-celownik-wydanie-1-monika-chojnacka,babud1.htm</link>
+      <autor>Monika Chojnacka</autor>
+      <status>1</status>
+      <cena>29.90</cena>
+      <cenadetaliczna>29.90</cenadetaliczna>
+      <znizka>0.00</znizka>
+      <marka>6</marka>
+      <nazadanie>0</nazadanie>
+      <format>130x210</format>
+      <typ>1</typ>
+      <oprawa>miękka</oprawa>
+      <wydawca>Wydawnictwo Bezdroża</wydawca>
+      <liczbastron>192</liczbastron>
+      <datawydania>2010-03-15</datawydania>
+      <okladka>http://bezdroza.pl/okladki/326x466/babud1.jpg</okladka>
+      <bestseller>0</bestseller>
+      <nowosc>0</nowosc>
+      <powiazane>
+        <ident_powiazany>BEBBH5</ident_powiazany>
+        <ident_powiazany>BEMAJA</ident_powiazany>
+        <ident_powiazany>BEWKA1</ident_powiazany>
+        <ident_powiazany>BIESPA</ident_powiazany>
+        <ident_powiazany>BRANF2</ident_powiazany>
+        <ident_powiazany>BRSYC1</ident_powiazany>
+        <ident_powiazany>BZCSB1</ident_powiazany>
+        <ident_powiazany>FOCWSV</ident_powiazany>
+        <ident_powiazany>MATRIO</ident_powiazany>
+        <ident_powiazany>O_0025</ident_powiazany>
+        <ident_powiazany>O_048F</ident_powiazany>
+        <ident_powiazany>POLMAR</ident_powiazany>
+      </powiazane>
+      <seriewydawnicze>
+        <seriawydawnicza id="6">Przewodniki celowniki</seriawydawnicza>
+      </seriewydawnicze>
+      <serietematyczne>
+        <seriatematyczna id="1">Przewodniki</seriatematyczna>
+      </serietematyczne>
+      <ksiegarnie_nieinter>
+        <waga>0.32</waga>
+        <status2>3</status2>
+        <cena_netto>28.48</cena_netto>
+        <cena_brutto>29.9</cena_brutto>
+        <vat>1.42</vat>
+        <vat_procent>5</vat_procent>
+      </ksiegarnie_nieinter>
+      <opis><![CDATA[<p>Przewodnik-celownik <b>Budapeszt</b> to: 
+<ul>
+<li>atlas centrum miasta 1:10 000, </li>
+<li>alfabetyczny leksykon ponad 160 największych atrakcji turystycznych Budapesztu, </li>
+<li>ponad 150 kolorowych fotografii, </li>
+<li>zwięzłe informacje praktyczne, </li>
+<li>przejrzysty system odsyłaczy i słowniczek  </li>
+</ul>
+
+... a wszystko po to, by w nieskrępowany sposób cieszyć się Budapesztem, bezbłędnie trafiać do wybranych przez siebie celów, ułożyć własny plan zwiedzania, poznać i zobaczyć najciekawsze zabytki w mieście.
+</p>
+
+<p><b>Przewodniki-celowniki</b> to nowatorskie publikacje turystyczne, opisujące najciekawsze miasta i regiony Europy. Ich wyróżnikiem są dokładne mapy oraz zwięzłe, przygotowane w formie leksykonu i ilustrowane zdjęciami opisy atrakcji turystycznych. Nowe przewodniki dają swobodę podczas zwiedzania, wolność i niezależność podczas wycieczek i podroży. Pozwalają w prosty sposób odnajdywać w terenie interesujące miejsca i identyfikować obiekty. Mapa, tekst i zdjęcia uzupełniają się i tworzą wzajemnie powiązaną całość, która sprawi, że samodzielna wędrówka po mieście stanie się prawdziwą przyjemnością! </p>	]]></opis>
+      <md5>f21b27852d0e67e01802810b93d46486</md5>
+    </ksiazka>
+  </lista>
+</details>

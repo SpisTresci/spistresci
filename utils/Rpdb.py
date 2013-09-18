@@ -18,6 +18,6 @@ class debug(object):
     def __call__(self, f):
         def wrapped(*args, **kwargs):
             debug._break(self.remote, self.unencrypted)
-            f(*args, **kwargs)
+            return f(*args, **kwargs)
         return wrapped
 

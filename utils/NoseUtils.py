@@ -1,6 +1,5 @@
 import nose
 import urllib2
-import rpdb2
 import Rpdb
 
 class debug(Rpdb.debug):

@@ -2,7 +2,7 @@ import nose
 from nose.tools import *
 
 from connectors.generic import GenericConnector, GenericBase
-from utils import NoseUtils, debug
+from utils import NoseUtils
 
 from datetime import datetime
 import os

@@ -43,8 +43,8 @@ class TestSpecificConnectors(object):
             eq_(evaluated_dict_keys, fresh_dict_keys)
 
             for key, key2 in zip(evaluated_dict_keys, fresh_dict_keys):
-                eq_(evaluated_dict[key], fresh_dict[key2], msg=key + ' != ' + key2)
-
+                eq_(evaluated_dict[key], fresh_dict[key2], msg='%s : %s != %s : %s' % (key, evaluated_dict[key], key2, fresh_dict[key2]))
+    
     def test_connectors(self):
     	self.inputpath='unittests/data/specific_connectors/'
         GenericConnector.config_file = os.path.join(self.inputpath, 'conf/test.ini')
