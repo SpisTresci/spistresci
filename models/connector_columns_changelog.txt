@@ -1,0 +1,4 @@
+#This file contains list of changes in DB column names, made while working connectors clean-up on T319
+#Convention of this file is FIFO:
+#Whenever column name is changed in code, separate line is created at the end of the file.
+#Whenever column is fixed in database, apropriate line should be marked with '#' (hash)
