@@ -2,6 +2,8 @@
 from connectors.common import Afiliant, FormatInTitleConnector
 from sqlwrapper import *
 from connectors.generic import GenericBook
+import utils
+
 
 Base = SqlWrapper.getBaseClass()
 
