@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="iso-8859-2"?>
+<!--
+	    Dane z dnia: sob, 21 wrz 2013, 01:07:24 CEST
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ Ze względu na wielkość pliku XML, proszę o ściąganie wersji produkty-ebookpoint.xml.zip
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+            Jeśli będziesz sprzedawał książki w PP, to użyj pola <status>:
+
+		0 - niedostepna
+		1 - dostepna
+		2 - w przygotowaniu
+		5 - druk na żądanie
+		7 - przedsprzedaz
+	    oraz <cena>, <cenadetaliczna> (ceny takie jak na stronach GW Helion : moga zawierac znizki itp.)
+
+	    dla ksiegarni internetowych (wspolpraca z dzialem handlowym, ehelion) użyj pola <status2>:
+
+    		1 - dostępna
+		2 - dostępna w małej ilości
+		3 - chwilowo niedostępna
+		4 - niedostępna
+		5 - POD
+		6 - w przygotowaniu
+		7 - w przedsprzedaży
+            oraz pola <ksiegarnie_nieinter> gdzie znajduja sie wszystkie dane odnosnie ceny netto, brutto, stawka VAT
+
+		<typ>:
+			1 - ksiazka
+			2 - ebook
+			3 - audiobook mp3
+			4 - audiocd mp3
+
+		<marka>:
+			1 - helion
+			2 - onepress
+			3 - editio
+			4 - sensus
+			5 - septem
+			6 - bezdroza
+			8 - podrecznik
+			11 - bezdroża obce
+
+Zmiany:
+09.02.2011 @MJJ dolożenie elementu <typ>
+15.06.2011 @MJJ dodanie pliku lista2-statusy.xml z samymi statusami, cenami
+21.12.2011 @TKr seolinki, zagregowane formaty ebooków
+23.01.2012 @TKr info o promocjach, lista promocji serwis.pl/xml/lista-promocje.cgi
+15.06.2012 @TKr dodane info o audiobookach
+29.08.2012 @TKr dodane md5 jako wßkaźnik zmiany informacji w książce
+
+		Kontakt: Michal Jęczalik <michal.jeczalik@helion.pl>
+-->
+<details>
+  <lista baza="ebookpoint">
+    <ksiazka ident="100E27">
+      <isbn>978-83-246-1331-1</isbn>
+      <ean>9788324613311</ean>
+      <ident>100E27</ident>
+      <tytul language="polski">100 sposobów na Excel 2007 PL. Tworzenie funkcjonalnych arkuszy </tytul>
+      <tytul language="oryginal">Excel Hacks: Tips &amp; Tools for Streamlining Your Spreadsheets</tytul>
+      <link>http://ebookpoint.pl/ksiazki/100-sposobow-na-excel-2007-pl-tworzenie-funkcjonalnych-arkuszy-david-hawley-raina-hawley,100e27.htm</link>
+      <autor>David Hawley, Raina Hawley</autor>
+      <tlumacz>Zbigniew Smogur</tlumacz>
+      <status>1</status>
+      <cena>57.00</cena>
+      <cenadetaliczna>57.00</cenadetaliczna>
+      <znizka>0.00</znizka>
+      <marka>1</marka>
+      <nazadanie>0</nazadanie>
+      <format>168x237</format>
+      <typ>1</typ>
+      <oprawa>miękka</oprawa>
+      <wydawca/>
+      <liczbastron>368</liczbastron>
+      <datawydania>2008-05-20</datawydania>
+      <online>http://pdf.helion.pl/100e27/100e27-2.pdf</online>
+      <okladka>http://ebookpoint.pl/okladki/326x466/100e27.jpg</okladka>
+      <bestseller>0</bestseller>
+      <nowosc>0</nowosc>
+      <powiazane>
+        <ident_powiazany>100RZP</ident_powiazany>
+        <ident_powiazany>GITROZ</ident_powiazany>
+        <ident_powiazany>GRYMEG</ident_powiazany>
+        <ident_powiazany>JQUEMO</ident_powiazany>
+        <ident_powiazany>JSJQNP</ident_powiazany>
+        <ident_powiazany>METASP</ident_powiazany>
+        <ident_powiazany>TSIDR3</ident_powiazany>
+        <ident_powiazany>TWAPW8</ident_powiazany>
+      </powiazane>
+      <serietematyczne>
+        <seriatematyczna id="280000">Excel</seriatematyczna>
+        <seriatematyczna id="20">MS Office</seriatematyczna>
+      </serietematyczne>
+      <ksiegarnie_nieinter>
+        <waga>0.60</waga>
+        <status2>1</status2>
+        <cena_netto>54.29</cena_netto>
+        <cena_brutto>57</cena_brutto>
+        <vat>2.71</vat>
+        <vat_procent>5</vat_procent>
+      </ksiegarnie_nieinter>
+      <opis><![CDATA[<p>Wykorzystaj wszystkie możliwości Excela, aby tworzyć funkcjonalne i efektowne arkusze</p>
+
+<ul>
+<li>Jak analizować dane i zarządzać nimi?</li>
+<li>Jak optymalnie wykorzystywać tabele przestawne?</li>
+<li>Jak tworzyć spersonalizowane wykresy?</li>
+</ul>
+
+<p>Większość użytkowników Excela zna tylko drobną część dostępnych w nim możliwości. Istnieje jednak wiele metod pozwalających znacząco poszerzyć wydajność tego programu i tworzyć efektowne arkusze kalkulacyjne bez potrzeby czasochłonnego zdobywania wiedzy. Nowa wersja Excela umożliwia chociażby łatwiejsze korzystanie z mechanizmu tabel przestawnych, formatowania warunkowego i nazw zakresów, podglądu "na żywo", galerii predefiniowanych stylów oraz grafik SmartArt. Wszystko to sprawia, że każdy może dziś w swoich arkuszach używać bardziej skomplikowanych elementów wizualnych i graficznych.</p>
+
+
+<p>Obecnie, kiedy wszystko dzieje się coraz szybciej, czas staje się jedną z najistotniejszych i pożądanych wartości. Książka "100 sposobów na Excel 2007 PL. Tworzenie funkcjonalnych arkuszy" pozwala Ci właśnie zyskać na czasie - oferuje ponad sto gotowych metod tworzenia funkcjonalnych i efektownych arkuszy, szybkich i niezawodnych rozwiązań skomplikowanych problemów. Warto także wykorzystać te metody do przeanalizowania oraz zastosowania niektórych możliwości języka Visual Basic for Applications (VBA) - dzięki temu będziesz mógł zaadaptować wszystkie zawarte tu propozycje do własnych potrzeb.</p>
+
+
+<ul>
+<li>Skoroszyty i arkusze</li>
+<li>Wbudowane mechanizmy do analizy danych i zarządzania nimi</li>
+<li>Metody tworzenia nazw i zakresów komórek</li>
+<li>Tabele przestawne</li>
+<li>Formuły i funkcje</li>
+<li>Wykresy i makra</li>
+<li>Współpraca Excela z innymi aplikacjami pakietu Office</li>
+</ul>
+
+
+<p>Wszystko, co chciałbyś widzieć o Excelu, aby natychmiast z niego skorzystać.</p>
+
+<div align="center"><h4><b> Poznaj ponad setkę sposobów skutecznego radzenia sobie z Excelem!</b></h4></div>]]></opis>
+      <md5>7f68d48e144ac29d285cb9323e9da912</md5>
+    </ksiazka>
+  </lista>
+</details>

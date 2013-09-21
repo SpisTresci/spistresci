@@ -1,0 +1,784 @@
+<?xml version="1.0" encoding="iso-8859-2"?>
+<!--
+	    Dane z dnia: sob, 21 wrz 2013, 01:07:24 CEST
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ Ze względu na wielkość pliku XML, proszę o ściąganie wersji produkty-ebookpoint.xml.zip
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+            Jeśli będziesz sprzedawał książki w PP, to użyj pola <status>:
+
+		0 - niedostepna
+		1 - dostepna
+		2 - w przygotowaniu
+		5 - druk na żądanie
+		7 - przedsprzedaz
+	    oraz <cena>, <cenadetaliczna> (ceny takie jak na stronach GW Helion : moga zawierac znizki itp.)
+
+	    dla ksiegarni internetowych (wspolpraca z dzialem handlowym, ehelion) użyj pola <status2>:
+
+    		1 - dostępna
+		2 - dostępna w małej ilości
+		3 - chwilowo niedostępna
+		4 - niedostępna
+		5 - POD
+		6 - w przygotowaniu
+		7 - w przedsprzedaży
+            oraz pola <ksiegarnie_nieinter> gdzie znajduja sie wszystkie dane odnosnie ceny netto, brutto, stawka VAT
+
+		<typ>:
+			1 - ksiazka
+			2 - ebook
+			3 - audiobook mp3
+			4 - audiocd mp3
+
+		<marka>:
+			1 - helion
+			2 - onepress
+			3 - editio
+			4 - sensus
+			5 - septem
+			6 - bezdroza
+			8 - podrecznik
+			11 - bezdroża obce
+
+Zmiany:
+09.02.2011 @MJJ dolożenie elementu <typ>
+15.06.2011 @MJJ dodanie pliku lista2-statusy.xml z samymi statusami, cenami
+21.12.2011 @TKr seolinki, zagregowane formaty ebooków
+23.01.2012 @TKr info o promocjach, lista promocji serwis.pl/xml/lista-promocje.cgi
+15.06.2012 @TKr dodane info o audiobookach
+29.08.2012 @TKr dodane md5 jako wßkaźnik zmiany informacji w książce
+
+		Kontakt: Michal Jęczalik <michal.jeczalik@helion.pl>
+-->
+<details>
+  <lista baza="ebookpoint">
+    <ksiazka ident="100E27">
+      <isbn>978-83-246-1331-1</isbn>
+      <ean>9788324613311</ean>
+      <ident>100E27</ident>
+      <tytul language="polski">100 sposobów na Excel 2007 PL. Tworzenie funkcjonalnych arkuszy </tytul>
+      <tytul language="oryginal">Excel Hacks: Tips &amp; Tools for Streamlining Your Spreadsheets</tytul>
+      <link>http://ebookpoint.pl/ksiazki/100-sposobow-na-excel-2007-pl-tworzenie-funkcjonalnych-arkuszy-david-hawley-raina-hawley,100e27.htm</link>
+      <autor>David Hawley, Raina Hawley</autor>
+      <tlumacz>Zbigniew Smogur</tlumacz>
+      <status>1</status>
+      <cena>57.00</cena>
+      <cenadetaliczna>57.00</cenadetaliczna>
+      <znizka>0.00</znizka>
+      <marka>1</marka>
+      <nazadanie>0</nazadanie>
+      <format>168x237</format>
+      <typ>1</typ>
+      <oprawa>miękka</oprawa>
+      <wydawca/>
+      <liczbastron>368</liczbastron>
+      <datawydania>2008-05-20</datawydania>
+      <online>http://pdf.helion.pl/100e27/100e27-2.pdf</online>
+      <okladka>http://ebookpoint.pl/okladki/326x466/100e27.jpg</okladka>
+      <bestseller>0</bestseller>
+      <nowosc>0</nowosc>
+      <powiazane>
+        <ident_powiazany>100RZP</ident_powiazany>
+        <ident_powiazany>GITROZ</ident_powiazany>
+        <ident_powiazany>GRYMEG</ident_powiazany>
+        <ident_powiazany>JQUEMO</ident_powiazany>
+        <ident_powiazany>JSJQNP</ident_powiazany>
+        <ident_powiazany>METASP</ident_powiazany>
+        <ident_powiazany>TSIDR3</ident_powiazany>
+        <ident_powiazany>TWAPW8</ident_powiazany>
+      </powiazane>
+      <serietematyczne>
+        <seriatematyczna id="280000">Excel</seriatematyczna>
+        <seriatematyczna id="20">MS Office</seriatematyczna>
+      </serietematyczne>
+      <ksiegarnie_nieinter>
+        <waga>0.60</waga>
+        <status2>1</status2>
+        <cena_netto>54.29</cena_netto>
+        <cena_brutto>57</cena_brutto>
+        <vat>2.71</vat>
+        <vat_procent>5</vat_procent>
+      </ksiegarnie_nieinter>
+      <opis><![CDATA[<p>Wykorzystaj wszystkie możliwości Excela, aby tworzyć funkcjonalne i efektowne arkusze</p>
+
+<ul>
+<li>Jak analizować dane i zarządzać nimi?</li>
+<li>Jak optymalnie wykorzystywać tabele przestawne?</li>
+<li>Jak tworzyć spersonalizowane wykresy?</li>
+</ul>
+
+<p>Większość użytkowników Excela zna tylko drobną część dostępnych w nim możliwości. Istnieje jednak wiele metod pozwalających znacząco poszerzyć wydajność tego programu i tworzyć efektowne arkusze kalkulacyjne bez potrzeby czasochłonnego zdobywania wiedzy. Nowa wersja Excela umożliwia chociażby łatwiejsze korzystanie z mechanizmu tabel przestawnych, formatowania warunkowego i nazw zakresów, podglądu "na żywo", galerii predefiniowanych stylów oraz grafik SmartArt. Wszystko to sprawia, że każdy może dziś w swoich arkuszach używać bardziej skomplikowanych elementów wizualnych i graficznych.</p>
+
+
+<p>Obecnie, kiedy wszystko dzieje się coraz szybciej, czas staje się jedną z najistotniejszych i pożądanych wartości. Książka "100 sposobów na Excel 2007 PL. Tworzenie funkcjonalnych arkuszy" pozwala Ci właśnie zyskać na czasie - oferuje ponad sto gotowych metod tworzenia funkcjonalnych i efektownych arkuszy, szybkich i niezawodnych rozwiązań skomplikowanych problemów. Warto także wykorzystać te metody do przeanalizowania oraz zastosowania niektórych możliwości języka Visual Basic for Applications (VBA) - dzięki temu będziesz mógł zaadaptować wszystkie zawarte tu propozycje do własnych potrzeb.</p>
+
+
+<ul>
+<li>Skoroszyty i arkusze</li>
+<li>Wbudowane mechanizmy do analizy danych i zarządzania nimi</li>
+<li>Metody tworzenia nazw i zakresów komórek</li>
+<li>Tabele przestawne</li>
+<li>Formuły i funkcje</li>
+<li>Wykresy i makra</li>
+<li>Współpraca Excela z innymi aplikacjami pakietu Office</li>
+</ul>
+
+
+<p>Wszystko, co chciałbyś widzieć o Excelu, aby natychmiast z niego skorzystać.</p>
+
+<div align="center"><h4><b> Poznaj ponad setkę sposobów skutecznego radzenia sobie z Excelem!</b></h4></div>]]></opis>
+      <md5>7f68d48e144ac29d285cb9323e9da912</md5>
+    </ksiazka>
+    <ksiazka ident="100MIS">
+      <isbn>978-83-246-8093-1</isbn>
+      <ean>9788324680931</ean>
+      <ident>100MIS</ident>
+      <tytul language="polski">100 sekretów Mistrza Sprzedaży</tytul>
+      <link>http://ebookpoint.pl/ksiazki/100-sekretow-mistrza-sprzedazy-arkadiusz-bednarski,100mis.htm</link>
+      <autor>Arkadiusz Bednarski</autor>
+      <status>7</status>
+      <przedsprzedazDO>2013-10-05</przedsprzedazDO>
+      <cena>21.16</cena>
+      <cenadetaliczna>24.90</cenadetaliczna>
+      <znizka>3.74</znizka>
+      <marka>2</marka>
+      <nazadanie>0</nazadanie>
+      <format/>
+      <typ>1</typ>
+      <oprawa>miękka</oprawa>
+      <wydawca/>
+      <liczbastron>128</liczbastron>
+      <datawydania/>
+      <okladka>http://ebookpoint.pl/okladki/326x466/100mis.jpg</okladka>
+      <okladkatyl>http://ebookpoint.pl/okladki-tyl/326x466/100mis.jpg</okladkatyl>
+      <bestseller>0</bestseller>
+      <nowosc>0</nowosc>
+      <serietematyczne>
+        <seriatematyczna id="14000">Kompetencje osobiste</seriatematyczna>
+        <seriatematyczna id="12000">Twoja kariera</seriatematyczna>
+        <seriatematyczna id="15000">Sprzedaż</seriatematyczna>
+      </serietematyczne>
+      <ksiegarnie_nieinter>
+        <waga>0.53</waga>
+        <status2>6</status2>
+        <cena_netto>23.71</cena_netto>
+        <cena_brutto>24.9</cena_brutto>
+        <vat>1.19</vat>
+        <vat_procent>5</vat_procent>
+      </ksiegarnie_nieinter>
+      <opis><![CDATA[<p><b>Nieważne, ile wiesz. Ważne, co z tego stosujesz w praktyce.</b></p>
+
+<p>Od ilu lat pracujesz jako sprzedawca? A może dopiero zaczynasz swoją przygodę ze sprzedażą? Na pewno masz już na swoim koncie jakieś sukcesy, ale i porażki. Wiesz, że pomimo kryzysów, wymagających klientów i dużej konkurencji sprzedaż nie tylko bywa źródłem dochodów, lecz także może Ci dostarczyć wiele osobistej satysfakcji. Twoje zasoby wiedzy i umiejętności wciąż rosną, lecz czasami brakuje Ci tego czegoś - właściwej, konkretnej porady, przychodzącej w odpowiednim momencie.</p>
+<p>100 zasad, którymi dzieli się z Tobą Mistrz Sprzedaży, to niezbędnik wybitnego handlowca. Czasem zasady wydadzą Ci się oczywiste, czasem odkrywcze, a przy niektórych zatrzymasz się i powiesz: "To jest to!". Rady zamieszczone w tej książce są krótkie i treściwe. Stworzone specjalnie dla Ciebie - człowieka zajętego, zawsze w biegu, który nie ma czasu na zagłębianie się w filozoficzne dywagacje. Przeczytaj je, a spojrzysz na sprzedawanie z innej strony, będziesz w nowy sposób myśleć o swojej pracy, klientach, ich celach i oczekiwaniach. </p>
+
+<p><b>Pamiętaj! Po przeczytaniu tej książki nie pożyczaj jej nikomu na dłużej. Na pewno będziesz wracać do niej wielokrotnie.</b></p>
+<hr>
+<p><b>Arkadiusz Bednarski</b> - jeden z najbardziej znanych polskich trenerów, coachów i mentorów. Specjalizuje się w szkoleniach z zakresu rozwoju osobistego i sprzedaży. Prowadzi szkolenia w kraju i za granicą. Ze sprzedażą związany jest od 1994 roku. W trakcie swojej kariery zawodowej pracował jako sprzedawca, menedżer i prezes zarządu. Jest autorem dziesięciu książek, w tym bestsellerów Mistrz sprzedaży (Onepress 2009, 2012) i Arcymistrz sprzedaży (Onepress 2009, 2012). </p>
+<br>
+<hr>]]></opis>
+      <md5>0f23c18ad7983b075931af944351102b</md5>
+    </ksiazka>
+    <ksiazka ident="100RZP">
+      <isbn>978-83-246-6283-8</isbn>
+      <ean>9788324662838</ean>
+      <ident>100RZP</ident>
+      <tytul language="polski">100 rzeczy, które każdy projektant powinien wiedzieć o potencjalnych klientach</tytul>
+      <tytul language="oryginal">100 Things Every Designer Needs to Know About People (Voices That Matter)</tytul>
+      <link>http://ebookpoint.pl/ksiazki/100-rzeczy-ktore-kazdy-projektant-powinien-wiedziec-o-potencjalnych-klientach-susan-weinschenk,100rzp.htm</link>
+      <autor>Susan Weinschenk</autor>
+      <tlumacz>Daniel Kaczmarek</tlumacz>
+      <status>1</status>
+      <cena>49.00</cena>
+      <cenadetaliczna>49.00</cenadetaliczna>
+      <znizka>0.00</znizka>
+      <marka>1</marka>
+      <nazadanie>0</nazadanie>
+      <format>168x237 </format>
+      <typ>1</typ>
+      <oprawa>miękka</oprawa>
+      <wydawca/>
+      <liczbastron>244</liczbastron>
+      <datawydania>2013-06-21</datawydania>
+      <online>http://pdf.helion.pl/100rzp/100rzp.pdf</online>
+      <okladka>http://ebookpoint.pl/okladki/326x466/100rzp.jpg</okladka>
+      <okladkatyl>http://ebookpoint.pl/okladki-tyl/326x466/100rzp.jpg</okladkatyl>
+      <issueurl>http://ebookpoint.pl/eksiazki/100rzp.htm</issueurl>
+      <bestseller>0</bestseller>
+      <nowosc>1</nowosc>
+      <powiazane>
+        <ident_powiazany>BIBEBI</ident_powiazany>
+        <ident_powiazany>GRYMEG</ident_powiazany>
+        <ident_powiazany>JOOMKU</ident_powiazany>
+        <ident_powiazany>JQKODO</ident_powiazany>
+        <ident_powiazany>JQUEMO</ident_powiazany>
+        <ident_powiazany>PODFRE</ident_powiazany>
+        <ident_powiazany>STARTP</ident_powiazany>
+        <ident_powiazany>WYRAWP</ident_powiazany>
+      </powiazane>
+      <serietematyczne>
+        <seriatematyczna id="95">Funkcjonalność stron</seriatematyczna>
+      </serietematyczne>
+      <ksiegarnie_nieinter>
+        <waga>0.60</waga>
+        <status2>1</status2>
+        <cena_netto>46.67</cena_netto>
+        <cena_brutto>49</cena_brutto>
+        <vat>2.33</vat>
+        <vat_procent>5</vat_procent>
+      </ksiegarnie_nieinter>
+      <opis><![CDATA[<div align="center"><h4><b> Dowiedz się, jak pracuje mózg Twojego klienta </b></h4></div>
+
+<p>Jak myślą konsumenci? W jaki sposób podejmują decyzje? Co sprawia, że klikają myszką, dokonują zakupu i robią dokładnie to, co chciałbyś, aby robili? 
+Talent i umiejętności to tylko połowa sukcesu. Aby Twoje projekty rzucały wszystkich na kolana, potrzebna Ci wiedza dotycząca tego, jak działa ludzki mózg. Może Ci się czasem wydawać, że ludzie zachowują się irracjonalnie i nieprzewidywalnie, ale w tym szaleństwie jest metoda. Czas, byś ją poznał i użył jej do własnych celów!</p>
+
+<p>Z zawartych w tej książce rzeczowych instrukcji dowiesz się, jak odczytywać zachowania konsumentów i co przyciąga ich uwagę. Poznasz błędy, jakie ludzie najczęściej popełniają w procesie postrzegania oraz dokonywania wyborów, i nauczysz się je przewidywać. Wykorzystaj w swojej pracy wnioski z badań naukowych oraz szereg praktycznych przykładów. Zacznij projektować i tworzyć bardziej intuicyjne, skuteczne, efektowne teksty, witryny internetowe, aplikacje, produkty, grafiki oraz wszelkie inne genialne dzieła, idealnie dopasowane do potrzeb potencjalnych klientów. </p>
+
+<ul>
+<li>Jak przykuwać uwagę na stronie WWW?</li>
+<li>Jak spowodować, by coś zapadło ludziom w pamięć?</li>
+<li>Jak motywować innych, by wykonali kolejny krok?</li>
+<li>Jak utrwalać w umysłach odbiorców określone informacje?</li>
+<li>Jak kształtować czyjeś przyzwyczajenia?</li>
+<li>Jak pogłębiać i utrwalać relacje z klientami?</li>
+<li>Jak odwoływać się do pozytywnych emocji i wspomnień?</li>
+<li>Jak skutecznie oddziaływać na podświadomość klienta?</li></ul>
+
+<div align="center"><h4><b> Zwiększ skuteczność, wskaźniki konwersji i użyteczność projektów! </b></h4></div>
+
+<hr /> 
+
+<p><b>Susan M. Weinschenk</b> jest doktorem psychologii z wieloletnim doświadczeniem w praktycznym zastosowaniu psychologii do projektowania rozwiązań technologicznych. Jest autorką kilku książek na temat metod projektowania skupionych na potrzebach użytkowników. Jest także wykładowcą i prelegentką oraz szefową działu User Experience Strategy dla obu Ameryk w firmie Human Factors International, a ponadto autorką popularnego bloga 
+whatmakesthemclick.net.</p>]]></opis>
+      <md5>d159967b442fd071dc04d5d20f468f70</md5>
+    </ksiazka>
+    <ksiazka ident="101PSZ">
+      <isbn>978-83-246-7092-5</isbn>
+      <ean>9788324670925</ean>
+      <ident>101PSZ</ident>
+      <tytul language="polski">Sprzedaż, zarządzanie i efektywność osobista w 101 praktycznych przykładach</tytul>
+      <link>http://ebookpoint.pl/ksiazki/sprzedaz-zarzadzanie-i-efektywnosc-osobista-w-101-praktycznych-przykladach-andrzej-niemczyk-bartlomiej-sapala,101psz.htm</link>
+      <autor>Andrzej Niemczyk, Bartłomiej Sapała</autor>
+      <status>7</status>
+      <przedsprzedazDO>2013-09-27</przedsprzedazDO>
+      <cena>50.22</cena>
+      <cenadetaliczna>54.00</cenadetaliczna>
+      <znizka>3.78</znizka>
+      <marka>2</marka>
+      <nazadanie>0</nazadanie>
+      <format>168x237</format>
+      <typ>1</typ>
+      <oprawa>miękka</oprawa>
+      <wydawca/>
+      <liczbastron>344</liczbastron>
+      <datawydania/>
+      <okladka>http://ebookpoint.pl/okladki/326x466/101psz.jpg</okladka>
+      <okladkatyl>http://ebookpoint.pl/okladki-tyl/326x466/101psz.jpg</okladkatyl>
+      <bestseller>0</bestseller>
+      <nowosc>0</nowosc>
+      <serietematyczne>
+        <seriatematyczna id="15000">Sprzedaż</seriatematyczna>
+        <seriatematyczna id="6000">Komunikacja i negocjacje</seriatematyczna>
+        <seriatematyczna id="14000">Kompetencje osobiste</seriatematyczna>
+      </serietematyczne>
+      <ksiegarnie_nieinter>
+        <waga>0.53</waga>
+        <status2>6</status2>
+        <cena_netto>51.43</cena_netto>
+        <cena_brutto>54</cena_brutto>
+        <vat>2.57</vat>
+        <vat_procent>5</vat_procent>
+      </ksiegarnie_nieinter>
+      <opis><![CDATA[<h4><b>Drogi Sprzedawco, Menedżerze, Człowieku, który chcesz się rozwijać zawodowo!</b></h4>
+
+<p>Trzymasz w ręku książkę duetu świetnych trenerów: Andrzeja Niemczyka i Bartłomieja Sapały. Uczestnicy ich szkoleń nie zawsze wiedzą, że zanim ci autorzy zostali szkoleniowcami, zajmowali się tym, czym ich uczniowie - byli handlowcami i menedżerami. Przeszli długą drogę od szeregowych sprzedawców do dyrektorów zarządzających dużymi grupami pracowników i mają świadomość, jak przekazywana przez nich wiedza działa w praktyce. Zdają sobie także sprawę z tego, że nic tak nie działa na wyobraźnię szkolonego, jak krótki i praktyczny życiowy przykład, okraszony odrobiną teorii. Dlatego zdecydowali się wspólnie napisać tę książkę.</p>
+
+<p><b>Zanim zaczniesz czytać, musisz wiedzieć, że:</b></p>
+<ul>
+<li>wszystkie przykłady są prawdziwe, a część z nich autorzy wzbogacili odrobiną humoru;</li>
+<li>każdy przykład stanowi odrębną całość, więc książkę można czytać wyrywkowo albo standardowo;</li>
+<li>w wielu przykładach znajdują się odnośniki do innych przypadków, w których dokładniej tłumaczone są kwestie poruszane w bieżącym fragmencie.</li></ul>
+
+<p>Jeszcze jedno: książka została podzielona na część dla handlowca i menedżera oraz część ogólną o efektywności osobistej. Możesz przeczytać tylko tę część, którą uznasz za najbardziej przydatną. Namawiamy jednak do przestudiowania całości, ponieważ z praktyki wiemy, że wiedza z jednej dziedziny może przydać Ci się do czegoś zupełnie innego. Jak to w życiu bywa.</p>
+
+<br />
+<hr /> 
+
+<p><b>Andrzej Niemczyk</b> - doświadczony trener, menedżer, handlowiec i wykładowca. Od wielu lat szkoli trenerów, kadrę menedżerską oraz przedstawicieli handlowych. Jest autorem kilku książek o zarządzaniu, handlowaniu 
+i prowadzeniu szkoleń. Wolny czas spędza w górach, na jachcie i w podróży, najchętniej z żoną i córkami.</p>
+
+<p><b>Bartłomiej Sapała</b> - menedżer z kilkunastoletnim doświadczeniem w obszarze budowania polskiej filii międzynarodowej sieci marketów sportowych. Jest konsultantem, doradcą i trenerem sprzedaży, zarządzania oraz optymalizowania procesów efektywności osobistej. Zamiłowanie do sportu dzieli z żoną, synem i córką.</p>
+
+<br /><hr />
+<h4><b>Patron medialny:</b></h4>
+<div align="center" style="background-color:white;">
+
+<a href="http://personel.infor.pl/" target="blank"><img height="40" width="auto" src="http://helion.pl/img/rozne/patroni/101PSZ/logo.jpg" />
+</a>
+
+</div>]]></opis>
+      <md5>9539e531040dd759267227177f4a8257</md5>
+    </ksiazka>
+    <ksiazka ident="101RAN">
+      <isbn>978-83-246-4346-2</isbn>
+      <ean>9788324643462</ean>
+      <ident>101RAN</ident>
+      <tytul language="polski">101 pomysłów na randkę</tytul>
+      <link>http://ebookpoint.pl/ksiazki/101-pomyslow-na-randke-krzysztof-krol,101ran.htm</link>
+      <autor>Krzysztof Król</autor>
+      <status>1</status>
+      <cena>39.90</cena>
+      <cenadetaliczna>39.90</cenadetaliczna>
+      <znizka>0.00</znizka>
+      <marka>4</marka>
+      <nazadanie>0</nazadanie>
+      <format>140x208</format>
+      <typ>1</typ>
+      <oprawa>twarda</oprawa>
+      <wydawca/>
+      <liczbastron>272</liczbastron>
+      <datawydania>2012-03-01</datawydania>
+      <online>http://pdf.helion.pl/101ran/101ran.pdf</online>
+      <okladka>http://ebookpoint.pl/okladki/326x466/101ran.jpg</okladka>
+      <issueurl>http://ebookpoint.pl/eksiazki/101ran.htm</issueurl>
+      <bestseller>0</bestseller>
+      <nowosc>0</nowosc>
+      <powiazane>
+        <ident_powiazany>ALPHUM</ident_powiazany>
+        <ident_powiazany>BIBZW2</ident_powiazany>
+        <ident_powiazany>EGORCY</ident_powiazany>
+        <ident_powiazany>POKOTY</ident_powiazany>
+        <ident_powiazany>PSYJOG</ident_powiazany>
+        <ident_powiazany>SSOJOB</ident_powiazany>
+        <ident_powiazany>TWOSUP</ident_powiazany>
+        <ident_powiazany>WOJNAS</ident_powiazany>
+      </powiazane>
+      <serietematyczne>
+        <seriatematyczna id="1600">Uwodzenie</seriatematyczna>
+        <seriatematyczna id="2100">Relacje damsko-męskie</seriatematyczna>
+      </serietematyczne>
+      <ksiegarnie_nieinter>
+        <waga>0.42</waga>
+        <status2>1</status2>
+        <cena_netto>38</cena_netto>
+        <cena_brutto>39.9</cena_brutto>
+        <vat>1.9</vat>
+        <vat_procent>5</vat_procent>
+      </ksiegarnie_nieinter>
+      <opis><![CDATA[<div align="center"><h4><b>Męczą Cię kolacje, nudne wypady do kina?</b></h4></div>
+
+<p><b>Randka</b> to niejednokrotnie najbardziej stresujący moment w budowaniu związku. Z pewnością zachodzisz w głowę: co zrobić, gdzie zabrać drugą osobę, jak się przygotować?</p> 
+
+<p>Jeśli chcesz poznać sekrety kreatywnych randek najszczęśliwszych ludzi na świecie, dobrze trafiłeś. Jeśli uświadomisz sobie, na jak wiele sposobów można spędzić czas we dwoje, zyskasz szansę na najwspanialszą randkę w swoim życiu.</p>
+
+<p>Z tą książką zaskoczysz ukochaną osobę i sprawisz jej największą na świecie przyjemność, a Wasz związek znajdzie się na zupełnie nowym poziomie.
+Wytęż wyobraźnię i stwórz atmosferę miłosnego uniesienia w każdym miejscu, którego wcześniej nie podejrzewałeś o randkowy klimat. Ruszaj!</p> 
+
+<br /><hr />
+<p><b>Krzysztof Król</b> - wybitny trener, prowadzący szkolenia z zakresu rozwoju osobistego i relacji damsko-męskich. Twórca szkoły Perfect Dating (www.perfectdating.pl), oraz Szkoły Wygranych (www.szkolawygranych.pl), autor bestsellerowej Księga związków, podrywu i seksu dla mężczyzn i Kodeksu wygranych. Pomógł już tysiącom ludzi udoskonalić swoje umiejętności interpersonalne i seksualne (nazywany jest nawet polskim Hitchem). Uczy, jak osiągnąć w życiu sukces i spełnić swoje marzenia.</p>]]></opis>
+      <md5>5e0c149e172682e1bd42210fd42dbcf9</md5>
+    </ksiazka>
+    <ksiazka ident="12KUSP">
+      <isbn>978-83-246-4774-3</isbn>
+      <ean>9788324647743</ean>
+      <ident>12KUSP</ident>
+      <tytul language="polski">12 kroków uczciwej* sprzedaży</tytul>
+      <link>http://ebookpoint.pl/ksiazki/12-krokow-uczciwej-sprzedazy-grzegorz-pollak-honorata-stolarzewicz,12kusp.htm</link>
+      <autor>Grzegorz Pollak, Honorata Stolarzewicz</autor>
+      <status>1</status>
+      <cena>49.00</cena>
+      <cenadetaliczna>49.00</cenadetaliczna>
+      <znizka>0.00</znizka>
+      <marka>2</marka>
+      <nazadanie>0</nazadanie>
+      <format>158x235 </format>
+      <typ>1</typ>
+      <oprawa>miękka</oprawa>
+      <wydawca/>
+      <liczbastron>336</liczbastron>
+      <datawydania>2012-04-26</datawydania>
+      <online>http://pdf.helion.pl/12kusp/12kusp.pdf</online>
+      <okladka>http://ebookpoint.pl/okladki/326x466/12kusp.jpg</okladka>
+      <okladkatyl>http://ebookpoint.pl/okladki-tyl/326x466/12kusp.jpg</okladkatyl>
+      <issueurl>http://ebookpoint.pl/eksiazki/12kusp.htm</issueurl>
+      <bestseller>0</bestseller>
+      <nowosc>0</nowosc>
+      <powiazane>
+        <ident_powiazany>BIBEBI</ident_powiazany>
+        <ident_powiazany>CLICMI</ident_powiazany>
+        <ident_powiazany>EGORCY</ident_powiazany>
+        <ident_powiazany>GRYMEG</ident_powiazany>
+        <ident_powiazany>NISBUD</ident_powiazany>
+        <ident_powiazany>POCME6</ident_powiazany>
+        <ident_powiazany>STARTP</ident_powiazany>
+        <ident_powiazany>SUNGET</ident_powiazany>
+      </powiazane>
+      <serietematyczne>
+        <seriatematyczna id="15000">Sprzedaż</seriatematyczna>
+      </serietematyczne>
+      <ksiegarnie_nieinter>
+        <waga>0.54</waga>
+        <status2>1</status2>
+        <cena_netto>46.67</cena_netto>
+        <cena_brutto>49</cena_brutto>
+        <vat>2.33</vat>
+        <vat_procent>5</vat_procent>
+      </ksiegarnie_nieinter>
+      <opis><![CDATA[<p><b>* uczciwej, bo z korzyścią dla klienta, zyskiem dla firmy i prowizją dla Ciebie</b></p>
+
+<p>Dzięki zdobytym podczas lektury tej książki wiedzy i umiejętnościom dotrzesz do 
+ukrytych potrzeb klienta i przygotujesz dla niego ofertę, którą zaakceptuje i której realizacja przyniesie Wam obu zadowolenie, lub... wykorzystasz tę wiedzę, by go oszukać. Jestem przekonany, że dokonasz właściwego wyboru.</p>
+ 
+<p>W podjęciu decyzji o kupnie tej książki pomoże Ci udzielenie sobie odpowiedzi na pytania:</p>
+
+<ul><li>Czy czujesz, że handel jest tym, co chciałbyś w życiu robić?</li>
+<li>Czy zastanawiasz się, jak przekonać klienta do wartości oraz korzyści z posiadania produktu bez kuszenia go niską ceną?</li>
+<li>Czy chcesz wiedzieć, na jakim etapie sprzedaży jesteś i co powinieneś zrobić, by kolejny krok przybliżył Cię do kontraktu?</li>
+<li>Czy nie rozumiesz, dlaczego z jednym klientem masz wspaniałe relacje, a z innym nie potrafisz się dogadać?</li>
+<li>Czy potrzebujesz skutecznego narzędzia w swojej pracy handlowca?</li></ul>
+
+<p>Twoje odpowiedzi TAK na powyższe pytania oznaczają, że zawarty w tej książce kompletny i skuteczny system sprzedaży, oparty na dwudziestu latach doświadczeń, jest tym, czego potrzebujesz!</p>
+<br />
+<p><center>Przeczytaj wywiad z autorem!</center></p>
+<br />
+
+<p><b>Uwaga:</b></p>
+<p>1. Jeżeli pod określeniem "<i>system sprzedaży</i>" rozumiesz "<i>techniki sprzedaży</i>" i oczekujesz, że to one wykonają za Ciebie pracę i wyręczą w podejmowaniu decyzji, nie kupuj tej książki. Ten system jest skutecznym narzędziem handlowca, ale nie zastąpi działania, myślenia i podejmowania trudnych decyzji.</p>
+
+<p>2. Kupując tę książkę, ryzykujesz, bo po jej przeczytaniu będziesz wiedział to, na co autorzy poświęcili dwadzieścia lat pracy, oraz to, że... odniesiesz sukces jako handlowiec.</p>
+
+<p>3. Każda decyzja niesie za sobą ryzyko. Decyzję o zakupie tej książki pozostawiamy wyłącznie Tobie, bo ostatnie słowo zawsze należy do klienta - a Ty jesteś naszym klientem. Nie zapomnij tylko o znanym powiedzeniu handlowców: "<i>No risk - no fun!</i>".</p>
+
+
+<p>Chcesz dowodów na skuteczność tego systemu sprzedaży? Przeczytaj, co piszą o 12 krokach klienci Grzegorza Pollaka i Honoraty Stolarzewicz:</p>
+
+<blockquote><i>Najskuteczniejsze szkolenia sprzedażowe to te, które dostarczają handlowcom zarówno niezbędnej wiedzy, jak i umożliwiają zdobycie praktycznych umiejętności. Grzegorz Pollak i Honorata Stolarzewicz stworzyli unikalną strategię sprzedaży opartą na wieloletnim doświadczeniu i psychologii zachowań ludzkich, której istotą jest zrozumienie i zaspokojenie potrzeb klienta. Ta książka to obowiązkowa lektura dla każdego, kto pragnie opanować sztukę uczciwej, a co za tym idzie skutecznej i długofalowej sprzedaży.</i><br><div align="right"><b>J. Christman Kennedy,<br /> Prezes Resource Management International, Inc.
+</b></div>
+</blockquote><br />
+
+<blockquote><i>Umiejętność przekonania klienta do wartości produktu to podstawa warsztatu handlowca sprzedającego produkty wysokiej jakości. Szkolenia prowadzone według "12 kroków procesu sprzedaży" umożliwiły handlowcom nie tylko zdobycie tych umiejętności, ale zmieniły ich sposób myślenia z kategorii "cena" na "jakość i korzyść dla klienta".</i><br><div align="right"><b>Sławomir Szulżyk,<br /> dyrektor ds. handlowych POL-SKONE sp. z o.o.</b></div>
+</blockquote><br />
+
+
+<blockquote><i>Skuteczność strategii "12 kroków procesu sprzedaży" wynika nie tylko z profesjonalizmu handlowców, którzy ją stosują, ale głównie z zaangażowania w dotarcie i zaspokojenie potrzeb klienta oraz ze zrozumienia, czym jest sprzedawanie realnych korzyści.</i><br><div align="right"><b>Waldemar Lewandowski,<br /> dyrektor ds. handlowych, Polska Grupa Farmaceutyczna S.A.</b></div>
+</blockquote><br />
+
+
+<blockquote><i>Szkolenie "12 kroków procesu sprzedaży" wsparte coachingiem prowadzonym przez Honoratę Stolarzewicz i Grzegorza Pollaka pozwoliło na szybkie wdrożenie nowych przedstawicieli handlowych w ich obowiązki, a wyniki sprzedaży potwierdziły skuteczność tej strategii. </i><br><div align="right"><b>Filipina Pilichowska, dyrektor CORDIS Johnson & Johnson w latach 2006 - 2010, obecnie dyrektor generalna SORIN GROUP Polska sp. z o.o.
+</b></div>
+</blockquote><br />
+
+
+<div align="center"><h4><b>Kolejnych dowodów dostarczysz sobie sam.
+</b></h4></div>
+
+<br /><hr />
+<p><b>Mgr inż. Grzegorz Pollak</b> - absolwent Politechniki Śląskiej w Gliwicach. Uzyskaną podczas studiów wiedzę techniczną wzbogacił praktyką zarządzania na stanowiskach kierowniczych. Odnosił liczne sukcesy w sprzedaży, poparte certyfikatami amerykańskich szkoleń Integrity Selling, Franklin Covey i Management Development Project. Ukoronowaniem jego doświadczeń w dziedzinie sprzedaży i szkoleń była decyzja o założeniu w roku 2007 firmy szkoleniowej Agreement&#174;, której misją jest podnoszenie kwalifikacji pracowników działów sprzedaży w celu uczciwego i profesjonalnego zaspokajania potrzeb klientów. Po latach pracy w handlu dzieli się swoją wiedzą i doświadczeniami, publikując w magazynach "Pro-KREACJA" i "Brief" artykuły na temat procesu sprzedaży oraz fundamentalnej roli motywacji w osiąganiu sukcesu w handlu.</p>
+
+<p><b>Dr Honorata Stolarzewicz</b> - absolwentka zarządzania na Akademii Ekonomicznej w Katowicach. Doktor nauk humanistycznych w zakresie socjologii. Pracę doktorską obroniła na Uniwersytecie Śląskim. Specjalizuje się w zachowaniach klientów i ich wpływie na cały proces sprzedaży, od momentu pierwszego kontaktu do zaspokojenia potrzeb klienta. Wiedzę i umiejętności z zakresu pozyskiwania klientów i ich efektywnej obsługi zdobywała w praktyce w prywatnych przedsiębiorstwach. W 2007 roku wraz z Grzegorzem Pollakiem założyła firmę Agreement&#174; oferującą unikalny program budowania relacji handlowych oraz rozwoju pracowników, w tym kadry menedżerskiej. Autorka licznych publikacji w czasopismach biznesowych i naukowych, takich jak "Manager", "Humanizacja Pracy", "Personel i Zarządzanie". Jej artykuły obejmują zagadnienia stosunków interpersonalnych, motywacji i podejmowania decyzji w warunkach szybkich zmian na współczesnych rynkach.</p>]]></opis>
+      <md5>1d751a217671e0df68321db4dfc2a36d</md5>
+    </ksiazka>
+    <ksiazka ident="12SEKR">
+      <isbn>978-83-246-2253-5</isbn>
+      <ean>9788324622535</ean>
+      <ident>12SEKR</ident>
+      <tytul language="polski">12 sekretów sukcesu w biznesie</tytul>
+      <tytul language="oryginal">The 12 Factors of Business Success: Discover, Develop and Leverage Your Strengths</tytul>
+      <link>http://ebookpoint.pl/ksiazki/12-sekretow-sukcesu-w-biznesie-kevin-hogan-dave-lakhani-mollie-marti,12sekr.htm</link>
+      <autor>Kevin Hogan, Dave Lakhani, Mollie Marti</autor>
+      <tlumacz>Marta Czub</tlumacz>
+      <status>0</status>
+      <cena>37.00</cena>
+      <cenadetaliczna>37.00</cenadetaliczna>
+      <znizka>0.00</znizka>
+      <marka>2</marka>
+      <nazadanie>0</nazadanie>
+      <format>A5</format>
+      <typ>1</typ>
+      <oprawa>miękka</oprawa>
+      <wydawca/>
+      <liczbastron>280</liczbastron>
+      <datawydania>2010-03-18</datawydania>
+      <online>http://pdf.helion.pl/12sekr/12sekr-1.pdf</online>
+      <okladka>http://ebookpoint.pl/okladki/326x466/12sekr.jpg</okladka>
+      <okladkatyl>http://ebookpoint.pl/okladki-tyl/326x466/12sekr.jpg</okladkatyl>
+      <issueurl>http://ebookpoint.pl/eksiazki/12sekr.htm</issueurl>
+      <bestseller>0</bestseller>
+      <nowosc>0</nowosc>
+      <powiazane>
+        <ident_powiazany>CLICMI</ident_powiazany>
+        <ident_powiazany>EGORCY</ident_powiazany>
+        <ident_powiazany>GETTIN</ident_powiazany>
+        <ident_powiazany>GRYMEG</ident_powiazany>
+        <ident_powiazany>POCME6</ident_powiazany>
+        <ident_powiazany>SCRUMO</ident_powiazany>
+        <ident_powiazany>SUNGET</ident_powiazany>
+        <ident_powiazany>TWMOBI</ident_powiazany>
+      </powiazane>
+      <videos>
+        <video id="14" title="Dobra perswazja i zła manipulacja" url="http://ebookpoint.pl/video/14,Dobra_perswazja_i_zla_manipulacja"/>
+        <video id="79" title="3 złote zasady perswazji: oczekiwania dobrego wyniku, wzajemności, dostosowania się" url="http://ebookpoint.pl/video/79,3_zlote_zasady_perswazji_oczekiwania_dobrego_wyniku_wzajemnosci_dostosowania_sie"/>
+        <video id="80" title="Jakie pytania powinniśmy zadawać, by wywołać zainteresowanie klientów" url="http://ebookpoint.pl/video/80,Jakie_pytania_powinnismy_zadawac_by_wywolac_zainteresowanie_klientow"/>
+        <video id="81" title="Dlaczego nie należy zadawać pytania &quot;dlaczego&quot;?" url="http://ebookpoint.pl/video/81,Dlaczego_nie_nalezy_zadawac_pytania_dlaczego"/>
+        <video id="82" title="Technika &quot;małych kroczków&quot;, czy raz a dobrze" url="http://ebookpoint.pl/video/82,Technika_malych_kroczkow_czy_raz_a_dobrze"/>
+        <video id="83" title="Zasada 80/20 - reguła biznesu i świata" url="http://ebookpoint.pl/video/83,Zasada_8020_-_regula_biznesu_i_swiata"/>
+        <video id="84" title="Amazing persuader czyli mistrz empatii" url="http://ebookpoint.pl/video/84,Amazing_persuader_czyli_mistrz_empatii"/>
+        <video id="85" title="Jak opowiadać historyjki perswazyjne?" url="http://ebookpoint.pl/video/85,Jak_opowiadac_historyjki_perswazyjne"/>
+        <video id="86" title="Będziesz żałować, jeśli nie spróbujesz..." url="http://ebookpoint.pl/video/86,Bedziesz_zalowac_jesli_nie_sprobujesz"/>
+        <video id="87" title="Lęk czy radość z decyzji - 2 wycieczki w przyszłość" url="http://ebookpoint.pl/video/87,Lek_czy_radosc_z_decyzji_-_2_wycieczki_w_przyszlosc"/>
+        <video id="88" title="Obawy rozmówcy Twoją nadzieją" url="http://ebookpoint.pl/video/88,Obawy_rozmowcy_Twoja_nadzieja"/>
+        <video id="89" title="Synchronizuj się z rozmówcą! Scena I" url="http://ebookpoint.pl/video/89,Synchronizuj_sie_z_rozmowca_Scena_I"/>
+        <video id="90" title="Synchronizuj się z rozmówcą! Scena II" url="http://ebookpoint.pl/video/90,Synchronizuj_sie_z_rozmowca_Scena_II"/>
+        <video id="91" title="Ton głosu i tempo wypowiedzi czyli wrażenie eksperta" url="http://ebookpoint.pl/video/91,Ton_glosu_i_tempo_wypowiedzi_czyli_wrazenie_eksperta"/>
+        <video id="92" title="Możesz być pewny, odwzajemni się!" url="http://ebookpoint.pl/video/92,Mozesz_byc_pewny_odwzajemni_sie"/>
+        <video id="93" title="Twoja słabość, Twoją siłą!" url="http://ebookpoint.pl/video/93,Twoja_slabosc_Twoja_sila"/>
+        <video id="94" title="Wspólny wróg - szansa na zjednoczenie i przekonanie rozmówcy" url="http://ebookpoint.pl/video/94,Wspolny_wrog_-_szansa_na_zjednoczenie_i_przekonanie_rozmowcy"/>
+        <video id="95" title="Zaskocz go, a złapie haczyk! Epizod I" url="http://ebookpoint.pl/video/95,Zaskocz_go_a_zlapie_haczyk_Epizod_I"/>
+        <video id="96" title="Zaskocz go, a złapie haczyk! Epizod II" url="http://ebookpoint.pl/video/96,Zaskocz_go_a_zlapie_haczyk_Epizod_II"/>
+        <video id="97" title="Cicho! Słuchaj mnie gaduło!" url="http://ebookpoint.pl/video/97,Cicho_Sluchaj_mnie_gadulo"/>
+        <video id="98" title="Wyjątkowość to wyjątkowa technika" url="http://ebookpoint.pl/video/98,Wyjatkowosc_to_wyjatkowa_technika"/>
+        <video id="99" title="Ludzie uwielbiają przynależeć" url="http://ebookpoint.pl/video/99,Ludzie_uwielbiaja_przynalezec"/>
+        <video id="100" title="Zakaz wstępu! To przestrzeń osobista" url="http://ebookpoint.pl/video/100,Zakaz_wstepu_To_przestrzen_osobista"/>
+        <video id="101" title="Wyobraź sobie, ponieważ... magiczne wyobrażenia" url="http://ebookpoint.pl/video/101,Wyobraz_sobie_poniewaz_magiczne_wyobrazenia"/>
+        <video id="102" title="Albo widzą, albo słyszą, albo czują. Jak ludzie postrzegają świat?" url="http://ebookpoint.pl/video/102,Albo_widza_albo_slysza_albo_czuja_Jak_ludzie_postrzegaja_swiat"/>
+        <video id="103" title="Notuj, ale nie po to, by spisywać!" url="http://ebookpoint.pl/video/103,Notuj_ale_nie_po_to_by_spisywac"/>
+        <video id="104" title="Decyzja niezdecydowanego klienta" url="http://ebookpoint.pl/video/104,Decyzja_niezdecydowanego_klienta"/>
+        <video id="105" title="Mały wybór, duża skuteczność sprzedaży" url="http://ebookpoint.pl/video/105,Maly_wybor_duza_skutecznosc_sprzedazy"/>
+        <video id="107" title="Wielokrotnie... atrakcyjni (częsta ekspozycja)" url="http://ebookpoint.pl/video/107,Wielokrotnie_atrakcyjni_czesta_ekspozycja"/>
+        <video id="108" title="&quot;Pierwsze wrażenie&quot; dla mniej atrakcyjnych" url="http://ebookpoint.pl/video/108,Pierwsze_wrazenie_dla_mniej_atrakcyjnych"/>
+        <video id="109" title="Fakty z życia atrakcyjnych i nieatrakcyjnych" url="http://ebookpoint.pl/video/109,Fakty_z_zycia_atrakcyjnych_i_nieatrakcyjnych"/>
+        <video id="110" title="Od spojrzenia do charyzmy" url="http://ebookpoint.pl/video/110,Od_spojrzenia_do_charyzmy"/>
+      </videos>
+      <serietematyczne>
+        <seriatematyczna id="12000">Twoja kariera</seriatematyczna>
+      </serietematyczne>
+      <ksiegarnie_nieinter>
+        <waga>0.40</waga>
+        <status2>3</status2>
+        <cena_netto>35.24</cena_netto>
+        <cena_brutto>37</cena_brutto>
+        <vat>1.76</vat>
+        <vat_procent>5</vat_procent>
+      </ksiegarnie_nieinter>
+      <opis><![CDATA[<ul>
+<li>Precz z bezwartościowymi teoriami!</li>
+<li>Na pohybel przejściowym biznesowym trendom!</li>
+<li>Wiwat doświadczenie i narzędzia przetestowane w akcji!</li>
+</ul>
+
+<div align="center"><h4><b> Przestań rozmyślać o sukcesie i zacznij go urzeczywistniać!<br />
+Okiełznaj bestię sukcesu </b></h4></div>
+
+<blockquote><i>
+Jedna z najbardziej inteligentnych i prawdziwie wnikliwych książek na temat sukcesu.
+<br><div align="right">Mark Joyner, autor bestsellera Wielka Formuła. Maksimum zysku, minimum straty</div></i>
+</blockquote>
+
+<p>Masz już dość tych wszystkich drętwych i bezużytecznych książek o tym, jak wspiąć się na sam szczyt? Mierzi Cię pusta treść w ładnym opakowaniu? To samo czuli autorzy tej książki, dlatego zabrali się do roboty, żeby pokazać, jak naprawdę się TO robi. Oni poznali na własnej skórze, w jaki sposób osiąga się prawdziwy sukces, i nie boją się podzielić swoją wiedzą.</p>
+
+<p>Nie znajdziesz tu wyświechtanych formułek i porad ostentacyjnie kłócących się z rzeczywistością. Zdzieramy śliczne opakowanie i zaglądamy bestii prawdziwego sukcesu prosto w wygłodniałą paszczę. Książka ta przenosi Cię z pozycji, w której marzysz o sukcesie, do pozycji, w której postępujesz tak, by go osiągnąć. Czeka Cię dość daleka droga, ale nie ma lepszej pory, by w nią wyruszyć. Zatem zaczynajmy!</p>
+
+<p>Poznaj i szlifuj 12 czynników kreujących sukces, a zacznij od:
+
+<ul>
+<li>samodyscypliny (potrzebnej, żeby wytrwać);</li>
+<li>strategii działania, dzięki której wytyczysz swoją drogę;</li>
+<li>pasji, odróżniającej ludzi sukcesu od całej reszty;</li>
+<li>odporności, która pomoże Ci przetrwać wzloty i upadki. </li>
+</ul>
+</p>]]></opis>
+      <md5>f355683825b3bb05b01044a31fc60cb2</md5>
+    </ksiazka>
+    <ksiazka ident="17GRZ2">
+      <isbn>978-83-246-2722-6</isbn>
+      <ean>9788324627226</ean>
+      <ident>17GRZ2</ident>
+      <tytul language="polski">17 śmiertelnych błędów szefa. Wydanie II rozszerzone</tytul>
+      <link>http://ebookpoint.pl/ksiazki/17-smiertelnych-bledow-szefa-wydanie-ii-rozszerzone-rafal-szczepanik,17grz2.htm</link>
+      <autor>Rafał Szczepanik</autor>
+      <status>1</status>
+      <cena>39.00</cena>
+      <cenadetaliczna>39.00</cenadetaliczna>
+      <znizka>0.00</znizka>
+      <marka>2</marka>
+      <nazadanie>0</nazadanie>
+      <format>A5</format>
+      <typ>1</typ>
+      <oprawa>twarda</oprawa>
+      <wydawca/>
+      <liczbastron>360</liczbastron>
+      <datawydania>2010-06-28</datawydania>
+      <online>http://pdf.helion.pl/17grz2/17grz2-1.pdf</online>
+      <okladka>http://ebookpoint.pl/okladki/326x466/17grz2.jpg</okladka>
+      <issueurl>http://ebookpoint.pl/eksiazki/17grz2.htm</issueurl>
+      <bestseller>0</bestseller>
+      <nowosc>0</nowosc>
+      <powiazane>
+        <ident_powiazany>BIBEBI</ident_powiazany>
+        <ident_powiazany>COTYZE</ident_powiazany>
+        <ident_powiazany>GRYMEG</ident_powiazany>
+        <ident_powiazany>MERCHA</ident_powiazany>
+        <ident_powiazany>POCME6</ident_powiazany>
+        <ident_powiazany>SUNGET</ident_powiazany>
+        <ident_powiazany>TWMOBI</ident_powiazany>
+        <ident_powiazany>ZADLAC</ident_powiazany>
+      </powiazane>
+      <serietematyczne>
+        <seriatematyczna id="19000">Przywództwo</seriatematyczna>
+      </serietematyczne>
+      <ksiegarnie_nieinter>
+        <waga>0.54</waga>
+        <status2>2</status2>
+        <cena_netto>37.14</cena_netto>
+        <cena_brutto>39</cena_brutto>
+        <vat>1.86</vat>
+        <vat_procent>5</vat_procent>
+      </ksiegarnie_nieinter>
+      <opis><![CDATA[<div align="center"><h4><b>  
+Kryminalna powieść menedżerska<br />
+Sensacyjna lekcja zarządzania<br />
+Firmowy bestseller
+</b></h4></div>
+
+<p>
+Pewnie znasz firmy, w których obowiązują dwie podstawowe zasady zarządzania:
+
+<ul>
+<li>Po pierwsze - szef ma zawsze rację.</li>
+<li>Po drugie - jeśli zdarzyłoby się, że szef racji nie ma... patrz punkt pierwszy.</li>
+</ul>
+
+<p>W tych firmach prezesi, dyrektorzy, a nawet kierownicy są przekonani, że nie popełniają błędów. Że za zepsucie całej ryby odpowiedzialny jest szary "ogon", a nie stojąca na czele organizacji "głowa". Nic bardziej mylnego!</p>
+
+<p>Trzymasz w ręce sensacyjną powieść menedżerską - sensacyjną nie tylko ze względu na prezentowany gatunek literacki. Ta książka wciąga i mrozi krew w żyłach przede wszystkim dlatego, że opowiada o błędach dzisiejszych menedżerów. Obnaża potknięcia Twojego szefa. Wytyka także Twoje własne pomyłki. A na sam koniec radzi, jak z nich wybrnąć. To wszystko podane jest za pomocą niebanalnej fabuły i barwnie sportretowanych postaci.</p>
+
+<p>17 śmiertelnych błędów szefa to połączenie dobrego kryminału z wiedzą z zakresu zarządzania. Książka ujawnia wiele mankamentów pracy menedżerów. Wartka opowieść przekonująco pokazuje, że następujące po sobie błędy zarządzania nieuchronnie prowadzą do katastrofy. Zaniedbanie, ignorancja i przekonanie o własnej nieomylności to tylko niektóre z nich. Najczęściej popełniane przez polskich szefów błędy zostały tu poddane szczegółowej analizie. Z książki dowiesz się też, jak uniknąć wpadek podczas tworzenia nowego zespołu.</p>]]></opis>
+      <md5>5e13ec5cc85406d970a490bfb4c941d5</md5>
+    </ksiazka>
+    <ksiazka ident="17GRZ3">
+      <isbn>978-83-246-4969-3</isbn>
+      <ean>9788324649693</ean>
+      <ident>17GRZ3</ident>
+      <tytul language="polski">17 śmiertelnych błędów szefa. Wydanie III rozszerzone</tytul>
+      <link>http://ebookpoint.pl/ksiazki/17-smiertelnych-bledow-szefa-wydanie-iii-rozszerzone-rafal-szczepanik,17grz3.htm</link>
+      <autor>Rafał Szczepanik</autor>
+      <status>1</status>
+      <cena>54.90</cena>
+      <cenadetaliczna>54.90</cenadetaliczna>
+      <znizka>0.00</znizka>
+      <marka>2</marka>
+      <nazadanie>0</nazadanie>
+      <format>140x208 </format>
+      <typ>1</typ>
+      <oprawa>twarda</oprawa>
+      <wydawca/>
+      <liczbastron>384</liczbastron>
+      <datawydania>2012-10-29</datawydania>
+      <online>http://pdf.helion.pl/17grz3/17grz3.pdf</online>
+      <okladka>http://ebookpoint.pl/okladki/326x466/17grz3.jpg</okladka>
+      <okladkatyl>http://ebookpoint.pl/okladki-tyl/326x466/17grz3.jpg</okladkatyl>
+      <issueurl>http://ebookpoint.pl/eksiazki/17grz3.htm</issueurl>
+      <bestseller>0</bestseller>
+      <nowosc>0</nowosc>
+      <powiazane>
+        <ident_powiazany>BIBEBI</ident_powiazany>
+        <ident_powiazany>COTYZE</ident_powiazany>
+        <ident_powiazany>GRYMEG</ident_powiazany>
+        <ident_powiazany>MERCHA</ident_powiazany>
+        <ident_powiazany>NISBUD</ident_powiazany>
+        <ident_powiazany>POCME6</ident_powiazany>
+        <ident_powiazany>SUNGET</ident_powiazany>
+        <ident_powiazany>ZADLAC</ident_powiazany>
+      </powiazane>
+      <serietematyczne>
+        <seriatematyczna id="19000">Przywództwo</seriatematyczna>
+      </serietematyczne>
+      <ksiegarnie_nieinter>
+        <waga>0.54</waga>
+        <status2>1</status2>
+        <cena_netto>52.29</cena_netto>
+        <cena_brutto>54.9</cena_brutto>
+        <vat>2.61</vat>
+        <vat_procent>5</vat_procent>
+      </ksiegarnie_nieinter>
+      <opis><![CDATA[<div align="center"><h4><b>Bo każdy menedżer ma w szafie jakiegoś trupa...</b></h4></div>
+
+<p>Dobra książka o zarządzaniu to taka, którą czyta się niczym świetną powieść detektywistyczną - z zapartym tchem, w jeden wieczór, pod kołdrą, z latarką w ręku, do białego świtu... Taka książka nie pozwala zasnąć z wrażenia i odłożyć się na półkę, zapada w pamięć, każe czytelnikowi wracać i analizować swoją treść wciąż od nowa. Hołdujący tym przekonaniom Rafał Szczepanik, menedżer i trener menedżerów, napisał... kryminał. Powieść sensacyjną z zarządzaniem w tle.</p>
+
+<p>Czytelniku! <b>17 śmiertelnych błędów szefa</b> doczekało się już trzeciego wydania. Widać wielu zarządzających w naszym kraju po cichu podejrzewa, że w ich szafie na dokumenty kryją się jakieś stare sprawki, które mogą okazać się śmiertelnie groźne dla ich firmy, ich kariery, ich zespołu ... Nikt nie rodzi się przywódcą. Jednak każdy może nauczyć się zarządzania i uniknąć błędów, jakie na swoje nieszczęście popełnił bohater tej książki: Janusz Czerwiński, prezes firmy Astra Tech.</p> 
+
+<p>W tym wydaniu błędów jest nie 17, lecz 20. Poza tymi, których bezwzględnie trzeba unikać, pojawiają się takie, które popełnić wręcz należy. Dla własnego dobra, rzecz jasna!</p>
+
+<br /><hr /><p><b>Rafał Szczepanik</b> jest jednym z założycieli Training Partners. Specjalizuje się w prowadzeniu szkoleń outdoor i gier symulacyjnych. Wcześniej współtworzył portal Pracuj.pl i przez pięć lat był jego wiceprezesem. Pracował też jako trener w Danii i Gwatemali. W roku 2004 został uznany za jednego z czterech najlepszych polskich trenerów w kategorii "gry symulacyjne". Prywatnie jest alpinistą, podróżnikiem, pierwszym Polakiem, który zdobył oba bieguny i himalajski ośmiotysięcznik. Jest też autorem książek Budowanie zespołu. Przygotowywanie i prowadzenie szkoleń outdoor (Onepress 2002, 2005), Nietypowe przypadki Public Relations (Onepress 2003, 2009), Komandosi w białych kołnierzykach. Metody zarządzania stosowane przez najlepszych menedżerów (Onepress 2009), Firma jak kamorra. 11 strategicznych zasad mafii w legalnym biznesie (Onepress 2010).</p>]]></opis>
+      <md5>7e76530866d5405269d4d07680bec0d4</md5>
+    </ksiazka>
+    <ksiazka ident="20LATM">
+      <isbn>978-83-246-3601-3</isbn>
+      <ean>9788324636013</ean>
+      <ident>20LATM</ident>
+      <tytul language="polski">20 lat mniej. Cofnij czas i zachowaj wieczną młodość!</tytul>
+      <tytul language="oryginal">20 Years Younger: Look Younger, Feel Younger, Be Younger!. eBook. ePub</tytul>
+      <link>http://ebookpoint.pl/ksiazki/20-lat-mniej-cofnij-czas-i-zachowaj-wieczna-mlodosc-bob-greene,20latm.htm</link>
+      <autor>Bob Greene</autor>
+      <tlumacz>Małgorzata Wróblewska</tlumacz>
+      <status>1</status>
+      <cena>49.00</cena>
+      <cenadetaliczna>49.00</cenadetaliczna>
+      <znizka>0.00</znizka>
+      <marka>4</marka>
+      <nazadanie>0</nazadanie>
+      <format>158x235</format>
+      <typ>1</typ>
+      <oprawa>miękka</oprawa>
+      <wydawca/>
+      <liczbastron>320</liczbastron>
+      <datawydania>2012-03-12</datawydania>
+      <online>http://pdf.helion.pl/20latm/20latm.pdf</online>
+      <okladka>http://ebookpoint.pl/okladki/326x466/20latm.jpg</okladka>
+      <okladkatyl>http://ebookpoint.pl/okladki-tyl/326x466/20latm.jpg</okladkatyl>
+      <issueurl>http://ebookpoint.pl/eksiazki/20latm.htm</issueurl>
+      <bestseller>0</bestseller>
+      <nowosc>0</nowosc>
+      <powiazane>
+        <ident_powiazany>BIBZW2</ident_powiazany>
+        <ident_powiazany>BIEGAN</ident_powiazany>
+        <ident_powiazany>BIESPA</ident_powiazany>
+        <ident_powiazany>POKOTY</ident_powiazany>
+        <ident_powiazany>PSYJOG</ident_powiazany>
+        <ident_powiazany>SUNGET</ident_powiazany>
+        <ident_powiazany>UWJEZY</ident_powiazany>
+        <ident_powiazany>WOJNAS</ident_powiazany>
+      </powiazane>
+      <serietematyczne>
+        <seriatematyczna id="190">Zdrowie i uroda</seriatematyczna>
+        <seriatematyczna id="2400">Wygląd i wizerunek</seriatematyczna>
+      </serietematyczne>
+      <ksiegarnie_nieinter>
+        <waga>0.48</waga>
+        <status2>1</status2>
+        <cena_netto>46.67</cena_netto>
+        <cena_brutto>49</cena_brutto>
+        <vat>2.33</vat>
+        <vat_procent>5</vat_procent>
+      </ksiegarnie_nieinter>
+      <opis><![CDATA[<div align="center"><h4><b>Eliksir młodości czy gwarant długowieczności?</b></h4></div>
+
+<p>W życiu zwykle czterdzieści lat mija jak jeden dzień. Jednak naprawdę wiek to tylko liczba! Nauka badająca proces starzenia się dowiodła, że włączenie do życia codziennego czterech kluczowych elementów może wpłynąć na naszą fizjologię, w znaczący sposób spowalniając procesy związane ze starzeniem się organizmu oraz pozwalając nam funkcjonować tak, jakbyśmy naprawdę byli o wiele lat młodsi. Zamiast po botoks, sięgnij po ćwiczenia, diety, pielęgnację skóry oraz właściwą higienę snu. I z zachwytem obserwuj zmiany!</p>
+
+<hr /><blockquote><i>Bob Greene zmienił moje życie
+</i><br><div align="right"><b>Oprah Winfrey</b></div>
+</blockquote><hr />
+
+<p>Ta książka to praktyczny i efektywny poradnik zawierający program, który sprawi, że będziesz wyglądać i czuć się młodziej niż kiedykolwiek:</p>
+
+<ul><li>Ćwiczenia - treningi siłowy i aerobowy przeciwdziałają utracie masy mięśniowej i kostnej, wzmacniają kręgosłup oraz pozwalają zachować aktywność i zwinność. </li>
+<li>Odżywianie - kompletny jadłospis promujący długowieczność zawiera wiele przepisów na pyszne dania oraz rady dotyczące suplementów diety.</li>
+<li>Pielęgnacja skóry - trzystopniowy program pielęgnacji skóry zwalcza zmarszczki i przywraca skórze blask.</li>
+<li>Sen - sprawdzone sposoby na zdrowy sen dostarczają energii i redukują ryzyko chorób.</li></ul>
+
+<hr /><p><b>Bob Greene</b> jest dietetykiem światowej klasy. To dzięki niemu sama Oprah Winfrey przeszła prawdziwą metamorfozę i na dobre zrezygnowała z rozmiaru XXL. Bob jest także ekspertem w dziedzinie fizjologii ćwiczeń i certyfikowanym trenerem personalnym. Jego książka Dieta Best Life ukazała się nakładem wydawnictwa Sensus i szturmem podbiła polskie kuchnie. Teraz i Ty masz szansę wieść styl życia według metody "dwadzieścia lat mniej".</p>]]></opis>
+      <md5>9cd98a4ecf51adca6cc85619c9915d58</md5>
+    </ksiazka>
+  </lista>
+</details>

@@ -1,0 +1,744 @@
+<?xml version="1.0" encoding="iso-8859-2"?>
+<!--
+	    Dane z dnia: sob, 21 wrz 2013, 01:07:24 CEST
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ Ze względu na wielkość pliku XML, proszę o ściąganie wersji produkty-dlabystrzakow.xml.zip
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+            Jeśli będziesz sprzedawał książki w PP, to użyj pola <status>:
+
+		0 - niedostepna
+		1 - dostepna
+		2 - w przygotowaniu
+		5 - druk na żądanie
+		7 - przedsprzedaz
+	    oraz <cena>, <cenadetaliczna> (ceny takie jak na stronach GW Helion : moga zawierac znizki itp.)
+
+	    dla ksiegarni internetowych (wspolpraca z dzialem handlowym, ehelion) użyj pola <status2>:
+
+    		1 - dostępna
+		2 - dostępna w małej ilości
+		3 - chwilowo niedostępna
+		4 - niedostępna
+		5 - POD
+		6 - w przygotowaniu
+		7 - w przedsprzedaży
+            oraz pola <ksiegarnie_nieinter> gdzie znajduja sie wszystkie dane odnosnie ceny netto, brutto, stawka VAT
+
+		<typ>:
+			1 - ksiazka
+			2 - ebook
+			3 - audiobook mp3
+			4 - audiocd mp3
+
+		<marka>:
+			1 - helion
+			2 - onepress
+			3 - editio
+			4 - sensus
+			5 - septem
+			6 - bezdroza
+			8 - podrecznik
+			11 - bezdroża obce
+
+Zmiany:
+09.02.2011 @MJJ dolożenie elementu <typ>
+15.06.2011 @MJJ dodanie pliku lista2-statusy.xml z samymi statusami, cenami
+21.12.2011 @TKr seolinki, zagregowane formaty ebooków
+23.01.2012 @TKr info o promocjach, lista promocji serwis.pl/xml/lista-promocje.cgi
+15.06.2012 @TKr dodane info o audiobookach
+29.08.2012 @TKr dodane md5 jako wßkaźnik zmiany informacji w książce
+
+		Kontakt: Michal Jęczalik <michal.jeczalik@helion.pl>
+-->
+<details>
+  <lista baza="dlabystrzakow">
+    <ksiazka ident="AKCIAZ">
+      <isbn>978-83-246-1626-8</isbn>
+      <ean>9788324616268</ean>
+      <ident>AKCIAZ</ident>
+      <tytul language="polski">Aktywna ciąża dla bystrzaków</tytul>
+      <tytul language="oryginal">Fit Pregnancy for Dummies</tytul>
+      <link>http://dlabystrzakow.pl/ksiazki/aktywna-ciaza-dla-bystrzakow-catherine-cram-tere-stouffer-drenth,akciaz.htm</link>
+      <autor>Catherine Cram, Tere Stouffer Drenth</autor>
+      <tlumacz>Anna Owsiak, Izabela Szybilska-Fiedorowicz</tlumacz>
+      <status>0</status>
+      <cena>34.90</cena>
+      <cenadetaliczna>34.90</cenadetaliczna>
+      <znizka>0.00</znizka>
+      <marka>5</marka>
+      <nazadanie>0</nazadanie>
+      <format>180x235</format>
+      <typ>1</typ>
+      <oprawa>miękka</oprawa>
+      <wydawca/>
+      <liczbastron>384</liczbastron>
+      <datawydania>2008-05-14</datawydania>
+      <online>http://pdf.helion.pl/akciaz/akciaz-1.pdf</online>
+      <okladka>http://dlabystrzakow.pl/okladki/326x466/akciaz.jpg</okladka>
+      <top>18</top>
+      <bestseller>1</bestseller>
+      <nowosc>0</nowosc>
+      <powiazane>
+        <ident_powiazany>ELEBYS</ident_powiazany>
+        <ident_powiazany>HOASTR</ident_powiazany>
+        <ident_powiazany>JOGA</ident_powiazany>
+        <ident_powiazany>JOGABY</ident_powiazany>
+        <ident_powiazany>KUCHBE</ident_powiazany>
+        <ident_powiazany>MIGREN</ident_powiazany>
+        <ident_powiazany>NADCBY</ident_powiazany>
+        <ident_powiazany>OGROD</ident_powiazany>
+        <ident_powiazany>RZUPAL</ident_powiazany>
+        <ident_powiazany>SLEEP</ident_powiazany>
+        <ident_powiazany>WYPUBO</ident_powiazany>
+      </powiazane>
+      <serietematyczne>
+        <seriatematyczna id="14">Życie rodzinne</seriatematyczna>
+        <seriatematyczna id="12">Zdrowie i uroda</seriatematyczna>
+      </serietematyczne>
+      <ksiegarnie_nieinter>
+        <waga>0.58</waga>
+        <status2>3</status2>
+        <cena_netto>33.24</cena_netto>
+        <cena_brutto>34.9</cena_brutto>
+        <vat>1.66</vat>
+        <vat_procent>5</vat_procent>
+      </ksiegarnie_nieinter>
+      <opis><![CDATA[<div align="center"><h4><b> Ciąża w stylu fitness</b></h4></div> 
+
+<p>Oswoiłaś się już z myślą, że jesteś w ciąży? Niewątpliwym plusem jest to, że ludzie w autobusie ustępują Ci miejsca i masz prawo podchodzić do okienek w urzędach bez kolejki. Minusem jest zaś to, że stare ubrania przestają na Ciebie pasować. Pewnie już zastanawiasz się, jak będziesz wyglądać za kilka miesięcy? Fakt, że w Twoim brzuchu rozwija się mały człowiek, nie oznacza, że musisz zachowywać się niczym szklany, nieruchomy inkubator. Możesz uprawiać sport i zachować świetną formę aż do chwili rozwiązania. Ważne tylko, byś robiła to pod okiem specjalistów - takich jak autorzy Aktywnej ciąży dla bystrzaków.</p>
+
+<p>Joga, pływanie, trening siłowy i aerobik - ruch sprawi, że okres ciąży stanie się nie tylko czasem oczekiwania na potomka, ale również przygotuje Cię fizycznie na jego przyjście. Znajdziesz tu ćwiczenia dla siebie - bez względu na to, czy wcześniej aktywnie uprawiałaś sport, czy byłaś raczej dziewczyną "kanapową". Dowiedz się, które z ćwiczeń są dla Ciebie wskazane, a jakich powinnaś unikać. Poczytaj o tym, jak prawidłowo odżywiać się podczas ciąży i po rozwiązaniu oraz jak zachować zdrowie - zarówno fizyczne, jak i psychiczne - w obliczu ważnej zmiany w Twoim życiu.</p>
+
+<ul>
+<li>Bezpieczny program treningowy na czas ciąży.</li>
+<li>Uelastycznianie ciała, poprawianie krążenia oraz zdrowy sen.</li>
+<li>Metody kontroli prawidłowego przyrostu masy ciała. </li>
+<li>Przygotowanie ciała do akcji porodowej oraz porodu.</li>
+<li>Szczegółowe opisy ćwiczeń na kolejne etapy ciąży.</li>
+<li>Sposoby angażowania rodziny i przyjaciół w swój bieg po kondycję.</li>
+</ul>]]></opis>
+      <md5>0017a7de66d8d39855ce8d12e55ec2e9</md5>
+    </ksiazka>
+    <ksiazka ident="AKWABY">
+      <isbn>978-83-246-2037-1</isbn>
+      <ean>9788324620371</ean>
+      <ident>AKWABY</ident>
+      <tytul language="polski">Akwarium słodkowodne dla bystrzaków</tytul>
+      <tytul language="oryginal">Freshwater Aquariums For Dummies 2/e</tytul>
+      <link>http://dlabystrzakow.pl/ksiazki/akwarium-slodkowodne-dla-bystrzakow-maddy-hargrove-mic-hargrove,akwaby.htm</link>
+      <autor>Maddy Hargrove, Mic Hargrove</autor>
+      <tlumacz>Emilia Hahn</tlumacz>
+      <status>1</status>
+      <cena>34.90</cena>
+      <cenadetaliczna>34.90</cenadetaliczna>
+      <znizka>0.00</znizka>
+      <marka>5</marka>
+      <nazadanie>0</nazadanie>
+      <format>180x235</format>
+      <typ>1</typ>
+      <oprawa>miękka</oprawa>
+      <wydawca/>
+      <liczbastron>320</liczbastron>
+      <datawydania>2010-08-06</datawydania>
+      <online>http://pdf.helion.pl/akwaby/akwaby-7.pdf</online>
+      <okladka>http://dlabystrzakow.pl/okladki/326x466/akwaby.jpg</okladka>
+      <okladkatyl>http://dlabystrzakow.pl/okladki-tyl/326x466/akwaby.jpg</okladkatyl>
+      <top>19</top>
+      <bestseller>1</bestseller>
+      <nowosc>0</nowosc>
+      <powiazane>
+        <ident_powiazany>BKMAR1</ident_powiazany>
+        <ident_powiazany>FOREB2</ident_powiazany>
+        <ident_powiazany>HISZP4</ident_powiazany>
+        <ident_powiazany>TREPSO</ident_powiazany>
+        <ident_powiazany>WIETUT</ident_powiazany>
+      </powiazane>
+      <serietematyczne>
+        <seriatematyczna id="13">Zwierzęta</seriatematyczna>
+      </serietematyczne>
+      <ksiegarnie_nieinter>
+        <waga>0.50</waga>
+        <status2>2</status2>
+        <cena_netto>33.24</cena_netto>
+        <cena_brutto>34.9</cena_brutto>
+        <vat>1.66</vat>
+        <vat_procent>5</vat_procent>
+      </ksiegarnie_nieinter>
+      <opis><![CDATA[<div align="center"><h4><b> Dopuść swoje rybki do głosu</div></h4></b>
+
+<p>Uwielbiasz spędzać czas z nosem przyklejonym do szyby, obserwując bajecznie kolorowe ryby? Uważasz akwaria za wyjątkowo estetyczny i oryginalny element wystroju wnętrz? Kochasz zwierzaki, ale brak czasu nie pozwala Ci na posiadanie żadnego z nich, prócz wyrozumiałych wodolubnych pupili? Uczyń z ich hodowli swoje hobby i zacznij się czuć w świecie akwarystyki jak ryba w wodzie!</p>
+
+<p>Naprawdę bardzo łatwo jest zostać dobrym akwarystą. Wszystko, czego Ci potrzeba, to odrobina pomocy, by wytrwać. Ten przyjazny poradnik odpowie na wszystkie Twoje pytania, począwszy od założenia zbiornika i wyboru odpowiednich gatunków ryb, po przygotowanie bezpiecznej wody akwariowej, wykorzystywanie chemii i informacje odnośnie do cyklu azotowego. Nauczysz się łączyć w akwarium różne ryby, czyścić żwir, radzić sobie z inwazją glonów oraz prezentować swoje zwierzątka w albumach fotograficznych i na wystawach.</p>
+
+Rady złotej rybki:
+<ul>
+<li>Zakładanie słodkowodnego akwarium.</li>
+<li>Wybieranie najlepszych ryb.</li>
+<li>Korzystny zakup sprzętu.</li>
+<li>Utrzymywanie czystego, zdrowego środowiska.</li>
+<li>Pokonywanie akwarystycznych pułapek.</li>
+<li>Rozmnażanie zwierzątek.</li>
+<li>Prowadzenie dokumentacji swoich rybek.</li>
+</ul>
+
+<p>Ponadto znajdziesz tu dekalogi: 10 fajnych akwarystycznych gadżetów, 10 naukowych praw rybiego świata oraz 10 mocnych postanowień związanych z posiadaniem akwarium.</p>
+
+<p>DODATEK SPECJALNY:<br>
+Dane i liczby dotyczące najwłaściwszego akwarium</p>]]></opis>
+      <md5>7114acaa79c6c33fb8d15bbeed168e8c</md5>
+    </ksiazka>
+    <ksiazka ident="ANFIBY">
+      <isbn>978-83-246-1904-7</isbn>
+      <ean>9788324619047</ean>
+      <ident>ANFIBY</ident>
+      <tytul language="polski">Anatomia i fizjologia dla bystrzaków</tytul>
+      <tytul language="oryginal">Anatomy and Physiology for Dummies </tytul>
+      <link>http://dlabystrzakow.pl/ksiazki/anatomia-i-fizjologia-dla-bystrzakow-donna-rae-siegfried,anfiby.htm</link>
+      <autor>Donna Rae Siegfried</autor>
+      <tlumacz>Cezar Matkowski</tlumacz>
+      <status>0</status>
+      <cena>34.90</cena>
+      <cenadetaliczna>34.90</cenadetaliczna>
+      <znizka>0.00</znizka>
+      <marka>5</marka>
+      <nazadanie>0</nazadanie>
+      <format>180x235</format>
+      <typ>1</typ>
+      <oprawa>miękka</oprawa>
+      <wydawca/>
+      <liczbastron>376</liczbastron>
+      <datawydania>2009-03-18</datawydania>
+      <online>http://pdf.helion.pl/anfiby/anfiby-5.pdf</online>
+      <okladka>http://dlabystrzakow.pl/okladki/326x466/anfiby.jpg</okladka>
+      <top>8</top>
+      <bestseller>1</bestseller>
+      <nowosc>0</nowosc>
+      <powiazane>
+        <ident_powiazany>ANTEBY</ident_powiazany>
+        <ident_powiazany>B_PZIM</ident_powiazany>
+        <ident_powiazany>JOGABY</ident_powiazany>
+        <ident_powiazany>KUCHBE</ident_powiazany>
+        <ident_powiazany>MIGREN</ident_powiazany>
+        <ident_powiazany>NADCBY</ident_powiazany>
+        <ident_powiazany>ROKWBY</ident_powiazany>
+        <ident_powiazany>SLEEP</ident_powiazany>
+        <ident_powiazany>WYPUBO</ident_powiazany>
+      </powiazane>
+      <serietematyczne>
+        <seriatematyczna id="12">Zdrowie i uroda</seriatematyczna>
+      </serietematyczne>
+      <ksiegarnie_nieinter>
+        <waga>0.60</waga>
+        <status2>3</status2>
+        <cena_netto>33.24</cena_netto>
+        <cena_brutto>34.9</cena_brutto>
+        <vat>1.66</vat>
+        <vat_procent>5</vat_procent>
+      </ksiegarnie_nieinter>
+      <opis><![CDATA[<div align="center"><h4><b>Całkowite obnażenie ciała</div></h4></b>
+
+<p>Każdy z nas posiada rozległą wiedzę w jakiejś dziedzinie, dla jednych jest to księgowość, dla innych języki obce albo szczegółowa znajomość życiorysu Alberta Schweitzera. Jednak zaskakująco niewielu z nas zna dobrze własne ciało! Kiedy wszystko funkcjonuje prawidłowo, nikt nie zawraca sobie nim głowy. Tymczasem instrukcja obsługi własnego organizmu powinna być naszym obowiązkowym podręcznikiem!</p>
+
+<p>Czy wiesz, że w jednej tylko dłoni znajduje się aż dwadzieścia siedem kości? Czy zdarzyło Ci się zastanawiać nad tym, jak w Twoim organizmie rozwijają się choroby? Twoje ciało to fascynująca konstrukcja -- coś pomiędzy doskonałym dziełem sztuki a precyzyjną maszynerią. Rzecz tak pozornie banalna jak oddychanie, jedzenie, krążenie krwi czy gojenie się ran okazuje się procesem równie pasjonującym co dobry film sensacyjny. Zajrzyj do wnętrza i poznaj siebie z każdej strony! </p>
+
+Na układy nie ma rady
+<ul>
+<li>Mapa organizmu -- identyfikacja organów i części Twojego ciała.</li>
+<li>Sekrety układu kostnego -- szczegółowy przegląd od stóp do głów.</li>
+<li>Układ nerwowy -- jak pracuje Twój mózg, na czym polega działanie zmysłów.</li>
+<li>Działanie układów: krążenia, oddechowego, trawiennego czy rozrodczego.</li>
+<li>Upływ czasu -- co dzieje się z Twoim ciałem w ciągu całego życia.</li>
+</ul>
+
+<p>Ponadto znajdziesz tu dekalogi: 10 sposobów na utrzymanie dobrego zdrowia i 10 dobrych stron internetowych poświęconych anatomii i fizjologii.</p>
+
+<p><b>DODATEK SPECJALNY:</b><br>
+Żyj zdrowo -- proste zasady do przestrzegania każdego dnia</p>]]></opis>
+      <md5>93a4786cc25599f0060437b6c05014f1</md5>
+    </ksiazka>
+    <ksiazka ident="ANTEBY">
+      <isbn>978-83-246-3672-3</isbn>
+      <ean>9788324636723</ean>
+      <ident>ANTEBY</ident>
+      <tytul language="polski">Analiza techniczna dla bystrzaków</tytul>
+      <tytul language="oryginal">Technical Analysis For Dummies (For Dummies (Business &amp; Personal Finance)). eBook. ePub</tytul>
+      <link>http://dlabystrzakow.pl/ksiazki/analiza-techniczna-dla-bystrzakow-barbara-rockefeller,anteby.htm</link>
+      <autor>Barbara Rockefeller</autor>
+      <tlumacz>Bartosz Oczko</tlumacz>
+      <status>1</status>
+      <cena>59.00</cena>
+      <cenadetaliczna>59.00</cenadetaliczna>
+      <znizka>0.00</znizka>
+      <marka>5</marka>
+      <nazadanie>0</nazadanie>
+      <format>170x230</format>
+      <typ>1</typ>
+      <oprawa>miękka</oprawa>
+      <wydawca/>
+      <liczbastron>360</liczbastron>
+      <datawydania>2012-03-16</datawydania>
+      <online>http://pdf.helion.pl/anteby/anteby.pdf</online>
+      <okladka>http://dlabystrzakow.pl/okladki/326x466/anteby.jpg</okladka>
+      <okladkatyl>http://dlabystrzakow.pl/okladki-tyl/326x466/anteby.jpg</okladkatyl>
+      <issueurl>http://dlabystrzakow.pl/eksiazki/anteby.htm</issueurl>
+      <top>2</top>
+      <bestseller>1</bestseller>
+      <nowosc>0</nowosc>
+      <powiazane>
+        <ident_powiazany>BIBZWM</ident_powiazany>
+        <ident_powiazany>EX21BY</ident_powiazany>
+        <ident_powiazany>FOREB2</ident_powiazany>
+        <ident_powiazany>FOREBV</ident_powiazany>
+        <ident_powiazany>MY5LOG</ident_powiazany>
+        <ident_powiazany>ROKWBY</ident_powiazany>
+        <ident_powiazany>RZYM</ident_powiazany>
+        <ident_powiazany>WLOSBV</ident_powiazany>
+        <ident_powiazany>ZAPRBY</ident_powiazany>
+      </powiazane>
+      <serietematyczne>
+        <seriatematyczna id="6">Praca zawodowa</seriatematyczna>
+      </serietematyczne>
+      <ksiegarnie_nieinter>
+        <waga>0.56</waga>
+        <status2>3</status2>
+        <cena_netto>56.19</cena_netto>
+        <cena_brutto>59</cena_brutto>
+        <vat>2.81</vat>
+        <vat_procent>5</vat_procent>
+      </ksiegarnie_nieinter>
+      <opis><![CDATA[<div align="center"><h4><b>Inwestuj bezpiecznie na giełdzie!</b></h4></div>
+
+<ul><li>Poznaj podstawy analizy technicznej</li>
+<li>Wykorzystaj ją do osiągania zysków i unikania strat</li>
+<li>Odkryj moment zmiany trendu</li>
+<li>Włącz się do gry i zagraj o konkretną kasę!</li></ul>
+
+<div align="center"><h4><b>Giełdowa hossa dla wtajemniczonych</b></h4></div>
+
+<p>Giełdy zrodziły liczne fortuny, ale stawały się też przyczyną spektakularnych bankructw. W ciągu dnia osiągają niebotyczne wręcz obroty, a wieczorem... A wieczorem, jak to w życiu bywa, jedni świętują zysk, a inni opłakują straty. Co zrobić, żeby znaleźć się w tej pierwszej grupie? Co trzeba wiedzieć, żeby wieczór spędzać przy kominku z lampką wina?</p>
+
+<p><b>Analiza techniczna</b> to jedna z odpowiedzi! Właśnie jej poświęcona jest ta książka. Możesz być kompletnym laikiem i nie mieć żadnego pojęcia o grze na giełdzie, a po lekturze tej książki będziesz się swobodnie poruszał w gąszczu fachowych pojęć. Analiza techniczna jest wykorzystywana od ponad stu lat, jednak współczesne narzędzia sprawiły, że stała się znacznie bardziej dostępna i precyzyjna. Na co czekasz? Czym prędzej odkryj wiedzę zawartą w tej książce i zweryfikuj ją na parkiecie... Giełdowym! </p>
+
+<p><b>Zbuduj fundamenty swojego sukcesu</b> - dowiedz się czym jest analiza techniczna, co możesz dzięki niej osiągnąć i na co powinieneś uważać. Poznaj fachowe słownictwo i elementarne zasady, dzięki którym będziesz zwinnie poruszał się w gąszczu wiedzy.</p>
+
+<p><b>Wybierz odpowiedni sprzęt </b>- dobór właściwych wskaźników to więcej niż połowa sukcesu! W zależności od Twojej skłonności do ryzyka, ilości dostępnych środków możesz sobie pozwolić na różne strategie. Wskaźniki to Twoje narzędzia, dzięki którym osiągniesz sukces!</p>
+
+<p><b>Poznaj typowe układy</b> - obserwując wykresy będziesz w stanie ocenić czego spodziewać się w najbliższym czasie. To niezwykle istotne żeby być przygotowanym na różne okoliczności.</p>
+
+<p><b>Identyfikuj trendy</b> - jeżeli wyczujesz moment odwrócenia trendu, możesz zarobić konkretne pieniądze. Przewiduj moment oraz siłę wystąpienia.</p>
+
+<p><b>Zanim zainwestujesz pieniądze: </b></p>
+<ul><li>dowiedz się, jak funkcjonują rynki</li>
+<li>prawidłowo odczytaj nastroje rynku</li>
+<li>poznaj dostępne wskaźniki</li>
+<li>naucz się interpretować wykresy</li>
+<li>sprawdź dlaczego analiza techniczna się (nie)sprawdza</li>
+<li>zmierz impet zmian cen</li>
+<li>odkryj najcenniejsze sekrety najlepszych graczy giełdowych</li></ul>
+
+<div align="center"><h4><b>Sprawdź, jak skutecznie pomnożyć swój kapitał!</b></h4></div>
+
+<br /><hr /><p><b>Barbara Rockefeller</b> - specjalistka w zakresie międzynarodowych stosunków gospodarczych i finansów, ze szczególnym uwzględnieniem rynku walutowego FOREX. Znana szerokiemu gronu ze swoich felietonów w "Currency Trader Magazine" oraz książek "The Global Trader" i "CNBC 24/7 Trading Around the Clock, Around the World".</p>]]></opis>
+      <md5>cba34f3f014bbd5e38849ca4d492c88d</md5>
+    </ksiazka>
+    <ksiazka ident="ARCYMI">
+      <isbn>83-246-2511-9</isbn>
+      <ean>9788324625116</ean>
+      <ident>ARCYMI</ident>
+      <tytul language="polski">Arcymistrz sprzedaży. Jak z dobrego stać się wybitnym sprzedawcą</tytul>
+      <link>http://dlabystrzakow.pl/ksiazki/arcymistrz-sprzedazy-jak-z-dobrego-stac-sie-wybitnym-sprzedawca-arkadiusz-bednarski,arcymi.htm</link>
+      <autor>Arkadiusz Bednarski</autor>
+      <status>0</status>
+      <cena>39.00</cena>
+      <cenadetaliczna>39.00</cenadetaliczna>
+      <znizka>0.00</znizka>
+      <marka>2</marka>
+      <nazadanie>0</nazadanie>
+      <format>A5</format>
+      <typ>1</typ>
+      <oprawa>miękka</oprawa>
+      <wydawca/>
+      <liczbastron>208</liczbastron>
+      <datawydania>2009-10-08</datawydania>
+      <online>http://pdf.helion.pl/arcymi/arcymi-3.pdf</online>
+      <okladka>http://dlabystrzakow.pl/okladki/326x466/arcymi.jpg</okladka>
+      <issueurl>http://dlabystrzakow.pl/eksiazki/arcymi.htm</issueurl>
+      <bestseller>0</bestseller>
+      <nowosc>0</nowosc>
+      <powiazane>
+        <ident_powiazany>HAKUMY</ident_powiazany>
+        <ident_powiazany>HOASTR</ident_powiazany>
+        <ident_powiazany>LOGLOV</ident_powiazany>
+        <ident_powiazany>WYPUBO</ident_powiazany>
+      </powiazane>
+      <videos>
+        <video id="155" title="Akwizytorom już dziękujemy! Zostań sprzedawcą z pasją." url="http://dlabystrzakow.pl/video/155,Akwizytorom_juz_dziekujemy_Zostan_sprzedawca_z_pasja"/>
+      </videos>
+      <ksiegarnie_nieinter>
+        <waga>0.26</waga>
+        <status2>3</status2>
+        <cena_netto>37.14</cena_netto>
+        <cena_brutto>39</cena_brutto>
+        <vat>1.86</vat>
+        <vat_procent>5</vat_procent>
+      </ksiegarnie_nieinter>
+      <opis><![CDATA[<div><b>Możesz także kupić książkę w komplecie z książką uzupełniającą <br />"Mistrz sprzedaży" w promocyjnej cenie >></b></div><br />
+
+<div align="center"><h4><b>Handlowa wirtuozeria</b></h4></div>
+<ul>
+<li>Co różni mistrza od arcymistrza?</li>
+<li>Jak mądrze wywierać wpływ?</li>
+<li>Czy uczciwość popłaca?</li>
+</ul>
+
+<p>Chcesz zostać świetnym handlowcem? Polecamy Ci Mistrza sprzedaży - to książka, która pozwoli Ci rozwinąć skrzydła.</p>
+
+<div align="center"><h4><b>A może już teraz jesteś naprawdę dobry w tym, co robisz?</b></h4></div> 
+
+<p>Bycie tylko jednym z wielu dobrych handlowców przestało Cię satysfakcjonować? Szukasz czegoś więcej, by zaspokoić swoje ambicje? Możesz zostać arcymistrzem, prześcignąć całą konkurencję, stanąć na najwyższym podium i spojrzeć na wszystkich z góry. Oto książka, która podsyci Twoją potrzebę osiągnięcia spektakularnego sukcesu, wskaże Ci cienką linię, oddzielającą handlowca dobrego od wybitnego, i pokaże, jak ją przekroczyć.</p>
+
+<p>Jednak satysfakcja to nie wszystko... Będąc niedoścignionym geniuszem handlu, perfekcyjnym wirtuozem sprzedaży, otrzymujesz godną Twojej pracy nagrodę. Świetni handlowcy zarabiają oczywiście bardzo dobrze, ale wybitni handlowcy nie mają żadnych limitów wynagrodzeń! Potrzebujesz jeszcze czasu do namysłu?</p>
+
+To NIE jest książka dla osób, które:
+<ul>
+<li>chcą się nauczyć sprzedawać, bo nie mają nic lepszego do roboty;</li>
+<li>mają ochotę dowiedzieć się czegoś na temat technik sprzedaży;</li>
+<li>w sprzedaży poszukują łatwego zarobku;</li>
+<li>tylko dla tych, którzy chcą wzbić się ponad przeciętność!</li>
+</ul>]]></opis>
+      <md5>f19fa516736ae926df963f4afc3886bc</md5>
+    </ksiazka>
+    <ksiazka ident="ARTMAD">
+      <isbn>978-83-246-1775-3</isbn>
+      <ean>9788324617753</ean>
+      <ident>ARTMAD</ident>
+      <tytul language="polski">Sztuka doczesnej mądrości</tytul>
+      <tytul language="oryginal">The Art of Worldly Wisdom. eBook. ePub</tytul>
+      <link>http://dlabystrzakow.pl/ksiazki/sztuka-doczesnej-madrosci-baltasar-graci-n,artmad.htm</link>
+      <autor>Baltasar Gracián</autor>
+      <tlumacz>Przemysław Gancarczyk</tlumacz>
+      <status>1</status>
+      <cena>27.00</cena>
+      <cenadetaliczna>27.00</cenadetaliczna>
+      <znizka>0.00</znizka>
+      <marka>4</marka>
+      <nazadanie>0</nazadanie>
+      <format>122x194</format>
+      <typ>1</typ>
+      <oprawa>twarda</oprawa>
+      <wydawca/>
+      <liczbastron>192</liczbastron>
+      <datawydania>2011-04-19</datawydania>
+      <online>http://pdf.helion.pl/artmad/artmad-0.pdf</online>
+      <okladka>http://dlabystrzakow.pl/okladki/326x466/artmad.jpg</okladka>
+      <okladkatyl>http://dlabystrzakow.pl/okladki-tyl/326x466/artmad.jpg</okladkatyl>
+      <issueurl>http://dlabystrzakow.pl/eksiazki/artmad.htm</issueurl>
+      <bestseller>0</bestseller>
+      <nowosc>0</nowosc>
+      <ksiegarnie_nieinter>
+        <waga>0.30</waga>
+        <status2>1</status2>
+        <cena_netto>25.71</cena_netto>
+        <cena_brutto>27</cena_brutto>
+        <vat>1.29</vat>
+        <vat_procent>5</vat_procent>
+      </ksiegarnie_nieinter>
+      <opis><![CDATA[<div align="center"><h4><b> Jedna z najważniejszych książek czasów nowożytnych</div></h4></b>
+
+<blockquote><i>
+Europa nigdy nie wydała świetniejszego ani bardziej zawiłego dzieła, jeśli chodzi o kwestie subtelności moralnych
+<br><div align="right">Fryderyk Nietzsche</div></i>
+</blockquote>
+
+<blockquote><i>
+Absolutnie unikatowa... dzieło przeznaczone do ciągłego wykorzystywania... towarzysz na całe życie. &#91;Te maksymy są&#92; odpowiednie szczególnie dla tych, którzy obracają się w wielkim świecie 
+<br><div align="right">Arthur Schopenhauer </div></i>
+</blockquote>
+
+<blockquote><i>
+Używaj ludzkich środków, jakby boskie nie istniały, a boskich tak, jakby nie było ludzkich
+<br><div align="right">Baltasar Gracián</div></i>
+</blockquote>
+
+<p>Istnieją takie książki, które wstrząsnęły światem. Książki-manifesty, książki-oskarżenia, książki-testamenty. Istnieją także takie, które w sposób subtelny i zadziwiający potrafią zmieniać rzeczywistość. Wiedza z nich płynąca, niczym światło przez szparę w drzwiach wsącza się w naszą codzienność, by rozjaśnić wszystko.</p>
+
+<p>W ciągu wieków rodzaj ludzki wydał trzy wielkie, ponadczasowe, pełne mądrości księgi: Księcia Machiavellego, Sztukę wojny Sun Tzu i Sztukę doczesnej mądrości Baltasara Graciana. Ta ostatnia przez lata była niedostępna dla Czytelników. Jeśli uważnie się wsłuchasz, bez wątpienia przemówią do Ciebie płynące z XVII wieku refleksje Graciana, dotyczące uczciwości i pozorów, miłości własnej i przyjaźni, wiedzy i ignorancji. </p>
+
+<p>Na nowo przetłumaczone rady Graciana są tak samo cenne i celne dzisiaj, jak były w ówczesnej Hiszpanii -- społeczeństwie podobnym do naszego w swojej wspaniałości i sąsiadującej z nią nędzy. W tych trzystu wskazówkach wyraźny pragmatyzm wciąż ustępuje miejsca duchowości, hartowanej rozwagą i przezornością. Każda z kunsztownie ułożonych sentencji oferuje cenny wgląd w sztukę życia i praktykę osiągania celów. Książka iskrzy się wiedzą makiaweliczną, uzupełnioną o moralne skrupuły i humanizm. Wyłącznie kwestią czasu jest wykorzystanie jej we wprowadzaniu nowych metod zarządzania, zdobywania przewagi konkurencyjnej i kierowania zespołami. Jednak nim to nastąpi, Gracián może jeszcze przez chwilę pozostać naszym małym sekretem.</p>]]></opis>
+      <md5>a29a0353114a454ef69955a8d9fb426b</md5>
+    </ksiazka>
+    <ksiazka ident="ASTRON">
+      <isbn>83-246-2036-2</isbn>
+      <ean>9788324620364</ean>
+      <ident>ASTRON</ident>
+      <tytul language="polski">Astronomia dla bystrzaków</tytul>
+      <tytul language="oryginal">Astronomy For Dummies 2/e</tytul>
+      <link>http://dlabystrzakow.pl/ksiazki/astronomia-dla-bystrzakow-stephen-p-maran,astron.htm</link>
+      <autor>Stephen P. Maran</autor>
+      <tlumacz>Sławomir Kupisz</tlumacz>
+      <status>0</status>
+      <cena>34.90</cena>
+      <cenadetaliczna>34.90</cenadetaliczna>
+      <znizka>0.00</znizka>
+      <marka>5</marka>
+      <nazadanie>0</nazadanie>
+      <format>180x235</format>
+      <typ>1</typ>
+      <oprawa>miękka</oprawa>
+      <wydawca/>
+      <liczbastron>312</liczbastron>
+      <datawydania>2010-08-06</datawydania>
+      <online>http://pdf.helion.pl/astron/astron-6.pdf</online>
+      <okladka>http://dlabystrzakow.pl/okladki/326x466/astron.jpg</okladka>
+      <okladkatyl>http://dlabystrzakow.pl/okladki-tyl/326x466/astron.jpg</okladkatyl>
+      <issueurl>http://dlabystrzakow.pl/eksiazki/astron.htm</issueurl>
+      <top>20</top>
+      <bestseller>1</bestseller>
+      <nowosc>0</nowosc>
+      <powiazane>
+        <ident_powiazany>ANTEBY</ident_powiazany>
+        <ident_powiazany>BIEGAN</ident_powiazany>
+        <ident_powiazany>CWGIBY</ident_powiazany>
+        <ident_powiazany>GIKLBY</ident_powiazany>
+        <ident_powiazany>GITRBV</ident_powiazany>
+        <ident_powiazany>HAKUMY</ident_powiazany>
+        <ident_powiazany>HOASTR</ident_powiazany>
+        <ident_powiazany>JOGABY</ident_powiazany>
+        <ident_powiazany>MARABY</ident_powiazany>
+        <ident_powiazany>POKERB</ident_powiazany>
+        <ident_powiazany>PSYCHO</ident_powiazany>
+        <ident_powiazany>ROSYBV</ident_powiazany>
+      </powiazane>
+      <serietematyczne>
+        <seriatematyczna id="1">Gry, zabawy, sport</seriatematyczna>
+        <seriatematyczna id="8">Psychologia i filozofia</seriatematyczna>
+      </serietematyczne>
+      <ksiegarnie_nieinter>
+        <waga>0.50</waga>
+        <status2>3</status2>
+        <cena_netto>33.24</cena_netto>
+        <cena_brutto>34.9</cena_brutto>
+        <vat>1.66</vat>
+        <vat_procent>5</vat_procent>
+      </ksiegarnie_nieinter>
+      <opis><![CDATA[<p>(Wszech)świat stoi przed Tobą otworem! Czy kiedykolwiek patrząc w gwiazdy, zastanawiałeś się, co tam naprawdę jest? Z wypiekami na twarzy obserwowałeś makietę nieba w planetarium? A może fascynują Cię zaćmienia Słońca i deszcze meteorytów? Dziś nie musisz już studiować dzieła O obrotach sfer niebieskich, by godnie nosić miano spadkobiercy Kopernika.</p>
+<p>Astronomia to zgłębianie sekretów nieba, nauka o obiektach istniejących w kosmosie i zachodzących tam zdarzeniach. Powstała w starożytnym Babilonie, jednak do dziś ludzkość zaskakują jej odkrycia. Wszak obejmuje ona wiedzę na temat całego tajemniczego nieboskłonu nad Twoją głową. Na temat wszystkich ciał niebieskich, ich ruchów, pochodzenia, ewolucji i powstających reakcji. Na temat czerwonych gigantów, białych karłów i czarnych dziur. Na temat supernowych, asteroid, planet i mgławic. Po prostu -- bada niezgłębiony Wszechświat!</p>
+
+<blockquote><i>
+Dr Stephen P. Maran to weteran programu kosmicznego NASA i uczestnik wielu realizowanych przez Agencję Kosmiczną projektów, w tym Kosmicznego Teleskopu Hubble"a. Oprócz tego jest on redaktorem The Astronomy and Astrophysics Encyclopedia. Współtworzył także podręcznik uniwersytecki -- New Horizons in Astronomy -- oraz dwa kompendia poświęcone odkryciom w przestrzeni kosmicznej. Jest rzecznikiem prasowym Amerykańskiego Towarzystwa Astronomicznego.
+<br><div align="right">Praisy</div></i>
+</blockquote>
+
+
+<blockquote><i>
+Jeśli przez całe życie czułeś, że kosmos Cię przerasta, Astronomia dla bystrzaków jest właśnie dla Ciebie.
+<br><div align="right">Neil deGrasse Tyson,<br /> astrofizyk i dyrektor planetarium Hayden w Nowym Jorku</div></i>
+</blockquote>
+
+
+Twoja wyprawa w kosmos
+<ul>
+<li>W (Mleczną) Drogę! -- czyli obserwowanie nieba z własnego podwórka.</li>
+<li>Układy apolityczne -- Układ Słoneczny i rubieże wszechświata.</li>
+<li>Moja Ty gwiazdeczko -- czyli rozpoznawanie planet, gwiazd i innych ciał niebieskich.</li>
+<li>BUM! -- czyli Wielki Wybuch, kwazary, antymateria i wiele innych osobliwości.</li>
+<li>"Witam was, Ziemianie" -- czyli poszukiwania pozaziemskiej inteligencji (SETI).</li>
+</ul>
+
+<p><b>Książka zawiera tabele, mapy gwiazd i kolorowe zdjęcia!</b></p>
+<p><b>Dodatek specjalny:</b><br />
+Pozycje planet w latach 2009 - 2010
+</p>
+
+<p>
+<b>Podróżniku, odkrywco, wolny człowieku...</b><br />
+Seria "Dla bystrzaków" to niezbędnik każdego poszukiwacza wiedzy. Książki pisane lekkim stylem pełne są humoru, a jednocześnie zawierają czytelne informacje, przygotowane przez specjalistów w swoich dziedzinach. Dzięki nim odkryjesz, że potrafisz chłonąć wiedzę niczym gąbka, dobrze się przy tym bawiąc. 
+Świetna lektura przy śniadaniu, w łóżku, w podróży i na bezludnej wyspie.
+</p>]]></opis>
+      <md5>dd5d2211f8ab18030d062c7ee6691c25</md5>
+    </ksiazka>
+    <ksiazka ident="ATRAK2">
+      <isbn>978-83-246-2229-0</isbn>
+      <ean>9788324622290</ean>
+      <ident>ATRAK2</ident>
+      <tytul language="polski">Sztuka bycia atrakcyjnym. Sekrety osobistego magnetyzmu. Wydanie II</tytul>
+      <tytul language="oryginal">Irresistible Attraction: Secrets of Personal Magnetism</tytul>
+      <link>http://dlabystrzakow.pl/ksiazki/sztuka-bycia-atrakcyjnym-sekrety-osobistego-magnetyzmu-wydanie-ii-kevin-hogan-mary-lee-labay-jack-swaney,atrak2.htm</link>
+      <autor>Kevin Hogan, Mary Lee Labay, Jack Swaney</autor>
+      <tlumacz>Joanna Sugiero</tlumacz>
+      <status>0</status>
+      <cena>29.90</cena>
+      <cenadetaliczna>29.90</cenadetaliczna>
+      <znizka>0.00</znizka>
+      <marka>4</marka>
+      <nazadanie>0</nazadanie>
+      <format>A5</format>
+      <typ>1</typ>
+      <oprawa>miękka</oprawa>
+      <wydawca/>
+      <liczbastron>240</liczbastron>
+      <datawydania>2009-08-13</datawydania>
+      <online>http://pdf.helion.pl/atrak2/atrak2-8.pdf</online>
+      <okladka>http://dlabystrzakow.pl/okladki/326x466/atrak2.jpg</okladka>
+      <issueurl>http://dlabystrzakow.pl/eksiazki/atrak2.htm</issueurl>
+      <bestseller>0</bestseller>
+      <nowosc>0</nowosc>
+      <powiazane>
+        <ident_powiazany>MARABY</ident_powiazany>
+        <ident_powiazany>MY5LAT</ident_powiazany>
+        <ident_powiazany>ROSYBV</ident_powiazany>
+        <ident_powiazany>ZAPRBY</ident_powiazany>
+      </powiazane>
+      <videos>
+        <video id="106" title="Atrakcyjność jak magnes" url="http://dlabystrzakow.pl/video/106,Atrakcyjnosc_jak_magnes"/>
+        <video id="107" title="Wielokrotnie... atrakcyjni (częsta ekspozycja)" url="http://dlabystrzakow.pl/video/107,Wielokrotnie_atrakcyjni_czesta_ekspozycja"/>
+        <video id="108" title="&quot;Pierwsze wrażenie&quot; dla mniej atrakcyjnych" url="http://dlabystrzakow.pl/video/108,Pierwsze_wrazenie_dla_mniej_atrakcyjnych"/>
+        <video id="109" title="Fakty z życia atrakcyjnych i nieatrakcyjnych" url="http://dlabystrzakow.pl/video/109,Fakty_z_zycia_atrakcyjnych_i_nieatrakcyjnych"/>
+        <video id="110" title="Od spojrzenia do charyzmy" url="http://dlabystrzakow.pl/video/110,Od_spojrzenia_do_charyzmy"/>
+      </videos>
+      <ksiegarnie_nieinter>
+        <waga>0.28</waga>
+        <status2>3</status2>
+        <cena_netto>28.48</cena_netto>
+        <cena_brutto>29.9</cena_brutto>
+        <vat>1.42</vat>
+        <vat_procent>5</vat_procent>
+      </ksiegarnie_nieinter>
+      <opis><![CDATA[<div align="center"><h4><b>Poufny przepis na "to coś"</b></h4></div>
+<ul>
+<li>Dlaczego ładni mają łatwiej?</li>
+<li>Jak wykorzystać wewnętrzną charyzmę do wywierania piorunującego pierwszego wrażenia?</li>
+<li>Co wywołuje reakcję chemiczną? </li>
+<li>W którym momencie zdobywasz szansę na wymarzoną pracę lub drugą randkę?</li>
+<li>Jacy ludzie budzą w nas gorące emocje? </li>
+</ul>
+<br />
+<ul>
+<li>64% ankietowanych potwierdziło, iż atrakcyjność pomaga w osiągnięciu wyższej pozycji w społeczeństwie </li>
+<li>76% badanej populacji uważa, że atrakcyjność fizyczna pomaga w zdobyciu pracy</li>
+<li>prawie jednakowo rozkładają się zdania na temat wpływu atrakcyjności fizycznej na awans lub wyższe wynagrodzenie: odpowiednio 18% i 19% badanych zdecydowanie zgadza się z tym stwierdzeniem </li>
+(Warszawa 2007)
+</ul>
+
+<p>Sztuka bycia atrakcyjnym to nie pseudonaukowe dywagacje. To skuteczne metody na opanowanie uniwersalnych zachowań, które od czasów człowieka jaskiniowego czynią każdego z nas bardziej interesującym i pociągającym. Podczas tworzenia tej książki jej autorzy korzystali z technik neurolingwistycznych, psychologii społecznej, hipnozy, a nawet własnej mocy magnetyzmu.</p>
+<p>Ta książka zdradzi Ci, jak wywoływać "iskrzenie" i przyciągać innych ludzi. Odkryje przed Tobą, jak robić wspaniałe pierwsze wrażenie dzięki mowie ciała. Podpowie, jak nawiązywać z ludźmi kontakt na poziomie podświadomości. Skorzystaj ze swojego magnetyzmu i osiągaj wszystko, o czym zamarzysz.<br />
+Oczy... fryzura... ubiór... szczerość... intymność... zaufanie... Co czyni Cię atrakcyjnym? </p>
+<div align="center"><h4><b>Kod seksapilu - w pracy, urzędzie, domu, sypialni</b></h4></div>
+<hr />
+<blockquote><i>
+Książka Hogana zdumiewająco dogłębnie analizuje wszelkie możliwe czynniki składowe Osobistego Magnetyzmu i podaje konkretne przepisy, jak stać się kimś wyjątkowo pociągającym niezależnie od aparycji. Kup tę książkę teraz i zmień jakość swojego życia. Życzę wspaniałej metamorfozy. 
+</i><br><div align="right">Artur, czytelnik pierwszego wydania</div>
+</blockquote>
+
+<blockquote><i>
+Obserwuję zachowania kandydatów na rozmowach kwalifikacyjnych. Bez względu na ich faktyczną urodę i fizyczne atrybuty część z nich po prostu zachowuje się w sposób bardziej atrakcyjny od innych. Trudno jednoznacznie stwierdzić, czy chodzi o ich oczy, ubiór, czy może charyzmę, która podbija serce rozmówcy. Krótko mówiąc, mają "to coś". Z takimi ludźmi rozmawia się przyjemniej, chętniej spędza czas i... zatrudnia!
+</i><br><div align="right">Beata, specjalistka ds. HR</div>
+</blockquote>
+
+<blockquote><i>
+Byłem sprzedawcą podobnym do setek innych sprzedawców. Na siłę ugrzecznionym, w niezbyt drogim garniturze, za przesłodzonym uśmiechem kryjącym brak pewności siebie. Zamiast wizyt na siłowni i solarium wybrałem spotkanie z Kevinem Hoganem. Wyglądam tak samo: co tu dużo kryć - przeciętny blondyn. Wypracowałem w sobie jednak pewne cechy, które pozwalają innym ludziom otwierać się przede mną. Czytam między słowami, wykorzystuję język ciała. A ostatnio w pubie usłyszałem od uroczej kobiety, że mam "to coś".
+</i><br><div align="right">Sebastian, handlowiec</div>
+</blockquote>]]></opis>
+      <md5>93f26091b5e22b8ede7d64be9f3508f3</md5>
+    </ksiazka>
+    <ksiazka ident="B_CZEC">
+      <isbn>978-83-60506-56-1</isbn>
+      <ean>9788360506561</ean>
+      <ident>B_CZEC</ident>
+      <tytul language="polski">Czechy. Gospoda pełna humoru. Wydanie 2</tytul>
+      <link>http://dlabystrzakow.pl/ksiazki/czechy-gospoda-pelna-humoru-wydanie-2-izabela-krausowa-zur,b_czec.htm</link>
+      <autor>Izabela Krausowa-Żur</autor>
+      <status>1</status>
+      <cena>34.90</cena>
+      <cenadetaliczna>34.90</cenadetaliczna>
+      <znizka>0.00</znizka>
+      <marka>6</marka>
+      <nazadanie>0</nazadanie>
+      <format>124x175</format>
+      <typ>1</typ>
+      <oprawa>miękka</oprawa>
+      <wydawca>Wydawnictwo Bezdroża</wydawca>
+      <liczbastron>461</liczbastron>
+      <datawydania>2011-02-11</datawydania>
+      <okladka>http://dlabystrzakow.pl/okladki/326x466/b_czec.jpg</okladka>
+      <bestseller>0</bestseller>
+      <nowosc>0</nowosc>
+      <serietematyczne>
+        <seriatematyczna id="15">Przewodniki</seriatematyczna>
+        <seriatematyczna id="16">Bezdroża</seriatematyczna>
+      </serietematyczne>
+      <ksiegarnie_nieinter>
+        <waga>0.40</waga>
+        <status2>1</status2>
+        <cena_netto>33.24</cena_netto>
+        <cena_brutto>34.9</cena_brutto>
+        <vat>1.66</vat>
+        <vat_procent>5</vat_procent>
+      </ksiegarnie_nieinter>
+      <opis><![CDATA[<p>Czechy to nie tylko piwo, knedliki, Karel Gott i dobry wojak Szwejk. Latem i zimą są oblężone przez polskich turystów i nic dziwnego - państwo to jest jedną z najbliższych nam krain, o niezwykłych walorach zabytkowych i przyrodniczych. Wystarczy mieć wolny weekend, aby móc planować wypad za południową granicę.</p>
+
+<p>
+Czechy to nie tylko piwo, knedliki, Karel Gott i dobry wojak Szwejk. Państwo to jest jedną z najbliższych nam krain o niezwykłych walorach zabytkowych i przyrodniczych. To kraj z bogatą historią, ciekawą przyrodą; kraj rozbrzmiewający śpiewem i muzyką, ujmujący gościnnością i humorem mieszkańców. Doskonała literatura, film i muzyka to również czeskie specjalności, wszak Czechy są ojczyzną Hrabala,Formana i Smetany.
+Dwanaście miejsc wpisanych na Listę Światowego Dziedzictwa UNESCO, na czele z Praga, Ceskim Krumlovem i Kutna Hora, stanowi najlepsza wizytówkę kulturowa i architektoniczna kraju. Ale prawdziwym zaskoczeniem są zakątki położone poza utartymi szlakami: górskie wioski, kolorowe miasteczka, winnice Moraw Południowych lub skalne miasta Broumovska.</p>
+
+<p>
+Przewodnik Czechy. Gospoda pełna humoru przybliża historie i kulturę Czech oraz oprowadza po najciekawszych regionach tego fascynującego kraju. Opisy miejscowości wzbogacono o praktyczne rady: jak dojechać do interesujących nas miejsc, gdzie znaleźć nocleg, strawę i rozrywkę. Na końcu zamieszczono propozycje tras dla osób zmotoryzowanych i rowerzystów oraz minirozmówki polsko - czeskie z najbardziej przydatnymi słowami i zwrotami.
+</p>]]></opis>
+      <md5>dc3ba7237f4f559c966cbaab708be3d4</md5>
+    </ksiazka>
+    <ksiazka ident="B_FRAN">
+      <isbn>978-83-60506-16-5</isbn>
+      <ean>9788360506165</ean>
+      <ident>B_FRAN</ident>
+      <tytul language="polski">Francja. Zielony Przewodnik Michelin. Wydanie 1</tytul>
+      <link>http://dlabystrzakow.pl/ksiazki/francja-zielony-przewodnik-michelin-wydanie-1-praca-zbiorowa,b_fran.htm</link>
+      <autor>praca zbiorowa</autor>
+      <status>1</status>
+      <cena>49.90</cena>
+      <cenadetaliczna>49.90</cenadetaliczna>
+      <znizka>0.00</znizka>
+      <marka>6</marka>
+      <nazadanie>0</nazadanie>
+      <format>115x240</format>
+      <typ>1</typ>
+      <oprawa>miękka</oprawa>
+      <wydawca>Wydawnictwo Bezdroża</wydawca>
+      <liczbastron>406</liczbastron>
+      <datawydania>2009-04-28</datawydania>
+      <okladka>http://dlabystrzakow.pl/okladki/326x466/b_fran.jpg</okladka>
+      <bestseller>0</bestseller>
+      <nowosc>0</nowosc>
+      <powiazane>
+        <ident_powiazany>BIEGAN</ident_powiazany>
+        <ident_powiazany>B_KNHU</ident_powiazany>
+        <ident_powiazany>B_KORS</ident_powiazany>
+        <ident_powiazany>B_NARC</ident_powiazany>
+        <ident_powiazany>B_NSZP</ident_powiazany>
+        <ident_powiazany>B_PZIM</ident_powiazany>
+        <ident_powiazany>B_RILA</ident_powiazany>
+        <ident_powiazany>B_SLO2</ident_powiazany>
+        <ident_powiazany>B_WBZI</ident_powiazany>
+        <ident_powiazany>EX21BY</ident_powiazany>
+        <ident_powiazany>GOTOWE</ident_powiazany>
+        <ident_powiazany>JOGA</ident_powiazany>
+      </powiazane>
+      <serietematyczne>
+        <seriatematyczna id="15">Przewodniki</seriatematyczna>
+        <seriatematyczna id="21">Zielony przewodnik</seriatematyczna>
+      </serietematyczne>
+      <ksiegarnie_nieinter>
+        <waga>0.49</waga>
+        <status2>1</status2>
+        <cena_netto>47.52</cena_netto>
+        <cena_brutto>49.9</cena_brutto>
+        <vat>2.38</vat>
+        <vat_procent>5</vat_procent>
+      </ksiegarnie_nieinter>
+      <opis><![CDATA[<p>Uwielbiana przez artystów i poetów, przepełniona radością życia ojczyzna szampana i koncernu Michelin. Jaki naprawdę jest ten kraj? To prawdziwa mozaika pięknych miejsc i niezawodnych skojarzę. Przewodzi im elegancki i romantyczny Paryż, dalej we francuskim kalejdoskopie znakomitości pojawiają się: zamki nad Loara, Lazurowe Wybrzeże, zapachy Prowansji, szpaler latarni morskich w Bretanii, katedry Normandii oraz ośnieżone alpejskie szczyty. Można tak wyliczać bez końca, ale czy nie lepiej po prostu zacząć odkrywać Francję?
+</p>]]></opis>
+      <md5>7f9624516b78fa0ea83b1af12ced7020</md5>
+    </ksiazka>
+  </lista>
+</details>

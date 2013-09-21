@@ -1,0 +1,789 @@
+<?xml version="1.0" encoding="iso-8859-2"?>
+<!--
+	    Dane z dnia: sob, 21 wrz 2013, 01:07:24 CEST
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ Ze względu na wielkość pliku XML, proszę o ściąganie wersji produkty-septem.xml.zip
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+            Jeśli będziesz sprzedawał książki w PP, to użyj pola <status>:
+
+		0 - niedostepna
+		1 - dostepna
+		2 - w przygotowaniu
+		5 - druk na żądanie
+		7 - przedsprzedaz
+	    oraz <cena>, <cenadetaliczna> (ceny takie jak na stronach GW Helion : moga zawierac znizki itp.)
+
+	    dla ksiegarni internetowych (wspolpraca z dzialem handlowym, ehelion) użyj pola <status2>:
+
+    		1 - dostępna
+		2 - dostępna w małej ilości
+		3 - chwilowo niedostępna
+		4 - niedostępna
+		5 - POD
+		6 - w przygotowaniu
+		7 - w przedsprzedaży
+            oraz pola <ksiegarnie_nieinter> gdzie znajduja sie wszystkie dane odnosnie ceny netto, brutto, stawka VAT
+
+		<typ>:
+			1 - ksiazka
+			2 - ebook
+			3 - audiobook mp3
+			4 - audiocd mp3
+
+		<marka>:
+			1 - helion
+			2 - onepress
+			3 - editio
+			4 - sensus
+			5 - septem
+			6 - bezdroza
+			8 - podrecznik
+			11 - bezdroża obce
+
+Zmiany:
+09.02.2011 @MJJ dolożenie elementu <typ>
+15.06.2011 @MJJ dodanie pliku lista2-statusy.xml z samymi statusami, cenami
+21.12.2011 @TKr seolinki, zagregowane formaty ebooków
+23.01.2012 @TKr info o promocjach, lista promocji serwis.pl/xml/lista-promocje.cgi
+15.06.2012 @TKr dodane info o audiobookach
+29.08.2012 @TKr dodane md5 jako wßkaźnik zmiany informacji w książce
+
+		Kontakt: Michal Jęczalik <michal.jeczalik@helion.pl>
+-->
+<details>
+  <lista baza="septem">
+    <ksiazka ident="100SSP">
+      <isbn>978-83-246-2335-8</isbn>
+      <ean>9788324623358</ean>
+      <ident>100SSP</ident>
+      <tytul language="polski">100 sposobów na zwiększenie odporności. Seriaporad.pl</tytul>
+      <tytul language="oryginal">100 Ways to Boost Your Immune System &amp;#040;Collins GEM&amp;#041;</tytul>
+      <link>http://septem.pl/ksiazki/100-sposobow-na-zwiekszenie-odpornosci-seriaporad-pl-theresa-cheung,100ssp.htm</link>
+      <autor>Theresa Cheung</autor>
+      <tlumacz>Joanna Krzemień-Rusche</tlumacz>
+      <status>1</status>
+      <cena>14.90</cena>
+      <cenadetaliczna>14.90</cenadetaliczna>
+      <znizka>0.00</znizka>
+      <marka>5</marka>
+      <nazadanie>0</nazadanie>
+      <format>115x170</format>
+      <typ>1</typ>
+      <oprawa>miękka</oprawa>
+      <wydawca/>
+      <liczbastron>104</liczbastron>
+      <datawydania>2010-03-29</datawydania>
+      <online>http://pdf.helion.pl/100ssp/100ssp-2.pdf</online>
+      <okladka>http://septem.pl/okladki/326x466/100ssp.jpg</okladka>
+      <okladkatyl>http://septem.pl/okladki-tyl/326x466/100ssp.jpg</okladkatyl>
+      <issueurl>http://septem.pl/eksiazki/100ssp.htm</issueurl>
+      <bestseller>0</bestseller>
+      <nowosc>0</nowosc>
+      <powiazane>
+        <ident_powiazany>BEMAL1</ident_powiazany>
+        <ident_powiazany>BEPAPO</ident_powiazany>
+        <ident_powiazany>BIEGAN</ident_powiazany>
+        <ident_powiazany>LHC</ident_powiazany>
+        <ident_powiazany>MIGREN</ident_powiazany>
+        <ident_powiazany>MYZDRO</ident_powiazany>
+        <ident_powiazany>OPTYSP</ident_powiazany>
+        <ident_powiazany>POLMAR</ident_powiazany>
+        <ident_powiazany>SEKNOV</ident_powiazany>
+        <ident_powiazany>SSOJOB</ident_powiazany>
+        <ident_powiazany>SYMBSP</ident_powiazany>
+        <ident_powiazany>ZDROG2</ident_powiazany>
+      </powiazane>
+      <seriewydawnicze>
+        <seriawydawnicza id="6">Seriaporad.pl</seriawydawnicza>
+      </seriewydawnicze>
+      <serietematyczne>
+        <seriatematyczna id="19">Zdrowie i uroda</seriatematyczna>
+      </serietematyczne>
+      <ksiegarnie_nieinter>
+        <waga>0.10</waga>
+        <status2>2</status2>
+        <cena_netto>14.19</cena_netto>
+        <cena_brutto>14.9</cena_brutto>
+        <vat>0.71</vat>
+        <vat_procent>5</vat_procent>
+      </ksiegarnie_nieinter>
+
+      <opis><![CDATA[<div align="center"><h4><b> Zdrowy poradnik. Bawi, uczy, zaskakuje </b></h4></div>
+
+<ul>
+<li>Podnoszenie odporności poprzez zmianę trybu życia</li>
+<li>Wprowadzanie do planu dnia prostych ćwiczeń</li>
+<li>Domowe metody na szybkie pozbycie się stresu </li>
+<li>Diety bogate w przeciwutleniacze, żelazo i witaminy</li>
+</ul>
+
+
+<div align="center"><h4><b> Żyj długo, zdrowo i szczęśliwie </b></h4></div>
+
+<ul>
+<li>Rozpoznawanie i zwalczanie wroga - bakterie, wirusy, grzyby i pasożyty.</li>
+<li>Szkodliwe nawyki, przyczyniające się do osłabienia odporności.</li>
+<li>Zasady odżywiania się, które wzmocnią Twój system immunologiczny.</li>
+<li>Zaprzyjaźnienie się z setką wzmacniaczy układu odpornościowego.</li>
+</ul>
+
+<p>Zmęczenie, częste przeziębienia, nawracające infekcje, pojawiające się alergie, wahania nastroju i przedwczesne starzenie - to wszystko skutki przeciążenia organizmu i osłabienia Twojego systemu odpornościowego. Jeśli chcesz dłużej cieszyć się zdrowiem, ustrzec się groźnych chorób i odzyskać witalność bez uciekania się do sztucznych chemicznych wzmacniaczy, ten nietuzinkowy poradnik podpowie Ci, jak tego dokonać - i to od zaraz. A jeśli mimo wszystko jakiejś złośliwej chorobie uda się przedrzeć do Twojego organizmu, dowiesz się, jak błyskawicznie ją zwalczyć.</p>
+
+<p>Jesteś ciekawy świata, chcesz wiedzieć więcej i wciąż się czegoś uczyć, a nie masz czasu na czytanie opasłych poradników? Seriaporad.pl to niezwykłe książeczki, które szybko, sensownie i bez owijania w bawełnę wprowadzą każdego w interesujący go temat. Koniecznie sprawdź też pozostałe tytuły!</p>]]></opis>
+      <md5>4eac6f4ddaf294de6ca1abf8406cfdbb</md5>
+    </ksiazka>
+    <ksiazka ident="1ROK">
+      <isbn>978-83-246-1297-0</isbn>
+      <ean>9788324612970</ean>
+      <ident>1ROK</ident>
+      <tytul language="polski">Pierwszy rok w życiu dziecka. Poradnik bez kantów</tytul>
+      <tytul language="oryginal">The Everything Babys First Year Book: Complete Practical Advice to Get You and Baby Through the First 12 Months</tytul>
+      <link>http://septem.pl/ksiazki/pierwszy-rok-w-zyciu-dziecka-poradnik-bez-kantow-tekla-s-nee,1rok.htm</link>
+      <autor>Tekla S. Nee</autor>
+      <tlumacz>Monika Lipiec-Szafarczyk</tlumacz>
+      <status>1</status>
+      <cena>34.90</cena>
+      <cenadetaliczna>34.90</cenadetaliczna>
+      <znizka>0.00</znizka>
+      <marka>5</marka>
+      <nazadanie>0</nazadanie>
+      <format>180x235</format>
+      <typ>1</typ>
+      <oprawa>miękka</oprawa>
+      <wydawca/>
+      <liczbastron>312</liczbastron>
+      <datawydania>2008-02-06</datawydania>
+      <okladka>http://septem.pl/okladki/326x466/1rok.jpg</okladka>
+      <bestseller>0</bestseller>
+      <nowosc>0</nowosc>
+      <powiazane>
+        <ident_powiazany>BACCS1</ident_powiazany>
+        <ident_powiazany>BESZPA</ident_powiazany>
+        <ident_powiazany>BEVVC6</ident_powiazany>
+        <ident_powiazany>BIESPA</ident_powiazany>
+        <ident_powiazany>DWATAL</ident_powiazany>
+        <ident_powiazany>JOGA</ident_powiazany>
+        <ident_powiazany>KOTBK</ident_powiazany>
+        <ident_powiazany>MAZKTO</ident_powiazany>
+        <ident_powiazany>MUSIMY</ident_powiazany>
+        <ident_powiazany>SUBREP</ident_powiazany>
+        <ident_powiazany>WYZARA</ident_powiazany>
+        <ident_powiazany>ZALUD2</ident_powiazany>
+      </powiazane>
+      <seriewydawnicze>
+        <seriawydawnicza id="2">Bez kantów</seriawydawnicza>
+      </seriewydawnicze>
+      <serietematyczne>
+        <seriatematyczna id="21">Życie rodzinne</seriatematyczna>
+      </serietematyczne>
+      <ksiegarnie_nieinter>
+        <waga>0.48</waga>
+        <status2>2</status2>
+        <cena_netto>33.24</cena_netto>
+        <cena_brutto>34.9</cena_brutto>
+        <vat>1.66</vat>
+        <vat_procent>5</vat_procent>
+      </ksiegarnie_nieinter>
+      <opis><![CDATA[<p>Pierwsze 12 miesięcy życia Twojego dziecka to prawdziwa epoka. Pełna radości, śmiechu, zupełnie nowych doświadczeń i stosu pieluszek </p>
+
+<p><h4><b>Twoja nowa funkcja - mama</b></h4></p>
+
+<p>Nie było łatwo zostać rodzicem, prawda? Dziewięć miesięcy z Obcym na Twoim pokładzie, a później jeszcze "cud narodzin", czyli koszmarne chwile w nieludzkich męczarniach. Możesz odetchnąć z ulgą, ale nie na długo. Przed Tobą najtrudniejsze zadanie - teraz musisz tym rodzicem być.</p>
+
+<p>Z niepokojem i bezradnością spoglądasz na malutką istotę, która od chwili obecnej staje się ośrodkiem Twojego wszechświata. Nie wiesz, o co jej chodzi, kiedy znów płacze w środku nocy? Dlaczego ma taką czerwoną buźkę? W jaki sposób właściwie pielęgnować jej pępek i radzić sobie z kolką? Kiedy bezpiecznie możecie wspólnie wybrać się na spacer i dalszą wyprawę? Możesz być pewna, że podczas pierwszego roku życia dziecka dowiesz się wszystkiego, co teraz jest dla Ciebie czarną magią. Autorka tej książki podzieli się z Tobą nie tylko cennymi poradami specjalistów - pediatrów i położnych, lecz także swoimi własnymi, innych matek, matek tych matek i samej Goździkowej. </p>
+
+<p>
+Odłóż teraz swój nowo narodzony skarb do łóżeczka i dowiedz się:
+<ul>
+<li>jak sprawić, by dziecko szybko zasypiało, wysypiało się i budziło zadowolone;</li>
+<li>którą z metod karmienia wybrać, jak przechowywać odciągnięty pokarm i kiedy zacząć włączać pokarmy stałe;</li>
+<li>w jaki sposób dbać o zdrowie i higienę noworodka i niemowlaka;</li>
+<li>jakie są kolejne etapy rozwoju Twojego dziecka oraz kiedy powinnaś nastawiać się na wyrzynanie pierwszego zęba i pierwszy samodzielny krok;</li>
+<li>jak zadbać o własne ciało, kondycję psychofizyczną i zyskać czas dla siebie... lub chwilę na romantyczną randkę.</li>
+</ul>
+</p>
+
+<p><h4><b>Zrozum Małą Wielką Zagadkę.</b></h4></p>]]></opis>
+      <md5>e5bf8b7f2df93d176353e18b2d04da68</md5>
+    </ksiazka>
+    <ksiazka ident="20LATM">
+      <isbn>978-83-246-3601-3</isbn>
+      <ean>9788324636013</ean>
+      <ident>20LATM</ident>
+      <tytul language="polski">20 lat mniej. Cofnij czas i zachowaj wieczną młodość!</tytul>
+      <tytul language="oryginal">20 Years Younger: Look Younger, Feel Younger, Be Younger!. eBook. ePub</tytul>
+      <link>http://septem.pl/ksiazki/20-lat-mniej-cofnij-czas-i-zachowaj-wieczna-mlodosc-bob-greene,20latm.htm</link>
+      <autor>Bob Greene</autor>
+      <tlumacz>Małgorzata Wróblewska</tlumacz>
+      <status>1</status>
+      <cena>49.00</cena>
+      <cenadetaliczna>49.00</cenadetaliczna>
+      <znizka>0.00</znizka>
+      <marka>4</marka>
+      <nazadanie>0</nazadanie>
+      <format>158x235</format>
+      <typ>1</typ>
+      <oprawa>miękka</oprawa>
+      <wydawca/>
+      <liczbastron>320</liczbastron>
+      <datawydania>2012-03-12</datawydania>
+      <online>http://pdf.helion.pl/20latm/20latm.pdf</online>
+      <okladka>http://septem.pl/okladki/326x466/20latm.jpg</okladka>
+      <okladkatyl>http://septem.pl/okladki-tyl/326x466/20latm.jpg</okladkatyl>
+      <issueurl>http://septem.pl/eksiazki/20latm.htm</issueurl>
+      <bestseller>0</bestseller>
+      <nowosc>0</nowosc>
+      <powiazane>
+        <ident_powiazany>BACCS1</ident_powiazany>
+        <ident_powiazany>BIEGAN</ident_powiazany>
+        <ident_powiazany>BZCSB1</ident_powiazany>
+        <ident_powiazany>ELEBYS</ident_powiazany>
+        <ident_powiazany>MARATG</ident_powiazany>
+        <ident_powiazany>MYZDRO</ident_powiazany>
+        <ident_powiazany>OSTEOP</ident_powiazany>
+        <ident_powiazany>POLMAR</ident_powiazany>
+        <ident_powiazany>PSYJOG</ident_powiazany>
+        <ident_powiazany>SCHUDN</ident_powiazany>
+        <ident_powiazany>SEKNOV</ident_powiazany>
+        <ident_powiazany>ZDROG2</ident_powiazany>
+      </powiazane>
+      <serietematyczne>
+        <seriatematyczna id="19">Zdrowie i uroda</seriatematyczna>
+      </serietematyczne>
+      <ksiegarnie_nieinter>
+        <waga>0.48</waga>
+        <status2>1</status2>
+        <cena_netto>46.67</cena_netto>
+        <cena_brutto>49</cena_brutto>
+        <vat>2.33</vat>
+        <vat_procent>5</vat_procent>
+      </ksiegarnie_nieinter>
+      <opis><![CDATA[<div align="center"><h4><b>Eliksir młodości czy gwarant długowieczności?</b></h4></div>
+
+<p>W życiu zwykle czterdzieści lat mija jak jeden dzień. Jednak naprawdę wiek to tylko liczba! Nauka badająca proces starzenia się dowiodła, że włączenie do życia codziennego czterech kluczowych elementów może wpłynąć na naszą fizjologię, w znaczący sposób spowalniając procesy związane ze starzeniem się organizmu oraz pozwalając nam funkcjonować tak, jakbyśmy naprawdę byli o wiele lat młodsi. Zamiast po botoks, sięgnij po ćwiczenia, diety, pielęgnację skóry oraz właściwą higienę snu. I z zachwytem obserwuj zmiany!</p>
+
+<hr /><blockquote><i>Bob Greene zmienił moje życie
+</i><br><div align="right"><b>Oprah Winfrey</b></div>
+</blockquote><hr />
+
+<p>Ta książka to praktyczny i efektywny poradnik zawierający program, który sprawi, że będziesz wyglądać i czuć się młodziej niż kiedykolwiek:</p>
+
+<ul><li>Ćwiczenia - treningi siłowy i aerobowy przeciwdziałają utracie masy mięśniowej i kostnej, wzmacniają kręgosłup oraz pozwalają zachować aktywność i zwinność. </li>
+<li>Odżywianie - kompletny jadłospis promujący długowieczność zawiera wiele przepisów na pyszne dania oraz rady dotyczące suplementów diety.</li>
+<li>Pielęgnacja skóry - trzystopniowy program pielęgnacji skóry zwalcza zmarszczki i przywraca skórze blask.</li>
+<li>Sen - sprawdzone sposoby na zdrowy sen dostarczają energii i redukują ryzyko chorób.</li></ul>
+
+<hr /><p><b>Bob Greene</b> jest dietetykiem światowej klasy. To dzięki niemu sama Oprah Winfrey przeszła prawdziwą metamorfozę i na dobre zrezygnowała z rozmiaru XXL. Bob jest także ekspertem w dziedzinie fizjologii ćwiczeń i certyfikowanym trenerem personalnym. Jego książka Dieta Best Life ukazała się nakładem wydawnictwa Sensus i szturmem podbiła polskie kuchnie. Teraz i Ty masz szansę wieść styl życia według metody "dwadzieścia lat mniej".</p>]]></opis>
+      <md5>9cd98a4ecf51adca6cc85619c9915d58</md5>
+    </ksiazka>
+    <ksiazka ident="48DESP">
+      <isbn>978-83-246-2221-4</isbn>
+      <ean>9788324622214</ean>
+      <ident>48DESP</ident>
+      <tytul language="polski">48-godzinny detoks. Seriaporad.pl</tytul>
+      <tytul language="oryginal">48-hour Detox &amp;#040;Collins GEM&amp;#041;</tytul>
+      <link>http://septem.pl/ksiazki/48-godzinny-detoks-seriaporad-pl-gill-paul,48desp.htm</link>
+      <autor>Gill Paul</autor>
+      <tlumacz>Anna Zagórna-Bartnik</tlumacz>
+      <status>1</status>
+      <cena>14.90</cena>
+      <cenadetaliczna>14.90</cenadetaliczna>
+      <znizka>0.00</znizka>
+      <marka>5</marka>
+      <nazadanie>0</nazadanie>
+      <format>115x170</format>
+      <typ>1</typ>
+      <oprawa>miękka</oprawa>
+      <wydawca/>
+      <liczbastron>112</liczbastron>
+      <datawydania>2009-09-28</datawydania>
+      <online>http://pdf.helion.pl/48desp/48desp-4.pdf</online>
+      <okladka>http://septem.pl/okladki/326x466/48desp.jpg</okladka>
+      <issueurl>http://septem.pl/eksiazki/48desp.htm</issueurl>
+      <bestseller>0</bestseller>
+      <nowosc>0</nowosc>
+      <powiazane>
+        <ident_powiazany>100SSP</ident_powiazany>
+        <ident_powiazany>BIEGAN</ident_powiazany>
+        <ident_powiazany>BRPAR1</ident_powiazany>
+        <ident_powiazany>JOGA</ident_powiazany>
+        <ident_powiazany>MARATG</ident_powiazany>
+        <ident_powiazany>MIGREN</ident_powiazany>
+        <ident_powiazany>MY5LAT</ident_powiazany>
+        <ident_powiazany>NORDIC</ident_powiazany>
+        <ident_powiazany>OBRCY7</ident_powiazany>
+        <ident_powiazany>OPTYSP</ident_powiazany>
+        <ident_powiazany>PILACO</ident_powiazany>
+        <ident_powiazany>ZDROGR</ident_powiazany>
+      </powiazane>
+      <seriewydawnicze>
+        <seriawydawnicza id="6">Seriaporad.pl</seriawydawnicza>
+      </seriewydawnicze>
+      <serietematyczne>
+        <seriatematyczna id="19">Zdrowie i uroda</seriatematyczna>
+      </serietematyczne>
+      <ksiegarnie_nieinter>
+        <waga>0.08</waga>
+        <status2>1</status2>
+        <cena_netto>14.19</cena_netto>
+        <cena_brutto>14.9</cena_brutto>
+        <vat>0.71</vat>
+        <vat_procent>5</vat_procent>
+      </ksiegarnie_nieinter>
+      <opis><![CDATA[<div align="center"><h4><b> Oczyszczający poradnik. Bawi, uczy, zaskakuje</b></h4></div>
+<ul>
+<li>Zrzucanie zbędnych kilogramów i pozbywanie się toksyn z organizmu </li>
+<li>Żelazne reguły wprowadzania zdrowych nawyków </li>
+<li>Diety, które pomagają oczyścić organizm </li>
+<li>Detoksykujące zabiegi pielęgnacyjne </li>
+</ul>
+
+
+<div align="center"><h4><b> W zdrowym ciele mało toksyn</b></h4></div>
+<ul>
+<li>Rozpoznawanie i zwalczanie toksyn oraz zapobieganie skutkom zatrucia. </li>
+<li>48-godzinne plany diet błyskawicznie oczyszczających organizm. </li>
+<li>Dobór optymalnych ćwiczeń fizycznych podczas detoksu. </li>
+<li>Zasady unikania szkodliwych substancji chemicznych -- sprzątanie i higiena osobista. </li>
+<li>Kolorowe fotografie i rysunki ilustrujące opis każdego z planów.</li>
+</ul>
+
+<p>Wszędzie wokół Ciebie aż roi się od niewidocznych toksyn, które każdego dnia zatruwają Twój organizm. Niektóre z nich wchłaniasz bezwiednie, inne, jak alkohol, kofeinę, nikotynę czy leki bez recepty, aplikujesz sobie całkowicie świadomie. Jeśli chcesz dłużej cieszyć się zdrowiem i młodością, ten nietuzinkowy poradnik podpowie Ci, jak wypłukać trucizny z Twojego ciała, zwiększyć ilość dobroczynnych antyoksydantów, złagodzić alergie, a przede wszystkim zdrowo schudnąć - i to w zaledwie 48 godzin!</p>
+
+
+<p>Jesteś ciekawy świata, chcesz wiedzieć więcej i wciąż się czegoś uczyć, a nie masz czasu na czytanie opasłych poradników? <b>Seriaporad.pl</b> to niezwykłe książeczki, które szybko, sensownie i bez owijania w bawełnę wprowadzą każdego w interesujący go temat. Koniecznie sprawdź też pozostałe tytuły! </p>]]></opis>
+      <md5>3cfdb9fcad91a95fb7e1a97099ed49af</md5>
+    </ksiazka>
+    <ksiazka ident="ABCK7V">
+      <isbn>978-83-246-3164-3</isbn>
+      <ean>9788324631643</ean>
+      <ident>ABCK7V</ident>
+      <tytul language="polski">ABC komputera. Wydanie VII</tytul>
+      <link>http://septem.pl/ksiazki/abc-komputera-wydanie-vii-piotr-wroblewski,abck7v.htm</link>
+      <autor>Piotr Wróblewski</autor>
+      <tlumacz>2010-06-18</tlumacz>
+      <status>1</status>
+      <cena>37.00</cena>
+      <cenadetaliczna>37.00</cenadetaliczna>
+      <znizka>0.00</znizka>
+      <marka>1</marka>
+      <nazadanie>0</nazadanie>
+      <format>B5</format>
+      <typ>1</typ>
+      <oprawa>miękka</oprawa>
+      <wydawca/>
+      <liczbastron>368</liczbastron>
+      <datawydania>2011-03-03</datawydania>
+      <okladka>http://septem.pl/okladki/326x466/abck7v.jpg</okladka>
+      <okladkatyl>http://septem.pl/okladki-tyl/326x466/abck7v.jpg</okladkatyl>
+      <bestseller>0</bestseller>
+      <nowosc>0</nowosc>
+      <powiazane>
+        <ident_powiazany>BIEGAN</ident_powiazany>
+        <ident_powiazany>PROFOS</ident_powiazany>
+        <ident_powiazany>SSOJOB</ident_powiazany>
+        <ident_powiazany>WYCZAM</ident_powiazany>
+      </powiazane>
+      <ksiegarnie_nieinter>
+        <waga>0.54</waga>
+        <status2>1</status2>
+        <cena_netto>35.24</cena_netto>
+        <cena_brutto>37</cena_brutto>
+        <vat>1.76</vat>
+        <vat_procent>5</vat_procent>
+      </ksiegarnie_nieinter>
+      <opis><![CDATA[<p>Książka jest wznowionym wydaniem "ABC komputera. Wydanie VII"</p>
+
+<div align="center"><h4><b>Zostań świadomym użytkownikiem komputera!</b></h4></div>
+<br />
+<ul>
+<li>Wybierz odpowiedni komputer dla siebie</li>
+<li>Poznaj obsługę systemu Windows 7</li>
+<li>W pełni wykorzystaj możliwości komputera</li>
+<li>Internet. Daj się wciągnąć</li>
+</ul>
+
+<br />
+<p>
+Zamierzasz kupić komputer? A może już go masz i przeraża Cię korzystanie z niego na co dzień? Niepotrzebnie. Z komputerów korzystają codziennie miliony ludzi. Dlaczego Ty nie miałbyś stać się jednym z nich?  Komputery są dziś wszechobecne w naszym życiu, dzięki nieograniczonym możliwościom Internetu wiele spraw urzędowych, bankowych, rezerwacji można dziś załatwić  nie wychodząc z domu. Komputer stał się nieodzownym elementem we współczesnym świecie i każdy z nas jest w stanie przyswoić sobie przynajmniej podstawowe zasady jego obsługi. Wykorzystując pakiety biurowe będziesz mógł szybko i sprawnie sporządzić odpowiedni dokument, przygotować  korespondencję, prezentację firmową czy też pełne zestawienie domowych wydatków. Deszczowe wieczory uprzyjemnisz sobie ciekawymi grami komputerowymi, a bogate zasoby Internetu dostarczą Ci informacji na każdy temat.</p>
+<br />
+<p>Jeśli nadal nie jesteś przekonany, sięgnij po książkę "ABC komputera. Wydanie VII ". Autor, doświadczony wykładowca na kursach komputerowych, w prosty sposób przedstawia w niej tajniki obsługi komputera. Z tej lektury dowiesz się, jak wybrać optymalny dla siebie sprzęt i jak obsługiwać najnowszy system operacyjny Windows 7, w tym pakiet biurowy Microsoft Office. Znajdziesz tu również informacje na temat poczty elektronicznej, przeglądarki stron WWW i programów antywirusowych. Poznasz też zagadnienia związane z nagrywaniem płyt CD i DVD.</p>
+<br />
+<ul>
+<li>Zakup komputera i optymalny dobór elementów zestawu</li>
+<li>Korzystanie z klawiatury i myszy</li>
+<li>Instalacja, używanie i konfigurowanie systemu operacyjnego Windows 7</li>
+<li>Nagrywanie płyt CD i DVD za pomocą funkcji systemu Windows i programu Nero 9</li>
+<li>Ochrona przed wirusami przy użyciu komercyjnych programów antywirusowych i ich darmowych odpowiedników</li>
+<li>Instalacja i podstawy obsługi pakietu Microsoft Office</li>
+<li>Edycja tekstów w edytorze Word</li>
+<li>Tworzenie arkuszy kalkulacyjnych w Excelu</li>
+<li>Tworzenie grafiki w programach Word i Paint</li>
+<li>Słuchanie muzyki, korzystanie z gier i edukacyjne zastosowania tego urządzenia</li>
+<li>Podłączanie komputera do Internetu</li>
+<li>Korzystanie z poczty elektronicznej oraz przeglądarek Internet Explorer i Firefox</li>
+<li>Komunikator Gadu-Gadu i telefonia internetowa</li>
+<li>Ciekawe zastosowania Internetu (grupy dyskusyjne, portale pracy, portale aukcyjne i porównywarki cen)</li>
+</ul>
+<br />
+<div align="center"><h4><b>Przekonaj się, jak wiele możesz zyskać, korzystając z komputera!</b></h4></div>]]></opis>
+      <md5>053d580358516ffd2ebff62534a45c7c</md5>
+    </ksiazka>
+    <ksiazka ident="ADHD">
+      <isbn>83-246-1730-2</isbn>
+      <ean>9788324617302</ean>
+      <ident>ADHD</ident>
+      <tytul language="polski">ADHD. Lekarz rodzinny</tytul>
+      <link>http://septem.pl/ksiazki/adhd-lekarz-rodzinny-joanna-tylzanowska-kisiel,adhd.htm</link>
+      <autor>Joanna Tylżanowska-Kisiel</autor>
+      <status>1</status>
+      <cena>14.90</cena>
+      <cenadetaliczna>14.90</cenadetaliczna>
+      <znizka>0.00</znizka>
+      <marka>5</marka>
+      <nazadanie>0</nazadanie>
+      <format>122x194</format>
+      <typ>1</typ>
+      <oprawa>miękka</oprawa>
+      <wydawca/>
+      <liczbastron>104</liczbastron>
+      <datawydania>2008-05-30</datawydania>
+      <okladka>http://septem.pl/okladki/326x466/adhd.jpg</okladka>
+      <bestseller>0</bestseller>
+      <nowosc>0</nowosc>
+      <powiazane>
+        <ident_powiazany>APSIK</ident_powiazany>
+        <ident_powiazany>ASTMA</ident_powiazany>
+        <ident_powiazany>BECYP1</ident_powiazany>
+        <ident_powiazany>BEMAD1</ident_powiazany>
+        <ident_powiazany>BIEGAN</ident_powiazany>
+        <ident_powiazany>BIESPA</ident_powiazany>
+        <ident_powiazany>DZIECI</ident_powiazany>
+        <ident_powiazany>JOSUPA</ident_powiazany>
+        <ident_powiazany>POLMAR</ident_powiazany>
+        <ident_powiazany>PSYJOG</ident_powiazany>
+        <ident_powiazany>WYCZAM</ident_powiazany>
+        <ident_powiazany>ZDROGR</ident_powiazany>
+      </powiazane>
+      <seriewydawnicze>
+        <seriawydawnicza id="3">Lekarz rodzinny</seriawydawnicza>
+      </seriewydawnicze>
+      <serietematyczne>
+        <seriatematyczna id="19">Zdrowie i uroda</seriatematyczna>
+      </serietematyczne>
+      <ksiegarnie_nieinter>
+        <waga>0.15</waga>
+        <status2>1</status2>
+        <cena_netto>14.19</cena_netto>
+        <cena_brutto>14.9</cena_brutto>
+        <vat>0.71</vat>
+        <vat_procent>5</vat_procent>
+      </ksiegarnie_nieinter>
+      <opis><![CDATA[<p>Jedni mówią "żywe srebro", inni "trudne dziecko". ADHD to skrót oznaczający nadpobudliwość psychoruchową, której towarzyszą zaburzenia koncentracji. Choroba ta zazwyczaj jest kojarzona z dziećmi w wieku przedszkolnym i szkolnym, ale występuje również u dorastającej młodzieży i dorosłych. Jej typowymi objawami są nadmierna ruchliwość, impulsywność i problemy ze skupieniem uwagi. Jeżeli podejrzewasz, że Twoje dziecko lub inna bliska Ci osoba ma ADHD, przeczytaj tę książkę. </p>
+
+Dowiesz się z niej:
+<ul>
+<li>jakie są główne przyczyny zachorowań na ADHD;
+<li>według jakich kryteriów należy rozpoznawać tę chorobę w poszczególnych grupach wiekowych;
+<li>jakie formy leczenia farmakologicznego i niefarmakologicznego oferuje dzisiejsza medycyna.
+</ul>
+
+<p>Seria <b>Lekarz rodzinny</b> to nieocenione źródło informacji pomagające zrozumieć podstawowe zagadnienia związane z daną chorobą. Informacje są przedstawione w przystępny sposób i nie pomijają żadnych istotnych szczegółów. Wszystkie książki powstały pod czujnym okiem ekspertów, w oparciu o najnowsze, kompleksowe dane.</p>]]></opis>
+      <md5>c9eaad4f67ee7c51d68a8583ef910533</md5>
+    </ksiazka>
+    <ksiazka ident="AJURWE">
+      <isbn>978-83-246-2091-3</isbn>
+      <ean>9788324620913</ean>
+      <ident>AJURWE</ident>
+      <tytul language="polski">Ajurweda. Tajemnice medycyny holistycznej</tytul>
+      <tytul language="oryginal">Creating Health: How to Wake Up the Body&amp;#39;s Intelligence. Revised Edition</tytul>
+      <link>http://septem.pl/ksiazki/ajurweda-tajemnice-medycyny-holistycznej-deepak-chopra,ajurwe.htm</link>
+      <autor>Deepak Chopra</autor>
+      <tlumacz>Katarzyna Rybak</tlumacz>
+      <status>0</status>
+      <cena>34.90</cena>
+      <cenadetaliczna>34.90</cenadetaliczna>
+      <znizka>0.00</znizka>
+      <marka>4</marka>
+      <nazadanie>0</nazadanie>
+      <format>A5</format>
+      <typ>1</typ>
+      <oprawa>miękka</oprawa>
+      <wydawca/>
+      <liczbastron>264</liczbastron>
+      <datawydania>2010-06-17</datawydania>
+      <online>http://pdf.helion.pl/ajurwe/ajurwe-14.pdf</online>
+      <okladka>http://septem.pl/okladki/326x466/ajurwe.jpg</okladka>
+      <okladkatyl>http://septem.pl/okladki-tyl/326x466/ajurwe.jpg</okladkatyl>
+      <issueurl>http://septem.pl/eksiazki/ajurwe.htm</issueurl>
+      <bestseller>0</bestseller>
+      <nowosc>0</nowosc>
+      <powiazane>
+        <ident_powiazany>BEBAU5</ident_powiazany>
+        <ident_powiazany>BEMAD1</ident_powiazany>
+        <ident_powiazany>BESARD</ident_powiazany>
+        <ident_powiazany>BIEGAN</ident_powiazany>
+        <ident_powiazany>B_SLO2</ident_powiazany>
+        <ident_powiazany>JOGA</ident_powiazany>
+        <ident_powiazany>JOSUPA</ident_powiazany>
+        <ident_powiazany>LEKNAU</ident_powiazany>
+        <ident_powiazany>MYZDRO</ident_powiazany>
+        <ident_powiazany>PSYJOG</ident_powiazany>
+        <ident_powiazany>ZDROG2</ident_powiazany>
+        <ident_powiazany>ZDROGR</ident_powiazany>
+      </powiazane>
+      <serietematyczne>
+        <seriatematyczna id="19">Zdrowie i uroda</seriatematyczna>
+      </serietematyczne>
+      <ksiegarnie_nieinter>
+        <waga>0.32</waga>
+        <status2>3</status2>
+        <cena_netto>33.24</cena_netto>
+        <cena_brutto>34.9</cena_brutto>
+        <vat>1.66</vat>
+        <vat_procent>5</vat_procent>
+      </ksiegarnie_nieinter>
+      <opis><![CDATA[<div align="center"><h4><b> Psychosomatyczna harmonia </b></h4></div>
+<ul>
+<li>Czuj się młodo</li>
+<li>Bądź zawsze pogodny</li>
+<li>Emanuj szczęściem </li>
+</ul>
+
+<blockquote><i>
+Dr Chopra przekazuje nam zadziwiające informacje z dziedziny współczesnej medycyny umysłu i ciała w taki sposób, w jaki może to zrobić tylko ktoś, kto zna tę tematykę z doświadczenia
+<br><div align="right">dr Craig A. Lambert, "Harvard Magazine"</div></i>
+</blockquote>
+
+<blockquote><i>
+Przez zdrowie rozumiem możność cieszenia się pełnym, dojrzałym, radosnym życiem, w ścisłym związku z tym, co kocham - ziemią i wszystkimi jej cudownościami.
+<br><div align="right">Katherine Mansfield</div></i>
+</blockquote>
+
+<p>Twoje ciało jest jak żywa świątynia. Pełna sił witalnych, tętniących w każdej komórce, i energii, płynącej w żyłach. By mogło Ci służyć i być silne jak skała, musi być przede wszystkim zdrowe. Bycie zdrowym to Twój naturalny stan. To coś więcej niż tylko brak choroby lub ułomności - zdrowie to pełny fizyczny, psychiczny i społeczny dobrobyt. To także poczucie radości, spełnienia oraz świadomości pozostawania w harmonii z otaczającym Cię światem. </p>
+<p>Otwórz oczy i wpuść do swojej świątyni światło, jakim jest Ajurweda. Ten starożytny system lecznictwa indyjskiego zawiera medyczną i metafizyczną wiedzę o zdrowym życiu. Pomoże Ci on poprawić Twoje fizyczne, psychiczne i duchowe samopoczucie. To jeden z niewielu systemów medycyny niekonwencjonalnej wykorzystujących chirurgię.</p>
+<p>Oto przełomowa książka - pierwsza, w której Deepak Chopra zaprezentował nowe spojrzenie na kwestię zdrowia, zaburzeń energii oraz leczniczej siły umysłu. Dr Chopra jest najwybitniejszym rzecznikiem Ajurwedy. Z prawdziwą wprawą łączy zdobycze medycyny Wschodu i Zachodu, prezentując jasną, bogatą wizję drogi prowadzącej do idealnego zdrowia - drogę do harmonii umysłu, ciała oraz ducha.
+Słynny hinduski aforyzm głosi, że "Ajurweda służy nieśmiertelności". Przekonaj się, że ta uzdrawiająca siła tkwi w utrzymaniu harmonii w kwestii jedzenia, zachowania, rytmów biologicznych, środowiska i myśli.</p>]]></opis>
+      <md5>28fb73855905aad805648582c8b4bc64</md5>
+    </ksiazka>
+    <ksiazka ident="AKCIAZ">
+      <isbn>978-83-246-1626-8</isbn>
+      <ean>9788324616268</ean>
+      <ident>AKCIAZ</ident>
+      <tytul language="polski">Aktywna ciąża dla bystrzaków</tytul>
+      <tytul language="oryginal">Fit Pregnancy for Dummies</tytul>
+      <link>http://septem.pl/ksiazki/aktywna-ciaza-dla-bystrzakow-catherine-cram-tere-stouffer-drenth,akciaz.htm</link>
+      <autor>Catherine Cram, Tere Stouffer Drenth</autor>
+      <tlumacz>Anna Owsiak, Izabela Szybilska-Fiedorowicz</tlumacz>
+      <status>0</status>
+      <cena>34.90</cena>
+      <cenadetaliczna>34.90</cenadetaliczna>
+      <znizka>0.00</znizka>
+      <marka>5</marka>
+      <nazadanie>0</nazadanie>
+      <format>180x235</format>
+      <typ>1</typ>
+      <oprawa>miękka</oprawa>
+      <wydawca/>
+      <liczbastron>384</liczbastron>
+      <datawydania>2008-05-14</datawydania>
+      <online>http://pdf.helion.pl/akciaz/akciaz-1.pdf</online>
+      <okladka>http://septem.pl/okladki/326x466/akciaz.jpg</okladka>
+      <bestseller>0</bestseller>
+      <nowosc>0</nowosc>
+      <powiazane>
+        <ident_powiazany>ANTEBY</ident_powiazany>
+        <ident_powiazany>BEPOPR</ident_powiazany>
+        <ident_powiazany>BEVVA2</ident_powiazany>
+        <ident_powiazany>BIEGAN</ident_powiazany>
+        <ident_powiazany>BIESPA</ident_powiazany>
+        <ident_powiazany>ELEBYS</ident_powiazany>
+        <ident_powiazany>JOSUPA</ident_powiazany>
+        <ident_powiazany>KSIAZE</ident_powiazany>
+        <ident_powiazany>PSYJOG</ident_powiazany>
+        <ident_powiazany>SCHUDN</ident_powiazany>
+        <ident_powiazany>TREUBY</ident_powiazany>
+        <ident_powiazany>ZAPRBY</ident_powiazany>
+      </powiazane>
+      <seriewydawnicze>
+        <seriawydawnicza id="1">Dla bystrzaków</seriawydawnicza>
+      </seriewydawnicze>
+      <serietematyczne>
+        <seriatematyczna id="19">Zdrowie i uroda</seriatematyczna>
+      </serietematyczne>
+      <ksiegarnie_nieinter>
+        <waga>0.58</waga>
+        <status2>3</status2>
+        <cena_netto>33.24</cena_netto>
+        <cena_brutto>34.9</cena_brutto>
+        <vat>1.66</vat>
+        <vat_procent>5</vat_procent>
+      </ksiegarnie_nieinter>
+      <opis><![CDATA[<div align="center"><h4><b> Ciąża w stylu fitness</b></h4></div> 
+
+<p>Oswoiłaś się już z myślą, że jesteś w ciąży? Niewątpliwym plusem jest to, że ludzie w autobusie ustępują Ci miejsca i masz prawo podchodzić do okienek w urzędach bez kolejki. Minusem jest zaś to, że stare ubrania przestają na Ciebie pasować. Pewnie już zastanawiasz się, jak będziesz wyglądać za kilka miesięcy? Fakt, że w Twoim brzuchu rozwija się mały człowiek, nie oznacza, że musisz zachowywać się niczym szklany, nieruchomy inkubator. Możesz uprawiać sport i zachować świetną formę aż do chwili rozwiązania. Ważne tylko, byś robiła to pod okiem specjalistów - takich jak autorzy Aktywnej ciąży dla bystrzaków.</p>
+
+<p>Joga, pływanie, trening siłowy i aerobik - ruch sprawi, że okres ciąży stanie się nie tylko czasem oczekiwania na potomka, ale również przygotuje Cię fizycznie na jego przyjście. Znajdziesz tu ćwiczenia dla siebie - bez względu na to, czy wcześniej aktywnie uprawiałaś sport, czy byłaś raczej dziewczyną "kanapową". Dowiedz się, które z ćwiczeń są dla Ciebie wskazane, a jakich powinnaś unikać. Poczytaj o tym, jak prawidłowo odżywiać się podczas ciąży i po rozwiązaniu oraz jak zachować zdrowie - zarówno fizyczne, jak i psychiczne - w obliczu ważnej zmiany w Twoim życiu.</p>
+
+<ul>
+<li>Bezpieczny program treningowy na czas ciąży.</li>
+<li>Uelastycznianie ciała, poprawianie krążenia oraz zdrowy sen.</li>
+<li>Metody kontroli prawidłowego przyrostu masy ciała. </li>
+<li>Przygotowanie ciała do akcji porodowej oraz porodu.</li>
+<li>Szczegółowe opisy ćwiczeń na kolejne etapy ciąży.</li>
+<li>Sposoby angażowania rodziny i przyjaciół w swój bieg po kondycję.</li>
+</ul>]]></opis>
+      <md5>72aaca2fa81ccd4c2f516dde117c022b</md5>
+    </ksiazka>
+    <ksiazka ident="AKWABY">
+      <isbn>978-83-246-2037-1</isbn>
+      <ean>9788324620371</ean>
+      <ident>AKWABY</ident>
+      <tytul language="polski">Akwarium słodkowodne dla bystrzaków</tytul>
+      <tytul language="oryginal">Freshwater Aquariums For Dummies 2/e</tytul>
+      <link>http://septem.pl/ksiazki/akwarium-slodkowodne-dla-bystrzakow-maddy-hargrove-mic-hargrove,akwaby.htm</link>
+      <autor>Maddy Hargrove, Mic Hargrove</autor>
+      <tlumacz>Emilia Hahn</tlumacz>
+      <status>1</status>
+      <cena>34.90</cena>
+      <cenadetaliczna>34.90</cenadetaliczna>
+      <znizka>0.00</znizka>
+      <marka>5</marka>
+      <nazadanie>0</nazadanie>
+      <format>180x235</format>
+      <typ>1</typ>
+      <oprawa>miękka</oprawa>
+      <wydawca/>
+      <liczbastron>320</liczbastron>
+      <datawydania>2010-08-06</datawydania>
+      <online>http://pdf.helion.pl/akwaby/akwaby-7.pdf</online>
+      <okladka>http://septem.pl/okladki/326x466/akwaby.jpg</okladka>
+      <okladkatyl>http://septem.pl/okladki-tyl/326x466/akwaby.jpg</okladkatyl>
+      <bestseller>0</bestseller>
+      <nowosc>0</nowosc>
+      <powiazane>
+        <ident_powiazany>ANTEBY</ident_powiazany>
+        <ident_powiazany>BEWKA1</ident_powiazany>
+        <ident_powiazany>BIGOR1</ident_powiazany>
+        <ident_powiazany>ELEBYS</ident_powiazany>
+        <ident_powiazany>FOREB2</ident_powiazany>
+        <ident_powiazany>MARABY</ident_powiazany>
+        <ident_powiazany>SEKSBY</ident_powiazany>
+        <ident_powiazany>SSOJOB</ident_powiazany>
+        <ident_powiazany>TREPSO</ident_powiazany>
+        <ident_powiazany>TREUBY</ident_powiazany>
+        <ident_powiazany>WIECPR</ident_powiazany>
+        <ident_powiazany>ZAPRBY</ident_powiazany>
+      </powiazane>
+      <seriewydawnicze>
+        <seriawydawnicza id="1">Dla bystrzaków</seriawydawnicza>
+      </seriewydawnicze>
+      <serietematyczne>
+        <seriatematyczna id="20">Zwierzęta</seriatematyczna>
+      </serietematyczne>
+      <ksiegarnie_nieinter>
+        <waga>0.50</waga>
+        <status2>2</status2>
+        <cena_netto>33.24</cena_netto>
+        <cena_brutto>34.9</cena_brutto>
+        <vat>1.66</vat>
+        <vat_procent>5</vat_procent>
+      </ksiegarnie_nieinter>
+      <opis><![CDATA[<div align="center"><h4><b> Dopuść swoje rybki do głosu</div></h4></b>
+
+<p>Uwielbiasz spędzać czas z nosem przyklejonym do szyby, obserwując bajecznie kolorowe ryby? Uważasz akwaria za wyjątkowo estetyczny i oryginalny element wystroju wnętrz? Kochasz zwierzaki, ale brak czasu nie pozwala Ci na posiadanie żadnego z nich, prócz wyrozumiałych wodolubnych pupili? Uczyń z ich hodowli swoje hobby i zacznij się czuć w świecie akwarystyki jak ryba w wodzie!</p>
+
+<p>Naprawdę bardzo łatwo jest zostać dobrym akwarystą. Wszystko, czego Ci potrzeba, to odrobina pomocy, by wytrwać. Ten przyjazny poradnik odpowie na wszystkie Twoje pytania, począwszy od założenia zbiornika i wyboru odpowiednich gatunków ryb, po przygotowanie bezpiecznej wody akwariowej, wykorzystywanie chemii i informacje odnośnie do cyklu azotowego. Nauczysz się łączyć w akwarium różne ryby, czyścić żwir, radzić sobie z inwazją glonów oraz prezentować swoje zwierzątka w albumach fotograficznych i na wystawach.</p>
+
+Rady złotej rybki:
+<ul>
+<li>Zakładanie słodkowodnego akwarium.</li>
+<li>Wybieranie najlepszych ryb.</li>
+<li>Korzystny zakup sprzętu.</li>
+<li>Utrzymywanie czystego, zdrowego środowiska.</li>
+<li>Pokonywanie akwarystycznych pułapek.</li>
+<li>Rozmnażanie zwierzątek.</li>
+<li>Prowadzenie dokumentacji swoich rybek.</li>
+</ul>
+
+<p>Ponadto znajdziesz tu dekalogi: 10 fajnych akwarystycznych gadżetów, 10 naukowych praw rybiego świata oraz 10 mocnych postanowień związanych z posiadaniem akwarium.</p>
+
+<p>DODATEK SPECJALNY:<br>
+Dane i liczby dotyczące najwłaściwszego akwarium</p>]]></opis>
+      <md5>7363eee8386e735ea76aa75f9e4f6ab5</md5>
+    </ksiazka>
+    <ksiazka ident="ALERGI">
+      <isbn>83-246-0684-X</isbn>
+      <ean>9788324606849</ean>
+      <ident>ALERGI</ident>
+      <tytul language="polski">Alergia. Lekarz rodzinny</tytul>
+      <link>http://septem.pl/ksiazki/alergia-lekarz-rodzinny-katarzyna-wrotek,alergi.htm</link>
+      <autor>Katarzyna Wrotek</autor>
+      <status>1</status>
+      <cena>14.90</cena>
+      <cenadetaliczna>14.90</cenadetaliczna>
+      <znizka>0.00</znizka>
+      <marka>5</marka>
+      <nazadanie>0</nazadanie>
+      <format>122x194</format>
+      <typ>1</typ>
+      <oprawa>miękka</oprawa>
+      <wydawca/>
+      <liczbastron>104</liczbastron>
+      <datawydania>2006-11-01</datawydania>
+      <okladka>http://septem.pl/okladki/326x466/alergi.jpg</okladka>
+      <bestseller>0</bestseller>
+      <nowosc>0</nowosc>
+      <powiazane>
+        <ident_powiazany>BESARD</ident_powiazany>
+        <ident_powiazany>BRPAR1</ident_powiazany>
+        <ident_powiazany>JOGA</ident_powiazany>
+        <ident_powiazany>JOSUPA</ident_powiazany>
+        <ident_powiazany>MARATG</ident_powiazany>
+        <ident_powiazany>MYZDRO</ident_powiazany>
+        <ident_powiazany>NORDIC</ident_powiazany>
+        <ident_powiazany>POLMAR</ident_powiazany>
+        <ident_powiazany>PSYJOG</ident_powiazany>
+        <ident_powiazany>SEKNOV</ident_powiazany>
+        <ident_powiazany>ZDROG2</ident_powiazany>
+        <ident_powiazany>ZOSWOD</ident_powiazany>
+      </powiazane>
+      <seriewydawnicze>
+        <seriawydawnicza id="3">Lekarz rodzinny</seriawydawnicza>
+      </seriewydawnicze>
+      <serietematyczne>
+        <seriatematyczna id="19">Zdrowie i uroda</seriatematyczna>
+      </serietematyczne>
+      <ksiegarnie_nieinter>
+        <waga>0.16</waga>
+        <status2>1</status2>
+        <cena_netto>14.19</cena_netto>
+        <cena_brutto>14.9</cena_brutto>
+        <vat>0.71</vat>
+        <vat_procent>5</vat_procent>
+      </ksiegarnie_nieinter>
+      <opis><![CDATA[<div align="center"><h4><b> Zdrowie w pigułce </b></h4></div> 
+
+<p> Alergia jest nieprawidłową reakcją układu odpornościowego na różne czynniki zewnętrzne. Mogą to być pyłki, pokarmy, jad owadów, sierść zwierząt, a także roztocza i pleśń. Do typowych objawów uczulenia należą: wysypka, swędzenie skóry, podrażnienie nosa i katar, łzawienie oczu, obrzęk krtani i napady duszności astmatycznej. Jeśli zauważasz u siebie lub swojego dziecka niektóre z wymienionych tu reakcji, przeczytaj tę książkę. <p>
+
+<p> Dowiesz się z niej: </p>
+<ul>
+<li> jakie objawy są związane z różnymi uczuleniami; </li>
+<li> kiedy warto wykonać testy skórne; </li>
+<li> jakie leki powinien mieć w szafce każdy alergik; </li>
+<li> na czym polega odczulanie; </li>
+<li> jak należy postępować w przypadku nagłego ataku alergii. </li>
+</ul>
+
+<div align="center"><h4><b> Weź swoje zdrowie we własne ręce i zacznij aktywnie <br />
+wpływać na przebieg choroby. Tak wiele zależy od Ciebie. </b></h4></div> 
+
+<p> Katarzyna Wrotek jest doktorem nauk medycznych, specjalistą chorób wewnętrznych i alergologii. Przez wiele lat była pracownikiem naukowo-dydaktycznym Akademii Medycznej w Warszawie. Obecnie pracuje jako alergolog w Międzyleskim Szpitalu Specjalistycznym. </p>
+
+<p> Seria Lekarz rodzinny to nieocenione źródło informacji pomagające zrozumieć podstawowe zagadnienia związane z daną chorobą. Informacje są przedstawione w dostępny sposób i nie pomijają żadnych istotnych szczegółów. Wszystkie książki powstały pod czujnym okiem ekspertów, w oparciu o najnowsze, kompleksowe dane. </p>]]></opis>
+      <md5>369a72aecf9ee4d0561f7de820a4a006</md5>
+    </ksiazka>
+  </lista>
+</details>

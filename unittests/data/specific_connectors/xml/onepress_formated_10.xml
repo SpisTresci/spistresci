@@ -1,0 +1,756 @@
+<?xml version="1.0" encoding="iso-8859-2"?>
+<!--
+	    Dane z dnia: sob, 21 wrz 2013, 01:07:24 CEST
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ Ze względu na wielkość pliku XML, proszę o ściąganie wersji produkty-onepress.xml.zip
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+            Jeśli będziesz sprzedawał książki w PP, to użyj pola <status>:
+
+		0 - niedostepna
+		1 - dostepna
+		2 - w przygotowaniu
+		5 - druk na żądanie
+		7 - przedsprzedaz
+	    oraz <cena>, <cenadetaliczna> (ceny takie jak na stronach GW Helion : moga zawierac znizki itp.)
+
+	    dla ksiegarni internetowych (wspolpraca z dzialem handlowym, ehelion) użyj pola <status2>:
+
+    		1 - dostępna
+		2 - dostępna w małej ilości
+		3 - chwilowo niedostępna
+		4 - niedostępna
+		5 - POD
+		6 - w przygotowaniu
+		7 - w przedsprzedaży
+            oraz pola <ksiegarnie_nieinter> gdzie znajduja sie wszystkie dane odnosnie ceny netto, brutto, stawka VAT
+
+		<typ>:
+			1 - ksiazka
+			2 - ebook
+			3 - audiobook mp3
+			4 - audiocd mp3
+
+		<marka>:
+			1 - helion
+			2 - onepress
+			3 - editio
+			4 - sensus
+			5 - septem
+			6 - bezdroza
+			8 - podrecznik
+			11 - bezdroża obce
+
+Zmiany:
+09.02.2011 @MJJ dolożenie elementu <typ>
+15.06.2011 @MJJ dodanie pliku lista2-statusy.xml z samymi statusami, cenami
+21.12.2011 @TKr seolinki, zagregowane formaty ebooków
+23.01.2012 @TKr info o promocjach, lista promocji serwis.pl/xml/lista-promocje.cgi
+15.06.2012 @TKr dodane info o audiobookach
+29.08.2012 @TKr dodane md5 jako wßkaźnik zmiany informacji w książce
+
+		Kontakt: Michal Jęczalik <michal.jeczalik@helion.pl>
+-->
+<details>
+  <lista baza="onepress">
+    <ksiazka ident="1001IN">
+      <isbn>83-246-0098-1</isbn>
+      <ean>9788324600984</ean>
+      <ident>1001IN</ident>
+      <tytul language="polski">1001 sposobów na przejmowanie inicjatywy w pracy</tytul>
+      <tytul language="oryginal">1001 Ways to Take Initiative at Work</tytul>
+      <link>http://onepress.pl/ksiazki/1001-sposobow-na-przejmowanie-inicjatywy-w-pracy-bob-nelson,1001in.htm</link>
+      <autor>Bob Nelson</autor>
+      <tlumacz>Wojciech Sztukowski</tlumacz>
+      <status>1</status>
+      <cena>39.00</cena>
+      <cenadetaliczna>39.00</cenadetaliczna>
+      <znizka>0.00</znizka>
+      <marka>2</marka>
+      <nazadanie>0</nazadanie>
+      <format>A5</format>
+      <typ>1</typ>
+      <oprawa>twarda</oprawa>
+      <wydawca/>
+      <liczbastron>248</liczbastron>
+      <datawydania>2006-03-23</datawydania>
+      <online>http://pdf.helion.pl/1001in/1001in-1.pdf</online>
+      <okladka>http://onepress.pl/okladki/326x466/1001in.jpg</okladka>
+      <bestseller>0</bestseller>
+      <nowosc>0</nowosc>
+      <promocja id="406">Opadają liście, opadają ceny!</promocja>
+      <powiazane>
+        <ident_powiazany>ARTMAV</ident_powiazany>
+        <ident_powiazany>BESARD</ident_powiazany>
+        <ident_powiazany>BIBEBI</ident_powiazany>
+        <ident_powiazany>FILOKV</ident_powiazany>
+        <ident_powiazany>KPIR2</ident_powiazany>
+        <ident_powiazany>MERCHA</ident_powiazany>
+        <ident_powiazany>POKOTY</ident_powiazany>
+        <ident_powiazany>POKSIP</ident_powiazany>
+        <ident_powiazany>SAMODV</ident_powiazany>
+        <ident_powiazany>SPRYBI</ident_powiazany>
+        <ident_powiazany>SUNGET</ident_powiazany>
+        <ident_powiazany>WYWKOM</ident_powiazany>
+      </powiazane>
+      <seriewydawnicze>
+        <seriawydawnicza id="2">Small Business</seriawydawnicza>
+      </seriewydawnicze>
+      <serietematyczne>
+        <seriatematyczna id="12">Twoja kariera</seriatematyczna>
+      </serietematyczne>
+      <ksiegarnie_nieinter>
+        <waga>0.42</waga>
+        <status2>1</status2>
+        <cena_netto>37.14</cena_netto>
+        <cena_brutto>39</cena_brutto>
+        <vat>1.86</vat>
+        <vat_procent>5</vat_procent>
+      </ksiegarnie_nieinter>
+      <opis><![CDATA[<div align="center"><h4><b> Zadbaj o swoją pracę i karierę </b></h4></div> 
+<ul>
+<li> Szukaj nowych rozwiązań -- myśl niekonwencjonalnie </li>
+<li> Rozwijaj się i podnoś swoje kwalifikacje </li>
+<li> Pogódź pracę z życiem rodzinnym </li>
+</ul>
+<p> Największym błędem popełnianym przez wielu ludzi jest myślenie, że pracują dla kogoś innego. Szef i comiesięczne odbieranie paska z wypłatą nie świadczą o tym, że nie pracujemy dla siebie. Przecież każdy z nas świadomie kieruje swoją karierą i od naszych decyzji zależy jej przebieg. To, czy chcemy rozwijać swoje kwalifikacje, pogłębiać wiedzę i czy umiemy w odpowiednim momencie zaproponować swoją pomoc, może mieć ogromny wpływ na naszą pracę. W każdym przedsiębiorstwie można wykazać się swoimi umiejętnościami i pomysłowością, rozwinąć istniejące projekty lub udoskonalić procedury. Można przejąć inicjatywę, zanim ktoś powie nam, co i kiedy zrobić. </p>
+
+<p> Czytając książkę "1001 sposobów na przejmowanie inicjatywy w pracy", dowiesz się, jak "zaistnieć" w firmie. Przekonasz się, że czekanie na polecenia szefa wcale nie jest najlepszą drogą do zdobycia uznania w pracy. Autor Bob Nelson udowodni Ci, że każdy pracownik może być motorem trwałych i pozytywnych zmian w firmie. Nauczysz się niekonwencjonalnie myśleć, budować sieć kontaktów wewnątrz firmy i poza nią, rozmawiać z przełożonymi i współpracownikami i pracować w zespole. </p>
+<ul>
+<li> Przyjmowanie odpowiedzialności za podejmowane działania </li>
+<li> Rozwijanie umiejętności zarządzania czasem </li>
+<li> Sztuka komunikacji z innymi ludźmi </li>
+<li> Kierowanie przełożonymi </li>
+<li> Doskonalenie swoich umiejętności </li>
+<li> Pokonywanie przeszkód w pracy </li>
+<li> Rozmowy z klientami </li>
+<li> Poszukiwanie nowej pracy </li>
+</ul>
+<div align="center"><h4><b> Przekonaj się, że jedyną osobą, dla której pracujesz, jesteś Ty sam. </b></h4></div>]]></opis>
+      <md5>ffaccdefcf2f047a81dda6e77b661b8d</md5>
+    </ksiazka>
+    <ksiazka ident="100BIZ">
+      <isbn>978-83-246-2599-4</isbn>
+      <ean>9788324625994</ean>
+      <ident>100BIZ</ident>
+      <tytul language="polski">100 najlepszych książek biznesowych. Poznaj niezbędny kanon</tytul>
+      <tytul language="oryginal">The 100 Best Business Books of All Time: What They Say, Why They Matter, and How They Can Help You</tytul>
+      <link>http://onepress.pl/ksiazki/100-najlepszych-ksiazek-biznesowych-poznaj-niezbedny-kanon-jack-covert-todd-sattersten,100biz.htm</link>
+      <autor>Jack Covert, Todd Sattersten</autor>
+      <tlumacz>Magda Witkowska</tlumacz>
+      <status>1</status>
+      <cena>39.90</cena>
+      <cenadetaliczna>39.90</cenadetaliczna>
+      <znizka>0.00</znizka>
+      <marka>2</marka>
+      <nazadanie>0</nazadanie>
+      <format>168x237</format>
+      <typ>1</typ>
+      <oprawa>miękka</oprawa>
+      <wydawca/>
+      <liczbastron>344</liczbastron>
+      <datawydania>2010-08-20</datawydania>
+      <online>http://pdf.helion.pl/100biz/100biz-4.pdf</online>
+      <okladka>http://onepress.pl/okladki/326x466/100biz.jpg</okladka>
+      <okladkatyl>http://onepress.pl/okladki-tyl/326x466/100biz.jpg</okladkatyl>
+      <issueurl>http://onepress.pl/eksiazki/100biz.htm</issueurl>
+      <bestseller>0</bestseller>
+      <nowosc>0</nowosc>
+      <promocja id="406">Opadają liście, opadają ceny!</promocja>
+      <powiazane>
+        <ident_powiazany>ART3MI</ident_powiazany>
+        <ident_powiazany>ARTTWK</ident_powiazany>
+        <ident_powiazany>BIBSPR</ident_powiazany>
+        <ident_powiazany>BIBZW2</ident_powiazany>
+        <ident_powiazany>B_SLO2</ident_powiazany>
+        <ident_powiazany>MARKAW</ident_powiazany>
+        <ident_powiazany>POCME6</ident_powiazany>
+        <ident_powiazany>PSYSZ2</ident_powiazany>
+        <ident_powiazany>TWMOBI</ident_powiazany>
+        <ident_powiazany>WOJNAS</ident_powiazany>
+        <ident_powiazany>ZAWYWP</ident_powiazany>
+        <ident_powiazany>ZYMABI</ident_powiazany>
+      </powiazane>
+      <seriewydawnicze>
+        <seriawydawnicza id="3">Exclusive</seriawydawnicza>
+      </seriewydawnicze>
+      <serietematyczne>
+        <seriatematyczna id="16">Zarządzanie</seriatematyczna>
+      </serietematyczne>
+      <ksiegarnie_nieinter>
+        <waga>0.58</waga>
+        <status2>2</status2>
+        <cena_netto>38</cena_netto>
+        <cena_brutto>39.9</cena_brutto>
+        <vat>1.9</vat>
+        <vat_procent>5</vat_procent>
+      </ksiegarnie_nieinter>
+      <opis><![CDATA[<div align="center"><h4><b> WSZYSTKO, co warto przeczytać </b></h4></div>
+
+<ul>
+<li>Poznaj klasykę literatury biznesowej</li>
+<li>Bądź na bieżąco z najnowszymi trendami</li>
+<li>Znajdź inspirujące rozwiązania</li>
+</ul>
+
+
+<div align="center"><h4><b> STUdnia perfekcyjnych książek  </b></h4></div>
+
+<p>Doskonała książka biznesowa może odmienić Twoje życie, zainspirować Cię i dostarczyć narzędzi, za pomocą których zechcesz przeprowadzić branżową rewolucję albo stworzyć coś, czego nikt jeszcze nie próbował! Jednak szumne opisy na okładkach nie zagwarantują Ci, że książki, po które sięgasz w księgarni, istotnie są perełkami. Potrzebny Ci jakiś niezawodny filtr, pozwalający podzielić je na dobre, lepsze i absolutnie bezkonkurencyjne.</p>
+
+<p>Autorzy tego zbioru zawodowo zajmują się czytaniem książek biznesowych i rekomendowaniem ich klientom. Nikt nie zna lepiej od nich klasyków literatury biznesowej, światowych bestsellerów oraz najnowszych hitów. By oszczędzić Ci trudów przedzierania się przez tysiące tomów w celu znalezienia pozycji wartych przeczytania, oferujemy przegląd stu najlepszych, najbardziej odkrywczych i przydatnych książek biznesowych w historii. Książek, o których się mówi i których nie wypada nie znać - teraz masz je wszystkie w jednym zwartym tomie!</p>
+
+<div align="center"><h4><b> Dobierz lektury zgodnie z tematyką </b></h4></div>
+
+<ul>
+<li>Poprawianie jakości życia, praca nad sobą i swoimi mocnymi stronami.</li>
+<li>Osiem modeli organizacyjnych, na podstawie których możesz stworzyć własny.</li>
+<li>Nieustanny proces tworzenia własnego klienta - metody i zagrożenia.</li>
+<li>Kierowanie ludźmi i organizacja pracy osób, z którymi współpracujesz.</li>
+<li>Siedem przewodników po świecie pasji i praktycznych aspektach nowych przedsięwzięć.</li>
+<li>Sześć branżowych historii sukcesu i porażki.</li>
+<li>Analityczne spojrzenie na proces powstawania nowych pomysłów.</li>
+<li>I jeszcze wiele innych...</li>
+</ul>
+
+<p>W całej książce znajduje się wiele dodatków zawierających odwołania do filmów, powieści, a nawet książek dla dzieci. Odwiedź stronę internetową www.100bestbiz.com.</p>]]></opis>
+      <md5>a21d5a316c9b6b9d40cbf3b23978229c</md5>
+    </ksiazka>
+    <ksiazka ident="100E27">
+      <isbn>978-83-246-1331-1</isbn>
+      <ean>9788324613311</ean>
+      <ident>100E27</ident>
+      <tytul language="polski">100 sposobów na Excel 2007 PL. Tworzenie funkcjonalnych arkuszy </tytul>
+      <tytul language="oryginal">Excel Hacks: Tips &amp; Tools for Streamlining Your Spreadsheets</tytul>
+      <link>http://onepress.pl/ksiazki/100-sposobow-na-excel-2007-pl-tworzenie-funkcjonalnych-arkuszy-david-hawley-raina-hawley,100e27.htm</link>
+      <autor>David Hawley, Raina Hawley</autor>
+      <tlumacz>Zbigniew Smogur</tlumacz>
+      <status>1</status>
+      <cena>57.00</cena>
+      <cenadetaliczna>57.00</cenadetaliczna>
+      <znizka>0.00</znizka>
+      <marka>1</marka>
+      <nazadanie>0</nazadanie>
+      <format>168x237</format>
+      <typ>1</typ>
+      <oprawa>miękka</oprawa>
+      <wydawca/>
+      <liczbastron>368</liczbastron>
+      <datawydania>2008-05-20</datawydania>
+      <online>http://pdf.helion.pl/100e27/100e27-2.pdf</online>
+      <okladka>http://onepress.pl/okladki/326x466/100e27.jpg</okladka>
+      <bestseller>0</bestseller>
+      <nowosc>0</nowosc>
+      <promocja id="406">Opadają liście, opadają ceny!</promocja>
+      <powiazane>
+        <ident_powiazany>ARTWA3</ident_powiazany>
+        <ident_powiazany>BIESPA</ident_powiazany>
+        <ident_powiazany>GRYMEG</ident_powiazany>
+        <ident_powiazany>STARTP</ident_powiazany>
+      </powiazane>
+      <ksiegarnie_nieinter>
+        <waga>0.60</waga>
+        <status2>1</status2>
+        <cena_netto>54.29</cena_netto>
+        <cena_brutto>57</cena_brutto>
+        <vat>2.71</vat>
+        <vat_procent>5</vat_procent>
+      </ksiegarnie_nieinter>
+      <opis><![CDATA[<p>Wykorzystaj wszystkie możliwości Excela, aby tworzyć funkcjonalne i efektowne arkusze</p>
+
+<ul>
+<li>Jak analizować dane i zarządzać nimi?</li>
+<li>Jak optymalnie wykorzystywać tabele przestawne?</li>
+<li>Jak tworzyć spersonalizowane wykresy?</li>
+</ul>
+
+<p>Większość użytkowników Excela zna tylko drobną część dostępnych w nim możliwości. Istnieje jednak wiele metod pozwalających znacząco poszerzyć wydajność tego programu i tworzyć efektowne arkusze kalkulacyjne bez potrzeby czasochłonnego zdobywania wiedzy. Nowa wersja Excela umożliwia chociażby łatwiejsze korzystanie z mechanizmu tabel przestawnych, formatowania warunkowego i nazw zakresów, podglądu "na żywo", galerii predefiniowanych stylów oraz grafik SmartArt. Wszystko to sprawia, że każdy może dziś w swoich arkuszach używać bardziej skomplikowanych elementów wizualnych i graficznych.</p>
+
+
+<p>Obecnie, kiedy wszystko dzieje się coraz szybciej, czas staje się jedną z najistotniejszych i pożądanych wartości. Książka "100 sposobów na Excel 2007 PL. Tworzenie funkcjonalnych arkuszy" pozwala Ci właśnie zyskać na czasie - oferuje ponad sto gotowych metod tworzenia funkcjonalnych i efektownych arkuszy, szybkich i niezawodnych rozwiązań skomplikowanych problemów. Warto także wykorzystać te metody do przeanalizowania oraz zastosowania niektórych możliwości języka Visual Basic for Applications (VBA) - dzięki temu będziesz mógł zaadaptować wszystkie zawarte tu propozycje do własnych potrzeb.</p>
+
+
+<ul>
+<li>Skoroszyty i arkusze</li>
+<li>Wbudowane mechanizmy do analizy danych i zarządzania nimi</li>
+<li>Metody tworzenia nazw i zakresów komórek</li>
+<li>Tabele przestawne</li>
+<li>Formuły i funkcje</li>
+<li>Wykresy i makra</li>
+<li>Współpraca Excela z innymi aplikacjami pakietu Office</li>
+</ul>
+
+
+<p>Wszystko, co chciałbyś widzieć o Excelu, aby natychmiast z niego skorzystać.</p>
+
+<div align="center"><h4><b> Poznaj ponad setkę sposobów skutecznego radzenia sobie z Excelem!</b></h4></div>]]></opis>
+      <md5>b9516988c769ceaca8098ee2bba09de4</md5>
+    </ksiazka>
+    <ksiazka ident="100EBI">
+      <isbn>978-83-246-2723-3</isbn>
+      <ean>9788324627233</ean>
+      <ident>100EBI</ident>
+      <tytul language="polski">125 pytań na temat e-biznesu do Piotra Majewskiego</tytul>
+      <link>http://onepress.pl/ksiazki/125-pytan-na-temat-e-biznesu-do-piotra-majewskiego-piotr-majewski,100ebi.htm</link>
+      <autor>Piotr Majewski</autor>
+      <status>1</status>
+      <cena>39.00</cena>
+      <cenadetaliczna>39.00</cenadetaliczna>
+      <znizka>0.00</znizka>
+      <marka>1</marka>
+      <nazadanie>0</nazadanie>
+      <format>A5</format>
+      <typ>1</typ>
+      <oprawa>miękka</oprawa>
+      <wydawca/>
+      <liczbastron>224</liczbastron>
+      <datawydania>2010-09-20</datawydania>
+      <online>http://pdf.helion.pl/100ebi/100ebi.pdf</online>
+      <okladka>http://onepress.pl/okladki/326x466/100ebi.jpg</okladka>
+      <okladkatyl>http://onepress.pl/okladki-tyl/326x466/100ebi.jpg</okladkatyl>
+      <issueurl>http://onepress.pl/eksiazki/100ebi.htm</issueurl>
+      <bestseller>0</bestseller>
+      <nowosc>0</nowosc>
+      <promocja id="406">Opadają liście, opadają ceny!</promocja>
+      <powiazane>
+        <ident_powiazany>BACCS1</ident_powiazany>
+        <ident_powiazany>COTYZE</ident_powiazany>
+        <ident_powiazany>EKOWDZ</ident_powiazany>
+        <ident_powiazany>GOOGAD</ident_powiazany>
+        <ident_powiazany>GRYMEG</ident_powiazany>
+        <ident_powiazany>GRYWAL</ident_powiazany>
+        <ident_powiazany>MERULE</ident_powiazany>
+        <ident_powiazany>NIEKA2</ident_powiazany>
+        <ident_powiazany>NISBUD</ident_powiazany>
+        <ident_powiazany>SEKNOV</ident_powiazany>
+        <ident_powiazany>STARTP</ident_powiazany>
+        <ident_powiazany>TYMOBI</ident_powiazany>
+      </powiazane>
+      <serietematyczne>
+        <seriatematyczna id="7">Marketing</seriatematyczna>
+        <seriatematyczna id="2">E-biznes</seriatematyczna>
+      </serietematyczne>
+      <ksiegarnie_nieinter>
+        <waga>0.28</waga>
+        <status2>1</status2>
+        <cena_netto>37.14</cena_netto>
+        <cena_brutto>39</cena_brutto>
+        <vat>1.86</vat>
+        <vat_procent>5</vat_procent>
+      </ksiegarnie_nieinter>
+      <opis><![CDATA[<div align="center"><h4><b>Zadaj pytanie, otrzymasz odpowiedź</b></h4></div>
+
+
+<p>Dla tysięcy osób czujących w sobie żyłkę przedsiębiorczości internet jest prawdziwą ziemią obiecaną - trochę jeszcze dziką i nie do końca rozpoznaną, jednak oferującą niezmierzone wprost możliwości. E-biznes zaś to najbardziej smakowita wisienka na tym wirtualnym torcie. </p>
+
+<p>
+Nowe e-inicjatywy powstają codziennie; często wystarczy po prostu dobry pomysł, by bardzo niewielkim kosztem wejść na rynek i podbić go dzięki swoim usługom czy produktom. Ale skąd wiadomo, że pomysł jest dobry? Od czego zacząć? Jakie rozwiązania najlepiej zastosować? Jak ograniczyć koszty do minimum? Sam pewnie masz ochotę zadać setki pytań na ten temat. Potrzebujesz więc kompetentnego eksperta i praktyka w jednej osobie; człowieka, który pozwoli Ci rozwiać wszelkie wątpliwości w dziedzinie e-biznesu - Piotra Majewskiego. </p>
+
+<p>Przeczytaj, co mówi na temat e-biznesu, i poznaj odpowiedzi na 125 najważniejszych pytań, m.in.:
+<ul>
+<li>Jak wejść w internet i odnieść sukces bez wielkich inwestycji?</li>
+<li>Gdzie są pieniądze w sieci, a gdzie ich nie ma?</li>
+<li>Jak przeprowadzić efektywną analizę rynku i konkurencji?</li>
+<li>Jak zacząć, jeśli nie mamy doświadczenia informatycznego i funduszy, ale mamy czas?</li>
+<li>Jak stworzyć kampanię marketingową dla nowo powstałego portalu?</li>
+<li>Jak wypromować swój e-biznes skutecznymi i darmowymi metodami?</li>
+<li>W jaki sposób klienci najchętniej płacą w e-sklepach i jak ułatwić im transakcje?</li>
+<li>Gdzie szukać i jak znaleźć dobrego copywritera?</li>
+<li>Jak zwabić klientów do sklepu internetowego?</li>
+<li>Jak blog może wpływać na sprzedaż?</li>
+</ul>
+</p>]]></opis>
+      <md5>f5f2603fe095bd3ea269676395830b2a</md5>
+    </ksiazka>
+    <ksiazka ident="100KRO">
+      <isbn>978-83-246-1147-8</isbn>
+      <ean>9788324611478</ean>
+      <ident>100KRO</ident>
+      <tytul language="polski">100 kroków do szczęścia. Jak własnymi siłami zmienić życie</tytul>
+      <tytul language="oryginal">Die 100 Schritte zum Glücklichsein</tytul>
+      <link>http://onepress.pl/ksiazki/100-krokow-do-szczescia-jak-wlasnymi-silami-zmienic-zycie-josef-kirschner,100kro.htm</link>
+      <autor>Josef Kirschner</autor>
+      <tlumacz>Ewa Klej</tlumacz>
+      <status>1</status>
+      <cena>27.00</cena>
+      <cenadetaliczna>27.00</cenadetaliczna>
+      <znizka>0.00</znizka>
+      <marka>4</marka>
+      <nazadanie>0</nazadanie>
+      <format>A5</format>
+      <typ>1</typ>
+      <oprawa>miękka</oprawa>
+      <wydawca/>
+      <liczbastron>224</liczbastron>
+      <datawydania>2008-08-06</datawydania>
+      <okladka>http://onepress.pl/okladki/326x466/100kro.jpg</okladka>
+      <bestseller>0</bestseller>
+      <nowosc>0</nowosc>
+      <promocja id="406">Opadają liście, opadają ceny!</promocja>
+      <powiazane>
+        <ident_powiazany>BIESPA</ident_powiazany>
+        <ident_powiazany>BIGOR1</ident_powiazany>
+        <ident_powiazany>BRPAR1</ident_powiazany>
+        <ident_powiazany>BZCSB1</ident_powiazany>
+        <ident_powiazany>COTYZE</ident_powiazany>
+        <ident_powiazany>FILOKV</ident_powiazany>
+        <ident_powiazany>GRYMEG</ident_powiazany>
+        <ident_powiazany>POCME6</ident_powiazany>
+        <ident_powiazany>SAMODV</ident_powiazany>
+        <ident_powiazany>SUNGET</ident_powiazany>
+        <ident_powiazany>TWOSUP</ident_powiazany>
+        <ident_powiazany>ZAWYWP</ident_powiazany>
+      </powiazane>
+      <seriewydawnicze>
+        <seriawydawnicza id="9">Sensus</seriawydawnicza>
+      </seriewydawnicze>
+      <serietematyczne>
+        <seriatematyczna id="14">Kompetencje osobiste</seriatematyczna>
+      </serietematyczne>
+      <ksiegarnie_nieinter>
+        <waga>0.28</waga>
+        <status2>2</status2>
+        <cena_netto>25.71</cena_netto>
+        <cena_brutto>27</cena_brutto>
+        <vat>1.29</vat>
+        <vat_procent>5</vat_procent>
+      </ksiegarnie_nieinter>
+      <opis><![CDATA[<div align="center"><h4><b> Jeśli fortuna kołem się toczy, przeczytaj instrukcję obsługi koła! </b></h4></div> 
+<ul>
+<li> Zrób to sam -- szczęście zależy tylko od Ciebie </li>
+<li> Nigdy się nie poddawaj -- walczysz w słusznej sprawie </li>
+<li> Zachowaj wierność sobie -- priorytety to podstawa </li>
+</ul>
+<p> Jesteś wolnym, niezależnym i świadomym swoich potrzeb człowiekiem. Wiesz doskonale, co jest dla Ciebie najlepsze. Dlaczego więc inni ludzie usiłują uszczęśliwić Cię za wszelką cenę? I czemu nadal pozwalasz im na to, jeśli burzą Twój spokój ducha? Najwyższy czas uświadomić sobie, że szczęście nie jest jedynie kwestią pozytywnego zbiegu okoliczności. Przecież wierzysz we własne siły i znasz swoje ograniczenia. Nic nie stoi na przeszkodzie, by przejąć kontrolę nad własnym życiem i zacząć realizować osobistą receptę na szczęście. </p>
+
+<p> Niespieszny spacer ku spełnieniu składa się ze stu kroków. Pierwszym krokiem jest uświadomienie sobie, co Cię uszczęśliwia. Myślisz, że to banalne pytanie? A czy udało Ci się kiedyś poświęcić choć kilka minut, by sobie na nie odpowiedzieć? Zrób to teraz, bez względu na to, czy siedzisz przed ekranem komputera, czy też stoisz w księgarni z książką w ręku. Już wkrótce przestaniesz oglądać siebie oczami innych, uwolnisz się od uprzedzeń i przestaniesz obawiać się porażki. Zaczniesz wygrywać małe bitwy i uświadomisz sobie, że prowadzą do wielkiego zwycięstwa. A przecież walka nie idzie o byle co, bój toczy się o Twoje szczęście! </p>
+<ul>
+<li> Naucz się kochać siebie i oszczędzaj sobie niepotrzebnych rozczarowań. </li>
+<li> Poświęcaj sobie więcej czasu -- kto zasługuje na to bardziej niż Ty? </li>
+<li> Zrezygnuj z tego, co Cię obciąża i sprawia, że zapadasz na zdrowiu. </li>
+<li> Zaprzyjaźnij się ze swoim strachem, zamiast wciąż od niego uciekać. </li>
+<li> Uświadom sobie, że pochwała i krytyka są często jedynie próbą manipulacji. </li>
+<li> Pamiętaj, że największe kłamstwo stanie się prawdą, jeżeli uwierzysz w nie bez sprawdzenia. </li>
+</ul>
+<div align="center"><h4><b> Trenuj szczęście i zostań prawdziwym czempionem <br />
+...na ringu swojego życia. </b></h4></div>]]></opis>
+      <md5>22060c982e6bd39a88d272e723282979</md5>
+    </ksiazka>
+    <ksiazka ident="100MIS">
+      <isbn>978-83-246-8093-1</isbn>
+      <ean>9788324680931</ean>
+      <ident>100MIS</ident>
+      <tytul language="polski">100 sekretów Mistrza Sprzedaży</tytul>
+      <link>http://onepress.pl/ksiazki/100-sekretow-mistrza-sprzedazy-arkadiusz-bednarski,100mis.htm</link>
+      <autor>Arkadiusz Bednarski</autor>
+      <status>7</status>
+      <przedsprzedazDO>2013-10-05</przedsprzedazDO>
+      <cena>21.16</cena>
+      <cenadetaliczna>24.90</cenadetaliczna>
+      <znizka>3.74</znizka>
+      <marka>2</marka>
+      <nazadanie>0</nazadanie>
+      <format/>
+      <typ>1</typ>
+      <oprawa>miękka</oprawa>
+      <wydawca/>
+      <liczbastron>128</liczbastron>
+      <datawydania/>
+      <okladka>http://onepress.pl/okladki/326x466/100mis.jpg</okladka>
+      <okladkatyl>http://onepress.pl/okladki-tyl/326x466/100mis.jpg</okladkatyl>
+      <bestseller>0</bestseller>
+      <nowosc>0</nowosc>
+      <seriewydawnicze>
+        <seriawydawnicza id="3">Exclusive</seriawydawnicza>
+      </seriewydawnicze>
+      <serietematyczne>
+        <seriatematyczna id="15">Sprzedaż</seriatematyczna>
+        <seriatematyczna id="12">Twoja kariera</seriatematyczna>
+        <seriatematyczna id="14">Kompetencje osobiste</seriatematyczna>
+      </serietematyczne>
+      <ksiegarnie_nieinter>
+        <waga>0.53</waga>
+        <status2>6</status2>
+        <cena_netto>23.71</cena_netto>
+        <cena_brutto>24.9</cena_brutto>
+        <vat>1.19</vat>
+        <vat_procent>5</vat_procent>
+      </ksiegarnie_nieinter>
+      <opis><![CDATA[<p><b>Nieważne, ile wiesz. Ważne, co z tego stosujesz w praktyce.</b></p>
+
+<p>Od ilu lat pracujesz jako sprzedawca? A może dopiero zaczynasz swoją przygodę ze sprzedażą? Na pewno masz już na swoim koncie jakieś sukcesy, ale i porażki. Wiesz, że pomimo kryzysów, wymagających klientów i dużej konkurencji sprzedaż nie tylko bywa źródłem dochodów, lecz także może Ci dostarczyć wiele osobistej satysfakcji. Twoje zasoby wiedzy i umiejętności wciąż rosną, lecz czasami brakuje Ci tego czegoś - właściwej, konkretnej porady, przychodzącej w odpowiednim momencie.</p>
+<p>100 zasad, którymi dzieli się z Tobą Mistrz Sprzedaży, to niezbędnik wybitnego handlowca. Czasem zasady wydadzą Ci się oczywiste, czasem odkrywcze, a przy niektórych zatrzymasz się i powiesz: "To jest to!". Rady zamieszczone w tej książce są krótkie i treściwe. Stworzone specjalnie dla Ciebie - człowieka zajętego, zawsze w biegu, który nie ma czasu na zagłębianie się w filozoficzne dywagacje. Przeczytaj je, a spojrzysz na sprzedawanie z innej strony, będziesz w nowy sposób myśleć o swojej pracy, klientach, ich celach i oczekiwaniach. </p>
+
+<p><b>Pamiętaj! Po przeczytaniu tej książki nie pożyczaj jej nikomu na dłużej. Na pewno będziesz wracać do niej wielokrotnie.</b></p>
+<hr>
+<p><b>Arkadiusz Bednarski</b> - jeden z najbardziej znanych polskich trenerów, coachów i mentorów. Specjalizuje się w szkoleniach z zakresu rozwoju osobistego i sprzedaży. Prowadzi szkolenia w kraju i za granicą. Ze sprzedażą związany jest od 1994 roku. W trakcie swojej kariery zawodowej pracował jako sprzedawca, menedżer i prezes zarządu. Jest autorem dziesięciu książek, w tym bestsellerów Mistrz sprzedaży (Onepress 2009, 2012) i Arcymistrz sprzedaży (Onepress 2009, 2012). </p>
+<br>
+<hr>]]></opis>
+      <md5>0f23c18ad7983b075931af944351102b</md5>
+    </ksiazka>
+    <ksiazka ident="101PSZ">
+      <isbn>978-83-246-7092-5</isbn>
+      <ean>9788324670925</ean>
+      <ident>101PSZ</ident>
+      <tytul language="polski">Sprzedaż, zarządzanie i efektywność osobista w 101 praktycznych przykładach</tytul>
+      <link>http://onepress.pl/ksiazki/sprzedaz-zarzadzanie-i-efektywnosc-osobista-w-101-praktycznych-przykladach-andrzej-niemczyk-bartlomiej-sapala,101psz.htm</link>
+      <autor>Andrzej Niemczyk, Bartłomiej Sapała</autor>
+      <status>7</status>
+      <przedsprzedazDO>2013-09-27</przedsprzedazDO>
+      <cena>50.22</cena>
+      <cenadetaliczna>54.00</cenadetaliczna>
+      <znizka>3.78</znizka>
+      <marka>2</marka>
+      <nazadanie>0</nazadanie>
+      <format>168x237</format>
+      <typ>1</typ>
+      <oprawa>miękka</oprawa>
+      <wydawca/>
+      <liczbastron>344</liczbastron>
+      <datawydania/>
+      <okladka>http://onepress.pl/okladki/326x466/101psz.jpg</okladka>
+      <okladkatyl>http://onepress.pl/okladki-tyl/326x466/101psz.jpg</okladkatyl>
+      <bestseller>0</bestseller>
+      <nowosc>0</nowosc>
+      <serietematyczne>
+        <seriatematyczna id="15">Sprzedaż</seriatematyczna>
+        <seriatematyczna id="6">Komunikacja i negocjacje</seriatematyczna>
+        <seriatematyczna id="14">Kompetencje osobiste</seriatematyczna>
+      </serietematyczne>
+      <ksiegarnie_nieinter>
+        <waga>0.53</waga>
+        <status2>6</status2>
+        <cena_netto>51.43</cena_netto>
+        <cena_brutto>54</cena_brutto>
+        <vat>2.57</vat>
+        <vat_procent>5</vat_procent>
+      </ksiegarnie_nieinter>
+      <opis><![CDATA[<h4><b>Drogi Sprzedawco, Menedżerze, Człowieku, który chcesz się rozwijać zawodowo!</b></h4>
+
+<p>Trzymasz w ręku książkę duetu świetnych trenerów: Andrzeja Niemczyka i Bartłomieja Sapały. Uczestnicy ich szkoleń nie zawsze wiedzą, że zanim ci autorzy zostali szkoleniowcami, zajmowali się tym, czym ich uczniowie - byli handlowcami i menedżerami. Przeszli długą drogę od szeregowych sprzedawców do dyrektorów zarządzających dużymi grupami pracowników i mają świadomość, jak przekazywana przez nich wiedza działa w praktyce. Zdają sobie także sprawę z tego, że nic tak nie działa na wyobraźnię szkolonego, jak krótki i praktyczny życiowy przykład, okraszony odrobiną teorii. Dlatego zdecydowali się wspólnie napisać tę książkę.</p>
+
+<p><b>Zanim zaczniesz czytać, musisz wiedzieć, że:</b></p>
+<ul>
+<li>wszystkie przykłady są prawdziwe, a część z nich autorzy wzbogacili odrobiną humoru;</li>
+<li>każdy przykład stanowi odrębną całość, więc książkę można czytać wyrywkowo albo standardowo;</li>
+<li>w wielu przykładach znajdują się odnośniki do innych przypadków, w których dokładniej tłumaczone są kwestie poruszane w bieżącym fragmencie.</li></ul>
+
+<p>Jeszcze jedno: książka została podzielona na część dla handlowca i menedżera oraz część ogólną o efektywności osobistej. Możesz przeczytać tylko tę część, którą uznasz za najbardziej przydatną. Namawiamy jednak do przestudiowania całości, ponieważ z praktyki wiemy, że wiedza z jednej dziedziny może przydać Ci się do czegoś zupełnie innego. Jak to w życiu bywa.</p>
+
+<br />
+<hr /> 
+
+<p><b>Andrzej Niemczyk</b> - doświadczony trener, menedżer, handlowiec i wykładowca. Od wielu lat szkoli trenerów, kadrę menedżerską oraz przedstawicieli handlowych. Jest autorem kilku książek o zarządzaniu, handlowaniu 
+i prowadzeniu szkoleń. Wolny czas spędza w górach, na jachcie i w podróży, najchętniej z żoną i córkami.</p>
+
+<p><b>Bartłomiej Sapała</b> - menedżer z kilkunastoletnim doświadczeniem w obszarze budowania polskiej filii międzynarodowej sieci marketów sportowych. Jest konsultantem, doradcą i trenerem sprzedaży, zarządzania oraz optymalizowania procesów efektywności osobistej. Zamiłowanie do sportu dzieli z żoną, synem i córką.</p>
+
+<br /><hr />
+<h4><b>Patron medialny:</b></h4>
+<div align="center" style="background-color:white;">
+
+<a href="http://personel.infor.pl/" target="blank"><img height="40" width="auto" src="http://helion.pl/img/rozne/patroni/101PSZ/logo.jpg" />
+</a>
+
+</div>]]></opis>
+      <md5>9539e531040dd759267227177f4a8257</md5>
+    </ksiazka>
+    <ksiazka ident="101RAN">
+      <isbn>978-83-246-4346-2</isbn>
+      <ean>9788324643462</ean>
+      <ident>101RAN</ident>
+      <tytul language="polski">101 pomysłów na randkę</tytul>
+      <link>http://onepress.pl/ksiazki/101-pomyslow-na-randke-krzysztof-krol,101ran.htm</link>
+      <autor>Krzysztof Król</autor>
+      <status>1</status>
+      <cena>39.90</cena>
+      <cenadetaliczna>39.90</cenadetaliczna>
+      <znizka>0.00</znizka>
+      <marka>4</marka>
+      <nazadanie>0</nazadanie>
+      <format>140x208</format>
+      <typ>1</typ>
+      <oprawa>twarda</oprawa>
+      <wydawca/>
+      <liczbastron>272</liczbastron>
+      <datawydania>2012-03-01</datawydania>
+      <online>http://pdf.helion.pl/101ran/101ran.pdf</online>
+      <okladka>http://onepress.pl/okladki/326x466/101ran.jpg</okladka>
+      <issueurl>http://onepress.pl/eksiazki/101ran.htm</issueurl>
+      <bestseller>0</bestseller>
+      <nowosc>0</nowosc>
+      <promocja id="406">Opadają liście, opadają ceny!</promocja>
+      <powiazane>
+        <ident_powiazany>BACCS1</ident_powiazany>
+        <ident_powiazany>EGORCY</ident_powiazany>
+        <ident_powiazany>GETTIN</ident_powiazany>
+        <ident_powiazany>SESKP2</ident_powiazany>
+      </powiazane>
+      <ksiegarnie_nieinter>
+        <waga>0.42</waga>
+        <status2>1</status2>
+        <cena_netto>38</cena_netto>
+        <cena_brutto>39.9</cena_brutto>
+        <vat>1.9</vat>
+        <vat_procent>5</vat_procent>
+      </ksiegarnie_nieinter>
+      <opis><![CDATA[<div align="center"><h4><b>Męczą Cię kolacje, nudne wypady do kina?</b></h4></div>
+
+<p><b>Randka</b> to niejednokrotnie najbardziej stresujący moment w budowaniu związku. Z pewnością zachodzisz w głowę: co zrobić, gdzie zabrać drugą osobę, jak się przygotować?</p> 
+
+<p>Jeśli chcesz poznać sekrety kreatywnych randek najszczęśliwszych ludzi na świecie, dobrze trafiłeś. Jeśli uświadomisz sobie, na jak wiele sposobów można spędzić czas we dwoje, zyskasz szansę na najwspanialszą randkę w swoim życiu.</p>
+
+<p>Z tą książką zaskoczysz ukochaną osobę i sprawisz jej największą na świecie przyjemność, a Wasz związek znajdzie się na zupełnie nowym poziomie.
+Wytęż wyobraźnię i stwórz atmosferę miłosnego uniesienia w każdym miejscu, którego wcześniej nie podejrzewałeś o randkowy klimat. Ruszaj!</p> 
+
+<br /><hr />
+<p><b>Krzysztof Król</b> - wybitny trener, prowadzący szkolenia z zakresu rozwoju osobistego i relacji damsko-męskich. Twórca szkoły Perfect Dating (www.perfectdating.pl), oraz Szkoły Wygranych (www.szkolawygranych.pl), autor bestsellerowej Księga związków, podrywu i seksu dla mężczyzn i Kodeksu wygranych. Pomógł już tysiącom ludzi udoskonalić swoje umiejętności interpersonalne i seksualne (nazywany jest nawet polskim Hitchem). Uczy, jak osiągnąć w życiu sukces i spełnić swoje marzenia.</p>]]></opis>
+      <md5>6ad76d94dd1218d13e406f46144e124d</md5>
+    </ksiazka>
+    <ksiazka ident="10FUNF">
+      <isbn>978-83-246-3655-6</isbn>
+      <ean>9788324636556</ean>
+      <ident>10FUNF</ident>
+      <tytul language="polski">10 fundamentalnych zasad gry na rynku Forex. Strategie osiągania zysku</tytul>
+      <tytul language="oryginal">The 10 Essentials of Forex Trading: The Rules for Turning Trading Patterns Into Profit</tytul>
+      <link>http://onepress.pl/ksiazki/10-fundamentalnych-zasad-gry-na-rynku-forex-strategie-osiagania-zysku-jared-martinez,10funf.htm</link>
+      <autor>Jared Martinez</autor>
+      <tlumacz>Leszek Sielicki</tlumacz>
+      <status>1</status>
+      <cena>59.00</cena>
+      <cenadetaliczna>59.00</cenadetaliczna>
+      <znizka>0.00</znizka>
+      <marka>2</marka>
+      <nazadanie>0</nazadanie>
+      <format>158x235</format>
+      <typ>1</typ>
+      <oprawa>twarda</oprawa>
+      <wydawca/>
+      <liczbastron>240</liczbastron>
+      <datawydania>2012-06-25</datawydania>
+      <online>http://pdf.helion.pl/10funf/10funf.pdf</online>
+      <okladka>http://onepress.pl/okladki/326x466/10funf.jpg</okladka>
+      <okladkatyl>http://onepress.pl/okladki-tyl/326x466/10funf.jpg</okladkatyl>
+      <issueurl>http://onepress.pl/eksiazki/10funf.htm</issueurl>
+      <bestseller>0</bestseller>
+      <nowosc>0</nowosc>
+      <promocja id="406">Opadają liście, opadają ceny!</promocja>
+      <powiazane>
+        <ident_powiazany>ANTEBY</ident_powiazany>
+        <ident_powiazany>BIBSPR</ident_powiazany>
+        <ident_powiazany>GIELWK</ident_powiazany>
+        <ident_powiazany>MARKAW</ident_powiazany>
+        <ident_powiazany>NIEKA2</ident_powiazany>
+        <ident_powiazany>PLEMIO</ident_powiazany>
+        <ident_powiazany>POCME6</ident_powiazany>
+        <ident_powiazany>PREX27</ident_powiazany>
+        <ident_powiazany>PSYJOG</ident_powiazany>
+        <ident_powiazany>PSYSZ2</ident_powiazany>
+        <ident_powiazany>TWMOBI</ident_powiazany>
+        <ident_powiazany>ZYMABI</ident_powiazany>
+      </powiazane>
+      <seriewydawnicze>
+        <seriawydawnicza id="3">Exclusive</seriawydawnicza>
+      </seriewydawnicze>
+      <serietematyczne>
+        <seriatematyczna id="5">Giełda i inwestycje</seriatematyczna>
+      </serietematyczne>
+      <ksiegarnie_nieinter>
+        <waga>0.54</waga>
+        <status2>1</status2>
+        <cena_netto>56.19</cena_netto>
+        <cena_brutto>59</cena_brutto>
+        <vat>2.81</vat>
+        <vat_procent>5</vat_procent>
+      </ksiegarnie_nieinter>
+      <opis><![CDATA[<div align="center"><h4><b>Witaj w krainie Foreksa! </b></h4></div>
+
+<p>Międzynarodowy rynek walutowy oferuje niezwykłe okazje finansowe wszystkim, którzy są gotowi na przeżycie zyskownej przygody. Dzięki oszałamiająco szybkiemu rozwojowi technologii oraz powszechnemu dostępowi do internetu również i Ty możesz samodzielnie handlować walutami - 24 godziny na dobę przez pięć dni w tygodniu. Kluczem do sukcesu jest odpowiednie przygotowanie. Odkrycie oraz dokładne zbadanie wielu aspektów funkcjonowania Foreksa, opisanych w tej książce, zajęło autorowi całe lata. Ty otrzymujesz tę wiedzę w pigułce, wraz ze skutecznymi strategiami inwestycyjnymi. </p>
+
+
+<blockquote><i>Każdy inwestor poszukuje świętego Graala, tej maleńkiej, prawdziwej i dokładnej informacji, która działa zawsze! W mojej własnej podróży w świat inwestowania odkryłem, że święty Graal to wiedza, kiedy i dlaczego należy wejść na rynek oraz kiedy i dlaczego należy się wycofać. Jeśli potrafisz nauczyć się kiedy i dlaczego, będziesz w stanie sprawić, aby rynek pracował dla Ciebie i umożliwiał Ci maksymalne wykorzystanie potencjalnego zysku z każdego jego ruchu. Gdy Ci się to uda, odkryjesz własnego świętego Graala inwestowania! Wierzę, że ta książka może stać się Twoim świętym Graalem, jeśli jej to umożliwisz!
+<br><div align="right"><b>(ze wstępu autora)</b></div>
+
+</i></blockquote>]]></opis>
+      <md5>ecae85fe6dd99ab02468c8a7ef6ae83c</md5>
+    </ksiazka>
+    <ksiazka ident="10ZANE">
+      <isbn>978-83-246-0850-8</isbn>
+      <ean>9788324608508</ean>
+      <ident>10ZANE</ident>
+      <tytul language="polski">10 założeń networkingu. Jak w pełni wykorzystywać swoje znajomości</tytul>
+      <tytul language="oryginal">Ten Commitments of Networking: Creative Ways to Maximize Your Personal Connections</tytul>
+      <link>http://onepress.pl/ksiazki/10-zalozen-networkingu-jak-w-pelni-wykorzystywac-swoje-znajomosci-larry-james,10zane.htm</link>
+      <autor>Larry James</autor>
+      <tlumacz>Bartosz Sałbut</tlumacz>
+      <status>1</status>
+      <cena>39.00</cena>
+      <cenadetaliczna>39.00</cenadetaliczna>
+      <znizka>0.00</znizka>
+      <marka>2</marka>
+      <nazadanie>0</nazadanie>
+      <format>A5</format>
+      <typ>1</typ>
+      <oprawa>twarda</oprawa>
+      <wydawca/>
+      <liczbastron>224</liczbastron>
+      <datawydania>2007-06-06</datawydania>
+      <okladka>http://onepress.pl/okladki/326x466/10zane.jpg</okladka>
+      <bestseller>0</bestseller>
+      <nowosc>0</nowosc>
+      <promocja id="406">Opadają liście, opadają ceny!</promocja>
+      <powiazane>
+        <ident_powiazany>BOGSIE</ident_powiazany>
+        <ident_powiazany>BRPAR1</ident_powiazany>
+        <ident_powiazany>COTYZE</ident_powiazany>
+        <ident_powiazany>EFZAP4</ident_powiazany>
+        <ident_powiazany>GROMKO</ident_powiazany>
+        <ident_powiazany>MARKAW</ident_powiazany>
+        <ident_powiazany>POCME6</ident_powiazany>
+        <ident_powiazany>PSYSZ2</ident_powiazany>
+        <ident_powiazany>ROZKW2</ident_powiazany>
+        <ident_powiazany>TWMOBI</ident_powiazany>
+        <ident_powiazany>UWJEZY</ident_powiazany>
+        <ident_powiazany>ZAWYWP</ident_powiazany>
+      </powiazane>
+      <seriewydawnicze>
+        <seriawydawnicza id="3">Exclusive</seriawydawnicza>
+      </seriewydawnicze>
+      <serietematyczne>
+        <seriatematyczna id="6">Komunikacja i negocjacje</seriatematyczna>
+        <seriatematyczna id="12">Twoja kariera</seriatematyczna>
+      </serietematyczne>
+      <ksiegarnie_nieinter>
+        <waga>0.40</waga>
+        <status2>1</status2>
+        <cena_netto>37.14</cena_netto>
+        <cena_brutto>39</cena_brutto>
+        <vat>1.86</vat>
+        <vat_procent>5</vat_procent>
+      </ksiegarnie_nieinter>
+      <opis><![CDATA[<div align="center"><h4><b> Bądźmy w kontakcie! </b></h4></div>
+<ul>
+<li> Ciesz się zaufaniem ludzi </li>
+<li> Osiągaj korzyści, pomagając innym </li>
+<li> Poznaj sprawdzone techniki networkingu </li>
+</ul>
+<p> Wielu ludzi nie zdaje sobie sprawy z tego, ile korzyści może dać im przyjaźń z podstawówki lub znajomość z kolegą z pracy, sąsiadem czy sklepikarzem. Networking, czyli proces kształtowania bliskich i funkcjonalnych kontaktów międzyludzkich, to klucz do sukcesu, zarówno w życiu osobistym, jak i zawodowym. </p>
+
+<p> W tej książce znajdziesz omówienie dziesięciu zasad dotyczących zacieśniania związków z ludźmi i dowiesz się, co należy zrobić, żeby zwiększyć liczbę nowych znajomych. </p>
+<ul>
+<li> Dawaj z siebie jak najwięcej. </li>
+<li> Naucz się prosić innych o pomoc. </li>
+<li> Nie wstydź się słuchać cudzych rad. </li>
+<li> Bądź odpowiedzialny za własne czyny. </li>
+<li> Dbaj o utrzymywanie kontaktów. </li>
+</ul>
+<blockquote>
+<hr />
+"Jeżeli chcesz w pełni przeżyć swoje życie i stale nad sobą pracować, przeczytaj i zacznij stosować wskazówki zawarte w Dziesięciu założeniach networkingu"
+<div align="right"><i> Mark Victor Hansen <br /> współautor książek z serii "Balsam dla duszy" </i></div>
+</blockquote>]]></opis>
+      <md5>cf776d6f85b02326eadb0706797e85c9</md5>
+    </ksiazka>
+  </lista>
+</details>

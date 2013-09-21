@@ -1,0 +1,780 @@
+<?xml version="1.0" encoding="iso-8859-2"?>
+<!--
+	    Dane z dnia: sob, 21 wrz 2013, 01:07:24 CEST
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ Ze względu na wielkość pliku XML, proszę o ściąganie wersji produkty-sensus.xml.zip
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+            Jeśli będziesz sprzedawał książki w PP, to użyj pola <status>:
+
+		0 - niedostepna
+		1 - dostepna
+		2 - w przygotowaniu
+		5 - druk na żądanie
+		7 - przedsprzedaz
+	    oraz <cena>, <cenadetaliczna> (ceny takie jak na stronach GW Helion : moga zawierac znizki itp.)
+
+	    dla ksiegarni internetowych (wspolpraca z dzialem handlowym, ehelion) użyj pola <status2>:
+
+    		1 - dostępna
+		2 - dostępna w małej ilości
+		3 - chwilowo niedostępna
+		4 - niedostępna
+		5 - POD
+		6 - w przygotowaniu
+		7 - w przedsprzedaży
+            oraz pola <ksiegarnie_nieinter> gdzie znajduja sie wszystkie dane odnosnie ceny netto, brutto, stawka VAT
+
+		<typ>:
+			1 - ksiazka
+			2 - ebook
+			3 - audiobook mp3
+			4 - audiocd mp3
+
+		<marka>:
+			1 - helion
+			2 - onepress
+			3 - editio
+			4 - sensus
+			5 - septem
+			6 - bezdroza
+			8 - podrecznik
+			11 - bezdroża obce
+
+Zmiany:
+09.02.2011 @MJJ dolożenie elementu <typ>
+15.06.2011 @MJJ dodanie pliku lista2-statusy.xml z samymi statusami, cenami
+21.12.2011 @TKr seolinki, zagregowane formaty ebooków
+23.01.2012 @TKr info o promocjach, lista promocji serwis.pl/xml/lista-promocje.cgi
+15.06.2012 @TKr dodane info o audiobookach
+29.08.2012 @TKr dodane md5 jako wßkaźnik zmiany informacji w książce
+
+		Kontakt: Michal Jęczalik <michal.jeczalik@helion.pl>
+-->
+<details>
+  <lista baza="sensus">
+    <ksiazka ident="100KRO">
+      <isbn>978-83-246-1147-8</isbn>
+      <ean>9788324611478</ean>
+      <ident>100KRO</ident>
+      <tytul language="polski">100 kroków do szczęścia. Jak własnymi siłami zmienić życie</tytul>
+      <tytul language="oryginal">Die 100 Schritte zum Glücklichsein</tytul>
+      <link>http://sensus.pl/ksiazki/100-krokow-do-szczescia-jak-wlasnymi-silami-zmienic-zycie-josef-kirschner,100kro.htm</link>
+      <autor>Josef Kirschner</autor>
+      <tlumacz>Ewa Klej</tlumacz>
+      <status>1</status>
+      <cena>27.00</cena>
+      <cenadetaliczna>27.00</cenadetaliczna>
+      <znizka>0.00</znizka>
+      <marka>4</marka>
+      <nazadanie>0</nazadanie>
+      <format>A5</format>
+      <typ>1</typ>
+      <oprawa>miękka</oprawa>
+      <wydawca/>
+      <liczbastron>224</liczbastron>
+      <datawydania>2008-08-06</datawydania>
+      <okladka>http://sensus.pl/okladki/326x466/100kro.jpg</okladka>
+      <bestseller>0</bestseller>
+      <nowosc>0</nowosc>
+      <promocja id="407">Opadają liście, opadają ceny!</promocja>
+      <powiazane>
+        <ident_powiazany>ART3MI</ident_powiazany>
+        <ident_powiazany>BASOBA</ident_powiazany>
+        <ident_powiazany>BATAT1</ident_powiazany>
+        <ident_powiazany>EGORCY</ident_powiazany>
+        <ident_powiazany>FILOKV</ident_powiazany>
+        <ident_powiazany>GETTIN</ident_powiazany>
+        <ident_powiazany>MY5LAT</ident_powiazany>
+        <ident_powiazany>MY5LOG</ident_powiazany>
+        <ident_powiazany>SAMODV</ident_powiazany>
+        <ident_powiazany>SUNGET</ident_powiazany>
+        <ident_powiazany>UWJEZY</ident_powiazany>
+        <ident_powiazany>ZADLAC</ident_powiazany>
+      </powiazane>
+      <seriewydawnicze>
+        <seriawydawnicza id="1">charyzma</seriawydawnicza>
+      </seriewydawnicze>
+      <serietematyczne>
+        <seriatematyczna id="26">Życiowe filozofie</seriatematyczna>
+      </serietematyczne>
+      <ksiegarnie_nieinter>
+        <waga>0.28</waga>
+        <status2>2</status2>
+        <cena_netto>25.71</cena_netto>
+        <cena_brutto>27</cena_brutto>
+        <vat>1.29</vat>
+        <vat_procent>5</vat_procent>
+      </ksiegarnie_nieinter>
+      <opis><![CDATA[<div align="center"><h4><b> Jeśli fortuna kołem się toczy, przeczytaj instrukcję obsługi koła! </b></h4></div> 
+<ul>
+<li> Zrób to sam -- szczęście zależy tylko od Ciebie </li>
+<li> Nigdy się nie poddawaj -- walczysz w słusznej sprawie </li>
+<li> Zachowaj wierność sobie -- priorytety to podstawa </li>
+</ul>
+<p> Jesteś wolnym, niezależnym i świadomym swoich potrzeb człowiekiem. Wiesz doskonale, co jest dla Ciebie najlepsze. Dlaczego więc inni ludzie usiłują uszczęśliwić Cię za wszelką cenę? I czemu nadal pozwalasz im na to, jeśli burzą Twój spokój ducha? Najwyższy czas uświadomić sobie, że szczęście nie jest jedynie kwestią pozytywnego zbiegu okoliczności. Przecież wierzysz we własne siły i znasz swoje ograniczenia. Nic nie stoi na przeszkodzie, by przejąć kontrolę nad własnym życiem i zacząć realizować osobistą receptę na szczęście. </p>
+
+<p> Niespieszny spacer ku spełnieniu składa się ze stu kroków. Pierwszym krokiem jest uświadomienie sobie, co Cię uszczęśliwia. Myślisz, że to banalne pytanie? A czy udało Ci się kiedyś poświęcić choć kilka minut, by sobie na nie odpowiedzieć? Zrób to teraz, bez względu na to, czy siedzisz przed ekranem komputera, czy też stoisz w księgarni z książką w ręku. Już wkrótce przestaniesz oglądać siebie oczami innych, uwolnisz się od uprzedzeń i przestaniesz obawiać się porażki. Zaczniesz wygrywać małe bitwy i uświadomisz sobie, że prowadzą do wielkiego zwycięstwa. A przecież walka nie idzie o byle co, bój toczy się o Twoje szczęście! </p>
+<ul>
+<li> Naucz się kochać siebie i oszczędzaj sobie niepotrzebnych rozczarowań. </li>
+<li> Poświęcaj sobie więcej czasu -- kto zasługuje na to bardziej niż Ty? </li>
+<li> Zrezygnuj z tego, co Cię obciąża i sprawia, że zapadasz na zdrowiu. </li>
+<li> Zaprzyjaźnij się ze swoim strachem, zamiast wciąż od niego uciekać. </li>
+<li> Uświadom sobie, że pochwała i krytyka są często jedynie próbą manipulacji. </li>
+<li> Pamiętaj, że największe kłamstwo stanie się prawdą, jeżeli uwierzysz w nie bez sprawdzenia. </li>
+</ul>
+<div align="center"><h4><b> Trenuj szczęście i zostań prawdziwym czempionem <br />
+...na ringu swojego życia. </b></h4></div>]]></opis>
+      <md5>a3e79e816fa01b93682aaa0210f2821e</md5>
+    </ksiazka>
+    <ksiazka ident="101RAN">
+      <isbn>978-83-246-4346-2</isbn>
+      <ean>9788324643462</ean>
+      <ident>101RAN</ident>
+      <tytul language="polski">101 pomysłów na randkę</tytul>
+      <link>http://sensus.pl/ksiazki/101-pomyslow-na-randke-krzysztof-krol,101ran.htm</link>
+      <autor>Krzysztof Król</autor>
+      <status>1</status>
+      <cena>39.90</cena>
+      <cenadetaliczna>39.90</cenadetaliczna>
+      <znizka>0.00</znizka>
+      <marka>4</marka>
+      <nazadanie>0</nazadanie>
+      <format>140x208</format>
+      <typ>1</typ>
+      <oprawa>twarda</oprawa>
+      <wydawca/>
+      <liczbastron>272</liczbastron>
+      <datawydania>2012-03-01</datawydania>
+      <online>http://pdf.helion.pl/101ran/101ran.pdf</online>
+      <okladka>http://sensus.pl/okladki/326x466/101ran.jpg</okladka>
+      <issueurl>http://sensus.pl/eksiazki/101ran.htm</issueurl>
+      <bestseller>0</bestseller>
+      <nowosc>0</nowosc>
+      <promocja id="407">Opadają liście, opadają ceny!</promocja>
+      <powiazane>
+        <ident_powiazany>BIBZW2</ident_powiazany>
+        <ident_powiazany>BIBZWM</ident_powiazany>
+        <ident_powiazany>BRPAR1</ident_powiazany>
+        <ident_powiazany>FILOKV</ident_powiazany>
+        <ident_powiazany>MEZCZV</ident_powiazany>
+        <ident_powiazany>MY5LAT</ident_powiazany>
+        <ident_powiazany>NAWYKW</ident_powiazany>
+        <ident_powiazany>NIETLU</ident_powiazany>
+        <ident_powiazany>PSYJOG</ident_powiazany>
+        <ident_powiazany>TWOKRA</ident_powiazany>
+        <ident_powiazany>UOSSE2</ident_powiazany>
+        <ident_powiazany>WYCZAM</ident_powiazany>
+      </powiazane>
+      <seriewydawnicze>
+        <seriawydawnicza id="3">facet</seriawydawnicza>
+      </seriewydawnicze>
+      <serietematyczne>
+        <seriatematyczna id="21">Relacje damsko-męskie</seriatematyczna>
+      </serietematyczne>
+      <ksiegarnie_nieinter>
+        <waga>0.42</waga>
+        <status2>1</status2>
+        <cena_netto>38</cena_netto>
+        <cena_brutto>39.9</cena_brutto>
+        <vat>1.9</vat>
+        <vat_procent>5</vat_procent>
+      </ksiegarnie_nieinter>
+      <opis><![CDATA[<div align="center"><h4><b>Męczą Cię kolacje, nudne wypady do kina?</b></h4></div>
+
+<p><b>Randka</b> to niejednokrotnie najbardziej stresujący moment w budowaniu związku. Z pewnością zachodzisz w głowę: co zrobić, gdzie zabrać drugą osobę, jak się przygotować?</p> 
+
+<p>Jeśli chcesz poznać sekrety kreatywnych randek najszczęśliwszych ludzi na świecie, dobrze trafiłeś. Jeśli uświadomisz sobie, na jak wiele sposobów można spędzić czas we dwoje, zyskasz szansę na najwspanialszą randkę w swoim życiu.</p>
+
+<p>Z tą książką zaskoczysz ukochaną osobę i sprawisz jej największą na świecie przyjemność, a Wasz związek znajdzie się na zupełnie nowym poziomie.
+Wytęż wyobraźnię i stwórz atmosferę miłosnego uniesienia w każdym miejscu, którego wcześniej nie podejrzewałeś o randkowy klimat. Ruszaj!</p> 
+
+<br /><hr />
+<p><b>Krzysztof Król</b> - wybitny trener, prowadzący szkolenia z zakresu rozwoju osobistego i relacji damsko-męskich. Twórca szkoły Perfect Dating (www.perfectdating.pl), oraz Szkoły Wygranych (www.szkolawygranych.pl), autor bestsellerowej Księga związków, podrywu i seksu dla mężczyzn i Kodeksu wygranych. Pomógł już tysiącom ludzi udoskonalić swoje umiejętności interpersonalne i seksualne (nazywany jest nawet polskim Hitchem). Uczy, jak osiągnąć w życiu sukces i spełnić swoje marzenia.</p>]]></opis>
+      <md5>a9b660617d2344abf0d69b5f13a95b72</md5>
+    </ksiazka>
+    <ksiazka ident="168TYD">
+      <isbn>978-83-246-2648-9</isbn>
+      <ean>9788324626489</ean>
+      <ident>168TYD</ident>
+      <tytul language="polski">168-godzinny tydzień. Żyj w pełni 24/7</tytul>
+      <tytul language="oryginal">The 168 Hour Week: Living Life Your Way 24-7</tytul>
+      <link>http://sensus.pl/ksiazki/168-godzinny-tydzien-zyj-w-pelni-24-7-kevin-hogan,168tyd.htm</link>
+      <autor>Kevin Hogan</autor>
+      <tlumacz>Bartosz Sałbut</tlumacz>
+      <status>1</status>
+      <cena>37.00</cena>
+      <cenadetaliczna>37.00</cenadetaliczna>
+      <znizka>0.00</znizka>
+      <marka>2</marka>
+      <nazadanie>0</nazadanie>
+      <format>180x235</format>
+      <typ>1</typ>
+      <oprawa>miękka</oprawa>
+      <wydawca/>
+      <liczbastron>328</liczbastron>
+      <datawydania>2010-06-25</datawydania>
+      <online>http://pdf.helion.pl/168tyd/168tyd-1.pdf</online>
+      <okladka>http://sensus.pl/okladki/326x466/168tyd.jpg</okladka>
+      <okladkatyl>http://sensus.pl/okladki-tyl/326x466/168tyd.jpg</okladkatyl>
+      <issueurl>http://sensus.pl/eksiazki/168tyd.htm</issueurl>
+      <bestseller>0</bestseller>
+      <nowosc>0</nowosc>
+      <promocja id="407">Opadają liście, opadają ceny!</promocja>
+      <powiazane>
+        <ident_powiazany>ARTLOV</ident_powiazany>
+        <ident_powiazany>BZCSB1</ident_powiazany>
+        <ident_powiazany>FILOKV</ident_powiazany>
+        <ident_powiazany>GETTIN</ident_powiazany>
+        <ident_powiazany>MY5LOG</ident_powiazany>
+        <ident_powiazany>NIETLU</ident_powiazany>
+        <ident_powiazany>PILACO</ident_powiazany>
+        <ident_powiazany>SAMODV</ident_powiazany>
+        <ident_powiazany>STARTP</ident_powiazany>
+        <ident_powiazany>SUNGET</ident_powiazany>
+        <ident_powiazany>UWJEZY</ident_powiazany>
+        <ident_powiazany>WSERJO</ident_powiazany>
+      </powiazane>
+      <seriewydawnicze>
+        <seriawydawnicza id="1">charyzma</seriawydawnicza>
+      </seriewydawnicze>
+      <serietematyczne>
+        <seriatematyczna id="26">Życiowe filozofie</seriatematyczna>
+        <seriatematyczna id="20">Psychologia pracy</seriatematyczna>
+      </serietematyczne>
+      <ksiegarnie_nieinter>
+        <waga>0.56</waga>
+        <status2>2</status2>
+        <cena_netto>35.24</cena_netto>
+        <cena_brutto>37</cena_brutto>
+        <vat>1.76</vat>
+        <vat_procent>5</vat_procent>
+      </ksiegarnie_nieinter>
+      <opis><![CDATA[<p><blockquote><i>To PRAWDZIWA książka o pracy, produktywności, szczęściu i zyskach. W ciągu zaledwie czterech godzin poznasz klucz do sukcesu i zadowolenia z życia</i><br><div align="left"><b>
+Jeffrey Gitomer</b>, autor <i>Czerwonej książeczki sprzedaży</i></div></blockquote>
+<br />
+<p><blockquote><i>Nie powinieneś wierzyć w to, co Ci mówią o źródłach sukcesu. Kevin Hogan wyjaśnia, dlaczego nie udało Ci się zrealizować swoich planów. Co jeszcze ważniejsze, wskazuje również, w jaki sposób można wykorzystać najnowsze odkrycia naukowe, aby odnieść sukces. Nastaw się do tej książki tak, <br />jak gdyby miał od niej zależeć Twój sukces -- bo on właśnie od niej zależy.</i><br><div align="left"><b>
+Rich Schefren</b>, CEO, Strategic Profits</div></blockquote>
+<br />
+<p><blockquote><i>Tylko nieliczne książki poświęcone zagadnieniom wydajności osobistej wychodzą spod pióra osób, które rzeczywiście rozumieją zasady funkcjonowania ludzkiego umysłu. Jeszcze mniej jest książek napisanych tak, że zawarte w nich przesłanie można bez trudu zrozumieć i od razu wdrożyć. Książka, którą trzymasz w dłoniach, z całą pewnością zalicza się do tego wąskiego grona -- książki tego rodzaju, i to w skali całego świata, mógłbym zliczyć na palcach jednej ręki.</i><br><div align="left"><b>
+Mark Joyner</b>, autor bestsellerowej książki <i>Prosta droga do celu. <br />Simpleology</i> oraz twórca koncepcji Construct Zero</div></blockquote>
+<br />
+<p><blockquote><i>To radykalna książka, ponieważ ja mam pewien cel. Postanowiłem być pierwszym człowiekiem, który powie Ci prawdę o planowaniu i organizacji czasu, wyznaczaniu celów, odkładaniu spraw na później oraz osiąganiu wyznaczonych celów. 
+Nie będę wygłaszał zakłamanych pogadanek motywacyjnych. Profesjonalny Trener nie wciska kitu swoim graczom. Profesjonalny Trener zna swoich graczy.</i><br><div align="left"><b>
+Kevin Hogan</b></div></blockquote>
+<br />
+<p>Ile czasu w zeszłym tygodniu poświęciłeś na to, co rzeczywiście chciałeś robić? Przez ile godzin ktoś inny decydował, czym powinieneś się zająć? Chcesz żyć według WŁASNYCH reguł? Realizować TWOJE pragnienia? Osiągnąć SWÓJ sukces -- cokolwiek sobie założysz? Naucz się uwalniać od wszystkiego, co Ci w tym przeszkadza.</p>
+<br />
+<ul>
+<li>Opieraj się pokusie odkładania spraw na później.</li>
+<li>Zwiększaj własną produktywność, wykorzystując w tym celu sprawdzony w praktyce System Planowania Czasu.</li>
+<li>Zadbaj o to, żeby ważni ludzie mieli swoje miejsce w Twoim życiu.</li>
+<li>Poznaj samego siebie... i dowiedz się, kim chcesz być.</li>
+</ul>
+<br />
+<p>Odzyskaj kontrolę nad swoim życiem -- to dobry początek wielkiej, znaczącej zmiany. Ta książka pomoże zrealizować Twój wielki plan, który pozwoli Ci zdobyć wszystko, czego chcesz, i być tym, kim zechcesz. Jej autor proponuje Ci prostą metodę zwiększania produktywności i tłumienia skłonności do odkładania wszystkiego na później. Została ona opracowana na podstawie analiz licznych badań poświęconych zagadnieniu osiągania celów -- nie znajdziesz w niej motywacyjnego bełkotu, ale wiedzę w czystej postaci, podaną w klarowny sposób przez światowej klasy specjalistę.</p>]]></opis>
+      <md5>1edd262762bf28aab5ca8e17ecf29cca</md5>
+    </ksiazka>
+    <ksiazka ident="17GRZ2">
+      <isbn>978-83-246-2722-6</isbn>
+      <ean>9788324627226</ean>
+      <ident>17GRZ2</ident>
+      <tytul language="polski">17 śmiertelnych błędów szefa. Wydanie II rozszerzone</tytul>
+      <link>http://sensus.pl/ksiazki/17-smiertelnych-bledow-szefa-wydanie-ii-rozszerzone-rafal-szczepanik,17grz2.htm</link>
+      <autor>Rafał Szczepanik</autor>
+      <status>1</status>
+      <cena>39.00</cena>
+      <cenadetaliczna>39.00</cenadetaliczna>
+      <znizka>0.00</znizka>
+      <marka>2</marka>
+      <nazadanie>0</nazadanie>
+      <format>A5</format>
+      <typ>1</typ>
+      <oprawa>twarda</oprawa>
+      <wydawca/>
+      <liczbastron>360</liczbastron>
+      <datawydania>2010-06-28</datawydania>
+      <online>http://pdf.helion.pl/17grz2/17grz2-1.pdf</online>
+      <okladka>http://sensus.pl/okladki/326x466/17grz2.jpg</okladka>
+      <issueurl>http://sensus.pl/eksiazki/17grz2.htm</issueurl>
+      <bestseller>0</bestseller>
+      <nowosc>0</nowosc>
+      <promocja id="407">Opadają liście, opadają ceny!</promocja>
+      <powiazane>
+        <ident_powiazany>BATAT1</ident_powiazany>
+        <ident_powiazany>BIBZW2</ident_powiazany>
+        <ident_powiazany>DAJNAJ</ident_powiazany>
+        <ident_powiazany>DYRESP</ident_powiazany>
+        <ident_powiazany>GETTIN</ident_powiazany>
+        <ident_powiazany>GRZE75</ident_powiazany>
+        <ident_powiazany>KAJKAR</ident_powiazany>
+        <ident_powiazany>PRAODW</ident_powiazany>
+        <ident_powiazany>SZEFOL</ident_powiazany>
+        <ident_powiazany>WYCZAM</ident_powiazany>
+        <ident_powiazany>ZAWYWP</ident_powiazany>
+        <ident_powiazany>ZDOWLA</ident_powiazany>
+      </powiazane>
+      <serietematyczne>
+        <seriatematyczna id="20">Psychologia pracy</seriatematyczna>
+      </serietematyczne>
+      <ksiegarnie_nieinter>
+        <waga>0.54</waga>
+        <status2>2</status2>
+        <cena_netto>37.14</cena_netto>
+        <cena_brutto>39</cena_brutto>
+        <vat>1.86</vat>
+        <vat_procent>5</vat_procent>
+      </ksiegarnie_nieinter>
+      <opis><![CDATA[<div align="center"><h4><b>  
+Kryminalna powieść menedżerska<br />
+Sensacyjna lekcja zarządzania<br />
+Firmowy bestseller
+</b></h4></div>
+
+<p>
+Pewnie znasz firmy, w których obowiązują dwie podstawowe zasady zarządzania:
+
+<ul>
+<li>Po pierwsze - szef ma zawsze rację.</li>
+<li>Po drugie - jeśli zdarzyłoby się, że szef racji nie ma... patrz punkt pierwszy.</li>
+</ul>
+
+<p>W tych firmach prezesi, dyrektorzy, a nawet kierownicy są przekonani, że nie popełniają błędów. Że za zepsucie całej ryby odpowiedzialny jest szary "ogon", a nie stojąca na czele organizacji "głowa". Nic bardziej mylnego!</p>
+
+<p>Trzymasz w ręce sensacyjną powieść menedżerską - sensacyjną nie tylko ze względu na prezentowany gatunek literacki. Ta książka wciąga i mrozi krew w żyłach przede wszystkim dlatego, że opowiada o błędach dzisiejszych menedżerów. Obnaża potknięcia Twojego szefa. Wytyka także Twoje własne pomyłki. A na sam koniec radzi, jak z nich wybrnąć. To wszystko podane jest za pomocą niebanalnej fabuły i barwnie sportretowanych postaci.</p>
+
+<p>17 śmiertelnych błędów szefa to połączenie dobrego kryminału z wiedzą z zakresu zarządzania. Książka ujawnia wiele mankamentów pracy menedżerów. Wartka opowieść przekonująco pokazuje, że następujące po sobie błędy zarządzania nieuchronnie prowadzą do katastrofy. Zaniedbanie, ignorancja i przekonanie o własnej nieomylności to tylko niektóre z nich. Najczęściej popełniane przez polskich szefów błędy zostały tu poddane szczegółowej analizie. Z książki dowiesz się też, jak uniknąć wpadek podczas tworzenia nowego zespołu.</p>]]></opis>
+      <md5>6c839f86120a233ae24d6f23471429e3</md5>
+    </ksiazka>
+    <ksiazka ident="17GRZE">
+      <isbn>83-246-0519-3</isbn>
+      <ean>9788324605194</ean>
+      <ident>17GRZE</ident>
+      <tytul language="polski">17 śmiertelnych błędów szefa</tytul>
+      <link>http://sensus.pl/ksiazki/17-smiertelnych-bledow-szefa-rafal-szczepanik,17grze.htm</link>
+      <autor>Rafał Szczepanik</autor>
+      <status>0</status>
+      <cena>49.00</cena>
+      <cenadetaliczna>49.00</cenadetaliczna>
+      <znizka>0.00</znizka>
+      <marka>2</marka>
+      <nazadanie>1</nazadanie>
+      <format>A5</format>
+      <typ>1</typ>
+      <oprawa>miękka</oprawa>
+      <wydawca/>
+      <liczbastron>328</liczbastron>
+      <datawydania>2006-10-27</datawydania>
+      <online>http://pdf.helion.pl/17grze/17grze-1.pdf</online>
+      <okladka>http://sensus.pl/okladki/326x466/17grze.jpg</okladka>
+      <bestseller>0</bestseller>
+      <nowosc>0</nowosc>
+      <promocja id="407">Opadają liście, opadają ceny!</promocja>
+      <powiazane>
+        <ident_powiazany>ALPHUM</ident_powiazany>
+        <ident_powiazany>ARTWA3</ident_powiazany>
+        <ident_powiazany>BRPAR1</ident_powiazany>
+        <ident_powiazany>FILOKV</ident_powiazany>
+        <ident_powiazany>GETTIN</ident_powiazany>
+        <ident_powiazany>MOPESI</ident_powiazany>
+        <ident_powiazany>MY5LAT</ident_powiazany>
+        <ident_powiazany>NAWYKW</ident_powiazany>
+        <ident_powiazany>NIETLU</ident_powiazany>
+        <ident_powiazany>PSYJOG</ident_powiazany>
+        <ident_powiazany>SAMODV</ident_powiazany>
+        <ident_powiazany>UWJEZY</ident_powiazany>
+      </powiazane>
+      <seriewydawnicze>
+        <seriawydawnicza id="1">charyzma</seriawydawnicza>
+      </seriewydawnicze>
+      <serietematyczne>
+        <seriatematyczna id="20">Psychologia pracy</seriatematyczna>
+      </serietematyczne>
+      <ksiegarnie_nieinter>
+        <waga>0.52</waga>
+        <status2>5</status2>
+        <cena_netto>46.67</cena_netto>
+        <cena_brutto>49</cena_brutto>
+        <vat>2.33</vat>
+        <vat_procent>5</vat_procent>
+      </ksiegarnie_nieinter>
+      <opis><![CDATA[<div align="center"><h4><b> Poznaj najczęściej popełniane błędy i dowiedz się, jak ich unikać </b></h4></div> 
+
+<p> Często spotykamy się ze stwierdzeniem, że "ryba psuje się od głowy". Błędy popełniane przez szefów przedsiębiorstw owocują problemami na kolejnych szczeblach zarządzania i wpływają na wyniki. Menedżerowie, którzy potrafią wyciągać wnioski z każdej pomyłki, zyskują cennego sprzymierzeńca jakim jest umiejętność przewidywania nadchodzących trudniejszych czasów. Jednak, jak pokazuje praktyka, powielanie błędów to niestety dość powszechne zjawisko w biznesie. </p>
+
+<p> Książka "17 śmiertelnych błędów szefów" ujawnia wiele mankamentów pracy nie tylko polskich menedżerów. Sensacyjna opowieść z pierwszej części jest dobrym przykładem, że następujące po sobie błędy zarządzania nieuchronnie prowadzą do katastrofy. Zaniedbanie, ignorancja i przekonanie o własnej nieomylności, to tylko niektóre  z nich. Autor przytacza wiele prawdziwych przykładów z krajowego rynku. Najczęściej popełniane błędy zostają poddane szczegółowej analizie w drugiej części książki. Przeczytaj tę książkę i dowiedz się jak rozpoznać zbliżający się kryzys, niwelować jego efekty oraz unikać popełniania wciąż tych samych błędów. </p>
+
+<p> Bądź przezorny i ucz się na cudzych błędach:
+<ul>
+<li> intuicja to nie wszystko: niewykorzystanie nawet prostych narzędzi do zarządzania firmą </li>
+<li> chaos i sprzeczne decyzje: brak komunikacji w firmie </li>
+<li> lepiej nie mówić: unikanie trudnych tematów </li>
+<li> jakoś to będzie: brak jasnej i klarownej strategii działania </li>
+<li> klapki na oczach: przedkładanie interesu własnego działu nad cele całej firmy </li>
+<li> historia lubi się powtarzać: powielanie wciąż tych samych błędów </li>
+</ul>
+</p>]]></opis>
+      <md5>5814ba4106c68395c7511e2502d49e6e</md5>
+    </ksiazka>
+    <ksiazka ident="1ROK">
+      <isbn>978-83-246-1297-0</isbn>
+      <ean>9788324612970</ean>
+      <ident>1ROK</ident>
+      <tytul language="polski">Pierwszy rok w życiu dziecka. Poradnik bez kantów</tytul>
+      <tytul language="oryginal">The Everything Babys First Year Book: Complete Practical Advice to Get You and Baby Through the First 12 Months</tytul>
+      <link>http://sensus.pl/ksiazki/pierwszy-rok-w-zyciu-dziecka-poradnik-bez-kantow-tekla-s-nee,1rok.htm</link>
+      <autor>Tekla S. Nee</autor>
+      <tlumacz>Monika Lipiec-Szafarczyk</tlumacz>
+      <status>1</status>
+      <cena>34.90</cena>
+      <cenadetaliczna>34.90</cenadetaliczna>
+      <znizka>0.00</znizka>
+      <marka>5</marka>
+      <nazadanie>0</nazadanie>
+      <format>180x235</format>
+      <typ>1</typ>
+      <oprawa>miękka</oprawa>
+      <wydawca/>
+      <liczbastron>312</liczbastron>
+      <datawydania>2008-02-06</datawydania>
+      <okladka>http://sensus.pl/okladki/326x466/1rok.jpg</okladka>
+      <bestseller>0</bestseller>
+      <nowosc>0</nowosc>
+      <promocja id="407">Opadają liście, opadają ceny!</promocja>
+      <powiazane>
+        <ident_powiazany>ARTMAV</ident_powiazany>
+        <ident_powiazany>BACCS1</ident_powiazany>
+        <ident_powiazany>MIEDZY</ident_powiazany>
+        <ident_powiazany>MUSIMY</ident_powiazany>
+        <ident_powiazany>SUBREP</ident_powiazany>
+        <ident_powiazany>SUBREW</ident_powiazany>
+        <ident_powiazany>TREMEN</ident_powiazany>
+        <ident_powiazany>TWMOBI</ident_powiazany>
+        <ident_powiazany>UROBOG</ident_powiazany>
+        <ident_powiazany>WYCZAM</ident_powiazany>
+        <ident_powiazany>WYCZCW</ident_powiazany>
+        <ident_powiazany>ZBUNAS</ident_powiazany>
+      </powiazane>
+      <seriewydawnicze>
+        <seriawydawnicza id="2">dziecko</seriawydawnicza>
+      </seriewydawnicze>
+      <serietematyczne>
+        <seriatematyczna id="22">Rodzicielstwo i psychologia dziecka</seriatematyczna>
+      </serietematyczne>
+      <ksiegarnie_nieinter>
+        <waga>0.48</waga>
+        <status2>2</status2>
+        <cena_netto>33.24</cena_netto>
+        <cena_brutto>34.9</cena_brutto>
+        <vat>1.66</vat>
+        <vat_procent>5</vat_procent>
+      </ksiegarnie_nieinter>
+      <opis><![CDATA[<p>Pierwsze 12 miesięcy życia Twojego dziecka to prawdziwa epoka. Pełna radości, śmiechu, zupełnie nowych doświadczeń i stosu pieluszek </p>
+
+<p><h4><b>Twoja nowa funkcja - mama</b></h4></p>
+
+<p>Nie było łatwo zostać rodzicem, prawda? Dziewięć miesięcy z Obcym na Twoim pokładzie, a później jeszcze "cud narodzin", czyli koszmarne chwile w nieludzkich męczarniach. Możesz odetchnąć z ulgą, ale nie na długo. Przed Tobą najtrudniejsze zadanie - teraz musisz tym rodzicem być.</p>
+
+<p>Z niepokojem i bezradnością spoglądasz na malutką istotę, która od chwili obecnej staje się ośrodkiem Twojego wszechświata. Nie wiesz, o co jej chodzi, kiedy znów płacze w środku nocy? Dlaczego ma taką czerwoną buźkę? W jaki sposób właściwie pielęgnować jej pępek i radzić sobie z kolką? Kiedy bezpiecznie możecie wspólnie wybrać się na spacer i dalszą wyprawę? Możesz być pewna, że podczas pierwszego roku życia dziecka dowiesz się wszystkiego, co teraz jest dla Ciebie czarną magią. Autorka tej książki podzieli się z Tobą nie tylko cennymi poradami specjalistów - pediatrów i położnych, lecz także swoimi własnymi, innych matek, matek tych matek i samej Goździkowej. </p>
+
+<p>
+Odłóż teraz swój nowo narodzony skarb do łóżeczka i dowiedz się:
+<ul>
+<li>jak sprawić, by dziecko szybko zasypiało, wysypiało się i budziło zadowolone;</li>
+<li>którą z metod karmienia wybrać, jak przechowywać odciągnięty pokarm i kiedy zacząć włączać pokarmy stałe;</li>
+<li>w jaki sposób dbać o zdrowie i higienę noworodka i niemowlaka;</li>
+<li>jakie są kolejne etapy rozwoju Twojego dziecka oraz kiedy powinnaś nastawiać się na wyrzynanie pierwszego zęba i pierwszy samodzielny krok;</li>
+<li>jak zadbać o własne ciało, kondycję psychofizyczną i zyskać czas dla siebie... lub chwilę na romantyczną randkę.</li>
+</ul>
+</p>
+
+<p><h4><b>Zrozum Małą Wielką Zagadkę.</b></h4></p>]]></opis>
+      <md5>043c8f98f4345b0a0e93b9adae8814e3</md5>
+    </ksiazka>
+    <ksiazka ident="20LATM">
+      <isbn>978-83-246-3601-3</isbn>
+      <ean>9788324636013</ean>
+      <ident>20LATM</ident>
+      <tytul language="polski">20 lat mniej. Cofnij czas i zachowaj wieczną młodość!</tytul>
+      <tytul language="oryginal">20 Years Younger: Look Younger, Feel Younger, Be Younger!. eBook. ePub</tytul>
+      <link>http://sensus.pl/ksiazki/20-lat-mniej-cofnij-czas-i-zachowaj-wieczna-mlodosc-bob-greene,20latm.htm</link>
+      <autor>Bob Greene</autor>
+      <tlumacz>Małgorzata Wróblewska</tlumacz>
+      <status>1</status>
+      <cena>49.00</cena>
+      <cenadetaliczna>49.00</cenadetaliczna>
+      <znizka>0.00</znizka>
+      <marka>4</marka>
+      <nazadanie>0</nazadanie>
+      <format>158x235</format>
+      <typ>1</typ>
+      <oprawa>miękka</oprawa>
+      <wydawca/>
+      <liczbastron>320</liczbastron>
+      <datawydania>2012-03-12</datawydania>
+      <online>http://pdf.helion.pl/20latm/20latm.pdf</online>
+      <okladka>http://sensus.pl/okladki/326x466/20latm.jpg</okladka>
+      <okladkatyl>http://sensus.pl/okladki-tyl/326x466/20latm.jpg</okladkatyl>
+      <issueurl>http://sensus.pl/eksiazki/20latm.htm</issueurl>
+      <bestseller>0</bestseller>
+      <nowosc>0</nowosc>
+      <promocja id="407">Opadają liście, opadają ceny!</promocja>
+      <powiazane>
+        <ident_powiazany>ACIALO</ident_powiazany>
+        <ident_powiazany>BACCS1</ident_powiazany>
+        <ident_powiazany>BIEGRO</ident_powiazany>
+        <ident_powiazany>BIESPA</ident_powiazany>
+        <ident_powiazany>BKCZG3</ident_powiazany>
+        <ident_powiazany>KSIAZE</ident_powiazany>
+        <ident_powiazany>POKOTY</ident_powiazany>
+        <ident_powiazany>SCHUDN</ident_powiazany>
+        <ident_powiazany>TREMEB</ident_powiazany>
+        <ident_powiazany>UWJEZY</ident_powiazany>
+        <ident_powiazany>ZDROGR</ident_powiazany>
+        <ident_powiazany>ZOSWOD</ident_powiazany>
+      </powiazane>
+      <serietematyczne>
+        <seriatematyczna id="24">Wygląd i wizerunek</seriatematyczna>
+      </serietematyczne>
+      <ksiegarnie_nieinter>
+        <waga>0.48</waga>
+        <status2>1</status2>
+        <cena_netto>46.67</cena_netto>
+        <cena_brutto>49</cena_brutto>
+        <vat>2.33</vat>
+        <vat_procent>5</vat_procent>
+      </ksiegarnie_nieinter>
+      <opis><![CDATA[<div align="center"><h4><b>Eliksir młodości czy gwarant długowieczności?</b></h4></div>
+
+<p>W życiu zwykle czterdzieści lat mija jak jeden dzień. Jednak naprawdę wiek to tylko liczba! Nauka badająca proces starzenia się dowiodła, że włączenie do życia codziennego czterech kluczowych elementów może wpłynąć na naszą fizjologię, w znaczący sposób spowalniając procesy związane ze starzeniem się organizmu oraz pozwalając nam funkcjonować tak, jakbyśmy naprawdę byli o wiele lat młodsi. Zamiast po botoks, sięgnij po ćwiczenia, diety, pielęgnację skóry oraz właściwą higienę snu. I z zachwytem obserwuj zmiany!</p>
+
+<hr /><blockquote><i>Bob Greene zmienił moje życie
+</i><br><div align="right"><b>Oprah Winfrey</b></div>
+</blockquote><hr />
+
+<p>Ta książka to praktyczny i efektywny poradnik zawierający program, który sprawi, że będziesz wyglądać i czuć się młodziej niż kiedykolwiek:</p>
+
+<ul><li>Ćwiczenia - treningi siłowy i aerobowy przeciwdziałają utracie masy mięśniowej i kostnej, wzmacniają kręgosłup oraz pozwalają zachować aktywność i zwinność. </li>
+<li>Odżywianie - kompletny jadłospis promujący długowieczność zawiera wiele przepisów na pyszne dania oraz rady dotyczące suplementów diety.</li>
+<li>Pielęgnacja skóry - trzystopniowy program pielęgnacji skóry zwalcza zmarszczki i przywraca skórze blask.</li>
+<li>Sen - sprawdzone sposoby na zdrowy sen dostarczają energii i redukują ryzyko chorób.</li></ul>
+
+<hr /><p><b>Bob Greene</b> jest dietetykiem światowej klasy. To dzięki niemu sama Oprah Winfrey przeszła prawdziwą metamorfozę i na dobre zrezygnowała z rozmiaru XXL. Bob jest także ekspertem w dziedzinie fizjologii ćwiczeń i certyfikowanym trenerem personalnym. Jego książka Dieta Best Life ukazała się nakładem wydawnictwa Sensus i szturmem podbiła polskie kuchnie. Teraz i Ty masz szansę wieść styl życia według metody "dwadzieścia lat mniej".</p>]]></opis>
+      <md5>1e189bdc684270ff37b5c55a0ea01e80</md5>
+    </ksiazka>
+    <ksiazka ident="250PYT">
+      <isbn>978-83-246-4152-9</isbn>
+      <ean>9788324641529</ean>
+      <ident>250PYT</ident>
+      <tytul language="polski">Sztuka uwodzenia słowami. 250 pytań i odpowiedzi na temat podrywania kobiet</tytul>
+      <link>http://sensus.pl/ksiazki/sztuka-uwodzenia-slowami-250-pytan-i-odpowiedzi-na-temat-podrywania-kobiet-marcin-szabelski,250pyt.htm</link>
+      <autor>Marcin Szabelski</autor>
+      <status>1</status>
+      <cena>39.00</cena>
+      <cenadetaliczna>39.00</cenadetaliczna>
+      <znizka>0.00</znizka>
+      <marka>4</marka>
+      <nazadanie>0</nazadanie>
+      <format>140x208</format>
+      <typ>1</typ>
+      <oprawa>miękka</oprawa>
+      <wydawca/>
+      <liczbastron>288</liczbastron>
+      <datawydania>2012-07-09</datawydania>
+      <online>http://pdf.helion.pl/250pyt/250pyt.pdf</online>
+      <okladka>http://sensus.pl/okladki/326x466/250pyt.jpg</okladka>
+      <okladkatyl>http://sensus.pl/okladki-tyl/326x466/250pyt.jpg</okladkatyl>
+      <bestseller>0</bestseller>
+      <nowosc>0</nowosc>
+      <promocja id="407">Opadają liście, opadają ceny!</promocja>
+      <powiazane>
+        <ident_powiazany>ALPHUM</ident_powiazany>
+        <ident_powiazany>BIBZWM</ident_powiazany>
+        <ident_powiazany>BKRUM4</ident_powiazany>
+        <ident_powiazany>MY5LOG</ident_powiazany>
+        <ident_powiazany>NAWYKW</ident_powiazany>
+        <ident_powiazany>PSYJOG</ident_powiazany>
+        <ident_powiazany>ROZWIN</ident_powiazany>
+        <ident_powiazany>SEXKOB</ident_powiazany>
+        <ident_powiazany>SSOJOB</ident_powiazany>
+        <ident_powiazany>UKRYHI</ident_powiazany>
+        <ident_powiazany>UOSSE2</ident_powiazany>
+        <ident_powiazany>UROBOG</ident_powiazany>
+      </powiazane>
+      <seriewydawnicze>
+        <seriawydawnicza id="3">facet</seriawydawnicza>
+      </seriewydawnicze>
+      <serietematyczne>
+        <seriatematyczna id="16">Uwodzenie</seriatematyczna>
+      </serietematyczne>
+      <ksiegarnie_nieinter>
+        <waga>0.36</waga>
+        <status2>1</status2>
+        <cena_netto>37.14</cena_netto>
+        <cena_brutto>39</cena_brutto>
+        <vat>1.86</vat>
+        <vat_procent>5</vat_procent>
+      </ksiegarnie_nieinter>
+      <opis><![CDATA[<div align="center"><h4><b>Megadopalacz Twojego życia erotycznego</b></h4></div>
+
+<p>Relacje mężczyzn z kobietami to coś, wokół czego kręci się nasza planeta. Ciągłe iskrzenie, buzowanie i ruch między dwoma biegunami powinny przypominać zbliżenie Marsa i Wenus. Do tego dochodzi ta uwielbiana przez kobiety "chemia" - cokolwiek to jest, stanowi dopalacz wzajemnych stosunków.A jak to wygląda u Ciebie? Czy jesteś mistrzem kontaktów damsko-męskich? Jeśli nie, najwyższa pora, byś i Ty został Casanovą XXI wieku. Pierwsza strona tej książki zwiastuje ostatni dzień Twojego życia w ciele nerwowego, smutnego kolesia. Nadszedł czas, by Twoje ciało dostało to, czego pragnie.</p>
+
+<ul><li>Zaczniesz podrywać najładniejsze dziewczyny, jakie spotkasz na swojej drodze.</li>
+<li>Przestaniesz być wykorzystywany przez partnerki, traktujące Cię jak naiwniaka.</li>
+<li>Poznasz zasady, dzięki którym wytworzysz "chemię" już na pierwszym spotkaniu!</li></ul>
+
+<p>To poradnik dla facetów, którzy faktycznie kochają kobiety. <b>UWAGA</b> - część technik uwodzenia jest tak niemoralna, nieetyczna, aspołeczna, manipulacyjna, że powinno się ich zabronić. Jednak płeć piękna także ma swoje niegrzeczne triki...</p>
+
+<br /><hr />
+<p><b>Marcin Szabelski</b>, znany jako "<b>Adept</b>", w ciągu ostatnich sześciu lat, nie mając dużo pieniędzy ani superwyglądu, przespał się ze 172 wybranymi przez siebie pięknymi kobietami, w tym z modelkami i aktorkami. Jego obecna partnerka to prawdziwa bogini. Szabelskiego cechują go nie tylko znakomite umiejętności trenerskie, ale także specyficzne podejście do pracy z uczniem. Przy nim nie istnieją wymówki, nie odpuści, póki nie przełamiesz w sobie tego, co Cię blokuje. Uczył się bezpośrednio od największych uwodzicieli USA. Obecnie jest najstarszym z trenerów grupy Warsaw Lair (http://www.wl.com.pl).<br /><br />
+
+Jeżeli masz uwagi lub chcesz podzielić się swoimi doświadczeniami - napisz na adres: <b>adept@wl.com.pl</b>. </p>]]></opis>
+      <md5>604b6ae97461f4f5aedd82cbe179b102</md5>
+    </ksiazka>
+    <ksiazka ident="46ZASA">
+      <isbn>978-83-246-2596-3</isbn>
+      <ean>9788324625963</ean>
+      <ident>46ZASA</ident>
+      <tytul language="polski">46 zasad zdrowego rozsądku. Odkryj własną drogę do sukcesu</tytul>
+      <link>http://sensus.pl/ksiazki/46-zasad-zdrowego-rozsadku-odkryj-wlasna-droge-do-sukcesu-witold-wojtowicz,46zasa.htm</link>
+      <autor>Witold Wójtowicz</autor>
+      <status>0</status>
+      <cena>24.90</cena>
+      <cenadetaliczna>24.90</cenadetaliczna>
+      <znizka>0.00</znizka>
+      <marka>2</marka>
+      <nazadanie>0</nazadanie>
+      <format>A5</format>
+      <typ>1</typ>
+      <oprawa>miękka</oprawa>
+      <wydawca/>
+      <liczbastron>144</liczbastron>
+      <datawydania>2010-03-01</datawydania>
+      <online>http://pdf.helion.pl/46zasa/46zasa-1.pdf</online>
+      <okladka>http://sensus.pl/okladki/326x466/46zasa.jpg</okladka>
+      <okladkatyl>http://sensus.pl/okladki-tyl/326x466/46zasa.jpg</okladkatyl>
+      <issueurl>http://sensus.pl/eksiazki/46zasa.htm</issueurl>
+      <bestseller>0</bestseller>
+      <nowosc>0</nowosc>
+      <powiazane>
+        <ident_powiazany>ARTLOV</ident_powiazany>
+        <ident_powiazany>FILOKV</ident_powiazany>
+        <ident_powiazany>GETTIN</ident_powiazany>
+        <ident_powiazany>MATRIO</ident_powiazany>
+        <ident_powiazany>MY5LOG</ident_powiazany>
+        <ident_powiazany>NIETLU</ident_powiazany>
+        <ident_powiazany>PSNHI3</ident_powiazany>
+        <ident_powiazany>PSYJOG</ident_powiazany>
+        <ident_powiazany>ROZWIN</ident_powiazany>
+        <ident_powiazany>SAMODV</ident_powiazany>
+        <ident_powiazany>UWJEZY</ident_powiazany>
+        <ident_powiazany>ZZSCHD</ident_powiazany>
+      </powiazane>
+      <seriewydawnicze>
+        <seriawydawnicza id="1">charyzma</seriawydawnicza>
+      </seriewydawnicze>
+      <serietematyczne>
+        <seriatematyczna id="26">Życiowe filozofie</seriatematyczna>
+      </serietematyczne>
+      <ksiegarnie_nieinter>
+        <waga>0.18</waga>
+        <status2>3</status2>
+        <cena_netto>23.71</cena_netto>
+        <cena_brutto>24.9</cena_brutto>
+        <vat>1.19</vat>
+        <vat_procent>5</vat_procent>
+      </ksiegarnie_nieinter>
+      <opis><![CDATA[<div align="center"><h4><b> Sukces to tylko odpowiednia liczba powtórzeń </b></h4></div>
+
+<ul>
+<li>Uporządkuj swoje marzenia i nie rozmieniaj ich na drobne</li>
+<li>Zaprogramuj się na pozytywne myślenie</li>
+<li>Nie leniuchuj - działaj i rozwijaj się!</li>
+<li>Poznaj psychologię pieniądza i zasady powodzenia</li>
+</ul>
+
+<p>Zacznijmy od szkolnego quizu. Czy wiesz, kto jest autorem słów: "Iść za marzeniem i znowu iść za marzeniem, i tak zawsze aż do końca"? To prosty marynarz, osierocony jako nastolatek, zadłużony po uszy, któremu nie dane było skończyć gimnazjum. Ten sam, który po kilku latach opublikował swoją pierwszą powieść, został kapitanem samotnie odbywającym rejsy oraz szczęśliwym mężem i ojcem. Po dziś dzień nazywają go Słowackim Wysp Tropikalnych, a rocznica jego śmierci została wpisana do kalendarza rocznic UNESCO. </p>
+
+<p>Zastanawiasz się pewnie, dlaczego opowiadam Ci o Josephie Conradzie? Uważam, że warto wybrać go na ojca chrzestnego swojego sukcesu. Ważne, byś jak on spisał swoje własne zasady sukcesu i nauczył się zmieniać marzenia w rzeczywistość. I by ta Twoja nowa rzeczywistość była o stokroć lepsza niż życie, które wiedziesz dzisiaj.</p>
+
+<p>Naucz się rozumieć samego siebie. Skorzystaj ze wskazówek autora i zrealizuj przygotowane przez niego ćwiczenia. Stwórz własny ranking celów. Napisz swój kodeks zasad sukcesu. A potem ruszaj przed siebie, zawsze i do końca, realizując kolejne marzenia!</p>
+
+<p>Wiesz już, co masz robić? Jesteś panem tego, co zrozumiałeś, i niewolnikiem tego, czego nie rozumiesz. Otwórz książkę i wejdź na drogę do sukcesu.</p>]]></opis>
+      <md5>b3032a6ebd81e8eccef386239f6f814b</md5>
+    </ksiazka>
+    <ksiazka ident="50DOST">
+      <isbn>978-83-246-1776-0</isbn>
+      <ean>9788324617760</ean>
+      <ident>50DOST</ident>
+      <tytul language="polski">50 dzieł klasyki dostatku i bogacenia się. Zdobądź fortunę i zarządzaj majątkiem</tytul>
+      <tytul language="oryginal">50 Prosperity Classics: Attract It, Create It, Manage It, Share It</tytul>
+      <link>http://sensus.pl/ksiazki/50-dziel-klasyki-dostatku-i-bogacenia-sie-zdobadz-fortune-i-zarzadzaj-majatkiem-tom-butler-bowdon,50dost.htm</link>
+      <autor>Tom Butler-Bowdon</autor>
+      <tlumacz>Jakub Góralczyk</tlumacz>
+      <status>0</status>
+      <cena>39.00</cena>
+      <cenadetaliczna>39.00</cenadetaliczna>
+      <znizka>0.00</znizka>
+      <marka>4</marka>
+      <nazadanie>0</nazadanie>
+      <format>158x235</format>
+      <typ>1</typ>
+      <oprawa>miękka</oprawa>
+      <wydawca/>
+      <liczbastron>400</liczbastron>
+      <datawydania>2009-10-27</datawydania>
+      <online>http://pdf.helion.pl/50dost/50dost-8.pdf</online>
+      <okladka>http://sensus.pl/okladki/326x466/50dost.jpg</okladka>
+      <issueurl>http://sensus.pl/eksiazki/50dost.htm</issueurl>
+      <bestseller>0</bestseller>
+      <nowosc>0</nowosc>
+      <powiazane>
+        <ident_powiazany>ARTTWA</ident_powiazany>
+        <ident_powiazany>FILOKV</ident_powiazany>
+        <ident_powiazany>GETTIN</ident_powiazany>
+        <ident_powiazany>KSIAZE</ident_powiazany>
+        <ident_powiazany>MY5LOG</ident_powiazany>
+        <ident_powiazany>PSNHIL</ident_powiazany>
+        <ident_powiazany>PSYJOG</ident_powiazany>
+        <ident_powiazany>ROZWIN</ident_powiazany>
+        <ident_powiazany>SAMODV</ident_powiazany>
+        <ident_powiazany>SUNGET</ident_powiazany>
+        <ident_powiazany>UWJEZY</ident_powiazany>
+        <ident_powiazany>ZZWYCZ</ident_powiazany>
+      </powiazane>
+      <seriewydawnicze>
+        <seriawydawnicza id="1">charyzma</seriawydawnicza>
+      </seriewydawnicze>
+      <serietematyczne>
+        <seriatematyczna id="26">Życiowe filozofie</seriatematyczna>
+      </serietematyczne>
+      <ksiegarnie_nieinter>
+        <waga>0.54</waga>
+        <status2>2</status2>
+        <cena_netto>37.14</cena_netto>
+        <cena_brutto>39</cena_brutto>
+        <vat>1.86</vat>
+        <vat_procent>5</vat_procent>
+      </ksiegarnie_nieinter>
+      <opis><![CDATA[<div align="center"><h4><b>Fortuna w pigułce<br />
+Krąży w palcach złoty pieniądz</div></h4></b>
+
+<p>Poradniki dotyczące skutecznych metod zarabiania pieniędzy same w sobie tworzą swoisty gatunek literacki. Ilu przedsiębiorczych biznesmenów, ilu zdobywców wielkiego bogactwa, tyle sprytnych idei dotyczących zdobywania majątku i jego pomnażania. Gdybyś chciał poznać je wszystkie, spędziłbyś życie na czytaniu książek, zamiast osiągać finansowy sukces!</p>
+
+<p>Skorzystaj ze skarbnicy wiedzy wypełnionej po brzegi złotem. Oto znakomite kompendium najlepszych książek na temat pomyślności biznesowej -- od światowej sławy klasyków po współczesnych ludzi interesu. Pięćdziesięciu wybrańców fortuny nauczy Cię, jak zacząć myśleć kategoriami milionera, stać się twórcą własnego kapitału i mądrze inwestować, nie zapominając przy tym o hojności wobec innych. </p>
+
+<p>
+Czy i w Twoich żyłach płynie krew króla Midasa?
+
+<ul>
+<li>Przyciągnij bogactwo -- opanuj wewnętrzną grę bogactwa i obfitości.</li>
+<li>Stwórz bogactwo -- odnieś sukces przy użyciu sekretów i strategii najbogatszych osób świata oraz zdobądź pieniądze, wykorzystując wiedzę ekonomistów.</li>
+<li>Zarządzaj bogactwem -- odkryj najlepsze strategie z dziedziny finansów osobistych i inwestowania.</li>
+<li>Dziel się bogactwem -- zrozum ideę przepływu bogactwa i zasady filantropii.</li>
+</ul>
+</p>]]></opis>
+      <md5>1a3697b461151a59b4531a9c3bc7fd7a</md5>
+    </ksiazka>
+  </lista>
+</details>

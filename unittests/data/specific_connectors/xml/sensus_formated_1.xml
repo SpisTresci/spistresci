@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="iso-8859-2"?>
+<!--
+	    Dane z dnia: sob, 21 wrz 2013, 01:07:24 CEST
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ Ze względu na wielkość pliku XML, proszę o ściąganie wersji produkty-sensus.xml.zip
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+            Jeśli będziesz sprzedawał książki w PP, to użyj pola <status>:
+
+		0 - niedostepna
+		1 - dostepna
+		2 - w przygotowaniu
+		5 - druk na żądanie
+		7 - przedsprzedaz
+	    oraz <cena>, <cenadetaliczna> (ceny takie jak na stronach GW Helion : moga zawierac znizki itp.)
+
+	    dla ksiegarni internetowych (wspolpraca z dzialem handlowym, ehelion) użyj pola <status2>:
+
+    		1 - dostępna
+		2 - dostępna w małej ilości
+		3 - chwilowo niedostępna
+		4 - niedostępna
+		5 - POD
+		6 - w przygotowaniu
+		7 - w przedsprzedaży
+            oraz pola <ksiegarnie_nieinter> gdzie znajduja sie wszystkie dane odnosnie ceny netto, brutto, stawka VAT
+
+		<typ>:
+			1 - ksiazka
+			2 - ebook
+			3 - audiobook mp3
+			4 - audiocd mp3
+
+		<marka>:
+			1 - helion
+			2 - onepress
+			3 - editio
+			4 - sensus
+			5 - septem
+			6 - bezdroza
+			8 - podrecznik
+			11 - bezdroża obce
+
+Zmiany:
+09.02.2011 @MJJ dolożenie elementu <typ>
+15.06.2011 @MJJ dodanie pliku lista2-statusy.xml z samymi statusami, cenami
+21.12.2011 @TKr seolinki, zagregowane formaty ebooków
+23.01.2012 @TKr info o promocjach, lista promocji serwis.pl/xml/lista-promocje.cgi
+15.06.2012 @TKr dodane info o audiobookach
+29.08.2012 @TKr dodane md5 jako wßkaźnik zmiany informacji w książce
+
+		Kontakt: Michal Jęczalik <michal.jeczalik@helion.pl>
+-->
+<details>
+  <lista baza="sensus">
+    <ksiazka ident="100KRO">
+      <isbn>978-83-246-1147-8</isbn>
+      <ean>9788324611478</ean>
+      <ident>100KRO</ident>
+      <tytul language="polski">100 kroków do szczęścia. Jak własnymi siłami zmienić życie</tytul>
+      <tytul language="oryginal">Die 100 Schritte zum Glücklichsein</tytul>
+      <link>http://sensus.pl/ksiazki/100-krokow-do-szczescia-jak-wlasnymi-silami-zmienic-zycie-josef-kirschner,100kro.htm</link>
+      <autor>Josef Kirschner</autor>
+      <tlumacz>Ewa Klej</tlumacz>
+      <status>1</status>
+      <cena>27.00</cena>
+      <cenadetaliczna>27.00</cenadetaliczna>
+      <znizka>0.00</znizka>
+      <marka>4</marka>
+      <nazadanie>0</nazadanie>
+      <format>A5</format>
+      <typ>1</typ>
+      <oprawa>miękka</oprawa>
+      <wydawca/>
+      <liczbastron>224</liczbastron>
+      <datawydania>2008-08-06</datawydania>
+      <okladka>http://sensus.pl/okladki/326x466/100kro.jpg</okladka>
+      <bestseller>0</bestseller>
+      <nowosc>0</nowosc>
+      <promocja id="407">Opadają liście, opadają ceny!</promocja>
+      <powiazane>
+        <ident_powiazany>ART3MI</ident_powiazany>
+        <ident_powiazany>BASOBA</ident_powiazany>
+        <ident_powiazany>BATAT1</ident_powiazany>
+        <ident_powiazany>EGORCY</ident_powiazany>
+        <ident_powiazany>FILOKV</ident_powiazany>
+        <ident_powiazany>GETTIN</ident_powiazany>
+        <ident_powiazany>MY5LAT</ident_powiazany>
+        <ident_powiazany>MY5LOG</ident_powiazany>
+        <ident_powiazany>SAMODV</ident_powiazany>
+        <ident_powiazany>SUNGET</ident_powiazany>
+        <ident_powiazany>UWJEZY</ident_powiazany>
+        <ident_powiazany>ZADLAC</ident_powiazany>
+      </powiazane>
+      <seriewydawnicze>
+        <seriawydawnicza id="1">charyzma</seriawydawnicza>
+      </seriewydawnicze>
+      <serietematyczne>
+        <seriatematyczna id="26">Życiowe filozofie</seriatematyczna>
+      </serietematyczne>
+      <ksiegarnie_nieinter>
+        <waga>0.28</waga>
+        <status2>2</status2>
+        <cena_netto>25.71</cena_netto>
+        <cena_brutto>27</cena_brutto>
+        <vat>1.29</vat>
+        <vat_procent>5</vat_procent>
+      </ksiegarnie_nieinter>
+      <opis><![CDATA[<div align="center"><h4><b> Jeśli fortuna kołem się toczy, przeczytaj instrukcję obsługi koła! </b></h4></div> 
+<ul>
+<li> Zrób to sam -- szczęście zależy tylko od Ciebie </li>
+<li> Nigdy się nie poddawaj -- walczysz w słusznej sprawie </li>
+<li> Zachowaj wierność sobie -- priorytety to podstawa </li>
+</ul>
+<p> Jesteś wolnym, niezależnym i świadomym swoich potrzeb człowiekiem. Wiesz doskonale, co jest dla Ciebie najlepsze. Dlaczego więc inni ludzie usiłują uszczęśliwić Cię za wszelką cenę? I czemu nadal pozwalasz im na to, jeśli burzą Twój spokój ducha? Najwyższy czas uświadomić sobie, że szczęście nie jest jedynie kwestią pozytywnego zbiegu okoliczności. Przecież wierzysz we własne siły i znasz swoje ograniczenia. Nic nie stoi na przeszkodzie, by przejąć kontrolę nad własnym życiem i zacząć realizować osobistą receptę na szczęście. </p>
+
+<p> Niespieszny spacer ku spełnieniu składa się ze stu kroków. Pierwszym krokiem jest uświadomienie sobie, co Cię uszczęśliwia. Myślisz, że to banalne pytanie? A czy udało Ci się kiedyś poświęcić choć kilka minut, by sobie na nie odpowiedzieć? Zrób to teraz, bez względu na to, czy siedzisz przed ekranem komputera, czy też stoisz w księgarni z książką w ręku. Już wkrótce przestaniesz oglądać siebie oczami innych, uwolnisz się od uprzedzeń i przestaniesz obawiać się porażki. Zaczniesz wygrywać małe bitwy i uświadomisz sobie, że prowadzą do wielkiego zwycięstwa. A przecież walka nie idzie o byle co, bój toczy się o Twoje szczęście! </p>
+<ul>
+<li> Naucz się kochać siebie i oszczędzaj sobie niepotrzebnych rozczarowań. </li>
+<li> Poświęcaj sobie więcej czasu -- kto zasługuje na to bardziej niż Ty? </li>
+<li> Zrezygnuj z tego, co Cię obciąża i sprawia, że zapadasz na zdrowiu. </li>
+<li> Zaprzyjaźnij się ze swoim strachem, zamiast wciąż od niego uciekać. </li>
+<li> Uświadom sobie, że pochwała i krytyka są często jedynie próbą manipulacji. </li>
+<li> Pamiętaj, że największe kłamstwo stanie się prawdą, jeżeli uwierzysz w nie bez sprawdzenia. </li>
+</ul>
+<div align="center"><h4><b> Trenuj szczęście i zostań prawdziwym czempionem <br />
+...na ringu swojego życia. </b></h4></div>]]></opis>
+      <md5>a3e79e816fa01b93682aaa0210f2821e</md5>
+    </ksiazka>
+  </lista>
+</details>

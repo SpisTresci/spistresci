@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="iso-8859-2"?>
+<!--
+	    Dane z dnia: sob, 21 wrz 2013, 01:07:24 CEST
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ Ze względu na wielkość pliku XML, proszę o ściąganie wersji produkty-dlabystrzakow.xml.zip
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+            Jeśli będziesz sprzedawał książki w PP, to użyj pola <status>:
+
+		0 - niedostepna
+		1 - dostepna
+		2 - w przygotowaniu
+		5 - druk na żądanie
+		7 - przedsprzedaz
+	    oraz <cena>, <cenadetaliczna> (ceny takie jak na stronach GW Helion : moga zawierac znizki itp.)
+
+	    dla ksiegarni internetowych (wspolpraca z dzialem handlowym, ehelion) użyj pola <status2>:
+
+    		1 - dostępna
+		2 - dostępna w małej ilości
+		3 - chwilowo niedostępna
+		4 - niedostępna
+		5 - POD
+		6 - w przygotowaniu
+		7 - w przedsprzedaży
+            oraz pola <ksiegarnie_nieinter> gdzie znajduja sie wszystkie dane odnosnie ceny netto, brutto, stawka VAT
+
+		<typ>:
+			1 - ksiazka
+			2 - ebook
+			3 - audiobook mp3
+			4 - audiocd mp3
+
+		<marka>:
+			1 - helion
+			2 - onepress
+			3 - editio
+			4 - sensus
+			5 - septem
+			6 - bezdroza
+			8 - podrecznik
+			11 - bezdroża obce
+
+Zmiany:
+09.02.2011 @MJJ dolożenie elementu <typ>
+15.06.2011 @MJJ dodanie pliku lista2-statusy.xml z samymi statusami, cenami
+21.12.2011 @TKr seolinki, zagregowane formaty ebooków
+23.01.2012 @TKr info o promocjach, lista promocji serwis.pl/xml/lista-promocje.cgi
+15.06.2012 @TKr dodane info o audiobookach
+29.08.2012 @TKr dodane md5 jako wßkaźnik zmiany informacji w książce
+
+		Kontakt: Michal Jęczalik <michal.jeczalik@helion.pl>
+-->
+<details>
+  <lista baza="dlabystrzakow">
+    <ksiazka ident="AKCIAZ">
+      <isbn>978-83-246-1626-8</isbn>
+      <ean>9788324616268</ean>
+      <ident>AKCIAZ</ident>
+      <tytul language="polski">Aktywna ciąża dla bystrzaków</tytul>
+      <tytul language="oryginal">Fit Pregnancy for Dummies</tytul>
+      <link>http://dlabystrzakow.pl/ksiazki/aktywna-ciaza-dla-bystrzakow-catherine-cram-tere-stouffer-drenth,akciaz.htm</link>
+      <autor>Catherine Cram, Tere Stouffer Drenth</autor>
+      <tlumacz>Anna Owsiak, Izabela Szybilska-Fiedorowicz</tlumacz>
+      <status>0</status>
+      <cena>34.90</cena>
+      <cenadetaliczna>34.90</cenadetaliczna>
+      <znizka>0.00</znizka>
+      <marka>5</marka>
+      <nazadanie>0</nazadanie>
+      <format>180x235</format>
+      <typ>1</typ>
+      <oprawa>miękka</oprawa>
+      <wydawca/>
+      <liczbastron>384</liczbastron>
+      <datawydania>2008-05-14</datawydania>
+      <online>http://pdf.helion.pl/akciaz/akciaz-1.pdf</online>
+      <okladka>http://dlabystrzakow.pl/okladki/326x466/akciaz.jpg</okladka>
+      <top>18</top>
+      <bestseller>1</bestseller>
+      <nowosc>0</nowosc>
+      <powiazane>
+        <ident_powiazany>ELEBYS</ident_powiazany>
+        <ident_powiazany>HOASTR</ident_powiazany>
+        <ident_powiazany>JOGA</ident_powiazany>
+        <ident_powiazany>JOGABY</ident_powiazany>
+        <ident_powiazany>KUCHBE</ident_powiazany>
+        <ident_powiazany>MIGREN</ident_powiazany>
+        <ident_powiazany>NADCBY</ident_powiazany>
+        <ident_powiazany>OGROD</ident_powiazany>
+        <ident_powiazany>RZUPAL</ident_powiazany>
+        <ident_powiazany>SLEEP</ident_powiazany>
+        <ident_powiazany>WYPUBO</ident_powiazany>
+      </powiazane>
+      <serietematyczne>
+        <seriatematyczna id="14">Życie rodzinne</seriatematyczna>
+        <seriatematyczna id="12">Zdrowie i uroda</seriatematyczna>
+      </serietematyczne>
+      <ksiegarnie_nieinter>
+        <waga>0.58</waga>
+        <status2>3</status2>
+        <cena_netto>33.24</cena_netto>
+        <cena_brutto>34.9</cena_brutto>
+        <vat>1.66</vat>
+        <vat_procent>5</vat_procent>
+      </ksiegarnie_nieinter>
+      <opis><![CDATA[<div align="center"><h4><b> Ciąża w stylu fitness</b></h4></div> 
+
+<p>Oswoiłaś się już z myślą, że jesteś w ciąży? Niewątpliwym plusem jest to, że ludzie w autobusie ustępują Ci miejsca i masz prawo podchodzić do okienek w urzędach bez kolejki. Minusem jest zaś to, że stare ubrania przestają na Ciebie pasować. Pewnie już zastanawiasz się, jak będziesz wyglądać za kilka miesięcy? Fakt, że w Twoim brzuchu rozwija się mały człowiek, nie oznacza, że musisz zachowywać się niczym szklany, nieruchomy inkubator. Możesz uprawiać sport i zachować świetną formę aż do chwili rozwiązania. Ważne tylko, byś robiła to pod okiem specjalistów - takich jak autorzy Aktywnej ciąży dla bystrzaków.</p>
+
+<p>Joga, pływanie, trening siłowy i aerobik - ruch sprawi, że okres ciąży stanie się nie tylko czasem oczekiwania na potomka, ale również przygotuje Cię fizycznie na jego przyjście. Znajdziesz tu ćwiczenia dla siebie - bez względu na to, czy wcześniej aktywnie uprawiałaś sport, czy byłaś raczej dziewczyną "kanapową". Dowiedz się, które z ćwiczeń są dla Ciebie wskazane, a jakich powinnaś unikać. Poczytaj o tym, jak prawidłowo odżywiać się podczas ciąży i po rozwiązaniu oraz jak zachować zdrowie - zarówno fizyczne, jak i psychiczne - w obliczu ważnej zmiany w Twoim życiu.</p>
+
+<ul>
+<li>Bezpieczny program treningowy na czas ciąży.</li>
+<li>Uelastycznianie ciała, poprawianie krążenia oraz zdrowy sen.</li>
+<li>Metody kontroli prawidłowego przyrostu masy ciała. </li>
+<li>Przygotowanie ciała do akcji porodowej oraz porodu.</li>
+<li>Szczegółowe opisy ćwiczeń na kolejne etapy ciąży.</li>
+<li>Sposoby angażowania rodziny i przyjaciół w swój bieg po kondycję.</li>
+</ul>]]></opis>
+      <md5>0017a7de66d8d39855ce8d12e55ec2e9</md5>
+    </ksiazka>
+  </lista>
+</details>
