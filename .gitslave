@@ -3,4 +3,4 @@
 "git@spistresci.pl:/var/git/egazeciarz_frontend.git" "frontends/egazeciarz"
 "git@spistresci.pl:/var/git/spistresci_frontend.git" "frontends/spistresci"
 "git@spistresci.pl:/var/git/common_frontend.git" "frontends/common"
-"git@spistresci.pl:/var/git/ekundelek_frontend.git" "ekundelek"
+"git@spistresci.pl:/var/git/ekundelek_frontend.git" "frontends/ekundelek"
