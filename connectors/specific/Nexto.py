@@ -40,7 +40,7 @@ class Nexto(XMLConnector):
 
     format_convert_dict = dict(XMLConnector.format_convert_dict.items() + {
         '\(znak wodny\)':'',
-        ' \(fileopen\)':'-drm',
+        ' \(fileopen\)':'_drm',
     }.items())
 
     format_sepeparators = [',']

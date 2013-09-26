@@ -5,9 +5,10 @@ import glob
 class DataValidator(object):
 
     list_of_names = []
-    supported_formats = ['cd', 'cd_mp3', 'dvd', 'epub', 'fb2', 'ks', 'mobi', 'mp3', 'pdf', 'txt', 'xml', 'pdf-drm', 'online']
 
     #ks means - paperbook
+    supported_formats = ['cd', 'cd_mp3', 'dvd', 'epub', 'fb2', 'ks', 'mobi', 'mp3', 'pdf', 'txt', 'xml', 'pdf_drm', 'online', 'ebook_unknown', 'audiobook_unknown', 'unknown']
+
     supported_persons = ['author', 'lector', 'redactor', 'translator']
 
     format_convert_dict = {}

@@ -2,6 +2,7 @@ from connectors.generic import XMLConnector
 from sqlwrapper import *
 from connectors.generic import GenericBook
 
+#TODO: rewrite empik connector, using SalesMedia
 class Empik(XMLConnector):
 
     #dict of xml_tag -> db_column_name translations

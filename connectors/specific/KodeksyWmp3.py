@@ -19,6 +19,10 @@ class KodeksyWmp3(Ceneo):
         'isbns': ("./attrs/a[@name='EAN']", ''),
     }
 
+    def adjust_parse(self, dic):
+        #KodeksyWmp3 is in fact Kodeksy on CD :p
+        dic['formats'] = ['cd_mp3']
+
 #{'category': 31, 'isbn': 0, 'description': 4261, 'title': 37, 'url': 180, 'price': 5, 'cover': 45, 'external_id': 6}
 class KodeksyWmp3Book(GenericBook, Base):
     id = Column(Integer, primary_key = True)

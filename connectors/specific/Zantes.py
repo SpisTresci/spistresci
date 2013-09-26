@@ -40,7 +40,7 @@ class Zantes(XMLConnector):
                 dic[tag_name] = tag
 
     def adjust_parse(self, dic):
-        dic['formats'] = 'mp3'
+        dic['formats'] = ['mp3']
 
 Base = SqlWrapper.getBaseClass()
 

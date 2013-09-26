@@ -34,6 +34,7 @@ class Polona(OAIConnector):
 
         dic['is_available'] = 'domena publiczna' in dic['rights'].lower()
         dic['external_id'] = int(dic['url'].split('/')[4])
+        dic['formats'] = ['online']
 
 
 Base = SqlWrapper.getBaseClass()

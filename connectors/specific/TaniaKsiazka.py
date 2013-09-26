@@ -22,6 +22,10 @@ class TaniaKsiazka(XMLConnector):
         'isbns': ("./atribute[@Name='ISBN']", ''),
        }
 
+    #TODO: we don't know how to get formats (YET)
+    def adjust_parse(self, dic):
+        dic['formats'] = ['unknown']
+
 Base = SqlWrapper.getBaseClass()
 
 class TaniaKsiazkaBook(GenericBook, Base):

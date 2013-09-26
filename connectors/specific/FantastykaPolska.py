@@ -24,6 +24,11 @@ class FantastykaPolska(XMLConnector):
         'genre': ("./description/div[@class='%s']/ul/li/a" % genre_class_name, ''),
     }
 
+
+    def adjust_parse(self, dic):
+        #FantastykaPolska has epub, mobi and pdf, always
+        dic['formats'] = ['epub', 'mobi', 'pdf']
+
 class FantastykaPolskaBook(GenericBook, Base):
     id = Column(Integer, primary_key = True)
     title = Column(Unicode(64))        #44

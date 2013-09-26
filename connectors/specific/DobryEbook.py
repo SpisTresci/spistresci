@@ -22,6 +22,8 @@ class DobryEbook(XMLConnector):
 
     def adjust_parse(self, dic):
         self.create_id_from_url(dic)
+        #DobryEbook has only pdf books
+        dic['formats'] = ['pdf']
 
     def create_id_from_url(self, dic):
         dic['external_id'] = int(dic['url'].split("-")[-1].split(".")[0])

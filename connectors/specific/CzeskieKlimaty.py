@@ -23,6 +23,10 @@ class CzeskieKlimaty(Ceneo):
     }
 
 
+    def adjust_parse(self, dic):
+        #CzeskieKlimaty has printed books.
+        dic['formats'] = ['ks']
+
 class CzeskieKlimatyBook(GenericBook, Base):
     id = Column(Integer, primary_key = True)
 

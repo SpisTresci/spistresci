@@ -16,6 +16,13 @@ class Audioteka(Afiliant):
         ('lectors', (u"./n:attributes/n:attribute[n:name='Czyta']/n:value", '')),
     ])
 
+
+    def adjust_parse(self, dic):
+        #Audioteka has books in zipped mp3 and iTunes(m4b).
+        #We have this hardcoded. 
+        #For now iTunes format is skipped. (iPhone is now compatible with mp3 :O)
+        dic['formats'] = ['mp3']
+
 class AudiotekaBook(GenericBook, Base):
     #id = Column(Integer, primary_key = True)
     external_id = Column(Unicode(128), unique = True) #86

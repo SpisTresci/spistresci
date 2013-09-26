@@ -57,7 +57,7 @@ class Wikibooks(XMLConnector):
             dic["title"] = dic["title"].split("/")[-1]
 
         dic['publisher'] = dic['authors'] = "Wikibooks"
-        dic['formats'] = "PDF, EPUB, ODF, ONLINE"
+        dic['formats'] = ['pdf', 'epub', 'odf', 'online']
 
 class WikibooksBook(GenericBook, Base):
     id = Column(Integer, primary_key = True)

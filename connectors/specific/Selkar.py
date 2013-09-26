@@ -36,6 +36,7 @@ class Selkar(XMLConnector):
         'external_id': ('id', ''),
         'url': ('url', ''),
         'title': ('title', ''),
+        'raw_title': ('title', ''),
         'authors': ('author', ''),
         'translators': ('translator', ''),
         'cover': ('image', ''),
@@ -54,6 +55,17 @@ class Selkar(XMLConnector):
         'category': ('category_id', ''),
         'is_bestseller': ('bestseller', ''),
     }
+
+    
+    def adjust_parse(self, dic):
+        title = dic['title']
+        if title.startswith('EBOOK'):
+            dic['formats'] = ['ebook_unknown']
+            title = title.replace('EBOOK ','')
+            dic['title'] = title
+        else:
+            dic['formats'] = ['audiobook_unknown']
+            #TODO: get format from description
 
     def parse(self):
         self.save_time_of_("parse_start")
