@@ -8,7 +8,7 @@ class ZielonaSowa(Afiliant):
     xml_tag_dict = dict (Afiliant.xml_tag_dict.items() + [('authors', ("./n:attributes/n:attribute[n:name='Producent']/n:value", ''))])
 
     def adjust_parse(self, dic):
-        #all ZielonaSowa ebooks are pdg, audiobooks - mp3
+        #all ZielonaSowa ebooks are pdf, audiobooks - mp3
         if 'E-booki' in dic['category']:
             dic['formats'] = ['pdf']
         elif 'Audiobooki' in dic['category']:
