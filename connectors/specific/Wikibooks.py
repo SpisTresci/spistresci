@@ -9,8 +9,8 @@ class Wikibooks(XMLConnector):
     #dict of xml_tag -> db_column_name translations
     xml_tag_dict = {
         "@id":('external_id', ''),
-        "./a[@href]":('url', ''),
-        "./a[@title]":('title', ''),
+        "./a/@href":('url', ''),
+        "./a/@title":('title', ''),
     }
 
     def weHaveToGoDeeper(self, root, depth):

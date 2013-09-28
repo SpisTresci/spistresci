@@ -3,5 +3,12 @@
 #Whenever column name is changed in code, separate line is created at the end of the file.
 #Whenever column is fixed in database, apropriate line should be marked with '#' (hash)
 #Each line has format:
-#Connector,old_column,new_column (empty old_column means that column was added, empty new_column: column was removed)
-Selkar,,raw_title
+#Connector,-old_column,+new_column[,additional_chage] (empty old_column means that column was added, empty new_column: column was removed)
+Selkar,,+raw_title
+Publio,,+category
+Empik,ean,ean,Unicode(13->16)
+Empik,url,url,Unicode(65->512)
+Empik,cover,cover,Unicode(280->512)
+Empik,availability,availability,Unicode(10-32)
+Empik,externals_id,externals_id,Integer->Unicode(16)
+Empik,,+category

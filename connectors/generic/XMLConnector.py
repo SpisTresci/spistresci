@@ -107,23 +107,13 @@ class XMLConnector(GenericConnector):
                 book_dict[new_tag] = []
 
             book_dict[new_tag].append(self.makeDict(elem, xml_tag_dict))
-
+    
     def getValueFromElem(self, new_tag, default_0, elem, tag, book_dict):
         if elem != None:
             if book_dict.get(new_tag) == None:
                 book_dict[new_tag] = []
-
-            if "@" in tag.split('/')[-1]:
-                # from //path/tag[@attrib='value'] extract (u'attrib', u'value'), and from //path/tag[@attrib] extract (u'attrib', None)
-                regex = re.compile("\[?@(\w+)(?:='(.+?)')?\]?")
-                atrrib_value = regex.search(tag).groups()
-
-                if atrrib_value[1] == None and isinstance(elem, et._Element):
-                    book_dict[new_tag].append(unicode(elem.attrib.get(atrrib_value[0], default_0)))
-                elif atrrib_value[1] == None:
-                    book_dict[new_tag].append(unicode(elem))
-                else:
-                    book_dict[new_tag].append(unicode(elem.text if elem.text != "" and elem.text != None else default_0))
+            if isinstance(elem, basestring):
+                book_dict[new_tag].append(unicode(elem))
             else:
                 book_dict[new_tag].append(unicode(elem.text if elem.text != "" and elem.text != None else default_0))
 

@@ -14,7 +14,7 @@ class KodeksyWmp3(Ceneo):
         'url': ('@url', ''),
         'category': ('./cat', ''),
         'title': ('./name', ''),
-        'cover': ('./imgs/main[@url]', ''),
+        'cover': ('./imgs/main/@url', ''),
         'description': ('./desc', ''),
         'isbns': ("./attrs/a[@name='EAN']", ''),
     }

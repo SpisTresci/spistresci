@@ -13,7 +13,7 @@ class Gandalf(Ceneo):
         'availability': ('@avail', ''),
         'category':('./cat', ''),
         'title':('./name', ''),
-        'cover':("./imgs/main[@url]", ''),
+        'cover':("./imgs/main/@url", ''),
         'description':('./desc', ''),
 
         'authors':("./attrs/a[@name='Autor']", ''),
@@ -28,6 +28,7 @@ class Gandalf(Ceneo):
     def weHaveToGoDeeper(self, root, depth):
         return root.xpath("./group[@name='books']")[0]
 
+#{'category': 53, 'publisher': 61, 'description': 16, 'cover_type': 30, 'title': 208, 'url': 81, 'price': 6, 'page_count': 4, 'cover': 93, 'authors': 53, 'isbns': 30, 'formats': 4, 'external_id': 6, 'availability': 2}
 class GandalfBook(GenericBook, Base):
     #external_id
     url = Column(Unicode(128))          #81

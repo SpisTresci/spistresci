@@ -13,7 +13,7 @@ class Audeo(Ceneo):
         'availability': ('@avail', ''),
         'category':('./cat', ''),
         'title':('./name', ''),
-        'cover':("./imgs/main[@url]", ''),
+        'cover':("./imgs/main/@url", ''),
         'description':('./desc', ''),
         'publisher':("./attrs/a[@name='Producent']", ''),
         'authors':("./attrs/a[@name='Autor']", ''),

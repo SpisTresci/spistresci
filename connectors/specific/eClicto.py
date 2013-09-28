@@ -17,7 +17,7 @@ class eClicto(Ceneo):
 
         'category': ('./cat', ''),
         'title': ('./name', ''),
-        'cover': ('./imgs/main[@url]', ''),
+        'cover': ('./imgs/main/@url', ''),
         'description': ('./desc', ''),
         'authors': ("./attrs/a[@name='Autor']", ''),
         'isbns': ("./attrs/a[@name='ISBN']", ''),

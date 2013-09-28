@@ -19,7 +19,7 @@ class Latarnik(Ceneo):
 
         'category': ('./cat', ''),
         'title': ('./name', ''),
-        'cover': ('./imgs/main[@url]', ''),
+        'cover': ('./imgs/main/@url', ''),
         'description': ('./desc', ''),
         #'authors': ('', ''),  - autor jest umieszczony w drugim wierszu description
         #'nosnik': ('', ''),  - nosnik jest umieszczony w czwartym wierszu description

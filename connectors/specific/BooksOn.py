@@ -18,7 +18,7 @@ class BooksOn(Ceneo):
         'baset': ('@baset', 0), #???
         'category': ('./n:cat', ''),
         'title': ('./n:name', ''),
-        'cover': ('./n:imgs/n:main[@url]', ''),
+        'cover': ('./n:imgs/n:main/@url', ''),
         'description': ('./n:desc', ''),
         'authors': ("./n:attrs/n:a[@name='Autor']", ''),
     }

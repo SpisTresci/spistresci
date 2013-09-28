@@ -13,7 +13,7 @@ class Woblink(Ceneo):
         'availability': ('@avail', ''),
         'category': ('./cat', ''),
         'title': ('./name', ''),
-        'cover': ('./imgs/main[@url]', ''),
+        'cover': ('./imgs/main/@url', ''),
         'description': ('./desc', ''),
         'isbns': ("./attrs/a[@name='ISBN']", ''),
         'publisher': ("./attrs/a[@name='Wydawnictwo']", ''),

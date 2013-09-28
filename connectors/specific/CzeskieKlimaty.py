@@ -14,7 +14,7 @@ class CzeskieKlimaty(Ceneo):
         'title': ("./name", ''),
         'description': ("./desc", ''),
         'category': ("./cat", ''),
-        'cover': ("./imgs/main[@url]", ''),
+        'cover': ("./imgs/main/@url", ''),
         'authors': ("./attrs/a[@name='Autor']", ''),
         'isbns': ("./attrs/a[@name='ISBN']", ''),
         'page_count': ("./attrs/a[@name='Ilosc_stron']", ''),

@@ -16,7 +16,7 @@ class Publio(XMLConnector):
         'cover':('./imageUrl', ''),
         'isbns':('./isbns', ''),
         'publisher':('./company', ''),
-        'categories':('./categories/category', ''),
+        'category':('./categories/category', ''),
     }
 
 Base = SqlWrapper.getBaseClass()
@@ -31,6 +31,6 @@ class PublioBook(GenericBook, Base):
     cover = Column(Unicode(512))
     #isbns
     publisher = Column(Unicode(128))
-
+    category = Column(Unicode(128))
     #protection - TODO T331
     #categories - TODO T334

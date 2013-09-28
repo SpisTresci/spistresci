@@ -10,8 +10,8 @@ class ebooks43(XMLConnector):
     #dict of xml_tag -> db_column_name translations
     xml_tag_dict = {
         'title': ("./div[@class='book_box_title']/a", ''),
-        'url': ("./a[@href]", ''),
-        'cover': ("./a/img[@src]", ''),
+        'url': ("./a/@href", ''),
+        'cover': ("./a/img/@src", ''),
         'authors': ("./div[@class='book_box_autor']", ''),
         'formats': ("./div[@class='book_box_format']", ''),
         'description': ("./div[@class='book_box_desc']", ''),

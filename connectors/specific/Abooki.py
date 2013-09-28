@@ -17,7 +17,7 @@ class Abooki(FormatInTitleConnector):
         'title':('./name', ''),
         #this is to show user orginal (raw) title, cause we are changing it later
         'raw_title':('./name', ''),
-        'cover':("./imgs/main[@url]", ''),
+        'cover':("./imgs/main/@url", ''),
         'description':('./desc', ''),
         'authors':("./attrs/a[@name='Producent']", ''),
     }

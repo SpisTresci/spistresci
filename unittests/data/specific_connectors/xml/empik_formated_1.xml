@@ -1,14 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<products>
-  <product>
-    <name>Martwy wróg</name>
-    <productUrl><![CDATA[https://www.a4b-tracking.com/pl/stat-click-feed/47466439/33]]></productUrl>
-    <imageUrl>http://ecsmedia.pl/c/martwy-wrog-l-iext12729414.jpg</imageUrl>
-    <description>Sookie Stackhouse przyciąga kłopoty jak magnes. Nic więc dziwnego, że widzi jak ktoś podpala bar Merlotte’a, w którym pracuje. Wszyscy myślą, że winni są miejscowi przeciwnicy zmiennokształtnych, ale Sookie podejrzewa kogoś innego. Jakby tego było mało, jej kochanek Eryk Northman i jego „dziecko” Pam coś knują. Za wszelką cenę starają się nie dopuścić Sookie do tajemnicy, którą ona chce koniecznie poznać</description>
-    <price>32.49</price>
-    <availability/>
-    <ean>9788374802734</ean>
-    <isbn/>
-    <TDProductId>1235014021</TDProductId>
+<productFeed version="2.0">
+  <product id="p1066989119">
+    <name><![CDATA[Kilka minionych wieków]]></name>
+    <productURL>http://go.salesmedia.pl/aff_c?offer_id=162&amp;aff_id=2156&amp;source=offer_files_controller.php-841,object.php-119&amp;file_id=3562&amp;url=http%3A%2F%2Fwww.empik.com%2Fkilka-minionych-wiekow-salmonowicz-stanislaw%2Cp1066989119%2Cebooki-i-mp3-p%3Futm_source%3Dsalesmedia</productURL>
+    <imageURL>http://ecsmedia.pl/c/kilka-minionych-wiekow-d-iext21256021.jpg</imageURL>
+    <price>10.99</price>
+    <description><![CDATA[Książka stanowi zbiór rozproszonych dotąd szkiców i studiów wybitnego historyka dotyczących kilku ważnych problemów historii Polski. Niektóre z tych prac były publikowane za granicą bądź ogłaszane w czasopismach. Wszystkie dotyczą zagadnień polskiej historii nowożytnej, takich jak władza szlachcica w jego posiadłościach, tolerancja religijna, procesy o czary, a także problemów historii najnowszej – spraw i struktury Państwa Pod]]></description>
+    <fields>
+      <field name="author" value="Salmonowicz Stanisław"/>
+      <field name="format" value="PDF"/>
+      <field name="ean" value=""/>
+    </fields>
+    <categories>
+      <category name="Ebooki/Książka akademicka i fachowa/Nauki historyczne" categoryId=""/>
+    </categories>
+    <deliveryTime>
+   </deliveryTime>
   </product>
-</products>
+</productFeed>
