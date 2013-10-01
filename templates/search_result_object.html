@@ -5,7 +5,7 @@
           <div class="search_list_book">
             <img class="product_details" src="{{ product.cover }}" alt="" style="width:100px" onerror="this.onerror=null;this.src='{% static "img/default_cover.png" %}'" />
             <div class="s_title product_details">
-              <a>{{ product.title }}</a>
+              <a href="../book/test">{{ product.title }}</a>
             </div>
             <div class="s_author">
               {% for author in product.name %}{% if forloop.first %}<a href="">{{ author }}</a>{% else %}, <a href="">{{ author }}</a>{% endif %}{% endfor %}

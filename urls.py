@@ -8,7 +8,12 @@ from spistresci.search.views import STSearchView, STSearchQuerySet, hide_menu, S
 from spistresci.auth.views import logout, accounts_social_signup, accounts_profile
 from spistresci.register.views import register_user, egazeciarz_register_user
 from spistresci.monitor.views import monitor
+<<<<<<< HEAD
 from spistresci.auth.forms import RegistrationForm
+=======
+from spistresci.book.views import book
+
+>>>>>>> T413 WIPgit status book page templates and views to complete
 
 admin.autodiscover()
 
@@ -17,11 +22,11 @@ urlpatterns = patterns('',
      url('^logout/$', logout),
      url('^hide_menu/(?P<value>\d)/$', hide_menu),
      url('^monitor/$', monitor),
-
      url(r'^accounts/register/$',
                            RegistrationView.as_view(form_class=RegistrationForm),
                            name='registration_register'),
      url(r'^accounts/', include('registration.backends.default.urls')),
+     url('^book/(?P<book_id>\w+)/$', book),
 )
 
 #TODO: check thread safe version of this
