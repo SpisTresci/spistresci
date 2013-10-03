@@ -5,11 +5,11 @@
 #Each line has format:
 #Connector,-old_column,+new_column[,additional_chage] (empty old_column means that column was added, empty new_column: column was removed)
 Selkar,,+raw_title
-Publio,,+category
-Empik,ean,ean,Unicode(13->16)
-Empik,url,url,Unicode(65->512)
-Empik,cover,cover,Unicode(280->512)
-Empik,availability,availability,Unicode(10-32)
-Empik,externals_id,externals_id,Integer->Unicode(16)
-Empik,,+category
-Publio,category,category,Unicode(128->256)
+#Publio,,+category
+#Publio,category,category,Unicode(128->256) 			# ALTER TABLE PublioBook ADD category VARCHAR(256);
+#Empik,ean,ean,Unicode(13->16)
+#Empik,url,url,Unicode(65->512)
+#Empik,cover,cover,Unicode(280->512)
+#Empik,availability,availability,Unicode(10-32)
+#Empik,externals_id,externals_id,Integer->Unicode(16)
+#Empik,,+category						# drop table EmpikAuthor, EmpikBook, EmpikBookDescription, EmpikBookPrice, EmpikBooksAuthors, EmpikBooksFormats, EmpikFormat, EmpikISBN;
