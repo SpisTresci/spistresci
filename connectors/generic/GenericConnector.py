@@ -261,7 +261,7 @@ class GenericConnector(GenericBase, DataValidator):
     def getBookList(self, filename):
         pass
 
-    def _parse_measure_length(self):
+    def _parse_measure_length(self, adjust=True):
 
         book_number = 0
         for filename in self.fetched_files:
@@ -270,6 +270,10 @@ class GenericConnector(GenericBase, DataValidator):
                 if self.limit_books and book_number > self.limit_books:
                     break
                 book = self.makeDict(offer)
+
+                if adjust:
+                    self.adjust_parse(book)
+
                 self.measureLenghtDict(book)
 
         print self.max_len

@@ -12,3 +12,4 @@ Empik,cover,cover,Unicode(280->512)
 Empik,availability,availability,Unicode(10-32)
 Empik,externals_id,externals_id,Integer->Unicode(16)
 Empik,,+category
+Publio,category,category,Unicode(128->256)
