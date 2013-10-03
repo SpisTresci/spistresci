@@ -3,8 +3,8 @@
 {% with product=result %}
         <div class="search_list_item" data-records-count="{{ product.records|length }}">
           <div class="search_list_book">
-            <img class="product_details" src="{{ product.cover }}" alt="" style="width:100px" onerror="this.onerror=null;this.src='{% static "img/default_cover.png" %}'" />
-            <div class="s_title product_details">
+                <img class="product_details" src="{{ product.cover }}" alt="" style="width:100px" onerror="this.onerror=null;this.src='{% static "img/default_cover.png" %}'" />
+                <div class="s_title product_details">
               <a href="../book/test">{{ product.title }}</a>
             </div>
             <div class="s_author">

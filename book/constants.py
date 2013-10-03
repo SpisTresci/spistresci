@@ -1,79 +1,40 @@
 # -*- coding: utf-8 -*-
-#example
-#blogger_reviews=[
-#    {
-#        "blogger":{
-#            "firstName":u"Agnieszka",
-#            "lastName":u"Tatera",
-#            "gender":"female",
-#            "signature":u"agnieszka_tatera_signature.png",
-#        },
-#        "url":"http://ksiazkowo.wordpress.com/adres-strony-z-recenzja",
-#        "cover":"http://www.publio.pl/files/product/card/5d/5e/b4/85779-papierowy-ksiezyc-andrea-camilleri-1.jpg",
-#        "title":u"Excepteur sint occaecat cupidatat",
-#        "content":u"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-#        "rating":u"Zdecydowanie polecam!",
-#        "blogUrl":"http://ksiazkowo.wordpress.com",
-#        "blogName":u"Książkowo",
-#    },
-#    {
-#        "blogger":{
-#            "firstName":u"Anna",
-#            "lastName":u"Matusewicz",
-#            "gender":"female",
-#            "signature":u"anna_matusewicz_signature.png",
-#        },
-#        "url":"http://misja-ksiazka.pl/adres-strony-z-recenzja",
-#        "cover":"http://www.koobe.pl/static/33/33492/img/c528fb9a70b5241934b128b26438daff_226_0_n_100/978-83-7480-299-4.jpg",
-#        "title":u"Laboris nisi ut aliquip",
-#        "content":u"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-#        "rating":u"Przeciętna jak na tego autora.",
-#        "blogUrl":"http://misja-ksiazka.pl",
-#        "blogName":u"misja-ksiazka.pl",
-#    },
-#    {
-#        "blogger":{
-#            "firstName":u"Iza",
-#            "lastName":u"Raducka",
-#            "gender":"female",
-#            "signature":u"iza_raducka_signature.png",
-#        },
-#        "url":"http://czytadelko.blox.pl/adres-strony-z-recenzja",
-#        "cover":"http://www.publio.pl/files/product/card/32/25/74/66371-wycieczka-do-tindari-andrea-camilleri-1.jpg",
-#        "title":u"Laboris nisi ut aliquip",
-#        "content":u"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-#        "rating":u"Czytałam ją trzeci raz, więc nie jestem obiektywna ;)",
-#        "blogUrl":"http://czytadelko.blox.pl",
-#        "blogName":u"czytadelko.blox.pl",
-#    },
-#    {
-#        "blogger":{
-#            "firstName":u"Maja",
-#            "lastName":u"Sieńkowska",
-#            "gender":"female",
-#            "signature":u"maja_sieńkowska_signature.png",
-#        },
-#        "url":"http://wieczniezaczytana.pl/adres-strony-z-recenzja",
-#        "cover":"http://woblink.com/storable/pub_photos/190747-wiele-demonow.jpg",
-#        "title":u"Consectetur adipisicing elit",
-#        "content":u"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-#        "rating":u"Warto czytać do końca ;)",
-#        "blogUrl":"http://wieczniezaczytana.pl",
-#        "blogName":u"WiecznieZaczytana.pl",
-#    },
-#    {
-#        "blogger":{
-#            "firstName":u"Dariusz",
-#            "lastName":u"Dłużeń",
-#            "gender":"male",
-#            "signature":u"dariusz_dłużeń_signature.png",
-#        },
-#        "url":"http://alekulturka.com/adres-strony-z-recenzja",
-#        "cover":"http://1.bp.blogspot.com/-tPBP-LcjCvI/Ufkh6O2POgI/AAAAAAAAb10/rlvjoh6-9-w/s400/stephen-king-joyland-cover-okladka+(1).jpg",
-#        "title":u"Consectetur adipisicing elit",
-#        "content":u"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-#        "rating":u"4/6",
-#        "blogUrl":"http://alekulturka.com",
-#        "blogName":u"AleKulturka.com",
-#    },
-#]
+#3 sample books
+books = {
+    'kilka':
+    {
+     'id': 'kilka',
+     'title': u'Kilka minionych wieków',
+     'cover': u'http://ecsmedia.pl/c/kilka-minionych-wiekow-d-iext21256021.jpg',
+     'authors': [u'Salmonowicz Stanisław', u'Nie Wiem Kto'],
+     'description_short': u'Książka stanowi zbiór rozproszonych dotąd szkiców i studiów wybitnego historyka dotyczących kilku ważnych problemów historii Polski. Niektóre z tych prac były publikowane za granicą bądź ogłaszane w czasopismach.',
+     'producent': u'TAiWPN Universitas Kraków',
+     'rating': 80,
+    },
+    'szkolne':
+    {
+     'id': 'szkolne',
+     'title': u'Szkolne problemy uczniów',
+     'cover': 'http://ecsmedia.pl/c/szkolne-problemy-uczniow-d-iext18865161.jpg',
+     'authors': [u'Witkoś Maria',],
+     'description_short': u'Szkolne problemy uczniów  | Niniejsza książka jest zbiorem artykułów podejmujących niektóre aspekty szkolnych problemów uczniów. Powstała w odpowiedzi na zapotrzebowanie oddolne, jako wynik konsultacji, spotkań, pytań, wątpliwości czy próśb o konkretne propozycje rozwiązań uczniowskich kłopotów w nauce.',
+     'producent': u'Oficyna Wydawnicza IMPULS',
+     'rating': None
+    },
+    'aby':
+    {
+     'id': 'aby',
+     'title': u'Aby o nich nie zapomniano. Wspomnienia.',
+     'cover': 'http://ecsmedia.pl/c/aby-o-nich-nie-zapomniano-wspomnienia-d-iext18550070.jpg',
+     'authors': [u'Radożycki Jan',],
+     'description_short': u'Jan Radożycki (1911-2003), filolog klasyczny, tłumacz dzieł starożytnych (m.in. Józefa Flawiusza) i współczesnych',
+     'producent': u'My Book',
+     'rating': 0
+    }
+}
+
+book_descriptions = {
+    'kilka': u'Książka stanowi zbiór rozproszonych dotąd szkiców i studiów wybitnego historyka dotyczących kilku ważnych problemów historii Polski. Niektóre z tych prac były publikowane za granicą bądź ogłaszane w czasopismach. Wszystkie dotyczą zagadnień polskiej historii nowożytnej, takich jak władza szlachcica w jego posiadłościach, tolerancja religijna, procesy o czary, a także problemów historii najnowszej – spraw i struktury Państwa Podziemnego czy patologii społecznych, jakie przynosiły ze sobą okupacja niemiecka i sowiecka. Publikacja zawiera też szkic poruszający wciąż aktualny problem sporów wokół decyzji o powstaniu warszawskim.',
+    'szkolne': u'Szkolne problemy uczniów  | Niniejsza książka jest zbiorem artykułów podejmujących niektóre aspekty szkolnych problemów uczniów. Powstała w odpowiedzi na zapotrzebowanie oddolne, jako wynik konsultacji, spotkań, pytań, wątpliwości czy próśb o konkretne propozycje rozwiązań uczniowskich kłopotów w nauce – przedstawianych przez pracowników placówek szkolnych i opiekuńczych: nauczycieli, wychowawców, pedagogów szkolnych.',
+    'aby': u'Jan Radożycki (1911-2003), filolog klasyczny, tłumacz dzieł starożytnych (m.in. Józefa Flawiusza) i współczesnych, uhonorowany nagrodami Stowarzyszenia Tłumaczy Polskich oraz Polskiego PEN Clubu.  W niniejszych wspomnieniach opowiada o swoim życiu, które w dużej części przypadło na jeden z najbardziej tragicznych okresów w historii Polski. Swój udział w Kampanii Wrześniowej 1939 r. opłacił utratą oka, a uczestnictwo w ruchu oporu skazało go na wieloletnią tułaczkę i nieustającą ucieczkę.',
+}

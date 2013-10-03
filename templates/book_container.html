@@ -1,5 +1,5 @@
-{% load staticfiles %}
-    <div class="container">
+    {% load staticfiles %}
+    <div id=book_container class="container" data-book-id="{{ book.id }}">
       <div class="index_top_bg s_index_top_bg">
         <div class="index_top">
           <a href="/" class="logo">
@@ -15,22 +15,24 @@
                 </div>
               </div>
               <input id="id_submit" type="submit" value="SZUKAJ">
-              <!--<div class="search_more s_search_more">
-                <a href="">
-                  WYSZUKIWANIE ZAAWANSOWANE
-                </a>
-              </div>-->
             </form>
           </div>
         </div>
       </div>
       
 <!--    LEFT MENU    -->
-	{% include "search_filters.html" %}
+    <div class="s_left{% if isMenuHidden %} s_zip{% endif %}" id="s_left">
+    <div class="s_arrow_zip"></div>
+    <img class="product_details" src="{{ book.cover }}" alt="" style="width:200px" onerror="this.onerror=null;this.src='{% static "img/default_cover.png" %}'" />
+    </div>
 <!-- LEFT MENU END -->
-      <div class="s_right{% if isMenuHidden %} s_right2{% endif %}" id="s_right">
-        <div id="search_results">
-            {% include "search_results_list.html" %}
-        </div>
+     <div class="s_title product_details">
+     {{ book.title }}
+     </div>
+      <div class="s_author">
+      {% for author in book.authors%}{% if forloop.first %}<a href="">{{ author }}</a>{% else %}, <a href="">{{ author }}</a>{% endif %}{% endfor %}
       </div>
-   </div>
+
+      <div class="s_text"><b>Wydawnictwo:</b>{{ book.producent }}</div>
+      <div id="book_description" class="s_text">{{ book.description_short }}<a id="show_description">Czytaj całość »</a></div>
+    </div>
