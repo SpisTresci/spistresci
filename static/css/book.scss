@@ -1,0 +1,132 @@
+@import "mixin";
+
+
+$box-color: #F6F6F6;
+$box-border-color: #E3E3E3;
+
+$left-panel-width: 290px;
+$panel-border-width: 2px;
+
+.left_panel {
+    background-color: $box-color;
+    border-bottom: $panel-border-width solid $box-border-color;
+    border-right: $panel-border-width solid $box-border-color;
+    height: 600px;
+    width: $left-panel-width;
+}
+
+.top_right_panel {
+    background-color: $box-color;
+    border-bottom: $panel-border-width solid $box-border-color;
+    float: right;
+    @include calc_width(100%, $left-panel-width);
+}
+
+.main_container{
+    $padding: 20px;
+    float: right;
+    padding: $padding;
+    @include calc_width(100%, $left-panel-width + (2*$padding) + $panel-border-width);
+
+}
+
+.product_details{
+  $padding-top: 40px;
+
+  .top_right_panel{
+    padding-top: $padding-top;
+  }
+
+  .left_panel{
+    padding-top: $padding-top;
+  }
+
+  .title{
+    font-size:34px;
+    font-weight:bold;
+    text-decoration:none;
+  }
+
+  .authors{
+    margin-top: 20px;
+    font-size:24px;
+    font-weight:bold;
+    text-decoration:none;
+    a{
+      color: #000000;
+    }
+  }
+
+  .publisher{
+    font-size:20px;
+    span{
+      font-weight:bold;
+    }
+  }
+
+  .description{
+    margin: 20px 40px 0 0;
+  }
+
+  .filter_switcher{
+    float: right;
+    margin: 20px 40px 20px 0;
+  }
+
+  .cover{
+    width:  200px;
+    margin: auto;
+    display:block;
+    padding: 5px;
+    border: #e3e3e3 1px solid;
+  }
+
+  .rating{
+    margin-top: 20px;
+    img{
+      margin: 0 5px;
+    }
+    font-size:42px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .track{
+    margin: auto;
+    margin-top: 30px;
+    width: 220px;
+
+    input{
+      margin-top: 20px;
+      margin-left: 10px;
+      width: 65px;
+      height: 35px;
+      font-size: 20px;
+      padding-left: 10px;
+    }
+
+    .currency{
+      font-size: 24px;
+    }
+
+    .track_button{
+      width:80px;
+      height:27px;
+      background:url(../img/2btn_blue.png) no-repeat;
+      float: right;
+      color:white;
+      padding: 10px 0 0 10px;
+      font-weight:bold;
+      margin: 20px 10px 0 0;
+      text-align:left;
+      cursor:pointer;
+      img{
+        border: none;
+        float: right;
+        margin-left: -40px;
+        margin-right: 10px;
+        margin-top: -5px;
+      }
+    }
+  }
+}

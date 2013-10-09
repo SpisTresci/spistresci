@@ -2,6 +2,8 @@
 {% load staticfiles %}
 
 {% block title %}Spis Treści - wyniki wyszukiwania{% endblock title %}
-{% block container %} {% include "book_container.html" %} {% endblock container %}
+{% block css %}<link href="{% static "css/book.css" %}" rel="stylesheet" type="text/css">{% endblock css %}
+{% block container %} {% include "book_container2.html" %} {% endblock container %}
 {% block js %} <script type="text/javascript" src="{% static "js/book.js" %}"></script> {% endblock js %}
+{% block footer %}{% endblock footer %}
 

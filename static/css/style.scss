@@ -9,6 +9,8 @@
   font-style: normal;
 }*/
 
+@import "mixin";
+
 *{
   margin: 0;
   padding: 0;
@@ -257,13 +259,6 @@ a{
   color:#4c4c4c;
   font-size:19px;
   margin-top:30px;
-}
-
-@mixin calc_len($percent, $pixels, $vert:width){
-  #{$vert}: -moz-calc(#{$percent} - #{$pixels});
-  #{$vert}: -webkit-calc(#{$percent} - #{$pixels});
-  #{$vert}: -o-calc(#{$percent} - #{$pixels});
-  #{$vert}: calc(#{$percent} - #{$pixels});
 }
 
 .index_group{

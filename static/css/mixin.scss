@@ -1,0 +1,10 @@
+@mixin calc_len($percent, $pixels, $vert:width){
+  #{$vert}: -moz-calc(#{$percent} - #{$pixels});
+  #{$vert}: -webkit-calc(#{$percent} - #{$pixels});
+  #{$vert}: -o-calc(#{$percent} - #{$pixels});
+  #{$vert}: calc(#{$percent} - #{$pixels});
+}
+
+@mixin calc_width($percent, $pixels){
+  @include calc_len($percent, $pixels, width);
+}

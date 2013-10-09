@@ -1,0 +1,7 @@
+{% load staticfiles %}
+<img class="cover" src="{{ book.cover }}" alt="" onerror="this.onerror=null;this.src='{% static "img/default_cover.png" %}'" />
+<div class="rating"><div class="stars">{% for x in "12345" %}<img src="{% static "img/star_yellow.png" %}"/>{% endfor %}</div>4.35/5</div>
+<div class="track">
+    Trop książkę i poinformuj mnie, gdy cena spadnie poniżej:<br/>
+    <input value="10.00" /><span class="currency"> zł</span><div class="track_button"> TROP <img src="{% static "img/hand.png" %}" alt=""></div>
+</div>
