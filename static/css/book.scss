@@ -1,6 +1,3 @@
-@import "mixin";
-
-
 $box-color: #F6F6F6;
 $box-border-color: #E3E3E3;
 
@@ -15,63 +12,18 @@ $panel-border-width: 2px;
     width: $left-panel-width;
 }
 
-.top_right_panel {
-    background-color: $box-color;
-    border-bottom: $panel-border-width solid $box-border-color;
-    float: right;
-    @include calc_width(100%, $left-panel-width);
+$padding: 20px;
+$padding-top: 40px;
+
+.wrap_panel{
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    padding-left: $left-panel-width;
 }
 
-.main_container{
-    $padding: 20px;
-    float: right;
-    padding: $padding;
-    @include calc_width(100%, $left-panel-width + (2*$padding) + $panel-border-width);
-
-}
-
-.product_details{
-  $padding-top: 40px;
-
-  .top_right_panel{
-    padding-top: $padding-top;
-  }
-
-  .left_panel{
-    padding-top: $padding-top;
-  }
-
-  .title{
-    font-size:34px;
-    font-weight:bold;
-    text-decoration:none;
-  }
-
-  .authors{
-    margin-top: 20px;
-    font-size:24px;
-    font-weight:bold;
-    text-decoration:none;
-    a{
-      color: #000000;
-    }
-  }
-
-  .publisher{
-    font-size:20px;
-    span{
-      font-weight:bold;
-    }
-  }
-
-  .description{
-    margin: 20px 40px 0 0;
-  }
-
-  .filter_switcher{
-    float: right;
-    margin: 20px 40px 20px 0;
-  }
+.left_panel{
+  padding-top: $padding-top;
 
   .cover{
     width:  200px;
@@ -129,4 +81,55 @@ $panel-border-width: 2px;
       }
     }
   }
+}
+
+.top_right_panel {
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+
+  padding: $padding;
+  padding-top: $padding-top;
+  float: right;
+  background-color: $box-color;
+  border-bottom: $panel-border-width solid $box-border-color;
+
+  .title{
+    font-size:34px;
+    font-weight:bold;
+    text-decoration:none;
+  }
+
+  .authors{
+    margin-top: 20px;
+    font-size:24px;
+    font-weight:bold;
+    text-decoration:none;
+    a{
+      color: #000000;
+    }
+  }
+
+  .publisher{
+    font-size:20px;
+    span{
+      font-weight:bold;
+    }
+  }
+
+  .description{
+    margin: 20px 40px 0 0;
+  }
+
+  .filter_switcher{
+    float: right;
+    margin: 20px 40px 20px 0;
+  }
+}
+
+.main_container{
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+
+    float: right;
+    padding: $padding;
 }

@@ -19,20 +19,14 @@
           </div>
         </div>
       </div>
-      
-<!--    LEFT MENU    -->
-    <div class="s_left{% if isMenuHidden %} s_zip{% endif %}" id="s_left">
-    <div class="s_arrow_zip"></div>
-    <img class="product_details" src="{{ book.cover }}" alt="" style="width:200px" onerror="this.onerror=null;this.src='{% static "img/default_cover.png" %}'" />
-    </div>
-<!-- LEFT MENU END -->
-     <div class="s_title product_details">
-     {{ book.title }}
-     </div>
-      <div class="s_author">
-      {% for author in book.authors%}{% if forloop.first %}<a href="">{{ author }}</a>{% else %}, <a href="">{{ author }}</a>{% endif %}{% endfor %}
-      </div>
 
-      <div class="s_text"><b>Wydawnictwo:</b>{{ book.producent }}</div>
-      <div id="book_description" class="s_text">{{ book.description_short }}<a id="show_description">Czytaj całość »</a></div>
+        <div class='wrap_panel product_details'>
+            <div class='top_right_panel'>
+                {% block top_riht_panel %} {% include "book_top_right_panel.html" %}  {% endblock top_riht_panel %}
+            </div>
+            <div class='main_container'>pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris. Integer in mauris eu nibh euismod gravida. Duis ac tellus et risus vulputate vehicula. Donec lobortis risus a elit. Etiam tempor. Ut ullamcorper, ligula eu tempor congue, eros est euismod turpis, id tincidunt sapien risus a quam. Maecenas fermentum consequat mi. Donec fermentum. Pellentesque malesuada nulla a mi. Duis sapien sem, aliquet nec, commodo eget, consequat quis, neque. Aliquam faucibus, elit ut dictum aliquet, felis nisl adipiscing sapien, sed malesuada diam lacus eget erat. Cras mollis scelerisque nunc. Nullam arcu. Aliquam consequat. Curabitur augue lorem, dapibus quis, laoreet et, pretium ac, nisi. Aenean magna nisl, mollis quis, molestie eu, feugiat in, orci. In hac habitasse platea dictumst.</div>
+        </div>
+        <div class='left_panel'>
+            {% block left_panel %} {% include "book_left_panel.html" %}{% endblock left_panel %}
+        </div>
     </div>

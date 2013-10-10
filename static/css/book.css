@@ -5,87 +5,88 @@
   height: 600px;
   width: 290px; }
 
+.wrap_panel {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-left: 290px; }
+
+.left_panel {
+  padding-top: 40px; }
+  .left_panel .cover {
+    width: 200px;
+    margin: auto;
+    display: block;
+    padding: 5px;
+    border: #e3e3e3 1px solid; }
+  .left_panel .rating {
+    margin-top: 20px;
+    font-size: 42px;
+    font-weight: bold;
+    text-align: center; }
+    .left_panel .rating img {
+      margin: 0 5px; }
+  .left_panel .track {
+    margin: auto;
+    margin-top: 30px;
+    width: 220px; }
+    .left_panel .track input {
+      margin-top: 20px;
+      margin-left: 10px;
+      width: 65px;
+      height: 35px;
+      font-size: 20px;
+      padding-left: 10px; }
+    .left_panel .track .currency {
+      font-size: 24px; }
+    .left_panel .track .track_button {
+      width: 80px;
+      height: 27px;
+      background: url(../img/2btn_blue.png) no-repeat;
+      float: right;
+      color: white;
+      padding: 10px 0 0 10px;
+      font-weight: bold;
+      margin: 20px 10px 0 0;
+      text-align: left;
+      cursor: pointer; }
+      .left_panel .track .track_button img {
+        border: none;
+        float: right;
+        margin-left: -40px;
+        margin-right: 10px;
+        margin-top: -5px; }
+
 .top_right_panel {
-  background-color: #f6f6f6;
-  border-bottom: 2px solid #e3e3e3;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+  padding: 20px;
+  padding-top: 40px;
   float: right;
-  width: -moz-calc(100% - 290px);
-  width: -webkit-calc(100% - 290px);
-  width: -o-calc(100% - 290px);
-  width: calc(100% - 290px); }
+  background-color: #f6f6f6;
+  border-bottom: 2px solid #e3e3e3; }
+  .top_right_panel .title {
+    font-size: 34px;
+    font-weight: bold;
+    text-decoration: none; }
+  .top_right_panel .authors {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none; }
+    .top_right_panel .authors a {
+      color: #000000; }
+  .top_right_panel .publisher {
+    font-size: 20px; }
+    .top_right_panel .publisher span {
+      font-weight: bold; }
+  .top_right_panel .description {
+    margin: 20px 40px 0 0; }
+  .top_right_panel .filter_switcher {
+    float: right;
+    margin: 20px 40px 20px 0; }
 
 .main_container {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
   float: right;
-  padding: 20px;
-  width: -moz-calc(100% - 332px);
-  width: -webkit-calc(100% - 332px);
-  width: -o-calc(100% - 332px);
-  width: calc(100% - 332px); }
-
-.product_details .top_right_panel {
-  padding-top: 40px; }
-.product_details .left_panel {
-  padding-top: 40px; }
-.product_details .title {
-  font-size: 34px;
-  font-weight: bold;
-  text-decoration: none; }
-.product_details .authors {
-  margin-top: 20px;
-  font-size: 24px;
-  font-weight: bold;
-  text-decoration: none; }
-  .product_details .authors a {
-    color: #000000; }
-.product_details .publisher {
-  font-size: 20px; }
-  .product_details .publisher span {
-    font-weight: bold; }
-.product_details .description {
-  margin: 20px 40px 0 0; }
-.product_details .filter_switcher {
-  float: right;
-  margin: 20px 40px 20px 0; }
-.product_details .cover {
-  width: 200px;
-  margin: auto;
-  display: block;
-  padding: 5px;
-  border: #e3e3e3 1px solid; }
-.product_details .rating {
-  margin-top: 20px;
-  font-size: 42px;
-  font-weight: bold;
-  text-align: center; }
-  .product_details .rating img {
-    margin: 0 5px; }
-.product_details .track {
-  margin: auto;
-  margin-top: 30px;
-  width: 220px; }
-  .product_details .track input {
-    margin-top: 20px;
-    margin-left: 10px;
-    width: 65px;
-    height: 35px;
-    font-size: 20px;
-    padding-left: 10px; }
-  .product_details .track .currency {
-    font-size: 24px; }
-  .product_details .track .track_button {
-    width: 80px;
-    height: 27px;
-    background: url(../img/2btn_blue.png) no-repeat;
-    float: right;
-    color: white;
-    padding: 10px 0 0 10px;
-    font-weight: bold;
-    margin: 20px 10px 0 0;
-    text-align: left;
-    cursor: pointer; }
-    .product_details .track .track_button img {
-      border: none;
-      float: right;
-      margin-left: -40px;
-      margin-right: 10px;
-      margin-top: -5px; }
+  padding: 20px; }
