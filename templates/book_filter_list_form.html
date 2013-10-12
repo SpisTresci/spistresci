@@ -1,0 +1,14 @@
+          {% for group in filter.data %}
+              <div class="filter_section" >
+                <form class="multiple_select">
+                <select name="{{filter.name}}" multiple>
+                  {% for item in group.items %}
+                  <option value="{{ item.name }}">{{ item.name }}</option>
+                  {% endfor %}
+                </select>
+                </form>
+              </div>
+          {% endfor %}
+
+
+

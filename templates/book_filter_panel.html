@@ -1,0 +1,17 @@
+<div class="filter_panel">
+    <div class="filter_row">
+        {% for filter in filters %}<div class="filter_box_header table_cell"> {{filter.name}} </div>{% endfor %}
+    </div>
+    <div class="filter_row">
+        {% for filter in filters %}<div class="filter_box_bar1 table_cell"></div>{% endfor %}
+    </div>
+    <div class="filter_row">
+        {% for filter in filters %}<div class="filter_box_bar2 table_cell"></div>{% endfor %}
+    </div>
+    <div class="filter_row">
+        {% for filter in filters %}<div class="filter_box table_cell">{% include filter.template_file %}</div>{% endfor %}
+    </div>
+    <div class="filter_row">
+        {% for filter in filters %}<div class="filter_box_clear table_cell" ><div class="filter_clear_button" >WYCZYŚĆ</div></div>{% endfor %}
+    </div>
+</div>

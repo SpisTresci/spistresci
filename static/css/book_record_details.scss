@@ -1,0 +1,156 @@
+$records-background-color: #F6F6F6;
+$records-font-color: #464646;
+
+.table_cell{
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  display: table-cell;
+  width:20%;
+}
+
+.record_table_cell{
+  @extend .table_cell;
+
+  vertical-align:middle;
+  text-align: center;
+  font-size:12px;
+  font-weight:bold;
+  color:$records-font-color;
+}
+
+.records_panel{
+  display: table;
+  border-collapse: collapse;
+  width:1000px;
+}
+
+.records_headers{
+  display:table-row;
+
+  margin-bottom: 10px;
+  height:25px;
+  color:#464646;
+  font-size:13px;
+  font-weight:bold;
+
+  padding-top:10px;
+  text-align: center;
+  cursor:pointer;
+  position:relative;
+
+  .header_box{
+    @extend .table_cell;
+    //display:table-cell;
+    $color: #b2b2b2;
+    background-color: $color;
+    //border-right: $filter-border-width solid $color;
+    //border-left: $filter-border-width solid $color;
+
+    height:15px;
+    margin-left:18px;
+    padding:5px;
+    cursor:pointer;
+    text-align:center;
+
+    .sortable{
+      border-bottom:3px solid #8D8D8D;
+      display: inline-block;
+      padding: 5px;
+      &:hover{
+        color: #FFFFFF;
+      }
+    }
+  }
+}
+
+.record{
+  display: table-row;
+  background: $records-background-color;
+  border-bottom:1px solid #8D8D8D;
+
+  .service_logo_box{
+    @extend .record_table_cell;
+
+    img{
+      border: none;
+      margin: 15px;
+      margin-top: 30px;
+      width: 150px;
+      height: 75px;
+    }
+  }
+
+  .record_formats{
+    @extend .record_table_cell;
+
+    padding-left: 10px;
+    text-align: left;
+  }
+
+  .record_info{
+    @extend .record_table_cell;
+  }
+
+  .payment_info{
+    @extend .record_table_cell;
+  }
+
+  .record_price{
+    @extend .record_table_cell;
+
+    color:#225b98;
+    font-size:30px;
+    width:120px;
+    font-weight:100;
+    text-align:center;
+    vertical-align:middle;
+
+    .shipment{
+      margin-top: -5px;
+      margin-bottom: 7px;
+      font-weight:normal;
+      font-size:12px;
+      display: block;
+    }
+
+    a{
+      background:url(../img/2btn_red_big.png) no-repeat;
+      width:108px;
+      height:27px;
+      color:white;
+      font-size:15px;
+      text-align:center;
+      padding-top:7px;
+      font-weight:bold;
+      display: block;
+      margin: auto;
+    }
+
+    a:hover{
+      color:#464646;
+    }
+  }
+}
+
+.records_filtered_out{
+  width:1000px;
+  background:  $records-background-color;
+  height:25px;
+  font-size:12px;
+  font-weight:bold;
+  color: $records-font-color;
+  float:left;
+  border-bottom: 3px solid #8D8D8D;
+  padding-bottom: 8px;
+
+  .info{
+    margin:10px;
+    margin-left:15px;
+  }
+}
+
+
+
+body{
+  height: 2500px;
+}

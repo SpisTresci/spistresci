@@ -1,0 +1,19 @@
+{% load mathtags %}
+          {% for group in filter.data %}
+              <div class="filter_section{% if forloop.last %} filter_section_last{% endif %}" >
+                <div id="menu_arrow{{ forloop.counter }}" class="filter_section_arrow"></div>
+                <div class="filter_section_header">{{ group.name }}</div>
+                <ul id="sub{{ forloop.counter }}">
+                  {% for item in group.items %}
+                  <li class="filter_{{ filter.name_id }}{% if item.isFilterActive %} act{% endif %}" data-q="{{ item.name }}">
+                    <a>
+                        {{ item.name }}
+                    </a>
+                  </li>
+                  {% endfor %}
+                </ul>
+              </div>
+          {% endfor %}
+
+
+

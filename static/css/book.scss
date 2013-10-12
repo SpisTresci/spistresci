@@ -127,9 +127,14 @@ $padding-top: 40px;
 }
 
 .main_container{
-    -moz-box-sizing: content-box;
-    box-sizing: content-box;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
 
-    float: right;
-    padding: $padding;
+  float: right;
+  padding: $padding;
+  width: 100%;
 }
+
+@import "book_filters";
+@import "book_record_details";
+
