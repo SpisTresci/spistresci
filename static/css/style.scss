@@ -504,10 +504,17 @@ $color_font_blue:#225b98;
   }
 }
 
+.review_sub_box_wrapper{
+  padding-left: 120px;
+  width: 100%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 .review_sub_box{
   margin-left: 30px;
   margin-top: 9px;
-  @include calc_len(100%, 190px, width);
+
   height: 200px;
   border:7px solid #e3e3e3;
   float: left;
@@ -536,9 +543,6 @@ $color_font_blue:#225b98;
 
 
 .review_sub_box_content{
-
-  @include calc_len(100%, 60px, height);
-  @include calc_len(100%, 30px, width);
   margin: 15px 15px 0 15px;
   img{
     float: left;
@@ -560,10 +564,15 @@ $color_font_blue:#225b98;
 }
 
 .review_sub_box_footer{
+  float: right;
+
   height: 30px;
   line-height: 40px;
   width: 100%;
-  padding-left: 15px;
+  padding-left: 25px;
+
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
 
   text:{
     decoration: none;

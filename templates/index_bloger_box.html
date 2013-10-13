@@ -1,28 +1,29 @@
 {% load staticfiles %}
-          <div class="index_blogger_box">
-            <div class="blogger_sub_box">
-                <img src="{% static "img/bloggers/"|add:review.blogger.firstName|add:"_"|add:review.blogger.lastName|add:"_100x100.jpg"|lower %}" style="width: 91px; height: 91px; display: block;" alt="" />
-                <div class="blogger_name">
-                {{ review.blogger.firstName }}<br/>
-                {{ review.blogger.lastName }}
-                </div>
-                <div class="blogger_blog">
+<div class="index_blogger_box">
+    <div class="blogger_sub_box">
+        <img src="{% static "img/bloggers/"|add:review.blogger.firstName|add:"_"|add:review.blogger.lastName|add:"_100x100.jpg"|lower %}" style="width: 91px; height: 91px; display: block;" alt="" />
+        <div class="blogger_name">
+            {{ review.blogger.firstName }}<br/>
+            {{ review.blogger.lastName }}
+        </div>
+        <div class="blogger_blog">
+            Autor{% if review.blogger.gender == "female" %}ka{% endif %} bloga:<br/>
+            <a href="{{ review.blogUrl }}">{{ review.blogName }}</a>
+        </div>
+    </div>
+    <div class="review_sub_box_wrapper">
+        <div class="review_sub_box">
+            <div class="review_sub_box_content">
+                <img class="blogger_review_arrow" src="{% static "img/blogger_review_arrow.png" %}" />
 
-                    Autor{% if review.blogger.gender == "female" %}ka{% endif %} bloga:<br/>
-                    <a href="{{ review.blogUrl }}">{{ review.blogName }}</a>
-                </div>
+                <a href="/search/?q={{ review.title }}"><img src="{{ review.cover }}" style="width: 91px; height: 137px" alt="" /></a>
+                <h2>{{ review.title }}</h2>
+                {{ review.content }}
+                <a href="{{ review.url }}">Czytaj całość »</a>
             </div>
-            <div class="review_sub_box">
-               <div class="review_sub_box_content">
-                 <img class="blogger_review_arrow" src="{% static "img/blogger_review_arrow.png" %}" />
-
-                 <a href="/search/?q={{ review.title }}"><img src="{{ review.cover }}" style="width: 91px; height: 137px" alt="" /></a>
-                   <h2>{{ review.title }}</h2>
-                    {{ review.content }}
-                   <a href="{{ review.url }}">Czytaj całość »</a>
-               </div>
-               <div class="review_sub_box_footer">
+            <div class="review_sub_box_footer">
                 <b>Moja ocena:</b> {{ review.rating }}<img src="{% static "img/bloggers/"|add:review.blogger.signature %}" alt="" />
-               </div>
             </div>
-          </div>
+        </div>
+    </div>
+</div>

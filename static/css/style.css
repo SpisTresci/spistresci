@@ -458,13 +458,15 @@ a {
     .blogger_sub_box .blogger_blog a {
       color: #225b98; }
 
+.review_sub_box_wrapper {
+  padding-left: 120px;
+  width: 100%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
 .review_sub_box {
   margin-left: 30px;
   margin-top: 9px;
-  width: -moz-calc(100% - 190px);
-  width: -webkit-calc(100% - 190px);
-  width: -o-calc(100% - 190px);
-  width: calc(100% - 190px);
   height: 200px;
   border: 7px solid #e3e3e3;
   float: left;
@@ -480,14 +482,6 @@ a {
     margin-left: -50px; }
 
 .review_sub_box_content {
-  height: -moz-calc(100% - 60px);
-  height: -webkit-calc(100% - 60px);
-  height: -o-calc(100% - 60px);
-  height: calc(100% - 60px);
-  width: -moz-calc(100% - 30px);
-  width: -webkit-calc(100% - 30px);
-  width: -o-calc(100% - 30px);
-  width: calc(100% - 30px);
   margin: 15px 15px 0 15px; }
   .review_sub_box_content img {
     float: left;
@@ -501,10 +495,13 @@ a {
     color: #225b98; }
 
 .review_sub_box_footer {
+  float: right;
   height: 30px;
   line-height: 40px;
   width: 100%;
-  padding-left: 15px;
+  padding-left: 25px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
   text-decoration: none;
   text-align: left; }
   .review_sub_box_footer img {
