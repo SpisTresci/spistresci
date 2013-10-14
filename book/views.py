@@ -12,6 +12,7 @@ def book(request, book_id):
     authorization(request, c)
     c['request'] = request
     c['book'] = get_book(book_id)
+    c['book_description'] = get_book_description(book_id)
 
     c['filters'] = [
                             {

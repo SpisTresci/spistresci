@@ -5,10 +5,10 @@
 {% for author in book.authors%}{% if forloop.first %}<a href="">{{ author }}</a>{% else %}, <a href="">{{ author }}</a>{% endif %}{% endfor %}
 </div>
 <div class="publisher">
-<span>Wydawnictwo:</span> Prószyński i Spółka{{ book.publisher }}
+<span>Wydawnictwo: </span>{{ book.producent }}
 </div>
 <div class="description">
-Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris. Integer in mauris eu nibh euismod gravida. Duis ac tellus et risus vulputate vehicula. Donec lobortis risus a elit. Etiam tempor. Ut ullamcorper, ligula eu tempor congue, eros est euismod turpis, id tincidunt sapien risus a quam. Maecenas fermentum consequat mi. Donec fermentum. Pellentesque malesuada nulla a mi. Duis sapien sem, aliquet nec, commodo eget, consequat quis, neque. Aliquam faucibus, elit ut dictum aliquet, felis nisl adipiscing sapien, sed malesuada diam lacus eget erat. Cras mollis scelerisque nunc. Nullam arcu. Aliquam consequat. Curabitur augue lorem, dapibus quis, laoreet et, pretium ac, nisi. Aenean magna nisl, mollis quis, molestie eu, feugiat in, orci. In hac habitasse platea dictumst.
-    <a href="#">Czytaj dalej.</a>
+   {{ book.description_short }}
+    <span class="description">Czytaj dalej.</span>
 </div>
 <div class="filter_switcher"><a href="#">Pokaż filtry</a></div>
