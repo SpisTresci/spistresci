@@ -17,37 +17,37 @@ def book(request, book_id):
                             {
                                 'name':'SERWISY',
                                 'name_id':'services',
-                                'template_file':'book_filter_list_form.html',
+                                'template_file':'filter_multiselect_list.html',
                                 'data': loadFilterState(None, {'Wszystkie':['Abook', ' Audeo', ' Audiobook', ' Audioteka', ' Bezdroza','Abooki', ' Audeo', ' Audiobook', ' Audioteka', ' Bezdroza', ' BezKartek']}, "services")
                             },
                             {
                                 'name':'FORMATY',
                                 'name_id':'formats',
-                                'template_file':'book_filter_list.html',
+                                'template_file':'filter_bullet_list.html',
                                 'data':loadFilterState(None, supported_formats, "formats")
                             },
                             {
                                 'name':'',
                                 'name_id':'services',
-                                'template_file':'book_filter_list.html',
+                                'template_file':'filter_bullet_list.html',
                                 'data': loadFilterState(None, {}, "services")
                             },
                             {
                                 'name':'SPOSÓB PŁATNOŚCI',
                                 'name_id':'formats',
-                                'template_file':'book_filter_list.html',
+                                'template_file':'filter_bullet_list.html',
                                 'data':loadFilterState(None, {"Przez serwis":["DotPay", "ePrzelewy", "PayU", "Przelewy24.pl", "transferuj.pl", "YetiPay", "mPay", "SkyCash", "SMS", "PayPal", "karty płatnicze", "Przelewy24.pl"]}, "formats")
                             },
                             {
                                 'name':'SERWISY',
                                 'name_id':'services',
-                                'template_file':'book_filter_list.html',
+                                'template_file':'filter_bullet_list.html',
                                 'data': loadFilterState(None, {'Wszystkie':['Abooki', ' Audeo', ' Bezdroza', ' BezKartek']}, "services")
                             },
 #                            {
 #                                'name':'CENA',
 #                                'name_id':'price',
-#                                'template_file':'book_filter_price.html',
+#                                'template_file':'filter_price.html',
 #                                'data':self.loadFilterPriceState(['from', 'to'])
 #                            },
                    ]
@@ -75,7 +75,7 @@ def book(request, book_id):
     "filtered_formats":['PDF', 'MOBI', 'EPUB'],
     }
 
-    return render_to_response('book.html', c)
+    return render_to_response('book/index.html', c)
 
 def book_description(request, book_id):
     return HttpResponse(get_book_description(book_id))

@@ -1,12 +1,12 @@
 {% load mathtags %}
-        <div class="s_left_box act" style="width: 230px">
+        <div class="s_left_box act" style="width: 230px; float:left; margin-top: -60px">
           <div class="s_left_blue">
             {{filter.name}}
             <div class="s_left_arrow">
             </div>
           </div>
           {% for group in filter.data %}
-          <div class="s_left_hide{% if forloop.last %} s_left_hide_last{% endif %}" >
+          <div class="s_left_hide {% if forloop.last %} s_left_hide_last{% endif %}" >
             <div id="menu_arrow{{ forloop.counter }}" class="s_left_cat_arrow">
             </div>
             <div class="s_left_cat">

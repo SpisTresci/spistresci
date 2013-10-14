@@ -1,4 +1,4 @@
-.left_panel {
+.L_left_panel {
   background-color: #f6f6f6;
   border-bottom: 2px solid #e3e3e3;
   border-right: 2px solid #e3e3e3;
@@ -10,35 +10,35 @@
   box-sizing: border-box;
   padding-left: 290px; }
 
-.left_panel {
+.L_left_panel {
   padding-top: 40px; }
-  .left_panel .cover {
+  .L_left_panel .cover {
     width: 200px;
     margin: auto;
     display: block;
     padding: 5px;
     border: #e3e3e3 1px solid; }
-  .left_panel .rating {
+  .L_left_panel .rating {
     margin-top: 20px;
     font-size: 42px;
     font-weight: bold;
     text-align: center; }
-    .left_panel .rating img {
+    .L_left_panel .rating img {
       margin: 0 5px; }
-  .left_panel .track {
+  .L_left_panel .track {
     margin: auto;
     margin-top: 30px;
     width: 220px; }
-    .left_panel .track input {
+    .L_left_panel .track input {
       margin-top: 20px;
       margin-left: 10px;
       width: 65px;
       height: 35px;
       font-size: 20px;
       padding-left: 10px; }
-    .left_panel .track .currency {
+    .L_left_panel .track .currency {
       font-size: 24px; }
-    .left_panel .track .track_button {
+    .L_left_panel .track .track_button {
       width: 80px;
       height: 27px;
       background: url(../img/2btn_blue.png) no-repeat;
@@ -49,14 +49,14 @@
       margin: 20px 10px 0 0;
       text-align: left;
       cursor: pointer; }
-      .left_panel .track .track_button img {
+      .L_left_panel .track .track_button img {
         border: none;
         float: right;
         margin-left: -40px;
         margin-right: 10px;
         margin-top: -5px; }
 
-.top_right_panel {
+.L_top_panel {
   -moz-box-sizing: inherit;
   box-sizing: inherit;
   padding: 20px;
@@ -64,24 +64,24 @@
   float: right;
   background-color: #f6f6f6;
   border-bottom: 2px solid #e3e3e3; }
-  .top_right_panel .title {
+  .L_top_panel .title {
     font-size: 34px;
     font-weight: bold;
     text-decoration: none; }
-  .top_right_panel .authors {
+  .L_top_panel .authors {
     margin-top: 20px;
     font-size: 24px;
     font-weight: bold;
     text-decoration: none; }
-    .top_right_panel .authors a {
+    .L_top_panel .authors a {
       color: #000000; }
-  .top_right_panel .publisher {
+  .L_top_panel .publisher {
     font-size: 20px; }
-    .top_right_panel .publisher span {
+    .L_top_panel .publisher span {
       font-weight: bold; }
-  .top_right_panel .description {
+  .L_top_panel .description {
     margin: 20px 40px 0 0; }
-  .top_right_panel .filter_switcher {
+  .L_top_panel .filter_switcher {
     float: right;
     margin: 20px 40px 20px 0; }
 

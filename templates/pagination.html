@@ -1,12 +1,12 @@
 {% load mathtags %}
-
+<div class="pagination">
 {% if page.has_previous or page.has_next %}
 
     {% if page.number > 1 %}
-        <a class="pageLink" href="" data-p="{{ page.number|sub:"1"}}"><div class="page_img page_img2"></div></a>
+        <a class="pageLink" href="" data-p="{{ page.number|sub:"1"}}"><div class="page_img page_img2 page_number_img"></div></a>
     {% endif %}
 
-    <div class="page_number">
+    <div class="page_number page_number_text">
 
         <a class="pageLink{% if page.number == 1 %} page_active_number{% endif %}" href="" data-p="1">1</a>
 
@@ -35,12 +35,13 @@
     </div>
 
     {% if page.number < page.paginator.num_pages %}
-        <a class="pageLink" href="" data-p="{{ page.number|add:"1"}}"><div class="page_img page_img3"></div></a>
+        <a class="pageLink" href="" data-p="{{ page.number|add:"1"}}"><div class="page_img page_img3 page_number_img"></div></a>
     {% endif %}
 
-    <div class="page_number">
+    <div class="page_number page_number_input">
         Idź do
         <input type="text" class="pageLink page_active_number" data-p="{{ page.number }}" value="{{ page.number }}"/>
     </div>
 
 {% endif %}
+</div>

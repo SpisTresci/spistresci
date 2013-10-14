@@ -4,7 +4,7 @@ $box-border-color: #E3E3E3;
 $left-panel-width: 290px;
 $panel-border-width: 2px;
 
-.left_panel {
+.L_left_panel {
     background-color: $box-color;
     border-bottom: $panel-border-width solid $box-border-color;
     border-right: $panel-border-width solid $box-border-color;
@@ -22,7 +22,7 @@ $padding-top: 40px;
     padding-left: $left-panel-width;
 }
 
-.left_panel{
+.L_left_panel{
   padding-top: $padding-top;
 
   .cover{
@@ -83,7 +83,7 @@ $padding-top: 40px;
   }
 }
 
-.top_right_panel {
+.L_top_panel {
   -moz-box-sizing: inherit;
   box-sizing: inherit;
 

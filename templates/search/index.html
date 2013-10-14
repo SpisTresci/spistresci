@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block title %}Spis Treści - wyniki wyszukiwania{% endblock title %}
+{% block css %}
+    <link href="{% static "css/book.css" %}" rel="stylesheet" type="text/css">
+    <link href="{% static "css/search.css" %}" rel="stylesheet" type="text/css">
+{% endblock css %}
+{% block js %} <script type="text/javascript" src="{% static "js/search.js" %}"></script> {% endblock js %}
+{% block container %} {% include "search/container.html" %} {% endblock container %}
+{% block searchbox %} {% include "searchbox_small_panel.html" %} {% endblock searchbox %}

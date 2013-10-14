@@ -1,0 +1,14 @@
+{% load staticfiles %}
+<div id=book_container class="container" data-book-id="{{ book.id }}">
+  <div class='wrap_panel product_details'>
+    <div class='L_top_panel'>
+      {% block L_top_panel %}{% endblock L_top_panel %}
+    </div>
+    <div class='main_container'>
+      {% block main_container %}{% endblock main_container %}
+    </div>
+  </div>
+  <div class='L_left_panel'>
+    {% block L_left_panel %}{% endblock L_left_panel %}
+  </div>
+</div>

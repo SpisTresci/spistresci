@@ -788,7 +788,6 @@ $color_font_blue:#225b98;
   cursor:pointer;
 }
 .s_left_box{
-  float:left;
 }
 .s_left_blue{
   background:url(../img/2box_blue_red.png) no-repeat;
@@ -818,7 +817,7 @@ $color_font_blue:#225b98;
   display:block;
 }
 .s_left_hide{
-  display:none;
+  //display:none;
   padding:8px;
   border-bottom:1px solid #122E3D;
   padding-bottom:10px;
@@ -1341,7 +1340,7 @@ $color_font_blue:#225b98;
   margin-left:20px;
   padding-bottom:4px;
   border-bottom:3px solid #8D8D8D;
-  font-size:13px !important;
+  font-size:13px;
   line-height:10px;
   padding-left:7px;
   padding-right:7px;
@@ -1356,12 +1355,12 @@ $color_font_blue:#225b98;
 }
 
 .page_active_number{
-  color:#464646  !important;
-  font-size:18px !important;
+  color:#464646;
+  font-size:18px;
 }
 
 input.page_active_number{
-  font-size:14px !important;
+  font-size:14px;
   font-weight: bold;
 }
 

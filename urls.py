@@ -30,7 +30,7 @@ urlpatterns = patterns('',
 # Without threading...
 urlpatterns += patterns('haystack.views',
     url(r'^search/$', STSearchView(searchqueryset = STSearchQuerySet(), form_class=STSearchForm), name='haystack_search'),
-    url(r'^q/$', STSearchView(searchqueryset = STSearchQuerySet(), form_class=STSearchForm, template="search_results_list.html"), name='haystack_search'),
+    url(r'^q/$', STSearchView(searchqueryset = STSearchQuerySet(), form_class=STSearchForm, template="search/results_list.html"), name='haystack_search'),
 
     #url(r'^accounts/login/$',  login),
     url(r'^accounts/logout/$', logout),

@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from django.http.response import HttpResponse, HttpResponseNotAllowed
 from haystack.forms import ModelSearchForm
 from haystack.query import SearchQuerySet, SQ
@@ -11,7 +12,7 @@ class STSearchForm(ModelSearchForm):
 
 class STSearchView(SearchView):
 
-    template='search.html'
+    template='search/index.html'
 
     def __call__(self, request):
         self.session = request.session
@@ -141,16 +142,10 @@ class STSearchView(SearchView):
                                     'data':self.loadFilterState(supported_formats, "formats")
                                 },
                                 {
-                                    'name':'CENA',
-                                    'name_id':'price',
-                                    'template_file':'search_filter_price.html',
-                                    'data':self.loadFilterPriceState(['from', 'to'])
-                                },
-                                {
-                                    'name':'SERWISY',
-                                    'name_id':'services',
+                                    'name':'SPOSÓB PŁATNOŚCI',
+                                    'name_id':'formats',
                                     'template_file':'search_filter_list.html',
-                                    'data':self.loadFilterState({'Wszystkie':[bookstore['name'] for bookstore in self.servicesInfo]}, "services")
+                                    'data':self.loadFilterState({"Przez serwis":["DotPay", "ePrzelewy", "PayU", "Przelewy24.pl", "transferuj.pl", "YetiPay", "mPay", "SkyCash", "SMS", "PayPal", "karty płatnicze", "Przelewy24.pl"]}, "formats")
                                 },
                         ]
 

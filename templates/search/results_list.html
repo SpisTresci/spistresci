@@ -1,8 +1,4 @@
 {% load staticfiles %}
-        {% if page.object_list|length > 0 %}
-            {% include "sort_bar.html" %}
-        {% endif %}
-
         <div id="search_list" class="search_list"
 
              {% for filter in filters %}
@@ -26,5 +22,5 @@
 
 
         <div class="page">
-            {% include 'paginator.html' %}
+            {% include 'pagination.html' %}
         </div>

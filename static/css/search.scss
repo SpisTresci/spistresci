@@ -1,0 +1,130 @@
+@import "book_filters";
+.table_cell{
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  display: table-cell;
+  width:100%;
+}
+
+$box-color: #F6F6F6;
+$box-border-color: #E3E3E3;
+
+$padding_right_left: 20px;
+$padding_top_bottom: 5px;
+
+$panel-border-width: 2px;
+
+
+.sortbox{
+  float: left;
+
+  border: 1px solid $box-border-color;
+  width: 150px;
+
+  margin-top: 8px;
+  padding: 3px 10px 3px 20px;
+
+  font-size:20px;
+  font-weight:bold;
+  color: #8D8D8D;
+}
+
+.pagination{
+  padding: 3px 10px 3px 20px;
+  float: right;
+  vertical-align: middle;
+
+  .page_number{
+    font-size:16px;
+    font-weight:bold;
+  }
+
+  .page_active_number{
+    font-size:22px;
+    font-weight:bold;
+    color: #666666;
+  }
+
+  .page_number_text{
+      margin-top: 12px;
+  }
+
+  .page_number_img{
+      margin-top: 15px;
+  }
+
+  .page_number_input{
+    margin-top: 6px;
+    font-size:15px;
+    input{
+      font-size:13px;
+      font-weight:bold;
+      padding-left: 2px;
+      width: 35px;
+    }
+  }
+}
+
+.L_top_panel {
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+
+  height: 60px;
+  width: 100%;
+
+  padding: $padding_top_bottom $padding_right_left;
+
+  float: right;
+  background-color: $box-color;
+  border-bottom: $panel-border-width solid $box-border-color;
+
+  .title{
+    font-size:34px;
+    font-weight:bold;
+    text-decoration:none;
+  }
+
+  .authors{
+    margin-top: 20px;
+    font-size:24px;
+    font-weight:bold;
+    text-decoration:none;
+    a{
+      color: #000000;
+    }
+  }
+
+  .publisher{
+    font-size:20px;
+    span{
+      font-weight:bold;
+    }
+  }
+
+  .description{
+    margin: 20px 40px 0 0;
+  }
+
+  .filter_switcher{
+    float: right;
+    margin: 20px 40px 20px 0;
+  }
+}
+
+.L_left_panel {
+  padding-top: 0px;
+  height: 3000px;
+}
+
+.s_left_blue{
+  display: block;
+
+
+}
+
+.s_left_box{
+  padding: 12px;
+  padding-left: 25px;
+
+
+}
