@@ -85,6 +85,43 @@ function toggleRecords(){
     product.find(".search_drop_hide_btn").toggleClass("act");
 }
 
+function toggleNewRecords(){
+    var product = $(this).closest('.search_list_book');
+    var records = product.find('.records_panel_wrapper').first();
+
+    if(product.hasClass("act")){
+        product.removeClass("act");
+        records.animate({"marginTop":records.data("no-act-margin")}, 1000, "swing", function(){
+            records.css({"display":"none", "marginTop":0});
+        });
+
+    } else {
+        product.addClass("act");
+        var puller_h = -parseInt($(".puller_footer").css("margin-top"), 10) - 1;
+        var switcher_up_h = parseInt($(".records_toogle_switcher").css("height"), 10);
+        var records_h = (product.parent().data("records-count") * 131 - 1 )+ switcher_up_h + 40;
+
+        records.data("no-act-margin", -(records_h+puller_h));
+        records.css({"height": records_h, "display":"block", "marginTop":records.data("no-act-margin")});
+        records.animate({"marginTop":-switcher_up_h}, 1000, "swing", function(){});
+
+        product.find('.records_toogle_switcher.down').first().removeClass("onhover");
+    }
+}
+
+function hideRecords(){
+    var product = $(this).closest('.search_list_book');
+    var records = product.find('.records_panel_wrapper').first();
+
+    if(product.hasClass("act")){
+        product.removeClass("act");
+
+        records.animate({"marginTop":records.data("no-act-margin")}, 1000, "easeInBack", function(){
+            records.css({"display":"none", "marginTop":0});
+        });
+    }
+}
+
 function debounce(fn, delay) {
   var timer = null;
   return function (event) {
@@ -182,7 +219,34 @@ function onReady(){
 function onResultsReady() {
     prepareRecords();
 
-    $(".search_drop_hide_btn, .search_drop_upper_hide_btn, .product_details").on("click", toggleRecords);
+    //$(".search_drop_hide_btn, .search_drop_upper_hide_btn, .product_details").on("click", toggleRecords);
+    //$(".search_list_book").on("click", toggleNewRecords);
+
+
+    $(".p_center").on("click", toggleNewRecords);
+    $('.records_toogle_switcher.down').on("click", hideRecords);
+
+
+    $(".p_center").hover(
+        function(){
+            var product = $(this).closest('.search_list_book');
+            if(!product.hasClass("act")){
+                var switcher = product.find('.records_toogle_switcher.down').first();
+                switcher.addClass("onhover");
+            }
+        },
+        function(){
+            var product = $(this).closest('.search_list_book');
+            if(!product.hasClass("act")){
+                var switcher = product.find('.records_toogle_switcher.down').first();
+                switcher.removeClass("onhover");
+            }
+        }
+    );
+
+
+
+
 
     $("input.pageLink").keyup(debounce(function(){
         rebuildResults($(this).val());

@@ -1001,8 +1001,7 @@ a {
 
 .search_list {
   float: left;
-  width: 100%;
-  margin-top: 20px; }
+  width: 100%; }
 
 .search_list img {
   float: left;
@@ -1061,22 +1060,23 @@ a {
   margin-top: 2px;
   text-align: center;
   cursor: pointer; }
-
-.slb_price_btn:hover {
-  text-decoration: underline; }
-
-.slb_price_btn img {
-  border: none;
-  float: right;
-  margin-left: -40px;
-  margin-right: 20px;
-  margin-top: -8px; }
+  .slb_price_btn a {
+    color: white; }
+  .slb_price_btn:hover {
+    text-decoration: underline; }
+  .slb_price_btn img {
+    border: none;
+    float: right;
+    margin-left: -40px;
+    margin-right: 20px;
+    margin-top: -8px; }
+  .slb_price_btn.product_details {
+    background: url(../img/2btn_red_big.png);
+    background-size: 100%; }
 
 .search_list_book {
   float: left;
-  border-bottom: 3px solid #464646;
-  width: 100%;
-  padding-bottom: 20px; }
+  width: 100%; }
 
 .search_drop2 {
   overflow: hidden;

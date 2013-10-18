@@ -222,3 +222,168 @@
 .s_left_box {
   padding: 12px;
   padding-left: 25px; }
+
+.puller {
+  z-index: 20;
+  height: 36px;
+  white-space: nowrap;
+  padding-right: 126px;
+  font-size: 0;
+  background-color: transparent; }
+
+.p_col {
+  display: inline-block;
+  text-align: center;
+  width: 50%;
+  margin-right: 0px;
+  height: 36px; }
+
+.p_flank, .pb_flank {
+  background: #fff;
+  height: 31px; }
+
+.pb_flank {
+  background-color: rgba(182, 182, 182, 0.3); }
+
+.p_center {
+  display: inline-block;
+  width: 126px; }
+
+.p_center:after {
+  content: "*"; }
+
+.p_a1, .pb_a1 {
+  float: left;
+  background-color: #fff;
+  width: 50px;
+  height: 50px;
+  border-bottom-right-radius: 100% 100%;
+  border-bottom: 10px solid #fff;
+  border-right: 10px solid transparent;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-top: -19px; }
+
+.pb_a1 {
+  background-color: rgba(182, 182, 182, 0.3);
+  border-bottom: 10px solid rgba(182, 182, 182, 0.3); }
+
+.p_a2, .pb_a2 {
+  margin-top: -5px;
+  float: left;
+  width: 50px;
+  height: 50px;
+  margin-left: -37px;
+  background-color: transparent;
+  border-top-left-radius: 100% 100%;
+  border-top: 10px solid #fff;
+  border-left: 10px solid transparent;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.pb_a2 {
+  border-top: 10px solid rgba(182, 182, 182, 0.3); }
+
+.p_b1, .pb_b1 {
+  margin-top: -5px;
+  float: left;
+  width: 50px;
+  height: 50px;
+  margin-left: 0px;
+  background-color: transparent;
+  border-top-right-radius: 100% 100%;
+  border-top: 10px solid #fff;
+  border-right: 10px solid transparent;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.pb_b1 {
+  border-top: 10px solid rgba(182, 182, 182, 0.3); }
+
+.p_b2, .pb_b2 {
+  float: left;
+  background-color: #fff;
+  width: 50px;
+  height: 50px;
+  border-bottom-left-radius: 100% 100%;
+  border-bottom: 10px solid #fff;
+  border-left: 10px solid transparent;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-top: -19px;
+  margin-left: -37px; }
+
+.pb_b2 {
+  background-color: rgba(182, 182, 182, 0.3);
+  border-bottom: 10px solid rgba(182, 182, 182, 0.3); }
+
+.puller_footer {
+  position: relative;
+  z-index: -20;
+  margin-top: -35px;
+  width: 98%;
+  margin-left: 1%;
+  margin-right: 1%;
+  background-color: #E3E3E3; }
+  .puller_footer .records_panel_wrapper {
+    display: none;
+    width: 100%;
+    height: 335px;
+    margin-bottom: 0px; }
+  .puller_footer .records_panel {
+    width: 100%; }
+  .puller_footer .header_box {
+    background-color: #e3e3e3; }
+
+.records_toogle_switcher {
+  background-color: #e3e3e3;
+  height: 84px; }
+  .records_toogle_switcher img {
+    display: block;
+    margin-top: 5px;
+    margin-left: 49%;
+    border: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease; }
+
+.records_toogle_switcher.down {
+  height: 30px;
+  z-index: -20;
+  float: left;
+  width: 98%;
+  margin-left: 1%;
+  margin-right: 1%;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
+
+.records_toogle_switcher.down.onhover {
+  border-bottom-right-radius: 100% 80%;
+  border-bottom-left-radius: 100% 80%;
+  height: 37px; }
+  .records_toogle_switcher.down.onhover img {
+    margin-top: 13px; }
+
+.records_toogle_switcher_down_wrapper {
+  height: 37px; }
+
+.main_container {
+  padding-top: 0px; }
+
+.b2ook_box {
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(transparent), to(rgba(182, 182, 182, 0.3)));
+  background-image: -webkit-linear-gradient(transparent, rgba(182, 182, 182, 0.3));
+  background-image: -moz-linear-gradient(transparent, rgba(182, 182, 182, 0.3)), -moz-linear-gradient(transparent, rgba(182, 182, 182, 0.3));
+  background-image: -o-linear-gradient(transparent, rgba(182, 182, 182, 0.3)), -o-linear-gradient(transparent, rgba(182, 182, 182, 0.3));
+  background-image: linear-gradient(transparent, rgba(182, 182, 182, 0.3)), linear-gradient(transparent, rgba(182, 182, 182, 0.3));
+  background-size: 1px 30%;
+  background-position: 0 100%, 100% 100%;
+  background-repeat: no-repeat;
+  padding-bottom: 25px !important; }

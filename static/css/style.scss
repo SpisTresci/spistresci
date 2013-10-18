@@ -1114,7 +1114,7 @@ $color_font_blue:#225b98;
 .search_list{
   float:left;
   width:100%;
-  margin-top:20px;
+  //margin-top:20px;
 }
 .search_list img{
   float:left;
@@ -1167,28 +1167,40 @@ $color_font_blue:#225b98;
   width:151px;
   height:27px;
   color:white;
+  a{color:white;}
+
   padding-top:10px;
   font-weight:bold;
   margin-bottom:2px;
   margin-top:2px;
   text-align:center;
   cursor:pointer;
+
+  &:hover{
+    text-decoration:underline;
+  }
+
+  img{
+    border:none;
+    float:right;
+    margin-left: -40px;
+    margin-right: 20px;
+    margin-top: -8px;
+  }
+
+  &.product_details{
+    background:url(../img/2btn_red_big.png) ;
+    background-size: 100%;
+  }
+
 }
-.slb_price_btn:hover{
-  text-decoration:underline;
-}
-.slb_price_btn img{
-  border:none;
-  float:right;
-  margin-left: -40px;
-  margin-right: 20px;
-  margin-top: -8px;
-}
+
+
+
+
 .search_list_book{
   float:left;
-  border-bottom:3px solid #464646;
   width:100%;
-  padding-bottom:20px;
 }
 .search_drop2{
   overflow:hidden;
