@@ -254,7 +254,7 @@ SOCIALACCOUNT_PROVIDERS = {
 
 ACCOUNT_ACTIVATION_DAYS = 5
 
-# NOTE: do testow lokalnych mozna uzywac backendu z django_common, ktory zapisuje email do pliku
+# NOTE: for local tests you can use backend from django_common, which save email as a file
 # EMAIL_BACKEND = 'django_common.email_backends.CustomFileEmailBackend'
 # EMAIL_FILE_PATH = '/home/mateusz/tmp/messages'
 # EMAIL_FILE_EXT = 'eml'
@@ -264,6 +264,8 @@ EMAIL_HOST_USER = 'spistresci'
 EMAIL_HOST_PASSWORD = 'spistresci-rules!1'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
+
+DEFAULT_FROM_EMAIL = 'no-reply@spistresci.pl'
 
 import shutil, sys
 if len(sys.argv) >=2 and sys.argv[1] == 'syncdb':

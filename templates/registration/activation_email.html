@@ -1,0 +1,8 @@
+Aby dokończyć rejestrację kliknij w poniższy link aktywacyjny:<br/>
+<a href="http://{{ site.domain }}{% url 'registration_activate' activation_key %}">
+	http://{{ site.domain }}{% url 'registration_activate' activation_key %}
+</a><br/><br/>
+
+Link aktywacyjny ważny jest przez <strong>{{ expiration_days }} dni</strong>.<br/>
+<br/><br/>
+<a href="http://spistresci.pl">spistresci.pl</a>
