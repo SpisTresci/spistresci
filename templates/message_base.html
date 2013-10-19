@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block title %}Spis Treści - rejestracja{% endblock title %}
+
+{% block js %} <script type="text/javascript" src="{% static "js/search.js" %}"></script> {% endblock js %}
+{% block container %}
+	<div class="container">
+      <div class="index_top_bg s_index_top_bg">
+        <div class="index_top">
+          <a href="/" class="logo">
+            <img src="{% static "img/logo2.png" %}" alt="" />
+          </a>
+        </div>
+      </div>
+      <div class="register_bottom_container">
+        {% block message %}{% endblock %}
+      </div>
+   </div>
+{% endblock %}
+{% block footer %} {% include "footer.html" %} {% endblock footer %}

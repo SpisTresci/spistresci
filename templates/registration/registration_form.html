@@ -1,6 +1,11 @@
+{% extends "base.html" %}
 {% load staticfiles %}
 {% load socialaccount %}
-    <div class="container">
+
+{% block title %}Spis Treści - rejestracja{% endblock title %}
+{% block js %} <script type="text/javascript" src="{% static "js/search.js" %}"></script> {% endblock js %}
+{% block container %}
+	<div class="container">
       <div class="index_top_bg s_index_top_bg">
         <div class="index_top">
           <a href="/" class="logo">
@@ -10,12 +15,9 @@
       </div>
       <div class="register_bottom_container">
         <div class="register_bottom_left_container">
-          <form action="/accounts/register/" method="post">{% csrf_token %}
+          <form action="{% url 'registration_register' %}" method="post">{% csrf_token %}
             <fieldset id="inputs">
-              <p>{{ form.username }}</p>
-              <p>{{ form.email }}</p>
-              <p>{{ form.password1 }}</p>
-              <p>{{ form.password2 }}</p>
+              {{ form.as_p }}
             </fieldset>
             <fieldset id="actions">
               <input type="submit" id="submit" value="Zarejestruj">
@@ -29,3 +31,5 @@
         </div>
       </div>
    </div>
+{% endblock %}
+{% block footer %} {% include "footer.html" %} {% endblock footer %}

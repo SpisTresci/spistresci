@@ -1,0 +1,5 @@
+
+Aby dokończyć aktywację kliknij w poniższy link aktywacyjny
+http://{{ site.domain }}{% url 'registration_activate' activation_key %}
+
+Link aktywacyjny ważny jest przez {{ expiration_days }} dni.
