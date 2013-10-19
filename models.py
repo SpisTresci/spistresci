@@ -94,3 +94,46 @@ class eGazeciarzUser(models.Model):
 
     def get_short_name(self):
         raise NotImplementedError()
+
+class MasterAuthor(models.Model):
+    id = models.IntegerField(primary_key=True)
+    name = models.CharField(max_length=255L, blank=True)
+    firstname = models.CharField(max_length=32L, db_column='firstName', blank=True) # Field name made lowercase.
+    middlename = models.CharField(max_length=32L, db_column='middleName', blank=True) # Field name made lowercase.
+    lastname = models.CharField(max_length=32L, db_column='lastName', blank=True) # Field name made lowercase.
+    name_simplified = models.CharField(max_length=255L, blank=True)
+    lastname_soundex = models.IntegerField(null=True, db_column='lastName_soundex', blank=True) # Field name made lowercase.
+    class Meta:
+        db_table = 'MasterAuthor'
+
+class MasterBook(models.Model):
+    id = models.IntegerField(primary_key=True)
+    title = models.CharField(max_length=512L, blank=True)
+    cover = models.CharField(max_length=512L, blank=True)
+    format_cd = models.IntegerField(null=True, blank=True)
+    format_cd_mp3 = models.IntegerField(null=True, blank=True)
+    format_dvd = models.IntegerField(null=True, blank=True)
+    format_epub = models.IntegerField(null=True, blank=True)
+    format_fb2 = models.IntegerField(null=True, blank=True)
+    format_ks = models.IntegerField(null=True, blank=True)
+    format_mobi = models.IntegerField(null=True, blank=True)
+    format_mp3 = models.IntegerField(null=True, blank=True)
+    format_pdf = models.IntegerField(null=True, blank=True)
+    format_txt = models.IntegerField(null=True, blank=True)
+    format_xml = models.IntegerField(null=True, blank=True)
+    description = models.ForeignKey('BookDescription', null=True, blank=True)
+    authors = models.ManyToManyField(MasterAuthor, through='MasterBooksMasterAuthors')
+    class Meta:
+        db_table = 'MasterBook'
+
+class MasterBooksMasterAuthors(models.Model):
+    book = models.ForeignKey('MasterBook', null=True, blank=True)
+    author = models.ForeignKey('MasterAuthor', null=True, blank=True)
+    class Meta:
+        db_table = 'master_books_master_authors'
+
+class BookDescription(models.Model):
+    id = models.IntegerField(primary_key=True)
+    description = models.CharField(max_length=20000L, blank=True)
+    class Meta:
+        db_table = 'BookDescription'
