@@ -9,9 +9,9 @@
         {% for filter in filters %}<div class="filter_box_bar2 table_cell"></div>{% endfor %}
     </div>
     <div class="filter_row">
-        {% for filter in filters %}<div class="filter_box table_cell">{% include filter.template_file %}</div>{% endfor %}
+        {% for filter in filters %}<div class="filter_box table_cell">{% if filter.template_file %}{% include filter.template_file %}{% endif %}</div>{% endfor %}
     </div>
     <div class="filter_row">
-        {% for filter in filters %}<div class="filter_box_clear table_cell" ><div class="filter_clear_button" >WYCZYŚĆ</div></div>{% endfor %}
+        {% for filter in filters %}<div class="filter_box_clear table_cell" >{% if filter.template_file %}<div class="filter_clear_button" >WYCZYŚĆ</div>{% endif %}</div>{% endfor %}
     </div>
 </div>

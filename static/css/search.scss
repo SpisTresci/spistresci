@@ -1,10 +1,6 @@
-@import "book_filters";
-.table_cell{
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  display: table-cell;
-  width:100%;
-}
+@import "generic/L_container.scss";
+@import "book/filters";
+@import "record_details";
 
 $shadow-color:rgba(182, 182, 182, 0.3);
 
@@ -15,7 +11,6 @@ $padding_right_left: 20px;
 $padding_top_bottom: 5px;
 
 $panel-border-width: 2px;
-
 
 .sortbox{
   float: left;
@@ -120,8 +115,6 @@ $panel-border-width: 2px;
 
 .s_left_blue{
   display: block;
-
-
 }
 
 .s_left_box{
@@ -246,7 +239,8 @@ $panel-border-width: 2px;
 
 .puller_footer{
   position:relative;
-  z-index: -20;
+  //z-index: -20;
+  overflow: hidden;
   margin-top: -35px;
   width: 98%;
   margin-left:1%;
@@ -320,30 +314,4 @@ $panel-border-width: 2px;
   padding-top: 0px;
 }
 
-.npb{
-  //border-left: 1px solid $shadow-color;
-  //border-right: 1px solid $shadow-color;
-//  border-bottom: 1px solid $shadow-color;
-}
-
-.puller.pb{
-  //border-left: 1px solid black;
-  //margin-left: 2px;
-}
-
-$from-color:transparent;
-$to-color: $shadow-color;
-
-.b2ook_box{
-  //border-left: 1px solid $shadow-color;
-  //border-right: 1px solid $shadow-color;
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from($from-color), to($to-color));
-  background-image: -webkit-linear-gradient($from-color, $to-color);
-  background-image: -moz-linear-gradient($from-color, $to-color), -moz-linear-gradient($from-color, $to-color);
-  background-image: -o-linear-gradient($from-color, $to-color), -o-linear-gradient($from-color, $to-color);
-  background-image: linear-gradient($from-color, $to-color), linear-gradient($from-color, $to-color);
-  background-size: 1px 30%;
-  background-position:0 100%, 100% 100%;
-  background-repeat:no-repeat;
-  padding-bottom: 25px !important;
-}
+@import 'filters';

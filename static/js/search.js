@@ -98,8 +98,8 @@ function toggleNewRecords(){
     } else {
         product.addClass("act");
         var puller_h = -parseInt($(".puller_footer").css("margin-top"), 10) - 1;
-        var switcher_up_h = parseInt($(".records_toogle_switcher").css("height"), 10);
-        var records_h = (product.parent().data("records-count") * 131 - 1 )+ switcher_up_h + 40;
+        var switcher_up_h = parseInt($(".records_toogle_switcher").css("height"), 10)-puller_h;
+        var records_h = (product.parent().data("records-count") * 131 - 1 )+ switcher_up_h + puller_h + 40;
 
         records.data("no-act-margin", -(records_h+puller_h));
         records.css({"height": records_h, "display":"block", "marginTop":records.data("no-act-margin")});

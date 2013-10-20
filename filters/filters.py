@@ -1,11 +1,17 @@
 
 
 def loadFilterPriceState(obj, borders):
+    """
+    #TODO: uncomment and repair
     dic = {}
     for border in borders:
         if border in obj.get_args:
             dic["price_" + border] = str("%.2f" % (obj.get_args[border]/100.0))
-    return dic
+            return dic
+    """
+    return {"price_to":'0.00', "price_from":'0.00'}
+
+
 
 def loadFilterState(obj, dic, name):
     get = []#obj.get_args[name] if name in obj.get_args else []

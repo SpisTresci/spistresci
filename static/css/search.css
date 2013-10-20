@@ -1,4 +1,111 @@
-.table_cell {
+.main_container {
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+  float: right;
+  padding: 20px;
+  width: 100%; }
+
+.L_left_panel {
+  background-color: #f6f6f6;
+  border-bottom: 2px solid #e3e3e3;
+  border-right: 2px solid #e3e3e3;
+  height: 600px;
+  width: 290px; }
+
+.wrap_panel {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-left: 290px; }
+
+.L_top_panel {
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+  width: 100%;
+  padding: 20px;
+  padding-top: 40px;
+  float: right;
+  background-color: #f6f6f6;
+  border-bottom: 2px solid #e3e3e3; }
+
+.filter_section {
+  padding: 4px 8px 10px 8px;
+  float: left;
+  min-width: 160px;
+  width: 100%;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box; }
+  .filter_section .act {
+    background: #225b98 url(../img/2x.png) 100px no-repeat;
+    color: white;
+    list-style-image: url("../img/blue_point.png"); }
+
+.filter_section .act a {
+  background: url(../img/2x.png) 80px no-repeat;
+  color: white; }
+
+.s_left .act .filter_section {
+  display: block; }
+
+.filter_section .act a {
+  background: url(../img/2x.png) 80px no-repeat;
+  color: white; }
+
+.filter_section_arrow {
+  float: left;
+  background: url(../img/2arrow_up_black.png) no-repeat;
+  width: 10px;
+  height: 10px;
+  margin-right: 5px;
+  margin-top: 7px;
+  cursor: pointer; }
+
+.filter_section_header {
+  float: left;
+  padding-left: 5px;
+  margin: 1px 30px 1px 0;
+  width: 110px;
+  font-size: 18px;
+  cursor: pointer; }
+
+.filter_content.price form {
+  float: left;
+  margin-top: 10px;
+  padding-left: 10px; }
+.filter_content.price input {
+  width: 50%;
+  height: 35px;
+  padding-left: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border: 1px solid #E3E3E3;
+  margin-bottom: 7px; }
+
+.filter_content.bullet_list ul {
+  list-style-position: outside; }
+.filter_content.bullet_list li {
+  margin-left: 35px;
+  margin-bottom: 1px;
+  float: left;
+  width: 95px;
+  list-style-image: url("../img/dark_point.png"); }
+  .filter_content.bullet_list li a {
+    padding-top: 2px;
+    padding-left: 5px;
+    padding-right: 30px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    width: 90px;
+    font-size: 13px;
+    cursor: pointer; }
+
+.filter_content.multiselect_list form select {
+  margin: 5px;
+  width: 95%;
+  height: 260px; }
+  .filter_content.multiselect_list form select select {
+    width: 100%; }
+
+.table_cell, .record_table_cell, .record .service_logo_box, .record .record_formats, .record .record_info, .record .payment_info, .record .record_price, .records_headers .header_box {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   display: table-cell;
@@ -48,82 +155,6 @@
   box-sizing: border-box;
   -moz-box-sizing: border-box; }
 
-.filter_section {
-  padding: 4px 8px 10px 8px;
-  float: left;
-  min-width: 160px;
-  width: 100%;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box; }
-  .filter_section form input {
-    float: left;
-    margin-top: 10px;
-    padding-left: 10px; }
-  .filter_section input {
-    width: 120px;
-    height: 35px;
-    padding-left: 5px;
-    margin-left: 10px;
-    margin-right: 10px;
-    border: 1px solid #E3E3E3;
-    margin-bottom: 7px; }
-  .filter_section form select {
-    margin: 5px;
-    width: 95%;
-    height: 260px; }
-  .filter_section select {
-    width: 100%; }
-  .filter_section ul {
-    list-style-position: outside; }
-  .filter_section li {
-    margin-left: 35px;
-    margin-bottom: 1px;
-    float: left;
-    width: 95px;
-    list-style-image: url("../img/dark_point.png"); }
-  .filter_section .act {
-    background: #225b98 url(../img/2x.png) 100px no-repeat;
-    color: white;
-    list-style-image: url("../img/blue_point.png"); }
-
-.filter_section .act a {
-  background: url(../img/2x.png) 80px no-repeat;
-  color: white; }
-
-.s_left .act .filter_section {
-  display: block; }
-
-.filter_section li a {
-  padding-top: 2px;
-  padding-left: 5px;
-  padding-right: 30px;
-  margin-top: 1px;
-  margin-bottom: 1px;
-  width: 90px;
-  font-size: 13px;
-  cursor: pointer; }
-
-.filter_section .act a {
-  background: url(../img/2x.png) 80px no-repeat;
-  color: white; }
-
-.filter_section_arrow {
-  float: left;
-  background: url(../img/2arrow_up_black.png) no-repeat;
-  width: 10px;
-  height: 10px;
-  margin-right: 5px;
-  margin-top: 7px;
-  cursor: pointer; }
-
-.filter_section_header {
-  float: left;
-  padding-left: 5px;
-  margin: 1px 30px 1px 0;
-  width: 110px;
-  font-size: 18px;
-  cursor: pointer; }
-
 .filter_box_clear {
   border-right: 2px solid #e3e3e3;
   border-left: 2px solid #e3e3e3; }
@@ -142,11 +173,105 @@
   font-size: 12px;
   font-weight: bold; }
 
-.table_cell {
+.table_cell, .record_table_cell, .record .service_logo_box, .record .record_formats, .record .record_info, .record .payment_info, .record .record_price, .records_headers .header_box {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   display: table-cell;
-  width: 100%; }
+  width: 20%; }
+
+.record_table_cell, .record .service_logo_box, .record .record_formats, .record .record_info, .record .payment_info, .record .record_price {
+  vertical-align: middle;
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+  color: #464646; }
+
+.records_panel {
+  display: table;
+  border-collapse: collapse;
+  width: 1000px; }
+
+.records_headers {
+  display: table-row;
+  margin-bottom: 10px;
+  height: 25px;
+  color: #464646;
+  font-size: 13px;
+  font-weight: bold;
+  padding-top: 10px;
+  text-align: center;
+  cursor: pointer;
+  position: relative; }
+  .records_headers .header_box {
+    background-color: #b2b2b2;
+    height: 15px;
+    margin-left: 18px;
+    padding: 5px;
+    cursor: pointer;
+    text-align: center; }
+    .records_headers .header_box .sortable {
+      border-bottom: 3px solid #8D8D8D;
+      display: inline-block;
+      padding: 5px; }
+      .records_headers .header_box .sortable:hover {
+        color: #FFFFFF; }
+
+.record {
+  display: table-row;
+  background: #f6f6f6;
+  border-bottom: 1px solid #8D8D8D; }
+  .record .service_logo_box img {
+    border: none;
+    margin: 15px;
+    margin-top: 30px;
+    width: 150px;
+    height: 75px; }
+  .record .record_formats {
+    padding-left: 10px;
+    text-align: left; }
+  .record .record_price {
+    color: #225b98;
+    font-size: 30px;
+    width: 120px;
+    font-weight: 100;
+    text-align: center;
+    vertical-align: middle; }
+    .record .record_price .shipment {
+      margin-top: -5px;
+      margin-bottom: 7px;
+      font-weight: normal;
+      font-size: 12px;
+      display: block; }
+    .record .record_price a {
+      background: url(../img/2btn_red_big.png) no-repeat;
+      width: 108px;
+      height: 27px;
+      color: white;
+      font-size: 15px;
+      text-align: center;
+      padding-top: 7px;
+      font-weight: bold;
+      display: block;
+      margin: auto; }
+    .record .record_price a:hover {
+      color: #464646; }
+
+.records_filtered_out {
+  width: 1000px;
+  background: #f6f6f6;
+  height: 25px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #464646;
+  float: left;
+  border-bottom: 3px solid #8D8D8D;
+  padding-bottom: 8px; }
+  .records_filtered_out .info {
+    margin: 10px;
+    margin-left: 15px; }
+
+.records_panel_wrapper {
+  margin-bottom: 80px; }
 
 .sortbox {
   float: left;
@@ -323,7 +448,7 @@
 
 .puller_footer {
   position: relative;
-  z-index: -20;
+  overflow: hidden;
   margin-top: -35px;
   width: 98%;
   margin-left: 1%;
@@ -338,6 +463,8 @@
     width: 100%; }
   .puller_footer .header_box {
     background-color: #e3e3e3; }
+  .puller_footer .sortable a {
+    color: #f6f6f6; }
 
 .records_toogle_switcher {
   background-color: #e3e3e3;
@@ -377,13 +504,80 @@
 .main_container {
   padding-top: 0px; }
 
-.b2ook_box {
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(transparent), to(rgba(182, 182, 182, 0.3)));
-  background-image: -webkit-linear-gradient(transparent, rgba(182, 182, 182, 0.3));
-  background-image: -moz-linear-gradient(transparent, rgba(182, 182, 182, 0.3)), -moz-linear-gradient(transparent, rgba(182, 182, 182, 0.3));
-  background-image: -o-linear-gradient(transparent, rgba(182, 182, 182, 0.3)), -o-linear-gradient(transparent, rgba(182, 182, 182, 0.3));
-  background-image: linear-gradient(transparent, rgba(182, 182, 182, 0.3)), linear-gradient(transparent, rgba(182, 182, 182, 0.3));
-  background-size: 1px 30%;
-  background-position: 0 100%, 100% 100%;
-  background-repeat: no-repeat;
-  padding-bottom: 25px !important; }
+.filter_section {
+  padding: 4px 8px 10px 8px;
+  float: left;
+  min-width: 160px;
+  width: 100%;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box; }
+  .filter_section .act {
+    background: #225b98 url(../img/2x.png) 100px no-repeat;
+    color: white;
+    list-style-image: url("../img/blue_point.png"); }
+
+.filter_section .act a {
+  background: url(../img/2x.png) 80px no-repeat;
+  color: white; }
+
+.s_left .act .filter_section {
+  display: block; }
+
+.filter_section .act a {
+  background: url(../img/2x.png) 80px no-repeat;
+  color: white; }
+
+.filter_section_arrow {
+  float: left;
+  background: url(../img/2arrow_up_black.png) no-repeat;
+  width: 10px;
+  height: 10px;
+  margin-right: 5px;
+  margin-top: 7px;
+  cursor: pointer; }
+
+.filter_section_header {
+  float: left;
+  padding-left: 5px;
+  margin: 1px 30px 1px 0;
+  width: 110px;
+  font-size: 18px;
+  cursor: pointer; }
+
+.filter_content.price form {
+  float: left;
+  margin-top: 10px;
+  padding-left: 10px; }
+.filter_content.price input {
+  width: 50%;
+  height: 35px;
+  padding-left: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border: 1px solid #E3E3E3;
+  margin-bottom: 7px; }
+
+.filter_content.bullet_list ul {
+  list-style-position: outside; }
+.filter_content.bullet_list li {
+  margin-left: 35px;
+  margin-bottom: 1px;
+  float: left;
+  width: 95px;
+  list-style-image: url("../img/dark_point.png"); }
+  .filter_content.bullet_list li a {
+    padding-top: 2px;
+    padding-left: 5px;
+    padding-right: 30px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    width: 90px;
+    font-size: 13px;
+    cursor: pointer; }
+
+.filter_content.multiselect_list form select {
+  margin: 5px;
+  width: 95%;
+  height: 260px; }
+  .filter_content.multiselect_list form select select {
+    width: 100%; }
