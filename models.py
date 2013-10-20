@@ -123,6 +123,7 @@ class MasterBook(models.Model):
     format_xml = models.IntegerField(null=True, blank=True)
     description = models.ForeignKey('BookDescription', null=True, blank=True)
     authors = models.ManyToManyField(MasterAuthor, through='MasterBooksMasterAuthors')
+    price = models.IntegerField(null=True, blank=True)
     class Meta:
         db_table = 'MasterBook'
 

@@ -1,0 +1,16 @@
+{% extends "email_base.html" %}
+
+{% block content %}
+	Notyfikacja dla usera: {{ user.username }} (email: {{ user.email }})<br/><br/>
+
+	Lista książek:<br/>
+	<ul>
+		{% for book in masterbooks %}
+			<li>
+				<!-- TODO: update link url -->
+				<a href="http://{{ site.domain }}">{{ book.title}}, cena {{ book.price }}</a>
+			</li>
+		{% endfor %}
+	</ul>
+
+{% endblock %}
