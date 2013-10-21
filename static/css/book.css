@@ -54,8 +54,7 @@
   font-weight: bold;
   padding-top: 10px;
   text-align: center;
-  cursor: pointer;
-  position: relative; }
+  cursor: pointer; }
   .records_headers .header_box {
     background-color: #b2b2b2;
     height: 15px;

@@ -200,8 +200,7 @@
   font-weight: bold;
   padding-top: 10px;
   text-align: center;
-  cursor: pointer;
-  position: relative; }
+  cursor: pointer; }
   .records_headers .header_box {
     background-color: #b2b2b2;
     height: 15px;
@@ -349,7 +348,6 @@
   padding-left: 25px; }
 
 .puller {
-  z-index: 20;
   height: 36px;
   white-space: nowrap;
   padding-right: 126px;
@@ -447,7 +445,6 @@
   border-bottom: 10px solid rgba(182, 182, 182, 0.3); }
 
 .puller_footer {
-  position: relative;
   overflow: hidden;
   margin-top: -35px;
   width: 98%;
@@ -463,8 +460,6 @@
     width: 100%; }
   .puller_footer .header_box {
     background-color: #e3e3e3; }
-  .puller_footer .sortable a {
-    color: #f6f6f6; }
 
 .records_toogle_switcher {
   background-color: #e3e3e3;

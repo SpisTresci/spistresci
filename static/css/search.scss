@@ -123,7 +123,6 @@ $panel-border-width: 2px;
 }
 
 .puller {
- z-index: 20;
  height: 36px;
  white-space:nowrap;
  padding-right:126px;
@@ -238,8 +237,6 @@ $panel-border-width: 2px;
 }
 
 .puller_footer{
-  position:relative;
-  //z-index: -20;
   overflow: hidden;
   margin-top: -35px;
   width: 98%;
@@ -298,8 +295,6 @@ $panel-border-width: 2px;
   border-bottom-right-radius: 100% 80%;
   border-bottom-left-radius: 100% 80%;
   height: 37px;
-
-  //background-color: #ab0000;
 
   img{
     margin-top: 13px;
