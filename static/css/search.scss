@@ -122,12 +122,28 @@ $panel-border-width: 2px;
   padding-left: 25px;
 }
 
+.book_box{
+  background-color: white;
+  padding: 20px 20px 50px 20px;
+}
+
+
 .puller {
- height: 36px;
- white-space:nowrap;
- padding-right:126px;
- font-size: 0;
- background-color: transparent;
+  $height: 36px;
+
+  height: $height;
+  white-space:nowrap;
+  padding-right:126px;
+  font-size: 0;
+  background-color: transparent;
+
+  &.npb{
+    position: relative;
+  }
+
+  &.pb{
+    margin-top: -$height + 2px;
+  }
 }
 
 .p_col{
@@ -136,7 +152,12 @@ $panel-border-width: 2px;
     width:50%;
     margin-right:0px;
     height:36px;
+
+    &:after{
+      content:'*'
+    }
 }
+
 .p_flank{
     background:#fff;
     height:31px;
@@ -147,14 +168,11 @@ $panel-border-width: 2px;
     background-color: $shadow-color;
 }
 
-
 .p_center{
     display:inline-block;
     width:126px;
 }
-.p_center:after{
-    content:'*'
-}
+
 .p_a1{
    float: left;
    background-color: #fff;

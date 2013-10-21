@@ -347,12 +347,20 @@
   padding: 12px;
   padding-left: 25px; }
 
+.book_box {
+  background-color: white;
+  padding: 20px 20px 50px 20px; }
+
 .puller {
   height: 36px;
   white-space: nowrap;
   padding-right: 126px;
   font-size: 0;
   background-color: transparent; }
+  .puller.npb {
+    position: relative; }
+  .puller.pb {
+    margin-top: -34px; }
 
 .p_col {
   display: inline-block;
@@ -360,6 +368,8 @@
   width: 50%;
   margin-right: 0px;
   height: 36px; }
+  .p_col:after {
+    content: "*"; }
 
 .p_flank, .pb_flank {
   background: #fff;
@@ -371,9 +381,6 @@
 .p_center {
   display: inline-block;
   width: 126px; }
-
-.p_center:after {
-  content: "*"; }
 
 .p_a1, .pb_a1 {
   float: left;
