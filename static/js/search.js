@@ -70,22 +70,6 @@ function prepareRecords(){
 }
 
 function toggleRecords(){
-    var product = $(this).closest(".search_list_item");
-    var records_count = product.attr("data-records-count");
-    var height = 35 + records_count * 136 + (product.find(".sd_format_filtered_out").length > 0?25:0);
-
-    if(product.hasClass("act")){
-        product.find(".search_drop").css({"marginTop":"-"+height+"px"});
-        product.find(".search_drop2").css({"height":"0px"});
-    } else {
-        product.find(".search_drop").css({"marginTop":"0px"});
-        product.find(".search_drop2").css({"height":height+"px"});
-    }
-    product.toggleClass("act");
-    product.find(".search_drop_hide_btn").toggleClass("act");
-}
-
-function toggleNewRecords(){
     var product = $(this).closest('.search_list_book');
     var records = product.find('.records_panel_wrapper').first();
 
@@ -219,13 +203,8 @@ function onReady(){
 function onResultsReady() {
     prepareRecords();
 
-    //$(".search_drop_hide_btn, .search_drop_upper_hide_btn, .product_details").on("click", toggleRecords);
-    //$(".search_list_book").on("click", toggleNewRecords);
-
-
-    $(".p_center").on("click", toggleNewRecords);
+    $(".p_center").on("click", toggleRecords);
     $('.records_toogle_switcher.down').on("click", hideRecords);
-
 
     $(".p_center").hover(
         function(){
@@ -243,10 +222,6 @@ function onResultsReady() {
             }
         }
     );
-
-
-
-
 
     $("input.pageLink").keyup(debounce(function(){
         rebuildResults($(this).val());
