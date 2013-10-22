@@ -24,10 +24,8 @@ $filter-border-color: #E3E3E3;
 }
 
 .filter_box_header{
-  $color: #00468B;
-  background-color: $color;
-  border-right: $filter-border-width solid $color;
-  border-left: $filter-border-width solid $color;
+  border-right: $filter-border-width solid $filter_box_header_background_color;
+  border-left: $filter-border-width solid $filter_box_header_background_color;
   margin-bottom: 10px;
   height:33px;
   color:white;
@@ -40,19 +38,13 @@ $filter-border-color: #E3E3E3;
 }
 
 .filter_box_bar1{
-  $color: #FFFFFF;
-  background-color: $color;
-  border-right: $filter-border-width solid $color;
-  border-left: $filter-border-width solid $color;
-  height: 1px;
+  border-right: $filter-border-width solid $filter_box_header_bar1_color;
+  border-left: $filter-border-width solid $filter_box_header_bar1_color;
 }
 
 .filter_box_bar2{
-  $color: #ab0000;
-  background-color: $color;
-  border-right: $filter-border-width solid $color;
-  border-left: $filter-border-width solid $color;
-  height: 5px;
+  border-right: $filter-border-width solid $filter_box_header_bar2_color;
+  border-left: $filter-border-width solid $filter_box_header_bar2_color;
 }
 
 .filter_box{
@@ -72,13 +64,8 @@ $filter-border-color: #E3E3E3;
   float:right;
   margin-bottom:10px;
   margin-right:10px;
-  background:url(../img/2btn_red.png) no-repeat;
+  padding-top:2px;
   width:62px;
   height:18px;
-  color:white;
-  cursor:pointer;
-  text-align:center;
-  padding-top:2px;
   font-size:12px;
-  font-weight:bold;
 }

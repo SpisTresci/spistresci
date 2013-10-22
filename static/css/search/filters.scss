@@ -1,1 +1,83 @@
 @import "../filters";
+
+
+.filter_panel{
+  width: 230px;
+  float:left;
+  margin-top: -48px;
+  margin-left: 10%;
+  border-bottom: 2px solid rgb(18, 46, 61);
+}
+
+.filter_box_header{
+  float:left;
+
+  width:230px;
+  height:32px;
+
+  color:white;
+  font-weight:bold;
+  font-size:20px;
+
+  padding-top:4px;
+  padding-left:12px;
+  cursor:pointer;
+
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  //position:relative;
+}
+
+
+.filter_box_bar1{
+  float: left;
+  width: 230px;
+}
+
+.filter_box_bar2{
+  float: left;
+  width: 230px;
+}
+
+.arrow{
+  display: inline-block;
+  float: right;
+  background:url(../img/2arrow_down.png) no-repeat;
+  width:17px;
+  height:16px;
+  margin-right:12px;
+  margin-top:4px;
+}
+
+
+.filter_box_header{
+  .act{
+   .arrow{
+      background:url(../img/2arrow_up.png) no-repeat;
+    }
+  }
+}
+
+.filter_section{
+  border-bottom: 1px solid rgb(18, 46, 61);
+}
+
+.filter_section_last{
+  border: none;
+}
+
+.filter_box_clear{
+  float:right;
+  margin-bottom:20px;
+  margin-right:10px;
+  padding-top:2px;
+  vertical-align: middle;
+
+  .filter_clear_button{
+    width:77px;
+    height:28px;
+    line-height: 28px;
+    font-size:14px;
+  }
+}
+

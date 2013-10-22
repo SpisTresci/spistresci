@@ -138,13 +138,25 @@ class STSearchView(SearchView):
                                 {
                                     'name':'FORMATY',
                                     'name_id':'formats',
-                                    'template_file':'search_filter_list.html',
+                                    'template_file':'filter/bullet_list.html',
                                     'data':self.loadFilterState(supported_formats, "formats")
+                                },
+                                {
+                                    'name':'CENA',
+                                    'name_id':'price',
+                                    'template_file':'filter/price.html',
+                                    'data':self.loadFilterPriceState(['from', 'to'])
+                                },
+                                {
+                                    'name':'SERWISY',
+                                    'name_id':'services',
+                                    'template_file':'filter/bullet_list.html',
+                                    'data': self.loadFilterState( {'Wszystkie':['Abook', ' Audeo', ' Audiobook', ' Audioteka', ' Bezdroza','Abooki', ' Audeo', ' Audiobook', ' Audioteka', ' Bezdroza', ' BezKartek']}, "services")
                                 },
                                 {
                                     'name':'SPOSÓB PŁATNOŚCI',
                                     'name_id':'formats',
-                                    'template_file':'search_filter_list.html',
+                                    'template_file':'filter/bullet_list.html',
                                     'data':self.loadFilterState({"Przez serwis":["DotPay", "ePrzelewy", "PayU", "Przelewy24.pl", "transferuj.pl", "YetiPay", "mPay", "SkyCash", "SMS", "PayPal", "karty płatnicze", "Przelewy24.pl"]}, "formats")
                                 },
                         ]

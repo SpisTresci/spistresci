@@ -1,5 +1,9 @@
-<div>
+<div class="filter_panel">
 {% for filter in filters %}
+    <div class="filter_box_header">{{filter.name}}<div class="arrow"></div></div>
+    <div class="filter_box_bar1"></div>
+    <div class="filter_box_bar2"></div>
     {% include filter.template_file %}
+    <div class="filter_box_clear" ><div class="filter_clear_button" >WYCZYŚĆ</div></div>
 {% endfor %}
 </div>

@@ -1,5 +1,5 @@
 @import "generic/L_container.scss";
-@import "book/filters";
+@import "search/filters";
 @import "record_details";
 
 $shadow-color:rgba(182, 182, 182, 0.3);
@@ -110,7 +110,6 @@ $panel-border-width: 2px;
 
 .L_left_panel {
   padding-top: 0px;
-  height: 3000px;
 }
 
 .s_left_blue{
@@ -326,5 +325,3 @@ $panel-border-width: 2px;
 .main_container{
   padding-top: 0px;
 }
-
-@import 'filters';
