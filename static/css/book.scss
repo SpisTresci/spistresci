@@ -1,5 +1,6 @@
 @import "generic/L_container.scss";
 @import "record_details";
+@import "basics";
 
 .L_left_panel{
   padding-top: $padding-top;
@@ -31,7 +32,7 @@
       margin-top: 20px;
       margin-left: 10px;
       width: 65px;
-      height: 35px;
+      height: 27px;
       font-size: 20px;
       padding-left: 10px;
     }
@@ -41,22 +42,23 @@
     }
 
     .track_button{
+      @extend .blue_button;
       width:80px;
       height:27px;
-      background:url(../img/2btn_blue.png) no-repeat;
+
       float: right;
-      color:white;
-      padding: 10px 0 0 10px;
-      font-weight:bold;
-      margin: 20px 10px 0 0;
-      text-align:left;
+      margin-top: 18px;
+
+      padding-top: 5px;
+      padding-right: 20px;
+
       cursor:pointer;
       img{
         border: none;
         float: right;
-        margin-left: -40px;
-        margin-right: 10px;
-        margin-top: -5px;
+        margin-left: -20px;
+        margin-right: -10px;
+        margin-top: 0px;
       }
     }
   }

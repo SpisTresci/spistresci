@@ -3,6 +3,7 @@
 {% with product=result %}
 
 <div class="records_panel_wrapper" data-records-count="{{ product.records|length }}">
+    <div class="records_toogle_switcher up"></div>
     <div class="records_panel">
         <div class="records_headers">
             <div class="header_box"><div class="sortable">Księgarnie</div></div>
@@ -24,23 +25,27 @@
             <div class="record_price">
                 {{ record.price }} <b>zł</b>
                 <div class="shipment">+ przesyłka od 12 zł</div>
-                <a href="{{ record.url }}" target="_blank">KUP</a>
+                <a href="{{ record.url }}" target="_blank">
+                    <div class="goto_shop">
+                        IDŹ DO SKLEPU
+                    </div>
+                </a>
             </div>
         </div>
         {% endfor %}
     </div>
     {% if product.filtered_records_number > 0 %}
-    <div class="records_filtered_out">
-        <div class="sd_format_info">
-           {% if product.filtered_records_number == 1%}
-            Oferta 1 serwisu nie spełniła wymagań aktywnych filtrów.
-            {% else %}
-            Oferty {{ product.filtered_records_number }} serwisów nie spełniły wymagań aktywnych filtrów.
-            {% endif %}
-            Format{% if product.filtered_formats|length > 1 %}y{% endif %} {% for format in product.filtered_formats %}{{ format }}{% if not forloop.last %}, {% endif %}{% endfor %}.
-            Cena {% if product.filtered_records_number > 1%}od {% endif %}{{ product.price_lowest_before_filtering }} zł.
+        <div class="records_filtered_out">
+            <div class="sd_format_info">
+                {% if product.filtered_records_number == 1%}
+                    Oferta 1 serwisu nie spełniła wymagań aktywnych filtrów.
+                {% else %}
+                    Oferty {{ product.filtered_records_number }} serwisów nie spełniły wymagań aktywnych filtrów.
+                {% endif %}
+                Format{% if product.filtered_formats|length > 1 %}y{% endif %} {% for format in product.filtered_formats %}{{ format }}{% if not forloop.last %}, {% endif %}{% endfor %}.
+                Cena {% if product.filtered_records_number > 1%}od {% endif %}{{ product.price_lowest_before_filtering }} zł.
+            </div>
         </div>
-    </div>
     {% endif %}
 </div>
 

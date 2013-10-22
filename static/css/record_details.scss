@@ -1,3 +1,5 @@
+@import "basics";
+
 $records-background-color: #F6F6F6;
 $records-font-color: #464646;
 
@@ -112,21 +114,13 @@ $records-font-color: #464646;
       display: block;
     }
 
-    a{
-      background:url(../img/2btn_red_big.png) no-repeat;
+    .goto_shop{
+      @extend .red_button;
       width:108px;
       height:27px;
-      color:white;
-      font-size:15px;
-      text-align:center;
       padding-top:7px;
-      font-weight:bold;
-      display: block;
+      font-size:15px;
       margin: auto;
-    }
-
-    a:hover{
-      color:#464646;
     }
   }
 }

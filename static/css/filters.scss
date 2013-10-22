@@ -72,6 +72,14 @@ $filter_box_header_bar2_color: #ab0000;
   cursor:pointer;
   text-align:center;
   font-weight:bold;
+
+  a{
+    color:white;
+  }
+  &:hover{
+    text-decoration:underline;
+    color:white;
+  }
 }
 
 @import "filters/price";

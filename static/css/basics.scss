@@ -1,0 +1,25 @@
+.color_button{
+  font-weight:bold;
+  text-align:center;
+  cursor:pointer;
+  color:white;
+
+  a{
+    color:white;
+  }
+  &:hover{
+    text-decoration:underline;
+    color:white;
+  }
+}
+
+.blue_button{
+  @extend .color_button;
+  background:url(../img/2btn_blue.png) no-repeat;
+}
+
+.red_button{
+  @extend .color_button;
+  background:url(../img/2btn_red_big.png);
+  background-size: 100%;
+}

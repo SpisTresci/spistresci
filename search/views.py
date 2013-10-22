@@ -148,6 +148,12 @@ class STSearchView(SearchView):
                                     'data':self.loadFilterPriceState(['from', 'to'])
                                 },
                                 {
+                                    'name':'OZNACZENIA',
+                                    'name_id':'formats',
+                                    'template_file':'filter/bullet_list.html',
+                                    'data':self.loadFilterState({'Wszystkie':["Promocje", "Nowości", "Bestsellery"]}, "special")
+                                },
+                                {
                                     'name':'SERWISY',
                                     'name_id':'services',
                                     'template_file':'filter/bullet_list.html',

@@ -20,8 +20,9 @@ $padding-top: 40px;
     background-color: $box-color;
     border-bottom: $panel-border-width solid $box-border-color;
     border-right: $panel-border-width solid $box-border-color;
-    height: 600px;
     width: $left-panel-width;
+    padding-bottom: 50px;
+    margin-bottom: 50px;
 }
 
 .wrap_panel{

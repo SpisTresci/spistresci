@@ -1048,31 +1048,6 @@ a {
   font-size: 36px;
   border-bottom: 3px solid #225b98; }
 
-.slb_price_btn {
-  background: url(../img/2btn_blue.png) no-repeat;
-  width: 151px;
-  height: 27px;
-  color: white;
-  padding-top: 10px;
-  font-weight: bold;
-  margin-bottom: 2px;
-  margin-top: 2px;
-  text-align: center;
-  cursor: pointer; }
-  .slb_price_btn a {
-    color: white; }
-  .slb_price_btn:hover {
-    text-decoration: underline; }
-  .slb_price_btn img {
-    border: none;
-    float: right;
-    margin-left: -40px;
-    margin-right: 20px;
-    margin-top: -8px; }
-  .slb_price_btn.product_details {
-    background: url(../img/2btn_red_big.png);
-    background-size: 100%; }
-
 .search_list_book {
   float: left;
   width: 100%; }
@@ -1190,21 +1165,6 @@ a {
   width: 120px;
   font-weight: 100;
   text-align: center; }
-
-.sd_price a {
-  margin-right: 5px;
-  background: url(../img/2btn_red_big.png) no-repeat;
-  width: 108px;
-  height: 27px;
-  color: white;
-  font-size: 15px;
-  text-align: center;
-  float: right;
-  padding-top: 7px;
-  font-weight: bold; }
-
-.sd_price a:hover {
-  color: #464646; }
 
 .search_drop_hide {
   width: 90%;

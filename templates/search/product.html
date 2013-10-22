@@ -1,0 +1,60 @@
+{% load staticfiles %}
+{% load mathtags %}
+{% with product=result %}
+<div class="search_list_item" data-records-count="{{ product.records|length }}">
+    <div class="search_list_book">
+        <div class="book_box">
+            <img class="product_details" src="{{ product.cover }}" alt="" style="width:100px; position:absolute;z-index:100;" onerror="this.onerror=null;this.src='{% static "img/default_cover.png" %}'" />
+            <div style="padding-left: 140px;">
+                <div class="s_title product_details">
+                    <a href="../book/test">{{ product.title }}</a>
+                </div>
+                <div class="s_author">
+                {% for author in product.name %}
+                    {% if forloop.first %}
+                        <a href="">{{ author }}</a>{% else %}, <a href="">{{ author }}</a>
+                    {% endif %}
+                {% endfor %}
+                </div>
+                <div class="s_text">
+                    Formaty: {% for format in product.formats %}{% if forloop.first %}{{ format }}{% else %}, {{ format }}{% endif %}{% endfor %}<br />
+                    Serwisy: {% for service in product.services %}{% if forloop.first %}{{ service }}{% else %}, {{ service }}{% endif %}{% endfor %}
+                </div>
+            </div>
+
+            <div class="slb_price">
+                cena od:
+                <div class="slb_price1">
+                    {{ product.price_lowest }} zł
+                </div>
+                <a href="../book/test">
+                    <div class="track_button">
+                        TROP <img src="{% static "img/hand.png" %}" alt="" />
+                    </div>
+                </a>
+                <a href="../book/test">
+                    <div class="details_button">
+                        SZCZEGÓŁY
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="puller npb">
+            <div class="p_col p_flank"></div>
+            <div class="p_col p_center"><div class="p_a1"></div><div class="p_a2"></div><div class="p_b1"></div><div class="p_b2"></div></div>
+            <div class="p_col p_flank"></div>
+        </div>
+        <div class="puller pb">
+            <div class="p_col pb_flank"></div>
+            <div class="p_col p_center"><div class="pb_a1"></div><div class="pb_a2"></div><div class="pb_b1"></div><div class="pb_b2"></div></div>
+            <div class="p_col pb_flank"></div>
+        </div>
+        <div class="puller_footer">
+            {% include "search/records_list.html" %}
+        </div>
+        <div class="records_toogle_switcher_down_wrapper">
+        <div class="records_toogle_switcher down"><img src="{% static "img/down_arrow.png" %}" /></div>
+        </div>
+    </div>
+</div>
+{% endwith %}

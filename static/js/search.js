@@ -139,6 +139,8 @@ function onReady(){
         event.stopPropagation();
     });
 
+    $(".L_left_panel").height($(".filter_panel").height() + 50)
+
     $(".s_left_cat").on("click", function(event){
         var p = $(this)
 

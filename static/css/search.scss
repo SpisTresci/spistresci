@@ -1,6 +1,7 @@
 @import "generic/L_container.scss";
 @import "search/filters";
 @import "record_details";
+@import "basics";
 
 $shadow-color:rgba(182, 182, 182, 0.3);
 
@@ -121,11 +122,36 @@ $panel-border-width: 2px;
   padding-left: 25px;
 }
 
+.box_button{
+  width:151px;
+  height:27px;
+
+  margin-bottom:2px;
+  margin-top:2px;
+  padding-top:10px;
+}
+
 .book_box{
   background-color: white;
   padding: 20px 20px 50px 20px;
-}
 
+  .track_button{
+    @extend .blue_button;
+    @extend .box_button;
+    img{
+      border:none;
+      float:right;
+      margin-left: -40px;
+      margin-right: 20px;
+      margin-top: -8px;
+    }
+  }
+
+  .details_button{
+    @extend .red_button;
+    @extend .box_button;
+  }
+}
 
 .puller {
   $height: 36px;
