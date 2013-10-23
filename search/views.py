@@ -157,7 +157,8 @@ class STSearchView(SearchView):
                                     'name':'SERWISY',
                                     'name_id':'services',
                                     'template_file':'filter/bullet_list.html',
-                                    'data': self.loadFilterState( {'Wszystkie':['Abook', ' Audeo', ' Audiobook', ' Audioteka', ' Bezdroza','Abooki', ' Audeo', ' Audiobook', ' Audioteka', ' Bezdroza', ' BezKartek']}, "services")
+                                    'data':self.loadFilterState({'Wszystkie':[bookstore['name'] for bookstore in self.servicesInfo]}, "services")
+
                                 },
                                 {
                                     'name':'SPOSÓB PŁATNOŚCI',
