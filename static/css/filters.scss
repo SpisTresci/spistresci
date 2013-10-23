@@ -27,29 +27,29 @@ $filter_box_header_bar2_color: #ab0000;
   -moz-box-sizing: border-box;
 
   .act{
-    background:#225b98 url(../img/2x.png) 100px no-repeat;
+    background:#225b98 url(../img/2x.png) 165px no-repeat;
     color:white;
     list-style-image:url('../img/blue_point.png');
   }
-}
-
-.filter_section .act a {
-  background: url(../img/2x.png) 80px no-repeat;
-  color:white;
 }
 
 .s_left .act .filter_section{
   display:block;
 }
 
-.filter_section .act a {
-  background: url(../img/2x.png) 80px no-repeat;
-  color:white;
-}
-
 .filter_section_arrow{
   float:left;
   background:url(../img/2arrow_up_black.png) no-repeat;
+  width:10px;
+  height:10px;
+  margin-right:5px;
+  margin-top:7px;
+  cursor:pointer;
+}
+
+.filter_section_arrow2{
+  float:left;
+  background:url(../img/2arrow_down_black.png) no-repeat;
   width:10px;
   height:10px;
   margin-right:5px;

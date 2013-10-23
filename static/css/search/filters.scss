@@ -17,12 +17,32 @@
   font-weight:bold;
   font-size:20px;
 
+  margin-top: 4px;
   padding-top:4px;
-  padding-left:12px;
+
+  span{
+    padding-left:12px;
+  }
   cursor:pointer;
 
   box-sizing: border-box;
   -moz-box-sizing: border-box;
+
+  .arrow{
+    display: inline-block;
+    float: right;
+    background:url(../img/2arrow_down.png) no-repeat;
+    width:17px;
+    height:16px;
+    margin-right:12px;
+    margin-top:4px;
+  }
+
+  .act &{
+   .arrow{
+      background:url(../img/2arrow_up.png) no-repeat;
+    }
+  }
 }
 
 .filter_box_bar1{
@@ -43,21 +63,10 @@
   margin-bottom: 20px;
 }
 
-.filter_box_header{
-  .arrow{
-    display: inline-block;
-    float: right;
-    background:url(../img/2arrow_down.png) no-repeat;
-    width:17px;
-    height:16px;
-    margin-right:12px;
-    margin-top:4px;
-  }
-
-  .act{
-   .arrow{
-      background:url(../img/2arrow_up.png) no-repeat;
-    }
+.filter_box{
+  display: none;
+  .act &{
+    display: block;
   }
 }
 

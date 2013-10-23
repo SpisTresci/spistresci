@@ -22,7 +22,7 @@ urlpatterns = patterns('',
                            RegistrationView.as_view(form_class=RegistrationForm),
                            name='registration_register'),
      url(r'^accounts/', include('registration.backends.default.urls')),
-     url('^book/(?P<book_id>\w+)/$', book),
+     url('^book/(?P<book_id>\d+)/.*$', book),
      url('^description/(?P<book_id>\w+)/$', book_description),
 )
 

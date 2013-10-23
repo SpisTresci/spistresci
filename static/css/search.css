@@ -47,24 +47,25 @@
   box-sizing: border-box;
   -moz-box-sizing: border-box; }
   .filter_section .act {
-    background: #225b98 url(../img/2x.png) 100px no-repeat;
+    background: #225b98 url(../img/2x.png) 165px no-repeat;
     color: white;
     list-style-image: url("../img/blue_point.png"); }
-
-.filter_section .act a {
-  background: url(../img/2x.png) 80px no-repeat;
-  color: white; }
 
 .s_left .act .filter_section {
   display: block; }
 
-.filter_section .act a {
-  background: url(../img/2x.png) 80px no-repeat;
-  color: white; }
-
 .filter_section_arrow {
   float: left;
   background: url(../img/2arrow_up_black.png) no-repeat;
+  width: 10px;
+  height: 10px;
+  margin-right: 5px;
+  margin-top: 7px;
+  cursor: pointer; }
+
+.filter_section_arrow2 {
+  float: left;
+  background: url(../img/2arrow_down_black.png) no-repeat;
   width: 10px;
   height: 10px;
   margin-right: 5px;
@@ -108,7 +109,6 @@
   list-style-position: outside; }
 .filter_content.bullet_list li {
   margin-left: 35px;
-  margin-bottom: 1px;
   float: left;
   width: 85%;
   list-style-image: url("../img/dark_point.png"); }
@@ -142,11 +142,23 @@
   color: white;
   font-weight: bold;
   font-size: 20px;
+  margin-top: 4px;
   padding-top: 4px;
-  padding-left: 12px;
   cursor: pointer;
   box-sizing: border-box;
   -moz-box-sizing: border-box; }
+  .filter_box_header span {
+    padding-left: 12px; }
+  .filter_box_header .arrow {
+    display: inline-block;
+    float: right;
+    background: url(../img/2arrow_down.png) no-repeat;
+    width: 17px;
+    height: 16px;
+    margin-right: 12px;
+    margin-top: 4px; }
+  .act .filter_box_header .arrow {
+    background: url(../img/2arrow_up.png) no-repeat; }
 
 .filter_box_bar1, .filter_box_bar3 {
   float: left;
@@ -162,16 +174,10 @@
   margin-top: 15px;
   margin-bottom: 20px; }
 
-.filter_box_header .arrow {
-  display: inline-block;
-  float: right;
-  background: url(../img/2arrow_down.png) no-repeat;
-  width: 17px;
-  height: 16px;
-  margin-right: 12px;
-  margin-top: 4px; }
-.filter_box_header .act .arrow {
-  background: url(../img/2arrow_up.png) no-repeat; }
+.filter_box {
+  display: none; }
+  .act .filter_box {
+    display: block; }
 
 .filter_section {
   border-bottom: 1px solid #122e3d; }
@@ -208,6 +214,17 @@
   background: url(../img/2btn_red_big.png);
   background-size: 100%; }
 
+.unselectable {
+  -webkit-user-select: none;
+  /* Chrome/Safari */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* IE10+ */
+  /* Rules below not implemented in browsers yet */
+  -o-user-select: none;
+  user-select: none; }
+
 .table_cell, .record_table_cell, .record .service_logo_box, .record .record_formats, .record .record_info, .record .payment_info, .record .record_price, .records_headers .header_box {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -224,7 +241,8 @@
 .records_panel {
   display: table;
   border-collapse: collapse;
-  width: 1000px; }
+  width: 95%;
+  min-width: 750px; }
 
 .records_headers {
   display: table-row;
@@ -284,7 +302,8 @@
       margin: auto; }
 
 .records_filtered_out {
-  width: 1000px;
+  width: 95%;
+  min-width: 750px;
   background: #f6f6f6;
   height: 25px;
   font-size: 12px;
@@ -317,6 +336,17 @@
 .red_button, .record .record_price .goto_shop, .book_box .details_button {
   background: url(../img/2btn_red_big.png);
   background-size: 100%; }
+
+.unselectable {
+  -webkit-user-select: none;
+  /* Chrome/Safari */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* IE10+ */
+  /* Rules below not implemented in browsers yet */
+  -o-user-select: none;
+  user-select: none; }
 
 .view_icon, .list_view_icon, .galery_view_icon, .text_view_icon, .big_list_view_icon {
   margin: 8px 10px;
@@ -564,6 +594,8 @@
     margin-bottom: 0px; }
   .puller_footer .records_panel {
     width: 100%; }
+  .puller_footer .records_filtered_out {
+    width: 100%; }
   .puller_footer .header_box {
     background-color: #e3e3e3; }
 
@@ -604,3 +636,10 @@
 
 .main_container {
   padding-top: 0px; }
+
+.main_container.loading {
+  opacity: 0.4;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease; }

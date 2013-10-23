@@ -917,23 +917,10 @@ $color_font_blue:#225b98;
   cursor:pointer;
   margin-right:50px;
 }
-.s_left_hide .act{
-  background:#225b98 url(../img/2x.png) 100px no-repeat;
-  color:white;
-}
+
 .s_left_cat_arrow{
   float:left;
   background:url(../img/2arrow_up_black.png) no-repeat;
-  width:10px;
-  height:10px;
-  margin-right:5px;
-  margin-top:7px;
-  cursor:pointer;
-}
-
-.s_left_cat_arrow2{
-  float:left;
-  background:url(../img/2arrow_down_black.png) no-repeat;
   width:10px;
   height:10px;
   margin-right:5px;
@@ -971,10 +958,7 @@ $color_font_blue:#225b98;
   font-size:13px;
   cursor:pointer;
 }
-.s_left_hide .act a {
-  background: url(../img/2x.png) 80px no-repeat;
-  color:white;
-}
+
 .s_left_btn{
   float:left;
   margin-top:15px;

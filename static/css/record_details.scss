@@ -23,7 +23,8 @@ $records-font-color: #464646;
 .records_panel{
   display: table;
   border-collapse: collapse;
-  width:1000px;
+  width: 95%;
+  min-width: 750px;
 }
 
 .records_headers{
@@ -126,7 +127,8 @@ $records-font-color: #464646;
 }
 
 .records_filtered_out{
-  width:1000px;
+  width:95%;
+  min-width: 750px;
   background:  $records-background-color;
   height:25px;
   font-size:12px;
