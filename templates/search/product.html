@@ -7,7 +7,7 @@
             <img class="product_details" src="{{ product.cover }}" alt="" style="width:100px; position:absolute;z-index:100;" onerror="this.onerror=null;this.src='{% static "img/default_cover.png" %}'" />
             <div style="padding-left: 140px;">
                 <div class="s_title product_details">
-                    <a href="/book/{{ product.id }}/{{ product.title }}">{{ product.title }}</a>
+                    <a href="/book/{{ product.id }}/{{ product.title | slugify}}">{{ product.title }}</a>
                 </div>
                 <div class="s_author">
                 {% for author in product.name %}
@@ -27,12 +27,12 @@
                 <div class="slb_price1">
                     {{ product.price_lowest }} zł
                 </div>
-                <a href="/book/{{ product.id }}/{{ product.title }}">
+                <a href="">
                     <div class="track_button">
                         TROP <img src="{% static "img/hand.png" %}" alt="" />
                     </div>
                 </a>
-                <a href="/book/{{ product.id }}/{{ product.title }}">
+                <a href="/book/{{ product.id }}/{{ product.title | slugify}}">
                     <div class="details_button">
                         SZCZEGÓŁY
                     </div>

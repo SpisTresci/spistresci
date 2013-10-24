@@ -203,6 +203,7 @@ class STSearchQuerySet(SearchQuerySet):
                     record[var_name] = eval(var_name)
 
                 record["formats"] = [attr.replace("format_", "").upper() for attr, value  in record.iteritems() if str(attr).startswith("format_") and value]
+                record["id"] = str(product.id) + '-' + record['bookstore']
                 product.records.append(record)
 
             products.append(product)
