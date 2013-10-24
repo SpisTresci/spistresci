@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from django.shortcuts import render_to_response
+from django.shortcuts import render_to_response, render
 from django.http import HttpResponse
 from spistresci.auth.views import authorization
 from spistresci.constants import *
@@ -86,3 +86,6 @@ def get_book_description(book_id):
     import random
     book_id = random.choice(['kilka', 'szkolne', 'aby'])
     return book_descriptions[book_id]
+
+def book_redirect(request):
+    return render(request, "book/redirect.html", request.GET)

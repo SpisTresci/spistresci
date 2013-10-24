@@ -9,7 +9,7 @@ from spistresci.auth.views import logout, accounts_social_signup, accounts_profi
 from spistresci.register.views import register_user, egazeciarz_register_user
 from spistresci.monitor.views import monitor
 from spistresci.auth.forms import RegistrationForm
-from spistresci.book.views import book, book_description
+from spistresci.book.views import book, book_description, book_redirect
 
 admin.autodiscover()
 
@@ -23,6 +23,8 @@ urlpatterns = patterns('',
                            name='registration_register'),
      url(r'^accounts/', include('registration.backends.default.urls')),
      url('^book/(?P<book_id>\d+)/.*$', book),
+     url('^book-redirect/$', book_redirect, name="book_redirect"),
+
      url('^description/(?P<book_id>\w+)/$', book_description),
 )
 

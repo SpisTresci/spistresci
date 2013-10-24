@@ -18,14 +18,14 @@
                 <img src="{% static "img/logo/"|add:record.bookstore|add:"_150x75.png"|lower %}" alt="{{record.bookstore}}" onerror="this.onerror=null;this.src='{% static "img/logo/loremipsum_150x75.png" %}'" />
             </div>
             <div class="record_formats">
-                Dostajesz: <br/>{% for format in record.formats %}{% if forloop.first %}{{ format }}{% else %}, {{ format }}{% endif %}{% endfor %}
+                Dostajesz: <br/>{{ record.formats|join:", " }}
             </div>
             <div class="record_info">Test</div>
             <div class="payment_info">Test2</div>
             <div class="record_price">
                 {{ record.price }} <b>zł</b>
                 <div class="shipment">+ przesyłka od 12 zł</div>
-                <a href="{{ record.url }}" target="_blank">
+                <a href="{% url "book_redirect" %}?id={{ record.id }}&price={{ record.price }}&url={{ record.url }}">
                     <div class="goto_shop">
                         IDŹ DO SKLEPU
                     </div>
@@ -37,12 +37,12 @@
     {% if product.filtered_records_number > 0 %}
         <div class="records_filtered_out">
             <div class="sd_format_info">
-                {% if product.filtered_records_number == 1%}
-                    Oferta 1 serwisu nie spełniła wymagań aktywnych filtrów.
-                {% else %}
-                    Oferty {{ product.filtered_records_number }} serwisów nie spełniły wymagań aktywnych filtrów.
-                {% endif %}
-                Format{% if product.filtered_formats|length > 1 %}y{% endif %} {% for format in product.filtered_formats %}{{ format }}{% if not forloop.last %}, {% endif %}{% endfor %}.
+                Oferty {{ product.filtered_records_number }} serwis{{ product.filtered_records_number|pluralize:"u,ów" }} nie spełniły wymagań aktywnych filtrów.
+
+                {% with formats=product.filtered_formats %}
+                    Format{{ formats|pluralize:"y"}}: {{ formats|join:", "}}
+                {% endwith %}
+
                 Cena {% if product.filtered_records_number > 1%}od {% endif %}{{ product.price_lowest_before_filtering }} zł.
             </div>
         </div>
