@@ -163,6 +163,7 @@ INSTALLED_APPS = (
     'allauth.socialaccount.providers.twitter',
     'registration',
     'django_common',
+    "django_cron",
 )
 
 # A sample logging configuration. The only tangible logging
@@ -267,6 +268,10 @@ EMAIL_USE_TLS = True
 
 DEFAULT_FROM_EMAIL = 'no-reply@spistresci.pl'
 
+CRON_CLASSES = [
+    "spistresci.cron.TrackNotificationCronJob",
+    "spistresci.cron.ClearUsersCronJob",
+]
 import shutil, sys
 if len(sys.argv) >=2 and sys.argv[1] == 'syncdb':
     shutil.copyfile(os.path.join(SITE_ROOT,'fixtures/authentication-dev.json'), os.path.join(SITE_ROOT,'../initial_data.json'))
