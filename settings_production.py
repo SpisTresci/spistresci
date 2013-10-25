@@ -43,7 +43,7 @@ DATABASES = {
 HAYSTACK_CONNECTIONS = {
     'default': {
         'ENGINE': 'haystack.backends.solr_backend.SolrEngine',
-        'URL': 'http://solr1.spistresci.pl:8090/solr1/masterbook_latest',
+        'URL': 'http://solr.spistresci.pl:8090/solr/masterbook_latest',
         'EXCLUDED_INDEXES': [
             'main_service.search_indexes.BookstoreIndex',
         ]
@@ -51,7 +51,7 @@ HAYSTACK_CONNECTIONS = {
 
     'bookstore': {
         'ENGINE': 'haystack.backends.solr_backend.SolrEngine',
-        'URL': 'http://solr1.spistresci.pl:8090/solr1/bookstore_latest',
+        'URL': 'http://solr.spistresci.pl:8090/solr/bookstore_latest',
         'EXCLUDED_INDEXES': [
             'main_service.search_indexes.MasterBookIndex',
         ]
