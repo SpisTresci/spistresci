@@ -1,41 +1,23 @@
 <html>
 <head>
 <title>Receipt for your clothing purchase from Acme Clothing</title>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-45133188-1', 'spistresci.pl');
-  ga('send', 'pageview');
-</script>
-
+{% include "snippets/google_analytics.html" %}
 
 <script type="text/javascript">
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-45133188-1']);
   _gaq.push(['_trackPageview']);
   _gaq.push(['_addTrans',
-    '1234',           // transaction ID - required
-    'Acme Clothing - with redirection 2',  // affiliation or store name
-    '11.99',          // total - required
-    '1.29',           // tax
-    '5',              // shipping
-    'San Jose',       // city
-    'California',     // state or province
-    'USA'             // country
+    '{% now "Ymd-Hi" %}-{{ id }}',
+    '{{ title }}',  // affiliation or store name
+    '{{ price }}'          // total - required
   ]);
 
-   // add item might be called for every item in the shopping cart
-   // where your ecommerce engine loops through each item in the cart and
-   // prints out _addItem for each
   _gaq.push(['_addItem',
-    '1234',           // transaction ID - required
-    'DD44',           // SKU/code - required
-    'T-Shirt',        // product name
-    'Green Medium',   // category or variation
-    '11.99',          // unit price - required
+    '{% now "Ymd-Hi" %}-{{ id }}',           // transaction ID - required
+    '{{ id }}',           // SKU/code - required
+    '{{ id }}',        // product name
+    '{{ price }}',          // unit price - required
     '1'               // quantity - required
   ]);
   _gaq.push(['_trackTrans']); //submits transaction to the Analytics servers

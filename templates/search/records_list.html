@@ -25,7 +25,7 @@
             <div class="record_price">
                 {{ record.price }} <b>zł</b>
                 <div class="shipment">+ przesyłka od 12 zł</div>
-                <a href="{% url "book_redirect" %}?id={{ record.id }}&price={{ record.price }}&url={{ record.url }}">
+                <a href="{% url "book_redirect" %}?id={{ record.id }}&price={{ record.price }}&url={{ record.url }}&title={{ record.title }}">
                     <div class="goto_shop">
                         IDŹ DO SKLEPU
                     </div>
