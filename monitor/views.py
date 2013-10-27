@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from django.shortcuts import render_to_response, redirect
+from django.shortcuts import render, redirect
 from models import *
 from datetime import datetime, timedelta
 
@@ -22,7 +22,7 @@ def monitor(request):
                 s_stable.append(uss)
 
         repair_dates(update_statuses)
-        return render_to_response('monitor/index.html', {"data": table, "services":services, "update_statuses": update_statuses})
+        return render(request, 'monitor/index.html', {"data": table, "services":services, "update_statuses": update_statuses})
     else:
         return redirect("/")
 

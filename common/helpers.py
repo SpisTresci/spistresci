@@ -12,3 +12,7 @@ def send_email(template, context, sender, receivers, subject, headers=None):
     msg = EmailMultiAlternatives(subject, '', sender, receivers, headers=headers)
     msg.attach_alternative(message, "text/html")
     msg.send()
+
+
+def google_analytics_context_processor(request):
+    return dict(google_analytics_id=getattr(settings, 'GOOGLE_ANALYTICS_ID', None))

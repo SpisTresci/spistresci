@@ -1,4 +1,4 @@
-from django.shortcuts import render_to_response
+from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from django.core.context_processors import csrf
 from spistresci.forms import RegistrationForm
@@ -20,7 +20,7 @@ def register_user(request, template = 'register.html'):
     c['form'] = form
     c['request'] = request
 
-    return render_to_response(template, c)
+    return render(request, template, c)
 
 def egazeciarz_register_user(request):
     return register_user(request, 'egazeciarz_register.html')

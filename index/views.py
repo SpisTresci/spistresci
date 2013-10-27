@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from django.shortcuts import render_to_response
+from django.shortcuts import render
 from spistresci.auth.views import authorization
 from spistresci.constants import *
 from constants import *
@@ -100,4 +100,4 @@ def index(request):
 
     random.shuffle(blogger_reviews)
     c['blogger_reviews']=blogger_reviews[:3]
-    return render_to_response('index.html', c)
+    return render(request, 'index.html', c)

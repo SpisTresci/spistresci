@@ -2,7 +2,7 @@
 # from django.template.loader import POST_template
 from django.template import Context
 from django.http import HttpResponse
-from django.shortcuts import render_to_response
+from django.shortcuts import render
 from application.models import Address
 from datetime import datetime
 from django.core.context_processors import csrf
@@ -15,15 +15,16 @@ def main(request):
         addr = request.POST['mail']
         dat = datetime.now()
         new_email = Address(email=addr, date=dat)
-        new_email.save();
-        return render_to_response('template.html', {'response': "Dziękujemy za pozostawienie adresu e-mail."})
+        new_email.save()
+        context = {'response': "Dziękujemy za pozostawienie adresu e-mail."}
     else:
-        return render_to_response('template.html', {'response':""})
+        context = {'response': ""}
+    return render(request, 'template.html', context)
 
-#Note: This seems to be stupid, but in production this should be absolute path 
+#Note: This seems to be stupid, but in production this should be absolute path
 #Moreover defining separate view for each image looks bad in my opinion
 SITE_ROOT = os.path.dirname(os.path.realpath(__file__))
 def logo(request):
     image_data = open(os.path.join(SITE_ROOT,'../imgs/Logo_ST.png'), "rb").read()
-    return HttpResponse(image_data, mimetype="image/png") 
+    return HttpResponse(image_data, mimetype="image/png")
 

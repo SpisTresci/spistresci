@@ -220,18 +220,19 @@ HAYSTACK_CONNECTIONS = {
     },
 }
 
-AUTHENTICATION_BACKENDS = {
+AUTHENTICATION_BACKENDS = (
      'spistresci.auth_backends.eGazeciarzAuthenticationBackend',
      'allauth.account.auth_backends.AuthenticationBackend',
      'django.contrib.auth.backends.ModelBackend',
-}
+)
 
-TEMPLATE_CONTEXT_PROCESSORS = {
+TEMPLATE_CONTEXT_PROCESSORS = (
+    'spistresci.common.helpers.google_analytics_context_processor',
     'django.contrib.auth.context_processors.auth',
     'django.core.context_processors.request',
     'allauth.account.context_processors.account',
     'allauth.socialaccount.context_processors.socialaccount',
-}
+)
 
 # SOCIALACCOUNT_PROVIDERS are needed for social authentication, which is currently implemented using django-allauth.
 # Each provider needs to be defined in INSTALLED_APPS, and usually require inserting to database special information
@@ -275,6 +276,9 @@ CRON_CLASSES = [
     "spistresci.cron.TrackNotificationCronJob",
     "spistresci.cron.ClearUsersCronJob",
 ]
+
+GOOGLE_ANALYTICS_ID = 'UA-45133188-1'
+
 import shutil, sys
 if len(sys.argv) >=2 and sys.argv[1] == 'syncdb':
     shutil.copyfile(os.path.join(SITE_ROOT,'fixtures/authentication-dev.json'), os.path.join(SITE_ROOT,'../initial_data.json'))

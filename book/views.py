@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from django.shortcuts import render_to_response, render
+from django.shortcuts import render
 from django.http import HttpResponse
 from spistresci.auth.views import authorization
 from spistresci.constants import *
@@ -70,7 +70,7 @@ def book(request, book_id):
     "filtered_formats":['PDF', 'MOBI', 'EPUB'],
     }
 
-    return render_to_response('book/index.html', c)
+    return render(request, 'book/index.html', c)
 
 def book_description(request, book_id):
     return HttpResponse(get_book_description(book_id))
