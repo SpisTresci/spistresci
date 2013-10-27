@@ -1,15 +1,21 @@
+# -*- coding: utf-8 -*-
+
+from decimal import Decimal
 from spistresci.track.models import BookTrack
 from django import forms
 
 class BookTrackForm(forms.ModelForm):
 
-	class Meta:
-		model = BookTrack
-		fields = ['price']
+    price = forms.CharField(max_length=10, required=False)
 
-	def save(self, user, book):
-		track = super(BookTrackForm, self).save(comit=False)
-		track.user = user
-		track.book = book
-		track.save()
-		return track
+    class Meta:
+        model = BookTrack
+        fields = ['price']
+
+    def clean_price(self):
+        price = self.cleaned_data['price']
+        if price:
+            try:
+                return int(Decimal(price.replace(',', '.')) * 100)
+            except:
+                raise forms.ValidationError(u"Podaj prawidłową cenę")

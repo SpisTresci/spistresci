@@ -10,8 +10,10 @@ from spistresci.register.views import register_user, egazeciarz_register_user
 from spistresci.monitor.views import monitor
 from spistresci.auth.forms import RegistrationForm
 from spistresci.book.views import book, book_description, book_redirect
+from dajaxice.core import dajaxice_autodiscover, dajaxice_config
 
 admin.autodiscover()
+dajaxice_autodiscover()
 
 urlpatterns = patterns('',
      url('^$', index),
@@ -48,5 +50,5 @@ urlpatterns += patterns('haystack.views',
     url(r'^admin/', include(admin.site.urls)),
 
     url(r'^accounts/', include('allauth.urls')),
-
+    url(dajaxice_config.dajaxice_url, include('dajaxice.urls')),
 )

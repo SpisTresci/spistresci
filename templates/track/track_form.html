@@ -1,0 +1,5 @@
+<form action="" method="post" id="track_form_{{ product.id }}" accept-charset="utf-8">
+    <input type="hidden" name="book" value="{{ product.id }}" />>
+    {{ track_form.as_p }}
+    <input type="button" value="Zapisz" onclick="send_form('#track_form_{{ product.id }}');">
+</form>

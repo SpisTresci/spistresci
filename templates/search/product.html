@@ -27,7 +27,8 @@
                 <div class="slb_price1">
                     {{ product.price_lowest }} zł
                 </div>
-                <a href="">
+                <div id="track_form_container_{{ product.id }}"></div>
+                <a href="#" onclick="get_track_form({{ product.id }}); return false;">
                     <div class="track_button">
                         TROP <img src="{% static "img/hand.png" %}" alt="" />
                     </div>

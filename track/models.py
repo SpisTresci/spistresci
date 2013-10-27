@@ -5,9 +5,10 @@ from spistresci.models import MasterBook
 class BookTrack(models.Model):
     masterbook = models.ForeignKey(MasterBook, related_name="book_tracks")
     user = models.ForeignKey(User, related_name="book_tracks")
-    price = models.IntegerField(null=True, blank=True)
+    price = models.IntegerField(null=True, blank=True, verbose_name="Cena")
 
     class Meta:
+        unique_together = (('masterbook', 'user'),)
         db_table = 'BookTrack'
 
 class BookTrackNotification(models.Model):

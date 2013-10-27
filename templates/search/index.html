@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load staticfiles %}
+{% load dajaxice_templatetags %}
 
 {% block title %}Spis Treści - wyniki wyszukiwania{% endblock title %}
 {% block css %}
@@ -11,6 +12,19 @@
 
     <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
     <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+
+    <script type="text/javascript" src="{% static "/static/dajax/jquery.dajax.core.js" %}"></script>
+    {% dajaxice_js_import %}
+    <script type="text/javascript">
+        function send_form(form_id){
+            var data = $(form_id).serialize(true);
+            Dajaxice.spistresci.post_track_form(Dajax.process, {'form': data});
+        }
+
+        function get_track_form(book_id){
+            Dajaxice.spistresci.get_track_form(Dajax.process, {'book_id': book_id});
+        }
+    </script>
 {% endblock js %}
 {% block container %} {% include "search/container.html" %} {% endblock container %}
 {% block searchbox %} {% include "searchbox_small_panel.html" %} {% endblock searchbox %}
