@@ -5,3 +5,4 @@
 *.swp
 /solr/
 .sass-cache
+settings/local.py

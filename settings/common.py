@@ -1,7 +1,18 @@
 # Django settings for main_service project.
 import os
+
+print 'common'
+
 DEBUG = True
+IS_DEV = False
+IS_STAGING = False
+IS_PROD = False
+
 TEMPLATE_DEBUG = DEBUG
+
+ENV = os.getenv('ENV')
+if not ENV:
+    raise Exception('Environment variable ENV is requried!')
 
 ADMINS = (
     # ('Your Name', 'your_email@example.com'),
@@ -134,8 +145,8 @@ ROOT_URLCONF = 'spistresci.urls'
 WSGI_APPLICATION = 'spistresci.wsgi.application'
 
 TEMPLATE_DIRS = (
-    os.path.join(SITE_ROOT,'templates/'),
-    os.path.join(SITE_ROOT,'../common/templates/'),
+    os.path.join(SITE_ROOT,'../templates/'),
+    os.path.join(SITE_ROOT,'../../common/templates/'),
 )
 
 INSTALLED_APPS = (
@@ -232,6 +243,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.request',
     'allauth.account.context_processors.account',
     'allauth.socialaccount.context_processors.socialaccount',
+    'django_common.context_processors.common_settings',
 )
 
 # SOCIALACCOUNT_PROVIDERS are needed for social authentication, which is currently implemented using django-allauth.
@@ -259,11 +271,6 @@ SOCIALACCOUNT_PROVIDERS = {
 
 ACCOUNT_ACTIVATION_DAYS = 5
 
-# NOTE: for local tests you can use backend from django_common, which save email as a file
-# EMAIL_BACKEND = 'django_common.email_backends.CustomFileEmailBackend'
-# EMAIL_FILE_PATH = '/home/mateusz/tmp/messages'
-# EMAIL_FILE_EXT = 'eml'
-
 EMAIL_HOST = 'smtp.sendgrid.net'
 EMAIL_HOST_USER = 'spistresci'
 EMAIL_HOST_PASSWORD = 'spistresci-rules!1'
@@ -276,8 +283,6 @@ CRON_CLASSES = [
     "spistresci.cron.TrackNotificationCronJob",
     "spistresci.cron.ClearUsersCronJob",
 ]
-
-GOOGLE_ANALYTICS_ID = 'UA-45133188-1'
 
 import shutil, sys
 if len(sys.argv) >=2 and sys.argv[1] == 'syncdb':
