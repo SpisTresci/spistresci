@@ -1,8 +1,6 @@
 # Django settings for main_service project.
 import os
 
-print 'common'
-
 DEBUG = True
 IS_DEV = False
 IS_STAGING = False
