@@ -1,22 +1,22 @@
-<html>
-<head>
-<title>Receipt for your clothing purchase from Acme Clothing</title>
+{% extends "base.html" %}
+{% block title %}Spis Treści - Przekierowanie na stronę księgarni...{% endblock title %}
+{% block js %}
 <script type="text/javascript">
   var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-45133188-1']);
+  _gaq.push(['_setAccount', '{{ google_analytics_id }}']);
   _gaq.push(['_trackPageview']);
   _gaq.push(['_addTrans',
     '{% now "Ymd-Hi" %}-{{ id }}',
-    '{{ title }}',  // affiliation or store name
-    '{{ price }}'          // total - required
+    '{{ title }}',                  // affiliation or store name
+    '{{ price }}'                   // total - required
   ]);
 
   _gaq.push(['_addItem',
-    '{% now "Ymd-Hi" %}-{{ id }}',           // transaction ID - required
-    '{{ id }}',           // SKU/code - required
-    '{{ id }}',        // product name
-    '{{ price }}',          // unit price - required
-    '1'               // quantity - required
+    '{% now "Ymd-Hi" %}-{{ id }}',  // transaction ID - required
+    '{{ id }}',                     // SKU/code - required
+    '{{ id }}',                     // product name
+    '{{ price }}',                  // unit price - required
+    '1'                             // quantity - required
   ]);
   _gaq.push(['_trackTrans']); //submits transaction to the Analytics servers
 
@@ -28,9 +28,5 @@
 
   window.location = '{{ url }}';
 </script>
-
-</head>
-<body>
-	Przekierowanie na stronę księgarni...
-</body>
-</html>
+{% endblock js %}
+{% block container %}Przekierowanie na stronę księgarni...{% endblock container %}
