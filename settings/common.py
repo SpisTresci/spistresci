@@ -9,8 +9,8 @@ IS_PROD = False
 TEMPLATE_DEBUG = DEBUG
 
 ENV = os.getenv('ENV')
-if not ENV:
-    raise Exception('Environment variable ENV is requried!')
+if not ENV or ENV not in ['dev', 'staging', 'prod']:
+    raise Exception('Environment variable ENV is requried! [dev/staging/prod]')
 
 ADMINS = (
     # ('Your Name', 'your_email@example.com'),
@@ -143,8 +143,8 @@ ROOT_URLCONF = 'spistresci.urls'
 WSGI_APPLICATION = 'spistresci.wsgi.application'
 
 TEMPLATE_DIRS = (
-    os.path.join(SITE_ROOT,'../templates/'),
-    os.path.join(SITE_ROOT,'../../common/templates/'),
+    os.path.join(SITE_ROOT,'templates/'),
+    os.path.join(SITE_ROOT,'../common/templates/'),
 )
 
 INSTALLED_APPS = (
@@ -209,25 +209,6 @@ LOGGING = {
 
 HAYSTACK_SEARCH_RESULTS_PER_PAGE = 10
 HAYSTACK_LIMIT_TO_REGISTERED_MODELS = False
-HAYSTACK_CONNECTIONS = {
-    'default': {
-        'ENGINE': 'haystack.backends.solr_backend.SolrEngine',
-        #'URL': 'http://127.0.0.1:8983/solr/masterbook_alpha_10',
-        'URL': 'http://solr.spistresci.pl:8090/solr/masterbook_latest',
-        'EXCLUDED_INDEXES': [
-            'spistresci.search_indexes.BookstoreIndex',
-        ]
-    },
-
-    'bookstore': {
-        'ENGINE': 'haystack.backends.solr_backend.SolrEngine',
-        #'URL': 'http://127.0.0.1:8983/solr/bookstore_alpha_10',
-        'URL': 'http://solr.spistresci.pl:8090/solr/bookstore_latest',
-        'EXCLUDED_INDEXES': [
-            'spistresci.search_indexes.MasterBookIndex',
-        ]
-    },
-}
 
 AUTHENTICATION_BACKENDS = (
      'spistresci.auth_backends.eGazeciarzAuthenticationBackend',

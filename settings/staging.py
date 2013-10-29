@@ -45,29 +45,34 @@ DATABASES = {
     }
 }
 
+SOLR = {
+    'login':'st_' + os.getenv('ENV'),
+    'pass':'WcCPFemapxqyN4xo'
+}
+
 HAYSTACK_CONNECTIONS = {
     'default': {
         'ENGINE': 'haystack.backends.solr_backend.SolrEngine',
-        'URL': 'http://solr.spistresci.pl:8090/solr/masterbook_latest',
+        'URL': 'http://%(login)s:%(pass)s@solr.spistresci.pl:8090/solr/masterbook_latest' % SOLR,
         'EXCLUDED_INDEXES': [
-            'main_service.search_indexes.BookstoreIndex',
+            'spistresci.search_indexes.BookstoreIndex',
         ]
     },
 
     'bookstore': {
         'ENGINE': 'haystack.backends.solr_backend.SolrEngine',
-        'URL': 'http://solr.spistresci.pl:8090/solr/bookstore_latest',
+        'URL': 'http://%(login)s:%(pass)s@solr.spistresci.pl:8090/solr/bookstore_latest' % SOLR,
         'EXCLUDED_INDEXES': [
-            'main_service.search_indexes.MasterBookIndex',
+            'spistresci.search_indexes.MasterBookIndex',
         ]
     },
-
 }
 
 EMAIL_SUBJECT_PREFIX= 'Welcome Screen:'
 
 #Note: This seems to be stupid, but in production mode template dir should be absolute path :/
-SITE_ROOT = os.path.dirname(os.path.realpath(__file__))
+
+SITE_ROOT = os.path.join(os.path.dirname(os.path.realpath(__file__)), '../')
 TEMPLATE_DIRS = (
     os.path.join(SITE_ROOT,'templates'),
     os.path.join(SITE_ROOT,'../common/templates/'),
