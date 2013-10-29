@@ -67,8 +67,8 @@ EMAIL_SUBJECT_PREFIX= 'Welcome Screen:'
 #Note: This seems to be stupid, but in production mode template dir should be absolute path :/
 SITE_ROOT = os.path.dirname(os.path.realpath(__file__))
 TEMPLATE_DIRS = (
-    os.path.join(SITE_ROOT,'templates'),
-    os.path.join(SITE_ROOT,'../common/templates/'),
+    os.path.join(SITE_ROOT,'../templates'),
+    os.path.join(SITE_ROOT,'../../common/templates/'),
 )
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
@@ -82,4 +82,4 @@ TEMPLATE_DIRS = (
 
 import shutil, sys
 if len(sys.argv) >=2 and sys.argv[1] == 'syncdb':
-    shutil.copyfile(os.path.join(SITE_ROOT,'fixtures/authentication-production.json'), os.path.join(SITE_ROOT,'../initial_data.json'))
+    shutil.copyfile(os.path.join(SITE_ROOT,'../fixtures/authentication-production.json'), os.path.join(SITE_ROOT,'../../initial_data.json'))

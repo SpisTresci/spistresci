@@ -284,4 +284,4 @@ CRON_CLASSES = [
 
 import shutil, sys
 if len(sys.argv) >=2 and sys.argv[1] == 'syncdb':
-    shutil.copyfile(os.path.join(SITE_ROOT,'fixtures/authentication-dev.json'), os.path.join(SITE_ROOT,'../initial_data.json'))
+    shutil.copyfile(os.path.join(SITE_ROOT,'../fixtures/authentication-dev.json'), os.path.join(SITE_ROOT,'../../initial_data.json'))
