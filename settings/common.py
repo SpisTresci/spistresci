@@ -98,7 +98,7 @@ STATIC_ROOT = '/var/www/django/static/'
 # Example: "http://example.com/static/", "http://static.example.com/"
 STATIC_URL = '/static/'
 
-SITE_ROOT = os.path.dirname(os.path.realpath(__file__))
+SITE_ROOT = os.path.join(os.path.dirname(os.path.realpath(__file__)), '../')
 
 # Additional locations of static files
 STATICFILES_DIRS = (
@@ -284,4 +284,4 @@ CRON_CLASSES = [
 
 import shutil, sys
 if len(sys.argv) >=2 and sys.argv[1] == 'syncdb':
-    shutil.copyfile(os.path.join(SITE_ROOT,'../fixtures/authentication-dev.json'), os.path.join(SITE_ROOT,'../../initial_data.json'))
+    shutil.copyfile(os.path.join(SITE_ROOT,'fixtures/authentication-dev.json'), os.path.join(SITE_ROOT,'../initial_data.json'))
