@@ -1,0 +1,10 @@
+pyisbn==0.6.3
+python-levenshtein==0.10.2
+sqlalchemy==0.8.3
+ply==3.4
+pyoai==2.4.4
+unidecode==0.04.14
+winpdb==1.4.8
+regex==2013-10-26
+git+https://github.com/noisy/PyZ3950.git#egg=PyZ3950
+
