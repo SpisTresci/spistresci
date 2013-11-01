@@ -3,6 +3,9 @@ from django.contrib.auth import models as auth_models
 from django.contrib.auth.hashers import *
 from django.utils import timezone
 
+from spistresci.track.models import *
+from spistresci.blogger.models import *
+
 class MasterBookSolrWrapper(models.Model):
     class Meta:
         db_table="MasterBookSolrWrapper"

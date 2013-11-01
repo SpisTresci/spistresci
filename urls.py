@@ -27,6 +27,7 @@ urlpatterns = patterns('',
      url('^book/(?P<book_id>\d+)/.*$', STBookView(searchqueryset = STBookQuerySet(), form_class=STSearchForm), name='book_page'),
      url('^book-redirect/$', book_redirect, name="book_redirect"),
 #     url('^description/(?P<book_id>\w+)/$', book_description),
+     url(r'^blogger/', include('spistresci.blogger.urls', namespace='blogger')),
 )
 
 #TODO: check thread safe version of this

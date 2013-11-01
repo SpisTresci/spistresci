@@ -219,6 +219,7 @@ AUTHENTICATION_BACKENDS = (
 
 TEMPLATE_CONTEXT_PROCESSORS = (
     'spistresci.common.helpers.google_analytics_context_processor',
+    'spistresci.common.helpers.menu_context_processor',
     'django.contrib.auth.context_processors.auth',
     'django.core.context_processors.request',
     'allauth.account.context_processors.account',
@@ -267,6 +268,8 @@ CRON_CLASSES = [
     "spistresci.cron.TrackNotificationCronJob",
     "spistresci.cron.ClearUsersCronJob",
 ]
+
+BLOGGER_GROUP_NAME = 'blogger'
 
 import shutil, sys
 if len(sys.argv) >=2 and sys.argv[1] == 'syncdb':
