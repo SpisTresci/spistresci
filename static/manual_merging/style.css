@@ -1,0 +1,146 @@
+.clear {
+	clear: both;
+}
+
+.compare {
+	padding: 32px 54px;
+	width: 1024px;
+	margin: 25px auto;
+}
+
+.selected {
+	border: 5px solid #8d8d8d;
+	background-color: #f6f6f6;
+}
+
+.book {
+	float: left;
+	width: 400px;
+}
+
+	.master_book {
+		height: 200px;
+		border: 7px solid #e3e3e3;
+		background-color: #ffffff;
+		box-shadow: 0px 1px 1px;
+	}
+
+		.master_book .cover {
+			border: #e3e3e3 1px solid;
+			width: 85px;
+			height: 130px;
+			float: left;
+			margin: 35px 10px 35px 35px;
+		}
+
+		.master_book .desc {
+			font-family: 'PT Sans', sans-serif;
+		}
+
+		.master_book .title {
+			margin-top: 40px;
+			color: #464646;
+			font-weight: bold;
+			font-size: 16px;
+			line-height: 16px;
+		}
+	
+		.master_book .autor {
+			font-size: 12px;
+			color: #464646;
+			text-decoration: underline;
+		}
+	
+		.master_book .price {
+			margin-top: 64px;
+			color: #225b98;
+		}	
+
+			.master_book .price .p_1 {
+				font-weight: bold;
+			}
+
+			.master_book .price .p_2 {
+				font-size: 28px;
+			}
+
+			.master_book .price .p_3 {
+				font-size: 12px;
+			}
+
+	.mini_book {
+		height: 75px;
+		margin: 10px 5px;
+		border-bottom: solid 1px;
+	}
+
+		.mini_book .content {
+			width: 300px;
+		}
+
+		.left .mini_book .content {
+			float: left;
+		}
+
+		.right .mini_book .content {
+			float: right;
+		}
+
+		.mini_book .cover {
+			width: 42px;
+			height: 65px;
+			float: left;
+		}
+
+		.mini_book .desc {
+			font-family: 'PT Sans', sans-serif;
+			float: left;
+			margin: 0px 10px; 
+		}
+
+		.mini_book .format {
+			font-weight: bold;
+		}
+
+		.mini_book .autor {
+			font-size: 12px;
+			color: #464646;
+		}
+
+		.mini_book .price {
+			float: right;
+			color: #225b98;
+		}
+
+		.mini_book .price .p_2 {
+			font-size: 28px;
+		}
+
+		.mini_book .price .p_3 {
+			font-size: 26px;
+			font-weight: bold;
+		}
+
+		.left .mini_book_choice {
+			float: right;
+			margin: 22px 0px;
+		}
+
+		.right .mini_book_choice {
+			float: left;
+			margin: 22px 0px;
+		}
+
+	.choice {
+		float: left;
+		text-decoration: line-through;
+		margin: 0 74px;
+	}
+
+		.compare .choice .button {
+			width: 50%;
+		}
+
+		.choice .ok { margin: 7px 0px;; }
+		.choice .not_ok { margin: 30px 0px; }
+		.choice .skip { margin: 7px 0px; }

@@ -1,0 +1,82 @@
+{% load staticfiles %}
+{% load tooltags %}
+{%  with book_left=item_low book_right=item_high %}
+<div class="compare">
+	<div class="book left">
+		<div class="master_book">
+			<img class="cover" src="{{ book_left.cover }}">
+			<div class="desc">
+				<div class="title">{{ book_left.title }}</div>
+				<div class="autor">{{ book_left.authors | joinby:", " }}</div>
+				<div class="price">
+					<span class="p_1">cena od: </span>
+					<span class="p_2">{{ book_left.price }}</span>
+					<span class="p_3">zł</span>
+				</div>
+			</div>
+		</div>
+
+		{% for mini in book_left.minis %}
+		<div class="mini_book">
+			<div class="content">
+				<img class="cover" src="{{ mini.cover }}">
+				<div class="desc">
+					<div class="format">{{ mini.formats | joinby:", " }}</div>
+					<div class="autor">{{ mini.authors | joinby:", " }}</div>
+				</div>
+				<div class="price">
+					<span class="p_2">{{ mini.price }}</span>
+					<span class="p_3">zł</span>
+				</div>
+			</div>
+			<div class="mini_book_choice">
+				<img src="{% static "manual_merging/not_ok_mini.png" %}">
+				<img src="{% static "manual_merging/switch_mini_to_right.png" %}">
+			</div>
+		</div>
+		{% endfor %}
+
+	</div>
+	<div class="choice">
+		<div class="ok button"><img src="{% static "manual_merging/ok.png" %}"></div>
+		<div class="not_ok button"><img src="{% static "manual_merging/not_ok.png" %}"></div>
+		<div class="skip button"><img src="{% static "manual_merging/skip.png" %}"></div>
+	</div>
+	<div class="book right">
+		<div class="master_book">
+			<img class="cover" src="{{ book_right.cover }}">
+			<div class="desc">
+				<div class="title">{{ book_right.title }}</div>
+				<div class="autor">{{ book_right.authors | joinby:", " }}</div>
+				<div class="price">
+					<span class="p_1">cena od: </span>
+					<span class="p_2">{{ book_right.price }}</span>
+					<span class="p_3">zł</span>
+				</div>
+			</div>
+		</div>
+
+		{% for mini in book_right.minis %}
+		<div class="mini_book">
+			<div class="mini_book_choice">
+				<img src="{% static "manual_merging/switch_mini_to_left.png" %}">
+				<img src="{% static "manual_merging/not_ok_mini.png" %}">
+			</div>
+			<div class="content">
+				<img class="cover" src="{{ mini.cover }}">
+				<div class="desc">
+					<div class="format">{{ mini.formats | joinby:", " }}</div>
+					<div class="autor">{{ mini.authors | joinby:", " }}</div>
+				</div>
+				<div class="price">
+					<span class="p_2">{{ mini.price }}</span>
+					<span class="p_3">zł</span>
+				</div>
+			</div>
+		</div>
+		{% endfor %}
+
+	</div>
+	<div class="clear"></div>
+</div>
+{% endwith %}
