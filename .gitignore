@@ -3,6 +3,5 @@
 *.kdev4
 *.swo
 *.swp
-/solr/
 .sass-cache
 settings/local.py
