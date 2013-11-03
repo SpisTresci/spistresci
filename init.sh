@@ -11,5 +11,5 @@ cd -
 gits fetch
 gits populate
 
-find . -name "requirements.pip" -exec pip install -r {} \;
+find . -name "requirements.pip" -exec sudo pip install -r {} \;
 
