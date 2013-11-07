@@ -171,6 +171,7 @@ INSTALLED_APPS = (
     'allauth.socialaccount.providers.facebook',
     'allauth.socialaccount.providers.google',
     'allauth.socialaccount.providers.twitter',
+    'allauth.socialaccount.providers.wykop',
     'registration',
     'django_common',
     "django_cron",
@@ -245,6 +246,10 @@ SOCIALACCOUNT_PROVIDERS = {
     'twitter':
     {
         'SCOPE': ['r_emailaddress'],
+    },
+    'wykop':
+    {
+        #'REDIRECT_URL':'http://strona.docelowa/',
     },
 }
 

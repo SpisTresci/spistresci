@@ -45,5 +45,18 @@
             "secret":"KC8UjLR9pqws364TL2epRSes",
             "sites":[1]
         }
+    },
+    {
+        "model":"socialaccount.socialapp",
+        "pk":4,
+        "fields":{
+            "id":4,
+            "provider":"wykop",
+            "name":"wykop",
+            "client_id":"9ZTXVivv6C",
+            "key":"",
+            "secret":"87MXpW2piu",
+            "sites":[1]
+        }
     }
 ]
