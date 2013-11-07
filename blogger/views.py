@@ -2,10 +2,13 @@
 from django.views.generic import ListView
 from django.views.generic.detail import DetailView
 from django.views.generic.edit import FormView
+from django.views.generic.edit import UpdateView, CreateView
 from django.conf import settings
 from django.utils.decorators import method_decorator
+from django.core.urlresolvers import reverse
 
 from spistresci.blogger.models import BookRecommendation, BloggerProfile
+from spistresci.blogger.forms import BloggerProfileForm, BookRecommendationForm
 from spistresci.common.helpers import group_required
 
 
@@ -18,30 +21,50 @@ class BaseBloggerView(object):
         return super(BaseBloggerView, self).dispatch(request, *args, **kwargs)
 
 
-class ProfileView(BaseBloggerView, DetailView):
-    model = BloggerProfile
+class ProfileView(BaseBloggerView, UpdateView):
+
+    form_class = BloggerProfileForm
     template_name = 'blogger/profile.html'
 
     def get_object(self, *args, **kwargs):
         return self.request.user.bloggerprofile
 
+    def get_success_url(self):
+        return reverse('blogger:recommendation_list')
+
 
 class RecommendationList(BaseBloggerView, ListView):
-    model = BookRecommendation
-    template_name = "blogger/book_recommendation.html"
+
+    template_name = "blogger/recommendation_list.html"
     context_object_name = 'recommendations'
 
     def get_queryset(self):
         self.blogger = self.request.user
         return self.blogger.recommendations.all()
 
-class RecommendationNew(BaseBloggerView, FormView):
+class RecommendationEdit(BaseBloggerView, UpdateView):
+    template_name = "blogger/recommendation_edit.html"
+    form_class = BookRecommendationForm
+    pk_url_kwarg = 'recommendation_pk'
     model = BookRecommendation
 
-class RecommendationEdit(BaseBloggerView, FormView):
+    def get_success_url(self):
+        return reverse('blogger:recommendation_list')
+
+    def get_form_kwargs(self):
+        kwargs = super(RecommendationEdit, self).get_form_kwargs()
+        kwargs['user'] = self.blogger
+        return kwargs
+
+class RecommendationNew(BaseBloggerView, CreateView):
+    template_name = "blogger/recommendation_new.html"
+    form_class = BookRecommendationForm
     model = BookRecommendation
 
-class RecommendationView(BaseBloggerView, FormView):
-    model = BookRecommendation
+    def get_success_url(self):
+        return reverse('blogger:recommendation_list')
 
-
+    def get_form_kwargs(self):
+        kwargs = super(RecommendationNew, self).get_form_kwargs()
+        kwargs['user'] = self.blogger
+        return kwargs

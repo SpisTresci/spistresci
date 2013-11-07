@@ -1,5 +1,8 @@
 # -*- coding: utf-8 -*-
 
+from django.contrib.auth.models import User
+from django import forms
+
 from registration.forms import RegistrationForm as BaseRegistrationForm
 
 class RegistrationForm(BaseRegistrationForm):
@@ -16,3 +19,9 @@ class RegistrationForm(BaseRegistrationForm):
         self.fields['password1'].label = ''
         self.fields['password2'].label = ''
 
+class UserForm(forms.ModelForm):
+
+    class Meta:
+        model = User
+        fields = ['username', 'first_name', 'last_name',
+                  'email']

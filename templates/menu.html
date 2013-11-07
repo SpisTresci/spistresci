@@ -29,11 +29,7 @@
       </li>
       <li id="account" class="menu2 menu2a">
         <a style="display: block">
-          {% if user.username == '' %}
-             {{ user.email}}
-          {% else %}
-             {{ user.username}}
-          {% endif %}
+          <a href="{% url 'profile:home' %}">{{ user.username }}</a>
         </a>
       </li>
       {% endif %}

@@ -130,6 +130,9 @@ class MasterBook(models.Model):
     class Meta:
         db_table = 'MasterBook'
 
+    def __unicode__(self):
+        return self.title
+
 class MasterBooksMasterAuthors(models.Model):
     book = models.ForeignKey('MasterBook', null=True, blank=True)
     author = models.ForeignKey('MasterAuthor', null=True, blank=True)

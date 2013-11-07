@@ -12,12 +12,21 @@ class BloggerProfile(models.Model):
         return 'bloggers/%s/' % md5_hash(max_length=16)
 
     user = models.OneToOneField(User)
-    website = models.URLField()
-    photo = models.ImageField(upload_to=get_blogger_path)
-    signature = models.ImageField(upload_to=get_blogger_path)
+    website = models.URLField(null=True, blank=True)
+    photo = models.ImageField(upload_to=get_blogger_path, null=True, blank=True)
+    signature = models.ImageField(upload_to=get_blogger_path, null=True, blank=True)
+    publication_available = models.BooleanField(default=False)
 
     def __unicode__(self):
         return self.user.get_full_name() or self.user.username
+
+    def get_recommendation_statuses(self):
+        statuses = [BookRecommendation.STATUS_NEW,
+                    BookRecommendation.STATUS_FOR_PUBLICATION]
+        if self.publication_available:
+            statuses.append(BookRecommendation.STATUS_PUBLICATED)
+        choices = dict(BookRecommendation.STATUS_CHOICES)
+        return map(lambda x: (x, choices[x]), statuses)
 
     class Meta:
         app_label = 'spistresci'
@@ -34,12 +43,28 @@ class BookRecommendation(models.Model):
         (5, '5')
     )
 
+    STATUS_NEW = 1
+    STATUS_FOR_PUBLICATION = 2
+    STATUS_PUBLICATED = 3
+
+    STATUS_CHOICES = (
+        (STATUS_NEW, 'nowa'),
+        (STATUS_FOR_PUBLICATION, 'do publikacji'),
+        (STATUS_PUBLICATED, 'opublikowana')
+    )
+
     author = models.ForeignKey(User, related_name="recommendations")
-    masterbook = models.ForeignKey('spistresci.MasterBook')
-    content = models.TextField()
-    mark = models.CharField(max_length=128)
-    website_path = models.CharField(max_length=512)
-    promote_rate = models.IntegerField(choices=RATE_CHOICES, default=1)
+    masterbook = models.ForeignKey('spistresci.MasterBook', verbose_name=u'Książka')
+
+    title = models.CharField(max_length=512, verbose_name=u'Tytuł')
+    content = models.TextField(verbose_name=u'Opis')
+    mark = models.CharField(max_length=128, verbose_name=u'Twoja ocena (najlepiej słowna)')
+    website_path = models.CharField(max_length=512, verbose_name=u'Link do recenzji na blogu')
+    promote_rate = models.IntegerField(choices=RATE_CHOICES, default=1, verbose_name=u'Jak bardzo promować tę rekomendację wśród Twoich postów?',
+                                       help_text=u'(1-mało, 5-bardzo)')
+
+    status = models.IntegerField(choices=STATUS_CHOICES, default=STATUS_NEW, verbose_name=u'Status')
+    publication_date = models.DateTimeField(null=True, blank=True)
 
     def __unicode__(self):
         return u'Recenzja %s do książki: "%s"' % (self.author.get_full_name(),
@@ -48,3 +73,7 @@ class BookRecommendation(models.Model):
     class Meta:
         app_label = 'spistresci'
         db_table = 'BookRecommendation'
+        ordering = ('-id',)
+
+    def is_publicated(self):
+        return self.status == self.STATUS_PUBLICATED

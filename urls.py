@@ -15,6 +15,8 @@ from dajaxice.core import dajaxice_autodiscover, dajaxice_config
 admin.autodiscover()
 dajaxice_autodiscover()
 
+book_url_re = r'book/(?P<book_id>\d+)/.*$'
+
 urlpatterns = patterns('',
      url('^$', index),
      url('^logout/$', logout),
@@ -24,10 +26,11 @@ urlpatterns = patterns('',
                            RegistrationView.as_view(form_class=RegistrationForm),
                            name='registration_register'),
      url(r'^accounts/', include('registration.backends.default.urls')),
-     url('^book/(?P<book_id>\d+)/.*$', STBookView(searchqueryset = STBookQuerySet(), form_class=STSearchForm), name='book_page'),
-     url('^book-redirect/$', book_redirect, name="book_redirect"),
+     url(r'^%s' % (book_url_re,), STBookView(searchqueryset = STBookQuerySet(), form_class=STSearchForm), name='book_page'),
+     url(r'^book-redirect/$', book_redirect, name="book_redirect"),
 #     url('^description/(?P<book_id>\w+)/$', book_description),
      url(r'^blogger/', include('spistresci.blogger.urls', namespace='blogger')),
+     url(r'^profile/', include('spistresci.auth.urls', namespace='profile')),
 )
 
 #TODO: check thread safe version of this
