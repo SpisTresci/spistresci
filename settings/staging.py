@@ -68,16 +68,9 @@ HAYSTACK_CONNECTIONS = {
     },
 }
 
-EMAIL_SUBJECT_PREFIX= 'Welcome Screen:'
+EMAIL_SUBJECT_PREFIX= '[SpisTresci][Staging]'
 
-# Absolute filesystem path to the directory that will hold user-uploaded files.
-# Example: "/var/www/example.com/media/"
-#MEDIA_ROOT = '/home/frontend/frontend/imgs'
-
-# URL that handles the media served from MEDIA_ROOT. Make sure to use a
-# trailing slash.
-# Examples: "http://example.com/media/", "http://media.example.com/"
-#MEDIA_URL = ''
+SITE_ROOT = os.path.join(os.path.dirname(os.path.realpath(__file__)), '..')
 
 import shutil, sys
 if len(sys.argv) >=2 and sys.argv[1] == 'syncdb':

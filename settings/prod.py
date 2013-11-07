@@ -26,3 +26,5 @@ HAYSTACK_CONNECTIONS = {
         ]
     },
 }
+
+EMAIL_SUBJECT_PREFIX= '[SpisTresci][Production]'
