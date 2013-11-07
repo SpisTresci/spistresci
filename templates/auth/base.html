@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block title %}Profil Użytkownika{% endblock %}
+
+{% block css %}
+    <link href="{% static "css/search.css" %}" rel="stylesheet" type="text/css">
+<!--    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">-->
+{% endblock css %}
+
+{% block container %}
+
+	<div id="book_container" class="container" data-book-id="{{ book.id }}">
+	  <div class='wrap_panel product_details'>
+	    <div class='L_top_panel'>
+
+	    </div>
+	    <div class='main_container'>
+	      {% block body %}{% endblock %}
+	    </div>
+	  </div>
+	  <div class='L_left_panel'>
+	    {% include "auth/menu.html" %}
+	  </div>
+	</div>
+
+
+
+
+{% endblock %}
