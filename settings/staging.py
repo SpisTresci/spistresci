@@ -70,14 +70,6 @@ HAYSTACK_CONNECTIONS = {
 
 EMAIL_SUBJECT_PREFIX= 'Welcome Screen:'
 
-#Note: This seems to be stupid, but in production mode template dir should be absolute path :/
-
-SITE_ROOT = os.path.join(os.path.dirname(os.path.realpath(__file__)), '../')
-TEMPLATE_DIRS = (
-    os.path.join(SITE_ROOT,'templates'),
-    os.path.join(SITE_ROOT,'../common/templates/'),
-)
-
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/var/www/example.com/media/"
 #MEDIA_ROOT = '/home/frontend/frontend/imgs'
