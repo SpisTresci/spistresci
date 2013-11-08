@@ -3,5 +3,6 @@
 /frontends/egazeciarz/
 /frontends/spistresci/
 *.pyc
+initial_data.json
 /frontends/common/
 /ekundelek/
