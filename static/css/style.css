@@ -82,7 +82,8 @@ a {
 /* top_index */
 .index_top_bg {
   background: url(../img/index_top_bg.jpg) top center no-repeat;
-  height: 560px; }
+  height: 560px;
+  background-color: #00417b; }
 
 .index_top {
   margin: 0 auto;
