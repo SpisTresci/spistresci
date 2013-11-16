@@ -1,6 +1,5 @@
 {% load staticfiles %}
 {% load mathtags %}
-{% with product=result %}
 
 <div class="records_panel_wrapper" data-records-count="{{ product.records|length }}">
     <div class="records_toogle_switcher up"></div>
@@ -48,5 +47,3 @@
         </div>
     {% endif %}
 </div>
-
-{% endwith %}

@@ -1,4 +1,4 @@
-<div class="filter_panel">
+<div class="filter_panel" {% if hide_filters %} style="display: none" {% endif %}>
     <div class="filter_row">
         {% for filter in filters %}<div class="filter_box_header table_cell"> {{filter.name}} </div>{% endfor %}
     </div>

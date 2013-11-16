@@ -5,11 +5,11 @@ from registration.backends.default.views import RegistrationView
 
 from spistresci.index.views import index
 from spistresci.search.views import STSearchView, STSearchQuerySet, hide_menu, STSearchForm
+from spistresci.book.views import STBookQuerySet, STBookView, book_redirect
 from spistresci.auth.views import logout, accounts_social_signup, accounts_profile
 from spistresci.register.views import register_user, egazeciarz_register_user
 from spistresci.monitor.views import monitor
 from spistresci.auth.forms import RegistrationForm
-from spistresci.book.views import book, book_description, book_redirect
 from dajaxice.core import dajaxice_autodiscover, dajaxice_config
 
 admin.autodiscover()
@@ -24,10 +24,9 @@ urlpatterns = patterns('',
                            RegistrationView.as_view(form_class=RegistrationForm),
                            name='registration_register'),
      url(r'^accounts/', include('registration.backends.default.urls')),
-     url('^book/(?P<book_id>\d+)/.*$', book),
+     url('^book/(?P<book_id>\d+)/.*$', STBookView(searchqueryset = STBookQuerySet(), form_class=STSearchForm), name='book_page'),
      url('^book-redirect/$', book_redirect, name="book_redirect"),
-
-     url('^description/(?P<book_id>\w+)/$', book_description),
+#     url('^description/(?P<book_id>\w+)/$', book_description),
 )
 
 #TODO: check thread safe version of this

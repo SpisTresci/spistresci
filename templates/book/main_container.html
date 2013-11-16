@@ -1,3 +1,5 @@
 {% include "book/filter_panel.html" %}
-{% include "search/records_list.html" %}
+{% for product in page.object_list %}
+    {% include "search/records_list.html" %}
+{% endfor %}
 {% include "book/comments.html" %}

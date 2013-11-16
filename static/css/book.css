@@ -407,3 +407,9 @@
 #disqus_thread {
   width: 95%;
   min-width: 750px; }
+
+#filter_switcher {
+  float: right;
+  cursor: pointer;
+  margin: 10px 10px -10px 0;
+  color: #00468B; }

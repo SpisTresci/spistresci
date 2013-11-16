@@ -328,7 +328,8 @@ class STSearchQuerySet(SearchQuerySet):
 
 
     def post_process_results(self, results):
-        if self.query._using == 'default':
+        print self.query._using
+        if self.query._using in ['default', 'book_details']:
             results = self.convertResultsToProducts(results)
             results = self.pre_process_records(results)
             results = self.post_filtering(results)

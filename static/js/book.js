@@ -12,6 +12,12 @@ function onReady()
      $(".s_index_top_bg").removeClass("sticky");
    }
  });
+
+ $('#filter_switcher').on("click", function(event){
+     $(".filter_panel").toggle();
+ });
+
+
 }
 
 $(document).ready(onReady);

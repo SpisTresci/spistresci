@@ -1,3 +1,4 @@
+{% with book=page.object_list.0.book %}
 <div class="title">
 {{ book.title }}
 </div>
@@ -8,7 +9,8 @@
 <span>Wydawnictwo: </span>{{ book.producent }}
 </div>
 <div class="description">
-   {{ book.description_short }}
+   {{ book.description_short | safe}}
     <span class="description">Czytaj dalej.</span>
 </div>
-<div class="filter_switcher"><a href="#">Pokaż filtry</a></div>
+<div id="filter_switcher">Pokaż filtry</div>
+{% endwith %}
