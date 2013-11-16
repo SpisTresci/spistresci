@@ -72,7 +72,7 @@ HAYSTACK_CONNECTIONS = {
         #'URL': 'http://127.0.0.1:8983/solr/bookstore_alpha_10',
         'URL': 'http://%(login)s:%(pass)s@solr.spistresci.pl:8090/solr/masterbook_with_description_latest' % SOLR,
         'EXCLUDED_INDEXES': [
-            'spistresci.search_indexes.MasterBookIndex',
+            'spistresci.search_indexes.BookstoreIndex',
         ]
     },
 }

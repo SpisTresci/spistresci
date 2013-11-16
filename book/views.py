@@ -68,12 +68,6 @@ class STBookView(STSearchView):
 
         return extra
 
-    def get_results(self):
-        r = super(STBookView, self).get_results()
-        get = r.get_args
-        print str(get)
-        return r
-
     def parse_get_args(self):
         super(STBookView, self).parse_get_args()
 
@@ -85,10 +79,6 @@ class STBookView(STSearchView):
         condition.next("and")
         condition.add({"id":self.get_args['id']})
         return condition
-
-
-
-
 
 class STBookQuerySet(STSearchQuerySet):
     using = 'book_details'
