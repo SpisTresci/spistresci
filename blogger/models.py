@@ -3,19 +3,32 @@
 from django.db import models
 from django.contrib.auth.models import User
 
+from imagekit.models import ImageSpecField
+from imagekit.processors import ResizeToFill, Crop, ResizeToFit
+
 from django_common.helper import md5_hash
 
 
 class BloggerProfile(models.Model):
 
-    def get_blogger_path():
-        return 'bloggers/%s/' % md5_hash(max_length=16)
+    def get_blogger_path(instance, file_name):
+        return 'bloggers/%s/%s/%s' % (instance.pk, md5_hash(max_length=16), file_name)
 
     user = models.OneToOneField(User)
     website = models.URLField(null=True, blank=True)
     photo = models.ImageField(upload_to=get_blogger_path, null=True, blank=True)
     signature = models.ImageField(upload_to=get_blogger_path, null=True, blank=True)
     publication_available = models.BooleanField(default=False)
+
+    photo_thumbnail = ImageSpecField(source='photo',
+                                     processors=[ResizeToFill(150, 150),
+                                                 Crop(150, 150)],
+                                     format='JPEG',
+                                     options={'quality': 90})
+    signature_thumbnail = ImageSpecField(source='signature',
+                                     processors=[ResizeToFit(500, 70)],
+                                     format='JPEG',
+                                     options={'quality': 90})
 
     def __unicode__(self):
         return self.user.get_full_name() or self.user.username

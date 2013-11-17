@@ -20,17 +20,24 @@ class BaseBloggerView(object):
         self.blogger = request.user
         return super(BaseBloggerView, self).dispatch(request, *args, **kwargs)
 
+class ProfilePreview(BaseBloggerView, DetailView):
 
-class ProfileView(BaseBloggerView, UpdateView):
+    template_name = 'blogger/profile_preview.html'
+
+    def get_object(self, *args, **kwargs):
+        return self.request.user.bloggerprofile
+
+
+class ProfileEdit(BaseBloggerView, UpdateView):
 
     form_class = BloggerProfileForm
-    template_name = 'blogger/profile.html'
+    template_name = 'blogger/profile_edit.html'
 
     def get_object(self, *args, **kwargs):
         return self.request.user.bloggerprofile
 
     def get_success_url(self):
-        return reverse('blogger:recommendation_list')
+        return reverse('blogger:profile_preview')
 
 
 class RecommendationList(BaseBloggerView, ListView):

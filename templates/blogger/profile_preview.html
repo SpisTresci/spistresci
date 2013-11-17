@@ -1,0 +1,21 @@
+{% extends "auth/base.html" %}
+{% load staticfiles %}
+
+{% block body %}
+	<a href="{% url 'blogger:profile_edit' %}">edytuj</a>
+
+	<ul>
+		<li>
+			Strona: <a href="{{ object.website }}">{{ object.website }}</a>
+		</li>
+		<li>
+			Zdjęce:
+			<img src="{{ object.photo_thumbnail.url }}" alt="{{ object.user.get_full_name %}">
+		</li>
+		<li>
+			Podpis:
+			{% if object.signature %}
+				<img src="{{ object.signature_thumbnail.url }}" alt="Podpis">
+			{% endif %}
+		</li>
+{% endblock %}
