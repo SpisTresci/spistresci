@@ -1,12 +1,13 @@
 {% extends "auth/base.html" %}
 {% load staticfiles %}
 
-{% block body %}
-	<h2>Lista rekomendacji</h2>
+{% block L_top_panel %}<h2>Lista rekomendacji</h2>{% endblock %}
+
+{% block main_container %}
 	{% for recommendation in recommendations %}
 		{{ recommendation }}, status: {{ recommendation.get_status_display }}
-		<a href="#">podgląd</a>
 
+		<a href="{% url 'blogger:recommendation_preview' recommendation_pk=recommendation.pk %}">podgląd</a>
 
 		{% if not recommendation.is_publicated %}
 			<a href="{% url 'blogger:recommendation_edit' recommendation_pk=recommendation.pk %}">edytuj</a>

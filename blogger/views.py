@@ -75,3 +75,12 @@ class RecommendationNew(BaseBloggerView, CreateView):
         kwargs = super(RecommendationNew, self).get_form_kwargs()
         kwargs['user'] = self.blogger
         return kwargs
+
+class RecommendationPreview(BaseBloggerView, DetailView):
+
+    model = BookRecommendation
+    pk_url_kwarg = 'recommendation_pk'
+    template_name = "blogger/recommendation_preview.html"
+
+    def get_queryset(self, *args, **kwargs):
+        return self.blogger.recommendations.all()

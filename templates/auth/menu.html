@@ -1,32 +1,55 @@
 {% load group_tags %}
 
-Użytkownik<br/>
-<ul>
-	<li>
-		<a href="{% url 'profile:home' %}">Profil</a>
-	</li>
-	<li>
-		<a href="{% url 'profile:password_change' %}">Zmień hasło</a>
-	</li>
-	<li>
-		<a href="#">Usuń konto</a>
-	</li>
-</ul>
 
-<hr/>
-
-{% if user|belongs_to_group:"blogger" %}
-Blogger<br/>
-<ul>
-	<li>
-		<a href="{% url 'blogger:profile_preview' %}">Profil</a>
-	</li>
-	<li>
-		<a href="{% url 'blogger:recommendation_list' %}">Lista rekomendacji</a>
-	</li>
-	<li>
-		<a href="{% url 'blogger:recommendation_new' %}">Dodaj rekomendację</a>
-	</li>
-</ul>
-<hr/>
-{% endif %}
+<div class="filter_panel">
+    <div class="filter_obj act unselectable" unselectable="on">
+        <div class="filter_box_header">
+            <span>Panel użytkownik</span><div class="arrow"></div>
+            <div class="filter_box_bar1"></div>
+            <div class="filter_box_bar2"></div>
+        </div>
+        <div class="filter_box">
+            <div class="filter_content bullet_list">
+                <div class="filter_section filter_section_last" >
+                    <div id="menu_arrow1" class="filter_section_arrow"></div>
+                    <a class="filter_section_header" href="{% url 'profile:home' %}">Profil</a>
+                </div>
+                <div class="filter_section filter_section_last" >
+                    <div id="menu_arrow1" class="filter_section_arrow"></div>
+                    <a class="filter_section_header" href="{% url 'profile:password_change' %}">Zmień hasło</a>
+                </div>
+                <div class="filter_section filter_section_last" >
+                    <div id="menu_arrow1" class="filter_section_arrow"></div>
+                    <a class="filter_section_header" href="#">Usuń konto</a>
+                </div>
+            </div>
+            <div class="filter_box_bar3"></div>
+        </div>
+    </div>
+    {% if user|belongs_to_group:"blogger" %}
+    <div class="filter_obj act unselectable" unselectable="on">
+        <div class="filter_box_header">
+            <span>Panel bloggera</span><div class="arrow"></div>
+            <div class="filter_box_bar1"></div>
+            <div class="filter_box_bar2"></div>
+        </div>
+        <div class="filter_box">
+            <div class="filter_content bullet_list">
+                <div class="filter_section filter_section_last" >
+                    <div id="menu_arrow1" class="filter_section_arrow"></div>
+                    <a class="filter_section_header" href="{% url 'blogger:profile_preview' %}">Profil</a>
+                </div>
+                <div class="filter_section filter_section_last" >
+                    <div id="menu_arrow1" class="filter_section_arrow"></div>
+                    <a class="filter_section_header" style="width:auto" href="{% url 'blogger:recommendation_list' %}">Lista rekomendacji</a>
+                </div>
+                <div class="filter_section filter_section_last" >
+                    <div id="menu_arrow1" class="filter_section_arrow"></div>
+                    <a class="filter_section_header" style="width:auto" href="{% url 'blogger:recommendation_new' %}">Dodaj rekomendację</a>
+                </div>
+            </div>
+            <div class="filter_box_bar3"></div>
+        </div>
+    </div>
+    {% endif %}
+</div>

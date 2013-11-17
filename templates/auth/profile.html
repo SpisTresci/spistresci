@@ -1,11 +1,13 @@
 {% extends "auth/base.html" %}
 {% load staticfiles %}
 
-{% block body %}
-	<h2>Edycja profilu</h2>
+{% block L_top_panel %}<h2>Edycja profilu</h2>{% endblock %}
+
+{% block main_container %}
 	<form method="post">
 		{% csrf_token %}
 		{{ form.as_p }}
 		<input type="submit" value="Zapisz" />
 	</form>
 {% endblock %}
+
