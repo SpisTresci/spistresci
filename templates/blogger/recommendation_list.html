@@ -4,14 +4,31 @@
 {% block L_top_panel %}<h2>Lista rekomendacji</h2>{% endblock %}
 
 {% block main_container %}
-	{% for recommendation in recommendations %}
-		{{ recommendation }}, status: {{ recommendation.get_status_display }}
+    <table>
+        <thead>
+            <tr>
+                <th>Tytuł</th>
+                <th>Książka</th>
+                <th>Status</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for recommendation in recommendations %}
+                <tr class="{% cycle 'even' 'odd' %}">
+                    <td>{{ recommendation.title }}</td>
+                    <td>{{ recommendation.masterbook }}</td>
+                    <td>{{ recommendation.get_status_display }}</td>
+                    <td>
+                        <a href="{% url 'blogger:recommendation_preview' recommendation_pk=recommendation.pk %}">podgląd</a>
 
-		<a href="{% url 'blogger:recommendation_preview' recommendation_pk=recommendation.pk %}">podgląd</a>
+                        <a href="{% url 'blogger:recommendation_edit' recommendation_pk=recommendation.pk %}">edytuj</a>
 
-		{% if not recommendation.is_publicated %}
-			<a href="{% url 'blogger:recommendation_edit' recommendation_pk=recommendation.pk %}">edytuj</a>
-		{% endif %}
-		<br/>
-	{% endfor %}
+                        <a href="{% url 'blogger:recommendation_delete' recommendation_pk=recommendation.pk %}">usuń</a>
+
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 {% endblock %}

@@ -1,0 +1,14 @@
+{% extends "auth/base.html" %}
+{% load staticfiles %}
+
+{% block L_top_panel %}<h2>Usunięcie rekomendacja książki {{ object.masterbook.title }}</h2>{% endblock %}
+
+{% block main_container %}
+    <p>
+    	Jesteś pewien, że chcesz usunąć rekomendację dla książki {{ object.masterbook.title }}?</br>
+        <form method="post">
+        	<input type="submit" value="tak">
+        </form>
+		<a href="{% url 'blogger:recommendation_list' %}">powrót do listy rekomendacji</a>
+    </p>
+{% endblock %}

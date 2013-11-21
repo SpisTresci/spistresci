@@ -2,7 +2,7 @@
 from django.views.generic import ListView
 from django.views.generic.detail import DetailView
 from django.views.generic.edit import FormView
-from django.views.generic.edit import UpdateView, CreateView
+from django.views.generic.edit import UpdateView, CreateView, DeleteView
 from django.conf import settings
 from django.utils.decorators import method_decorator
 from django.core.urlresolvers import reverse
@@ -63,6 +63,7 @@ class RecommendationEdit(BaseBloggerView, UpdateView):
         kwargs['user'] = self.blogger
         return kwargs
 
+
 class RecommendationNew(BaseBloggerView, CreateView):
     template_name = "blogger/recommendation_new.html"
     form_class = BookRecommendationForm
@@ -84,3 +85,16 @@ class RecommendationPreview(BaseBloggerView, DetailView):
 
     def get_queryset(self, *args, **kwargs):
         return self.blogger.recommendations.all()
+
+
+class RecommendationDelete(BaseBloggerView, DeleteView):
+
+    model = BookRecommendation
+    pk_url_kwarg = 'recommendation_pk'
+    template_name = 'blogger/recommendation_delete.html'
+
+    def get_queryset(self, *args, **kwargs):
+        return self.blogger.recommendations.all()
+
+    def get_success_url(self, *args, **kwargs):
+        return reverse('blogger:recommendation_list')

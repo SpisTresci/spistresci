@@ -1,0 +1,8 @@
+{% extends "auth/base.html" %}
+{% load staticfiles %}
+
+{% block L_top_panel %}<h2>Rekomendacja książki {{ object.masterbook.title }}</h2>{% endblock %}
+
+{% block main_container %}
+    {% include 'index_blogger_box.html' with blogger=object.author.bloggerprofile %}
+{% endblock %}

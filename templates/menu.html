@@ -28,8 +28,8 @@
         </a>
       </li>
       <li id="account" class="menu2 menu2a">
-        <a style="display: block">
-          <a href="{% url 'profile:home' %}">{{ user.username }}</a>
+        <a style="display: block" href="{% url 'profile:home' %}">
+          {{ user.username }}
         </a>
       </li>
       {% endif %}

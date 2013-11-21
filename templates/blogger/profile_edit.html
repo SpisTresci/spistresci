@@ -4,9 +4,11 @@
 {% block L_top_panel %}<h2>Edycja profilu blogera</h2>{% endblock %}
 
 {% block main_container %}
-	<form method="post" enctype="multipart/form-data">
+	<form method="post" id="inputs" enctype="multipart/form-data">
 		{% csrf_token %}
 		{{ form.as_p }}
-		<input type="submit" value="Zapisz" />
+		<p class="buttons_container">
+			<input type="submit" value="Zapisz" />
+		</p>
 	</form>
 {% endblock %}

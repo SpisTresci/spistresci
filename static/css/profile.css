@@ -1,0 +1,26 @@
+label {
+	width: 200px;
+	display: inline-block;
+	text-align: right;
+}
+
+.buttons_container {
+	padding-left: 200px;
+}
+
+input[type=submit] {
+	width: 100px;
+	cursor: pointer;
+}
+
+input[type=checkbox] {
+	width: auto !important;
+}
+
+table {
+	width: 100%;
+}
+
+tr, th {
+	text-align: left;
+}

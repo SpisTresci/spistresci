@@ -4,9 +4,11 @@
 {% block L_top_panel %}<h2>Edycja rekomendacji książki</h2>{% endblock %}
 
 {% block main_container %}
-	<form method="post">
+	<form method="post" id="inputs">
 		{% csrf_token %}
 		{{ form.as_p }}
-		<input type="submit" value="Zapisz" />
+		<p class="buttons_container">
+			<input type="submit" value="Zapisz" />
+		</p>
 	</form>
 {% endblock %}

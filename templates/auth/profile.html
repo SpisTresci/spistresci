@@ -4,10 +4,12 @@
 {% block L_top_panel %}<h2>Edycja profilu</h2>{% endblock %}
 
 {% block main_container %}
-	<form method="post">
+	<form id="inputs" method="post">
 		{% csrf_token %}
 		{{ form.as_p }}
-		<input type="submit" value="Zapisz" />
+		<p class="buttons_container">
+			<input type="submit" value="Zapisz" />
+		</p>
 	</form>
 {% endblock %}
 

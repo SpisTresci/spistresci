@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 
+from urlparse import urljoin
+
 from django.db import models
 from django.contrib.auth.models import User
 
@@ -15,19 +17,20 @@ class BloggerProfile(models.Model):
         return 'bloggers/%s/%s/%s' % (instance.pk, md5_hash(max_length=16), file_name)
 
     user = models.OneToOneField(User)
-    website = models.URLField(null=True, blank=True)
-    photo = models.ImageField(upload_to=get_blogger_path, null=True, blank=True)
-    signature = models.ImageField(upload_to=get_blogger_path, null=True, blank=True)
+    website = models.URLField(null=True, blank=True, verbose_name=u"Adres bloga")
+    website_name = models.CharField(max_length=128, null=True, blank=True, verbose_name=u"Nazwa bloga")
+    photo = models.ImageField(upload_to=get_blogger_path, null=True, blank=True, verbose_name=u"Zdjęcie")
+    signature = models.ImageField(upload_to=get_blogger_path, null=True, blank=True, verbose_name=u"Podpis")
     publication_available = models.BooleanField(default=False)
 
     photo_thumbnail = ImageSpecField(source='photo',
                                      processors=[ResizeToFill(150, 150),
                                                  Crop(150, 150)],
-                                     format='JPEG',
+                                     format='PNG',
                                      options={'quality': 90})
     signature_thumbnail = ImageSpecField(source='signature',
                                      processors=[ResizeToFit(500, 70)],
-                                     format='JPEG',
+                                     format='PNG',
                                      options={'quality': 90})
 
     def __unicode__(self):
@@ -73,6 +76,7 @@ class BookRecommendation(models.Model):
     content = models.TextField(verbose_name=u'Opis')
     mark = models.CharField(max_length=128, verbose_name=u'Twoja ocena (najlepiej słowna)')
     website_path = models.CharField(max_length=512, verbose_name=u'Link do recenzji na blogu')
+    book_path = models.CharField(max_length=512, verbose_name=u'Link do książki')
     promote_rate = models.IntegerField(choices=RATE_CHOICES, default=1, verbose_name=u'Jak bardzo promować tę rekomendację wśród Twoich postów?',
                                        help_text=u'(1-mało, 5-bardzo)')
 

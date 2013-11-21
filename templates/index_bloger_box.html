@@ -1,14 +1,15 @@
-{% load staticfiles %}
 <div class="index_blogger_box">
     <div class="blogger_sub_box">
-        <img src="{% static "img/bloggers/"|add:review.blogger.firstName|add:"_"|add:review.blogger.lastName|add:"_100x100.jpg"|lower %}" style="width: 91px; height: 91px; display: block;" alt="" />
+
+        <img src="{{ blogger.photo_thumbnail.url }}" alt="{{ object.author.get_full_name }}" style="width: 91px; height: 91px; display: block;" />
+
         <div class="blogger_name">
-            {{ review.blogger.firstName }}<br/>
-            {{ review.blogger.lastName }}
+            {{ blogger.user.first_name }}<br/>
+            {{ blogger.user.last_name }}
         </div>
         <div class="blogger_blog">
-            Autor{% if review.blogger.gender == "female" %}ka{% endif %} bloga:<br/>
-            <a href="{{ review.blogUrl }}">{{ review.blogName }}</a>
+            Autor bloga:<br/>
+            <a href="{{ blogger.website }}">{{ blogger.website_name }}</a>
         </div>
     </div>
     <div class="review_sub_box_wrapper">
@@ -16,13 +17,14 @@
             <div class="review_sub_box_content">
                 <img class="blogger_review_arrow" src="{% static "img/blogger_review_arrow.png" %}" />
 
-                <a href="/search/?q={{ review.title }}"><img src="{{ review.cover }}" style="width: 91px; height: 137px" alt="" /></a>
-                <h2>{{ review.title }}</h2>
-                {{ review.content }}
-                <a href="{{ review.url }}">Czytaj całość »</a>
+                <a href="/search/?q={{ object.title }}"><img src="#" style="width: 91px; height: 137px" alt="id książki: {{ object.masterbook.pk }}" /></a>
+                <h2>{{ object.title }}</h2>
+                {{ object.content|linebreaksbr }}
+                <a href="{{ object.get_url }}">Czytaj całość »</a>
             </div>
             <div class="review_sub_box_footer">
-                <b>Moja ocena:</b> {{ review.rating }}<img src="{% static "img/bloggers/"|add:review.blogger.signature %}" alt="" />
+                <b>Moja ocena:</b> {{ object.mark }}
+                <img src="{{ blogger.signature_thumbnail.url }}" alt="{{ object.author.get_full_name }}" />
             </div>
         </div>
     </div>
