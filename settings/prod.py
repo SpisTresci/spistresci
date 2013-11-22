@@ -37,3 +37,11 @@ HAYSTACK_CONNECTIONS = {
 }
 
 EMAIL_SUBJECT_PREFIX= '[SpisTresci][Production]'
+
+
+#Production DB settings 
+#Username root
+#Password NGUcIpHoz1UI
+#Host 178.216.201.221
+#Port 3306
+
