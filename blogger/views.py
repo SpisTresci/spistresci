@@ -1,9 +1,12 @@
 # from django.views.generic import TemplateView
+import json
+
+from django.shortcuts import render
 from django.views.generic import ListView
 from django.views.generic.detail import DetailView
-from django.views.generic.edit import FormView
 from django.views.generic.edit import UpdateView, CreateView, DeleteView
 from django.conf import settings
+from django.http import HttpResponse
 from django.utils.decorators import method_decorator
 from django.core.urlresolvers import reverse
 
@@ -63,6 +66,8 @@ class RecommendationEdit(BaseBloggerView, UpdateView):
         kwargs['user'] = self.blogger
         return kwargs
 
+    def get_queryset(self):
+        return self.blogger.recommendations.all()
 
 class RecommendationNew(BaseBloggerView, CreateView):
     template_name = "blogger/recommendation_new.html"
@@ -86,7 +91,6 @@ class RecommendationPreview(BaseBloggerView, DetailView):
     def get_queryset(self, *args, **kwargs):
         return self.blogger.recommendations.all()
 
-
 class RecommendationDelete(BaseBloggerView, DeleteView):
 
     model = BookRecommendation
@@ -98,3 +102,26 @@ class RecommendationDelete(BaseBloggerView, DeleteView):
 
     def get_success_url(self, *args, **kwargs):
         return reverse('blogger:recommendation_list')
+
+class RecommendationPreviewIframe(RecommendationEdit):
+
+    response_class = HttpResponse
+    template_name = "index_bloger_box.html"
+
+    def form_valid(self, form, *args, **kwargs):
+        cd = form.cleaned_data
+        cd['masterbook'] = form.masterbook
+        context = dict(blogger=self.blogger_profile,
+                       object=cd)
+        html = render(self.request, self.template_name, context)
+        return self.render_to_response(dict(html=html.content))
+
+    def form_invalid(self, form, *args, **kwargs):
+        return self.render_to_response()
+
+    def render_to_response(self, context, **response_kwargs):
+        response_kwargs['content_type'] = 'application/json'
+        return self.response_class(
+            json.dumps(context),
+            **response_kwargs
+        )

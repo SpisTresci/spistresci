@@ -4,11 +4,62 @@
 {% block L_top_panel %}<h2>Edycja rekomendacji książki</h2>{% endblock %}
 
 {% block main_container %}
-	<form method="post" id="inputs">
+	<form method="post" id="recommendation">
 		{% csrf_token %}
 		{{ form.as_p }}
+
+		<h3>Podgląd</h3>
+		<hr/>
+		<div id="recommendation_wrapper">
+			{% include 'index_bloger_box.html' with object=form.instance blogger=form.instance.author.bloggerprofile %}
+		</div>
+
 		<p class="buttons_container">
 			<input type="submit" value="Zapisz" />
 		</p>
 	</form>
+{% endblock %}
+
+{% block js %}
+	{{ block.super }}
+	<script type="text/javascript">
+		var DEFAULT_TITLE = 'Tytuł rekomendacji';
+		var DEFAULT_CONTENT = 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here, content here, making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for lorem ipsum will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).';
+
+
+		function update_preview(){
+			var data = $('#recommendation').serialize();
+			console.log(data);
+			$.ajax({
+				type: "POST",
+				url: "{% url 'blogger:iframe_preview' form.instance.pk %}",
+				data: data
+			}).done(function(data) {
+    			$('#recommendation_wrapper').html(data.html);
+  			});
+		}
+
+		$(function(){
+			$('#id_title').keypress(function(e){
+				var value = $(this).val() + String.fromCharCode(e.which);
+				if (value.length > 0){
+					$('#recommendation_title').html(value);
+				} else {
+					$('#recommendation_title').html('<i>'+DEFAULT_TITLE+'</i>');
+				}
+			});
+
+			$('#id_content').keypress(function(e){
+				var value = $(this).val() + String.fromCharCode(e.which);
+				if (value.length > 0){
+					$('#recommendation_content').html(value);
+				} else {
+					$('#recommendation_content').html('<i>'+DEFAULT_TITLE+'</i>');
+				}
+			});
+
+			$('#id_title, #id_content, #id_mark, #id_website_path, #id_book_path').change(update_preview);
+		});
+
+	</script>
 {% endblock %}

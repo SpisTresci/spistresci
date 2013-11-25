@@ -38,7 +38,7 @@ class BookRecommendationForm(forms.ModelForm):
             status_before = self.instance.status
         obj = super(BookRecommendationForm, self).save(commit=False)
         obj.author = self.user
-        obj.masterbook = MasterBook.objects.get(pk=self.master_book_pk)
+        obj.masterbook = self.masterbook
         if not self.blogger.publication_available and \
             status_before == BookRecommendation.STATUS_PUBLICATED:
             obj.status = obj.STATUS_FOR_PUBLICATION
@@ -52,7 +52,7 @@ class BookRecommendationForm(forms.ModelForm):
             master_book_pk = int(regex.groups()[0])
             if not MasterBook.objects.filter(pk=master_book_pk).count():
                 raise ValidationError('Książka o podanym ID nie istnieje w bazie danych')
-            self.master_book_pk = master_book_pk
+            self.masterbook = MasterBook.objects.get(pk=master_book_pk)
             return value
         raise ValidationError('Podany adres książki jest nieprawidłowy')
 
