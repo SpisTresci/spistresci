@@ -3,7 +3,9 @@
 <div class="index_blogger_box">
     <div class="blogger_sub_box">
 
-        <img src="{{ blogger.photo_thumbnail.url }}" alt="{{ blogger.user.get_full_name }}" style="width: 91px; height: 91px; display: block;" />
+
+            <img src="{% if blogger.photo %}{{ blogger.photo_thumbnail.url }}{% else %}{% static "img/bloggers/agnieszka_tatera_100x100.jpg" %}{% endif %}" alt="{{ blogger.user.get_full_name }}" style="width: 91px; height: 91px; display: block;" />
+
 
         <div class="blogger_name">
             {{ blogger.user.first_name }}<br/>
@@ -19,7 +21,11 @@
             <div class="review_sub_box_content">
                 <img class="blogger_review_arrow" src="{% static "img/blogger_review_arrow.png" %}" />
 
-                <a href="/search/?q={{ object.title }}"><img src="#" style="width: 91px; height: 137px" alt="id książki: {{ object.masterbook.pk }}" /></a>
+                {% if object.masterbook %}
+                    <a href="/search/?q={{ object.title }}"><img src="#" style="width: 91px; height: 137px" alt="id książki: {{ object.masterbook.pk }}" /></a>
+                {% else %}
+                    <img src="{% static "img/bok_img_index.png" %}" style="width: 91px; height: 137px" alt="" /></a>
+                {% endif %}
                 <h2 id="recommendation_title">{{ object.title }}</h2>
                 <div id="recommendation_content">
                     {{ object.content|linebreaksbr }}
@@ -28,7 +34,12 @@
             </div>
             <div class="review_sub_box_footer">
                 <b>Moja ocena:</b> {{ object.mark }}
-                <img src="{{ blogger.signature_thumbnail.url }}" alt="{{ blogger.user.get_full_name }}" />
+
+                {% if blogger.signature %}
+                    <img src="{{ blogger.signature_thumbnail.url }}" alt="{{ blogger.user.get_full_name }}" />
+                {% else %}
+                    <span style="float: right; margin-right: 20px; font-size: 20px;">{{ blogger.user.get_full_name }}</span>
+                {% endif %}
             </div>
         </div>
     </div>

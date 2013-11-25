@@ -18,6 +18,8 @@ class BloggerProfileForm(forms.ModelForm):
 
 class BookRecommendationForm(forms.ModelForm):
 
+    initial_flag = False
+
     class Meta:
         model = BookRecommendation
         exclude = ['author', 'publication_date', 'masterbook']
@@ -26,6 +28,8 @@ class BookRecommendationForm(forms.ModelForm):
         self.user = user
         self.blogger = user.bloggerprofile
         self.base_fields['status'].choices = self.blogger.get_recommendation_statuses()
+        if 'initial_flag' in kwargs:
+            self.initial_flag = kwargs.pop('initial_flag')
         super(BookRecommendationForm, self).__init__(*args, **kwargs)
         if self.instance.pk:
             self.fields['status'].initial = self.instance.status
@@ -51,8 +55,12 @@ class BookRecommendationForm(forms.ModelForm):
         if regex and regex.groups():
             master_book_pk = int(regex.groups()[0])
             if not MasterBook.objects.filter(pk=master_book_pk).count():
+                if self.initial_flag:
+                    return value
                 raise ValidationError('Książka o podanym ID nie istnieje w bazie danych')
             self.masterbook = MasterBook.objects.get(pk=master_book_pk)
+            return value
+        if self.initial_flag:
             return value
         raise ValidationError('Podany adres książki jest nieprawidłowy')
 
@@ -65,6 +73,8 @@ class BookRecommendationForm(forms.ModelForm):
         parsed_blogger_url = urlparse(self.blogger.website)
 
         if parsed_url.netloc.strip('www.') != parsed_blogger_url.netloc.strip('www.'):
+            if self.initial_flag:
+                return value
             raise ValidationError('Podany adres nie zgadza się z adresem bloga w profilu.')
 
         return value

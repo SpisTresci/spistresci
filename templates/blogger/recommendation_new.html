@@ -4,11 +4,41 @@
 {% block L_top_panel %}<h2>Dodaj nową rekomendację książki</h2>{% endblock %}
 
 {% block main_container %}
-	<form method="post" id="inputs">
+	<form method="post" id="recommendation">
 		{% csrf_token %}
 		{{ form.as_p }}
+
+		<h3>Podgląd</h3>
+        <hr/>
+		<div id="recommendation_wrapper">
+            {% include 'index_bloger_box.html' with object=form.instance blogger=user.bloggerprofile %}
+        </div>
+
 		<p class="buttons_container">
 			<input type="submit" value="Zapisz" />
 		</p>
 	</form>
+{% endblock %}
+
+{% block js %}
+    {{ block.super }}
+    <script type="text/javascript">
+        function update_preview(){
+            var data = $('#recommendation').serialize();
+            console.log(data);
+            $.ajax({
+                type: "POST",
+                url: "{% url 'blogger:iframe_preview' %}",
+                data: data
+            }).done(function(data) {
+                $('#recommendation_wrapper').html(data.html);
+            });
+        }
+
+        $(function(){
+            $('#id_title, #id_content, #id_mark, #id_website_path, #id_book_path').change(update_preview);
+            update_preview();
+        });
+
+    </script>
 {% endblock %}

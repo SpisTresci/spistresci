@@ -1,10 +1,11 @@
-# from django.views.generic import TemplateView
+# -*- coding: utf-8 -*-
+
 import json
 
 from django.shortcuts import render
 from django.views.generic import ListView
 from django.views.generic.detail import DetailView
-from django.views.generic.edit import UpdateView, CreateView, DeleteView
+from django.views.generic.edit import UpdateView, CreateView, DeleteView, BaseFormView
 from django.conf import settings
 from django.http import HttpResponse
 from django.utils.decorators import method_decorator
@@ -103,21 +104,12 @@ class RecommendationDelete(BaseBloggerView, DeleteView):
     def get_success_url(self, *args, **kwargs):
         return reverse('blogger:recommendation_list')
 
-class RecommendationPreviewIframe(RecommendationEdit):
+
+class RecommendationPreviewIframe(BaseBloggerView, BaseFormView):
 
     response_class = HttpResponse
     template_name = "index_bloger_box.html"
 
-    def form_valid(self, form, *args, **kwargs):
-        cd = form.cleaned_data
-        cd['masterbook'] = form.masterbook
-        context = dict(blogger=self.blogger_profile,
-                       object=cd)
-        html = render(self.request, self.template_name, context)
-        return self.render_to_response(dict(html=html.content))
-
-    def form_invalid(self, form, *args, **kwargs):
-        return self.render_to_response()
 
     def render_to_response(self, context, **response_kwargs):
         response_kwargs['content_type'] = 'application/json'
@@ -125,3 +117,22 @@ class RecommendationPreviewIframe(RecommendationEdit):
             json.dumps(context),
             **response_kwargs
         )
+
+    def post(self, request, *args, **kwargs):
+        obj = dict(title=u"Tytuł rekomendacji",
+                   content=u"Przykładowa treść rekomendacji książki. "*10,
+                   mark='Słowna ocena książki',
+                   website_path=self.blogger_profile.website,
+                   book_path="",
+                   promote_rate=1,
+                   status=1)
+        form = BookRecommendationForm(self.blogger, request.POST, initial_flag=True)
+        form.is_valid()
+
+        obj.update(form.cleaned_data)
+        obj['masterbook'] = getattr(form, 'masterbook', None)
+        obj['website_path'] = 'http://' + obj['website_path'].strip('http://')
+        context = dict(blogger=self.blogger_profile,
+                       object=obj)
+        html = render(self.request, self.template_name, context)
+        return self.render_to_response(dict(html=html.content))
