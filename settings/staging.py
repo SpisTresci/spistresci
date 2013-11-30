@@ -18,11 +18,11 @@ ADMINS = (
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',  # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'django_spistresci_alpha_10',  # Or path to database file if using sqlite3.
+        'NAME': 'st_414',  # Or path to database file if using sqlite3.
         # The following settings are not used with sqlite3:
         'USER': 'root',
-        'PASSWORD': '',
-        'HOST': '',  # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
+        'PASSWORD': 'NGUcIpHoz1UI',
+        'HOST': 'db1.spistresci.pl',  # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
         'PORT': '',  # Set to empty string for default.
     },
     'baza_calibre': {
@@ -30,30 +30,25 @@ DATABASES = {
         'NAME': 'baza_calibre',  # Or path to database file if using sqlite3.
         # The following settings are not used with sqlite3:
         'USER': 'root',
-        'PASSWORD': '',
-        'HOST': '',  # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
+        'PASSWORD': 'NGUcIpHoz1UI',
+        'HOST': 'db1.spistresci.pl',  # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
         'PORT': '',  # Set to empty string for default.
     },
     'st_backend': {
         'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'st',                      # Or path to database file if using sqlite3.
+        'NAME': 'st_414',                      # Or path to database file if using sqlite3.
         # The following settings are not used with sqlite3:
         'USER': 'root',
-        'PASSWORD': '',
-        'HOST': '',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
+        'PASSWORD': 'NGUcIpHoz1UI',
+        'HOST': 'db1.spistresci.pl',  # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
         'PORT': '',                      # Set to empty string for default.
     }
-}
-
-SOLR = {
-    'login':'st_' + os.getenv('ENV'),
-    'pass':'WcCPFemapxqyN4xo'
 }
 
 HAYSTACK_CONNECTIONS = {
     'default': {
         'ENGINE': 'haystack.backends.solr_backend.SolrEngine',
-        'URL': 'http://%(login)s:%(pass)s@solr.spistresci.pl:8090/solr/masterbook_latest' % SOLR,
+        'URL': 'http://solr.spistresci.pl:8090/solr/masterbook_latest',
         'EXCLUDED_INDEXES': [
             'spistresci.search_indexes.BookstoreIndex',
         ]
@@ -61,7 +56,7 @@ HAYSTACK_CONNECTIONS = {
 
     'bookstore': {
         'ENGINE': 'haystack.backends.solr_backend.SolrEngine',
-        'URL': 'http://%(login)s:%(pass)s@solr.spistresci.pl:8090/solr/bookstore_latest' % SOLR,
+        'URL': 'http://solr.spistresci.pl:8090/solr/bookstore_latest',
         'EXCLUDED_INDEXES': [
             'spistresci.search_indexes.MasterBookIndex',
         ]
@@ -70,7 +65,7 @@ HAYSTACK_CONNECTIONS = {
     'book_details': {
         'ENGINE': 'haystack.backends.solr_backend.SolrEngine',
         #'URL': 'http://127.0.0.1:8983/solr/bookstore_alpha_10',
-        'URL': 'http://%(login)s:%(pass)s@solr.spistresci.pl:8090/solr/masterbook_with_description_latest' % SOLR,
+        'URL': 'solr.spistresci.pl:8090/solr/masterbook_with_description_latest',
         'EXCLUDED_INDEXES': [
             'spistresci.search_indexes.BookstoreIndex',
         ]
