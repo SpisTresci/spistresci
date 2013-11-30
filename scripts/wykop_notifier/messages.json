@@ -1,0 +1,190 @@
+[
+    {
+        "id": 2,
+        "nick":"maqs7",
+        "msgs":
+            [
+                "Masakra, nigdy nie sądziłem, żę będzie z tym tak dużo roboty... :) ",
+
+                "No ale w końcu po wielu miesiącach cieżkiej pracy się udało :D",
+
+                "Serwis to http://SpisTresci.pl, w skrócie wyszukiwarka i porównywarka cenowa ebooków. Zintegrowałem {service_count} księgarni i serwisów z darmowymi ebookami. Książek razem jest {book_count}, darmowych {free_ebook_count} :) A to i tak jeszcze nie wszystko :D",
+
+                "Stwierdziłem, że trzeba spróbować szczęścia i wrzuciłem linka na wykop({raw_entry_link}), tam opisałem więcej funkcjonalności, może ludziom się spodoba :D Będę wdzieczny za ewentualne wsparcie :)",
+
+                "Pewnie jest jeszcze masa błędów, no ale stwierdziłem, że trzeba już w końcu ruszyć :)"
+
+            ]
+    },
+    {
+        "id": 10,
+        "nick":"RafiRK",
+        "msgs":
+            [
+                "Hej! Chyba mnie kojarzysz, bo kilka razy przywoływałeś mnie na mikro do pytań o Kindle :)",
+
+                "Pomyślałem, że może Cię zainteresować informacja o nowym serwisie, który programowałem przez ostatnie 11 miesięcy :)",
+
+                "W skrócie to wyszukiwarka i porównywarka cenowa ebooków i audiobooków :) Nazwę i adres wymyśliła moja żona - http://SpisTresci.pl",
+
+                "Na razie podłączyliśmy {service_count} księgarni i serwisów z darmowymi ebookami. Książek razem jest {book_count}, darmowych {free_ebook_count} :) A to i tak jeszcze nie wszystko :D",
+
+                "Stwierdziłem, że może ktoś doceni kilka miesiecy roboty, z powodu której rzuciłem swoją poprzednią pracę :D więc, postanowiłem wrzucć linka na wykop({raw_entry_link}). Tam napisałem trochę więcej szczegółów, dlaczego to jest zajebisty projekt :) Będę wdzieczny za ewentualne wsparcie, czy informacje o błędach, które pewnie i tak się pojawią :)"
+
+            ]
+    },
+    {
+        "id": 11,
+        "nick":"tgb",
+        "msgs":
+            [
+                "Hej! Nie wiem, czy mnie kojarzysz... wymieniłeś ze mną [pare zdań na mikro](http://www.wykop.pl/wpis/514255/gdzie-kupic-kindla-amazon-com-czy-allegro-ile-doli/#comment-2962359) o tym jak udało Ci się kupić czytnik bez VATu :) Mam nadzieję, że czytnik dalej dobrze się sprawuje.",
+
+                "Wiedząc, że masz czytnik pomyślałem, że może Cię zainteresować informacja o serwisie, który programując po nocach tworzyłem przez ostatnie 11 miesięcy :)",
+
+                "Serwis to http://SpisTresci.pl, i w dużym skrócie jest to wyszukiwarka i porównywarka cenowa ebooków i audiobooków, z największą liczbą podłączonych polskich księgarni i serwisów z darmowymi pozycjami (obecnie {service_count}), a obiecuję, że będzie więcej :D :)",
+
+                "Książek w bazie jest obecnie {book_count}, darmowych {free_ebook_count} :) Pracujemy nad tym, by dodać też zwykłe książki. Wychodzę z założenia, że jak ktoś lubi czytać, a akurat jakaś ksiegarnia będzie miała taniej wersje papierową, to czemu o niej nie powiedzieć użytkownikowi? :)",
+
+                "W przypływie optymizmu postanowiłem wrzucić linka na wykop ({raw_entry_link}), jak Ci się serwis spodoba, to będę cholernie wdzięczny za wsparcie. Podobno to własnie promocja jest najtrudniejsza w tego typu przedsięwzięcach... ",
+
+                "Jakbyś miał jeszcze jakieś uwagi, co do kierunku rozwoju serwisu, to z chęcią wysłucham :) Mamy jeszcze pare pomysłów, ale nie wiemy co wprowadzać najpierw."
+
+            ]
+    },
+    {
+        "id": 54,
+        "nick":"duga",
+        "msgs":
+            [
+                "Cześć duga! Tutaj noisy z #uw-team :)",
+                "Właśnie przed chwilą odpaliliśmy w końcu serwis http://SpisTresci.pl, nad którym pracowałem przez ostatnie 11 miesięcy i z powodu którego zwolniłem się z Opery :)",
+                "Będę Ci cholernie wdzięczny, jeżeli w tej jednej z najważniejszych chwil mojego życia (nie, nie żartuję :) ), wesprzesz mnie swoim wykopem.",
+                "Link do znaleziska jest tutaj: {raw_entry_link} . ",
+                "Jeżeli masz konto np na FB, to kiedyś odwdzięcze się piwem jak wrzucisz jakieś info w stylu 'Polcema, mój znajomy zrobił' :)",
+                "No i zapraszam do używania i testowania serwisu. Może jeszcze nie padł :D"
+            ]
+    },
+    {
+        "id": 66,
+        "nick":"Siwy1996",
+        "msgs":
+            [
+                "Hej! Mam nadzieję, że Kindle się dobrze sprawdza :) Dzisiaj piszę z pewnym super newsem :)",
+
+                "Przez ostatni rok, pracowicie programowałem i pracowałem nad stworzeniem (od podstaw) nowego serwisu, który fanom ebooków powinien przypaść do gustu :)",
+
+                "W dużym skrócie, jest to wyszukiwarka ebooków i audiobooków, a i z biegiem czasu powinny pojawić się też zwykłe ksiażki :)",
+
+                "Jeżeli znasz jakis inne serwisu tego typu (nie ukrywam, że jest konkurencja :D), to i tak radzę się przyjrzeć naszemu, bo mamy więcej podłączonych ksiegarni i serwisów z darmowymi książkami, niż dwa następne serwisy razem wziete :)",
+
+                "{service_count} serwisów, {book_count} ebooków i audiobooków, w tym {free_ebook_count} darmowych",
+
+                "W przypływie optymizmu wrzuciłem linka na wykop o tym: {raw_entry_link}",
+
+                "Jeżeli Ci się spodoba, to będę szalenie wdzięczny za głos. Zaprogramować to było cholernie trudno, ale podobno jeszcze trudniej jest serwis wypromować :)",
+
+                "Jakbyś miał jakieś sugestie co do dalszego rozwoju serwisu, to z chęcią przeczytam :)",
+
+                "z góry thx :)"
+            ]
+    },
+    {
+        "id": 74,
+        "nick":"kuba",
+        "msgs":
+            [
+                "Serwis ruszył!! :)",
+
+                "{service_count} serwisów, {book_count} ebooków i audiobooków, w tym {free_ebook_count} darmowych",
+
+                "Wszystko już jest dostępne pod: http://SpisTresci.pl",
+
+                "Zgodnie z Twoją radą wrzuciłem linka na wykop {raw_entry_link} :) Jeżeli serwis Ci się podoba, to możesz mi zrobić ogromną przysługę, kopnąć a może nawet wrzucić link do serwisu na Facebooka :)",
+
+                "A teraz idę monitorować serwer, bo jak się dzisiaj nie wypieprzy, to będize cud :D",
+
+                "z góry thx :)"
+            ]
+    },
+    {
+        "id": 75,
+        "nick":"ksionc",
+        "msgs":
+            [
+                "Hej, dzisiaj piszę do Ciebie z zupełnie inną sprawą, nie związaną z kryptowalutami :)",
+
+                "Przez ostatnie 11 miesięcy programując po nocach tworzyłem swój pierwszy webserwis, a mianowicie wyszukiwarkę i porównywarkę cenową ebooków i audiobooków - http://SpisTresci.pl :)",
+
+                "W czerwcu nawet zwolniłem się z Opery Software, dla tego projektu, gdyż stwierdziłem, że stworzenie czegoś samemu daje dużo więcej satysfakcji niż nawet pisanie znanej przeglądarki internetowej  :) ",
+
+                "Podłączyłem razem {service_count} różnych księgarni i serwisów z darmowymi ebookami, co daje w bazie {book_count} ebooków i audiobooków, w tym {free_ebook_count} darmowych",
+
+                "Będę szalenie wdzięczny za wsparcie! W przypływie optymizmu stworzyłem o tym znalezisko ({raw_entry_link}), mam nadzieję, że się ludzie na tym poznają :) Takie kopnięcie może być na wagę złota w dniu startu serwisu. Programowanie tego było trudne, ale podobno promocja to dopiero koszmar :D",
+
+                "z góry dzięki :)",
+
+                "Aha... no i ciekawostka. Gdyby nie bitcoiny kupione za 300zł w listopadzie tuż przed wzrostem, to nie mielibyśmy już nawet na rachunki. Trochę zbyt optymistycznie szacowałem, kiedy skończę serwis, gdy w czerwcu zwalniałem się pracy :D Na szczęście bitcoiny i litecoiny pomogły w najlepszym momencie :)"
+            ]
+    },
+    {
+        "id": 76,
+        "nick":"dk994",
+        "msgs":
+            [
+                "Hej. Zgodnie z Twoim twierdzeniem, że to Kindle jest najlepszym przyjacielem człowieka, postanowiłem zrobić coś dla Kindli i wszystkich jego właścicieli :)",
+
+                "Pomyślałem, że jako jeden z nich możesz się tym zainteresować. :) Przez ostatnie 11 miesięcy, programując po nocach tworzyłem nowy serwis, który dzisiaj w końcu ujrzał światło dzienne - http://SpisTresci.pl :)",
+
+                "W dużym skrócie jest to wyszukiwarka i porównywarka cenowa ebooków i audiobooków. Stwierdziłem jednak, że nie powinniśmy się zamykać tylko na elektroniczne nowości, w końcu w książce najważniejsza jest treść, dlatego w najbliższym czasie do bazy będą też dodane normalne księgarnie :)",
+
+                "Do serwisu podłączyłem razem {service_count} różnych księgarni i serwisów z darmowymi ebookami, co daje w bazie {book_count} ebooków i audiobooków, w tym {free_ebook_count} darmowych",
+
+                "W przypływie optymizmu stworzyłem o tym znalezisko ({raw_entry_link}), może ludziom się spodoba :) Wtedy będziemy wiedzieć, że dalej warto to rozwijać :)",
+
+                "Mam nadzieję, że Ci się przyda :) Mam nadzieję, że błędów nie ma tam za dużo..."
+            ]
+    },
+    {
+        "id": 77,
+        "nick":"stefan_pompka",
+        "msgs":
+            [
+                "Nadszedł czas oceny :) Nowy serwis, http://SpisTresci.pl właśnie wystartował :)",
+
+                "W dużym skrócie jest to wyszukiwarka i porównywarka cenowa ebooków i audiobooków. Obecnie nie ma innego serwisu w Polsce, który ma zintegrowaną tak dużą liczbę księgarni i różnych serwisów z darmowymi księgarniami ({service_count}) :)",
+
+                "W sumie to powinno być niedługo po starcie co najmniej 10 więcej, tylko jak do tej pory niektóre księgarnie pisały, że nie chcą udostępniać bazy serwisowi, który jeszcze nie istnieje :/ Niewierne Tomasze niewierzące w nasz serwis :P",
+
+                "Obecnie w bazie Spisu Treści jest {book_count} ebooków i audiobooków, w tym {free_ebook_count} darmowych",
+
+                "W przypływie optymizmu stworzyłem o tym znalezisko ({raw_entry_link}), może spodoba się mirkom i innym januszom :)",
+
+                "Penwie jest jeszcze trochę błędów, trudno było wszystko wyłapać...",
+
+                "Poczytaj w znalezisku sobie o jeszcze kilku ciekawych ficzerach naszej strony :)"
+            ]
+    },
+    {
+        "id": 999,
+        "nick":"lenka21",
+        "msgs":
+            [
+                "Hej! Rozmawialiśmy jakiś czas temu na wykopie, pytałeś o darmowe ebooki...",
+
+                "Opowiadałem Ci, że tworzę nowy serwis z ebookami (porównywarka cenowa i wyszukiwarka) i dzisiaj w końcu udało się go \"otworzyć\" :)",
+
+                "Serwis to http://SpisTresci.pl , zintegrowałem {service_count} serwisów, dzięki czemu można przeszukiwać bazę {book_count} ebooków i audiobooków (darmowych {free_ebook_count}) :)",
+
+                "W przypływie optymizmu wrzuciłem linka na wykop({raw_entry_link}), może ludziom się spodoba :D Będę wdzieczny za ewentualne wsparcie :)",
+
+                "Sugestie co do rozwoju serwisu i informacje o błędach (które pewnie i tak gdzieś wystąpią :/) też oczywiście są mile widziane :)",
+
+                "z góry thx :)"
+            ]
+    }
+]
+
+
+
+
