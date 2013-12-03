@@ -52,7 +52,7 @@ USE_TZ = True
 SITE_ROOT = os.path.join(os.path.dirname(os.path.realpath(__file__)), '..')
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/var/www/example.com/media/"
-MEDIA_ROOT = os.path.join(SITE_ROOT, 'uploads/')
+MEDIA_ROOT = '/var/www/django/uploads/'
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
