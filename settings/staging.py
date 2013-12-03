@@ -65,7 +65,7 @@ HAYSTACK_CONNECTIONS = {
     'book_details': {
         'ENGINE': 'haystack.backends.solr_backend.SolrEngine',
         #'URL': 'http://127.0.0.1:8983/solr/bookstore_alpha_10',
-        'URL': 'solr.spistresci.pl:8090/solr/masterbook_with_description_latest',
+        'URL': 'http://solr.spistresci.pl:8090/solr/masterbook_with_description_latest',
         'EXCLUDED_INDEXES': [
             'spistresci.search_indexes.BookstoreIndex',
         ]

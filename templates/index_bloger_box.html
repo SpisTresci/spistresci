@@ -22,7 +22,7 @@
                 <img class="blogger_review_arrow" src="{% static "img/blogger_review_arrow.png" %}" />
 
                 {% if object.masterbook %}
-                    <a href="/search/?q={{ object.title }}"><img src="#" style="width: 91px; height: 137px" alt="id książki: {{ object.masterbook.pk }}" /></a>
+                    <a href="/search/?q={{ object.title }}"><img src="{{ object.masterbook.cover }}" style="width: 91px; height: 137px" alt="id książki: {{ object.masterbook.pk }}" /></a>
                 {% else %}
                     <img src="{% static "img/bok_img_index.png" %}" style="width: 91px; height: 137px" alt="" /></a>
                 {% endif %}
