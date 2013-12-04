@@ -15,17 +15,14 @@ class UpdateStatus(models.Model):
 class UpdateStatusService(models.Model):
     id = models.IntegerField(primary_key=True)
     update_status = models.ForeignKey(UpdateStatus, null=True, blank=True)
-    service = models.ForeignKey("Service", null=True, blank=True)
+    service_name = models.ForeignKey("Service", null=True, db_column='service_name', blank=True)
     success = models.IntegerField(null=True, blank=True)
     checksum = models.CharField(max_length=32L, blank=True)
-
     offers = models.IntegerField(null=True, blank=True)
     offers_parsed = models.IntegerField(null=True, blank=True)
     offers_new = models.IntegerField(null=True, blank=True)
     offers_promotion = models.IntegerField(null=True, blank=True)
-
     timestamp = models.IntegerField(null=True, blank=True)
-
     fetch_start = models.DateTimeField(null=True, blank=True)
     fetch_end = models.DateTimeField(null=True, blank=True)
     parse_start = models.DateTimeField(null=True, blank=True)
@@ -36,8 +33,7 @@ class UpdateStatusService(models.Model):
         db_table = 'UpdateStatusService'
 
 class Service(models.Model):
-    id = models.IntegerField(primary_key=True)
-    name = models.CharField(max_length=32L, blank=True)
+    name = models.CharField(max_length=32L, primary_key=True)
     website = models.CharField(max_length=32L, blank=True)
     class Meta:
         db_table = 'Service'

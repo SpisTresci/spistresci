@@ -15,7 +15,7 @@ def monitor(request):
             s_stable = []
             table.append(s_stable)
             for service in services:
-                uss_s = UpdateStatusService.objects.filter(update_status_id = us.id, service_id = service.id)
+                uss_s = UpdateStatusService.objects.filter(update_status_id = us.id, service_name = service.name)
                 uss = uss_s[0] if len(uss_s) != 0 else None
 
                 #repair_dates([])
