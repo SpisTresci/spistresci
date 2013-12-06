@@ -13,13 +13,15 @@ from DobryEbook import DobryEbook
 from eBookpoint import eBookpoint
 from ebooks43 import ebooks43
 from eClicto import eClicto
-from Gandalf import Gandalf
 from Empik import Empik
 from EscapeMagazine import EscapeMagazine
+from Fabryka import Fabryka
 from FantastykaPolska import FantastykaPolska
+from Gandalf import Gandalf
 from Helion import Helion
 from KodeksyWmp3 import KodeksyWmp3
 from Koobe import Koobe
+from Ksiazki import Ksiazki
 from Latarnik import Latarnik
 from Legimi import Legimi
 from Merlin import Merlin
