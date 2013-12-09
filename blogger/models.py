@@ -29,7 +29,7 @@ class BloggerProfile(models.Model):
                                      format='PNG',
                                      options={'quality': 90})
     signature_thumbnail = ImageSpecField(source='signature',
-                                     processors=[ResizeToFit(500, 70)],
+                                     processors=[ResizeToFit(250, 30)],
                                      format='PNG',
                                      options={'quality': 90})
 
