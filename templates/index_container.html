@@ -114,7 +114,7 @@
           BLOGERZY POLECAJĄ
         <img class="b_left" src="{% static "img/red_line_b.png" %}" alt="" /><img class="b_center" src="{% static "img/red_line_c.png" %}" alt="" /><img class="b_right" src="{% static "img/red_line_e.png" %}" alt="" />
         {% for review in blogger_reviews %}
-            {% include "index_bloger_box.html" %}
+            {% include "index_bloger_box.html" with blogger=review.blogger object=review.recomendation %}
         {% endfor %}
       </div>
      </div>

@@ -85,6 +85,25 @@ group_of_books=[
     },
 ]
 
+
+from spistresci.blogger.models import BookRecommendation, BloggerProfile
+
+
+RECOMENDATIONS_ON_FRONTPAGE = 3
+
+def getRandomReviews():
+
+    bloggers = BloggerProfile.objects.order_by('?')[:RECOMENDATIONS_ON_FRONTPAGE-1]
+
+    dic = {"blogger_reviews":[]}
+
+    for blogger in bloggers:
+        recomendation = blogger.user.recommendations.order_by('?')[0]
+        dic["blogger_reviews"].append({"blogger": blogger, "recomendation": recomendation})
+
+    return dic
+
+
 def index(request):
     c = {'top_menu':getListOfTopMenuServices(request)}
     c.update({'path':request.path})
@@ -95,9 +114,8 @@ def index(request):
 
     for group in group_of_books:
         random.shuffle(group['list'])
-
     c['group_of_books']=group_of_books
+    c.update(getRandomReviews())
 
-    random.shuffle(blogger_reviews)
-    c['blogger_reviews']=blogger_reviews[:3]
+
     return render(request, 'index.html', c)

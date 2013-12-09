@@ -2,11 +2,7 @@
 
 <div class="index_blogger_box">
     <div class="blogger_sub_box">
-
-
-            <img src="{% if blogger.photo %}{{ blogger.photo_thumbnail.url }}{% else %}{% static "img/bloggers/agnieszka_tatera_100x100.jpg" %}{% endif %}" alt="{{ blogger.user.get_full_name }}" style="width: 91px; height: 91px; display: block;" />
-
-
+            <img src="{% if blogger.photo %}{{ blogger.photo_thumbnail.url }}{% else %}{% static "img/bloggers/default_avatar.jpg" %}{% endif %}" alt="{{ blogger.user.get_full_name }}" style="width: 91px; height: 91px; display: block;" />
         <div class="blogger_name">
             {{ blogger.user.first_name }}<br/>
             {{ blogger.user.last_name }}
@@ -22,11 +18,11 @@
                 <img class="blogger_review_arrow" src="{% static "img/blogger_review_arrow.png" %}" />
 
                 {% if object.masterbook %}
-                    <a href="/search/?q={{ object.title }}"><img src="{{ object.masterbook.cover }}" style="width: 91px; height: 137px" alt="id książki: {{ object.masterbook.pk }}" /></a>
+                    <a href="{{ object.book_path }}"><img src="{{ object.masterbook.cover }}" style="width: 91px; height: 137px" alt="id książki: {{ object.masterbook.pk }}" /></a>
                 {% else %}
                     <img src="{% static "img/bok_img_index.png" %}" style="width: 91px; height: 137px" alt="" /></a>
                 {% endif %}
-                <h2 id="recommendation_title">{{ object.title }}</h2>
+                <h2 id="recommendation_title"><a href="{{ object.website_path }}">{{ object.title }}</a></h2>
                 <div id="recommendation_content">
                     {{ object.content|linebreaksbr }}
                 </div>
@@ -34,7 +30,6 @@
             </div>
             <div class="review_sub_box_footer">
                 <b>Moja ocena:</b> {{ object.mark }}
-
                 {% if blogger.signature %}
                     <img src="{{ blogger.signature_thumbnail.url }}" alt="{{ blogger.user.get_full_name }}" />
                 {% else %}
