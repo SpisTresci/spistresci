@@ -53,6 +53,21 @@
             ]
     },
     {
+        "id":53,
+        "nick":"GreyFox",
+        "msgs":
+            [
+                "Hej!",
+                "Dawno, dawno temu [ktoś pytał na mikroblogu](http://www.wykop.pl/wpis/1329023/czy-ktos-wie-w-ktorej-ksiegarni-znajde-zamek-z-pia/#comment-6763863) o to gdzie znaleźć jakąś książkę...",
+                "Podsunęłaś wtedy tej osobie link do wyszukiwarki ebooków Roberta ze Świata Czytników.",
+                "Pomyślałem, że możesz być zainteresowana informacją o nowej wyszukiwarce i porównywarce ebooków i audiobooków, którą pracowicie po nocach tworzyłem przez ostatnie 12 misięcy :)",
+                "W żaden sposób nie chcę negować serwisu Roberta (a zwłaszcza jego bloga, nad którym ciągle odwala kawał niesamowitej roboty)...",
+                "Natomiast jeszcze przed startem Spisu Treści (bo tak wspólnie z żoną nazwaliśmy nasz serwis :) ), udało się nam zintegrować ponad 2 razy więcej księgarni (obecnie {service_count}), a to wcale nie jest najlepsza informacja :)",
+                "Kilkoro mikroblogowiczów zasugerowało mi, bym wrzucił szersze info o tym jako znalezisko: {raw_entry_link}",
+                "Będę bardzo wdzięczny, albo za mały wyraz wsparcia, albo za ostrą krytykę tego, co zrobiłem w Spisie Treści źle  ;) "
+            ]
+    },
+    {
         "id": 54,
         "nick":"duga",
         "msgs":
@@ -63,6 +78,23 @@
                 "Link do znaleziska jest tutaj: {raw_entry_link} . ",
                 "Jeżeli masz konto np na FB, to kiedyś odwdzięcze się piwem jak wrzucisz jakieś info w stylu 'Polcema, mój znajomy zrobił' :)",
                 "No i zapraszam do używania i testowania serwisu. Może jeszcze nie padł :D"
+            ]
+    },
+    {
+        "id": 55,
+        "nick":"Smookie",
+        "msgs":
+            [
+                "Tak jak obiecałem, tak też ninijszym robię :)",
+                "Po miesiącach programowania udało mi się w końcu skończyć mój autorski serwis - wyszukiwarkę i porównywarkę cenową ebooków i audiobooków z rekordową liczbą podłączonych księgarni i serwisów z darmowymi pozycjami :)",
+                "Jako, że jaram się dzisiaj tym jak dziecko, to nie pozostaje mi nic innego jak zaprosić na stronę http://SpisTresci.pl (nazwę wymyśliła moja żona :) )",
+                "Również i ona mówiąc \"Niech ten wykop w końcu się na coś Ci przyda\" zasugerowała, bym wrzucił dokładny opis funkcji serwisu jako znalezisko :D",
+                "Jeżeli miałbyś ochotę pohejtować albo powychwalać to co zrobiłem, to będę niezmiernie wdzięczny: {raw_entry_link}",
+                "A tak BTW... kiedyś na mikro pytałeś [o najlepszy sklep z ebookami](http://www.wykop.pl/wpis/1452063/najlepszy-sklep-z-ebookami-to-pokaz-spoiler-darujc/)... ",
+                "Nie udało mi się zrobić tego przed startem serwisu, ale bardzo bym chciał, by docelowo w spisie treści znajdował się gdzieś dynamiczny ranking księgarni, w którym każdy użytkownik mógłby określić, które cechy księgarni są dla niego najważniejsze.",
+                "Pozwoli to w łatwy sposób każdej osobie znaleźć tą księgarnie, która najbardziej pasuje to wymarzonego profilu :)",
+                "Może nawet taki ranking zdopingowałby niektóre ksiegarnie do poprawienia niektórych rzeczy (o ile jeszcze inne nie obraziłyby się za zbyt niskie miejsce w rankingu...)",
+                "Co o tym myślisz? :)"
             ]
     },
     {
