@@ -1,6 +1,12 @@
 @import "generic/L_container.scss";
 @import "record_details";
 @import "basics";
+@import "all";
+@import "top_menu";
+@import "login";
+@import "search_box";
+@import "footer";
+
 
 .L_left_panel{
   padding-top: $padding-top;

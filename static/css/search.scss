@@ -3,6 +3,14 @@
 @import "record_details";
 @import "basics";
 
+@import "all";
+@import "top_menu";
+@import "login";
+@import "search_box";
+@import "search_results";
+@import "footer";
+
+
 $shadow-color:rgba(182, 182, 182, 0.3);
 
 $box-color: #F6F6F6;
@@ -424,3 +432,5 @@ $panel-border-width: 2px;
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
+
+

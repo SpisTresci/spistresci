@@ -88,12 +88,11 @@ group_of_books=[
 
 from spistresci.blogger.models import BookRecommendation, BloggerProfile
 
-
-RECOMENDATIONS_ON_FRONTPAGE = 3
+RECOMENDATIONS_ON_FRONTPAGE = 4
 
 def getRandomReviews():
 
-    bloggers = BloggerProfile.objects.order_by('?')[:RECOMENDATIONS_ON_FRONTPAGE-1]
+    bloggers = BloggerProfile.objects.order_by('?')[:RECOMENDATIONS_ON_FRONTPAGE]
 
     dic = {"blogger_reviews":[]}
 

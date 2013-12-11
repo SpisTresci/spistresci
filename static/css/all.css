@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+img {
+  border: none; }
+
+html {
+  height: 100%; }
+
+body {
+  background: #fff;
+  font-family: 'PT Sans', sans-serif; }
+
+a {
+  text-decoration: none; }
