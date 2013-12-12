@@ -12,12 +12,12 @@
 
       {% if user == None or not user.is_authenticated %}
       <li id="login" class="menu2 menu2b">
-        <a>
+        <a href="{% url 'account_login' %}">
           ZALOGUJ SIĘ
         </a>
       </li>
       <li id="register" class="menu2 menu2a">
-        <a href="/accounts/register/">
+        <a href="{% url 'account_signup' %}">
           ZAREJESTRUJ SIĘ
         </a>
       </li>
@@ -29,13 +29,14 @@
       </li>
       <li id="account" class="menu2 menu2a">
         <a style="display: block" href="{% url 'profile:home' %}">
-          {{ user.username }}
+          MOJE KONTO
         </a>
       </li>
       {% endif %}
 
 
     </ul>
+    {% comment %}
     <div class="loginform">
         <form id="login" action="" method="post">{% csrf_token %}
             <fieldset id="inputs">
@@ -52,5 +53,5 @@
             </fieldset>
         </form>
     </div>
-    <div class="registerform">
-    </div>
+    {% endcomment %}
+

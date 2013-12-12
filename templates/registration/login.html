@@ -17,9 +17,9 @@
       <div class="register_bottom_container">
         <div class="register_bottom_left_container">
           <div style="float: right;">
-            <form action="{% url 'account_signup' %}" method="post">{% csrf_token %}
+            <form action="{% url 'account_login' %}" method="post">{% csrf_token %}
               {{ form.as_p }}
-              <p><input type="submit" id="submit" value="Zarejestruj"></p>
+              <p><input type="submit" id="submit" value="Zaloguj"></p>
             </form>
           </div>
         </div>

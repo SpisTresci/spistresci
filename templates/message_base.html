@@ -2,8 +2,8 @@
 {% load staticfiles %}
 
 {% block title %}Spis Treści - rejestracja{% endblock title %}
-
-{% block js %} <script type="text/javascript" src="{% static "js/search.js" %}"></script> {% endblock js %}
+{% block css %}<link href="{% static "css/register.css" %}" rel="stylesheet" type="text/css">{% endblock css %}
+{% block js %}<script type="text/javascript" src="{% static "js/search.js" %}"></script>{% endblock js %}
 {% block container %}
 	<div class="container">
       <div class="index_top_bg s_index_top_bg">
@@ -13,9 +13,10 @@
           </a>
         </div>
       </div>
-      <div class="register_bottom_container">
-        {% block message %}{% endblock %}
+      <div class="register_bottom_container" style="display: table;margin: 0 auto;">
+        <div class="message" style="display: table-cell;vertical-align: middle;text-align: center;">
+            {% block message %}{% endblock %}
+        </div>
       </div>
    </div>
 {% endblock %}
-{% block footer %} {% include "footer.html" %} {% endblock footer %}

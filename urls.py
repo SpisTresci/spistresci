@@ -8,10 +8,12 @@ from registration.backends.default.views import RegistrationView
 from spistresci.index.views import index
 from spistresci.search.views import STSearchView, STSearchQuerySet, hide_menu, STSearchForm
 from spistresci.book.views import STBookQuerySet, STBookView, book_redirect
-from spistresci.auth.views import logout, accounts_social_signup, accounts_profile
+from spistresci.auth.views import logout, accounts_social_signup, accounts_profile, MyLoginView
+#from allauth.account.views import LoginView
 from spistresci.register.views import register_user, egazeciarz_register_user
 from spistresci.monitor.views import monitor
-from spistresci.auth.forms import RegistrationForm
+
+from spistresci.auth.forms import RegistrationForm, MyLoginForm
 from dajaxice.core import dajaxice_autodiscover, dajaxice_config
 
 admin.autodiscover()
@@ -24,9 +26,14 @@ urlpatterns = patterns('',
      url('^logout/$', logout),
      url('^hide_menu/(?P<value>\d)/$', hide_menu),
      url('^monitor/$', monitor),
-     url(r'^accounts/register/$',
+     url(r'^accounts/signup/$',
                            RegistrationView.as_view(form_class=RegistrationForm),
-                           name='registration_register'),
+                           name='account_signup'),
+
+     url(r'^accounts/login/$',
+                           MyLoginView.as_view(form_class=MyLoginForm),
+                           name="account_login"),
+
      url(r'^accounts/', include('registration.backends.default.urls')),
      url(r'^%s' % (book_url_re,), STBookView(searchqueryset = STBookQuerySet(), form_class=STSearchForm), name='book_page'),
      url(r'^book-redirect/$', book_redirect, name="book_redirect"),

@@ -137,11 +137,11 @@ function onReady(){
         rebuildResults();
     });
 
-    $("#login").on("click", function(event){
+    /*$("#login").on("click", function(event){
         $(".loginform").toggleClass("act");
         event.preventDefault();
         event.stopPropagation();
-    });
+    });*/
 
     $(".filter_section_header").on("click", function(event){
         var p = $(this)

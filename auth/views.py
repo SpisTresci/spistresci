@@ -21,6 +21,12 @@ def authorization(request, c):
 
     c.update({'user': request.user})
 
+from allauth.account.views import LoginView
+
+class MyLoginView(LoginView):
+    template_name = "registration/login.html"
+
+
 def logout(request):
     auth.logout(request)
     return HttpResponseRedirect('/')

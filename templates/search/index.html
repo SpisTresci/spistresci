@@ -7,12 +7,15 @@
     <link href="{% static "css/search.css" %}" rel="stylesheet" type="text/css">
 <!--    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">-->
 {% endblock css %}
+
+
 {% block js %}
     <script type="text/javascript" src="{% static "js/search.js" %}"></script>
 
     <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
     <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 
+    <script type="text/javascript" src="{% static "js/jquery.spotlight.js" %}"></script>
     <script type="text/javascript" src="{% static "/static/dajax/jquery.dajax.core.js" %}"></script>
     {% dajaxice_js_import %}
     <script type="text/javascript">
@@ -23,6 +26,8 @@
 
         function get_track_form(book_id){
             Dajaxice.spistresci.get_track_form(Dajax.process, {'book_id': book_id});
+            $('#track_form_container_' + (book_id).toString()).addClass("dialog_style1");
+            $('#track_form_container_' + (book_id).toString()).spotlight({animate:false});
         }
     </script>
 {% endblock js %}

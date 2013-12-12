@@ -16,16 +16,18 @@ def get_track_form(request, book_id):
     dajax = Dajax()
 
     book = get_object_or_404(MasterBook, pk=book_id)
-    booktrack = BookTrack.objects.filter(masterbook=book, user=request.user).exclude(price=None)
-
     initial = dict()
-    if booktrack:
-        initial = dict(price=booktrack[0].price/100.0)
+
+    if request.user.is_authenticated():
+        booktrack = BookTrack.objects.filter(masterbook=book, user=request.user).exclude(price=None)
+        #initial = dict(price=booktrack[0].price/100.0)
+
     form = BookTrackForm(initial=initial)
 
-    html = render_to_string('track/track_form.html', dict(track_form=form, product=book))
+    html = render_to_string('track/track_form.html', dict(track_form=form, product=book, user=request.user))
     dajax.assign('#track_form_container_%s' % book_id,'innerHTML', html)
     return dajax.json()
+
 
 @dajaxice_register
 def post_track_form(request, form):
