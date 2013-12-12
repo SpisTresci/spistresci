@@ -582,9 +582,19 @@ fieldset {
   padding: 5px;
   border: #e3e3e3 1px solid; }
 
+@media all and (max-width: 1600px) {
+  .index_blogger_box_wrapper.extra {
+    display: none; }
+
+  .index_blogger_box,
+  .review_sub_box {
+    height: 220px; } }
+@media all and (min-width: 1600px) {
+  .index_blogger_box,
+  .review_sub_box {
+    height: 260px; } }
 .index_blogger_box {
   width: 100%;
-  height: 200px;
   margin: 25px 0; }
 
 .blogger_sub_box {
@@ -610,7 +620,6 @@ fieldset {
 .review_sub_box {
   margin-left: 30px;
   margin-top: 9px;
-  height: 200px;
   border: 7px solid #e3e3e3;
   float: left;
   font-size: 14px;
@@ -628,7 +637,8 @@ fieldset {
   margin: 15px 15px 0 15px; }
   .review_sub_box_content img {
     float: left;
-    padding-right: 30px; }
+    padding-right: 30px;
+    padding-bottom: 20px; }
   .review_sub_box_content h2 {
     font-size: 16px;
     font-weight: bold;
@@ -643,14 +653,25 @@ fieldset {
   line-height: 40px;
   width: 100%;
   padding-left: 25px;
+  padding-bottom: 15px;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   text-decoration: none;
   text-align: left; }
   .review_sub_box_footer img {
     float: right;
+    display: box;
     padding: 0;
-    margin: 0 20px 5px 0; }
+    margin: 10px;
+    width: 160px; }
+  .review_sub_box_footer span {
+    float: right;
+    text-align: right;
+    display: box;
+    padding: 0;
+    margin: 10px;
+    width: 160px;
+    font-size: 20px; }
 
 /* footer */
 .footer {
@@ -726,10 +747,34 @@ fieldset {
 
 .index_top {
   margin: 0 auto;
-  width: 960px;
   padding-top: 60px;
-  /*   height:500px; */ }
+  width: 960px; }
 
+@media all and (max-width: 1600px) {
+  .index_bottom {
+    width: 900px; }
+
+  .index_box.extra {
+    display: none; }
+
+  .index_more {
+    width: 300px; } }
+@media all and (min-width: 1600px) {
+  .index_bottom {
+    width: 1500px; }
+
+  .three_index_box.flank {
+    width: 600px; }
+
+  .index_subtitle.flank {
+    width: 600px; }
+
+  .index_more.flank {
+    width: 600px; }
+
+  .index_blogger_box {
+    width: 750px;
+    float: left; } }
 .logo {
   height: 100px;
   margin: 0 auto;
@@ -754,27 +799,26 @@ fieldset {
   font-size: 20px;
   font-weight: bold; }
 
-.index_bloggers {
+.index_bloggers, .index_subtitle {
   text-align: center;
   width: 100%; }
-  .index_bloggers .b_right {
+  .index_bloggers .b_right, .index_subtitle .b_right {
     margin: 0 12px 5px 0; }
-  .index_bloggers .b_center {
+  .index_bloggers .b_center, .index_subtitle .b_center {
     margin-bottom: 5px;
     width: -moz-calc(50% - 130px);
     width: -webkit-calc(50% - 130px);
     width: -o-calc(50% - 130px);
     width: calc(50% - 130px);
     height: 3px; }
-  .index_bloggers .b_left {
+  .index_bloggers .b_left, .index_subtitle .b_left {
     margin: 0 0 5px 12px; }
 
 .three_index_box {
-  width: 320px;
+  width: 300px;
   float: left; }
 
 .index_bottom {
-  width: 960px;
   margin: 0 auto;
   min-height: 720px; }
 
@@ -785,15 +829,21 @@ fieldset {
   margin-top: 30px; }
 
 .index_subtitle {
-  width: 320px; }
-  .index_subtitle img {
-    margin: 0 12px 5px 12px; }
+  width: 300px; }
+  .index_subtitle .b_center {
+    margin-bottom: 5px;
+    width: -moz-calc(50% - 110px);
+    width: -webkit-calc(50% - 110px);
+    width: -o-calc(50% - 110px);
+    width: calc(50% - 110px);
+    height: 3px; }
 
 .index_box {
-  width: 320px;
+  width: 290px;
   position: relative;
   float: left;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  padding-left: 10px; }
 
 .ib_text {
   float: left;
@@ -878,6 +928,7 @@ fieldset {
   display: block; }
 
 .index_box_h {
+  padding-left: 10px;
   position: absolute;
   display: none;
   background: #e6ecff;
@@ -888,15 +939,14 @@ fieldset {
   -khtml-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
-  width: 300px;
+  width: 280px;
   height: 180px;
-  top: 0px;
-  left: -10px; }
+  top: 0px; }
 
 .ibh_image {
   background: #172d5e;
   margin-top: 10px;
-  margin-left: 20px;
+  margin-left: 0px;
   color: white;
   text-align: center;
   width: 100px;
@@ -928,7 +978,6 @@ fieldset {
   z-index: 20; }
 
 .index_more {
-  width: 320px;
   text-align: center;
   font-weight: bold;
   margin-top: 15px;

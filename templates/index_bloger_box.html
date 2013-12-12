@@ -23,17 +23,17 @@
                     <img src="{% static "img/bok_img_index.png" %}" style="width: 91px; height: 137px" alt="" /></a>
                 {% endif %}
                 <h2 id="recommendation_title"><a href="{{ object.website_path }}">{{ object.title }}</a></h2>
-                <div id="recommendation_content">
-                    {{ object.content|linebreaksbr }}
+                <div id="recommendation_content" style="">
+                    {{ object.content|linebreaksbr }}<a href="{{ object.website_path }}"> Czytaj&nbsp;całość&nbsp;»</a>
                 </div>
-                <a href="{{ object.website_path }}">Czytaj całość »</a>
+
             </div>
             <div class="review_sub_box_footer">
                 <b>Moja ocena:</b> {{ object.mark }}
                 {% if blogger.signature %}
                     <img src="{{ blogger.signature_thumbnail.url }}" alt="{{ blogger.user.get_full_name }}" />
                 {% else %}
-                    <span style="float: right; margin-right: 20px; font-size: 20px;">{{ blogger.user.get_full_name }}</span>
+                    <span>{{ blogger.user.get_full_name }}</span>
                 {% endif %}
             </div>
         </div>
