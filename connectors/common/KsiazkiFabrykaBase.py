@@ -32,7 +32,7 @@ class KsiazkiFabrykaBase(Ceneo):
             dic['title'] = title
 
 class KsiazkiFabrykaBaseBook(GenericBook):
-    #id = Column(Integer, primary_key = True)
+    external_id = Column(BigInteger, unique = True)
     category = Column(Unicode(128))
     #title = Column(Unicode(256))
     raw_title = Column(Unicode(256))
