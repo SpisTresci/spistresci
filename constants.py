@@ -4,8 +4,8 @@ def getListOfTopMenuServices(request):
     list_of_services = [
         {'name':u'Spis Treści', 'url':'/'},
         {'name':u'eKundelek', 'url':'http://eKundelek.pl'},
-        {'name':u'Ranking', 'url':'#'},
-        {'name':u'Raporty', 'url':'#'},
+     #   {'name':u'Ranking', 'url':'#'},
+     #   {'name':u'Raporty', 'url':'#'},
     ]
 
     if request.user.is_authenticated() and request.user.username == 'admin':

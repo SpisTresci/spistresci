@@ -147,12 +147,12 @@ class STSearchView(SearchView):
                                     'template_file':'filter/price.html',
                                     'data':self.loadFilterPriceState(['from', 'to'])
                                 },
-                                {
-                                    'name':'OZNACZENIA',
-                                    'name_id':'formats',
-                                    'template_file':'filter/bullet_list.html',
-                                    'data':self.loadFilterState({'Wszystkie':["Promocje", "Nowości", "Bestsellery"]}, "special")
-                                },
+#                                {
+#                                    'name':'OZNACZENIA',
+#                                    'name_id':'formats',
+#                                    'template_file':'filter/bullet_list.html',
+#                                    'data':self.loadFilterState({'Wszystkie':["Promocje", "Nowości", "Bestsellery"]}, "special")
+#                                },
                                 {
                                     'name':'SERWISY',
                                     'name_id':'services',
@@ -160,12 +160,12 @@ class STSearchView(SearchView):
                                     'data':self.loadFilterState({'Wszystkie':[bookstore['name'] for bookstore in self.servicesInfo]}, "services")
 
                                 },
-                                {
-                                    'name':'SPOSÓB PŁATNOŚCI',
-                                    'name_id':'formats',
-                                    'template_file':'filter/bullet_list.html',
-                                    'data':self.loadFilterState({"Przez serwis":["DotPay", "ePrzelewy", "PayU", "Przelewy24.pl", "transferuj.pl", "YetiPay", "mPay", "SkyCash", "SMS", "PayPal", "karty płatnicze", "Przelewy24.pl"]}, "formats")
-                                },
+ #                               {
+ #                                   'name':'SPOSÓB PŁATNOŚCI',
+ #                                   'name_id':'formats',
+ #                                   'template_file':'filter/bullet_list.html',
+ #                                   'data':self.loadFilterState({"Przez serwis":["DotPay", "ePrzelewy", "PayU", "Przelewy24.pl", "transferuj.pl", "YetiPay", "mPay", "SkyCash", "SMS", "PayPal", "karty płatnicze", "Przelewy24.pl"]}, "formats")
+#                                },
                         ]
 
         authorization(self.request, extra)

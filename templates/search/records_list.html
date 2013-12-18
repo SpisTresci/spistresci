@@ -8,7 +8,9 @@
             <div class="header_box"><div class="sortable">Księgarnie</div></div>
             <div class="header_box"><div class="sortable">Liczba formatów</div></div>
             <div class="header_box">Dodatkowe Informacje</div>
+            {%comment%}
             <div class="header_box">Sposób płatności</div>
+            {%endcomment%}
             <div class="header_box"><div class="sortable">Cena</div></div>
         </div>
         {% for record in product.records %}
@@ -19,11 +21,15 @@
             <div class="record_formats">
                 Dostajesz: <br/>{{ record.formats|join:", " }}
             </div>
-            <div class="record_info">Test</div>
+            <div class="record_info"></div>
+            {%comment%}
             <div class="payment_info">Test2</div>
+            {%endcomment%}
             <div class="record_price">
                 {{ record.price }} <b>zł</b>
+                {%comment%}
                 <div class="shipment">+ przesyłka od 12 zł</div>
+                {%endcomment%}
                 <a href="{% url "book_redirect" %}?id={{ record.id }}&price={{ record.price }}&url={{ record.url }}&title={{ record.title }}">
                     <div class="goto_shop">
                         IDŹ DO SKLEPU
