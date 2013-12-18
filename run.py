@@ -24,9 +24,17 @@ def run_update(connector, args):
     connector.parse()
 
     Final.session = connector.session
-    Final.insert(connector)
+
+    if args.insert:
+        Final.insert(connector)
+
     #Final.inner_merge(connector)
 
+    connector.closeSession()
+
+def run_insert(connector, args):
+    connector.createSession()
+    Final.insert(connector)
     connector.closeSession()
 
 def run_update_reference(connector, args):
@@ -119,7 +127,7 @@ def parse_args():
     connectors = [c[0] for c in connector_classnames_list]
 
     parser = argparse.ArgumentParser(formatter_class=RawTextHelpFormatter)
-    parser.add_argument('-m', '--mode', action="store", default="update", choices=['update', 'update-reference', 'merge', 'backup', 'load-backup', 'test-create', 'measure-length'],
+    parser.add_argument('-m', '--mode', action="store", default="update", choices=['update', 'insert', 'update-reference', 'merge', 'backup', 'load-backup', 'test-create', 'measure-length'],
                         help=   'Modes:\n\n'
                                 '\tupdate               - [DEFAULT] run update for mentioned services\n'
                                 '\tupdate-reference     - run update for mentioned reference services\n'
@@ -132,6 +140,7 @@ def parse_args():
 
                        )
     parser.add_argument('--auto', action="store_false", dest="manual", help='Should be used only by cron.')
+    parser.add_argument('--no-insert', action="store_false", dest="insert", default="true", help='Argument for --mode update, which prevents insertion of books to MasterBook table.')
     parser.add_argument('--by', help='Values for --by:\n'
                                 '\tisbn\n'
                                 '\ttitle\n'
