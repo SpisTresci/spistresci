@@ -13,10 +13,11 @@ function onReady()
    }
  });
 
+/*
  $('#filter_switcher').on("click", function(event){
      $(".filter_panel").toggle();
  });
-
+*/
 
 }
 

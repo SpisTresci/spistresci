@@ -80,7 +80,7 @@
   display: table;
   border-collapse: collapse;
   width: 95%;
-  min-width: 750px; }
+  min-width: 600px; }
 
 .records_headers {
   display: table-row;
@@ -141,7 +141,7 @@
 
 .records_filtered_out {
   width: 95%;
-  min-width: 750px;
+  min-width: 600px;
   background: #f6f6f6;
   height: 25px;
   font-size: 12px;
@@ -1086,7 +1086,7 @@ fieldset {
 
 #disqus_thread {
   width: 95%;
-  min-width: 750px; }
+  min-width: 600px; }
 
 #filter_switcher {
   float: right;
