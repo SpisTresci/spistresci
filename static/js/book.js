@@ -1,8 +1,10 @@
 function onReady()
 {
+ /*
  $("#description").on("click", $("#show_description"), function(event){
   $("description").load("../../description/"+$("#book_container").data("book-id")) ;
  });
+ */
 
  $(document).scroll(function(e) {
    if($(this).scrollTop() > 120){
