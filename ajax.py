@@ -12,7 +12,7 @@ from spistresci.models import MasterBook
 from spistresci.track.models import BookTrack
 
 @dajaxice_register
-def get_track_form(request, book_id):
+def get_track_form(request, book_id, callback):
     dajax = Dajax()
 
     book = get_object_or_404(MasterBook, pk=book_id)
@@ -26,6 +26,9 @@ def get_track_form(request, book_id):
 
     html = render_to_string('track/track_form.html', dict(track_form=form, product=book, user=request.user))
     dajax.assign('#track_form_container_%s' % book_id,'innerHTML', html)
+
+    dajax.add_data(book_id, callback)
+
     return dajax.json()
 
 
@@ -44,6 +47,7 @@ def post_track_form(request, form):
         dajax.remove_css_class('#track_form input', 'error')
         track = form.save()
         dajax.assign('#track_form_container_%s' % book_id,'innerHTML', '')
+        dajax.assign('#track_form_container_%s' % book_id,'innerHTML', '')
 
         if track.price != None:
             dajax.alert(u'Trop został zapisany');
@@ -55,5 +59,7 @@ def post_track_form(request, form):
         # dajax.remove_css_class('#track_form input', 'error')
         # for error in form.errors:
         #     dajax.add_css_class('#id_%s' % error, 'error')
+
+
 
     return dajax.json()

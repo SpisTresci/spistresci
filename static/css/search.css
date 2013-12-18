@@ -196,18 +196,18 @@
     line-height: 28px;
     font-size: 14px; }
 
-.color_button, .blue_button, .book_box .track_button, .red_button, .record .record_price .goto_shop, .book_box .details_button {
+.color_button, .blue_button, .book_box div.track_button, .book_box input[type="button"].track_button, .red_button, .record .record_price .goto_shop, .book_box .details_button {
   font-weight: bold;
   text-align: center;
   cursor: pointer;
   color: white; }
-  .color_button a, .blue_button a, .book_box .track_button a, .red_button a, .record .record_price .goto_shop a, .book_box .details_button a {
+  .color_button a, .blue_button a, .book_box div.track_button a, .book_box input[type="button"].track_button a, .red_button a, .record .record_price .goto_shop a, .book_box .details_button a {
     color: white; }
-  .color_button:hover, .blue_button:hover, .book_box .track_button:hover, .red_button:hover, .record .record_price .goto_shop:hover, .book_box .details_button:hover {
+  .color_button:hover, .blue_button:hover, .book_box div.track_button:hover, .book_box input[type="button"].track_button:hover, .red_button:hover, .record .record_price .goto_shop:hover, .book_box .details_button:hover {
     text-decoration: underline;
     color: white; }
 
-.blue_button, .book_box .track_button {
+.blue_button, .book_box div.track_button, .book_box input[type="button"].track_button {
   background: url(../img/2btn_blue.png) no-repeat; }
 
 .red_button, .record .record_price .goto_shop, .book_box .details_button {
@@ -325,18 +325,18 @@
 .records_panel_wrapper {
   margin-bottom: 80px; }
 
-.color_button, .blue_button, .book_box .track_button, .red_button, .record .record_price .goto_shop, .book_box .details_button {
+.color_button, .blue_button, .book_box div.track_button, .book_box input[type="button"].track_button, .red_button, .record .record_price .goto_shop, .book_box .details_button {
   font-weight: bold;
   text-align: center;
   cursor: pointer;
   color: white; }
-  .color_button a, .blue_button a, .book_box .track_button a, .red_button a, .record .record_price .goto_shop a, .book_box .details_button a {
+  .color_button a, .blue_button a, .book_box div.track_button a, .book_box input[type="button"].track_button a, .red_button a, .record .record_price .goto_shop a, .book_box .details_button a {
     color: white; }
-  .color_button:hover, .blue_button:hover, .book_box .track_button:hover, .red_button:hover, .record .record_price .goto_shop:hover, .book_box .details_button:hover {
+  .color_button:hover, .blue_button:hover, .book_box div.track_button:hover, .book_box input[type="button"].track_button:hover, .red_button:hover, .record .record_price .goto_shop:hover, .book_box .details_button:hover {
     text-decoration: underline;
     color: white; }
 
-.blue_button, .book_box .track_button {
+.blue_button, .book_box div.track_button, .book_box input[type="button"].track_button {
   background: url(../img/2btn_blue.png) no-repeat; }
 
 .red_button, .record .record_price .goto_shop, .book_box .details_button {
@@ -1305,6 +1305,37 @@ img#loading_img {
 .ff_right a:hover {
   color: white; }
 
+.dialog_style1 {
+  background-color: #f0f0f0;
+  border: solid 1px #000000;
+  margin: 2px;
+  position: fixed;
+  padding: 10px;
+  width: 430px;
+  min-height: 175px;
+  z-index: 300;
+  top: 40%;
+  left: 40%; }
+
+.track_input {
+  width: 65px;
+  height: 27px;
+  font-size: 20px;
+  padding-left: 10px; }
+
+.track_button {
+  display: inline-block; }
+
+.currency {
+  font-size: 24px; }
+
+.xx {
+  float: right;
+  background: url(../img/x.png) no-repeat;
+  width: 20px;
+  height: 20px;
+  cursor: pointer; }
+
 .view_icon, .list_view_icon, .galery_view_icon, .text_view_icon, .big_list_view_icon {
   margin: 8px 10px;
   width: 22px;
@@ -1419,7 +1450,7 @@ img#loading_img {
   padding: 12px;
   padding-left: 25px; }
 
-.box_button, .book_box .track_button, .book_box .details_button {
+.box_button, .book_box div.track_button, .book_box input[type="button"].track_button, .book_box .details_button {
   width: 151px;
   height: 27px;
   margin-bottom: 2px;
@@ -1429,12 +1460,17 @@ img#loading_img {
 .book_box {
   background-color: white;
   padding: 20px 20px 50px 20px; }
-  .book_box .track_button img {
+  .book_box div.track_button img {
     border: none;
     float: right;
     margin-left: -40px;
     margin-right: 20px;
     margin-top: -8px; }
+  .book_box input[type="button"].track_button {
+    margin-top: 0px;
+    border: none;
+    height: 30px;
+    position: relative; }
 
 .puller {
   height: 36px;

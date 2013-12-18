@@ -8,6 +8,7 @@
 @import "search_box";
 @import "search_results";
 @import "footer";
+@import "track_dialog";
 
 
 $shadow-color:rgba(182, 182, 182, 0.3);
@@ -202,7 +203,7 @@ $panel-border-width: 2px;
   background-color: white;
   padding: 20px 20px 50px 20px;
 
-  .track_button{
+  div.track_button {
     @extend .blue_button;
     @extend .box_button;
     img{
@@ -213,6 +214,16 @@ $panel-border-width: 2px;
       margin-top: -8px;
     }
   }
+
+  input[type="button"].track_button {
+    margin-top: 0px;
+    border:none;
+    height: 30px;
+    position: relative;
+
+    @extend .blue_button;
+    @extend .box_button;
+ }
 
   .details_button{
     @extend .red_button;
