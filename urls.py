@@ -2,6 +2,7 @@ from django.conf.urls import patterns, include, url
 from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
+from django.views.generic import TemplateView
 
 from registration.backends.default.views import RegistrationView
 
@@ -40,6 +41,7 @@ urlpatterns = patterns('',
 #     url('^description/(?P<book_id>\w+)/$', book_description),
      url(r'^blogger/', include('spistresci.blogger.urls', namespace='blogger')),
      url(r'^profile/', include('spistresci.auth.urls', namespace='profile')),
+     url('^regulamin/', TemplateView.as_view(template_name='terms_of_use.html'), name='terms_of_use'),
 )
 
 #TODO: check thread safe version of this
