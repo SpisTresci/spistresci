@@ -231,6 +231,14 @@
   padding: 5px;
   border: #e3e3e3 1px solid; }
 
+.plain_text {
+  font-size: 14px;
+  text-decoration: none;
+  margin: 50px 10%; }
+  .plain_text h1 {
+    text-align: center;
+    margin-bottom: 20px; }
+
 .table_cell, .record_table_cell, .record .service_logo_box, .record .record_formats, .record .record_info, .record .payment_info, .record .record_price, .records_headers .header_box {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -248,7 +256,7 @@
   display: table;
   border-collapse: collapse;
   width: 95%;
-  min-width: 750px; }
+  min-width: 600px; }
 
 .records_headers {
   display: table-row;
@@ -309,7 +317,7 @@
 
 .records_filtered_out {
   width: 95%;
-  min-width: 750px;
+  min-width: 600px;
   background: #f6f6f6;
   height: 25px;
   font-size: 12px;
@@ -359,6 +367,14 @@
   float: left;
   padding: 5px;
   border: #e3e3e3 1px solid; }
+
+.plain_text {
+  font-size: 14px;
+  text-decoration: none;
+  margin: 50px 10%; }
+  .plain_text h1 {
+    text-align: center;
+    margin-bottom: 20px; }
 
 * {
   margin: 0;
