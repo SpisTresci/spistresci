@@ -231,6 +231,14 @@ EMAIL_HOST_PASSWORD = 'spistresci-rules!1'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
+# monkey patch in spistresci/__init__.py for sending admin emials
+ADMIN_EMAIL_HOST = 'localhost'
+ADMIN_EMAIL_HOST_USER = 'admin@spistresci.pl'
+ADMIN_EMAIL_PORT = 25
+ADMIN_EMAIL_PASSWORD = None
+ADMIN_EMAIL_USE_TLS = True
+
+
 DEFAULT_FROM_EMAIL = 'no-reply@spistresci.pl'
 
 CRON_CLASSES = [
