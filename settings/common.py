@@ -165,7 +165,7 @@ LOGGING = {
         'mail_admins': {
             'level': 'ERROR',
             'filters': ['require_debug_false'],
-            'class': 'spistresci.utils.STEmailHandler',
+            'class': 'django.utils.log.AdminEmailHandler'
         }
     },
     'loggers': {
@@ -230,14 +230,6 @@ EMAIL_HOST_USER = 'spistresci'
 EMAIL_HOST_PASSWORD = 'spistresci-rules!1'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-
-
-ADMIN_EMAIL_HOST = 'localhost'
-ADMIN_EMAIL_HOST_USER = 'admin@spistresci.pl'
-ADMIN_EMAIL_PORT = '25'
-ADMIN_EMAIL_PASSWORD = None
-ADMIN_EMAIL_USE_TLS = True
-
 
 DEFAULT_FROM_EMAIL = 'no-reply@spistresci.pl'
 
