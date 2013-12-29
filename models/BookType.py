@@ -14,13 +14,16 @@ class BookType(Base):
 
     cache = {}
     @staticmethod
-    def get_or_create(session, id):
+    def get_or_create(session, namespace, id):
         try:
-            return BookType.cache[id]
+            return BookType.cache[namespace][id]
         except KeyError:
-            BookType.cache[id] = SqlWrapper.get_or_create_(session, BookType, {'id': id, 'name':BookType.BookType.values[id]})
-            session.add(BookType.cache[id])
-            return BookType.cache[id]
+            if BookType.cache.get(namespace) == None:
+                BookType.cache[namespace]={}
+
+            BookType.cache[namespace][id] = SqlWrapper.get_or_create_(session, BookType, {'id': id, 'name':BookType.BookType.values[id]})
+            session.add(BookType.cache[namespace][id])
+            return BookType.cache[namespace][id]
 
     @staticmethod
     def fromFormats(format_list):

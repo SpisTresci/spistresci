@@ -569,7 +569,7 @@ class GenericConnector(GenericBase, DataValidator):
                 book.description = desc
 
             from models import BookType
-            book.book_type = BookType.get_or_create(session, d['book_type'])
+            book.book_type = BookType.get_or_create(session, Book.id, d['book_type'])
 
             if d.get('isbns') != None:
                 for isbn_d in d['isbns']:
@@ -582,7 +582,7 @@ class GenericConnector(GenericBase, DataValidator):
 
             if d.get('formats') != None:
                 for format in d['formats']:
-                    f = Format.get_or_create(session, format, {"name":format})
+                    f = Format.get_or_create(session, Book.id, format, {"name":format})
                     book.formats.append(f)
 
             if d.get('persons') != None:
@@ -590,7 +590,7 @@ class GenericConnector(GenericBase, DataValidator):
                     role = role_dict.keys()[0]
                     list_of_person_dicts = role_dict[role]
 
-                    role_ = PersonRole.get_or_create(session, role, {"name":role})
+                    role_ = PersonRole.get_or_create(session, Book.id, role, {"name":role})
                     for person_dict in list_of_person_dicts:
                         author = Author.get_or_create(session, person_dict)
                         books_authors = BooksAuthors()
