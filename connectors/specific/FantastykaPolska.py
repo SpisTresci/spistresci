@@ -16,6 +16,7 @@ class FantastykaPolska(XMLConnector):
     #dict of xml_tag -> db_column_name translations
     xml_tag_dict = {
         'title': ('./title', ''),
+        'cover': ('./cover', ''),
         'external_id': ('./filteredId', ''),
         'url': ('./link', ''),
         'authors': ("./description/div[@class='%s']/ul/li/a" % author_class_name, ''),
