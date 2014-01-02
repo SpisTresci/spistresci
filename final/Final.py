@@ -49,15 +49,11 @@ class Final(object):
             print str(i)
             if i % 1000 == 0: session.commit()
 
-
-        """
         updated_specific_books = session.query(SpecificBook).filter(SpecificBook.update_minidata_timestamp == connector.update_status_service.timestamp).all()
         for specific_book in updated_specific_books:
             mini_book = SqlWrapper.get_(session, final.MiniBook, {"id":SpecificBook.mini_id})
             mini_book.update(session, specific_book)
             session.commit()
-            #final.MiniBook.normalize(session)
-        """
 
         session.commit()
         session.close()
