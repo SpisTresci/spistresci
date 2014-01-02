@@ -12,6 +12,8 @@ class MasterBook(BaseMaster, BaseBook, Base):
     minis = relationship("MiniBook", backref = backref("master", uselist = False))
     words = relationship("TitleWord", secondary = final.master_books_title_words, backref = "masterBook")
 
+    active = Column(Boolean, default=True)
+
     def __init__(self, mini_book = None):
         if mini_book:
             raise "not supported any more. Use empty constructor, and next addMini"
@@ -150,5 +152,7 @@ class MasterBook(BaseMaster, BaseBook, Base):
         print "MasterBook::merge - " + str(MasterBook.merged)
         for mini in other.minis:
             other.removeMini(mini)
+            other.active = False
             self.addMini(mini)
+            self.active = True
 
