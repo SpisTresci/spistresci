@@ -16,6 +16,10 @@ class STSearchView(SearchView):
 
     def __call__(self, request):
         self.session = request.session
+        self.request = request
+        self.parse_get_args()
+        if 'orderby' in self.get_args:
+            self.searchqueryset=STSearchQuerySet().order_by(*self.get_args['orderby'])
         return super(STSearchView, self).__call__(request)
 
     class ConditionBuilder(object):
@@ -79,6 +83,9 @@ class STSearchView(SearchView):
         if "services" in self.request.GET:
             self.get_args["services"] = self.request.GET["services"].split(",")
 
+        if 'orderby' in self.request.GET:
+            self.get_args['orderby'] = self.request.GET['orderby'].split(',')
+
     def pre_filtering(self):
         condition = STSearchView.ConditionBuilder()
 
@@ -99,14 +106,11 @@ class STSearchView(SearchView):
         if "services" in self.get_args:
             for service in self.get_args["services"]:
                 condition.add({"bookstore":service})
-
         return condition
 
     def get_results(self):
-        self.parse_get_args()
         condition = self.pre_filtering()
         test = condition.get()
-
         results = self.form.search().filter(condition.get()) if not condition.empty() else self.form.search()
         results.get_args = self.get_args
         return results
