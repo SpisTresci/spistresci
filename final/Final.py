@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 from sqlalchemy.orm import joinedload
 from connectors.generic import ReferenceConnector
+from models.UpdateStatusService import UpdateStatusService
+import time
 import utils
 from sqlwrapper import *
 import final
@@ -49,9 +51,16 @@ class Final(object):
             print str(i)
             if i % 1000 == 0: session.commit()
 
-        updated_specific_books = session.query(SpecificBook).filter(SpecificBook.update_minidata_timestamp == connector.update_status_service.timestamp).all()
+        last_final = session.query(UpdateStatusService).filter(UpdateStatusService.service_name == connector.name, UpdateStatusService.final_end != None).order_by(UpdateStatusService.final_end.desc()).first()
+
+        if last_final:
+            last_final_timestamp = time.mktime(last_final.final_start.timetuple())
+            updated_specific_books = session.query(SpecificBook).filter(SpecificBook.update_minidata_timestamp > last_final_timestamp).all()
+        else:
+            updated_specific_books = session.query(SpecificBook).all()
+
         for specific_book in updated_specific_books:
-            mini_book = SqlWrapper.get_(session, final.MiniBook, {"id":SpecificBook.mini_id})
+            mini_book = SqlWrapper.get_(session, final.MiniBook, {"id":SpecificBook.mini_book_id})
             mini_book.update(session, specific_book)
             session.commit()
 

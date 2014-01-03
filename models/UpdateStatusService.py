@@ -1,6 +1,7 @@
 from sqlwrapper import *
 from models.Service import Service
 import time
+from time import mktime
 
 Base = SqlWrapper.getBaseClass()
 
@@ -36,7 +37,7 @@ class UpdateStatusService(Base):
     session = None
 
     def __init__(self, us, connector):
-        self.timestamp = int(time.time())
+        self.timestamp = int(mktime(time.localtime()))
         us.update_status_services.append(self)
         self.service = Service.get_or_create(connector, session = us.session)
         connector.update_status_service = self
