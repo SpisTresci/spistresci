@@ -64,9 +64,9 @@ class WolneLektury(JSONConnector):
 
         book_list_len = len(self.book_list)
         if db_count < book_list_len:
-            self.erratum_logger.error('Number of books in database (%d) is less than number got from connector (%d). Check it')
+            self.erratum_logger.error('Number of books in database (%d) is less than number got from connector (%d). Check it' % (db_count, book_list_len))
         elif db_count > book_list_len:
-            self.erratum_logger.warning('Number of books in database (%d) is greater than number got from connector (%d). It is possible that some book exists in db twice')
+            self.erratum_logger.warning('Number of books in database (%d) is greater than number got from connector (%d). It is possible that some book exists in db twice' % (db_count, book_list_len))
 
     def adjust_parse(self, dic):
         self.create_id_from_url(dic)

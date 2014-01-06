@@ -24,6 +24,17 @@ class BezKartek(XMLConnector):
         'security': ('./securityType', ''),
         'audio_time': ('./audioTime', ''),
     }
+    
+    #T480 price already in gr
+    def validatePrice(self, dic, id, title, price_tag_name = 'price', default_price=0):
+        price = dic.get(price_tag_name, default_price)
+        try:
+            int(price)
+        except ValueError:
+            self.erratum_logger.warning("Entry has price in wrong format! connector: %s, id: %s, title: %s, price: %s" % (self.name, id, title, str(price)))
+            price = default_price
+        finally:
+             dic[price_tag_name] = unicode(price)
 
 Base = SqlWrapper.getBaseClass()
 
