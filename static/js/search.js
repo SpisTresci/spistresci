@@ -19,6 +19,11 @@ function collectFilters(){
             dic[$(this).attr("data-q")]=$(this).val()
         }
     });
+
+    var as = $(".sort_by.active_sort");
+    if (!as.hasClass("default")){
+        dic["orderby"]=as.attr("data-sort-type");
+    }
     return dic;
 }
 
@@ -28,6 +33,9 @@ function refreshLinks(link, page){
 }
 
 function refreshPaginationLinks(link){
+    var bottom_pagination = $(".page .pagination");
+    $(".L_top_panel .pagination").replaceWith(bottom_pagination.clone());
+
     $(".pageLink").each(function(){
         $(this).attr("href", "?"+link+"&page="+$(this).attr("data-p"));
     });
@@ -130,6 +138,13 @@ function refresh_L_left_panel_height(){
     $(".L_left_panel").height($(".filter_panel").height() + 50);
 }
 
+function refresh_active_sort(){
+    var p = $(".sortboxwrapper");
+    var as = p.find(".sort_by.active_sort");
+    var asd = $(".active_sort_desc");
+    asd.text(as.hasClass("default")?"":as.text());
+}
+
 function onReady(){
     $(".filter_formats, .filter_services").on("click", function(event){
         $(this).toggleClass("act");
@@ -142,6 +157,42 @@ function onReady(){
         event.preventDefault();
         event.stopPropagation();
     });*/
+
+    refresh_active_sort();
+    $(".sortbox").on("click", function(event){
+        var p = $(".sortboxwrapper");
+        p.toggleClass("active");
+
+        var asd = $(".active_sort_desc");
+        if (p.hasClass("active")){
+            asd.text("według");
+        }else{
+            asd.text(p.find(".sort_by.active_sort").text());
+        }
+    });
+
+    $(".sortboxwrapper").on("click", function(event){
+        event.stopPropagation();
+    });
+
+    $(".sort_by").on("click", function(event){
+        var p = $(".sortboxwrapper");
+        var as = p.find(".sort_by.active_sort");
+        if ($(this)[0] != as[0]){
+            as.toggleClass("active_sort");
+            $(this).toggleClass("active_sort");
+            p.removeClass("active");
+            refresh_active_sort();
+            rebuildResults();
+        }
+    });
+
+    $('html').click(function() {
+        //close_popups();
+        var p = $(".sortboxwrapper");
+        p.removeClass("active");
+        refresh_active_sort();
+    });
 
     $(".filter_section_header").on("click", function(event){
         var p = $(this)
@@ -243,6 +294,55 @@ function onResultsReady() {
         var page = $(".page_active_number").attr("data-p");
         refreshLinks(link, page);
     }
+
+    $('.sortable.service').each(function(){
+        $(this).on("click", function(){
+            $(this).toggleClass("act");
+            sort_records(this, by_service, !$(this).hasClass("act"));
+        });
+    });
+    $('.sortable.formats').each(function(){
+        $(this).on("click", function(){
+            $(this).toggleClass("act");
+            sort_records(this, by_formats, $(this).hasClass("act"));
+        });
+    });
+    $('.sortable.price').each(function(){
+        $(this).on("click", function(){
+            $(this).toggleClass("act");
+            sort_records(this, by_price, !$(this).hasClass("act"));
+        });
+        $(this).click();
+    });
+}
+
+function sort_records(_this, by, rev){
+    $.fn.reverse = [].reverse;
+    var records = $(_this).closest(".records_panel").find(".record");
+    var records_cpy=records.clone();
+    records_cpy.sort(by);
+    if(rev){records_cpy.reverse();}
+    for(var i=0; i<records.size(); i++){
+        $(records[i]).replaceWith(records_cpy[i]);
+    }
+}
+
+function by_service(a, b){
+    var aname = $(a).find(".service_logo_box img").attr("alt").toLowerCase();
+    var bname = $(b).find(".service_logo_box img").attr("alt").toLowerCase();
+    return (aname<bname)?-1:(aname>bname)?1:0;
+}
+
+function by_formats(a, b){
+    var aname = parseInt($(a).find(".record_formats").attr('data-no'));
+    var bname = parseInt($(b).find(".record_formats").attr('data-no'));
+    return (aname<bname)?-1:(aname>bname)?1:0;
+}
+
+function by_price(a, b){
+    var aname = parseFloat($(a).find(".record_price .value").text());
+    var bname = parseFloat($(b).find(".record_price .value").text());
+    return (aname<bname)?-1:(aname>bname)?1:0;
 }
 
 $(document).ready(onReady);

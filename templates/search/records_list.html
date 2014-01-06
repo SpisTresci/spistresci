@@ -5,20 +5,20 @@
     <div class="records_toogle_switcher up"></div>
     <div class="records_panel">
         <div class="records_headers">
-            <div class="header_box"><div class="sortable">Księgarnie</div></div>
-            <div class="header_box"><div class="sortable">Liczba formatów</div></div>
+            <div class="header_box"><div class="sortable service">Księgarnie</div></div>
+            <div class="header_box"><div class="sortable formats">Liczba formatów</div></div>
             <div class="header_box">Dodatkowe Informacje</div>
             {%comment%}
             <div class="header_box">Sposób płatności</div>
             {%endcomment%}
-            <div class="header_box"><div class="sortable">Cena</div></div>
+            <div class="header_box"><div class="sortable price">Cena</div></div>
         </div>
         {% for record in product.records %}
         <div class="record">
             <div class="service_logo_box">
                 <img src="{% static "img/logo/"|add:record.bookstore|add:"_150x75.png"|lower %}" alt="{{record.bookstore}}" onerror="this.onerror=null;this.src='{% static "img/logo/loremipsum_150x75.png" %}'" />
             </div>
-            <div class="record_formats">
+            <div class="record_formats" data-no="{{ record.formats|length}}">
                 Dostajesz: <br/>{{ record.formats|join:", " }}
             </div>
             <div class="record_info"></div>
@@ -26,7 +26,7 @@
             <div class="payment_info">Test2</div>
             {%endcomment%}
             <div class="record_price">
-                {{ record.price }} <b>zł</b>
+                <span class="value">{{ record.price }}</span> <b>zł</b>
                 {%comment%}
                 <div class="shipment">+ przesyłka od 12 zł</div>
                 {%endcomment%}

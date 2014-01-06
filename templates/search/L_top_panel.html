@@ -1,5 +1,36 @@
 {%comment%}
 <div class="view_switcher"><div class="list_view_icon act"></div><div class="galery_view_icon"></div><div class="text_view_icon"></div></div>
 {%endcomment%}
-<div class="sortbox">SORTUJ<div class="arrow"></div></div>
+<div class="sortboxwrapper">
+    <div class="sortbox">SORTUJ<span class="active_sort_desc"></span><div class="arrow"></div></div>
+    <div class="sortboxpopup">
+            <div class="sort_by_group">
+                trafności
+                <div class="sort_by default{% if not orderby %} active_sort{% endif %}">jak najlepiej :)</div><br>
+            </div>
+            <div class="sort_by_group">
+                ceny
+                <div class="sort_by{% if 'price_lowest' in orderby %} active_sort{% endif %}" data-sort-type="price_lowest">od najtańszej</div><br>
+                <div class="sort_by{% if '-price_lowest' in orderby %} active_sort{% endif %}" data-sort-type="-price_lowest">od najdroższej</div>
+            </div>
+            <div class="sort_by_group last">
+                tytułu
+                <div class="sort_by{% if 'title' in orderby %} active_sort{% endif %}" data-sort-type="title">A-Z</div><br>
+                <div class="sort_by{% if '-title' in orderby  %} active_sort{% endif %}" data-sort-type="-title">Z-A</div>
+            </div>
+{%comment%}
+            <div class="sort_by_group ">
+                liczby formatów
+                <div class="sort_by">najwięcej</div><br>
+                <div class="sort_by">najmniej</div>
+            </div>
+
+            <div class="sort_by">roku wydania</div>
+            <div class="sort_by">daty dodania do Spisu Treści</div>
+
+            <div class="sort_by">popularności</div>
+{%endcomment%}
+    </div>
+</div>
+
 {% include "pagination.html" %}

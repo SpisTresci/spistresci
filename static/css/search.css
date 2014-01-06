@@ -266,19 +266,25 @@
   font-size: 13px;
   font-weight: bold;
   padding-top: 10px;
-  text-align: center;
-  cursor: pointer; }
+  text-align: center; }
   .records_headers .header_box {
     background-color: #b2b2b2;
     height: 15px;
     margin-left: 18px;
     padding: 5px;
-    cursor: pointer;
-    text-align: center; }
+    text-align: center;
+    cursor: default;
+    -webkit-user-select: none;
+    /* Chrome/Safari */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* IE10+ */ }
     .records_headers .header_box .sortable {
       border-bottom: 3px solid #8D8D8D;
       display: inline-block;
-      padding: 5px; }
+      padding: 5px;
+      cursor: pointer; }
       .records_headers .header_box .sortable:hover {
         color: #FFFFFF; }
 
@@ -1384,16 +1390,33 @@ img#loading_img {
 .view_switcher {
   float: left; }
 
+.sortboxwrapper {
+  float: left;
+  width: 250px;
+  -webkit-user-select: none;
+  /* Chrome/Safari */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* IE10+ */ }
+
 .sortbox {
   float: left;
   border: 1px solid #e3e3e3;
-  width: 150px;
   margin-top: 8px;
   padding: 3px 10px 3px 20px;
   font-size: 20px;
   font-weight: bold;
   color: #8D8D8D;
+  background-color: #f6f6f6;
   cursor: pointer; }
+  .sortbox .active_sort_desc {
+    top: -3px;
+    position: relative;
+    font-size: 12px;
+    padding: 0 10px;
+    text-align: center;
+    display: inline-block; }
   .sortbox .arrow {
     display: inline-block;
     float: right;
@@ -1401,6 +1424,46 @@ img#loading_img {
     width: 17px;
     height: 18px;
     margin-top: 4px; }
+    .active .sortbox .arrow {
+      background: url(../img/2arrow_up_grey.png) no-repeat; }
+  .active .sortbox {
+    z-index: 105;
+    position: relative;
+    border-bottom-width: 0px; }
+
+.sortboxpopup {
+  display: none;
+  float: left;
+  position: relative;
+  border: 1px solid #e3e3e3;
+  background-color: #f6f6f6;
+  padding: 10px 20px 10px 20px;
+  margin-top: -1px;
+  z-index: 104; }
+  .active .sortboxpopup {
+    display: block; }
+
+.sort_by {
+  float: right;
+  color: #8d8d8d;
+  font-size: 15px;
+  text-align: right;
+  cursor: pointer; }
+  .sort_by.active_sort {
+    color: #666666;
+    cursor: default; }
+
+.sort_by_group {
+  border-bottom: 1px solid #8D8D8D;
+  padding: 5px 0;
+  float: left;
+  width: 200px;
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: bold;
+  color: #8d8d8d; }
+  .sort_by_group.last {
+    border-bottom-width: 0px; }
 
 .pagination {
   padding: 3px 10px 3px 20px;

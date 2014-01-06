@@ -69,11 +69,19 @@ $panel-border-width: 2px;
   float: left;
 }
 
+.sortboxwrapper{
+  float: left;
+  width:250px;
+
+  -webkit-user-select: none; /* Chrome/Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+}
+
+
 .sortbox{
   float: left;
-
   border: 1px solid $box-border-color;
-  width: 150px;
 
   margin-top: 8px;
   padding: 3px 10px 3px 20px;
@@ -81,8 +89,18 @@ $panel-border-width: 2px;
   font-size:20px;
   font-weight:bold;
   color: #8D8D8D;
+  background-color: $box-color;
 
   cursor:pointer;
+
+  .active_sort_desc{
+    top: -3px;
+    position: relative;
+    font-size: 12px;
+    padding: 0 10px;
+    text-align: center;
+    display: inline-block;
+  }
 
   .arrow{
     display: inline-block;
@@ -91,9 +109,63 @@ $panel-border-width: 2px;
     width:17px;
     height:18px;
     margin-top:4px;
+    .active &{
+      background:url(../img/2arrow_up_grey.png) no-repeat;
+    }
   }
 
+  .active &{
+    z-index: 105;
+    position: relative;
+    border-bottom-width: 0px;
+  }
 }
+
+.sortboxpopup{
+  display: none;
+  float: left;
+  position: relative;
+  border: 1px solid rgb(227, 227, 227);
+  background-color: rgb(246, 246, 246);
+
+  padding: 10px 20px 10px 20px;
+  margin-top: -1px;
+  z-index: 104;
+
+  .active &{
+    display: block;
+  }
+}
+
+.sort_by{
+  float: right;
+  color: rgb(141, 141, 141);
+  font-size: 15px;
+  //width: 200px;
+  text-align: right;
+  cursor: pointer;
+  &.active_sort{
+    color: rgb(102, 102, 102);
+    cursor: default;
+  }
+}
+
+.sort_by_group{
+  border-bottom: 1px solid #8D8D8D;;
+  padding: 5px 0;
+  float: left;
+  width: 200px;
+
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: bold;
+  color: rgb(141, 141, 141);
+
+  &.last{
+    border-bottom-width: 0px;
+  }
+}
+
 
 .pagination{
   padding: 3px 10px 3px 20px;

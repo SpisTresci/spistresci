@@ -172,6 +172,9 @@ class STSearchView(SearchView):
 #                                },
                         ]
 
+        if self.get_args.get('orderby'):
+            extra['orderby'] = self.get_args['orderby']
+
         authorization(self.request, extra)
 
         return extra
