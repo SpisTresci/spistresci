@@ -4,7 +4,11 @@
 <div class="search_list_item" data-records-count="{{ product.records|length }}">
     <div class="search_list_book">
         <div class="book_box">
-            <img class="product_details" src="{{ product.cover }}" alt="" onerror="this.onerror=null;this.src='{% static "img/default_cover.png" %}'" />
+            <div class="image-wrap-border">
+                <div class="image-wrap">
+                    <img class="product_details" src="{{ product.cover }}" alt="" onerror="this.onerror=null;this.src='{% static "img/default_cover.png" %}'" />
+                </div>
+            </div>
 
             <div class="slb_price">
                 cena od:
