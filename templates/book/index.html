@@ -2,8 +2,6 @@
 {% load staticfiles %}
 {% block title %}Spis Treści - wyniki wyszukiwania{% endblock title %}
 {% block css %}<link href="{% static "css/book.css" %}" rel="stylesheet" type="text/css">{% endblock css %}
-{% block container %} {% include "book/container.html" %} {% endblock container %}
-{% block searchbox %} {% include "searchbox_small_panel.html" %} {% endblock searchbox %}
 {% block js %} <script type="text/javascript" src="{% static "js/book.js" %}"></script> {% endblock js %}
-{% block footer %}{% endblock footer %}
-
+{% block searchbox %} {% include "searchbox_small_panel.html" %} {% endblock searchbox %}
+{% block container %} {% include "book/container.html" %} {% endblock container %}
