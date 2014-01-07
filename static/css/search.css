@@ -1680,12 +1680,16 @@ img#loading_img {
     background-color: #e3e3e3; }
 
 .records_toogle_switcher {
+  position: relative;
   background-color: #e3e3e3;
-  height: 84px; }
+  height: 84px;
+  z-index: -2; }
   .records_toogle_switcher img {
+    position: absolute;
+    left: 50%;
     display: block;
     margin-top: 5px;
-    margin-left: 49%;
+    margin-left: -8px;
     border: 0;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
@@ -1694,20 +1698,25 @@ img#loading_img {
 
 .records_toogle_switcher.down {
   height: 30px;
-  z-index: -20;
+  z-index: -1;
   float: left;
   width: 98%;
   margin-left: 1%;
   margin-right: 1%;
+  cursor: pointer;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease; }
 
+.act2 .records_toogle_switcher.down {
+  z-index: 1; }
+
 .records_toogle_switcher.down.onhover {
   border-bottom-right-radius: 100% 80%;
   border-bottom-left-radius: 100% 80%;
-  height: 37px; }
+  height: 37px;
+  cursor: pointer; }
   .records_toogle_switcher.down.onhover img {
     margin-top: 13px; }
 

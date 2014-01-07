@@ -83,6 +83,7 @@ function toggleRecords(){
 
     if(product.hasClass("act")){
         product.removeClass("act");
+        product.removeClass("act2");
         records.animate({"marginTop":records.data("no-act-margin")}, 1000, "swing", function(){
             records.css({"display":"none", "marginTop":0});
         });
@@ -95,7 +96,9 @@ function toggleRecords(){
 
         records.data("no-act-margin", -(records_h+puller_h));
         records.css({"height": records_h, "display":"block", "marginTop":records.data("no-act-margin")});
-        records.animate({"marginTop":-switcher_up_h}, 1000, "swing", function(){});
+        records.animate({"marginTop":-switcher_up_h}, 1000, "swing", function(){
+            product.addClass("act2");
+        });
 
         product.find('.records_toogle_switcher.down').first().removeClass("onhover");
     }
@@ -107,7 +110,7 @@ function hideRecords(){
 
     if(product.hasClass("act")){
         product.removeClass("act");
-
+        product.removeClass("act2");
         records.animate({"marginTop":records.data("no-act-margin")}, 1000, "easeInBack", function(){
             records.css({"display":"none", "marginTop":0});
         });
