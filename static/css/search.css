@@ -973,7 +973,7 @@ a {
   float: right;
   font-size: 14px;
   font-weight: 100;
-  margin-top: -110px;
+  padding-left: 5px;
   width: 151px;
   font-weight: bold; }
 
@@ -1538,7 +1538,8 @@ img#loading_img {
 
 .book_box {
   background-color: white;
-  padding: 20px 20px 50px 20px; }
+  padding: 20px 20px 50px 20px;
+  min-height: 100px; }
   .book_box div.track_button img {
     border: none;
     float: right;
@@ -1550,6 +1551,8 @@ img#loading_img {
     border: none;
     height: 30px;
     position: relative; }
+  .book_box img.product_details {
+    width: 100px; }
 
 .puller {
   height: 36px;

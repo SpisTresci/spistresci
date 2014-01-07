@@ -98,19 +98,25 @@
   font-size: 13px;
   font-weight: bold;
   padding-top: 10px;
-  text-align: center;
-  cursor: pointer; }
+  text-align: center; }
   .records_headers .header_box {
     background-color: #b2b2b2;
     height: 15px;
     margin-left: 18px;
     padding: 5px;
-    cursor: pointer;
-    text-align: center; }
+    text-align: center;
+    cursor: default;
+    -webkit-user-select: none;
+    /* Chrome/Safari */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* IE10+ */ }
     .records_headers .header_box .sortable {
       border-bottom: 3px solid #8D8D8D;
       display: inline-block;
-      padding: 5px; }
+      padding: 5px;
+      cursor: pointer; }
       .records_headers .header_box .sortable:hover {
         color: #FFFFFF; }
 

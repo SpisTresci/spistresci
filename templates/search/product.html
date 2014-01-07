@@ -4,23 +4,7 @@
 <div class="search_list_item" data-records-count="{{ product.records|length }}">
     <div class="search_list_book">
         <div class="book_box">
-            <img class="product_details" src="{{ product.cover }}" alt="" style="width:100px; position:absolute;z-index:100;" onerror="this.onerror=null;this.src='{% static "img/default_cover.png" %}'" />
-            <div style="padding-left: 140px;">
-                <div class="s_title product_details">
-                    <a href="/book/{{ product.id }}/{{ product.title | slugify}}">{{ product.title }}</a>
-                </div>
-                <div class="s_author">
-                {% for author in product.name %}
-                    {% if forloop.first %}
-                        <a href="">{{ author }}</a>{% else %}, <a href="">{{ author }}</a>
-                    {% endif %}
-                {% endfor %}
-                </div>
-                <div class="s_text">
-                    Formaty: {% for format in product.formats %}{% if forloop.first %}{{ format }}{% else %}, {{ format }}{% endif %}{% endfor %}<br />
-                    Serwisy: {% for service in product.services %}{% if forloop.first %}{{ service }}{% else %}, {{ service }}{% endif %}{% endfor %}
-                </div>
-            </div>
+            <img class="product_details" src="{{ product.cover }}" alt="" onerror="this.onerror=null;this.src='{% static "img/default_cover.png" %}'" />
 
             <div class="slb_price">
                 cena od:
@@ -38,6 +22,23 @@
                         SZCZEGÓŁY
                     </div>
                 </a>
+            </div>
+
+            <div>
+                <div class="s_title product_details">
+                    <a href="/book/{{ product.id }}/{{ product.title | slugify}}">{{ product.title }}</a>
+                </div>
+                <div class="s_author">
+                {% for author in product.name %}
+                    {% if forloop.first %}
+                        <a href="">{{ author }}</a>{% else %}, <a href="">{{ author }}</a>
+                    {% endif %}
+                {% endfor %}
+                </div>
+                <div class="s_text">
+                    Formaty: {% for format in product.formats %}{% if forloop.first %}{{ format }}{% else %}, {{ format }}{% endif %}{% endfor %}<br />
+                    Serwisy: {% for service in product.services %}{% if forloop.first %}{{ service }}{% else %}, {{ service }}{% endif %}{% endfor %}
+                </div>
             </div>
         </div>
         <div class="puller npb">

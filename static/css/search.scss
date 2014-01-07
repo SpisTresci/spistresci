@@ -274,6 +274,7 @@ $panel-border-width: 2px;
 .book_box{
   background-color: white;
   padding: 20px 20px 50px 20px;
+  min-height: 100px;
 
   div.track_button {
     @extend .blue_button;
@@ -301,6 +302,11 @@ $panel-border-width: 2px;
     @extend .red_button;
     @extend .box_button;
   }
+
+  img.product_details{
+    width:100px;
+  }
+
 }
 
 .puller {
