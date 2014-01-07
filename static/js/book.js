@@ -20,7 +20,9 @@ function onReady()
      $(".filter_panel").toggle();
  });
 */
-
+  $.getScript("/static/js/sort_records.js", function(){
+    sort_records();
+  });
 }
 
 $(document).ready(onReady);
