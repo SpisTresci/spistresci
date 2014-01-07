@@ -22,7 +22,7 @@ Base = SqlWrapper.getBaseClass()
 
 class ZinamonBook(GenericBook, Base):
     id = Column(Integer, primary_key = True)
-
+    external_id = Column(Unicode(16), unique=True)
     title = Column(Unicode(265))        #207
     url = Column(Unicode(512))          #338
     #authors

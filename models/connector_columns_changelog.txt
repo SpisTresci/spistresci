@@ -13,3 +13,4 @@ Selkar,,+raw_title
 #Empik,availability,availability,Unicode(10-32)
 #Empik,externals_id,externals_id,Integer->Unicode(16)
 #Empik,,+category						# drop table EmpikAuthor, EmpikBook, EmpikBookDescription, EmpikBookPrice, EmpikBooksAuthors, EmpikBooksFormats, EmpikFormat, EmpikISBN;
+Zinamon,external_id,external_id,Integer->Unicode(16)
