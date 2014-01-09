@@ -682,9 +682,22 @@ a {
   .index_more.flank {
     width: 600px; }
 
+  .index_box.extra {
+    display: none; }
+
+  .flank .index_box.extra {
+    display: block; }
+
   .index_blogger_box {
     width: 750px;
     float: left; } }
+img.loader {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  margin-top: -16px;
+  margin-left: -16px; }
+
 .logo {
   height: 100px;
   margin: 0 auto;
@@ -763,13 +776,13 @@ a {
   z-index: 10; }
 
 .ib_text1 {
-  width: 120px; }
+  width: 145px; }
 
 .ib_text1 a {
   color: #464646;
   font-weight: bold;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 16px; }
 
 .ib_text1 a:hover {
@@ -898,3 +911,6 @@ a {
 
 .index_more a:hover {
   color: black; }
+
+.page {
+  display: none; }

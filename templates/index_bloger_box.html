@@ -2,7 +2,7 @@
 
 <div class="index_blogger_box">
     <div class="blogger_sub_box">
-            <img src="{% if blogger.photo %}{{ blogger.photo_thumbnail.url }}{% else %}{% static "img/bloggers/default_avatar.jpg" %}{% endif %}" alt="{{ blogger.user.get_full_name }}" style="width: 91px; height: 91px; display: block;" />
+            <img src="{% if not blogger.photo %}{{ blogger.photo_thumbnail.url }}{% else %}{% static "img/bloggers/default_avatar.jpg" %}{% endif %}" alt="{{ blogger.user.get_full_name }}" style="width: 91px; height: 91px; display: block;" />
         <div class="blogger_name">
             {{ blogger.user.first_name }}<br/>
             {{ blogger.user.last_name }}

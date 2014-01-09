@@ -2,6 +2,16 @@
 {% load staticfiles %}
 
 {% block title %}Spis Treści - strona główna{% endblock %}
-{% block js %} <script type="text/javascript" src="{% static "js/search.js" %}"></script> {% endblock js %}
+{% block js %}
+<script>
+$(document).ready(function(){
+    $("#search_results_1").load("/qth/?q=+&orderby=random");
+    $("#search_results_2").load("/qth/?q=+&orderby=random");
+    $("#search_results_3").load("/qth/?q=+&orderby=random");
+});
+</script>
+
+
+{% endblock js %}
 {% block css %}<link href="{% static "css/index.css" %}" rel="stylesheet" type="text/css">{% endblock css %}
 {% block container %} {% include "index_container.html" %} {% endblock container %}

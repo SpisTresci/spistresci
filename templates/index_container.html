@@ -55,63 +55,7 @@
 
         {% for group in group_of_books %}
         <div class="three_index_box{% if not forloop.counter|divisibleby:2 %} flank{% endif %}">
-          {% for book in group.list %}
-
-          <div class="index_box{% if forloop.counter > 3 %} extra{% endif %}">
-            <img src="{{ book.cover }}" style="width: 91px; height: 137px" alt="" />
-            <div class="ib_text">
-              <div class="ib_text1">
-                <a href="">
-                  {{ book.title }}
-                </a>
-              </div>
-              <div class="ib_text2 s_author">
-                <a href="">
-                  {{ book.author }}
-                </a>
-              </div>
-              <div class="ib_text_pos">
-                <div class="ib_text3">
-                  cena od:
-                </div>
-                <div class="ib_price">
-                  {{ book.price }}<span class="ib_price2">zł</span>
-                </div>
-                <div class="ib_line">
-                </div>
-                <a href="">
-                  <div class="ib_btn">  
-                  </div>
-                </a>
-                <a href="">
-                  <div class="ib_btn2">
-                    SPRAWDŹ
-                  </div>
-                </a>
-              </div>  
-            </div>
-            <div class="index_box_h">
-              <div class="ibh_image">
-                <a href="">
-                  Dostępne<br /> 
-                  formaty:
-                  <div class="ibh_image_format">
-                    {% for format in book.formats %}
-                    {{ format }}{% if not forloop.last %}<br />{% endif %}
-                    {% endfor %}
-                  </div>
-                </a>  
-              </div>
-              <div class="x">
-              </div>
-            </div>
-          </div>
-          {% endfor %}
-          <div class="index_more">
-            <a href="">
-              Zobacz więcej
-            </a>
-          </div>
+          <div id="search_results_{{ forloop.counter }}"><img class="loader" src="{% static "img/loader.gif" %}"></div>
         </div>
         {% endfor %}
         

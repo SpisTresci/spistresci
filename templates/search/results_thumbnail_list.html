@@ -8,9 +8,9 @@
              {% endfor %}
 
                 >
-          <img id="loading_img" src="{% static "img/loader.gif" %}" />
+          <!--<img id="loading_img" src="{% static "img/loader.gif" %}" />-->
           {% for result in page.object_list %}
-            {% include 'search/product.html' %}
+            {% include 'search/product_thumbnail.html' %}
           {% empty %}
           <div class="no_results">
             <p class="msg">Nasze oferty nie sprostały Twoim wymaganiom.</p>

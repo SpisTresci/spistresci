@@ -6,6 +6,7 @@ from haystack.views import SearchView
 from haystack.forms import *
 from spistresci.auth.views import authorization
 from spistresci.constants import *
+import random
 
 class STSearchForm(ModelSearchForm):
     formats = forms.CharField(required=False, widget=forms.HiddenInput)
@@ -85,6 +86,9 @@ class STSearchView(SearchView):
 
         if 'orderby' in self.request.GET:
             self.get_args['orderby'] = self.request.GET['orderby'].split(',')
+            if "random" in self.get_args['orderby']:
+                self.get_args['orderby'].remove("random")
+                self.get_args['orderby'].append("random"+str(random.randint(0,1000)))
 
     def pre_filtering(self):
         condition = STSearchView.ConditionBuilder()

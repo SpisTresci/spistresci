@@ -35,7 +35,7 @@
                 <div class="s_author">
                 {% for author in product.name %}
                     {% if forloop.first %}
-                        <a href="">{{ author }}</a>{% else %}, <a href="">{{ author }}</a>
+                        <a href="/search/?q={{ author }}">{{ author }}</a>{% else %}, <a href="/search/?q={{ author }}">{{ author }}</a>
                     {% endif %}
                 {% endfor %}
                 </div>
