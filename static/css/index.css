@@ -649,8 +649,11 @@ a {
 /* top_index */
 .index_top_bg {
   background: url(../img/index_top_bg.jpg) top center no-repeat;
-  height: 560px;
-  background-color: #00417b; }
+  height: 560px; }
+
+.index_top_bg_wrapper {
+  background: url(../img/itbpx.jpg) top left repeat;
+  height: 560px; }
 
 .index_top {
   margin: 0 auto;
