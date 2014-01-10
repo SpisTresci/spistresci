@@ -42,7 +42,7 @@ class FormatInTitleConnector(Ceneo):
         dic['book_type'] = BookType.fromFormats(format_list)
 
     def adjust_parse(self, dic):
-        title = dic['title']
+        title = dic['title'].strip()
         split_regex = self.format_in_title_split_regex
         splited = re.split(split_regex,  dic['title'])
         if len(splited) > 1:
