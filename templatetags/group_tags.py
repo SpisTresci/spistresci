@@ -20,7 +20,10 @@ def belongs_to_group(user, groups):
         {% endif %}
 
     """
-    return bool(user.groups.filter(name__in=groups.split(',')).values('name'))
+    try:
+        return bool(user.groups.filter(name__in=groups.split(',')).values('name'))
+    except:
+        return False
 
 def callMethod(obj, methodName):
     method = getattr(obj, methodName)

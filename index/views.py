@@ -140,8 +140,8 @@ def getRandomReviews():
     dic = {"blogger_reviews":[]}
 
     for blogger in bloggers:
-        recomendation = blogger.user.recommendations.order_by('?')[0]
-        dic["blogger_reviews"].append({"blogger": blogger, "recomendation": recomendation})
+        if blogger.user.recommendations.count() > 0:
+            dic["blogger_reviews"].append({"blogger": blogger, "recomendation": blogger.user.recommendations.order_by('?')[0]})
 
     return dic
 

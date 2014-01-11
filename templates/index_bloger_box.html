@@ -20,7 +20,7 @@
                 {% if object.masterbook %}
                     <a href="{{ object.book_path }}"><img src="{{ object.masterbook.cover }}" style="width: 91px; height: 137px" alt="id książki: {{ object.masterbook.pk }}" /></a>
                 {% else %}
-                    <img src="{% static "img/bok_img_index.png" %}" style="width: 91px; height: 137px" alt="" /></a>
+                    <img src="{% static "img/default_cover.png" %}" style="width: 91px; height: 137px" alt="" /></a>
                 {% endif %}
                 <h2 id="recommendation_title"><a href="{{ object.website_path }}">{{ object.title }}</a></h2>
                 <div id="recommendation_content" style="">
