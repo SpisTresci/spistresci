@@ -9,13 +9,6 @@ WWW_ROOT = 'http://%s/' % DOMAIN_NAME
 
 GOOGLE_ANALYTICS_ID = 'UA-45133188-1'
 
-ADMINS = (
-    # ('Your Name', 'your_email@example.com'),
-    ('Krzysztof Szumny', 'kszumny@spistresci.pl'),
-    ('Piotr Zawislak', 'pzawislak@spistresci.pl'),
-    ('Mateusz Sikora', 'msikora@spistresci.pl'),
-)
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',  # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.

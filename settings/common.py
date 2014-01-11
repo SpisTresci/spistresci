@@ -13,8 +13,11 @@ if not ENV or ENV not in ['dev', 'staging', 'prod']:
     raise Exception('Environment variable ENV is requried! [dev/staging/prod]')
 
 ADMINS = (
-    # ('Your Name', 'your_email@example.com'),
+    ('Krzysztof Szumny', 'kszumny@spistresci.pl'),
+    ('Piotr Zawislak', 'pzawislak@spistresci.pl'),
+    ('Mateusz Sikora', 'msikora@spistresci.pl'),
 )
+
 
 MANAGERS = ADMINS
 
@@ -183,7 +186,8 @@ HAYSTACK_LIMIT_TO_REGISTERED_MODELS = False
 AUTHENTICATION_BACKENDS = (
      'spistresci.auth_backends.eGazeciarzAuthenticationBackend',
      'allauth.account.auth_backends.AuthenticationBackend',
-     'django.contrib.auth.backends.ModelBackend',
+     #'django.contrib.auth.backends.ModelBackend',
+     'django_common.auth_backends.EmailBackend',
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (

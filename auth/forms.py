@@ -3,7 +3,12 @@
 from django.contrib.auth.models import User
 from django import forms
 from django.utils.safestring import mark_safe
+
+from django_common.helper import md5_hash
+
 from registration.forms import RegistrationForm as BaseRegistrationForm
+
+
 
 class RegistrationForm(BaseRegistrationForm):
 
@@ -11,7 +16,8 @@ class RegistrationForm(BaseRegistrationForm):
 
     def __init__(self, *args, **kwargs):
         super(RegistrationForm, self).__init__(*args, **kwargs)
-        self.fields['username'].widget.attrs['placeholder'] = 'Login'
+        self.fields['username'].widget = forms.HiddenInput()
+        self.fields['username'].initial = md5_hash(max_length=30)  # 30 is length of username attribute in User model
         self.fields['email'].widget.attrs['placeholder'] = 'E-mail'
         self.fields['password1'].widget.attrs['placeholder'] = 'Hasło'
         self.fields['password2'].widget.attrs['placeholder'] = u'Powtórz hasło'
