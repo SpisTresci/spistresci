@@ -4,20 +4,32 @@
 {% block L_top_panel %}<h2>Dodaj nową rekomendację książki</h2>{% endblock %}
 
 {% block main_container %}
-	<form method="post" id="recommendation">
-		{% csrf_token %}
-		{{ form.as_p }}
+    <form method="post" id="recommendation" class="edit_rec">
 
-		<h3>Podgląd</h3>
-        <hr/>
-		<div id="recommendation_wrapper">
-            {% include 'index_bloger_box.html' with object=form.instance blogger=user.bloggerprofile %}
+        {% csrf_token %}
+        {{ form.as_p }}
+
+        <p class="buttons_container">
+            <input type="submit" value="Zapisz" />
+        </p>
+    </form>
+
+    <hr/>
+    <h3>Podgląd wersji 750px</h3>
+
+    <div style="width: 750px">
+        <div id="recommendation_wrapper" class="recommendation_wrapper">
+            {% include 'index_bloger_box.html' with object=form.instance blogger=form.instance.author.bloggerprofile %}
         </div>
+    </div>
+    <br>
+    <h3>Podgląd wersji 900px</h3>
+    <div style="width: 900px">
+        <div id="recommendation_wrapper" class="recommendation_wrapper">
+            {% include 'index_bloger_box.html' with object=form.instance blogger=form.instance.author.bloggerprofile %}
+        </div>
+    </div>
 
-		<p class="buttons_container">
-			<input type="submit" value="Zapisz" />
-		</p>
-	</form>
 {% endblock %}
 
 {% block js %}
@@ -31,12 +43,12 @@
                 url: "{% url 'blogger:iframe_preview' %}",
                 data: data
             }).done(function(data) {
-                $('#recommendation_wrapper').html(data.html);
+                $('.recommendation_wrapper').html(data.html);
             });
         }
 
         $(function(){
-            $('#id_title, #id_content, #id_mark, #id_website_path, #id_book_path').change(update_preview);
+            $('#id_title, #id_content, #id_mark, #id_website_path, #id_book_path').keyup(update_preview);
             update_preview();
         });
 

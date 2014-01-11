@@ -6,7 +6,35 @@
 {% block main_container %}
 	<form method="post" id="inputs" enctype="multipart/form-data">
 		{% csrf_token %}
-		{{ form.as_p }}
+		{% comment %}{{ form.as_p }}{% endcomment %}
+
+        {% for field in form %}
+            <div class="fieldWrapper">
+                <span class="error">{{ field.errors }}</span>
+                <span class="label_tag">{{ field.label_tag }}</span>
+
+                {% if field.name == 'photo' %}
+                    {% if form.instance.photo %}
+                        <img src="/uploads/{{ form.instance.photo }}" style="width: 200px; margin-left: 20px"/><br>
+                    {% else %}
+                        <img src="{% static "img/bloggers/default_avatar.jpg" %}" style="width: 200px; margin: 20px"/><br>
+                    {% endif %}
+                    <div class="field">{{ field }}</div>
+                {% elif field.name == 'signature' %}
+                    {% if form.instance.signature %}
+                        <img src="/uploads/{{ form.instance.signature }}" style="width: 160px; margin-left: 20px" /><br>
+                    {% else %}
+                        <img src="{% static "img/bloggers/default_signature.png" %}" style="width: 160px; margin: 20px"/><br>
+                    {% endif %}
+                    <div class="field">{{ field }}</div>
+                {% else %}
+                    {{ field }}
+                {% endif %}
+
+            </div>
+        {% endfor %}
+
+
 		<p class="buttons_container">
 			<input type="submit" value="Zapisz" />
 		</p>

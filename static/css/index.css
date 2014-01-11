@@ -505,6 +505,7 @@ a {
   margin: 25px 0; }
 
 .blogger_sub_box {
+  text-align: center;
   width: 120px;
   height: 180px;
   float: left; }
@@ -529,6 +530,7 @@ a {
   margin-top: 9px;
   border: 7px solid #e3e3e3;
   float: left;
+  width: 100%;
   font-size: 14px;
   font-weight: normal;
   text-decoration: none;

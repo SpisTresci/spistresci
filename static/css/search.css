@@ -78,7 +78,8 @@
   margin: 1px 30px 1px 0;
   width: 110px;
   font-size: 18px;
-  cursor: pointer; }
+  cursor: pointer;
+  color: black; }
 
 .filter_clear_button {
   background: url(../img/2btn_red.png) no-repeat;

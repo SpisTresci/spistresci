@@ -4,5 +4,18 @@
 {% block L_top_panel %}<h2>Rekomendacja książki {{ object.masterbook.title }}</h2>{% endblock %}
 
 {% block main_container %}
-    {% include 'index_bloger_box.html' with blogger=object.author.bloggerprofile %}
+    <h3>Podgląd wersji 750px</h3>
+    <div style="width: 750px">
+        <div id="recommendation_wrapper">
+            {% include 'index_bloger_box.html' with blogger=object.author.bloggerprofile %}
+        </div>
+    </div>
+    <br>
+    <h3>Podgląd wersji 900px</h3>
+    <div style="width: 900px">
+        <div id="recommendation_wrapper">
+            {% include 'index_bloger_box.html' with blogger=object.author.bloggerprofile %}
+        </div>
+    </div>
 {% endblock %}
+

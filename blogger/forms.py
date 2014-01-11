@@ -69,8 +69,8 @@ class BookRecommendationForm(forms.ModelForm):
             raise ValidationError('Brak adresu strony na profilu blogera.')
 
         value = self.cleaned_data['website_path']
-        parsed_url = urlparse(value)
-        parsed_blogger_url = urlparse(self.blogger.website)
+        parsed_url = urlparse(value.lower())
+        parsed_blogger_url = urlparse(self.blogger.website.lower())
 
         if parsed_url.netloc.strip('www.') != parsed_blogger_url.netloc.strip('www.'):
             if self.initial_flag:

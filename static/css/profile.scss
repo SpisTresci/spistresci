@@ -1,0 +1,133 @@
+@import "basics";
+@import "blogger_box";
+
+
+.blogger_profile_view{
+  margin-top: 20px;
+
+  .blogger_sub_box{
+    float: left;
+    width: 200px;
+  }
+
+  .blogger_sub_box2{
+    width: 200px;
+    float: left;
+  }
+
+  .blogger_signature{
+    margin-top: 20px;
+    float: right;
+  }
+
+  .blogger_name{
+    margin-top: 10px;
+  }
+
+  .profile_edit_btn{
+    @extend .red_button;
+    width:100px;
+    height:23px;
+    padding-top:7px;
+    font-size:15px;
+    margin-left: 50px;
+    margin-top: 10px;
+    float: right;
+  }
+
+}
+
+
+
+label {
+	width: 200px;
+	display: inline-block;
+	text-align: right;
+}
+
+.buttons_container {
+	padding-left: 200px;
+}
+
+input[type=submit] {
+	width: 100px;
+	cursor: pointer;
+}
+
+input[type=checkbox] {
+	width: auto !important;
+}
+
+table {
+	width: 100%;
+}
+
+tr, th {
+	text-align: left;
+}
+
+.L_top_panel{
+  h2{
+    margin-top: 8px;
+  }
+}
+
+
+.main_container{
+
+  form{
+    padding: 30px 10px;
+  }
+
+  input[type="text"],
+  input[type="password"],
+  textarea,
+  select
+  {
+      background: #f1f1f1;
+      padding: 8px 8px 8px 30px;
+      margin: 10px 0px 10px 20px;
+      width: 220px; /* 353 + 2 + 45 = 400 */
+      border: 1px solid #ccc;
+      -moz-box-shadow: 0 1px 1px #ccc inset, 0 1px 0 #fff;
+      -webkit-box-shadow: 0 1px 1px #ccc inset, 0 1px 0 #fff;
+      box-shadow: 0 1px 1px #ccc inset, 0 1px 0 #fff;
+  }
+
+
+  input[type='submit']
+  {
+    @extend .red_button;
+
+    border-width: 0px;
+    width: 100px;
+    height: 25px;
+    margin-left: 185px;
+    margin-top: 10px;
+  }
+
+}
+
+
+.edit_rec{
+  input[type="text"],
+  textarea
+  {
+    width: 400px;
+    padding-left: 10px;
+  }
+
+  label{
+    width: 250px;
+  }
+
+  select{
+    height: 28px;
+    width: 150px;
+    padding: 1px;
+  }
+}
+
+.field{
+  margin-left: 220px;
+}

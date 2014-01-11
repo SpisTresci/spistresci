@@ -20,11 +20,11 @@
                     <td>{{ recommendation.masterbook }}</td>
                     <td>{{ recommendation.get_status_display }}</td>
                     <td>
-                        <a href="{% url 'blogger:recommendation_preview' recommendation_pk=recommendation.pk %}">podgląd</a>
+                        <a href="{% url 'blogger:recommendation_preview' recommendation_pk=recommendation.pk %}">[podgląd]</a>
 
-                        <a href="{% url 'blogger:recommendation_edit' recommendation_pk=recommendation.pk %}">edytuj</a>
+                        <a href="{% url 'blogger:recommendation_edit' recommendation_pk=recommendation.pk %}">[edytuj]</a>
 
-                        <a href="{% url 'blogger:recommendation_delete' recommendation_pk=recommendation.pk %}">usuń</a>
+                        <a href="{% url 'blogger:recommendation_delete' recommendation_pk=recommendation.pk %}">[usuń]</a>
 
                     </td>
                 </tr>

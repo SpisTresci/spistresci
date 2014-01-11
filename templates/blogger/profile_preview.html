@@ -4,27 +4,30 @@
 {% block L_top_panel %}<h2>Profil blogera</h2>{% endblock %}
 
 {% block main_container %}
-    <a href="{% url 'blogger:profile_edit' %}">edytuj</a>
+    <div class="blogger_profile_view">
+        <div class="blogger_sub_box">
+            <img src="{% if object.photo %}{{ object.photo_thumbnail.url }}{% else %}{% static "img/bloggers/default_avatar.jpg" %}{% endif %}" alt="{{ object.user.get_full_name }}" style="width: 91px; height: 91px; display: block;" />
+            <div class="blogger_name">
+                {{ object.user.first_name }}<br/>
+                {{ object.user.last_name }}
+            </div>
+            <div class="blogger_blog">
+                Autor bloga:<br/>
+                <a href="{{ object.website }}">{{ object.website_name }}</a>
+            </div>
+        </div>
+        <div class="blogger_sub_box2">
+            <div class="profile_edit_btn">
+                <a href="{% url 'blogger:profile_edit' %}">Edytuj</a>
+            </div>
+            <div class="blogger_signature">
+                {% if object.signature %}
+                    <img src="{{ object.signature_thumbnail.url }}" alt="Podpis">
+                {% else %}
+                    <img src="{% static "img/bloggers/default_signature.png" %}" style="width: 160px;"/><br>
+                {% endif %}
+            </div>
+        </div>
+    </div>
 
-    <ul>
-        <li>
-            Strona: <a href="{{ object.website }}">{{ object.website }}</a>
-        </li>
-        <li>
-            Zdjęce:
-            {% if object.photo %}
-                <img src="{{ object.photo_thumbnail.url }}" alt="{{ object.user.get_full_name %}">
-            {% else %}
-                brak
-            {% endif %}
-
-        </li>
-        <li>
-            Podpis:
-            {% if object.signature %}
-                <img src="{{ object.signature_thumbnail.url }}" alt="Podpis">
-            {% else %}
-                brak
-            {% endif %}
-        </li>
 {% endblock %}

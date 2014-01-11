@@ -64,7 +64,7 @@ class BookRecommendation(models.Model):
     STATUS_PUBLICATED = 3
 
     STATUS_CHOICES = (
-        (STATUS_NEW, 'nowa'),
+        (STATUS_NEW, 'wersja robocza'),
         (STATUS_FOR_PUBLICATION, 'do publikacji'),
         (STATUS_PUBLICATED, 'opublikowana')
     )

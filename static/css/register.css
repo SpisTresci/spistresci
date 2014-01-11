@@ -166,9 +166,6 @@ input[type="password"] {
   width: 220px;
   /* 353 + 2 + 45 = 400 */
   border: 1px solid #ccc;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
   -moz-box-shadow: 0 1px 1px #ccc inset, 0 1px 0 #fff;
   -webkit-box-shadow: 0 1px 1px #ccc inset, 0 1px 0 #fff;
   box-shadow: 0 1px 1px #ccc inset, 0 1px 0 #fff; }
