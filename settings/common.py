@@ -223,7 +223,7 @@ SOCIALACCOUNT_PROVIDERS = {
     },
     'wykop':
     {
-        'REDIRECT_URL':'http://alpha.spistresci.pl/accounts/wykop/login/token/',
+        'REDIRECT_URL':'http://spistresci.pl/accounts/wykop/login/token/',
     },
 }
 
