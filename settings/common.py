@@ -211,6 +211,7 @@ SOCIALACCOUNT_PROVIDERS = {
         'AUTH_PARAMS': { 'auth_type': 'https' },
         'METHOD': 'oauth2' ,
         'LOCALE_FUNC': lambda request: 'pl-pl',
+        'VERIFIED_EMAIL': False,
     },
     'google':
     {
