@@ -13,6 +13,7 @@ ADMINS = (
     # ('Your Name', 'your_email@example.com'),
     ('Krzysztof Szumny', 'kszumny@spistresci.pl'),
     ('Piotr Zawislak', 'pzawislak@spistresci.pl'),
+    ('Mateusz Sikora', 'msikora@spistresci.pl'),
 )
 
 DATABASES = {
