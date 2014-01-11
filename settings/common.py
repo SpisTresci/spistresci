@@ -184,7 +184,7 @@ HAYSTACK_SEARCH_RESULTS_PER_PAGE = 10
 HAYSTACK_LIMIT_TO_REGISTERED_MODELS = False
 
 AUTHENTICATION_BACKENDS = (
-     'spistresci.auth_backends.eGazeciarzAuthenticationBackend',
+     #'spistresci.auth_backends.eGazeciarzAuthenticationBackend',
      'allauth.account.auth_backends.AuthenticationBackend',
      #'django.contrib.auth.backends.ModelBackend',
      'django_common.auth_backends.EmailBackend',
