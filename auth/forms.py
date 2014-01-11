@@ -61,5 +61,10 @@ class UserForm(forms.ModelForm):
 
     class Meta:
         model = User
-        fields = ['username', 'first_name', 'last_name',
-                  'email']
+        fields = ['email', 'username', 'first_name', 'last_name']
+        widgets = {'email': forms.TextInput(attrs={'disabled': 'disabled'})}
+
+    def clean(self, *args, **kwargs):
+        cleaned_data = super(UserForm, self).clean(*args, **kwargs)
+        del cleaned_data['email']
+        return cleaned_data
