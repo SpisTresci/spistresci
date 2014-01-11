@@ -131,7 +131,7 @@ class RecommendationPreviewIframe(BaseBloggerView, BaseFormView):
 
         obj.update(form.cleaned_data)
         obj['masterbook'] = getattr(form, 'masterbook', None)
-        obj['website_path'] = 'http://' + obj['website_path'].strip('http://')
+        obj['website_path'] = 'http://' + obj.get('website_path', '').strip('http://')
         context = dict(blogger=self.blogger_profile,
                        object=obj)
         html = render(self.request, self.template_name, context)
