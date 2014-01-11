@@ -198,6 +198,124 @@
             ]
     },
     {
+        "id": 78,
+        "nick":"Zalazdi",
+        "msgs":
+            [
+                "Hej! Dzisiaj wielki dzień... albo się uda, albo serwery padną i wszystkie zaraz pieprznie :D :)",
+
+                "SpisTresci.pl już działa i postanowiłm iść na całość i wrzucić informacje o projekcie na wykop - a co, może ludzie doceniom 18 miesięcy ciężkiej pracy :)",
+
+                "{raw_entry_link}",
+
+                "Będę Ci niezmiernie wdzięczny za głos i od razu napiszę, że za okazane wsparcie będę Ci wisiał co najmniej piwo :)",
+
+                "Jeżeli chodzi o liczby i fakty, to:",
+
+                "Spis Treści to obecnie największy tego typu serwis w Polsce (a przecież dopiero co wystartował :D )",
+
+                "Obecnie w bazie Spisu Treści jest {book_count} ebooków i audiobooków, w tym {free_ebook_count} darmowych. {service_count} różnych serwisów i księgarni, mam nadzieję, że uda nam się utrzymać tempo dodawania jednej na tydzień :)",
+
+                "Ja na razie zmykam... bo na serwerze dzieją się ciekawe rzeczy :D z góry thx :)"
+            ]
+    },
+    {
+        "id": 79,
+        "nick":"Mehgods",
+        "msgs":
+            [
+                "Hej! Chciałem się pochwalić, że właśnie wystartował mój autorski serwis o którym Ci wspominałem :)",
+
+                "Zapraszam zatem na http://SpisTresci.pl :) Skoro wystartowaliśmy, to mogę teraz dumnie mówić, że jest to największa w Polsce porównywarka cenowa i wyszukiwarka ebooków i audiobooków :)",
+
+                "Obecnie w bazie Spisu Treści jest {book_count} ebooków i audiobooków, w tym {free_ebook_count} darmowych. {service_count} różnych serwisów i księgarni, mam nadzieję, że uda nam się utrzymać tempo dodawania jednej na tydzień :)",
+
+                "Kilka razy kilka osób na wykopie chwaliło się swoimi projektami... a że ja w swoim dodałem nawet możliwość logowania się za pomocą wykopowego konta, to stwierdziłem, że też się pochwalę :)",
+
+                "Będę cholernie wdzięczny za wsparcie!! :) {raw_entry_link}",
+
+                "Ja na razie zmykam... bo na serwerze dzieją się ciekawe rzeczy :D z góry thx, będę później jakby co :)"
+            ]
+    },
+    {
+        "id": 80,
+        "nick":"Spook",
+        "msgs":
+            [
+                "Hej! Miałem Ci podrzucić linka do mojego ebookowo-audioboookowego startupu :)",
+
+                "Zaprasza na http://SpisTresci.pl - obecnie największej polskiej wyszukiwarki i porównywarki cenowej ebooków i audiobooków :) ",
+
+                "Wspaniały adres i nazwa to \"spawka\" mojej żony, tak samo jak podpisane wszystkie umowy z księgarniami na udostępnienie nam bazy :)",
+
+                "Obecnie w bazie Spisu Treści jest {book_count} ebooków i audiobooków, w tym {free_ebook_count} darmowych. {service_count} różnych serwisów i księgarni... a będzie więcej :)",
+
+                "Kilka razy kilka osób na wykopie chwaliło się swoimi projektami... a że ja w swoim dodałem nawet możliwość logowania się za pomocą wykopowego konta, to stwierdziłem, że też i ja się pochwalę, może ludzie docenią :)",
+
+                "Będę cholernie wdzięczny za wsparcie i kopnięcie !! :) {raw_entry_link}",
+
+                "Oczywiście, sugestie co do nowych rzeczy, zmian czy też poprawek z serwisie...są bardzo mile widziane :)"
+
+            ]
+    },
+    {
+        "id": 81,
+        "nick":"Helmans",
+        "msgs":
+            [
+                "Hej! Chciałem Ci dać znać, że mój serwis - http://SpisTreści.pl - właśnie oficjalnie ruszył :)",
+
+                "Nie działa jeszcze to i tamto... ale stwierdziliśmy, że na betę wystarczy... a kiedyś swoje dzieło trzeba pokazać światu :)",
+
+                "Nie miałem możliwości na bieżąco testowania wszystkiego na iOSie, ale donoszono mi, że rzekomo wszystko działa. Jakby co to będę wdzięczny za informację :)",
+
+                "Apropos wdzięczności... to będę jeszcze niezmiernie wdzięczny za inną rzecz. Wrzuciłem newsa o starcie serwisu na wykop... może \"zaskoczy\" i jakimś cudem wejdzie na główną :)",
+
+                "{raw_entry_link}",
+
+                "Będę cholernie wdzięczny za wsparcie i kopnięcie !! :) Jeżeli przypadkiem by się udało z tym wejść na główną... wykop effect pierwszego dnia, to chyba marzenie dla każdego nowego serwisu :)",
+
+                "No chyba, że rozłoży mi to wszystkie serwery, ale to tym będę się później martwił :D ;)"
+
+            ]
+    },
+    {
+        "id": 82,
+        "nick":"piokom123",
+        "msgs":
+            [
+                "Pare tygodni temu pisałem Ci \"za 3 dni ruszam ze startupem\". Może i nie wyrobiłem się w owym terminie, ale donoszę, że dzisiaj faktycznie już serwis wystartował :)",
+
+                "Chyba nie pisałem Ci dokładnie co owy startup robi... więc w dużym skrócie to takie \"Ceneo\" dla ebooków i audiobooków, a od lutego/marca także i zwykłych książek",
+
+                "Względem Ceneo jest jednak kilka zasadniczych różnic... mamy kilka razy więcej księgarni i nas serwis jako specjalizujący się w wyszukiwaniu książek robi to po prostu lepiej :)",
+
+                "Kilka ciekawych ficzerów pojawi się w najbliższym czasie, ale stwierdziłem, że dość ważne jest to by już ruszyć. Jak będziemy na bieżąco dodawać rzeczy, to przynajmniej będzie widać, że się rozwijamy :)",
+
+                "Całość stworzona w pythonie (którego uczyłem się dopiero w trakcie pisania projektu :D ), a frontend w django :)",
+
+                "Pomyślałem sobie, że {raw_entry_link}"
+
+                "Będę cholernie wdzięczny za wsparcie i kopnięcie !! :) Jeżeli przypadkiem by się udało z tym wejść na główną... wykop effect pierwszego dnia, to chyba marzenie dla każdego nowego serwisu :)",
+
+                "No chyba, że rozłoży mi to wszystkie serwery, ale to tym będę się później martwił :D ;)"
+
+            ]
+    },
+    {
+        "id": 83,
+        "nick":"biedrzycki",
+        "msgs":
+            [
+                "Hej. Godzina zero wybiła :) ",
+
+                "link do znaleziska: {raw_entry_link}",
+
+                "teraz już tylko czekać i patrzeć czy serwery wytrzymają :)"
+
+            ]
+    },
+    {
         "id": 999,
         "nick":"lenka21",
         "msgs":
