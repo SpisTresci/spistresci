@@ -1,4 +1,6 @@
 {% extends "base.html" %}
+{% load str_tags %}
+
 {% block title %}Spis Treści - Przekierowanie na stronę księgarni...{% endblock title %}
 {% block js %}
 <script type="text/javascript">
@@ -26,7 +28,19 @@
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
 
-  window.location = '{{ url }}';
+
+  function redirect(){
+      window.location = '{{ url|decode }}';
+  }
+
+  $(function(){
+      setTimeout(redirect(), 3000);
+  });
+
 </script>
 {% endblock js %}
+
+{% block menu %}{% endblock menu %}
+{% block searchbox %}{% endblock searchbox %}
+{% block footer %}{% endblock footer %}
 {% block container %}Przekierowanie na stronę księgarni...{% endblock container %}

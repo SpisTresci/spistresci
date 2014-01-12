@@ -1,5 +1,6 @@
 {% load staticfiles %}
 {% load mathtags %}
+{% load str_tags %}
 
 <div class="records_panel_wrapper" data-records-count="{{ product.records|length }}">
     <div class="records_toogle_switcher up"></div>
@@ -30,7 +31,7 @@
                 {%comment%}
                 <div class="shipment">+ przesyłka od 12 zł</div>
                 {%endcomment%}
-                <a href="{% url "book_redirect" %}?id={{ record.id }}&price={{ record.price }}&url={{ record.url }}&title={{ record.title }}">
+                <a href="{% url "book_redirect" %}?id={{ record.id }}&price={{ record.price }}&url={{ record.url|encode }}&title={{ record.title }}">
                     <div class="goto_shop">
                         IDŹ DO SKLEPU
                     </div>

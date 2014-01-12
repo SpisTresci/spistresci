@@ -1,3 +1,4 @@
+from urllib import quote, unquote
 from django import template
 register = template.Library()
 
@@ -21,3 +22,11 @@ def truncatewords_by_chars(value, limit):
                     words_r += " " + word
     except:
         return value
+
+@register.filter
+def encode(value):
+    return quote(value, '')
+
+@register.filter
+def decode(value):
+    return unquote(value)
