@@ -1329,6 +1329,9 @@ img#loading_img {
 .ff_right a:hover {
   color: white; }
 
+#cookiesEU-box {
+  margin-top: 25px !important; }
+
 .dialog_style1 {
   background-color: #f0f0f0;
   border: solid 1px #000000;

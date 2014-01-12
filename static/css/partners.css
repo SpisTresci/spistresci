@@ -562,6 +562,9 @@ a {
 .ff_right a:hover {
   color: white; }
 
+#cookiesEU-box {
+  margin-top: 25px !important; }
+
 .partners_panel {
   width: 70%;
   text-align: center;

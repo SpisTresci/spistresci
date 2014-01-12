@@ -715,3 +715,6 @@ input[type="password"] {
 
 .ff_right a:hover {
   color: white; }
+
+#cookiesEU-box {
+  margin-top: 25px !important; }

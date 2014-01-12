@@ -142,6 +142,9 @@ a {
 .ff_right a:hover {
   color: white; }
 
+#cookiesEU-box {
+  margin-top: 25px !important; }
+
 .color_button, .blue_button, .red_button {
   font-weight: bold;
   text-align: center;

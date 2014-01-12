@@ -654,6 +654,9 @@ a {
 .ff_right a:hover {
   color: white; }
 
+#cookiesEU-box {
+  margin-top: 25px !important; }
+
 /* top_index */
 .index_top_bg {
   background: url(../img/index_top_bg.jpg) top center no-repeat;

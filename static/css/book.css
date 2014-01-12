@@ -735,6 +735,9 @@ a {
 .ff_right a:hover {
   color: white; }
 
+#cookiesEU-box {
+  margin-top: 25px !important; }
+
 .L_left_panel {
   padding-top: 40px; }
   .L_left_panel .cover {
