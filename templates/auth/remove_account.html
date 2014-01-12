@@ -1,0 +1,17 @@
+{% extends "auth/base.html" %}
+{% load staticfiles %}
+
+{% block L_top_panel %}<h2>Usuń konto</h2>{% endblock %}
+
+{% block main_container %}
+	<p>Czy jesteś pewny, że chcesz usunąć konto?</p>
+	<p>
+
+
+		<form method="post">
+			<a href="{% url 'profile:home' %}">Nie</a>
+			<input onClick="return confirm('Jesteś pewien, że chcesz usunąć konto?');" type="submit" value="Tak"/>
+		</form>
+	</p>
+
+{% endblock %}
