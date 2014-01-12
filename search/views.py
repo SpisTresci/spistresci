@@ -217,6 +217,9 @@ class STSearchQuerySet(SearchQuerySet):
                 record["id"] = str(product.id) + '-' + record['bookstore']
                 product.records.append(record)
 
+            # TODO: temporary solution
+            product.name = set(product.name)
+
             products.append(product)
 
         return products
