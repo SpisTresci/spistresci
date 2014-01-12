@@ -25,8 +25,14 @@ def truncatewords_by_chars(value, limit):
 
 @register.filter
 def encode(value):
-    return quote(value, '')
+    try:
+        return quote(value.encode('utf8'), '')
+    except:
+        return value
 
 @register.filter
 def decode(value):
-    return unquote(value)
+    try:
+        return unquote(value.decode('utf8'))
+    except:
+        return value
