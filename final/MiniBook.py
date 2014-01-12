@@ -80,6 +80,10 @@ class MiniBook(BaseMini, BaseBook, Base):
                 self.price = specific_book.price
                 self.master.price = specific_book.price
 
+        for attr in ['title', 'url', 'cover', 'book_type']:
+            if getattr(self, attr) != getattr(specific_book, attr):
+                setattr(self, attr, getattr(specific_book, attr))
+
     @staticmethod
     def getMasterBookCandidates(session, mini_book):
         masters = set()
