@@ -69,15 +69,11 @@ class MiniBook(BaseMini, BaseBook, Base):
         session.add(master_Book)
 
     def update(self, session, specific_book):
-        #TODO: implement update of other fields
         if self.price != specific_book.price:
-            if self.price == self.master.price: #potentially old price was the lowest price
-                if self.price < specific_book.price: #price rises
-                    self.price = specific_book.price
-                    self.master.price = min([mini.price for mini in self.master.minis])
-
+            self.price = specific_book.price
+            if self.price == self.master.price and self.price < specific_book.price: #potentially old price was the lowest price & price rises
+                self.master.price = min([mini.price for mini in self.master.minis])
             elif specific_book.price < self.master.price: #new price is the lowest price in MasterBook
-                self.price = specific_book.price
                 self.master.price = specific_book.price
 
         for attr in ['title', 'url', 'cover', 'book_type']:
