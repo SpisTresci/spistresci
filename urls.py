@@ -9,7 +9,8 @@ from registration.backends.default.views import RegistrationView
 from spistresci.index.views import index
 from spistresci.search.views import STSearchView, STSearchQuerySet, hide_menu, STSearchForm
 from spistresci.book.views import STBookQuerySet, STBookView, book_redirect
-from spistresci.auth.views import logout, accounts_social_signup, accounts_profile, MyLoginView
+from spistresci.auth.views import (logout, accounts_social_signup,
+        accounts_profile, MyLoginView, ProfileRemove)
 from spistresci.track.views import TrackedBookList
 #from allauth.account.views import LoginView
 from spistresci.register.views import register_user, egazeciarz_register_user
@@ -25,7 +26,7 @@ dajaxice_autodiscover()
 book_url_re = r'book/(?P<book_id>\d+)/.*$'
 
 urlpatterns = patterns('',
-     url('^$', index),
+     url('^$', index, name="index"),
      url('^logout/$', logout),
      url('^hide_menu/(?P<value>\d)/$', hide_menu),
      url('^monitor/$', monitor),
@@ -44,6 +45,7 @@ urlpatterns = patterns('',
      url(r'^blogger/', include('spistresci.blogger.urls', namespace='blogger')),
      url(r'^profile/', include('spistresci.auth.urls', namespace='profile')),
      url(r'^profile/tracs/$', TrackedBookList.as_view(), name="tracked_book_list"),
+     url(r'^profile/remove/$', ProfileRemove.as_view(), name="profile_remove"),
      url('^regulamin/', TemplateView.as_view(template_name='terms_of_use.html'), name='terms_of_use'),
      url('^partners/$', partners),
 )

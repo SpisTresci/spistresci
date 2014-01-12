@@ -2,7 +2,7 @@ from django.http import HttpResponseRedirect
 from django.contrib import auth
 from django.contrib.auth.decorators import login_required
 from django.core.context_processors import csrf
-from django.views.generic.edit import UpdateView
+from django.views.generic.edit import UpdateView, DeleteView
 from django.utils.decorators import method_decorator
 from django.core.urlresolvers import reverse
 
@@ -54,3 +54,12 @@ class Profile(BaseUserView, UpdateView):
     def get_object(self, *args, **kwargs):
         self.success_url = reverse('profile:home')
         return self.user
+
+class ProfileRemove(BaseUserView, DeleteView):
+    template_name = 'auth/remove_account.html'
+
+    def get_object(self):
+        return self.request.user
+
+    def get_success_url(self):
+        return reverse('index')
