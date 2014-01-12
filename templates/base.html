@@ -11,6 +11,16 @@
     {% block js %} {% endblock js %}
     <link href="{% static "img/favicon.ico" %}" rel="icon" type="image/x-icon" />
     <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="http://ciasteczka.eu/cookiesEU-latest.min.js"></script>
+    <script type="text/javascript">
+      $(function(){
+        jQuery.fn.cookiesEU({
+          parent: $('.footer_footer'),
+          position: 'bottom',
+          auto_accept: false
+        });
+      });
+    </script>
   </head>
   <body>
      {% block menu %} {% include "menu.html" %} {% endblock menu %}
