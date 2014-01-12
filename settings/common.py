@@ -253,6 +253,7 @@ CRON_CLASSES = [
 
 BLOGGER_GROUP_NAME = 'blogger'
 SERVE_LOCAL_FILES = True
+GOOGLE_ANALYTICS_ID = 'UA-45133188-1'
 
 import shutil, sys
 if len(sys.argv) >=2 and sys.argv[1] == 'syncdb':
