@@ -294,7 +294,7 @@
 
                 "Całość stworzona w pythonie (którego uczyłem się dopiero w trakcie pisania projektu :D ), a frontend w django :)",
 
-                "Pomyślałem sobie, że {raw_entry_link}"
+                "Pomyślałem sobie, że {raw_entry_link}",
 
                 "Będę cholernie wdzięczny za wsparcie i kopnięcie !! :) Jeżeli przypadkiem by się udało z tym wejść na główną... wykop effect pierwszego dnia, to chyba marzenie dla każdego nowego serwisu :)",
 
@@ -316,6 +316,24 @@
             ]
     },
     {
+        "id": 84,
+        "nick":"miszczu_blady",
+        "msgs":
+            [
+                "Hej! Rozmawialiśmy jakiś czas temu na wykopie, pytałeś o darmowe ebooki...",
+
+                "Opowiadałem Ci, że tworzę nowy serwis z ebookami (porównywarka cenowa i wyszukiwarka) i dzisiaj w końcu udało się go \"otworzyć\" :)",
+
+                "Serwis to http://SpisTresci.pl , zintegrowałem {service_count} serwisów, dzięki czemu można przeszukiwać bazę {book_count} ebooków i audiobooków (darmowych {free_ebook_count}) :)",
+
+                "W przypływie optymizmu wrzuciłem linka na wykop({raw_entry_link}), może ludziom się spodoba :D Będę wdzieczny za ewentualne wsparcie :)",
+
+                "Sugestie co do rozwoju serwisu i informacje o błędach (które pewnie i tak gdzieś wystąpią :/) też oczywiście są mile widziane :)",
+
+                "z góry thx :)"
+            ]
+    },
+    {
         "id": 999,
         "nick":"lenka21",
         "msgs":
@@ -334,7 +352,3 @@
             ]
     }
 ]
-
-
-
-
