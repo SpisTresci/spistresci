@@ -16,6 +16,7 @@ from spistresci.monitor.views import monitor
 
 from spistresci.auth.forms import RegistrationForm, MyLoginForm
 from dajaxice.core import dajaxice_autodiscover, dajaxice_config
+from spistresci.partners.views import partners
 
 admin.autodiscover()
 dajaxice_autodiscover()
@@ -42,6 +43,7 @@ urlpatterns = patterns('',
      url(r'^blogger/', include('spistresci.blogger.urls', namespace='blogger')),
      url(r'^profile/', include('spistresci.auth.urls', namespace='profile')),
      url('^regulamin/', TemplateView.as_view(template_name='terms_of_use.html'), name='terms_of_use'),
+     url('^partners/$', partners),
 )
 
 #TODO: check thread safe version of this

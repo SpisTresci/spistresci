@@ -594,6 +594,10 @@ a {
   position: relative;
   display: inline-block;
   vertical-align: top; }
+  .col a {
+    color: #888888; }
+    .col a:hover {
+      text-decoration: underline; }
 
 .col-content {
   white-space: normal;
@@ -607,6 +611,9 @@ a {
   width: 50%;
   border-left: 1px solid #e3e3e3;
   border-right: 1px solid #e3e3e3; }
+  .footer_flank a {
+    color: #888888;
+    text-decoration: underline; }
 
 .footer_center {
   width: 200px; }
