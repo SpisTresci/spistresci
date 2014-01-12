@@ -8,13 +8,14 @@ class Wikibooks(XMLConnector):
 
     #dict of xml_tag -> db_column_name translations
     xml_tag_dict = {
-        "@id":('external_id', ''),
-        "./a/@href":('url', ''),
-        "./a/@title":('title', ''),
+        'external_id':("@id", ''),
+        'url':("./a/@href", ''),
+        'title':("./a/@title", ''),
+        'cover':("./a/@cover", ''),
     }
 
     def weHaveToGoDeeper(self, root, depth):
-        return root.xpath("//div[@lang='pl' and @dir='ltr']/div[@id='mw-pages']/div[@lang='pl' and @dir='ltr' and @class='mw-content-ltr']/ul")
+        return root.xpath("//div[@id='mw-pages']/div[@lang='pl' and @dir='ltr' and @class='mw-content-ltr']/table/tr/td/ul")
 
     #Wikibooks does not allow download wikipages without defined user-agent
     def downloadFile(self, url = None, filename = None, headers = None):
@@ -53,6 +54,7 @@ class Wikibooks(XMLConnector):
     def adjust_parse(self, dic):
         if dic.get("url"):
             dic["url"] = "http://pl.wikibooks.org/wiki/" + dic["url"].split("/")[-1]
+            dic["external_id"] = dic["url"]
         if dic.get("title"):
             dic["title"] = dic["title"].split("/")[-1]
 
@@ -61,9 +63,9 @@ class Wikibooks(XMLConnector):
 
 class WikibooksBook(GenericBook, Base):
     id = Column(Integer, primary_key = True)
-    external_id = None
+    external_id = Column(Unicode(128))
     publisher = Column(Unicode(16))
     title = Column(Unicode(64), unique = True)
-    url = Column(Unicode(64))
+    url = Column(Unicode(128))
     cover = Column(Unicode(256))
     price = Column(Integer)
