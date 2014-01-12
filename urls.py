@@ -10,6 +10,7 @@ from spistresci.index.views import index
 from spistresci.search.views import STSearchView, STSearchQuerySet, hide_menu, STSearchForm
 from spistresci.book.views import STBookQuerySet, STBookView, book_redirect
 from spistresci.auth.views import logout, accounts_social_signup, accounts_profile, MyLoginView
+from spistresci.track.views import TrackedBookList
 #from allauth.account.views import LoginView
 from spistresci.register.views import register_user, egazeciarz_register_user
 from spistresci.monitor.views import monitor
@@ -42,6 +43,7 @@ urlpatterns = patterns('',
 #     url('^description/(?P<book_id>\w+)/$', book_description),
      url(r'^blogger/', include('spistresci.blogger.urls', namespace='blogger')),
      url(r'^profile/', include('spistresci.auth.urls', namespace='profile')),
+     url(r'^profile/tracs/$', TrackedBookList.as_view(), name="tracked_book_list"),
      url('^regulamin/', TemplateView.as_view(template_name='terms_of_use.html'), name='terms_of_use'),
      url('^partners/$', partners),
 )

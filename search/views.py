@@ -218,7 +218,8 @@ class STSearchQuerySet(SearchQuerySet):
                 product.records.append(record)
 
             # TODO: temporary solution
-            product.name = set(product.name)
+            if product.name:
+                product.name = set(product.name)
 
             products.append(product)
 

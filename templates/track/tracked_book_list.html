@@ -1,0 +1,33 @@
+{% extends "auth/base.html" %}
+{% load staticfiles %}
+
+{% block L_top_panel %}<h2>Tropione książki</h2>{% endblock %}
+
+{% block main_container %}
+	{% if object_list %}
+
+
+		<table>
+	        <thead>
+	            <tr>
+	                <th>Książka</th>
+	                <th>Autor</th>
+	                <th>Cena</th>
+	            </tr>
+	        </thead>
+	        <tbody>
+	            {% for item in object_list %}
+	                <tr class="{% cycle 'even' 'odd' %}">
+	                    <td>{{ item.masterbook.title }}</td>
+	                    <td>{{ item.masterbook.get_authors_display }}</td>
+	                    <td>{{ item.get_price_display }}</td>
+	                </tr>
+	            {% endfor %}
+	        </tbody>
+	    </table>
+		</ul>
+	{% else %}
+		<p>Lista tropionych książek jest pusta</p>
+	{% endif %}
+{% endblock %}
+

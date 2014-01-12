@@ -109,6 +109,9 @@ class MasterAuthor(models.Model):
     class Meta:
         db_table = 'MasterAuthor'
 
+    def __unicode__(self):
+        return self.name
+
 class MasterBook(models.Model):
     id = models.IntegerField(primary_key=True)
     title = models.CharField(max_length=512L, blank=True)
@@ -132,6 +135,12 @@ class MasterBook(models.Model):
 
     def __unicode__(self):
         return self.title
+
+    def get_author_names(self):
+        return set(map(lambda x: str(x), self.authors.all()))
+
+    def get_authors_display(self):
+        return ','.join(self.get_author_names())
 
 class MasterBooksMasterAuthors(models.Model):
     book = models.ForeignKey('MasterBook', null=True, blank=True)

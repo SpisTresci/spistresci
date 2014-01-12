@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from django.db import models
 from django.contrib.auth.models import User
 
@@ -11,6 +13,9 @@ class BookTrack(models.Model):
         unique_together = (('masterbook', 'user'),)
         db_table = 'BookTrack'
         app_label = 'spistresci'
+
+    def get_price_display(self):
+        return u'%.2f zł' % (self.price/100.0,)
 
 class BookTrackNotification(models.Model):
     masterbook = models.ForeignKey('spistresci.MasterBook', related_name="book_track_notifications")
