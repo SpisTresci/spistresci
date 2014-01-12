@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block title %}Spis Treści - strona główna{% endblock %}
+{% block js %}<script type="text/javascript" src="{% static "js/search.js" %}"></script>
+{% block css %}<link href="{% static "css/partners.css" %}" rel="stylesheet" type="text/css">{% endblock css %}
+{% endblock js %}
+{% block searchbox %} {% include "searchbox_small_panel.html" %} {% endblock searchbox %}
+{% block container %}
+    <div class="partners_panel">
+        <div class="index_bloggers">
+            <img class="b_left" src="{% static "img/red_line_b.png" %}" alt="" /><img class="b_center" src="{% static "img/red_line_c.png" %}" alt="" /><img class="b_right" src="{% static "img/red_line_e.png" %}" alt="" />
+            NASI PARTNERZY
+            <img class="b_left" src="{% static "img/red_line_b.png" %}" alt="" /><img class="b_center" src="{% static "img/red_line_c.png" %}" alt="" /><img class="b_right" src="{% static "img/red_line_e.png" %}" alt="" />
+        </div>
+        <ul>
+            {% for service in services %}
+            <li>
+                <a href="{{ service.name_lowercase }}">
+                    <img src="{% static "img/logo/"|add:service.name_lowercase|add:"_150x75.png" %}" alt="{{service}}" onerror="this.onerror=null;this.src='{% static "img/logo/loremipsum_150x75.png" %}'" />
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock container %}
