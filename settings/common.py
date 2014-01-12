@@ -252,6 +252,7 @@ CRON_CLASSES = [
 ]
 
 BLOGGER_GROUP_NAME = 'blogger'
+SERVE_LOCAL_FILES = True
 
 import shutil, sys
 if len(sys.argv) >=2 and sys.argv[1] == 'syncdb':

@@ -21,7 +21,8 @@ def google_analytics_context_processor(request):
     return dict(google_analytics_id=getattr(settings, 'GOOGLE_ANALYTICS_ID', None))
 
 def menu_context_processor(request):
-	return dict(top_menu=getListOfTopMenuServices(request))
+	return dict(top_menu=getListOfTopMenuServices(request),
+        serve_local_files=getattr(settings, 'SERVE_LOCAL_FILES', True))
 
 def group_required(group_names):
     """Requires user membership in at least one of the groups passed in."""
