@@ -8,7 +8,7 @@ from registration.backends.default.views import RegistrationView
 
 from spistresci.index.views import index
 from spistresci.search.views import STSearchView, STSearchQuerySet, hide_menu, STSearchForm
-from spistresci.book.views import STBookQuerySet, STBookView, STBookQuerySet2
+from spistresci.book.views import STBookQuerySet, STBookView, book_redirect
 from spistresci.auth.views import logout, accounts_social_signup, accounts_profile, MyLoginView
 #from allauth.account.views import LoginView
 from spistresci.register.views import register_user, egazeciarz_register_user
@@ -37,8 +37,8 @@ urlpatterns = patterns('',
                            name="account_login"),
 
      url(r'^accounts/', include('registration.backends.default.urls')),
-     url(r'^%s' % (book_url_re,), STBookView(searchqueryset=STBookQuerySet(), form_class=STSearchForm), name='book_page'),
-     url(r'^book-redirect/(?P<book_id>[a-zA-Z0-9-]+)/$', STBookView(searchqueryset=STBookQuerySet2(), template="book/redirect.html"), name="book_redirect"),
+     url(r'^%s' % (book_url_re,), STBookView(searchqueryset = STBookQuerySet(), form_class=STSearchForm), name='book_page'),
+     url(r'^book-redirect/$', book_redirect, name="book_redirect"),
 #     url('^description/(?P<book_id>\w+)/$', book_description),
      url(r'^blogger/', include('spistresci.blogger.urls', namespace='blogger')),
      url(r'^profile/', include('spistresci.auth.urls', namespace='profile')),

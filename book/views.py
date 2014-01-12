@@ -84,7 +84,7 @@ class STBookQuerySet(STSearchQuerySet):
     using = 'book_details'
 
     def __init__(self, using=None, query=None):
-        super(STBookQuerySet, self).__init__(using=self.using)
+        super(STBookQuerySet, self).__init__(using='book_details')
 
     def convertResultsToProducts(self, results):
         results = super(STBookQuerySet, self).convertResultsToProducts(results)
@@ -103,18 +103,14 @@ class STBookQuerySet(STSearchQuerySet):
         book['authors'] = product.name
         book['title'] = product.title
 
-        if self.using == 'book_details':
-            if product.description and len(product.description.split(" ")) > 75:
-                book['description_short'] = " ".join(product.description.split(" ")[:75]) + "..."
-            else:
-                book['description_short'] = product.description if product.description else ""
+        if product.description and len(product.description.split(" ")) > 75:
+            book['description_short'] = " ".join(product.description.split(" ")[:75]) + "..."
+        else:
+            book['description_short'] = product.description if product.description else ""
 
         product.book = book
 
         return results
 
-class STBookQuerySet2(STBookQuerySet):
-    using = 'default'
-
-def book_redirect(request, template_name="book/redirect.html"):
-    return render(request, template_name, request.GET.copy())
+def book_redirect(request):
+    return render(request, "book/redirect.html", request.GET)
