@@ -446,18 +446,18 @@ a {
   /*   color:#40A7DA; */
   font-size: 17px; }
 
-.color_button, .blue_button, .track_popup .track_button, .ib_btn, .red_button {
+.color_button, .blue_button, .track_popup .track_button, #track_form_static_container .track_button, .ib_btn, .red_button {
   font-weight: bold;
   text-align: center;
   cursor: pointer;
   color: white; }
-  .color_button a, .blue_button a, .track_popup .track_button a, .ib_btn a, .red_button a {
+  .color_button a, .blue_button a, .track_popup .track_button a, #track_form_static_container .track_button a, .ib_btn a, .red_button a {
     color: white; }
-  .color_button:hover, .blue_button:hover, .track_popup .track_button:hover, .ib_btn:hover, .red_button:hover {
+  .color_button:hover, .blue_button:hover, .track_popup .track_button:hover, #track_form_static_container .track_button:hover, .ib_btn:hover, .red_button:hover {
     text-decoration: underline;
     color: white; }
 
-.blue_button, .track_popup .track_button, .ib_btn {
+.blue_button, .track_popup .track_button, #track_form_static_container .track_button, .ib_btn {
   background: url(../img/2btn_blue.png) no-repeat; }
 
 .red_button {
@@ -657,18 +657,18 @@ a {
 #cookiesEU-box {
   margin-top: 25px !important; }
 
-.color_button, .blue_button, .track_popup .track_button, .ib_btn, .red_button {
+.color_button, .blue_button, .track_popup .track_button, #track_form_static_container .track_button, .ib_btn, .red_button {
   font-weight: bold;
   text-align: center;
   cursor: pointer;
   color: white; }
-  .color_button a, .blue_button a, .track_popup .track_button a, .ib_btn a, .red_button a {
+  .color_button a, .blue_button a, .track_popup .track_button a, #track_form_static_container .track_button a, .ib_btn a, .red_button a {
     color: white; }
-  .color_button:hover, .blue_button:hover, .track_popup .track_button:hover, .ib_btn:hover, .red_button:hover {
+  .color_button:hover, .blue_button:hover, .track_popup .track_button:hover, #track_form_static_container .track_button:hover, .ib_btn:hover, .red_button:hover {
     text-decoration: underline;
     color: white; }
 
-.blue_button, .track_popup .track_button, .ib_btn {
+.blue_button, .track_popup .track_button, #track_form_static_container .track_button, .ib_btn {
   background: url(../img/2btn_blue.png) no-repeat; }
 
 .red_button {
@@ -751,6 +751,38 @@ a {
   text-align: center;
   line-height: 170px;
   margin-left: 20px; }
+
+#track_form_static_container .login_required {
+  display: none; }
+#track_form_static_container .track_button {
+  border: none;
+  height: 20px;
+  margin-bottom: 2px;
+  margin-top: 15px;
+  line-height: 10px;
+  padding-top: 12px;
+  padding-bottom: 5px;
+  display: inline-block; }
+  #track_form_static_container .track_button img {
+    margin-top: -5px; }
+#track_form_static_container h1 {
+  font-size: 20px;
+  margin-top: 20px;
+  text-align: center; }
+
+#track_form_static_container.logout {
+  color: grey; }
+  #track_form_static_container.logout .login_required {
+    display: block; }
+  #track_form_static_container.logout a {
+    color: #ab0000; }
+  #track_form_static_container.logout div.track_button {
+    background: initial;
+    background-color: grey; }
+  #track_form_static_container.logout .track_input {
+    disabled: disabled; }
+  #track_form_static_container.logout .track_bottom_msg {
+    padding-top: 20px; }
 
 .track_popup.logout {
   color: grey; }
@@ -885,18 +917,18 @@ img.loader {
     width: calc(50% - 110px);
     height: 3px; }
 
-.color_button, .blue_button, .track_popup .track_button, .ib_btn, .red_button {
+.color_button, .blue_button, .track_popup .track_button, #track_form_static_container .track_button, .ib_btn, .red_button {
   font-weight: bold;
   text-align: center;
   cursor: pointer;
   color: white; }
-  .color_button a, .blue_button a, .track_popup .track_button a, .ib_btn a, .red_button a {
+  .color_button a, .blue_button a, .track_popup .track_button a, #track_form_static_container .track_button a, .ib_btn a, .red_button a {
     color: white; }
-  .color_button:hover, .blue_button:hover, .track_popup .track_button:hover, .ib_btn:hover, .red_button:hover {
+  .color_button:hover, .blue_button:hover, .track_popup .track_button:hover, #track_form_static_container .track_button:hover, .ib_btn:hover, .red_button:hover {
     text-decoration: underline;
     color: white; }
 
-.blue_button, .track_popup .track_button, .ib_btn {
+.blue_button, .track_popup .track_button, #track_form_static_container .track_button, .ib_btn {
   background: url(../img/2btn_blue.png) no-repeat; }
 
 .red_button {

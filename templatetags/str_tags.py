@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from urllib import quote, unquote
 from django import template
 register = template.Library()
@@ -36,3 +37,11 @@ def decode(value):
         return unquote(value.decode('utf8'))
     except:
         return value
+
+@register.filter
+def price_format(value):
+    try:
+        return u'%.2f zł' % (int(value)/100.0,)
+    except:
+        return value
+

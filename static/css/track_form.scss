@@ -14,7 +14,6 @@
 }
 
 .track_form_container{
-
   color: #225B98;
   font-size: 14px;
   font-weight:bold;
@@ -28,7 +27,9 @@
   }
 }
 
-.track_popup{
+.track_popup,
+
+{
   .track_msg{
     font-size: 18px;
     padding: 25px 25px 15px 0;
@@ -80,10 +81,67 @@
 }
 
 
+#track_form_static_container{
+  .login_required{
+    display: none;
+  }
+
+  .track_button{
+    @extend .blue_button;
+
+    border: none;
+
+    height: 20px;
+
+    margin-bottom: 2px;
+    margin-top: 15px;
+
+    line-height: 10px;
+
+    padding-top: 12px;
+    padding-bottom: 5px;
+    display: inline-block;
+    img{
+      margin-top: -5px;
+    }
+  }
+
+  h1{
+    font-size: 20px;
+    margin-top: 20px;
+    text-align: center;
+  }
+}
+
+#track_form_static_container.logout{
+  color: grey;
+
+  .login_required{
+    display: block;
+  }
+
+  a{
+    color:#ab0000;
+  }
+
+  div.track_button{
+    background: initial;
+    background-color: grey;
+  }
+
+  .track_input{
+    disabled: disabled;
+  }
+
+  .track_bottom_msg{
+    padding-top: 20px;
+  }
+
+}
+
 
 .track_popup.logout{
   color: grey;
-
 
   .login_required{
     display: block;

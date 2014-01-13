@@ -140,7 +140,7 @@ class MasterBook(models.Model):
         return set(map(lambda x: str(x), self.authors.all()))
 
     def get_authors_display(self):
-        return ','.join(self.get_author_names())
+        return ', '.join(self.get_author_names())
 
 class MasterBooksMasterAuthors(models.Model):
     book = models.ForeignKey('MasterBook', null=True, blank=True)

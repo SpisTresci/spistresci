@@ -14,9 +14,6 @@ class BookTrack(models.Model):
         db_table = 'BookTrack'
         app_label = 'spistresci'
 
-    def get_price_display(self):
-        return u'%.2f zł' % (self.price/100.0,)
-
 class BookTrackNotification(models.Model):
     masterbook = models.ForeignKey('spistresci.MasterBook', related_name="book_track_notifications")
     user = models.ForeignKey(User, related_name="book_track_notifications")

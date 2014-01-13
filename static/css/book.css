@@ -28,18 +28,18 @@
   background-color: #f6f6f6;
   border-bottom: 2px solid #e3e3e3; }
 
-.color_button, .blue_button, .L_left_panel .track .track_button, .red_button, .record .record_price .goto_shop {
+.color_button, .blue_button, .track_popup .track_button, #track_form_static_container .track_button, .L_left_panel .track .track_button, .red_button, .record .record_price .goto_shop {
   font-weight: bold;
   text-align: center;
   cursor: pointer;
   color: white; }
-  .color_button a, .blue_button a, .L_left_panel .track .track_button a, .red_button a, .record .record_price .goto_shop a {
+  .color_button a, .blue_button a, .track_popup .track_button a, #track_form_static_container .track_button a, .L_left_panel .track .track_button a, .red_button a, .record .record_price .goto_shop a {
     color: white; }
-  .color_button:hover, .blue_button:hover, .L_left_panel .track .track_button:hover, .red_button:hover, .record .record_price .goto_shop:hover {
+  .color_button:hover, .blue_button:hover, .track_popup .track_button:hover, #track_form_static_container .track_button:hover, .L_left_panel .track .track_button:hover, .red_button:hover, .record .record_price .goto_shop:hover {
     text-decoration: underline;
     color: white; }
 
-.blue_button, .L_left_panel .track .track_button {
+.blue_button, .track_popup .track_button, #track_form_static_container .track_button, .L_left_panel .track .track_button {
   background: url(../img/2btn_blue.png) no-repeat; }
 
 .red_button, .record .record_price .goto_shop {
@@ -171,18 +171,18 @@
 .records_panel_wrapper {
   margin-bottom: 80px; }
 
-.color_button, .blue_button, .L_left_panel .track .track_button, .red_button, .record .record_price .goto_shop {
+.color_button, .blue_button, .track_popup .track_button, #track_form_static_container .track_button, .L_left_panel .track .track_button, .red_button, .record .record_price .goto_shop {
   font-weight: bold;
   text-align: center;
   cursor: pointer;
   color: white; }
-  .color_button a, .blue_button a, .L_left_panel .track .track_button a, .red_button a, .record .record_price .goto_shop a {
+  .color_button a, .blue_button a, .track_popup .track_button a, #track_form_static_container .track_button a, .L_left_panel .track .track_button a, .red_button a, .record .record_price .goto_shop a {
     color: white; }
-  .color_button:hover, .blue_button:hover, .L_left_panel .track .track_button:hover, .red_button:hover, .record .record_price .goto_shop:hover {
+  .color_button:hover, .blue_button:hover, .track_popup .track_button:hover, #track_form_static_container .track_button:hover, .L_left_panel .track .track_button:hover, .red_button:hover, .record .record_price .goto_shop:hover {
     text-decoration: underline;
     color: white; }
 
-.blue_button, .L_left_panel .track .track_button {
+.blue_button, .track_popup .track_button, #track_form_static_container .track_button, .L_left_panel .track .track_button {
   background: url(../img/2btn_blue.png) no-repeat; }
 
 .red_button, .record .record_price .goto_shop {
@@ -661,6 +661,151 @@ a {
 .s_index_top_bg .search_more a:hover {
   /*   color:#40A7DA; */
   font-size: 17px; }
+
+.color_button, .blue_button, .track_popup .track_button, #track_form_static_container .track_button, .L_left_panel .track .track_button, .red_button, .record .record_price .goto_shop {
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  color: white; }
+  .color_button a, .blue_button a, .track_popup .track_button a, #track_form_static_container .track_button a, .L_left_panel .track .track_button a, .red_button a, .record .record_price .goto_shop a {
+    color: white; }
+  .color_button:hover, .blue_button:hover, .track_popup .track_button:hover, #track_form_static_container .track_button:hover, .L_left_panel .track .track_button:hover, .red_button:hover, .record .record_price .goto_shop:hover {
+    text-decoration: underline;
+    color: white; }
+
+.blue_button, .track_popup .track_button, #track_form_static_container .track_button, .L_left_panel .track .track_button {
+  background: url(../img/2btn_blue.png) no-repeat; }
+
+.red_button, .record .record_price .goto_shop {
+  background: url(../img/2btn_red_big.png);
+  background-size: 100%; }
+
+.unselectable {
+  -webkit-user-select: none;
+  /* Chrome/Safari */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* IE10+ */
+  /* Rules below not implemented in browsers yet */
+  -o-user-select: none;
+  user-select: none; }
+
+.img_index_frame {
+  margin: 10px;
+  float: left;
+  padding: 5px;
+  border: #e3e3e3 1px solid; }
+
+.plain_text {
+  font-size: 14px;
+  text-decoration: none;
+  margin: 50px 10%; }
+  .plain_text h1 {
+    text-align: center;
+    margin-bottom: 20px; }
+
+.dialog_style1 {
+  background-color: #f0f0f0;
+  border: solid 1px #000000;
+  margin: 2px;
+  position: fixed;
+  padding: 10px;
+  width: 430px;
+  min-height: 175px;
+  z-index: 9999;
+  top: 40%;
+  left: 40%; }
+
+.track_form_container {
+  color: #225B98;
+  font-size: 14px;
+  font-weight: bold; }
+  .track_form_container .xx {
+    float: right;
+    background: url(../img/x.png) no-repeat;
+    width: 20px;
+    height: 20px;
+    cursor: pointer; }
+
+.track_popup .track_msg {
+  font-size: 18px;
+  padding: 25px 25px 15px 0; }
+.track_popup .track_bottom_msg {
+  margin-top: 10px; }
+.track_popup .login_required {
+  display: none; }
+.track_popup .track_input {
+  width: 65px;
+  height: 27px;
+  font-size: 20px;
+  padding-left: 10px; }
+.track_popup .track_button {
+  border: none;
+  width: 151px;
+  height: 30px;
+  margin-bottom: 2px;
+  margin-top: 2px;
+  line-height: 10px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  display: inline-block; }
+.track_popup .currency {
+  font-size: 24px; }
+.track_popup h1 {
+  text-align: center;
+  line-height: 170px;
+  margin-left: 20px; }
+
+#track_form_static_container .login_required {
+  display: none; }
+#track_form_static_container .track_button {
+  border: none;
+  height: 20px;
+  margin-bottom: 2px;
+  margin-top: 15px;
+  line-height: 10px;
+  padding-top: 12px;
+  padding-bottom: 5px;
+  display: inline-block; }
+  #track_form_static_container .track_button img {
+    margin-top: -5px; }
+#track_form_static_container h1 {
+  font-size: 20px;
+  margin-top: 20px;
+  text-align: center; }
+
+#track_form_static_container.logout {
+  color: grey; }
+  #track_form_static_container.logout .login_required {
+    display: block; }
+  #track_form_static_container.logout a {
+    color: #ab0000; }
+  #track_form_static_container.logout div.track_button {
+    background: initial;
+    background-color: grey; }
+  #track_form_static_container.logout .track_input {
+    disabled: disabled; }
+  #track_form_static_container.logout .track_bottom_msg {
+    padding-top: 20px; }
+
+.track_popup.logout {
+  color: grey; }
+  .track_popup.logout .login_required {
+    display: block; }
+  .track_popup.logout input[type="button"].track_button {
+    background: initial;
+    background-color: grey; }
+  .track_popup.logout .track_input {
+    disabled: disabled; }
+  .track_popup.logout img.product_details {
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    filter: grayscale(100%); }
+  .track_popup.logout a {
+    color: #ab0000; }
 
 /* footer */
 .footer {

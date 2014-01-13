@@ -1,3 +1,6 @@
+function set_click(){
+}
+
 function onReady()
 {
  /*
@@ -23,6 +26,10 @@ function onReady()
   $.getScript("/static/js/sort_records.js", function(){
     sort_records();
   });
+
+  var id = $("#title").attr("data-book-id");
+  get_track_form_static(id, 'set_click');
+
 }
 
 $(document).ready(onReady);

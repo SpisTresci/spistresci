@@ -3,9 +3,19 @@ function send_form(form_id){
     Dajaxice.spistresci.post_track_form(Dajax.process, {'form': data});
 }
 
+function send_form_static(form_id){
+    var data = $(form_id).serialize(true);
+    Dajaxice.spistresci.post_track_form_static(Dajax.process, {'form': data});
+}
+
 function get_track_form(book_id){
     Dajaxice.spistresci.get_track_form(Dajax.process, {'book_id': book_id, 'callback':'set_x_callback'});
 }
+
+function get_track_form_static(book_id, callback){
+    Dajaxice.spistresci.get_track_form_static(Dajax.process, {'book_id': book_id, 'callback':callback});
+}
+
 
 function set_x_callback(book_id){
     $('#x_' + (book_id).toString()).on("click",function(){

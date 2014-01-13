@@ -1,5 +1,6 @@
 {% extends "auth/base.html" %}
 {% load staticfiles %}
+{% load str_tags %}
 
 {% block L_top_panel %}<h2>Tropione książki</h2>{% endblock %}
 
@@ -10,17 +11,28 @@
 		<table>
 	        <thead>
 	            <tr>
-	                <th>Książka</th>
+	                <th>Tytuł</th>
 	                <th>Autor</th>
-	                <th>Cena</th>
+	                <th>Cena oczekiwana</th>
+                    <th>Obecna Cena</th>
 	            </tr>
 	        </thead>
 	        <tbody>
 	            {% for item in object_list %}
 	                <tr class="{% cycle 'even' 'odd' %}">
-	                    <td>{{ item.masterbook.title }}</td>
-	                    <td>{{ item.masterbook.get_authors_display }}</td>
-	                    <td>{{ item.get_price_display }}</td>
+	                    <td>
+                            <a href="/book/{{item.masterbook.id}}/{{item.masterbook.title|slugify}}">{{ item.masterbook.title }}</a>
+                            <a href="/book/{{item.masterbook.id}}/{{item.masterbook.title|slugify}}" title="{{ item.masterbook.title }}">{{ item.masterbook.title|truncatewords_by_chars:80 }}</a>
+                        </td>
+	                    <td>
+                            {% for author in item.masterbook.get_author_names %}
+                                {% if forloop.first %}
+                                    <a href="/search/?q={{ author }}">{{ author }}</a>{% else %}, <a href="/search/?q={{ author }}">{{ author }}</a>
+                                {% endif %}
+                            {% endfor %}
+                        </td>
+	                    <td>{{ item.price|price_format }}</td>
+                        <td>{{ item.masterbook.price|price_format }}</td>
 	                </tr>
 	            {% endfor %}
 	        </tbody>

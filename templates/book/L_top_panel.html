@@ -1,5 +1,5 @@
 {% with book=page.object_list.0.book %}
-<div class="title">
+<div id="title" class="title" data-book-id="{{book.id}}">
 {{ book.title }}
 </div>
 <div class="authors">
