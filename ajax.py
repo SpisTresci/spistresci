@@ -25,7 +25,8 @@ def get_track_form(request, book_id, callback):
     form = BookTrackForm(initial=initial)
 
     html = render_to_string('track/track_form.html', dict(track_form=form, product=book, user=request.user))
-    dajax.assign('#track_form_container_%s' % book_id,'innerHTML', html)
+    #dajax.assign('#track_form_container_%s' % book_id,'innerHTML', html)
+    dajax.assign('#popup_container','innerHTML', html)
 
     dajax.add_data(book_id, callback)
 
@@ -46,16 +47,14 @@ def post_track_form(request, form):
     if form.is_valid():
         dajax.remove_css_class('#track_form input', 'error')
         track = form.save()
-        dajax.assign('#track_form_container_%s' % book_id,'innerHTML', '')
-        dajax.assign('#track_form_container_%s' % book_id,'innerHTML', '')
 
         if track.price != None:
-            dajax.alert(u'Trop został zapisany');
+            dajax.assign('#track_popup_%s' % book_id,'innerHTML', u'<h1>Trop został zapisany</h1>')
         else:
-            dajax.alert(u'Trop został usunięty');
+            dajax.assign('#track_popup_%s' % book_id,'innerHTML', u'<h1>Trop został usunięty</h1>')
 
     else:
-        dajax.alert(u'Podaj prawidłową cenę');
+        dajax.assign('#track_bottom_msg_%s' % book_id,'innerHTML', u'Podaj cenę, np. 9.99')
         # dajax.remove_css_class('#track_form input', 'error')
         # for error in form.errors:
         #     dajax.add_css_class('#id_%s' % error, 'error')

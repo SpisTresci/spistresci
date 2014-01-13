@@ -18,38 +18,9 @@
     <script type="text/javascript" src="{% static "js/jquery.spotlight.js" %}"></script>
     <script type="text/javascript" src="{% static "/static/dajax/jquery.dajax.core.js" %}"></script>
     {% dajaxice_js_import %}
-    <script type="text/javascript">
-        function send_form(form_id){
-            var data = $(form_id).serialize(true);
-            Dajaxice.spistresci.post_track_form(Dajax.process, {'form': data});
-        }
+    <script type="text/javascript" src="{% static "js/jquery.spotlight.js" %}"></script>
+    <script type="text/javascript" src="{% static "js/track_form.js" %}"></script>
 
-        function get_track_form(book_id){
-            Dajaxice.spistresci.get_track_form(Dajax.process, {'book_id': book_id, 'callback':'set_x_callback'});
-            var element = $('#track_form_container_' + (book_id).toString());
-            element.addClass("dialog_style1");
-            element.spotlight({animate:false, onShow:function(){
-
-            }});
-        }
-
-        function set_x_callback(book_id){
-            $('#x_' + (book_id).toString()).on("click",function(){
-                turn_off_spotlight(book_id);
-            });
-        }
-
-        function turn_off_spotlight(book_id){
-           var spotlight = $('#spotlight');
-           var element = $('#track_form_container_' + (book_id).toString());
-           spotlight.css('opacity', '0');
-           //if(currentPos == 'static') element.css('position', 'static');
-           element.css('z-index', '1');
-           element.removeClass("dialog_style1");
-           element.empty();
-        }
-
-    </script>
 {% endblock js %}
 {% block container %} {% include "search/container.html" %} {% endblock container %}
 {% block searchbox %} {% include "searchbox_small_panel.html" %} {% endblock searchbox %}

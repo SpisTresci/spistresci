@@ -24,10 +24,8 @@
                 </div>
                 <div class="ib_line">
                 </div>
-                <a href="#" onclick="get_track_form({{ product.id }}); return false;">
-                    <div class="ib_btn {% comment %}track_button{% endcomment %}">
-                    </div>
-                </a>
+                <div class="ib_btn track_button" data-track-form-id="{{ product.id }}">
+                </div>
                 <a href="/book/{{ product.id }}/{{ product.title | slugify}}">
                     <div class="ib_btn2{% comment %}details_button{% endcomment %}">
                         SZCZEGÓŁY

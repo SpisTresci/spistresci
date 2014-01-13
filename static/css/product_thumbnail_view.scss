@@ -1,3 +1,4 @@
+@import "basics";
 
 .index_box{
   width:$book-box-width - 10px;
@@ -72,6 +73,7 @@
   border-bottom:1px solid #225b98;
 }
 .ib_btn{
+  @extend .blue_button;
   background:url(../img/btn_blue.png) no-repeat;
   width:37px;
   height:35px;

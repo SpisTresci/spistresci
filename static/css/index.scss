@@ -1,11 +1,10 @@
 @import "mixin";
-
 @import "all";
 @import "top_menu";
 @import "search_box";
 @import "blogger_box";
 @import "footer";
-
+@import "track_form";
 
 /* top_index */
 
@@ -163,7 +162,25 @@ $img-group-margin-bottom: 5px;
 
 @import "product_thumbnail_view";
 
-
 .page{
   display: none;
+}
+
+
+
+.image-wrap {
+    max-height: 150px;
+    overflow: hidden;
+    max-width: 100px;
+}
+
+.image-wrap-border{
+    padding:5px 5px 2px 5px;
+    border:#e3e3e3 1px solid;
+    margin-right:20px;
+    float:left;
+}
+
+.image-wrap img {
+    width: 100%;
 }

@@ -15,12 +15,9 @@
                 <div class="slb_price1">
                     {{ product.price_lowest }} zł
                 </div>
-                <div id="track_form_container_{{ product.id }}"></div>
-                <a href="#" onclick="get_track_form({{ product.id }}); return false;">
-                    <div class="track_button">
-                        TROP <img src="{% static "img/hand.png" %}" alt="" />
-                    </div>
-                </a>
+                <div class="track_button" data-track-form-id="{{ product.id }}">
+                    TROP <img src="{% static "img/hand.png" %}" alt="" />
+                </div>
                 <a href="/book/{{ product.id }}/{{ product.title | slugify}}">
                     <div class="details_button">
                         SZCZEGÓŁY

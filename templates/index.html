@@ -1,17 +1,14 @@
 {% extends "base.html" %}
 {% load staticfiles %}
+{% load dajaxice_templatetags %}
 
 {% block title %}Spis Treści - strona główna{% endblock %}
 {% block js %}
-<script>
-$(document).ready(function(){
-    $("#search_results_1").load("/qb/?q=+&orderby=random");
-    $("#search_results_2").load("/qn/?q=+&orderby=random");
-    $("#search_results_3").load("/qp/?q=+&orderby=random");
-});
-</script>
-
-
+<script type="text/javascript" src="{% static "js/index.js" %}"></script>
+<script type="text/javascript" src="{% static "/static/dajax/jquery.dajax.core.js" %}"></script>
+{% dajaxice_js_import %}
+<script type="text/javascript" src="{% static "js/jquery.spotlight.js" %}"></script>
+<script type="text/javascript" src="{% static "js/track_form.js" %}"></script>
 {% endblock js %}
 {% block css %}<link href="{% static "css/index.css" %}" rel="stylesheet" type="text/css">{% endblock css %}
 {% block container %} {% include "index_container.html" %} {% endblock container %}

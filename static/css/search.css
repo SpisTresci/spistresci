@@ -197,18 +197,18 @@
     line-height: 28px;
     font-size: 14px; }
 
-.color_button, .blue_button, .book_box div.track_button, .book_box input[type="button"].track_button, .red_button, .record .record_price .goto_shop, .book_box .details_button {
+.color_button, .blue_button, .track_popup .track_button, .book_box div.track_button, .book_box input[type="button"].track_button, .ib_btn, .red_button, .record .record_price .goto_shop, .book_box .details_button {
   font-weight: bold;
   text-align: center;
   cursor: pointer;
   color: white; }
-  .color_button a, .blue_button a, .book_box div.track_button a, .book_box input[type="button"].track_button a, .red_button a, .record .record_price .goto_shop a, .book_box .details_button a {
+  .color_button a, .blue_button a, .track_popup .track_button a, .book_box div.track_button a, .book_box input[type="button"].track_button a, .ib_btn a, .red_button a, .record .record_price .goto_shop a, .book_box .details_button a {
     color: white; }
-  .color_button:hover, .blue_button:hover, .book_box div.track_button:hover, .book_box input[type="button"].track_button:hover, .red_button:hover, .record .record_price .goto_shop:hover, .book_box .details_button:hover {
+  .color_button:hover, .blue_button:hover, .track_popup .track_button:hover, .book_box div.track_button:hover, .book_box input[type="button"].track_button:hover, .ib_btn:hover, .red_button:hover, .record .record_price .goto_shop:hover, .book_box .details_button:hover {
     text-decoration: underline;
     color: white; }
 
-.blue_button, .book_box div.track_button, .book_box input[type="button"].track_button {
+.blue_button, .track_popup .track_button, .book_box div.track_button, .book_box input[type="button"].track_button, .ib_btn {
   background: url(../img/2btn_blue.png) no-repeat; }
 
 .red_button, .record .record_price .goto_shop, .book_box .details_button {
@@ -340,18 +340,18 @@
 .records_panel_wrapper {
   margin-bottom: 80px; }
 
-.color_button, .blue_button, .book_box div.track_button, .book_box input[type="button"].track_button, .red_button, .record .record_price .goto_shop, .book_box .details_button {
+.color_button, .blue_button, .track_popup .track_button, .book_box div.track_button, .book_box input[type="button"].track_button, .ib_btn, .red_button, .record .record_price .goto_shop, .book_box .details_button {
   font-weight: bold;
   text-align: center;
   cursor: pointer;
   color: white; }
-  .color_button a, .blue_button a, .book_box div.track_button a, .book_box input[type="button"].track_button a, .red_button a, .record .record_price .goto_shop a, .book_box .details_button a {
+  .color_button a, .blue_button a, .track_popup .track_button a, .book_box div.track_button a, .book_box input[type="button"].track_button a, .ib_btn a, .red_button a, .record .record_price .goto_shop a, .book_box .details_button a {
     color: white; }
-  .color_button:hover, .blue_button:hover, .book_box div.track_button:hover, .book_box input[type="button"].track_button:hover, .red_button:hover, .record .record_price .goto_shop:hover, .book_box .details_button:hover {
+  .color_button:hover, .blue_button:hover, .track_popup .track_button:hover, .book_box div.track_button:hover, .book_box input[type="button"].track_button:hover, .ib_btn:hover, .red_button:hover, .record .record_price .goto_shop:hover, .book_box .details_button:hover {
     text-decoration: underline;
     color: white; }
 
-.blue_button, .book_box div.track_button, .book_box input[type="button"].track_button {
+.blue_button, .track_popup .track_button, .book_box div.track_button, .book_box input[type="button"].track_button, .ib_btn {
   background: url(../img/2btn_blue.png) no-repeat; }
 
 .red_button, .record .record_price .goto_shop, .book_box .details_button {
@@ -1256,6 +1256,119 @@ img#loading_img {
   margin-top: 20px;
   font-size: 14px; }
 
+.color_button, .blue_button, .track_popup .track_button, .book_box div.track_button, .book_box input[type="button"].track_button, .ib_btn, .red_button, .record .record_price .goto_shop, .book_box .details_button {
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  color: white; }
+  .color_button a, .blue_button a, .track_popup .track_button a, .book_box div.track_button a, .book_box input[type="button"].track_button a, .ib_btn a, .red_button a, .record .record_price .goto_shop a, .book_box .details_button a {
+    color: white; }
+  .color_button:hover, .blue_button:hover, .track_popup .track_button:hover, .book_box div.track_button:hover, .book_box input[type="button"].track_button:hover, .ib_btn:hover, .red_button:hover, .record .record_price .goto_shop:hover, .book_box .details_button:hover {
+    text-decoration: underline;
+    color: white; }
+
+.blue_button, .track_popup .track_button, .book_box div.track_button, .book_box input[type="button"].track_button, .ib_btn {
+  background: url(../img/2btn_blue.png) no-repeat; }
+
+.red_button, .record .record_price .goto_shop, .book_box .details_button {
+  background: url(../img/2btn_red_big.png);
+  background-size: 100%; }
+
+.unselectable {
+  -webkit-user-select: none;
+  /* Chrome/Safari */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* IE10+ */
+  /* Rules below not implemented in browsers yet */
+  -o-user-select: none;
+  user-select: none; }
+
+.img_index_frame, .index_box img {
+  margin: 10px;
+  float: left;
+  padding: 5px;
+  border: #e3e3e3 1px solid; }
+
+.plain_text {
+  font-size: 14px;
+  text-decoration: none;
+  margin: 50px 10%; }
+  .plain_text h1 {
+    text-align: center;
+    margin-bottom: 20px; }
+
+.dialog_style1 {
+  background-color: #f0f0f0;
+  border: solid 1px #000000;
+  margin: 2px;
+  position: fixed;
+  padding: 10px;
+  width: 430px;
+  min-height: 175px;
+  z-index: 9999;
+  top: 40%;
+  left: 40%; }
+
+.track_form_container {
+  color: #225B98;
+  font-size: 14px;
+  font-weight: bold; }
+  .track_form_container .xx {
+    float: right;
+    background: url(../img/x.png) no-repeat;
+    width: 20px;
+    height: 20px;
+    cursor: pointer; }
+
+.track_popup .track_msg {
+  font-size: 18px;
+  padding: 25px 25px 15px 0; }
+.track_popup .track_bottom_msg {
+  margin-top: 10px; }
+.track_popup .login_required {
+  display: none; }
+.track_popup .track_input {
+  width: 65px;
+  height: 27px;
+  font-size: 20px;
+  padding-left: 10px; }
+.track_popup .track_button {
+  border: none;
+  width: 151px;
+  height: 30px;
+  margin-bottom: 2px;
+  margin-top: 2px;
+  line-height: 10px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  display: inline-block; }
+.track_popup .currency {
+  font-size: 24px; }
+.track_popup h1 {
+  text-align: center;
+  line-height: 170px;
+  margin-left: 20px; }
+
+.track_popup.logout {
+  color: grey; }
+  .track_popup.logout .login_required {
+    display: block; }
+  .track_popup.logout input[type="button"].track_button {
+    background: initial;
+    background-color: grey; }
+  .track_popup.logout .track_input {
+    disabled: disabled; }
+  .track_popup.logout img.product_details {
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    filter: grayscale(100%); }
+  .track_popup.logout a {
+    color: #ab0000; }
+
 /* footer */
 .footer {
   min-width: 600px;
@@ -1331,37 +1444,6 @@ img#loading_img {
 
 #cookiesEU-box {
   margin-top: 25px !important; }
-
-.dialog_style1 {
-  background-color: #f0f0f0;
-  border: solid 1px #000000;
-  margin: 2px;
-  position: fixed;
-  padding: 10px;
-  width: 430px;
-  min-height: 175px;
-  z-index: 300;
-  top: 40%;
-  left: 40%; }
-
-.track_input {
-  width: 65px;
-  height: 27px;
-  font-size: 20px;
-  padding-left: 10px; }
-
-.track_button {
-  display: inline-block; }
-
-.currency {
-  font-size: 24px; }
-
-.xx {
-  float: right;
-  background: url(../img/x.png) no-repeat;
-  width: 20px;
-  height: 20px;
-  cursor: pointer; }
 
 .view_icon, .list_view_icon, .galery_view_icon, .text_view_icon, .big_list_view_icon {
   margin: 8px 10px;
@@ -1743,6 +1825,49 @@ img#loading_img {
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease; }
+
+.color_button, .blue_button, .track_popup .track_button, .book_box div.track_button, .book_box input[type="button"].track_button, .ib_btn, .red_button, .record .record_price .goto_shop, .book_box .details_button {
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  color: white; }
+  .color_button a, .blue_button a, .track_popup .track_button a, .book_box div.track_button a, .book_box input[type="button"].track_button a, .ib_btn a, .red_button a, .record .record_price .goto_shop a, .book_box .details_button a {
+    color: white; }
+  .color_button:hover, .blue_button:hover, .track_popup .track_button:hover, .book_box div.track_button:hover, .book_box input[type="button"].track_button:hover, .ib_btn:hover, .red_button:hover, .record .record_price .goto_shop:hover, .book_box .details_button:hover {
+    text-decoration: underline;
+    color: white; }
+
+.blue_button, .track_popup .track_button, .book_box div.track_button, .book_box input[type="button"].track_button, .ib_btn {
+  background: url(../img/2btn_blue.png) no-repeat; }
+
+.red_button, .record .record_price .goto_shop, .book_box .details_button {
+  background: url(../img/2btn_red_big.png);
+  background-size: 100%; }
+
+.unselectable {
+  -webkit-user-select: none;
+  /* Chrome/Safari */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* IE10+ */
+  /* Rules below not implemented in browsers yet */
+  -o-user-select: none;
+  user-select: none; }
+
+.img_index_frame, .index_box img {
+  margin: 10px;
+  float: left;
+  padding: 5px;
+  border: #e3e3e3 1px solid; }
+
+.plain_text {
+  font-size: 14px;
+  text-decoration: none;
+  margin: 50px 10%; }
+  .plain_text h1 {
+    text-align: center;
+    margin-bottom: 20px; }
 
 .index_box {
   width: 290px;

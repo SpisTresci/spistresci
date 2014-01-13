@@ -190,11 +190,20 @@ function onReady(){
         }
     });
 
+    $(".track_button").on("click", function(event){
+        var id = $(this).attr("data-track-form-id");
+        get_track_form(id);
+        event.stopPropagation();
+    });
+
+    $(".track_form_container").on("click", function(event){event.stopPropagation();});
+
     $('html').click(function() {
         //close_popups();
         var p = $(".sortboxwrapper");
         p.removeClass("active");
-        refresh_active_sort();
+        turn_off_spotlight();
+        //refresh_active_sort();
     });
 
     $(".filter_section_header").on("click", function(event){

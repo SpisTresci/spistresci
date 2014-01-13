@@ -1,0 +1,113 @@
+@import "basics";
+
+.dialog_style1{
+    background-color: #f0f0f0;
+    border: solid 1px #000000;
+    margin: 2px;
+    position: fixed;
+    padding: 10px;
+    width: 430px;
+    min-height: 175px;
+    z-index: 9999;
+    top:40%;
+    left:40%;
+}
+
+.track_form_container{
+
+  color: #225B98;
+  font-size: 14px;
+  font-weight:bold;
+
+  .xx {
+      float: right;
+      background: url(../img/x.png) no-repeat;
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+  }
+}
+
+.track_popup{
+  .track_msg{
+    font-size: 18px;
+    padding: 25px 25px 15px 0;
+  }
+
+  .track_bottom_msg{
+    margin-top: 10px;
+  }
+
+  .login_required{
+    display: none;
+  }
+
+  .track_input {
+    width: 65px;
+    height: 27px;
+    font-size: 20px;
+    padding-left: 10px;
+  }
+
+  .track_button{
+    @extend .blue_button;
+
+    border: none;
+
+    width: 151px;
+    height: 30px;
+
+    margin-bottom: 2px;
+    margin-top: 2px;
+
+    line-height: 10px;
+
+    padding-top: 10px;
+    padding-bottom: 5px;
+    display: inline-block;
+  }
+
+  .currency{
+      font-size: 24px;
+  }
+
+  h1{
+    text-align: center;
+    line-height: 170px;
+    margin-left: 20px;
+  }
+
+}
+
+
+
+.track_popup.logout{
+  color: grey;
+
+
+  .login_required{
+    display: block;
+  }
+
+  input[type="button"].track_button{
+    background: initial;
+    background-color: grey;
+  }
+
+  .track_input{
+    disabled: disabled;
+  }
+
+  img.product_details{
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    filter: grayscale(100%);
+  }
+
+  a{
+    color:#ab0000;
+  }
+}
+
