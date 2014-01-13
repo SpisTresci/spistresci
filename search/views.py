@@ -84,11 +84,23 @@ class STSearchView(SearchView):
         if "services" in self.request.GET:
             self.get_args["services"] = self.request.GET["services"].split(",")
 
+        def replace(my_list, X, Y):
+            while X in my_list:
+                my_list.insert(my_list.index(X), Y)
+                my_list.pop(my_list.index(X))
+
         if 'orderby' in self.request.GET:
             self.get_args['orderby'] = self.request.GET['orderby'].split(',')
+
+            self.get_args['orderby'] = [orderby for orderby in self.get_args['orderby'] if orderby in ["random", "price", "-price", "title", "-title"]]
+            self.get_orderby_list = list(self.get_args['orderby'])
+
             if "random" in self.get_args['orderby']:
-                self.get_args['orderby'].remove("random")
-                self.get_args['orderby'].append("random"+str(random.randint(0,1000)))
+                replace(self.get_args['orderby'], "random", "random"+str(random.randint(0,1000)))
+
+            for item in [("price", "price_lowest"), ("title","sort_title")]:
+                replace(self.get_args['orderby'], item[0], item[1])
+                replace(self.get_args['orderby'], "-"+item[0], "-"+item[1])
 
     def pre_filtering(self):
         condition = STSearchView.ConditionBuilder()
@@ -177,7 +189,7 @@ class STSearchView(SearchView):
                         ]
 
         if self.get_args.get('orderby'):
-            extra['orderby'] = self.get_args['orderby']
+            extra['orderby'] = self.get_orderby_list
 
         authorization(self.request, extra)
 
