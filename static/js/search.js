@@ -190,13 +190,6 @@ function onReady(){
         }
     });
 
-    $(".track_button").on("click", function(event){
-        var id = $(this).attr("data-track-form-id");
-        get_track_form(id);
-        event.stopPropagation();
-    });
-
-    $(".track_form_container").on("click", function(event){event.stopPropagation();});
 
     $('html').click(function() {
         //close_popups();
@@ -314,6 +307,15 @@ function onResultsReady() {
     if (typeof(sort_records) == "function"){
         sort_records();
     }
+
+    $(".track_button").on("click", function(event){
+        var id = $(this).attr("data-track-form-id");
+        get_track_form(id);
+        event.stopPropagation();
+    });
+
+    $("#track_form_container").on("click", function(event){event.stopPropagation();});
+
 
 }
 

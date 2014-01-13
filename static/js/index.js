@@ -4,6 +4,7 @@ function onResultsReady() {
         get_track_form(id);
         event.stopPropagation();
     });
+    $("#track_form_container").on("click", function(event){event.stopPropagation();});
 }
 
 $(document).ready(function(){
