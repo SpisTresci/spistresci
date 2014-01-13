@@ -265,7 +265,7 @@ class GenericConnector(GenericBase, DataValidator):
         self.save_time_of_("parse_start")
         self.before_parse()
         book_number = 0
-        if True:#self.areDataDifferentThanPrevious():
+        if self.areDataDifferentThanPrevious():
             #for filename in ['unittests/data/master/inner_merge/xml/' + self.name.lower() + ".xml"]:
             #for filename in ['unittests/data/master_table/alpha_2/' + self.name.lower() + ".xml"]:#self.fetched_files:
             for filename in self.fetched_files:

@@ -61,8 +61,9 @@ class Final(object):
 
         i = 0
         for specific_book in updated_specific_books:
-            mini_book = SqlWrapper.get_(session, final.MiniBook, {"id":SpecificBook.mini_book_id})
+            mini_book = specific_book.mini_book
             mini_book.update(session, specific_book)
+            session.add(mini_book)
             i += 1
             print "Price update: " + str(i)
             if i % 1000 == 0: session.commit()
