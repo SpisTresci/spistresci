@@ -3,7 +3,7 @@ from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
 from django.views.generic import TemplateView
-
+from django.shortcuts import render_to_response
 from registration.backends.default.views import RegistrationView
 
 from spistresci.index.views import index
@@ -46,8 +46,12 @@ urlpatterns = patterns('',
      url(r'^profile/', include('spistresci.auth.urls', namespace='profile')),
      url(r'^profile/tracs/$', TrackedBookList.as_view(), name="tracked_book_list"),
      url(r'^profile/remove/$', ProfileRemove.as_view(), name="profile_remove"),
-     url('^regulamin/', TemplateView.as_view(template_name='terms_of_use.html'), name='terms_of_use'),
-     url('^partners/$', partners),
+     url(r'^regulamin/', TemplateView.as_view(template_name='terms_of_use.html'), name='terms_of_use'),
+     url(r'^faq/', TemplateView.as_view(template_name='faq.html'), name='faq'),
+     url(r'^howto/', TemplateView.as_view(template_name='howto.html'), name='howto'),
+     url(r'^about-us/', TemplateView.as_view(template_name='about_us.html'), name='about_us'),
+     url(r'^contact/', TemplateView.as_view(template_name='contact.html'), name='contact'),
+     url(r'^partners/$', partners),
 )
 
 #TODO: check thread safe version of this
