@@ -6,15 +6,16 @@
           <img src="{% static "img/logo.png" %}" alt="" />
         </a>
         <div class="search">
-          <form action="/search/" class="search_box">
+          <form action="/search/" class="search_box" name="search_form" id="search_form">
             <div class="right_input_bg">
             </div>
             <div class="search_input">
               <div class="search_input2">
+                  <input id="id_q" name="q" type="text" autocomplete="off" value="{{ query }}" placeholder="Wpisz tytuł książki lub nazwisko autora" data-shake="3" >
                   {% block search_input %}  {% include "search_input.html" %} {% endblock search_input %}
               </div>
             </div>
-            <input id="id_submit" type="submit" value="SZUKAJ">
+            <div id="search_btn" class="search_small_btn">SZUKAJ</div>
             {% comment %}
             <div class="search_more s_search_more">
               <a href="">

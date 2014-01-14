@@ -397,6 +397,44 @@ input[type="password"] {
   padding-top: 2px;
   font-size: 30px !important; }
 
+.search_btn, .search_small_btn {
+  float: left;
+  border: none;
+  background: url(../img/search_btn.png) no-repeat;
+  width: 205px;
+  height: 105px;
+  line-height: 105px;
+  color: white;
+  font-size: 28px;
+  text-shadow: #333333 1px 1px 1px;
+  text-align: center;
+  cursor: pointer; }
+  .search_btn:hover, .search_small_btn:hover {
+    padding-top: 2px;
+    font-size: 30px !important; }
+
+.search_small_btn {
+  background: url(../img/2input_btn.png) no-repeat;
+  width: 199px;
+  height: 50px;
+  line-height: 55px;
+  font-size: 22px;
+  font-weight: bold; }
+  .search_small_btn:hover {
+    font-size: 24px !important;
+    line-height: 52px; }
+  .sticky .search_small_btn {
+    font-size: 18px;
+    height: 31px;
+    line-height: 35px;
+    margin-top: 6px;
+    padding-top: 2px; }
+  .sticky .search_small_btn:hover {
+    font-size: 19px !important;
+    height: 31px;
+    padding-top: 0px;
+    padding-bottom: 2px; }
+
 .search_more {
   float: right;
   font-size: 13px;

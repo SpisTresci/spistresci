@@ -1,5 +1,4 @@
-function set_click(){
-}
+function set_click(){}
 
 function onReady()
 {
