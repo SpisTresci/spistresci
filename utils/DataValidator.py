@@ -9,9 +9,10 @@ class DataValidator(object):
     list_of_names = []
     supported_formats = [x for v in book_types.itervalues() for x in v]
     supported_persons = ['author', 'lector', 'redactor', 'translator']
-    format_convertions_rules = []
+ #   format_convertions_rules = []
 
 
+    #note: this should contain lowercased keys
     format_convert_dict = {}
 
     price_re = re.compile(r'^(\d*)([.,]?)(\d{0,2})$')
@@ -32,7 +33,7 @@ class DataValidator(object):
     format_sepeparators = [',', ' ']
 
     def validateFormats(self, dic, id, title):
-        self.convertFormats(dic)
+#        self.convertFormats(dic)
         format_list = []
         if dic.get("formats") != None:
             formats = dic["formats"]
@@ -66,9 +67,9 @@ class DataValidator(object):
         dic['book_type'] = BookType.fromFormats(format_list)
         dic['formats'] = format_list
 
-    def convertFormats(self, dic):
-        for rule in self.format_convertions_rules:
-            dic['formats'] = re.sub(rule[0], rule[1], dic['formats'])
+#    def convertFormats(self, dic):
+#        for rule in self.format_convertions_rules:
+#            dic['formats'] = re.sub(rule[0], rule[1], dic['formats'])
 
 
     def validateISBNs(self, dic, id, title):

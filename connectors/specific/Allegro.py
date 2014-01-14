@@ -1,6 +1,7 @@
 from connectors.common import Ceneo
 from sqlwrapper import *
 from connectors.generic import GenericBook
+import base64
 
 Base = SqlWrapper.getBaseClass()
 
@@ -18,13 +19,19 @@ class Allegro(Ceneo):
         'authors':("./attrs/a[@name='Autor']", ''),
         'isbns':("./attrs/a[@name='ISBN']", ''),
         'publisher':("./attrs/a[@name='Wydawnictwo']", ''),
-        'date':("./attrs/a[@name='Rok_Wydania']", ''),
+        'date':("./attrs/a[@name='Rok_wydania']", ''),
         'formats':("./attrs/a[@name='Format']", ''),
     }
 
-    format_convertions_rules = [
-        (r"MOBI\(Kindle\)", "MOBI")
-    ]
+    format_convert_dict = { 'mobi\(kindle\)':'mobi' }
+
+
+    def adjust_parse(self, dic):
+        isbns = dic.get('isbns')
+        if isbns:
+            dic['isbns'] = isbns.strip()
+
+        dic['b64_url'] = base64.b64encode(dic.get('url',''))
 
 
 class AllegroBook(GenericBook, Base):
@@ -35,6 +42,7 @@ class AllegroBook(GenericBook, Base):
     #price_normal
 
     #url = Column(Unicode(256))
+    #pp_url = Column(Unicode(256))
     availability = Column(Integer)
     #title = Column(Unicode(256))
     category = Column(Unicode(64))
@@ -42,5 +50,5 @@ class AllegroBook(GenericBook, Base):
     #description
     #authors
     #isbns
-    date = Column(Date(64))
+    date = Column(Unicode(4))
     #formats
