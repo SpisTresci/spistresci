@@ -76,9 +76,22 @@ class MiniBook(BaseMini, BaseBook, Base):
             elif specific_book.price < self.master.price: #new price is the lowest price in MasterBook
                 self.master.price = specific_book.price
 
-        for attr in ['title', 'url', 'cover', 'book_type']:
-            if getattr(self, attr) != getattr(specific_book, attr):
-                setattr(self, attr, getattr(specific_book, attr))
+        for attr in [('title', None, True), ('cover', None, True), ('book_type', None, False), ('url', 'pp_url', False)]: #,
+
+            dest_attr_name = attr[0]
+            source_attr_name = attr[1] if attr[1] else attr[0]
+            update_master = attr[2]
+
+            new_val = getattr(specific_book, source_attr_name)
+            new_val = new_val if new_val else getattr(specific_book, dest_attr_name)
+
+            if getattr(self, dest_attr_name) != getattr(specific_book, source_attr_name):
+
+                #update master if it used this attr
+                if update_master and getattr(self, dest_attr_name, None) == getattr(self.master, dest_attr_name, None):
+                    setattr(self.master, dest_attr_name, new_val)
+
+                setattr(self, dest_attr_name, new_val)
 
     @staticmethod
     def getMasterBookCandidates(session, mini_book):
