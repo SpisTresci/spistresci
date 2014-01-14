@@ -51,6 +51,7 @@ urlpatterns = patterns('',
      url(r'^howto/', TemplateView.as_view(template_name='howto.html'), name='howto'),
      url(r'^about-us/', TemplateView.as_view(template_name='about_us.html'), name='about_us'),
      url(r'^contact/', TemplateView.as_view(template_name='contact.html'), name='contact'),
+     url(r'^robots\.txt$', TemplateView.as_view(template_name='robots.txt', content_type='text/plain')),
      url(r'^partners/$', partners),
 )
 
