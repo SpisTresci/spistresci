@@ -289,17 +289,6 @@ input[type="password"] {
   width: 710px;
   margin-bottom: 20px; }
 
-.likebtn {
-  border: none;
-  overflow: hidden;
-  position: relative;
-  top: 28px;
-  left: -150px;
-  width: 145px;
-  height: 21px; }
-  .sticky .likebtn {
-    display: none; }
-
 .search_input {
   background: url(../img/search_input_bg.png) no-repeat;
   width: 504px;
