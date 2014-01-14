@@ -19,6 +19,13 @@ class WolneLektury(JSONConnector):
         'cover' : ('cover', ''),
         'cover_thumb': ('thumbnail', ''),
         'author': ('authors', ''),
+
+        #'xml': ('xml', ''),
+        #'fb2': ('fb2', ''),
+        'mobi': ('mobi', ''),
+        'pdf': ('pdf', ''),
+        #'txt': ('txt', ''),
+        'epub': ('epub', ''),
      }
 
     def get_book_name_from_url(self, book_url):
@@ -107,6 +114,8 @@ class WolneLektury(JSONConnector):
     def validateFormats(self, dic, id, title):
         formats = [f for f in self.supported_formats if dic.get(f, None)]
         dic['formats'] = formats
+        from models.BookType import BookType
+        dic['book_type'] = BookType.fromFormats(formats)
 
 #TODO: add external_id book model
 class WolneLekturyBook(GenericBook, Base):
