@@ -14,7 +14,7 @@ class Allegro(Ceneo):
         'availability': ('@avail', ''),
         'title':('./name', ''),
         'category':('./cat', ''),
-        'cover':("./imgs/main[@url]", ''),
+        'cover': ('./imgs/main/@url', ''),
         'description':('./desc', ''),
         'authors':("./attrs/a[@name='Autor']", ''),
         'isbns':("./attrs/a[@name='ISBN']", ''),
