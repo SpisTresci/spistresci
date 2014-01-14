@@ -130,18 +130,19 @@ group_of_books=[
 
 
 from spistresci.blogger.models import BookRecommendation, BloggerProfile
+from spistresci.models import User
 
 RECOMENDATIONS_ON_FRONTPAGE = 4
 
 def getRandomReviews():
 
-    bloggers = BloggerProfile.objects.order_by('?')[:RECOMENDATIONS_ON_FRONTPAGE]
+    from django.db.models import Count
+    bloggers = BloggerProfile.objects.annotate(number_of_recs=Count('user__recommendations')).filter(number_of_recs__gt=0).order_by('?')[:RECOMENDATIONS_ON_FRONTPAGE]
 
     dic = {"blogger_reviews":[]}
 
     for blogger in bloggers:
-        if blogger.user.recommendations.count() > 0:
-            dic["blogger_reviews"].append({"blogger": blogger, "recomendation": blogger.user.recommendations.order_by('?')[0]})
+        dic["blogger_reviews"].append({"blogger": blogger, "recomendation": blogger.user.recommendations.order_by('?')[0]})
 
     return dic
 
