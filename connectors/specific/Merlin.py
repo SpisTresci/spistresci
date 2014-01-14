@@ -31,6 +31,10 @@ class Merlin(XMLConnector):
         'formats': ('./nosnik', ''),
     }
 
+    #HACK, 0 DAY FIX, #TODO: REMOVE T496
+    def adjust_parse(self, dic):
+        dic['url'] = 'http://merlin.pl//download/product/%s,%s.html' % (dic['section_id'], dic['external_id'])
+
     def validate(self, dic):
         self.validateTitle(dic)
         super(Merlin, self).validate(dic)
