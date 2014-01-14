@@ -20,7 +20,10 @@ class STSearchView(SearchView):
         self.request = request
         self.parse_get_args()
         if 'orderby' in self.get_args:
-            self.searchqueryset=STSearchQuerySet().order_by(*self.get_args['orderby'])
+            self.searchqueryset = self.searchqueryset.order_by(*self.get_args['orderby'])
+        else:
+            self.searchqueryset = self.searchqueryset.clear_order_by()
+
         return super(STSearchView, self).__call__(request)
 
     class ConditionBuilder(object):
@@ -366,6 +369,19 @@ class STSearchQuerySet(SearchQuerySet):
     def __init__(self, using=None, query=None):
         self.filtered_offset = 0
         return super(STSearchQuerySet, self).__init__(using, query)
+
+    def order_by(self, *args):
+        clone = self.clear_order_by()
+        for field in args:
+            clone.query.add_order_by(field)
+
+        return clone
+
+    def clear_order_by(self):
+        clone = self._clone()
+        clone.query.clear_order_by()
+        return clone
+
 
 def hide_menu(request, value):
     if not request.is_ajax() or not request.method=='POST':
