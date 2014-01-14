@@ -15,7 +15,7 @@ class DataValidator(object):
     #note: this should contain lowercased keys
     format_convert_dict = {}
 
-    price_re = re.compile(r'^(\d*)([.,]?)(\d{0,2})$')
+    price_re = re.compile(r'^(\d*)([.,]?)(\d{0,2})(\d*)$')
 
     def validate(self, dic):
         id = dic.get('external_id')
@@ -138,6 +138,7 @@ class DataValidator(object):
                 zl = int(('%1s'%price_match.groups()[0]).replace(' ','0'))*100
                 gr = int(('%2s'%price_match.groups()[2]).replace(' ','0'))
                 dic[price_tag_name] = unicode(zl+gr)
+                self.erratum_logger.debug('Connector %s. Validate %s. Price regex for id %s title %s matched following: %s' % (self.name, price_tag_name, id, title, list(price_match.groups()) ))
         else:
             dic[price_tag_name] = unicode(default_price)
 

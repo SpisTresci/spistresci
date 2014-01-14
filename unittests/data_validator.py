@@ -88,6 +88,12 @@ class TestDataValidator(object):
         yield self._test_validate_helper_eq, "Price", {"price":",99"}, {"price":"99"}
         yield self._test_validate_helper_eq, "Price", {"price":".00"}, {"price":"0"}
 
+        #zinamon prices fix - truncate prices to gr
+        yield self._test_validate_helper_eq, "Price", {'price':'2.120001'}, {'price':'212'}
+        yield self._test_validate_helper_eq, "Price", {'price':'2.120099'}, {'price':'212'}
+        yield self._test_validate_helper_eq, "Price", {'price':'.1200'}, {'price':'12'}
+        yield self._test_validate_helper_eq, "Price", {'price':'01231321.1200'}, {'price':'123132112'}
+
         yield self._test_validate_helper_eq, "Price", {"price":"9,99"}, {"price":"999"}
         yield self._test_validate_helper_eq, "Price", {"price":"734,00"}, {"price":"73400"}
         yield self._test_validate_helper_eq, "Price", {"price":"1,23"}, {"price":"123"}
@@ -100,12 +106,9 @@ class TestDataValidator(object):
 
         yield self._test_validate_helper_warning, "Price", {"price":"-5"}
         yield self._test_validate_helper_warning, "Price", {"price":"-5.57"}
-        yield self._test_validate_helper_warning, "Price", {"price":"4.999"}
-        yield self._test_validate_helper_warning, "Price", {"price":"4.999"}
         yield self._test_validate_helper_warning, "Price", {"price":"0,,01"}
         yield self._test_validate_helper_warning, "Price", {"price":"5,574,547"}
         yield self._test_validate_helper_warning, "Price", {"price":"5.574.547"}
-        yield self._test_validate_helper_warning, "Price", {"price":"9.123456"}
         yield self._test_validate_helper_warning, "Price", {"price":"20 zl"}
 
     def test_validate_formats(self):
