@@ -1,4 +1,6 @@
 {% extends "base.html" %}
+
+{% load staticfiles %}
 {% load str_tags %}
 
 {% block title %}Spis Treści - Przekierowanie na stronę księgarni...{% endblock title %}
@@ -34,13 +36,36 @@
   }
 
   $(function(){
-      setTimeout("redirect();", 3000);
+      setTimeout("redirect();", 1000);
   });
 
 </script>
+
+<style>
+  #message_container {
+    display: block;
+    margin: 160px auto;
+    width: 340px;
+    text-align: center;
+    line-height: 32px;
+    vertical-align: top;
+    font-family: Arial;
+    font-size: 16px;
+    color: #666666;
+  }
+
+  #spinner {
+    margin-left: 10px;
+  }
+</style>
 {% endblock js %}
 
 {% block menu %}{% endblock menu %}
 {% block searchbox %}{% endblock searchbox %}
 {% block footer %}{% endblock footer %}
-{% block container %}Przekierowanie na stronę księgarni...{% endblock container %}
+{% block container %}
+    <div id="message_container" style="">
+      Przekierowanie na stronę księgarni
+      <img id="spinner" id="loading_img" src="{% static "img/loader.gif" %}" />
+    </div>
+{% endblock container %}
