@@ -122,7 +122,7 @@ class RecommendationPreviewIframe(BaseBloggerView, BaseFormView):
         obj = dict(title=u"Tytuł rekomendacji",
                    content=u"Przykładowa treść rekomendacji książki. "*10,
                    mark='Słowna ocena książki',
-                   website_path=self.blogger_profile.website,
+                   website_path=self.blogger_profile.website or '',
                    book_path="",
                    promote_rate=1,
                    status=1)
