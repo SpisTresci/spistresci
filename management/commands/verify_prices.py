@@ -40,7 +40,7 @@ class Command(BaseCommand):
     xpaths = {
         'BezKartek': "//span[@class='cena_price']/text()",
         'Selkar': "//span[@class='price']/text()",
-        'Gandalf': "//span[@itemprop='price']/text()",
+        'Gandalf': "//p[@class='old_price_big']/span[@class='new_price']/text()",
         "Zinamon": "//span[@class='cenaNew']/text()",
         "Virtualo": "//span[@class='price']/text()",
 
