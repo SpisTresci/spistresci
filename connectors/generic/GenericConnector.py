@@ -7,6 +7,7 @@ import os.path
 import shutil
 import re
 from datetime import datetime
+import base64
 import time
 
 import ConfigParser
@@ -131,6 +132,8 @@ class GenericConnector(GenericBase, DataValidator):
         self.filters_config = self.config.get('filters', {})
         self.fulfill = self.config.get('fulfill')
         self.pp_url = self.config.get('pp_url')
+        self.password = self.config.get('password')
+        self.username = self.config.get('username')
         self.inner_merge = self.InnerMerge.int(self.config.get('inner_merge', 'NONE'))
         if type(self.filters_config) is dict:
             self.filters = self.filters_config.get('')
@@ -389,14 +392,18 @@ class GenericConnector(GenericBase, DataValidator):
                     self.max_len[key] = len(dic[key])
                     self.max_len_entry[key] = dic[key]
 
-    def downloadFile(self, url=None, filename=None, headers=None):
+    def downloadFile(self, url=None, filename=None, headers={}):
         if not url:
             url = self.url
-        if headers:
-            req = urllib2.Request(url, headers=headers)
-            u = urllib2.urlopen(req)
-        else:
-            u = urllib2.urlopen(url)
+
+        req = urllib2.Request(url, headers=headers)
+
+        if self.password and self.username:
+            base64string = base64.encodestring('%s:%s' % (self.username, self.password)).replace('\n', '')
+            req.add_header("Authorization", "Basic %s" % base64string)
+
+        u = urllib2.urlopen(req)
+
         if self.backup_dir and not os.path.exists(self.backup_dir):
 
             os.makedirs(self.backup_dir)

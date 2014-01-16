@@ -1,7 +1,6 @@
 from connectors.common import Ceneo
 from sqlwrapper import *
 from connectors.generic import GenericBook
-import base64
 
 Base = SqlWrapper.getBaseClass()
 
@@ -30,9 +29,6 @@ class Allegro(Ceneo):
         isbns = dic.get('isbns')
         if isbns:
             dic['isbns'] = isbns.strip()
-
-        dic['b64_url'] = base64.b64encode(dic.get('url',''))
-
 
 class AllegroBook(GenericBook, Base):
     #id = Column(Integer, primary_key = True)

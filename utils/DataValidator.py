@@ -3,6 +3,7 @@ from pyisbn import *
 import glob
 from models.BookType import BookType
 from models.BookType import book_types
+import base64
 
 class DataValidator(object):
 
@@ -22,6 +23,7 @@ class DataValidator(object):
         title = dic.get('title')
         self.validateFormats(dic, id, title)
         self.validateISBNs(dic, id, title)
+        self.validateURL(dic, id, title)
         self.validatePrice(dic, id, title)
         self.validatePrice(dic, id, title, 'price_normal', -1)
         self.validateSize(dic, id, title)
@@ -123,6 +125,11 @@ class DataValidator(object):
                 isbn_list.append(isbn_dic)
 
         dic['isbns'] = isbn_list
+
+
+    def validateURL(self, dic, id, title):
+        dic['b64_url'] = base64.b64encode(dic.get('url',''))
+
 
     def validatePrice(self, dic, id, title, price_tag_name = 'price', default_price=0):
         if type(default_price) is not int:
