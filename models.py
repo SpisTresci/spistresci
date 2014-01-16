@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from django.db import models
 from django.contrib.auth import models as auth_models
 from django.contrib.auth.hashers import *
@@ -153,3 +155,65 @@ class BookDescription(models.Model):
     description = models.CharField(max_length=20000L, blank=True)
     class Meta:
         db_table = 'BookDescription'
+
+
+class Miniauthor(models.Model):
+    id = models.IntegerField(primary_key=True)
+    name = models.CharField(max_length=255L, blank=True)
+    firstname = models.CharField(max_length=32L, db_column='firstName', blank=True) # Field name made lowercase.
+    middlename = models.CharField(max_length=32L, db_column='middleName', blank=True) # Field name made lowercase.
+    lastname = models.CharField(max_length=32L, db_column='lastName', blank=True) # Field name made lowercase.
+    name_simplified = models.CharField(max_length=255L, blank=True)
+    master = models.ForeignKey(MasterAuthor, null=True, blank=True)
+    firstname_soundex = models.IntegerField(null=True, db_column='firstName_soundex', blank=True) # Field name made lowercase.
+    middlename_soundex = models.IntegerField(null=True, db_column='middleName_soundex', blank=True) # Field name made lowercase.
+    lastname_soundex = models.IntegerField(null=True, db_column='lastName_soundex', blank=True) # Field name made lowercase.
+    bookstore = models.CharField(max_length=16L, blank=True)
+    bookstore_author_id = models.IntegerField(null=True, blank=True)
+
+    class Meta:
+        db_table = 'MiniAuthor'
+
+
+
+class Minibook(models.Model):
+    id = models.IntegerField(primary_key=True)
+    title = models.CharField(max_length=512L, blank=True)
+    cover = models.CharField(max_length=512L)
+    price = models.IntegerField()
+    format_cd = models.IntegerField(null=True, blank=True)
+    format_cd_mp3 = models.IntegerField(null=True, blank=True)
+    format_dvd = models.IntegerField(null=True, blank=True)
+    format_epub = models.IntegerField(null=True, blank=True)
+    format_fb2 = models.IntegerField(null=True, blank=True)
+    format_ks = models.IntegerField(null=True, blank=True)
+    format_mobi = models.IntegerField(null=True, blank=True)
+    format_mp3 = models.IntegerField(null=True, blank=True)
+    format_pdf = models.IntegerField(null=True, blank=True)
+    format_txt = models.IntegerField(null=True, blank=True)
+    format_xml = models.IntegerField(null=True, blank=True)
+    master = models.ForeignKey(MasterBook, null=True, blank=True, related_name="minibooks")
+    url = models.CharField(max_length=512L)
+    bookstore = models.CharField(max_length=16L)
+    bookstore_book_id = models.IntegerField()
+    authors = models.ManyToManyField(Miniauthor, through='spistresci.MiniBooksMiniAuthors')
+    #book_type = models.ForeignKey(Booktype, null=True, blank=True)
+    #description = models.ForeignKey(Bookdescription, null=True, blank=True)
+    class Meta:
+        db_table = 'MiniBook'
+
+    def get_price_display(self):
+        return u'%.2f zł' % (self.price/100.0,)
+
+    def get_author_names(self):
+        return set(map(lambda x: str(x), self.authors.all()))
+
+    def get_authors_display(self):
+        return ', '.join(self.get_author_names())
+
+
+class MiniBooksMiniAuthors(models.Model):
+    book = models.ForeignKey(Minibook, null=True, blank=True)
+    author = models.ForeignKey(Miniauthor, null=True, blank=True)
+    class Meta:
+        db_table = 'mini_books_mini_authors'
