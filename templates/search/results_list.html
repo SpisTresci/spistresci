@@ -13,8 +13,13 @@
             {% include 'search/product.html' %}
           {% empty %}
           <div class="no_results">
+          {% if not update_in_progress %}
             <p class="msg">Brak pasujących ofert.</p>
             <p class="submsg">Jeśli znasz księgarnie posiadające oferty spełniające wybrane przez Ciebie kryteria, możesz nam pomóc nawiązać kontakt.</p>
+          {% else %}
+            <p class="msg">Przerwa serwisowa</p>
+            <p class="submsg">System jest obecnie w trakcie aktuliazcji.</p>
+          {% endif %}
           </div>
           {% endfor %}
 
