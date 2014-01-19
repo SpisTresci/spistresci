@@ -1,0 +1,82 @@
+
+
+{% if errors %}
+	<p>Nieprawidłowe ceny</p>
+
+	{% for bookstore, error_list in errors.items %}
+		<hr/>
+		<h3>{{ bookstore }}</h3>
+		<table>
+			<thead>
+				<tr>
+					<th>MasterBook ID</th>
+					<th>Tutuł</th>
+					<th colspan="2">Cena u nas</th>
+					<th colspan="2">Cena tam</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				{% for error in error_list %}
+					<tr>
+						<td>
+							{{ error.book.master.id }}
+						</td>
+						<td>
+
+							{{ error.book.title|truncatechars:30 }}
+						</td>
+						<td>
+							{{ error.book.price }}
+						</td>
+						<td>
+							<a href="http://spistresci.pl/{% url 'book_page' error.book.master.id %}">spistresci</a>
+
+						</td>
+						<td>
+							{{ error.page_price }}
+						</td>
+						<td>
+							 <a href="{{ error.book.url }}">{{ bookstore }}</a>
+						</td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	{% endfor %}
+{% endif %}
+
+
+{% if invalid_links %}
+	<p>Nieprawidłowe linki</p>
+
+	{% for bookstore, book_list in invalid_links.items %}
+		<hr/>
+		<h3>{{ bookstore }}</h3>
+		<table>
+			<thead>
+				<tr>
+					<th>MasterBook ID</th>
+					<th>Tutuł</th>
+					<th>Uszkodzony link(?)</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				{% for book in book_list %}
+					<tr>
+						<td>
+							{{ book.master.id }}
+						</td>
+						<td>
+							<a href="http://spistresci.pl/{% url 'book_page' book.master.id %}">{{ book.title|truncatechars:30 }}</a>
+						</td>
+						<td>
+							<a href="{{ book.url }}">{{ bookstore }}</a>
+						</td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	{% endfor %}
+{% endif %}
