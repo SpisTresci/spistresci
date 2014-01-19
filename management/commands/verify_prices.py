@@ -52,6 +52,11 @@ class Command(BaseCommand):
 
     xpaths = {
         'BezKartek': "//span[@class='cena_price']/text()",
+        "ZielonaSowa": '',
+        "Legimi": '',
+        "Tmc": '',
+        'Audioteka': '',
+        'Bookoteka': '',
         'Selkar': "//span[@class='price']/text()",
         'Gandalf': "//p[@class='old_price_big']/span[@class='new_price']/text()",
         "Zinamon": "//span[@class='cenaNew']/text()",
@@ -62,61 +67,78 @@ class Command(BaseCommand):
         "Nexto": "//strong[@class='price']/text()",
         "Wydaje": "//div[@itemprop='offerDetails']//big[@class='price-ebook']/text()",
         "Merlin": "//span[@class='price']/text()",
-
-        # TODO
-        # "Legimi": "//span[@itemprop='price']/text()", # redirection
-        # "eClicto": "//span[@class='red strong fhuge']/text()",
-        # "TaniaKsiazka"
-        # "ebookpoint"
-        # "ZielonaSowa": '' # no valid links in db?
+        "eBookpoint": "//div[@itemprop='price']/text()",
+        "Latarnik": "//td[@class='basket']//div[@class='price']//em/text()",
+        "Czytio": "//span[@class='price']/text()",
+        "Allegro": "//div[@class='book-price']/span/text()",
+        "Wikibooks": "",  # free ebooks
+        "OnePress": "//div[@itemprop='price']/text()",
+        "Zantes": "//span[@class='price_now']/strong/text()",
+        "Koobe": "//span[@itemprop='price']/text()",
+        "BooksOn": "",  # no valid links in db?
+        "Abooki": "",  # js redirection? "//div[@class='price']/text()",
+        "Helion": "//div[@id='box_ebook']/div[@class='price']/span/text()",
+        "KodeksyWmp3": "",  # js redirection? //span[@class='price_view_span']/span/text()
+        "WolneLektury": "",  # site is down
+        "ebooks43": "",  # free ebooks
+        "Audiobook": "",  # no valid links in db?
+        "Audeo": "",  # no valid links in db?
+        "DlaBystrzakow": "",
+        'Sensus': "//div[@id='box_ebook']/div[@class='price']/span/text()",
+        'Fabryka': "//p[@class='new-price']/text()",
+        'FantastykaPolska': "",  # free ebooks?
+        'eClicto': "",  # special characters in urls
+        'TaniaKsiazka': "",  # js redirection?
+        'DobryEbook': ["//div[@class='wersjaElektro']/p[@class='cena']/text()",
+            "//div[@class='wersjaElektro']/div[@class='promocja']/text()"],
+        'Pokatne': "",  # free ebooks?
+        'Woblink': "//div[@id='NCENA']/text()",
+        'Ksiazki': ["//span[@class='newPrice new-price']/text()",
+            "//span[@class='newPrice single-price']/text()"],
+        'ZloteMysli': "//p[@class='price']/ins/text()",
+        'Empik': "",
+        'EscapeMagazine': "//span[@class='price_now']/strong/text()",
+        'CzeskieKlimaty': "",  # invalid links in db?
+        'WolneEbooki': "",
     }
 
     # extra converters for price fetch from bookstore's pages
     price_converters = {
         "Wydaje": lambda x: x.replace(',-', ',00'),
         "Merlin": lambda x: x if ',' in x else str(x)+'00'
-
     }
 
     def handle(self, *args, **options):
+        self.set_attributes(options)
+
         self.errors = defaultdict(list)
         self.invalid_links = defaultdict(list)
 
-        bookstore = options.get('bookstore')
-        if bookstore:
-            if not bookstore in self.xpaths.keys():
-                print 'Bookstore name is invalid.'
-                print 'Choices are: ' + ', '.join(self.xpaths.keys())
-                return
-            bookstores = [bookstore]
-        else:
-            bookstores = self.xpaths.keys()
-
-        book_limit = options.get('number')
-        if book_limit:
-            self.book_limit = book_limit
-        print self.book_limit
-
-        for bookstore in bookstores:
+        for bookstore in self.bookstores:
             print '*'*40
             print bookstore
             xpath = self.xpaths.get(bookstore)
             minibooks = Minibook.objects.filter(bookstore=bookstore).order_by('?')[:self.book_limit]
 
             for book in minibooks:
-
-                page_handler = urllib.urlopen(book.url)
-                page_content = page_handler.read()
-
-                parser = etree.HTMLParser()
-                root = etree.XML(page_content, parser=parser)
+                print book.url
                 try:
-                    price_str = root.xpath(xpath)[0]
-                    price_converter = self.price_converters.get(bookstore)
-                    if price_converter:
-                        price_str = price_converter(price_str)
-                    price = int(''.join(re.findall(r'\d+', price_str)))
+                    page_handler = urllib.urlopen(book.url)
                 except:
+                    self.invalid_links[bookstore].append(book)
+                    continue
+                print 'Status code:', page_handler.getcode()
+                if page_handler.getcode() not in (200, 302):
+                    self.invalid_links[bookstore].append(book)
+                    continue
+
+                if not xpath:
+                    continue
+
+                page_content = page_handler.read()
+                price = self.fetch_price(page_content, bookstore)
+
+                if price == None:
                     self.invalid_links[bookstore].append(book)
                     continue
 
@@ -128,9 +150,45 @@ class Command(BaseCommand):
                     print '%s, cena na stronie %s, cena w bazie %s' % (book.title, price, book.price)
 
         self.print_errors()
-        email_admins = options.get('email_admins')
-        if email_admins:
+        if self.email_admins:
             self.send_errors()
+
+    def set_attributes(self, options):
+        bookstore = options.get('bookstore')
+        if bookstore:
+            if not bookstore in self.xpaths.keys():
+                print 'Bookstore name is invalid.'
+                print 'Choices are: ' + ', '.join(self.xpaths.keys())
+                return
+            self.bookstores = [bookstore]
+        else:
+            self.bookstores = self.xpaths.keys()
+
+        book_limit = options.get('number')
+        if book_limit:
+            self.book_limit = book_limit
+        self.email_admins = options.get('email_admins')
+
+    def fetch_price(self, page_content, bookstore):
+        parser = etree.HTMLParser()
+        root = etree.XML(page_content, parser=parser)
+        xpaths = self.xpaths.get(bookstore)
+        if isinstance(xpaths, str):
+            xpaths = [xpaths]
+        price = None
+
+        for xpath in xpaths:
+            try:
+                price_str = root.xpath(xpath)[0]
+                price_converter = self.price_converters.get(bookstore)
+                if price_converter:
+                    price_str = price_converter(price_str)
+                price = int(''.join(re.findall(r'\d+', price_str)))
+                return price
+            except:
+                # can't find price, seems link is invalid
+                continue
+        return price
 
     def print_errors(self):
         print '*'*40
