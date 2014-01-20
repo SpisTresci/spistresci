@@ -143,9 +143,10 @@ class DataValidator(object):
                 dic[price_tag_name] = unicode(default_price)
             else:
                 zl = int(('%1s'%price_match.groups()[0]).replace(' ','0'))*100
-                gr = int(('%2s'%price_match.groups()[2]).replace(' ','0'))
+                gr = int(('%-2s'%price_match.groups()[2]).replace(' ','0'))
+
                 dic[price_tag_name] = unicode(zl+gr)
-                self.erratum_logger.debug('Connector %s. Validate %s. Price regex for id %s title %s matched following: %s' % (self.name, price_tag_name, id, title, list(price_match.groups()) ))
+                self.erratum_logger.debug('Connector %s. Validate %s. Price regex for id %s title %s matched following: %s, detected price: %s' % (self.name, price_tag_name, id, title, list(price_match.groups()), dic[price_tag_name]))
         else:
             dic[price_tag_name] = unicode(default_price)
 
