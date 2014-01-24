@@ -128,8 +128,7 @@ class DataValidator(object):
 
 
     def validateURL(self, dic, id, title):
-        dic['b64_url'] = base64.b64encode(dic.get('url',''))
-
+        dic['b64_url'] = base64.b64encode(dic.get('url','').encode('utf-8'))
 
     def validatePrice(self, dic, id, title, price_tag_name = 'price', default_price=0):
         if type(default_price) is not int:
