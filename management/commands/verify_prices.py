@@ -52,13 +52,21 @@ class Command(BaseCommand):
 
     xpaths = {
         'BezKartek': "//span[@class='cena_price']/text()",
+        # ok
+
         "ZielonaSowa": '',
+        # js redirection - return always 200
+        # bookstore's page gives 404
+
+        "Merlin": "//span[@class='price']/text()",
+
         "Legimi": '',
         "Tmc": '',
         'Audioteka': '',
         'Bookoteka': '',
         'Selkar': "//span[@class='price']/text()",
-        'Gandalf': "//p[@class='old_price_big']/span[@class='new_price']/text()",
+        'Gandalf': ["//p[@class='old_price_big']/span[@class='new_price']/text()",
+            "//p[@class='new_price_big']/span[@itemprop='price']/text()"],
         "Zinamon": "//span[@class='cenaNew']/text()",
         "Virtualo": "//span[@class='price']/text()",
         "Bezdroza": "//div[@itemprop='price']/text()",
@@ -66,7 +74,6 @@ class Command(BaseCommand):
         "Publio": "//div[@id='buyOptions']//ins/text()",
         "Nexto": "//strong[@class='price']/text()",
         "Wydaje": "//div[@itemprop='offerDetails']//big[@class='price-ebook']/text()",
-        "Merlin": "//span[@class='price']/text()",
         "eBookpoint": "//div[@itemprop='price']/text()",
         "Latarnik": "//td[@class='basket']//div[@class='price']//em/text()",
         "Czytio": "//span[@class='price']/text()",
