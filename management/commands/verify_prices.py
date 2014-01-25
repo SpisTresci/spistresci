@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 
-import urllib
 import re
 from datetime import datetime
 from collections import defaultdict
@@ -12,6 +11,7 @@ from django.core.mail import mail_admins
 from django.template.loader import render_to_string
 
 from lxml import etree
+import requests
 
 from spistresci.common.helpers import send_email
 from spistresci.models import Minibook
@@ -72,7 +72,7 @@ class Command(BaseCommand):
         "Bezdroza": "//div[@itemprop='price']/text()",
         "Septem": "//div[@itemprop='price']/text()",
         "Publio": "//div[@id='buyOptions']//ins/text()",
-        "Nexto": "//strong[@class='price']/text()",
+        "Nexto": "//div[@class='buybox-in issue']//strong[@class='price']/text()",
         "Wydaje": "//div[@itemprop='offerDetails']//big[@class='price-ebook']/text()",
         "eBookpoint": "//div[@itemprop='price']/text()",
         "Latarnik": "//td[@class='basket']//div[@class='price']//em/text()",
@@ -129,24 +129,19 @@ class Command(BaseCommand):
 
             for book in minibooks:
                 print book.url
-                try:
-                    page_handler = urllib.urlopen(book.url)
-                except:
-                    self.invalid_links[bookstore].append(book)
-                    continue
-                print 'Status code:', page_handler.getcode()
-                if page_handler.getcode() not in (200, 302):
-                    self.invalid_links[bookstore].append(book)
+
+                page_content = self.get_page_content(book, bookstore)
+
+                if not page_content:
                     continue
 
                 if not xpath:
                     continue
 
-                page_content = page_handler.read()
                 price = self.fetch_price(page_content, bookstore)
-
                 if price == None:
-                    self.invalid_links[bookstore].append(book)
+                    item = dict(book=book, reason=u"Nie można znaleźć ceny")
+                    self.invalid_links[bookstore].append(item)
                     continue
 
                 if book.price == price:
@@ -175,6 +170,35 @@ class Command(BaseCommand):
         if book_limit:
             self.book_limit = book_limit
         self.email_admins = options.get('email_admins')
+
+    def get_page_content(self, book, bookstore):
+        custom_session = getattr(self, 'get_%s_session' % bookstore.lower(), None)
+        if custom_session:
+            session = custom_session()
+        else:
+            session = requests.session()
+
+        try:
+            response = session.get(book.url)
+        except Exception as inst:
+            item = dict(book=book, reason=str(inst))
+            self.invalid_links[bookstore].append(item)
+            return
+
+        print 'Status code:', response.status_code
+        if response.status_code not in (200, 302):
+            item = dict(book=book, reason="Status odpowiedzi: %s" % response.status_code)
+            self.invalid_links[bookstore].append(item)
+            return
+        return response.content
+
+    def get_nexto_session(self):
+        session = requests.session()
+        url = 'https://www.nexto.pl/klub/login.xml'
+        data = {'remember': 0, 'password': 'pomyslowo42', 'extraParam': '',
+            'email': 'mateusz.sikora@spistresci.pl', 'fb_form_id': 'login'}
+        session.post(url, data=data)
+        return session
 
     def fetch_price(self, page_content, bookstore):
         parser = etree.HTMLParser()
@@ -211,16 +235,21 @@ class Command(BaseCommand):
         print '*'*40
         print 'NIEPRAWIDLOWE LINKI'
         if self.invalid_links:
-            for bookstore, books in self.invalid_links.iteritems():
+            for bookstore, items in self.invalid_links.iteritems():
                 print bookstore
-                for book in books:
-                    print '(id: %s) %s' % (book.id, book.url)
+                for item in items:
+                    print '(id: %s) %s, powod: %s' % (item['book'].id, item['book'].url, item['reason'])
         else:
             print 'brak'
 
     def send_errors(self):
         if self.errors or self.invalid_links:
-            context = dict(errors=dict(self.errors),
-                invalid_links=dict(self.invalid_links))
+
+            bookstores = dict()
+            for bookstore in set(self.errors.keys() + self.invalid_links.keys()):
+                item = dict(errors=self.errors.get(bookstore, []),
+                    invalid_links=self.invalid_links.get(bookstore, []))
+                bookstores[bookstore] = item
+            context = dict(bookstores=bookstores)
             message = render_to_string(self.template_name, context)
             mail_admins(u'Raport nieprawidłowych cen i linków', '', html_message=message)

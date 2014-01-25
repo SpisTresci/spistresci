@@ -1,11 +1,9 @@
 
+{% for bookstore, item_list in bookstores.items %}
+	<h3>{{ bookstore }}</h3>
 
-{% if errors %}
-	<p>Nieprawidłowe ceny</p>
-
-	{% for bookstore, error_list in errors.items %}
-		<hr/>
-		<h3>{{ bookstore }}</h3>
+	{% if item_list.errors %}
+		<p>Nieprawidłowe ceny</p>
 		<table>
 			<thead>
 				<tr>
@@ -17,7 +15,7 @@
 			</thead>
 
 			<tbody>
-				{% for error in error_list %}
+				{% for error in item_list.errors %}
 					<tr>
 						<td>
 							{{ error.book.master.id }}
@@ -43,40 +41,40 @@
 				{% endfor %}
 			</tbody>
 		</table>
-	{% endfor %}
-{% endif %}
+	{% endif %}
 
+	{% if item_list.invalid_links %}
+		<p>Nieprawidłowe linki</p>
 
-{% if invalid_links %}
-	<p>Nieprawidłowe linki</p>
-
-	{% for bookstore, book_list in invalid_links.items %}
-		<hr/>
-		<h3>{{ bookstore }}</h3>
 		<table>
 			<thead>
 				<tr>
 					<th>MasterBook ID</th>
 					<th>Tutuł</th>
 					<th>Uszkodzony link(?)</th>
+					<th>Powód</th>
 				</tr>
 			</thead>
 
 			<tbody>
-				{% for book in book_list %}
+				{% for item in item_list.invalid_links %}
 					<tr>
 						<td>
-							{{ book.master.id }}
+							{{ item.book.master.id }}
 						</td>
 						<td>
-							<a href="http://spistresci.pl/{% url 'book_page' book.master.id %}">{{ book.title|truncatechars:30 }}</a>
+							<a href="http://spistresci.pl/{% url 'book_page' item.book.master.id %}">{{ item.book.title|truncatechars:30 }}</a>
 						</td>
 						<td>
-							<a href="{{ book.url }}">{{ bookstore }}</a>
+							<a href="{{ item.book.url }}">{{ bookstore }}</a>
+						</td>
+						<td>
+							{{ item.reason }}
 						</td>
 					</tr>
 				{% endfor %}
 			</tbody>
 		</table>
-	{% endfor %}
-{% endif %}
+	{% endif %}
+	<hr/>
+{% endfor %}
