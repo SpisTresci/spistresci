@@ -38,9 +38,8 @@ class BloggerProfile(models.Model):
 
     def get_recommendation_statuses(self):
         statuses = [BookRecommendation.STATUS_NEW,
-                    BookRecommendation.STATUS_FOR_PUBLICATION]
-        if self.publication_available:
-            statuses.append(BookRecommendation.STATUS_PUBLICATED)
+                    BookRecommendation.STATUS_PUBLICATED if self.publication_available else BookRecommendation.STATUS_FOR_PUBLICATION
+        ]
         choices = dict(BookRecommendation.STATUS_CHOICES)
         return map(lambda x: (x, choices[x]), statuses)
 
@@ -65,7 +64,7 @@ class BookRecommendation(models.Model):
 
     STATUS_CHOICES = (
         (STATUS_NEW, 'wersja robocza'),
-        (STATUS_FOR_PUBLICATION, 'do publikacji'),
+        (STATUS_FOR_PUBLICATION, 'do akceptacji'),
         (STATUS_PUBLICATED, 'opublikowana')
     )
 
