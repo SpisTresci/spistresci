@@ -20,3 +20,4 @@ django-dajax==0.9.2
 django-dajaxice==0.5.5
 PIL==1.1.7
 django-imagekit==3.0.4
+selenium==2.39.0

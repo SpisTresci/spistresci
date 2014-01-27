@@ -12,6 +12,9 @@ from django.template.loader import render_to_string
 
 from lxml import etree
 import requests
+from selenium import webdriver
+from selenium.webdriver.support.wait import WebDriverWait
+from selenium.common.exceptions import WebDriverException
 
 from spistresci.common.helpers import send_email
 from spistresci.models import Minibook
@@ -83,7 +86,7 @@ class Command(BaseCommand):
         "Zantes": "//span[@class='price_now']/strong/text()",
         "Koobe": "//span[@itemprop='price']/text()",
         "BooksOn": "",  # no valid links in db?
-        "Abooki": "",  # js redirection? "//div[@class='price']/text()",
+        "Abooki": "//div[@id='ProductFull']//div[@class='price']/text()",  # js redirection?
         "Helion": "//div[@id='box_ebook']/div[@class='price']/span/text()",
         "KodeksyWmp3": "",  # js redirection? //span[@class='price_view_span']/span/text()
         "WolneLektury": "",  # site is down
@@ -109,6 +112,8 @@ class Command(BaseCommand):
         'WolneEbooki': "",
     }
 
+    test_with_selenium = ['Abooki',]
+
     # extra converters for price fetch from bookstore's pages
     price_converters = {
         "Wydaje": lambda x: x.replace(',-', ',00'),
@@ -120,6 +125,7 @@ class Command(BaseCommand):
 
         self.errors = defaultdict(list)
         self.invalid_links = defaultdict(list)
+        self.driver = webdriver.Firefox()
 
         for bookstore in self.bookstores:
             print '*'*40
@@ -130,7 +136,10 @@ class Command(BaseCommand):
             for book in minibooks:
                 print book.url
 
-                page_content = self.get_page_content(book, bookstore)
+                if bookstore in self.test_with_selenium:
+                    page_content = self.get_page_content_with_selenium(book, bookstore)
+                else:
+                    page_content = self.get_page_content(book, bookstore)
 
                 if not page_content:
                     continue
@@ -154,6 +163,7 @@ class Command(BaseCommand):
         self.print_errors()
         if self.email_admins:
             self.send_errors()
+        self.driver.quit()
 
     def set_attributes(self, options):
         bookstore = options.get('bookstore')
@@ -200,6 +210,19 @@ class Command(BaseCommand):
         session.post(url, data=data)
         return session
 
+    def get_page_content_with_selenium(self, book, bookstore):
+        def readystate_complete(d):
+            return d.execute_script("return document.readyState") == "complete" and \
+                'www.abooki.pl' in d.current_url
+        try:
+            self.driver.get(book.url)
+            WebDriverWait(self.driver, 30).until(readystate_complete)
+        except WebDriverException:
+            pass
+        elem = self.driver.find_element_by_xpath("//*")
+        page_content = elem.get_attribute("outerHTML")
+        return page_content
+
     def fetch_price(self, page_content, bookstore):
         parser = etree.HTMLParser()
         root = etree.XML(page_content, parser=parser)
@@ -210,7 +233,7 @@ class Command(BaseCommand):
 
         for xpath in xpaths:
             try:
-                price_str = root.xpath(xpath)[0]
+                price_str = ''.join(root.xpath(xpath))
                 price_converter = self.price_converters.get(bookstore)
                 if price_converter:
                     price_str = price_converter(price_str)
