@@ -24,11 +24,10 @@ class BooksOn(Ceneo):
     }
 
 class BooksOnBook(GenericBook, Base):
-    id = Column(Integer, primary_key = True)
 
     price = Column(Integer)             #GROSZE!!!
     url = Column(Unicode(60))           #59
-    availability = Column(Boolean)      #0/1
+    availability = Column(Integer)      #0/1
     set = Column(Integer)               #1 - ???
     baset = Column(Integer)             # ???!
     category = Column(Unicode(10))      #7

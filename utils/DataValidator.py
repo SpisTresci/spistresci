@@ -24,6 +24,7 @@ class DataValidator(object):
         self.validateFormats(dic, id, title)
         self.validateISBNs(dic, id, title)
         self.validateURL(dic, id, title)
+        self.validateTitle(dic, id, title)
         self.validatePrice(dic, id, title)
         self.validatePrice(dic, id, title, 'price_normal', -1)
         self.validateSize(dic, id, title)
@@ -129,6 +130,9 @@ class DataValidator(object):
 
     def validateURL(self, dic, id, title):
         dic['b64_url'] = base64.b64encode(dic.get('url','').encode('utf-8'))
+
+    def validateTitle(self, dic, id, title):
+        pass
 
     def validatePrice(self, dic, id, title, price_tag_name = 'price', default_price=0):
         if type(default_price) is not int:

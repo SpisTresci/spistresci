@@ -1,6 +1,7 @@
 from connectors.common import Ceneo
 from sqlwrapper import *
 from connectors.generic import GenericBook
+import re
 
 Base = SqlWrapper.getBaseClass()
 
@@ -27,6 +28,10 @@ class Gandalf(Ceneo):
 
     def weHaveToGoDeeper(self, root, depth):
         return root.xpath("./group[@name='books']")[0]
+
+    def validateTitle(self, dic, id, title):
+        for format in dic['formats']:
+            dic['title'] = re.sub('\W'+format.lower()+'$', '', dic['title'])
 
 #{'category': 53, 'publisher': 61, 'description': 16, 'cover_type': 30, 'title': 208, 'url': 81, 'price': 6, 'page_count': 4, 'cover': 93, 'authors': 53, 'isbns': 30, 'formats': 4, 'external_id': 6, 'availability': 2}
 class GandalfBook(GenericBook, Base):
