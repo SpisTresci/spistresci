@@ -64,6 +64,18 @@ Zastanawiając się, czy ktokolwiek zobaczy to ogłoszenie, cierpliwie czekamy n
     </script>
   </head>
   <body>
+     {% if is_dev or is_staging%}
+     <div class="ribbon" style="background-color: {% if is_dev %}#24c52a;{% else %}#a00{% endif %}overflow: hidden;position: absolute;left: -4em;top: 4em;-moz-transform: rotate(-45deg);-webkit-transform: rotate(-45deg);z-index: 2000;">
+         <a href="#" rel="me" style="border: 1px solid {% if is_dev %}#24c52a;{% else %}#faa{% endif %};color: #fff; display: block; font: bold 81.25% 'Helvetiva Neue', Helvetica, Arial, sans-serif;margin: 0.05em 0;padding: 0.5em 3.5em;text-align: center;text-decoration: none;">
+             {% if is_dev %}
+                 127.0.0.1 - localhost
+             {% else %}
+                 staging.spistresci.pl
+             {% endif %}
+             - Debug ON
+         </a>
+     </div>
+     {% endif %}
      {% block menu %} {% include "menu.html" %} {% endblock menu %}
      {% block searchbox %}{% endblock searchbox %}
      {% block container %}{% endblock container %}
