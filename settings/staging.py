@@ -3,14 +3,14 @@ import os
 DEBUG = False
 
 IS_STAGING = True
-DOMAIN_NAME = 'alpha.spistresci.pl'
+DOMAIN_NAME = 'staging.spistresci.pl'
 WWW_ROOT = 'http://%s/' % DOMAIN_NAME
 
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',  # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'st_414',  # Or path to database file if using sqlite3.
+        'NAME': 'st_staging',  # Or path to database file if using sqlite3.
         # The following settings are not used with sqlite3:
         'USER': 'root',
         'PASSWORD': 'NGUcIpHoz1UI',
@@ -28,7 +28,7 @@ DATABASES = {
     },
     'st_backend': {
         'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'st_414',                      # Or path to database file if using sqlite3.
+        'NAME': 'st_staging',                      # Or path to database file if using sqlite3.
         # The following settings are not used with sqlite3:
         'USER': 'root',
         'PASSWORD': 'NGUcIpHoz1UI',
