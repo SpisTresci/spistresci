@@ -1,5 +1,7 @@
 import os
 
+DEBUG = False
+
 IS_PROD = True
 DOMAIN_NAME = 'spistresci.pl'
 WWW_ROOT = 'http://%s/' % DOMAIN_NAME

@@ -1,6 +1,6 @@
 import os
 
-DEBUG = False
+DEBUG = True
 
 IS_STAGING = True
 DOMAIN_NAME = 'staging.spistresci.pl'
