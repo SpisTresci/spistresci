@@ -64,7 +64,9 @@ class Command(BaseCommand):
         'Gandalf': ["//p[@class='old_price_big']/span[@class='new_price']/text()",
             "//p[@class='new_price_big']/span[@itemprop='price']/text()"],
         "Zinamon": "//span[@class='cenaNew']/text()",
-        "Virtualo": "//span[@class='price']/text()",
+        "Virtualo": "//*[@id='product_right']/tr[2]/td[2]/span/text()",
+        #"//table[@id='product_right']//span[@class='price'][1]/text()",
+
         "Bezdroza": "//div[@itemprop='price']/text()",
         "Septem": "//div[@itemprop='price']/text()",
         "Publio": "//div[@id='buyOptions']//ins/text()",
@@ -72,10 +74,10 @@ class Command(BaseCommand):
         "Wydaje": "//div[@itemprop='offerDetails']//big[@class='price-ebook']/text()",
         "eBookpoint": "//div[@itemprop='price']/text()",
         "Latarnik": "//td[@class='basket']//div[@class='price']//em/text()",
-        "Czytio": "//span[@class='price']/text()",
+        "Czytio": "//div[@class='right']//span[@class='price']/text()",
         "Allegro": "//div[@class='book-price']/span/text()",
         "OnePress": "//div[@itemprop='price']/text()",
-        "Zantes": "//span[@class='price_now']/strong/text()",
+        "Zantes": "//div[@class='prices']//span[@class='price_now']/strong/text()",
         "Koobe": "//span[@itemprop='price']/text()",
         "BooksOn": "//div[@id='offer_prices_info']/div[3]/span/text()",
         "Abooki": "//div[@id='ProductFull']//div[@class='price']/text()",
@@ -84,7 +86,7 @@ class Command(BaseCommand):
         "Audiobook": "//span[@class='fprice_class']/text()",
         "DlaBystrzakow": "//div[@itemprop='price']/text()",
         'Sensus': "//div[@id='box_ebook']/div[@class='price']/span/text()",
-        'Fabryka': "//p[@class='new-price']/text()",
+        'Fabryka': "//*[@id='productBox']/div[2]/div[2]/p[2]/text()",
         'eClicto': "//div[@class='productPrice productsInfo']//span[@class='red strong fhuge']/text()",
         'TaniaKsiazka': "//span[@itemprop='price']/text()",
         'DobryEbook': ["//div[@class='wersjaElektro']/p[@class='cena']/text()",
@@ -92,7 +94,8 @@ class Command(BaseCommand):
         'Woblink': "//div[@id='NCENA']/text()",
         'Ksiazki': ["//span[@class='newPrice new-price']/text()",
             "//span[@class='newPrice single-price']/text()"],
-        'ZloteMysli': "//p[@class='price']/ins/text()",
+        'ZloteMysli': "//*[@id='product-info']/fieldset/div/div[1]/label/span/span/text()",
+        #"//p[@class='price']/ins/text()",
         'EscapeMagazine': "//span[@class='price_now']/strong/text()",
         'CzeskieKlimaty': "//span[@itemprop='price']/text()",
 
@@ -135,7 +138,7 @@ class Command(BaseCommand):
         self.driver = webdriver.Firefox()
 
         for bookstore in self.bookstores:
-            print '*'*40
+            print u'*'*40
             print bookstore
             xpath = self.xpaths.get(bookstore)
             minibooks = Minibook.objects.filter(bookstore=bookstore).exclude(url='').order_by('?')[:self.book_limit]
@@ -162,11 +165,11 @@ class Command(BaseCommand):
                     continue
 
                 if book.price == price:
-                    print '%s, cena ok' % book.title
+                    print u'%s, cena ok' % book.title
                 else:
                     error = dict(book=book, page_price=price)
                     self.errors[bookstore].append(error)
-                    print '%s, cena na stronie %s, cena w bazie %s' % (book.title, price, book.price)
+                    print u'%s, cena na stronie %s, cena w bazie %s' % (book.title, price, book.price)
 
         self.print_errors()
         if self.email_admins:
@@ -177,8 +180,8 @@ class Command(BaseCommand):
         bookstore = options.get('bookstore')
         if bookstore:
             if not bookstore in self.xpaths.keys():
-                print 'Bookstore name is invalid.'
-                print 'Choices are: ' + ', '.join(self.xpaths.keys())
+                print u'Bookstore name is invalid.'
+                print u'Choices are: ' + ', '.join(self.xpaths.keys())
                 return
             self.bookstores = [bookstore]
         else:
@@ -203,7 +206,7 @@ class Command(BaseCommand):
             self.invalid_links[bookstore].append(item)
             return
 
-        print 'Status code:', response.status_code
+        print u'Status code:', response.status_code
         if response.status_code not in (200, 302):
             item = dict(book=book, reason="Status odpowiedzi: %s" % response.status_code)
             self.invalid_links[bookstore].append(item)
@@ -254,25 +257,25 @@ class Command(BaseCommand):
         return price
 
     def print_errors(self):
-        print '*'*40
-        print 'NIEPRAWIDLOWE CENY'
+        print u'*'*40
+        print u'NIEPRAWIDLOWE CENY'
         if self.errors:
             for bookstore, errors in self.errors.iteritems():
                 print bookstore
                 for error in errors:
-                    print '%s (id: %s), cena w bazie: %s, cena na stronie %s' % (error['book'].url, error['book'].id, error['book'].price, error['page_price'])
+                    print u'%s (id: %s), cena w bazie: %s, cena na stronie %s' % (error['book'].url, error['book'].id, error['book'].price, error['page_price'])
         else:
-            print 'brak'
+            print u'brak'
 
-        print '*'*40
-        print 'NIEPRAWIDLOWE LINKI'
+        print u'*'*40
+        print u'NIEPRAWIDLOWE LINKI'
         if self.invalid_links:
             for bookstore, items in self.invalid_links.iteritems():
                 print bookstore
                 for item in items:
-                    print '(id: %s) %s, powod: %s' % (item['book'].id, item['book'].url, item['reason'])
+                    print u'(id: %s) %s, powod: %s' % (item['book'].id, item['book'].url, item['reason'])
         else:
-            print 'brak'
+            print u'brak'
 
     def send_errors(self):
         if self.errors or self.invalid_links:
