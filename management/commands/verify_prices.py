@@ -55,18 +55,11 @@ class Command(BaseCommand):
 
     xpaths = {
         'BezKartek': "//span[@class='cena_price']/text()",
-        # ok
-
-        "ZielonaSowa": '',
-        # js redirection - return always 200
-        # bookstore's page gives 404
-
         "Merlin": "//span[@class='price']/text()",
-
-        "Legimi": '',
-        "Tmc": '',
-        'Audioteka': '',
-        'Bookoteka': '',
+        "Legimi": "//span[@itemprop='price']/text()",
+        "Tmc": '//span[@id="st_product_options-price-brutto"]/text()',
+        'Audioteka': "//div[@id='ctl00_ctl00_ctl00_PageBody_PageBody_ContentPlaceHolder1_controlProductDescriptionMain_priceInfo']//div[@class='price']/text()",
+        'Bookoteka': "//span[@class='price EBOOK']/text()",
         'Selkar': "//span[@class='price']/text()",
         'Gandalf': ["//p[@class='old_price_big']/span[@class='new_price']/text()",
             "//p[@class='new_price_big']/span[@itemprop='price']/text()"],
@@ -81,38 +74,52 @@ class Command(BaseCommand):
         "Latarnik": "//td[@class='basket']//div[@class='price']//em/text()",
         "Czytio": "//span[@class='price']/text()",
         "Allegro": "//div[@class='book-price']/span/text()",
-        "Wikibooks": "",  # free ebooks
         "OnePress": "//div[@itemprop='price']/text()",
         "Zantes": "//span[@class='price_now']/strong/text()",
         "Koobe": "//span[@itemprop='price']/text()",
-        "BooksOn": "",  # no valid links in db?
-        "Abooki": "//div[@id='ProductFull']//div[@class='price']/text()",  # js redirection?
+        "BooksOn": "//div[@id='offer_prices_info']/div[3]/span/text()",
+        "Abooki": "//div[@id='ProductFull']//div[@class='price']/text()",
         "Helion": "//div[@id='box_ebook']/div[@class='price']/span/text()",
-        "KodeksyWmp3": "",  # js redirection? //span[@class='price_view_span']/span/text()
-        "WolneLektury": "",  # site is down
-        "ebooks43": "",  # free ebooks
-        "Audiobook": "",  # no valid links in db?
-        "Audeo": "",  # no valid links in db?
-        "DlaBystrzakow": "",
+        "KodeksyWmp3": "//div[@id='price_produsts_info']//span[@class='price_view_span']/span/text()",
+        "Audiobook": "//span[@class='fprice_class']/text()",
+        "DlaBystrzakow": "//div[@itemprop='price']/text()",
         'Sensus': "//div[@id='box_ebook']/div[@class='price']/span/text()",
         'Fabryka': "//p[@class='new-price']/text()",
-        'FantastykaPolska': "",  # free ebooks?
-        'eClicto': "",  # special characters in urls
-        'TaniaKsiazka': "",  # js redirection?
+        'eClicto': "//div[@class='productPrice productsInfo']//span[@class='red strong fhuge']/text()",
+        'TaniaKsiazka': "//span[@itemprop='price']/text()",
         'DobryEbook': ["//div[@class='wersjaElektro']/p[@class='cena']/text()",
             "//div[@class='wersjaElektro']/div[@class='promocja']/text()"],
-        'Pokatne': "",  # free ebooks?
         'Woblink': "//div[@id='NCENA']/text()",
         'Ksiazki': ["//span[@class='newPrice new-price']/text()",
             "//span[@class='newPrice single-price']/text()"],
         'ZloteMysli': "//p[@class='price']/ins/text()",
-        'Empik': "",
         'EscapeMagazine': "//span[@class='price_now']/strong/text()",
-        'CzeskieKlimaty': "",  # invalid links in db?
-        'WolneEbooki': "",
+        'CzeskieKlimaty': "//span[@itemprop='price']/text()",
+
+        # free ebooks
+        "WolneLektury": "",
+        "ebooks43": "",
+        "Wikibooks": "",
+        'FantastykaPolska': "",
+        'Pokatne': "",
+        'WolneEbooki': "",  # need login?
+
+        "ZielonaSowa": '', # 404
+        "Audeo": "",  # site is down: "przerwa techniczna"
+        'Empik': "", # no urls id db
     }
 
-    test_with_selenium = ['Abooki',]
+    test_with_selenium = ['Abooki', 'Legimi', 'Tmc', 'Audioteka', 'KodeksyWmp3',
+        'TaniaKsiazka']
+
+    bookstore_urls = {
+        'Abooki': 'www.abooki.pl',
+        'Legimi': 'www.legimi.com',
+        'Tmc': 'www.tmc.com.pl',
+        'Audioteka': 'audioteka.pl',
+        'KodeksyWmp3': 'www.kodeksywmp3.pl',
+        'TaniaKsiazka': 'www.taniaksiazka.pl',
+    }
 
     # extra converters for price fetch from bookstore's pages
     price_converters = {
@@ -131,13 +138,14 @@ class Command(BaseCommand):
             print '*'*40
             print bookstore
             xpath = self.xpaths.get(bookstore)
-            minibooks = Minibook.objects.filter(bookstore=bookstore).order_by('?')[:self.book_limit]
+            minibooks = Minibook.objects.filter(bookstore=bookstore).exclude(url='').order_by('?')[:self.book_limit]
 
             for book in minibooks:
                 print book.url
 
                 if bookstore in self.test_with_selenium:
-                    page_content = self.get_page_content_with_selenium(book, bookstore)
+                    bookstore_url = self.bookstore_urls.get(bookstore, '')
+                    page_content = self.get_page_content_with_selenium(book, bookstore, bookstore_url)
                 else:
                     page_content = self.get_page_content(book, bookstore)
 
@@ -210,10 +218,11 @@ class Command(BaseCommand):
         session.post(url, data=data)
         return session
 
-    def get_page_content_with_selenium(self, book, bookstore):
+    def get_page_content_with_selenium(self, book, bookstore, bookstore_url):
+
         def readystate_complete(d):
             return d.execute_script("return document.readyState") == "complete" and \
-                'www.abooki.pl' in d.current_url
+                bookstore_url in d.current_url
         try:
             self.driver.get(book.url)
             WebDriverWait(self.driver, 30).until(readystate_complete)
@@ -230,7 +239,7 @@ class Command(BaseCommand):
         if isinstance(xpaths, str):
             xpaths = [xpaths]
         price = None
-
+        #import ipdb; ipdb.set_trace()
         for xpath in xpaths:
             try:
                 price_str = ''.join(root.xpath(xpath))
