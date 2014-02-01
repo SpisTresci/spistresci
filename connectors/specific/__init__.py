@@ -5,6 +5,7 @@ from Audiobook import Audiobook
 from Audioteka import Audioteka
 from Bezdroza import Bezdroza
 from BezKartek import BezKartek
+from Booki24 import Booki24
 from Bookoteka import Bookoteka
 from BooksOn import BooksOn
 from CzeskieKlimaty import CzeskieKlimaty
