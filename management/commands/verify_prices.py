@@ -171,11 +171,11 @@ class Command(BaseCommand):
                     continue
 
                 if book.price == price:
-                    print u'%s, cena ok' % book.title
+                    print u'%s, cena ok' % unicode(book.title)
                 else:
                     error = dict(book=book, page_price=price)
                     self.errors[bookstore].append(error)
-                    print u'%s, cena na stronie %s, cena w bazie %s' % (book.title, price, book.price)
+                    print u'%s, cena na stronie %s, cena w bazie %s' % (unicode(book.title), price, book.price)
 
         self.print_errors()
         if self.email_admins:
@@ -269,7 +269,7 @@ class Command(BaseCommand):
             for bookstore, errors in self.errors.iteritems():
                 print unicode(bookstore)
                 for error in errors:
-                    print u'%s (id: %s), cena w bazie: %s, cena na stronie %s' % (error['book'].url, error['book'].id, error['book'].price, error['page_price'])
+                    print u'%s (id: %s), cena w bazie: %s, cena na stronie %s' % (unicode(error['book'].url), error['book'].id, error['book'].price, error['page_price'])
         else:
             print u'brak'
 
@@ -279,7 +279,7 @@ class Command(BaseCommand):
             for bookstore, items in self.invalid_links.iteritems():
                 print unicode(bookstore)
                 for item in items:
-                    print u'(id: %s) %s, powod: %s' % (item['book'].id, item['book'].url, item['reason'])
+                    print u'(id: %s) %s, powod: %s' % (item['book'].id, unicode(item['book'].url), item['reason'])
         else:
             print u'brak'
 

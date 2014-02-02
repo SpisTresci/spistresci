@@ -44,7 +44,4 @@ class VerifyPricesCronJob(CronJobBase):
     code = 'spistresci.verify_prices'
 
     def do(self):
-        if not settings.IS_DEV:
-            call(['xvfb-run', os.path.join(settings.SITE_ROOT, '../manage.py'), 'verify_prices', '-e' ])
-        else:
-            verify_prices().handle(email_admins=True)
+        verify_prices().handle(email_admins=True)
