@@ -36,11 +36,11 @@ class ClearUsersCronJob(CronJobBase):
 
 
 class VerifyPricesCronJob(CronJobBase):
-    RUN_AT_TIMES = ['7:10']
+    RUN_AT_TIMES = ['18:00']
 
     # NOTE: use this schedule for tests
-    schedule = Schedule(run_every_mins=0)
-    #schedule = Schedule(run_at_times=RUN_AT_TIMES)
+    # schedule = Schedule(run_every_mins=0)
+    schedule = Schedule(run_at_times=RUN_AT_TIMES)
     code = 'spistresci.verify_prices'
 
     def do(self):

@@ -171,13 +171,15 @@ class Command(BaseCommand):
                     continue
 
                 if book.price == price:
-                    print u'%s, cena ok' % book.title.encode('utf8')
+                    print book.title.encode('utf8'),
+                    print u'cena ok'
                 else:
                     error = dict(book=book, page_price=price)
                     self.errors[bookstore].append(error)
-                    print u'%s, cena na stronie %s, cena w bazie %s' % (book.title.encode('utf8'), price, book.price)
+                    print book.title.encode('utf8'),
+                    print u'cena na stronie %s, cena w bazie %s' % (price, book.price)
 
-        self.print_errors()
+        # self.print_errors()
         if self.email_admins:
             self.send_errors()
         self.driver.quit()
