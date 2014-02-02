@@ -1,8 +1,13 @@
+import os
+
+from django.conf import settings
+
 from django_cron import CronJobBase, Schedule
 from spistresci.management.commands.send_track_notifications import Command as send_track_notifications
 from spistresci.management.commands.verify_prices import Command as verify_prices
 from registration.management.commands.cleanupregistration import Command as cleanupregistration
 
+from subprocess import call
 
 class TrackNotificationCronJob(CronJobBase):
     RUN_AT_TIMES = ['8:00']
@@ -34,9 +39,12 @@ class VerifyPricesCronJob(CronJobBase):
     RUN_AT_TIMES = ['7:10']
 
     # NOTE: use this schedule for tests
-    # schedule = Schedule(run_every_mins=0)
-    schedule = Schedule(run_at_times=RUN_AT_TIMES)
+    schedule = Schedule(run_every_mins=0)
+    #schedule = Schedule(run_at_times=RUN_AT_TIMES)
     code = 'spistresci.verify_prices'
 
     def do(self):
-        verify_prices().handle(email_admins=True)
+        if not settings.IS_DEV:
+            call(['xvfb-run', os.path.join(settings.SITE_ROOT, '../manage.py'), 'verify_prices', '-e' ])
+        else:
+            verify_prices().handle(email_admins=True)

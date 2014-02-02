@@ -89,13 +89,19 @@ class Command(BaseCommand):
         'Fabryka': "//*[@id='productBox']/div[2]/div[2]/p[2]/text()",
         'eClicto': "//div[@class='productPrice productsInfo']//span[@class='red strong fhuge']/text()",
         'TaniaKsiazka': "//span[@itemprop='price']/text()",
-        'DobryEbook': ["//div[@class='wersjaElektro']/p[@class='cena']/text()",
-            "//div[@class='wersjaElektro']/div[@class='promocja']/text()"],
+        'DobryEbook': [
+            "//div[@class='wersjaElektro']/p[@class='cena']/text()",
+            "//div[@class='wersjaElektro']/div[@class='promocja']/text()"
+        ],
         'Woblink': "//div[@id='NCENA']/text()",
-        'Ksiazki': ["//span[@class='newPrice new-price']/text()",
-            "//span[@class='newPrice single-price']/text()"],
-        'ZloteMysli': "//*[@id='product-info']/fieldset/div/div[1]/label/span/span/text()",
-        #"//p[@class='price']/ins/text()",
+        'Ksiazki': [
+            "//span[@class='newPrice new-price']/text()",
+            "//span[@class='newPrice single-price']/text()"
+        ],
+        'ZloteMysli': [
+            "//*[@id='product-info-top']/div/div[2]/div[3]/div[1]/p[1]/ins/text()",
+            "//*[@id='product-info']/fieldset/div/div[1]/label/span/span/text()",
+        ],
         'EscapeMagazine': "//span[@class='price_now']/strong/text()",
         'CzeskieKlimaty': "//span[@itemprop='price']/text()",
 
