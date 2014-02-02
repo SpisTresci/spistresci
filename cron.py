@@ -36,7 +36,7 @@ class ClearUsersCronJob(CronJobBase):
 
 
 class VerifyPricesCronJob(CronJobBase):
-    RUN_AT_TIMES = ['18:00']
+    RUN_AT_TIMES = ['7:10']
 
     # NOTE: use this schedule for tests
     # schedule = Schedule(run_every_mins=0)
