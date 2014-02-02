@@ -145,12 +145,12 @@ class Command(BaseCommand):
 
         for bookstore in self.bookstores:
             print u'*'*40
-            print bookstore
+            print unicode(bookstore)
             xpath = self.xpaths.get(bookstore)
             minibooks = Minibook.objects.filter(bookstore=bookstore).exclude(url='').order_by('?')[:self.book_limit]
 
             for book in minibooks:
-                print book.url
+                print unicode(book.url)
 
                 if bookstore in self.test_with_selenium:
                     bookstore_url = self.bookstore_urls.get(bookstore, '')
@@ -267,7 +267,7 @@ class Command(BaseCommand):
         print u'NIEPRAWIDLOWE CENY'
         if self.errors:
             for bookstore, errors in self.errors.iteritems():
-                print bookstore
+                print unicode(bookstore)
                 for error in errors:
                     print u'%s (id: %s), cena w bazie: %s, cena na stronie %s' % (error['book'].url, error['book'].id, error['book'].price, error['page_price'])
         else:
@@ -277,7 +277,7 @@ class Command(BaseCommand):
         print u'NIEPRAWIDLOWE LINKI'
         if self.invalid_links:
             for bookstore, items in self.invalid_links.iteritems():
-                print bookstore
+                print unicode(bookstore)
                 for item in items:
                     print u'(id: %s) %s, powod: %s' % (item['book'].id, item['book'].url, item['reason'])
         else:
