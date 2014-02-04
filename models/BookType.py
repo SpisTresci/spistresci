@@ -46,7 +46,7 @@ book_types  = {
         #0 - BookType.BookType.DO_NOT_USE:[],
         BookType.BookType.NOINFO:['dvd', 'unknown'],
         BookType.BookType.HYBRID:[],
-        BookType.BookType.EBOOK:['epub', 'mobi', 'pdf', 'txt', 'xml', 'fb2', 'pdf_drm', 'online', 'ebook_unknown'],
+        BookType.BookType.EBOOK:['epub', 'mobi', 'pdf', 'txt', 'xml', 'fb2', 'pdf_drm', 'online', 'ebook_unknown', 'epub_drm', 'mobi_drm'],
         BookType.BookType.AUDIOBOOK:['cd', 'cd_mp3', 'mp3', 'online_audio', 'audiobook_unknown'],
         BookType.BookType.BOOK:['ks'],
         BookType.BookType.PRESS:['press_mobi', 'press_epub', 'press_pdf', 'press_online'],
