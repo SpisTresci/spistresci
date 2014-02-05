@@ -31,14 +31,6 @@ class Merlin(XMLConnector):
         'formats': ('./nosnik', ''),
     }
 
-    #HACK, 0 DAY FIX, #TODO: REMOVE T496
-    def adjust_parse(self, dic):
-        dic['url'] = 'http://merlin.pl//download/product/%s,%s.html' % (dic['section_id'], dic['external_id'])
-
-    def validate(self, dic):
-        self.validateTitle(dic)
-        super(Merlin, self).validate(dic)
-
     def validateISBNs(self, dic, id, title):
         if dic.get("isbns"):
             i = dic["isbns"]
@@ -51,17 +43,14 @@ class Merlin(XMLConnector):
 
         super(Merlin, self).validateISBNs(dic, id, title)
 
-    def validateTitle(self, dic):
+    def validateTitle(self, dic, id, title):
         if dic.get("title"):
-            t = dic["title"]
             formats = ['PDF', 'EPUB', 'MOBI', 'MP3', #typical
                        'mp3', 'format mp3', 'audiobook', 'pdf' #few exceptions
                        ]
 
             for f in formats:
-                if (' (' + f + ')') in t:
-                    t = t.replace(' (' + f + ')', '')
-            dic['title'] = t
+                dic["title"] = dic["title"].replace(' (%s)' % f, '')
 
 class MerlinBook(GenericBook, Base):
     id = Column(Integer, primary_key = True)
