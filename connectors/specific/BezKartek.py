@@ -47,8 +47,8 @@ class BezKartekBook(GenericBook, Base):
     #price = Column(Integer)             #GROSZE!!!
     page_count = Column(Unicode(16))        #508700 - wtf?
     publisher = Column(Unicode(128))     #68
-    url = Column(Unicode(512))          #265
-    #cover = Column(Unicode(256))        #184
+    #url
+    #cover
     security = Column(Unicode(16))      #9
     lang_short = Column(Unicode(2))     #2
     lang_long = Column(Unicode(16))     #9

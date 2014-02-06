@@ -142,5 +142,5 @@ class SelkarBook(GenericBook, Base):
     #external_id
     category = Column(Integer)
     publisher = Column(Unicode(60))     #57
-    url = Column(Unicode(180))          #173
-    cover = Column(Unicode(80))         #66
+    #url
+    #cover

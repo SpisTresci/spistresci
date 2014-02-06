@@ -27,5 +27,5 @@ class WolneEbookiBook(GenericBook, Base):
     #authors
     title = Column(Unicode(256))         #42
     price = Column(Integer)              #GROSZE!!!
-    url = Column(Unicode(64))            #35
-    cover = Column(Unicode(64))          #38
+    #url
+    #cover

@@ -29,8 +29,8 @@ class AbookiBook(GenericBook, Base):
     #title
     #price
     #price_normal
-    url = Column(Unicode(512))          #372
+    #url
     category = Column(Unicode(64))      #47
     raw_title = Column(Unicode(256))    #160
-    cover = Column(Unicode(128))        #79
+    #cover
 

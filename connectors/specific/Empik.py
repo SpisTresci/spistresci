@@ -41,19 +41,12 @@ Base = SqlWrapper.getBaseClass()
 
 class EmpikBook(GenericBook, Base):
     id = Column(Integer, primary_key = True)
-    #ean = Column(Unicode(13))           #13
-    #price = Column(Integer)             #GROSZE!!!
-    #url = Column(Unicode(65))           #59
-    #cover = Column(Unicode(280))        #269
-    #availability = Column(Unicode(10))  #0
-
-    id = Column(Integer, primary_key = True)
     #title
     external_id = Column(Unicode(16), unique=True)
     ean = Column(Unicode(16))           #13
     #price = Column(Integer)             #GROSZE!!!
-    url = Column(Unicode(512))           #406
-    cover = Column(Unicode(512))        #269
+    #url
+    #cover
     category = Column(Unicode(128))   #64
     availability = Column(Unicode(32))  #10
 

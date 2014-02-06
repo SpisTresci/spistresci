@@ -33,9 +33,9 @@ class DobryEbookBook(GenericBook, Base):
     title = Column(Unicode(256))            #101
     subtitle = Column(Unicode(128))         #70
 
-    url = Column(Unicode(256))              #133
+    #url
     page_count = Column(Integer)            #Integer
-    cover = Column(Unicode(64))             #128
-    cover_small = Column(Unicode(64))       #128
+    #cover
+    cover_small = Column(STUrl)     #128
     file_size = Column(Unicode(16))         #8
 

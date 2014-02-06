@@ -24,9 +24,9 @@ class ZinamonBook(GenericBook, Base):
     id = Column(Integer, primary_key = True)
     external_id = Column(Unicode(16), unique=True)
     title = Column(Unicode(265))        #207
-    url = Column(Unicode(512))          #338
+    #url
     #authors
-    cover = Column(Unicode(64))         #38
+    #cover
     price = Column(Integer)             #grosze
     category = Column(Unicode(512))     #20
     protection = Column(Unicode(16))    #9

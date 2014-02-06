@@ -25,8 +25,8 @@ class WoblinkBook(GenericBook, Base):
     category = Column(Unicode(64))      #33
     publisher = Column(Unicode(64))     #32
     title = Column(Unicode(256))        #212
-    url = Column(Unicode(64))           #59
-    cover = Column(Unicode(256))        #250
+    #url
+    #cover
     price = Column(Integer)
     availability = Column(Boolean)
 

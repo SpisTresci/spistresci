@@ -28,8 +28,8 @@ class KoobeBook(GenericBook, Base):
     title = Column(Unicode(256))        #202
     category = Column(Unicode(32))      #17
     publisher = Column(Unicode(64))     #57
-    url = Column(Unicode(512))          #271
+    #url
     #description
     price = Column(Integer)             #grosze
-    cover = Column(Unicode(256))        #159
+    #cover
     protection = Column(Unicode(16))    #9

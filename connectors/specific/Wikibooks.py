@@ -66,6 +66,6 @@ class WikibooksBook(GenericBook, Base):
     external_id = Column(Unicode(128))
     publisher = Column(Unicode(16))
     title = Column(Unicode(64), unique = True)
-    url = Column(Unicode(128))
-    cover = Column(Unicode(256))
+    #url
+    #cover
     price = Column(Integer)

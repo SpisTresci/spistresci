@@ -37,9 +37,9 @@ class ebooks43(XMLConnector):
 class ebooks43Book(GenericBook, Base):
     id = Column(Integer, primary_key = True)
     title = Column(Unicode(128))            #70
-    url = Column(Unicode(128))              #108
+    #url
     #price
     #price_normal
     #authors
-    cover = Column(Unicode(64))             #50
+    #cover
 

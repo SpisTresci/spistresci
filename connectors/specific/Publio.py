@@ -32,8 +32,8 @@ class PublioBook(GenericBook, Base):
     #authors
     #formats
     #price
-    url = Column(Unicode(256))
-    cover = Column(Unicode(512))
+    #url
+    #cover
     #isbns
     publisher = Column(Unicode(128))
     category = Column(Unicode(256))

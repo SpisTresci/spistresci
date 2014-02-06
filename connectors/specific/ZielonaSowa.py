@@ -20,6 +20,6 @@ class ZielonaSowaBook(GenericBook, Base):
     category = Column(Unicode(32))      #18
     #title(256)                         #71
     #price = Column(Integer)       
-    url = Column(Unicode(128))           #60
-    #cover = Column(Unicode(256))        #114
+    #url
+    #cover
 

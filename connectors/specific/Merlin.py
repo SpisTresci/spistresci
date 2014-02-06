@@ -58,9 +58,9 @@ class MerlinBook(GenericBook, Base):
     section_id = Column(Integer)
     #external_id
     #isbns
-    url = Column(Unicode(64))               #59
-    cover = Column(Unicode(64))             #62
-    add_to_cart_url = Column(Unicode(512))  #412
+    #url
+    #cover
+    add_to_cart_url = Column(STUrl) #412
     utm_term = Column(Unicode(256))         #248
     title = Column(Unicode(256))            #220
     status = Column(Unicode(2))             #1

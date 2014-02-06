@@ -38,8 +38,8 @@ class PokatneBook(GenericBook, Base):
     #external_id
     title = Column(Unicode(128))        #63
     #authors
-    url = Column(Unicode(64))           #49
-    cover = Column(Unicode(64))         #48
+    #url
+    #cover
     #formats
     date = Column(Unicode(10))          #10
     comments = Column(Integer)
@@ -49,4 +49,3 @@ class PokatneBook(GenericBook, Base):
     alert = Column(Boolean)
     tags = Column(Unicode(64))          #59
     new = Column(Boolean)
-

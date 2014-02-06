@@ -20,8 +20,8 @@ class LegimiBook(GenericBook, Base):
     #title
     #price
     #price_normal
-    url = Column(Unicode(128))           #60
-    cover = Column(Unicode(64))         #52
+    #url
+    #cover
     category = Column(Unicode(128))      #82
     publisher = Column(Unicode(128))     #73
     date = Column(Unicode(4))           #4

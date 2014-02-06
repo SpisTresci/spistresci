@@ -79,10 +79,9 @@ class HelionBaseBook(GenericBook):
     ean = Column(Unicode(16))                          #14
 #    title = Column(Unicode(256))                       #120
     title_oryginal = Column(Unicode(256))              #177
-    url = Column(Unicode(256))                         #181
-    cover = Column(Unicode(64))                        #49
-    cover_back = Column(Unicode(64))                   #51
-    #pp_url = Column(Unicode(256))
+    #url
+    #cover
+    cover_back = Column(STUrl)                   #51
     #authors
     #translators
     #formats
@@ -98,8 +97,8 @@ class HelionBaseBook(GenericBook):
     binding = Column(Unicode(16))                       #6
     page_count = Column(Unicode(8))
     date = Column(Date)
-    sample = Column(Unicode(64))              #44
-    online_sample = Column(Unicode(64))  #44
+    sample = Column(STUrl)              #44
+    online_sample = Column(STUrl)  #44
     is_bestseller = Column(Boolean)
     is_new = Column(Boolean)
     name_of_promotion = Column(Unicode(128))           #29

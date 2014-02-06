@@ -51,7 +51,7 @@ class EscapeMagazineBook(GenericBook, Base):
     price_promotion = Column(Integer)       #grosze
     #authors
     categories = Column(Unicode(32))        #18
-    cover = Column(Unicode(128))            #108
+    #cover
     subtitle = Column(Unicode(128))         #0
     publisher = Column(Unicode(32))         #15
-    url = Column(Unicode(128))              #94
+    #url

@@ -30,12 +30,12 @@ class eClictoBook(GenericBook, Base):
     id = Column(Integer, primary_key = True)
 
     price = Column(Integer)             #GROSZE!!!
-    url = Column(Unicode(512))          #
+    #url
     availability = Column(Integer)      #2-"99"
     set = Column(Integer)               #1 - ???
     category = Column(Unicode(60))      #54
     publisher = Column(Unicode(46))     #54
     weight = Column(Unicode(4))         #4 - ???
     title = Column(Unicode(256))        #26
-    cover = Column(Unicode(64))         #55
+    #cover
 

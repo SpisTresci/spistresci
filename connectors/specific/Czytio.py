@@ -23,9 +23,9 @@ Base = SqlWrapper.getBaseClass()
 class CzytioBook(GenericBook, Base):
     id = Column(Integer, primary_key = True)
     #title
-    url = Column(Unicode(120))          #109
+    #url
     #authors
-    cover = Column(Unicode(128))        #118
+    #cover
     price = Column(Integer)             #GROSZE!!!
     file_size = Column(Integer)
     page_count = Column(Integer)           

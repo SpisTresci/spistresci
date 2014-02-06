@@ -62,10 +62,10 @@ class BookotekaBook(GenericBook, Base):
     external_id = Column(Unicode(64), unique = True)    #10
 
     title = Column(Unicode(265))                        #131
-    url = Column(Unicode(128))                          #107
+    #url
     #authors
     format = Column(Unicode(8))                         #4
-    cover = Column(Unicode(256))                        #139
+    #cover
     price = Column(Integer)                             #grosze
     isbn = Column(Unicode(13))                          #0
 

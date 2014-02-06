@@ -50,7 +50,7 @@ class VirtualoBook(GenericBook, Base):
     title = Column(Unicode(256))        #174
     protection = Column(Unicode(8))       #3
     price = Column(Integer)             #*0,01PLN
-    url = Column(Unicode(128))          #89
-    cover = Column(Unicode(128))        #57
+    #url
+    #cover
     rating = Column(Integer)            #0-100
 

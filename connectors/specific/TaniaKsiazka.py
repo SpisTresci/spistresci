@@ -32,11 +32,11 @@ class TaniaKsiazkaBook(GenericBook, Base):
     id = Column(Integer, primary_key = True)
     category = Column(Unicode(32))          #22
     title = Column(Unicode(256))            #200
-    url = Column(Unicode(512))              #284
+    #url
     type = Column(Unicode(64))              #51
     price = Column(Integer)                 #grosze
-    cover = Column(Unicode(64))             #46
-    thumbnail = Column(Unicode(64))         #47
+    #cover
+    thumbnail = Column(STUrl)       #47
     programName = Column(Unicode(32))       #16
     category_id = Column(Integer)           #
     brand = Column(Unicode(32))             #?

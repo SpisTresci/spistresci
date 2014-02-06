@@ -37,12 +37,11 @@ class AllegroBook(GenericBook, Base):
     #price = Column(Integer)
     #price_normal
 
-    #url = Column(Unicode(256))
-    #pp_url = Column(Unicode(256))
+    #url
     availability = Column(Integer)
     #title = Column(Unicode(256))
     category = Column(Unicode(64))
-    cover = Column(Unicode(128))
+    #cover
     #description
     #authors
     #isbns

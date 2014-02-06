@@ -6,7 +6,7 @@ class BaseBook(Comparable, FinalBase):
     id = Column(Integer, primary_key = True)
 
     title = Column(Title(512))
-    cover = Column(Unicode(512), nullable = False)
+    cover = Column(STUrl, nullable = False)
     price = Column(Integer, nullable = False)
 
     @declared_attr

@@ -124,7 +124,7 @@ class NextoBook(GenericBook, Base):
     external_id = Column(Unicode(21), unique=True)
     issue_id = Column(Unicode(10))
     title = Column(Unicode(512))            #293
-    url = Column(Unicode(512))              #331
+    #url
     #categories #TODO
     #isbns
     publisher = Column(Unicode(128))        #69
@@ -137,10 +137,10 @@ class NextoBook(GenericBook, Base):
     #price
     #price_normal
     #formats
-    cover = Column(Unicode(512))            #280
+    #cover
     #authors
     #lectors
     audio_time = Column(Unicode(32))        #28
     page_count = Column(Unicode(64))        #33
-    free_fragment = Column(Unicode(512))    #290
+    free_fragment = Column(STUrl)    #290
     #tocs

@@ -10,7 +10,7 @@ class MiniBook(BaseMini, BaseBook, Base):
     master_id = Column(Integer, ForeignKey('MasterBook.id'))
     #master by backref
 
-    url = Column(Unicode(512), nullable = False)
+    url = Column(STUrl, nullable = False)
     bookstore = Column(Unicode(16), nullable = False)
     bookstore_book_id = Column(Integer, nullable = False)
     book_type_id = Column(Integer, ForeignKey('BookType.id'))

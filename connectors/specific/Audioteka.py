@@ -29,8 +29,8 @@ class AudiotekaBook(GenericBook, Base):
     #title
     #price
     #price_normal
-    url = Column(Unicode(128))          #60
-    #cover = Column(Unicode(256))       #145
+    #url
+    #cover
     category = Column(Unicode(32))      #21
     publisher = Column(Unicode(128))    #79
     audio_time = Column(Unicode(32))        #16

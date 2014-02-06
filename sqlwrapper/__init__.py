@@ -8,3 +8,4 @@ from sqlalchemy.orm import dynamic_loader
 
 from STTypes import STUnicode
 from STTypes import STUnicode10
+from STTypes import STUrl

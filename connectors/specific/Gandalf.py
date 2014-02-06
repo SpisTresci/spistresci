@@ -36,12 +36,12 @@ class Gandalf(Ceneo):
 #{'category': 53, 'publisher': 61, 'description': 16, 'cover_type': 30, 'title': 208, 'url': 81, 'price': 6, 'page_count': 4, 'cover': 93, 'authors': 53, 'isbns': 30, 'formats': 4, 'external_id': 6, 'availability': 2}
 class GandalfBook(GenericBook, Base):
     #external_id
-    url = Column(Unicode(128))          #81
+    #url
     #price
     availability = Column(Integer)
     category = Column(Unicode(64))      #53
     title = Column(Unicode(256))        #208
-    cover = Column(Unicode(128))        #93
+    #cover
     #description
     #authors
     #isbns

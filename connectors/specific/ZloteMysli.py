@@ -42,11 +42,11 @@ class ZloteMysliBook(GenericBook, Base):
     category = Column(Unicode(32))      #6
     publisher = Column(Unicode(32))     #22
     #price
-    date = Column(Unicode(4))           #4   
-    #url = Column(Unicode(256))          #154
-    cover = Column(Unicode(128))         #70
-    cover_parent = Column(Unicode(128))  #70    
-    cover_small = Column(Unicode(128))   #69
-    cover_medium = Column(Unicode(128))  #70
+    date = Column(Unicode(4))           #4
+    #url
+    #cover
+    cover_parent = Column(STUrl)  #70
+    cover_small = Column(STUrl)   #69
+    cover_medium = Column(STUrl)  #70
     product_type_id = Column(Integer)
     page_count = Column(Unicode(25))        #32

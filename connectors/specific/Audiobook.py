@@ -39,9 +39,10 @@ class AudiobookBook(GenericBook, Base):
     raw_title = Column(Unicode(256))    #168
     #price = Column(Integer)
     #price_normal
-    url = Column(Unicode(512))          #294
+    #url
+
     #there is no cover info
-#    cover = Column(Unicode(128))        #118
+    #cover
     category = Column(Unicode(128))      #63
     audio_time = Column(Unicode(16))
     publisher = Column(Unicode(64))     #49

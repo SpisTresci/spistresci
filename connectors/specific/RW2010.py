@@ -68,7 +68,7 @@ Base = SqlWrapper.getBaseClass()
 
 class RW2010Book(GenericBook, Base):
     #title
-    url = Column(Unicode(160))          #155
+    #url
     #authors
-    cover = Column(Unicode(160))        #150
+    #cover
     price = Column(Integer)             #GROSZE!!!

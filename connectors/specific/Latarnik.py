@@ -49,7 +49,7 @@ class Latarnik(Ceneo):
 class LatarnikBook(GenericBook, Base):
     id = Column(Integer, primary_key = True)
 
-    url = Column(Unicode(128))          #104
+    #url
     price = Column(Integer)             #GROSZE!!!
     availability = Column(Integer)      #2-"99"
     set = Column(Integer)               #1 - ???
@@ -58,7 +58,7 @@ class LatarnikBook(GenericBook, Base):
 
     category = Column(Unicode(32))      #22
     title = Column(Unicode(128))        #72
-    cover = Column(Unicode(256))        #256
+    #cover
     publisher = Column(Unicode(64))     #33
     publisher_code = Column(Unicode(32))#17
 

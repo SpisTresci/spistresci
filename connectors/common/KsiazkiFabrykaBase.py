@@ -36,11 +36,11 @@ class KsiazkiFabrykaBaseBook(GenericBook):
     category = Column(Unicode(128))
     #title = Column(Unicode(256))
     raw_title = Column(Unicode(256))
-    #url = Column(Unicode(256))
-    #cover = Column(Unicode(256))
+    #url
+    #cover
     #price = Column(Integer)
     availability = Column(Boolean)
     publisher = Column(Unicode(64))
     page_count = Column(Integer)
     date = Column(Date)
-    sample = Column(Unicode(64))
+    sample = Column(STUrl)

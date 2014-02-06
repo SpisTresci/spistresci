@@ -54,9 +54,9 @@ class ZantesBook(GenericBook, Base):
     price = Column(Integer)                 #grosze
     price_promotion = Column(Integer)       #grosze
     #authors
-    cover = Column(Unicode(128))            #180
+    #cover
     subtitle = Column(Unicode(128))         #0
     categories = Column(Unicode(256))       #141
     publisher_id = Column(Integer)          #15
     publisher = Column(Unicode(64))         #35
-    url = Column(Unicode(128))              #98
+    #url

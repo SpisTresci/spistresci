@@ -103,9 +103,9 @@ class WydajeBook(GenericBook, Base):
     pages = Column(Integer)
     tags = Column(Unicode(256))          #250
     #categories - #TODO
-    url = Column(Unicode(256))           #156
-    cover = Column(Unicode(256))         #143
-    sample = Column(Unicode(256))        #170
+    #url
+    #cover
+    sample = Column(STUrl)        #170
     rating = Column(Integer)
     votes = Column(Integer)
     #description

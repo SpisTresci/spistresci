@@ -48,7 +48,7 @@ class PolonaBook(GenericBook, Base):
     #formats
     #authors
     contributors = Column(Unicode(1024))     #
-    url = Column(Unicode(64))               #30
+    #url
     type = Column(Unicode(32))              #24
     date = Column(Unicode(128))             #67
     rights = Column(Unicode(512))           #451

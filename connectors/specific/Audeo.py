@@ -29,8 +29,8 @@ class Audeo(Ceneo):
         dic['formats'] = ['mp3']
 
 class AudeoBook(GenericBook, Base):
-    #url = Column(Unicode(256))          #152
-    cover = Column(Unicode(128))        #118
+    #url
+    #cover
     availability = Column(Integer)
     category = Column(Unicode(64))      #33
     audio_time = Column(Unicode(8))

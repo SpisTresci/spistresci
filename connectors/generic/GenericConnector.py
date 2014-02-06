@@ -626,9 +626,9 @@ class GenericBook(GenericBase):
     #if price_normal == -1 it means there is no special offer for this book
     price_normal = Column(Integer, default=-1) #price in grosz
     #status = Column(Integer)
-    url = Column(Unicode(256))
-    pp_url = Column(Unicode(256))
-    cover = Column(Unicode(256))
+    url = Column(STUrl)
+    pp_url = Column(STUrl)
+    cover = Column(STUrl)
 
     @declared_attr
     def book_type_id(cls):

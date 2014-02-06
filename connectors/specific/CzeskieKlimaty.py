@@ -31,12 +31,12 @@ class CzeskieKlimatyBook(GenericBook, Base):
     id = Column(Integer, primary_key = True)
 
     price = Column(Integer)             #GROSZE!!!
-    url = Column(Unicode(80))           #59
+    #url
 
     title = Column(Unicode(256))        #143
     #description
     category = Column(Unicode(80))      #72
-    cover = Column(Unicode(64))         #38
+    #cover
     #authors
     #isbns
     page_count = Column(Integer)

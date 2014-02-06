@@ -123,9 +123,9 @@ class WolneLekturyBook(GenericBook, Base):
 #    {'url': 121, 'cover': 125, 'thumbnail': 77, 'title': 91 }
     #price - derived
     external_id = Column(Unicode(32), unique = True)
-    url = Column(Unicode(256))           #121
+    #url
     title = Column(Unicode(128))        #91
-    cover = Column(Unicode(256))        #125
-    thumbnail = Column(Unicode(128))    #77
+    #cover
+    thumbnail = Column(STUrl)    #77
     #authors - derived
 
