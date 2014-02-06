@@ -249,8 +249,8 @@ DEFAULT_FROM_EMAIL = 'no-reply@spistresci.pl'
 CRON_CLASSES = [
     "spistresci.cron.TrackNotificationCronJob",
     "spistresci.cron.ClearUsersCronJob",
-    "spistresci.cron.VerifyPricesCronJob"
-
+    "spistresci.cron.VerifyPricesCronJob",
+    "spistresci.cron.AfiliantUpdateCronJob",
 ]
 
 BLOGGER_GROUP_NAME = 'blogger'

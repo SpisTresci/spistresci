@@ -5,6 +5,7 @@ from django.conf import settings
 from django_cron import CronJobBase, Schedule
 from spistresci.management.commands.send_track_notifications import Command as send_track_notifications
 from spistresci.management.commands.verify_prices import Command as verify_prices
+from spistresci.management.commands.afiliant_update import Command as afiliant_update
 from registration.management.commands.cleanupregistration import Command as cleanupregistration
 
 from subprocess import call
@@ -45,3 +46,14 @@ class VerifyPricesCronJob(CronJobBase):
 
     def do(self):
         verify_prices().handle(email_admins=True)
+
+
+class AfiliantUpdateCronJob(CronJobBase):
+    RUN_AT_TIMES = ['1:50', '3:50', '5:50', '7:50', '9:50', '11:50', '13:50',
+        '15:50', '17:50', '19:50', '21:50', '23:50']
+
+    schedule = Schedule(run_at_times=RUN_AT_TIMES)
+    code = 'spistresci.afiliant_update'
+
+    def do(self):
+        afiliant_update().handle()
