@@ -8,7 +8,7 @@ def monitor(request):
     if request.user.is_authenticated() and request.user.username == 'admin':
         services = list(Service.objects.all())
         services.sort(key=lambda x: x.name.lower())
-        update_statuses = UpdateStatus.objects.order_by('id').reverse()#[:10].reverse()
+        update_statuses = UpdateStatus.objects.order_by('id')[:10].reverse()
 
         table = []
         for us in update_statuses:
