@@ -70,7 +70,7 @@ def run_test_create(connector, args):
     connector.fetchData(download=False)
     connector._parse_make_test_dict()
 
-def run_measure_length(connector):
+def run_measure_length(connector, args):
     connector.fetchData()
     connector._parse_measure_length()
 
