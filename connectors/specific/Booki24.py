@@ -16,7 +16,7 @@ class Booki24(XMLConnector):
         'isbns': ('./isbn', ''),
         'authors': ('./author/authors', ''),
         'categories': ('./categories/category', ''),
-        'formats': ('./formats/format[@name]', ''),
+        'formats': ('./formats/format/@name', ''),
     }
 
 Base = SqlWrapper.getBaseClass()
