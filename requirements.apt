@@ -8,4 +8,5 @@ mysql-client-core-5.5
 mysql-client
 mysql-server
 mysql-common
+libjpeg-dev
 
