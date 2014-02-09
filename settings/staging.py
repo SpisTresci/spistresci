@@ -6,6 +6,8 @@ IS_STAGING = True
 DOMAIN_NAME = 'staging.spistresci.pl'
 WWW_ROOT = 'http://%s/' % DOMAIN_NAME
 
+# Python dotted path to the WSGI application used by Django's runserver.
+WSGI_APPLICATION = 'spistresci.wsgi.application'
 
 DATABASES = {
     'default': {
@@ -67,6 +69,8 @@ HAYSTACK_CONNECTIONS = {
 EMAIL_SUBJECT_PREFIX= '[SpisTresci][Staging]'
 
 SITE_ROOT = os.path.join(os.path.dirname(os.path.realpath(__file__)), '..')
+
+MEDIA_ROOT = '/var/www/django/uploads/'
 
 import shutil, sys
 if len(sys.argv) >=2 and sys.argv[1] == 'syncdb':

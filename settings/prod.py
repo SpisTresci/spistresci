@@ -6,7 +6,8 @@ IS_PROD = True
 DOMAIN_NAME = 'spistresci.pl'
 WWW_ROOT = 'http://%s/' % DOMAIN_NAME
 
-
+# Python dotted path to the WSGI application used by Django's runserver.
+WSGI_APPLICATION = 'spistresci.wsgi.application'
 
 DATABASES = {
     'default': {
@@ -75,3 +76,4 @@ EMAIL_SUBJECT_PREFIX= '[SpisTresci][Production]'
 #Host 178.216.201.221
 #Port 3306
 
+MEDIA_ROOT = '/var/www/django/uploads/'

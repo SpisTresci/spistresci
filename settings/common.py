@@ -55,7 +55,7 @@ USE_TZ = True
 SITE_ROOT = os.path.join(os.path.dirname(os.path.realpath(__file__)), '..')
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/var/www/example.com/media/"
-MEDIA_ROOT = '/var/www/django/uploads/'
+MEDIA_ROOT = os.path.join(SITE_ROOT, 'uploads')
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
@@ -110,9 +110,6 @@ MIDDLEWARE_CLASSES = (
 )
 
 ROOT_URLCONF = 'spistresci.urls'
-
-# Python dotted path to the WSGI application used by Django's runserver.
-WSGI_APPLICATION = 'spistresci.wsgi.application'
 
 TEMPLATE_DIRS = (
     os.path.join(SITE_ROOT,'templates/'),
