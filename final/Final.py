@@ -48,8 +48,10 @@ class Final(object):
             session.add(mini_book)
 
             i += 1
-            print str(i)
-            if i % 1000 == 0: session.commit()
+            connector.logger.info('%i' %i)
+            if i % 1000 == 0: 
+                session.commit()
+                connector.logger.info('%d books commited into db' % i )
 
         last_final = session.query(UpdateStatusService).filter(UpdateStatusService.service_name == connector.name, UpdateStatusService.final_end != None).order_by(UpdateStatusService.final_end.desc()).first()
 
@@ -65,8 +67,11 @@ class Final(object):
             mini_book.update(session, specific_book)
             session.add(mini_book)
             i += 1
-            print "Price update: " + str(i)
-            if i % 1000 == 0: session.commit()
+            connector.logger.info('Price updated: %i'%i)
+            if i % 1000 == 0: 
+                session.commit()
+                connector.logger.info('Price update commited: %i'%i)
+
 
         session.commit()
         session.close()
@@ -147,7 +152,8 @@ class Final(object):
 
             #candidates = mini.getCandidatesByISBN(connector.session, inner=True)
             candidates = mini.getCandidatesByTitleWord(connector.session, inner=True)
-            print "inner_merge_mini: " + str(i) + ", len(candidates): " + str(len(candidates))
+            connector.logger.info('inner_merge_mini: %i, len(candidates): %i' % (i, len(candidates)))
+            #print "inner_merge_mini: " + str(i) + ", len(candidates): " + str(len(candidates))
 
             no_st = len([word for word in mini.words if word.stopword])
             no_of_words.append(len(mini.words)-no_st)
@@ -162,15 +168,24 @@ class Final(object):
             i += 1
 
             if i % 1000== 0:
-                print str(i)
-                print "Srednia liczba kandydatow: " + str(sum(no_of_candidates)/float(len(no_of_candidates)))
-                print "Mediana liczby kandydatow: " + str(sorted(no_of_candidates)[len(no_of_candidates)/2])
+                connector.logger.info('%d' %i)
+                connector.logger.debug('Srednia liczba kandydatow: %f' % sum(no_of_candidates)/float(len(no_of_candidates)))
+                connector.logger.debug('Mediana liczby kandydatow: %i' % sorted(no_of_candidates)[len(no_of_candidates)/2])
 
-                print "Srednia liczba słów w tytule: " + str(sum(no_of_words)/float(len(no_of_words)))
-                print "Mediana liczby słów w tytule: " + str(sorted(no_of_words)[len(no_of_words)/2])
+                connector.logger.debug('Srednia liczba słów w tytule: %f' % sum(no_of_words)/float(len(no_of_words)))
+                connector.logger.debug('Mediana liczby słów w tytule: %i' % sorted(no_of_words)[len(no_of_words)/2])
 
-                print "Srednia liczba stopsłów w tytule: " + str(sum(no_of_stop_words)/float(len(no_of_stop_words)))
-                print "Mediana liczby stopsłów w tytule: " + str(sorted(no_of_stop_words)[len(no_of_stop_words)/2])
+                connector.logger.debug('Srednia liczba stopsłów w tytule: %f' % sum(no_of_stop_words)/float(len(no_of_stop_words)))
+                connector.logger.debug('Mediana liczby stopsłów w tytule: %i' % sorted(no_of_stop_words)[len(no_of_stop_words)/2])
+                #print str(i)
+                #print "Srednia liczba kandydatow: " + str(sum(no_of_candidates)/float(len(no_of_candidates)))
+                #print "Mediana liczby kandydatow: " + str(sorted(no_of_candidates)[len(no_of_candidates)/2])
+
+                #print "Srednia liczba słów w tytule: " + str(sum(no_of_words)/float(len(no_of_words)))
+                #print "Mediana liczby słów w tytule: " + str(sorted(no_of_words)[len(no_of_words)/2])
+
+                #print "Srednia liczba stopsłów w tytule: " + str(sum(no_of_stop_words)/float(len(no_of_stop_words)))
+                #print "Mediana liczby stopsłów w tytule: " + str(sorted(no_of_stop_words)[len(no_of_stop_words)/2])
 
                 Final.session.commit()
 
