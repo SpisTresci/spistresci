@@ -102,10 +102,6 @@ class GenericConnector(GenericBase, DataValidator):
     def name(self):
         return self._name
 
-    @name.setter
-    def name(self, value):
-        self._name = value
-
     def __init__(self, name=None, limit_books=0):
         if not name:
             self._name = self.class_name()
@@ -546,15 +542,9 @@ class GenericConnector(GenericBase, DataValidator):
     @classmethod
     def get_(cls, session, ClassName, d, param_name=None):
         if param_name == None:
-            obj = session.query(ClassName).filter_by(**d).first()
+            return session.query(ClassName).filter_by(**d).first()
         else:
-            obj = (session.query(ClassName).filter_by(**{param_name:d[param_name]}).first()) if d.get(param_name) != None else None
-
-        if obj:
-            #objects extracted from DB, doesn't have context, so we need to add it
-            obj.name = ClassName.__name__
-
-        return obj
+            return (session.query(ClassName).filter_by(**{param_name:d[param_name]}).first()) if d.get(param_name) != None else None
 
     def add_record(self, d):
         #TODO: made this thread safe
@@ -599,7 +589,7 @@ class GenericConnector(GenericBase, DataValidator):
 
             if d.get('formats') != None:
                 for format in d['formats']:
-                    f = Format.get_or_create(session, format)
+                    f = Format.get_or_create(session, Book.id, format, {"name":format})
                     book.formats.append(f)
 
             if d.get('persons') != None:
@@ -716,8 +706,7 @@ class GenericBook(GenericBase):
                 if key == 'persons':
                     updated_minidata |= self.update_relation(session, new_data, "authors", GenericAuthor.getConcretizedClass(context=self))
                 elif key == 'isbns':
-                    #updated_minidata |= self.update_relation(session, new_data, "isbns", GenericISBN.getConcretizedClass(context=self))
-                    pass
+                    updated_minidata |= self.update_relation(session, new_data, "isbns", GenericISBN.getConcretizedClass(context=self))
                 elif key == 'formats':
                     updated_minidata |= self.update_relation(session, new_data, "formats", GenericFormat.getConcretizedClass(context=self))
                 elif key == 'description':
@@ -764,9 +753,8 @@ class GenericBook(GenericBase):
             for foo in str_foos:
                 if foo not in new_data[foos]:
                     f = Foo.get_or_create(session, foo)
-                    if f in self_foos:
-                        self_foos.remove(f)
-                        updated = True
+                    self_foos.remove(f)
+                    updated = True
 
         return updated
 
@@ -877,7 +865,7 @@ class GenericISBN(GenericBase):
         return GenericBase.getConcretizedClass(context, 'ISBN')
 
     @classmethod
-    def get_or_create(cls, session, isbn_dict):
+    def get_or_create(cls, session, isbn_dict, param_name):
         return GenericConnector.get_or_create_(session, cls, isbn_dict, param_name)
 
     raw = Column(Unicode(50))
@@ -921,10 +909,6 @@ class GenericFormat(GetOrCreateCache, GenericBase):
     def books(cls):
         name = cls.__tablename__[:-len("Format")]
         return relationship(name + "Book", secondary = cls.metadata.tables[name + 'BooksFormats'] , backref = backref("formats", lazy = 'joined'), lazy = 'joined')
-
-    @classmethod
-    def get_or_create(cls, session, format):
-        return GenericConnector.get_or_create_(session, cls, {'name':format})
 
     @staticmethod
     def getConcretizedClass(context):
