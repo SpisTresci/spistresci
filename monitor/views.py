@@ -8,7 +8,7 @@ def monitor(request):
     if request.user.is_authenticated() and request.user.username == 'admin':
         services = list(Service.objects.all())
         services.sort(key=lambda x: x.name.lower())
-        update_statuses = UpdateStatus.objects.order_by('id')[:10].reverse()
+        update_statuses = UpdateStatus.objects.order_by('id')[:25].reverse()
 
         table = []
         for us in update_statuses:
@@ -17,8 +17,6 @@ def monitor(request):
             for service in services:
                 uss_s = UpdateStatusService.objects.filter(update_status_id = us.id, service_name = service.name)
                 uss = uss_s[0] if len(uss_s) != 0 else None
-
-                #repair_dates([])
                 s_stable.append(uss)
 
         repair_dates(update_statuses)
@@ -30,6 +28,6 @@ def monitor(request):
 def repair_dates(update_statuses):
     for us in update_statuses:
         if us.start:
-            us.start = us.start + timedelta(hours=5)
+            us.start = us.start - timedelta(hours=1)
         if us.end:
-            us.end = us.end + timedelta(hours=5)
+            us.end = us.end - timedelta(hours=1)
