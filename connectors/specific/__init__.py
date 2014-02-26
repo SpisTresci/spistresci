@@ -26,6 +26,7 @@ from Koobe import Koobe
 from Ksiazki import Ksiazki
 from Latarnik import Latarnik
 from Legimi import Legimi
+from Lideria import Lideria
 from Merlin import Merlin
 from Nexto import Nexto
 from OnePress import OnePress

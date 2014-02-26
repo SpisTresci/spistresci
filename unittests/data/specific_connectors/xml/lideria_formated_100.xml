@@ -1,0 +1,1562 @@
+<?xml version="1.0" encoding="ISO-8859-2"?>
+<offers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1">
+<group name="books">
+ <o id="271100" url="http://www.lideria.pl/Nie-swieci-Alfred-Zajdorf/sklep/opis?nr=271100" price="34.65" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Biografie i dzienniki]]></cat>
+  <name><![CDATA[Nie święci...]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/271100.jpg"/></imgs>
+  <desc><![CDATA[Luty 1940 roku. Dworzec w Warszawie. Na oczach Alfreda Zajdorfa, wówczas jedenastoletniego żydowskiego chłopca, hitlerowcy dokonują egzekucji jego ojca. Zrozpaczonego i zagubionego sierotę ratują Polacy.]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[Alfred Zajdorf]]></a>
+   <a name="ISBN"><![CDATA[9788375066524]]></a>
+   <a name="Ilosc_stron"><![CDATA[496]]></a>
+   <a name="Wydawnictwo"><![CDATA[Zysk i S-ka]]></a>
+   <a name="Rok_wydania"><![CDATA[2011]]></a>
+   <a name="Oprawa"><![CDATA[miękka]]></a>
+   <a name="Format"><![CDATA[170x245 mm]]></a>
+  </attrs>
+ </o>
+ <o id="393581" url="http://www.lideria.pl/Bajki-dla-najmlodszych/sklep/opis?nr=393581" price="23.10" avail="1">
+  <cat><![CDATA[Księgarnia/Książki]]></cat>
+  <name><![CDATA[Bajki dla najmłodszych]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/393581.jpg"/></imgs>
+  <desc><![CDATA[Prezentowana książka to zbiór najciekawszych bajek, znanych od pokoleń. Opowiedziane pięknym językiem historie zapewnią najmłodszym rozrywkę, trwale zapisując w pamięci chwile spędzone z książką. Dydaktyczny i wychowawczy wymiar bajek powinien skłonić każdego rodzica, by sięgnąć po niniejsze wydanie, a barwne ilustracje zainteresują każde dziecko.]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[]]></a>
+   <a name="ISBN"><![CDATA[9788379320066]]></a>
+   <a name="Ilosc_stron"><![CDATA[240]]></a>
+   <a name="Wydawnictwo"><![CDATA[P.H.W. Fenix Przemysław Biniecki]]></a>
+   <a name="Rok_wydania"><![CDATA[2013]]></a>
+   <a name="Oprawa"><![CDATA[twarda]]></a>
+   <a name="Format"><![CDATA[200x280 mm]]></a>
+  </attrs>
+ </o>
+ <o id="270346" url="http://www.lideria.pl/Tunele-Blizej-Roderick-Gordon-Brian-Williams/sklep/opis?nr=270346" price="36.12" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Literatura piękna i popularna/Literatura dla młodzieży]]></cat>
+  <name><![CDATA[Tunele. Bliżej]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/270346.jpg"/></imgs>
+  <desc><![CDATA[W samym środku Ziemi Will wpada w kolejne kłopoty, a przy okazji odkrywa zapomniane cywilizacje i inne tajemnice. Jego tropem nieustannie podążają Styksowie. W tym czasie w Górnoziemiu Drake z zespołem zaskakujących sojuszników przygotowuje się do walki, która przyniesie ludziom ocalenie albo? śmierą.]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[Roderick Gordon, Brian Williams]]></a>
+   <a name="ISBN"><![CDATA[9788325902476]]></a>
+   <a name="Ilosc_stron"><![CDATA[492]]></a>
+   <a name="Wydawnictwo"><![CDATA[Wilga]]></a>
+   <a name="Rok_wydania"><![CDATA[2013]]></a>
+   <a name="Oprawa"><![CDATA[twarda]]></a>
+   <a name="Format"><![CDATA[135x205 mm]]></a>
+  </attrs>
+ </o>
+ <o id="100626" url="http://www.lideria.pl/Wywrotka-Basia-Wojciech-Prochniewicz/sklep/opis?nr=100626" price="3.15" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Literatura piękna i popularna/Literatura dla młodzieży]]></cat>
+  <name><![CDATA[Wywrotka Basia]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/100626.jpg"/></imgs>
+  <desc><![CDATA[Seria WESOŁE POJAZDY wprowadza dzieci w świat maszyn budowlanych. Idealna do biblioteki małego człowieka.]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[Wojciech Próchniewicz]]></a>
+   <a name="ISBN"><![CDATA[9788360153680]]></a>
+   <a name="Ilosc_stron"><![CDATA[10]]></a>
+   <a name="Wydawnictwo"><![CDATA[Agencja Wydawnicza Liwona]]></a>
+   <a name="Rok_wydania"><![CDATA[2012]]></a>
+   <a name="Oprawa"><![CDATA[miękka]]></a>
+   <a name="Format"><![CDATA[148x140 mm]]></a>
+  </attrs>
+ </o>
+ <o id="100622" url="http://www.lideria.pl/Prawo-jazdy-dla-kazdego-Kategoria-D-Praca-zbiorowa/sklep/opis?nr=100622" price="19.32" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Poradniki]]></cat>
+  <name><![CDATA[Prawo jazdy dla każdego. Kategoria D]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/100622.jpg"/></imgs>
+  <desc><![CDATA[Wszystkie wiadomości niezbędne do egzaminu na prawo jazdy kategorii D
+Przepisy ruchu drogowego dotyczące autobusów
+Podstawowe wiadomości z zakresu techniki kierowania autobusem
+Budowa i obsługa
+Przepisy dotyczące przewożenia osób
+Co jest potrzebne do egzaminu?]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[Praca zbiorowa]]></a>
+   <a name="ISBN"><![CDATA[9788389052285]]></a>
+   <a name="Ilosc_stron"><![CDATA[191]]></a>
+   <a name="Wydawnictwo"><![CDATA[Agencja Wydawnicza Liwona]]></a>
+   <a name="Rok_wydania"><![CDATA[2012]]></a>
+   <a name="Oprawa"><![CDATA[miękka]]></a>
+   <a name="Format"><![CDATA[143x203 mm]]></a>
+  </attrs>
+ </o>
+ <o id="163655" url="http://www.lideria.pl/Lazurowe-wybrzeze-od-srodka-Kieszonkowy-przewodnik-Praca-zbiorowa/sklep/opis?nr=163655" price="20.79" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Mapy i przewodniki]]></cat>
+  <name><![CDATA[Lazurowe wybrzeże od środka. Kieszonkowy przewodnik]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/163655.jpg"/></imgs>
+  <desc><![CDATA[W tym przewodniku znajdziesz odpowiedzi na pytania, które chciałbyś zadać komuś, kto mieszka na Lazurowym Wybrzeżu. Co naprawdę warto zobaczyć? Jak dotrzeć do miejsc, których turyści jeszcze nie odkryli? Napisany przez osobę, która na stałe mieszka w tym regionie i dzięki temu zna go bardzo dobrze.]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[Praca zbiorowa]]></a>
+   <a name="ISBN"><![CDATA[9788372436245]]></a>
+   <a name="Ilosc_stron"><![CDATA[96]]></a>
+   <a name="Wydawnictwo"><![CDATA[RM]]></a>
+   <a name="Rok_wydania"><![CDATA[2008]]></a>
+   <a name="Oprawa"><![CDATA[miękka]]></a>
+   <a name="Format"><![CDATA[125x220 mm]]></a>
+  </attrs>
+ </o>
+ <o id="376408" url="http://www.lideria.pl/Fronda-61-2011-Zycie-seksualne-katolikow/sklep/opis?nr=376408" price="25.20" avail="1">
+  <cat><![CDATA[Księgarnia/Książki]]></cat>
+  <name><![CDATA[Fronda 61/2011 Życie seksualne katolików]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/376408.jpg"/></imgs>
+  <desc><![CDATA[W numerze m.in.:
+Jedinaja Polsza Aleksander Bocianowski
+Napis wyryty na korze mózgowej Jacka Żakowskiego Eryk Dostatni
+Triumf historycznych analogii, czyli ?puste miejsce? w polityce polskiej Marek A.]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[]]></a>
+   <a name="ISBN"><![CDATA[9771231647104]]></a>
+   <a name="Ilosc_stron"><![CDATA[290]]></a>
+   <a name="Wydawnictwo"><![CDATA[Fronda]]></a>
+   <a name="Rok_wydania"><![CDATA[2011]]></a>
+   <a name="Oprawa"><![CDATA[miękka]]></a>
+   <a name="Format"><![CDATA[145x200 mm]]></a>
+  </attrs>
+ </o>
+ <o id="78658" url="http://www.lideria.pl/Odkryj-sile-radosci-ktora-jest-w-Tobie-Marino-Parodi/sklep/opis?nr=78658" price="22.89" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Poradniki/Pozostałe poradniki]]></cat>
+  <name><![CDATA[Odkryj siłę radości, która jest w Tobie]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/78658.jpg"/></imgs>
+  <desc><![CDATA[Wszyscy pragniemy w pewien sposób zmienią nasze życie i w głębi duszy wiemy, że dysponujemy wielkim potencjałem, najczęściej jednak - do tej pory - niewykorzystanym. Kogo z nas, przynajmniej raz, nie ogarnęła radość życia przełamująca wszelkie ograniczenia? Wszystkim nam zdarzało się spotkać ludzi przeżywających głęboką tragedię, a jednocześnie mocno kochających życie.]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[Marino Parodi]]></a>
+   <a name="ISBN"><![CDATA[9788374820332]]></a>
+   <a name="Ilosc_stron"><![CDATA[230]]></a>
+   <a name="Wydawnictwo"><![CDATA[Espe]]></a>
+   <a name="Rok_wydania"><![CDATA[2006]]></a>
+   <a name="Oprawa"><![CDATA[miękka]]></a>
+   <a name="Format"><![CDATA[135x195 mm]]></a>
+  </attrs>
+ </o>
+ <o id="162328" url="http://www.lideria.pl/Slownik-terminologii-prawniczej-i-ekonomicznej-polsko-slowacki-Praca-zbiorowa/sklep/opis?nr=162328" price="51.24" avail="1">
+  <cat><![CDATA[Księgarnia/Książki]]></cat>
+  <name><![CDATA[Słownik terminologii prawniczej i ekonomicznej polsko-słowacki]]></name>
+  <desc><![CDATA[20 000 specjalistycznych haseł i podhaseł tworzących odrębne jednostki znaczeniowe. Słownictwo z zakresu ekonomii, gospodarki, handlu międzynarodowego, finansów, bankowości, obrotu giełdowego, ubezpieczeń, transportu, marketingu, prawa cywilnego, karnego i gospodarczego, z uwzględnieniem pewnego zakresu słownictwa ogólnego, występującego w tekstach ekonomicznych i prawniczych.]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[Praca zbiorowa]]></a>
+   <a name="ISBN"><![CDATA[9788321413778]]></a>
+   <a name="Ilosc_stron"><![CDATA[472]]></a>
+   <a name="Wydawnictwo"><![CDATA[Wiedza Powszechna]]></a>
+   <a name="Rok_wydania"><![CDATA[2008]]></a>
+   <a name="Oprawa"><![CDATA[twarda]]></a>
+   <a name="Format"><![CDATA[130x200 mm]]></a>
+  </attrs>
+ </o>
+ <o id="268564" url="http://www.lideria.pl/Seks-Felicia-Zopol/sklep/opis?nr=268564" price="29.40" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Poradniki/Pozostałe poradniki]]></cat>
+  <name><![CDATA[Seks]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/268564.jpg"/></imgs>
+  <desc><![CDATA[W końcu! Wszechstronny podręcznik stosunku płciowego!
+Seks jest tak stary jak ludzka cywilizacja, dlaczego więc ? mimo upływu tysiącleci ? tajemnice szczęśliwego pożycia są nadal tak nieuchwytne? Na szczęście powstał podręcznik idealny: Seks.]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[Felicia Zopol]]></a>
+   <a name="ISBN"><![CDATA[9788377310205]]></a>
+   <a name="Ilosc_stron"><![CDATA[208]]></a>
+   <a name="Wydawnictwo"><![CDATA[Vesper]]></a>
+   <a name="Rok_wydania"><![CDATA[2011]]></a>
+   <a name="Oprawa"><![CDATA[miękka]]></a>
+   <a name="Format"><![CDATA[127x178 mm]]></a>
+  </attrs>
+ </o>
+ <o id="140710" url="http://www.lideria.pl/Karol-Wojtyla-Przyjaciel-Kardynal-Papiez-Gabriel-Turowski/sklep/opis?nr=140710" price="70.35" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Religia]]></cat>
+  <name><![CDATA[Karol Wojtyła. Przyjaciel, Kardynał, Papież]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/140710.jpg"/></imgs>
+  <desc><![CDATA[Wyjątkowe świadectwo o życiu Karola Wojtyły, świadectwo tym ciekawsze, że napisane piórem i udokumentowane aparatem fotograficznym. Niewielu ludzi znało Jana Pawła II tak długo i tak blisko, jak prof. Gabriel Turowski. Spotkał młodego ks. Karola Wojtyłę, gdy był On wikarym u św. Floriana w Krakowie. Został w jego środowisku aż do końca - w Środowisku Wujka, jak nazywali ks. Karola najbliżsi przyjaciele. Ks. Karol Wojtyła pozostał dla nich zawsze Wujkiem. ]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[Gabriel Turowski]]></a>
+   <a name="ISBN"><![CDATA[9788375530063]]></a>
+   <a name="Ilosc_stron"><![CDATA[154]]></a>
+   <a name="Wydawnictwo"><![CDATA[Biały Kruk]]></a>
+   <a name="Rok_wydania"><![CDATA[2009]]></a>
+   <a name="Oprawa"><![CDATA[twarda]]></a>
+   <a name="Format"><![CDATA[230x280 mm]]></a>
+  </attrs>
+ </o>
+ <o id="98431" url="http://www.lideria.pl/Owca-kierowca-i-inne-bajki-Malgorzata-Zielinska/sklep/opis?nr=98431" price="10.50" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Literatura piękna i popularna/Literatura dla młodzieży]]></cat>
+  <name><![CDATA[Owca kierowca i inne bajki]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/98431.jpg"/></imgs>
+  <desc><![CDATA[Chory na stawy hipopotam
+Usłyszał, że kąpiele z błota
+Cudownie leczą bóle w kościach
+Więc zachwycony wiadomością
+Udał się wnet do uzdrowiska
+Z nadzieją, że zdrowie odzyska
+Doktor zapisał mu kąpiele
+Oraz zabiegów innych wiele]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[Małgorzata Zielińska]]></a>
+   <a name="ISBN"><![CDATA[9788360826034]]></a>
+   <a name="Ilosc_stron"><![CDATA[32]]></a>
+   <a name="Wydawnictwo"><![CDATA[Printex]]></a>
+   <a name="Rok_wydania"><![CDATA[2014]]></a>
+   <a name="Oprawa"><![CDATA[twarda]]></a>
+   <a name="Format"><![CDATA[172x241 mm]]></a>
+  </attrs>
+ </o>
+ <o id="97799" url="http://www.lideria.pl/English-Slownik-tematyczny-dla-mlodziezy-szkolnej-studentow-i-nie-tylko/sklep/opis?nr=97799" price="26.88" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Nauka języków obcych/Język angielski]]></cat>
+  <name><![CDATA[English. Słownik tematyczny dla młodzieży szkolnej, studentów i nie tylko...]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/97799.jpg"/></imgs>
+  <desc><![CDATA["English.]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[Ewa Puńko]]></a>
+   <a name="ISBN"><![CDATA[9788387388195]]></a>
+   <a name="Ilosc_stron"><![CDATA[488]]></a>
+   <a name="Wydawnictwo"><![CDATA[Wagros]]></a>
+   <a name="Rok_wydania"><![CDATA[2000]]></a>
+   <a name="Oprawa"><![CDATA[miękka]]></a>
+   <a name="Format"><![CDATA[147x10 mm]]></a>
+  </attrs>
+ </o>
+ <o id="199307" url="http://www.lideria.pl/Berlin-Miasta-Swiata-Julian-Jain-i-Sheema-Mookherjee/sklep/opis?nr=199307" price="30.45" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Mapy i przewodniki]]></cat>
+  <name><![CDATA[Berlin - Miasta Świata]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/199307.jpg"/></imgs>
+  <desc><![CDATA["Berlin jest ogromnym miastem pod każdym względem niektórzy twierdzą nawet, że imponującym. Od chwili połączenia zachodniej i wschodniej części metropolii coraz łatwiej znaleźą tu dogodny nocleg, odpowiednią restaurację czy też rodzaj rozrywki. Każda z dzielnic ma swój własny, niepowtarzalny wybór sklepów, a liczba koncertów, teatrów, kin i klubów jest tak duża, że chciałoby się tu zostać dłużej, by zobaczyć jeszcze więcej. Do Berlina można wyskoczyć właściwie na wieczór i mieć pewność, że zabawa będzie przednia!" ]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[Julian Jain i Sheema Mookherjee]]></a>
+   <a name="ISBN"><![CDATA[9788375134087]]></a>
+   <a name="Ilosc_stron"><![CDATA[192]]></a>
+   <a name="Wydawnictwo"><![CDATA[Pascal]]></a>
+   <a name="Rok_wydania"><![CDATA[2009]]></a>
+   <a name="Oprawa"><![CDATA[miękka]]></a>
+   <a name="Format"><![CDATA[140x200 mm]]></a>
+  </attrs>
+ </o>
+ <o id="203826" url="http://www.lideria.pl/Egipt-Last-Minute-Robin-Gauldie/sklep/opis?nr=203826" price="21.84" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Mapy i przewodniki]]></cat>
+  <name><![CDATA[Egipt - Last Minute]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/203826.jpg"/></imgs>
+  <desc><![CDATA[Egipt: raj dla spragnionych leżakowania na ciepłych plażach i odkrywania barwnego podwodnego świata. Kraj fascynującej historii, której znakiem są piramidy w Gizie, świątynie w Luksorze, koptyjskie kościoły i meczety. To również Nil i niezmierzona pustynia urozmaicona zielonymi oazami, jak też gwarny Kair. Kiedy nosi po świecie, niezbędny jest przewodnik.]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[Robin Gauldie]]></a>
+   <a name="ISBN"><![CDATA[9788375135329]]></a>
+   <a name="Ilosc_stron"><![CDATA[128]]></a>
+   <a name="Wydawnictwo"><![CDATA[Pascal]]></a>
+   <a name="Rok_wydania"><![CDATA[2009]]></a>
+   <a name="Oprawa"><![CDATA[miękka]]></a>
+   <a name="Format"><![CDATA[130x180 mm]]></a>
+  </attrs>
+ </o>
+ <o id="218519" url="http://www.lideria.pl/Artur-czarodziej-Daniel-Joris/sklep/opis?nr=218519" price="19.32" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Literatura piękna i popularna/Literatura dla młodzieży]]></cat>
+  <name><![CDATA[Artur czarodziej]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/218519.jpg"/></imgs>
+  <desc><![CDATA["Moje spotkanie z książką o małym czarodzieju Arturze zaowocowało miłością od pierwszego wejrzenia. Od razu zapragnąłem opowiedzieć tę historię swoim dzieciom, a także wszystkim dzieciom w Polsce.]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[Daniel Joris]]></a>
+   <a name="ISBN"><![CDATA[9788375682205]]></a>
+   <a name="Ilosc_stron"><![CDATA[112]]></a>
+   <a name="Wydawnictwo"><![CDATA[Siedmioróg]]></a>
+   <a name="Rok_wydania"><![CDATA[2012]]></a>
+   <a name="Oprawa"><![CDATA[twarda]]></a>
+   <a name="Format"><![CDATA[205x220 mm]]></a>
+  </attrs>
+ </o>
+ <o id="97628" url="http://www.lideria.pl/Slownictwo-angielskie-dla-zaawansowanych-Maciej-Matasek/sklep/opis?nr=97628" price="22.68" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Nauka języków obcych/Język angielski]]></cat>
+  <name><![CDATA[Słownictwo angielskie dla zaawansowanych]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/97628.jpg"/></imgs>
+  <desc><![CDATA[Książka adresowana do osób, których dążeniem jest nabycie szerszej praktycznej wiedzy o zaawansowanym leksykonie języka angielskiego. Materiał obejmuje szeroki zakres tematyczny dostosowany do poziomu FCE oraz CAE.]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[Maciej Matasek]]></a>
+   <a name="ISBN"><![CDATA[9788391420799]]></a>
+   <a name="Ilosc_stron"><![CDATA[203]]></a>
+   <a name="Wydawnictwo"><![CDATA[Handy Books]]></a>
+   <a name="Rok_wydania"><![CDATA[2003]]></a>
+   <a name="Oprawa"><![CDATA[miękka]]></a>
+   <a name="Format"><![CDATA[165x234 mm]]></a>
+  </attrs>
+ </o>
+ <o id="96769" url="http://www.lideria.pl/Czestochowa-1-22-000-Kieszonkowy-plan-miasta/sklep/opis?nr=96769" price="7.77" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Mapy i przewodniki]]></cat>
+  <name><![CDATA[Częstochowa 1:22 000. Kieszonkowy plan miasta]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/96769.jpg"/></imgs>
+  <desc><![CDATA[Dwustronnie laminowany, łatwy w składaniu i trwały plan Częstochowy w skali 1:22 000. Wygodny, kieszonkowy format, duży zakres treści przy mniejszych wymiarach i cenie.]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[]]></a>
+   <a name="ISBN"><![CDATA[9788360120231]]></a>
+   <a name="Ilosc_stron"><![CDATA[]]></a>
+   <a name="Wydawnictwo"><![CDATA[ExpressMap Polska]]></a>
+   <a name="Rok_wydania"><![CDATA[2010]]></a>
+   <a name="Oprawa"><![CDATA[]]></a>
+   <a name="Format"><![CDATA[095x160 mm]]></a>
+  </attrs>
+ </o>
+ <o id="382543" url="http://www.lideria.pl/Koziolek-Fikolek-Mini-zwierzatka-Kielbasinski-Krzysztof/sklep/opis?nr=382543" price="3.15" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Literatura piękna i popularna/Literatura dla młodzieży]]></cat>
+  <name><![CDATA[Koziołek Fikołek. Mini zwierzątka]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/382543.jpg"/></imgs>
+  <desc><![CDATA[Seria bajeczek kartonowych dla dzieci.]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[Kiełbasiński Krzysztof]]></a>
+   <a name="ISBN"><![CDATA[9788378815518]]></a>
+   <a name="Ilosc_stron"><![CDATA[6]]></a>
+   <a name="Wydawnictwo"><![CDATA[Wilga]]></a>
+   <a name="Rok_wydania"><![CDATA[2013]]></a>
+   <a name="Oprawa"><![CDATA[twarda]]></a>
+   <a name="Format"><![CDATA[150x150 mm]]></a>
+  </attrs>
+ </o>
+ <o id="240856" url="http://www.lideria.pl/Polish-Jews-and-their-culture-An-ilustrated-guide-Adam-Dylewski/sklep/opis?nr=240856" price="43.47" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Historia]]></cat>
+  <name><![CDATA[Polish Jews and their culture. An ilustrated guide]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/240856.jpg"/></imgs>
+  <desc><![CDATA["Śladami Żydów polskich"  to nowe edycje - polska i angielska doskonałego przewodnika, prezentującego siedem wieków wspólnego życia  Żydów i Polaków oraz żydowską kulturę materialną, duchową i religijną rozwijającą się  na ziemiach Rzeczpospolitej.]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[Adam Dylewski]]></a>
+   <a name="ISBN"><![CDATA[9788375136913]]></a>
+   <a name="Ilosc_stron"><![CDATA[328]]></a>
+   <a name="Wydawnictwo"><![CDATA[Pascal]]></a>
+   <a name="Rok_wydania"><![CDATA[2010]]></a>
+   <a name="Oprawa"><![CDATA[twarda]]></a>
+   <a name="Format"><![CDATA[130x200 mm]]></a>
+  </attrs>
+ </o>
+ <o id="397978" url="http://www.lideria.pl/Flashman-Fraser-George-MacDonald/sklep/opis?nr=397978" price="26.25" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Literatura piękna i popularna/Powieści i opowiadania]]></cat>
+  <name><![CDATA[Flashman]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/397978.jpg"/></imgs>
+  <desc><![CDATA[Co się stało z Flashmanem, bezczelnym zabijaką z Tom Brown's Schooldays, po tym jak z fatalną opinią skończonego pijaka pod koniec lat 30-tych XX wieku został wyrzucony z Rugby School? Jaki człowiek wyrósł z wulgarnego, pewnego siebie wazeliniarza, który dla zabawy bił słabszych od siebie i wył z bólu, kiedy sam dostawał lanie?
+Przez ponad stulecie los jednego z okrytych najgorszą sławą uczniów pozostawał nieznany.]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[Fraser George MacDonald]]></a>
+   <a name="ISBN"><![CDATA[9788377851746]]></a>
+   <a name="Ilosc_stron"><![CDATA[436]]></a>
+   <a name="Wydawnictwo"><![CDATA[Zysk i S-ka]]></a>
+   <a name="Rok_wydania"><![CDATA[2013]]></a>
+   <a name="Oprawa"><![CDATA[miękka]]></a>
+   <a name="Format"><![CDATA[140x200 mm]]></a>
+  </attrs>
+ </o>
+ <o id="96278" url="http://www.lideria.pl/Radom-1-20-000-Kieszonkowy-plan-miasta/sklep/opis?nr=96278" price="17.43" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Mapy i przewodniki]]></cat>
+  <name><![CDATA[Radom 1:20 000. Kieszonkowy plan miasta]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/96278.jpg"/></imgs>
+  <desc><![CDATA[Radom 1:20 000 kieszonkowy plan miasta. Laminowany.]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[]]></a>
+   <a name="ISBN"><![CDATA[9788360120064]]></a>
+   <a name="Ilosc_stron"><![CDATA[]]></a>
+   <a name="Wydawnictwo"><![CDATA[ExpressMap Polska]]></a>
+   <a name="Rok_wydania"><![CDATA[2011]]></a>
+   <a name="Oprawa"><![CDATA[]]></a>
+   <a name="Format"><![CDATA[110x235 mm]]></a>
+  </attrs>
+ </o>
+ <o id="383768" url="http://www.lideria.pl/Kultura-szlachecka-w-Polsce-Tazbir-Janusz/sklep/opis?nr=383768" price="28.14" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Historia]]></cat>
+  <name><![CDATA[Kultura szlachecka w Polsce]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/383768.jpg"/></imgs>
+  <desc><![CDATA[Książka jest syntetycznym studium omawiającym swoiste cechy i miejsce kultury szlacheckiej w dorobku naszej kultury narodowej. Autor przedstawia jej rozkwit, zmierzch, przemiany w XIX w. oraz relikty tego, co zwykliśmy nazywać sarmatyzmem w różnych dziedzinach współczesnego życia.]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[Tazbir Janusz]]></a>
+   <a name="ISBN"><![CDATA[9788363795184]]></a>
+   <a name="Ilosc_stron"><![CDATA[216]]></a>
+   <a name="Wydawnictwo"><![CDATA[Rebis]]></a>
+   <a name="Rok_wydania"><![CDATA[2012]]></a>
+   <a name="Oprawa"><![CDATA[miękka]]></a>
+   <a name="Format"><![CDATA[150x225 mm]]></a>
+  </attrs>
+ </o>
+ <o id="397223" url="http://www.lideria.pl/Lan-kozie-smierc-Kolska-Lena/sklep/opis?nr=397223" price="23.10" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Literatura piękna i popularna/Literatura dla młodzieży]]></cat>
+  <name><![CDATA[Łan kozie śmierć]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/397223.jpg"/></imgs>
+  <desc><![CDATA[Grupka przyjaciół - przyszłych artystów kończących naukę w popularnym "plastyku" - przypadkowo krzyżuje plany pewnego fałszerza dzieł sztuki. Fałszerzem tym okazuje się szkolny kolega... ich nauczycieli od przedmiotów artystycznych. Sytuacja się komp]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[Kolska Lena]]></a>
+   <a name="ISBN"><![CDATA[9788378561873]]></a>
+   <a name="Ilosc_stron"><![CDATA[268]]></a>
+   <a name="Wydawnictwo"><![CDATA[Poligraf]]></a>
+   <a name="Rok_wydania"><![CDATA[2014]]></a>
+   <a name="Oprawa"><![CDATA[miękka]]></a>
+   <a name="Format"><![CDATA[145x205 mm]]></a>
+  </attrs>
+ </o>
+ <o id="95577" url="http://www.lideria.pl/Nissan-Primera/sklep/opis?nr=95577" price="44.94" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Poradniki/Samochody i motocykle]]></cat>
+  <name><![CDATA[Nissan Primera]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/95577.jpg"/></imgs>
+  <desc><![CDATA[W książce  omówiono obsługę i naprawę samochodów osobowych Nissan Primera. Opisy napraw uzupełniono danymi technicznymi i regulacyjnymi , tablicą momentów dokręcania połączeń poszczególnych zespołów oraz schematami elektrycznymi.]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[]]></a>
+   <a name="ISBN"><![CDATA[9788385243441]]></a>
+   <a name="Ilosc_stron"><![CDATA[256]]></a>
+   <a name="Wydawnictwo"><![CDATA[Auto]]></a>
+   <a name="Rok_wydania"><![CDATA[2006]]></a>
+   <a name="Oprawa"><![CDATA[miękka]]></a>
+   <a name="Format"><![CDATA[200x280 mm]]></a>
+  </attrs>
+ </o>
+ <o id="205332" url="http://www.lideria.pl/Owczarek-niemiecki-Praca-zbiorowa/sklep/opis?nr=205332" price="11.55" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Poradniki/Rośliny i zwierzęta]]></cat>
+  <name><![CDATA[Owczarek niemiecki]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/205332.jpg"/></imgs>
+  <desc><![CDATA[Owczarek niemiecki przez długie lata (a czasem jeszcze i dzisiaj) nazywany był alzackim najpewniej dlatego, że stamtąd właśnie - z północno-wschodniej Francji - pochodzi i tam był najbardziej popularny. Wtedy jednak Alzacja należała do Niemiec. (...) Owczarek niemiecki jest psem nadzwyczaj wszechstronnym.]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[Praca zbiorowa]]></a>
+   <a name="ISBN"><![CDATA[9788375790658]]></a>
+   <a name="Ilosc_stron"><![CDATA[64]]></a>
+   <a name="Wydawnictwo"><![CDATA[Galaktyka]]></a>
+   <a name="Rok_wydania"><![CDATA[2013]]></a>
+   <a name="Oprawa"><![CDATA[miękka]]></a>
+   <a name="Format"><![CDATA[150x210 mm]]></a>
+  </attrs>
+ </o>
+ <o id="98998" url="http://www.lideria.pl/Jan-Jerzy-Pinsel-Borys-Woznicki/sklep/opis?nr=98998" price="60.06" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Podręczniki akademickie/Sztuka]]></cat>
+  <name><![CDATA[Jan Jerzy Pinsel]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/98998.jpg"/></imgs>
+  <desc><![CDATA[Wśród najwybitniejszych europejskich artystów XVIII wieku nie ma chyba rzeźbiarza równie tajemniczego jak Pinsel. Prawie nic nie wiemy o życiu osobistym mistrza, nie wiadomo, skąd pochodzi, jak się pojawił - omijając ośrodki artystyczne Europy - na dalekim artystycznym Podolu, które było wtedy wschodnią rubieżą Rzeczypospolitej Polskiej.]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[Borys Woźnicki]]></a>
+   <a name="ISBN"><![CDATA[9788389747679]]></a>
+   <a name="Ilosc_stron"><![CDATA[144]]></a>
+   <a name="Wydawnictwo"><![CDATA[Bosz s.c.]]></a>
+   <a name="Rok_wydania"><![CDATA[2008]]></a>
+   <a name="Oprawa"><![CDATA[twarda]]></a>
+   <a name="Format"><![CDATA[240x300 mm]]></a>
+  </attrs>
+ </o>
+ <o id="218239" url="http://www.lideria.pl/Zwiadowcy-Ksiega-4-Bitwa-o-Skandie-John-Flanagan/sklep/opis?nr=218239" price="28.56" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Literatura piękna i popularna/Fantastyka i fantasy]]></cat>
+  <name><![CDATA[Zwiadowcy. Księga 4. Bitwa o Skandię]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/218239.jpg"/></imgs>
+  <desc><![CDATA[Czwarty tom znakomitej serii Johna Flanagana, która od ponad trzydziestu tygodni nie schodzi z listy bestsellerów ?New York Timesa?.
+ 
+Czy ci, którzy jeszcze niedawno byli śmiertelnymi wrogami, mogą połączyć swe siły i walczyć ramię w ramię przeciwko wspólnemu nieprzyjacielowi?
+
+Wiosna miała oznaczać koniec niewolniczej doli Evalyn i Willa.]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[John Flanagan]]></a>
+   <a name="ISBN"><![CDATA[9788376860015]]></a>
+   <a name="Ilosc_stron"><![CDATA[384]]></a>
+   <a name="Wydawnictwo"><![CDATA[Jaguar]]></a>
+   <a name="Rok_wydania"><![CDATA[2006]]></a>
+   <a name="Oprawa"><![CDATA[miękka]]></a>
+   <a name="Format"><![CDATA[135x200 mm]]></a>
+  </attrs>
+ </o>
+ <o id="56354" url="http://www.lideria.pl/Fluoride-in-medicine-biology-and-toxicology-Dariusz-Chlubek/sklep/opis?nr=56354" price="21.00" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Poradniki/Zdrowie i diety]]></cat>
+  <name><![CDATA[Fluoride in medicine, biology and toxicology]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/56354.jpg"/></imgs>
+  <desc><![CDATA[The book consists of articles on fluoride - the most reactive of all elements. Fluoride is widely distributed in the air, water and soil. Trace elements are essential for human health but could be toxic if their concentration exceeds the permissible ]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[Dariusz Chlubek]]></a>
+   <a name="ISBN"><![CDATA[9788391196915]]></a>
+   <a name="Ilosc_stron"><![CDATA[118]]></a>
+   <a name="Wydawnictwo"><![CDATA[Borgis]]></a>
+   <a name="Rok_wydania"><![CDATA[2003]]></a>
+   <a name="Oprawa"><![CDATA[twarda]]></a>
+   <a name="Format"><![CDATA[180x250 mm]]></a>
+  </attrs>
+ </o>
+ <o id="264315" url="http://www.lideria.pl/Hello-Flex-4-Peter-Armstrong/sklep/opis?nr=264315" price="34.65" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Informatyka]]></cat>
+  <name><![CDATA[Hello! Flex 4]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/264315.jpg"/></imgs>
+  <desc><![CDATA[Najnowszy Flex  aktualna książka. Wykorzystaj szansę! 
+
+
+Jak stworzyć swój pierwszy projekt?
+Jak projektować style?
+Co wybrać: AJAX czy Flex? A może je połączyć?
+
+ 
+Flex w wersji 4 to najnowszy krzyk mody na rynku aplikacji webowych. Pozwala na tworzenie rozwiązań internetowych w niczym nieprzypominających tych, z którymi mamy do czynienia na co dzień.]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[Peter Armstrong]]></a>
+   <a name="ISBN"><![CDATA[9788324628810]]></a>
+   <a name="Ilosc_stron"><![CDATA[272]]></a>
+   <a name="Wydawnictwo"><![CDATA[Helion]]></a>
+   <a name="Rok_wydania"><![CDATA[2011]]></a>
+   <a name="Oprawa"><![CDATA[miękka]]></a>
+   <a name="Format"><![CDATA[160x230 mm]]></a>
+  </attrs>
+ </o>
+ <o id="233108" url="http://www.lideria.pl/Nocny-pociag-do-Lizbony-Pascal-Mercier/sklep/opis?nr=233108" price="30.45" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Literatura piękna i popularna/Powieści i opowiadania]]></cat>
+  <name><![CDATA[Nocny pociąg do Lizbony]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/233108.jpg"/></imgs>
+  <desc><![CDATA[Deszczowy poranek w Bernie. Raimund Gregorius jak co dzień idzie do szkoły, w której od wielu lat uczy języków klasycznych. Na moście Kirchenfeld widzi piękną nieznajomą, szykującą się do samobójczego skoku... ]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[Pascal Mercier]]></a>
+   <a name="ISBN"><![CDATA[9788373923157]]></a>
+   <a name="Ilosc_stron"><![CDATA[384]]></a>
+   <a name="Wydawnictwo"><![CDATA[Noir Sur Blanc]]></a>
+   <a name="Rok_wydania"><![CDATA[2010]]></a>
+   <a name="Oprawa"><![CDATA[miękka]]></a>
+   <a name="Format"><![CDATA[145x235 mm]]></a>
+  </attrs>
+ </o>
+ <o id="264700" url="http://www.lideria.pl/Wir-lernen-Polnisch-tom-1-2-2-CD-Bartnicka-Barbara-Jekiel-Wojciech/sklep/opis?nr=264700" price="71.19" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Nauka języków obcych/Pozostałe języki]]></cat>
+  <name><![CDATA[Wir lernen Polnisch tom 1-2 + 2 CD]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/264700.jpg"/></imgs>
+  <desc><![CDATA[Wersja podręcznika Uczymy się polskiego dla odbiorcy niemieckojęzycznego.
+Tom 1 - 50 lekcji, teksty i dialogi ze słowniczkami, wiersze, dowcipy, pieśni i piosenki z nutami, indeks 2000 wyrazów. Podstawowe słownictwo i struktury gramatyczne.
+Tom 2 - omówienie materiału gramatycznego, wskazówki metodyczne, komentarze gramatyczne i ąwiczenia do poszczególnych lekcji z t. 1, klucz do ąwiczeń.]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[Bartnicka Barbara, Jekiel Wojciech]]></a>
+   <a name="ISBN"><![CDATA[9788321414911]]></a>
+   <a name="Ilosc_stron"><![CDATA[654]]></a>
+   <a name="Wydawnictwo"><![CDATA[Wiedza Powszechna]]></a>
+   <a name="Rok_wydania"><![CDATA[2010]]></a>
+   <a name="Oprawa"><![CDATA[miękka]]></a>
+   <a name="Format"><![CDATA[145x205 mm]]></a>
+  </attrs>
+ </o>
+ <o id="201997" url="http://www.lideria.pl/GPS-Poradnik-uzytkownika-Bruce-Grubbs/sklep/opis?nr=201997" price="17.43" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Podręczniki akademickie/Nauki techniczne]]></cat>
+  <name><![CDATA[GPS Poradnik użytkownika]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/201997.jpg"/></imgs>
+  <desc><![CDATA[Ta książka z pewnością jest niezbędna w trakcie wyprawy w teren i będzie tak samo potrzebna, jak dobry plecak czy porządne buty do wspinaczki. Informacje zawarte w publikacji przydadzą się nowicjuszom, a także  wytrawnym podróżnikom. W tej przystępnie napisanej, zawierającej podstawowe informacje książce autor zawarł kwintesencję wieloletnich doświadczeń.]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[Bruce Grubbs]]></a>
+   <a name="ISBN"><![CDATA[9788372437556]]></a>
+   <a name="Ilosc_stron"><![CDATA[80]]></a>
+   <a name="Wydawnictwo"><![CDATA[RM]]></a>
+   <a name="Rok_wydania"><![CDATA[2009]]></a>
+   <a name="Oprawa"><![CDATA[miękka]]></a>
+   <a name="Format"><![CDATA[150x230 mm]]></a>
+  </attrs>
+ </o>
+ <o id="231001" url="http://www.lideria.pl/Piecyk-czapeczka-i-budyn-Anna-Onichimowska/sklep/opis?nr=231001" price="22.26" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Literatura piękna i popularna/Literatura dla młodzieży]]></cat>
+  <name><![CDATA[Piecyk, czapeczka i budyń]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/231001.jpg"/></imgs>
+  <desc><![CDATA[Bajka o dwóch niezwykłych sąsiadach - Wielkim Trollu, żyjącym na szczycie lodowej góry, i malutkim Pufku, mieszkającym u jej podnóża. Chociaż mieszkali tuż obok siebie, nic o sobie nie wiedzieli.]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[Anna Onichimowska]]></a>
+   <a name="ISBN"><![CDATA[9788389133441]]></a>
+   <a name="Ilosc_stron"><![CDATA[44]]></a>
+   <a name="Wydawnictwo"><![CDATA[Ezop]]></a>
+   <a name="Rok_wydania"><![CDATA[2013]]></a>
+   <a name="Oprawa"><![CDATA[twarda]]></a>
+   <a name="Format"><![CDATA[240x210 mm]]></a>
+  </attrs>
+ </o>
+ <o id="230796" url="http://www.lideria.pl/Nauczcie-sie-fotografowac-kreatywnie-Moda-piekno-portret-portfolio-book/sklep/opis?nr=230796" price="40.11" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Poradniki/Pozostałe poradniki]]></cat>
+  <name><![CDATA[Nauczcie się fotografować kreatywnie. Moda, piękno, portret, portfolio/book, reklama]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/230796.jpg"/></imgs>
+  <desc><![CDATA[Kurs kreatywnej fotografii mody. Metody, praktyka, techniki w praktycznym kursie, jak stać się profesjonalnym fotografem mody.Książka o fotografowaniu mody jest kompletnym przewodnikiem po świecie mody, zawierającym ogólne zasady fotografii mody, jak i praktyczne rady, które dla początkujących fotografów mogą stać się bezcennymi kierunkowskazami na ich artystycznej drodze.]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[Eliot Siegel]]></a>
+   <a name="ISBN"><![CDATA[9788074130519]]></a>
+   <a name="Ilosc_stron"><![CDATA[144]]></a>
+   <a name="Wydawnictwo"><![CDATA[Zoner Press]]></a>
+   <a name="Rok_wydania"><![CDATA[2009]]></a>
+   <a name="Oprawa"><![CDATA[miękka]]></a>
+   <a name="Format"><![CDATA[225x225 mm]]></a>
+  </attrs>
+ </o>
+ <o id="194011" url="http://www.lideria.pl/Les-cles-du-nouveau-Delf-B2-CD-Marie-Bretonnier-Emmanuel-Godard-Philippe/sklep/opis?nr=194011" price="62.37" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Nauka języków obcych/Język francuski]]></cat>
+  <name><![CDATA[Les cles du nouveau Delf B2 + CD]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/194011.jpg"/></imgs>
+  <desc><![CDATA[Les cles du nouveau Delf B2. Tout pour reussir le Delf nouvelle formule.]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[Marie Bretonnier, Emmanuel Godard, Philippe Liria]]></a>
+   <a name="ISBN"><![CDATA[9788484434290]]></a>
+   <a name="Ilosc_stron"><![CDATA[178]]></a>
+   <a name="Wydawnictwo"><![CDATA[LektorKlett]]></a>
+   <a name="Rok_wydania"><![CDATA[2013]]></a>
+   <a name="Oprawa"><![CDATA[miękka]]></a>
+   <a name="Format"><![CDATA[210x290 mm]]></a>
+  </attrs>
+ </o>
+ <o id="270572" url="http://www.lideria.pl/Mistrzowie-literatury-czy-dziennikarstwa-Podrecznik-akademicki/sklep/opis?nr=270572" price="34.65" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Podręczniki akademickie/Pozostałe podręczniki akademickie]]></cat>
+  <name><![CDATA[Mistrzowie literatury czy dziennikarstwa? Podręcznik akademicki]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/270572.jpg"/></imgs>
+  <desc><![CDATA[Wbrew oczywistemu, szkolnemu podziałowi na fikcję i nie-fikcję, obszary dziennikarstwa i literatury przenikają się na różne sposoby. To, co zdaje się wykazywać cechy wspólne obu obszarom, bywa określane jako gatunki pograniczne. ]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[]]></a>
+   <a name="ISBN"><![CDATA[9788375611885]]></a>
+   <a name="Ilosc_stron"><![CDATA[240]]></a>
+   <a name="Wydawnictwo"><![CDATA[Poltext]]></a>
+   <a name="Rok_wydania"><![CDATA[2011]]></a>
+   <a name="Oprawa"><![CDATA[miękka]]></a>
+   <a name="Format"><![CDATA[165x235 mm]]></a>
+  </attrs>
+ </o>
+ <o id="77373" url="http://www.lideria.pl/Rozmowki-polsko-hiszpanskie-Izabela-Prostecka-Siwy/sklep/opis?nr=77373" price="7.77" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Nauka języków obcych/Język hiszpański]]></cat>
+  <name><![CDATA[Rozmówki polsko-hiszpańskie]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/77373.jpg"/></imgs>
+  <desc><![CDATA[Zniewala Cię średniowieczne piękno Gerony, Barcelony czy Grenady? Chciałbyś odpocząć na słonecznych plażach Majorki? Od lat planujesz ekscytującą, niepowtarzalną podróż do Meksyku? I nie znasz hiszpańskiego? Nic strasznego! Niniejsza książka pozwoli Ci się pozbyć wszelkich lęków związanych z konwersacją w krajach hispanojęzycznych.]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[Izabela Prostecka-Siwy]]></a>
+   <a name="ISBN"><![CDATA[9788372771941]]></a>
+   <a name="Ilosc_stron"><![CDATA[176]]></a>
+   <a name="Wydawnictwo"><![CDATA[Astrum]]></a>
+   <a name="Rok_wydania"><![CDATA[2012]]></a>
+   <a name="Oprawa"><![CDATA[miękka]]></a>
+   <a name="Format"><![CDATA[101x148 mm]]></a>
+  </attrs>
+ </o>
+ <o id="215555" url="http://www.lideria.pl/Antypodrecznik-filozofii-Lekcje-sokratejsckie-i-alternatywne-Michel-Onfray/sklep/opis?nr=215555" price="34.65" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Pozostałe książki]]></cat>
+  <name><![CDATA[Antypodręcznik filozofii. Lekcje sokratejsckie i alternatywne]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/215555.jpg"/></imgs>
+  <desc><![CDATA[Antypodręcznik filozofii, jest syntezą doświadczenia nauczycielskiego Michela Onfray. Książka zawiera oryginalną propozycję programu nauczania filozofii. Autor prócz klasyki (omówienia pojęą prawdy, rozumu, wolności etc.) podejmuje filozoficzną refleksję nad przemocą, seksem nieletnich, kanibalizmem, masturbacją czy używkami.]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[Michel Onfray]]></a>
+   <a name="ISBN"><![CDATA[9788375540666]]></a>
+   <a name="Ilosc_stron"><![CDATA[408]]></a>
+   <a name="Wydawnictwo"><![CDATA[Czarna Owca]]></a>
+   <a name="Rok_wydania"><![CDATA[2009]]></a>
+   <a name="Oprawa"><![CDATA[miękka]]></a>
+   <a name="Format"><![CDATA[140x205 mm]]></a>
+  </attrs>
+ </o>
+ <o id="91016" url="http://www.lideria.pl/Wielki-koneser-Antoni-Kapelanski/sklep/opis?nr=91016" price="14.70" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Literatura piękna i popularna/Literatura sensacyjna i grozy]]></cat>
+  <name><![CDATA[Wielki koneser]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/91016.jpg"/></imgs>
+  <desc><![CDATA[Dwa opowiadania: "Solis - złoto południa" i "Wielki koneser" tworzą sensacyjną książkę z wartką akcją, pełną tajemnic i zaskakujących rozwiązań. W roli głównej złoto, dzieła sztuki, wielkie pieniądze, władza... i chemia jako nauka. Intrygujący temat: laboratoria kryją w sobie tajemnice, które w reakcji z rzeczywistością przynoszą niespodziewane rezultaty.]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[Antoni Kapelański]]></a>
+   <a name="ISBN"><![CDATA[9788374150811]]></a>
+   <a name="Ilosc_stron"><![CDATA[224]]></a>
+   <a name="Wydawnictwo"><![CDATA[Piątek Trzynastego]]></a>
+   <a name="Rok_wydania"><![CDATA[2006]]></a>
+   <a name="Oprawa"><![CDATA[miękka]]></a>
+   <a name="Format"><![CDATA[125x185 mm]]></a>
+  </attrs>
+ </o>
+ <o id="71556" url="http://www.lideria.pl/Program-psychoedukacyjny-dla-dzieci-7-10-letnich-doskonalacy-sprawnosc/sklep/opis?nr=71556" price="17.22" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Podręczniki akademickie/Nauki humanistyczne i społeczne]]></cat>
+  <name><![CDATA[Program psychoedukacyjny dla dzieci 7-10-letnich doskonalący sprawność językową]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/71556.jpg"/></imgs>
+  <desc><![CDATA[Przewodnią zasadą towarzyszącą tej pracy jest podejmowanie konkretnych działań na rzecz troski nauczyciela o optymalny rozwój intelektualny, emocjonalny, społeczny oraz prawidłowy rozwój mowy każdego dziecka, a także ma on na względzie dobro wszystkich członków zespołu klasowego.]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[Alicja Iwanowska, Cecylia Januszek, Mariola Kwiatkowska-Łozińska]]></a>
+   <a name="ISBN"><![CDATA[9788375873023]]></a>
+   <a name="Ilosc_stron"><![CDATA[84]]></a>
+   <a name="Wydawnictwo"><![CDATA[Impuls]]></a>
+   <a name="Rok_wydania"><![CDATA[2009]]></a>
+   <a name="Oprawa"><![CDATA[miękka]]></a>
+   <a name="Format"><![CDATA[160x240 mm]]></a>
+  </attrs>
+ </o>
+ <o id="260628" url="http://www.lideria.pl/Czytadla-Gawedy-o-lekturach-Agnieszka-Osiecka/sklep/opis?nr=260628" price="31.50" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Literatura faktu]]></cat>
+  <name><![CDATA[Czytadła. Gawędy o lekturach]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/260628.jpg"/></imgs>
+  <desc><![CDATA[Zbiór wnikliwych i świetnie napisanych felietonów Agnieszki Osieckiej o książkach.
+
+Te krótkie i przystępne teksty Agnieszka Osiecka pisała regularnie dla nieistniejącego już dziś literackiego magazynu "Ex Libris" (w latach 90. XX wieku dodatek do "Życia Warszawy"). Powstał zbiór inteligentnych i dowcipnych impresji z jej licznych lektur (m.in. Jerzy Pilch, Daniel Steel, Magdalena Samozwaniec, Adam Zagajewski, Witold Gombrowicz, Susan Sontag, Andrzej Żuławski, Philip Roth). W jej tonie nie ma żółci czy sadyzmu typowego dla recenzentów o niezrealizowanych własnych pretensjach literackich.]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[Agnieszka Osiecka]]></a>
+   <a name="ISBN"><![CDATA[9788376485140]]></a>
+   <a name="Ilosc_stron"><![CDATA[200]]></a>
+   <a name="Wydawnictwo"><![CDATA[Prószyński i S-ka]]></a>
+   <a name="Rok_wydania"><![CDATA[2010]]></a>
+   <a name="Oprawa"><![CDATA[twarda]]></a>
+   <a name="Format"><![CDATA[170x241 mm]]></a>
+  </attrs>
+ </o>
+ <o id="148759" url="http://www.lideria.pl/Swiadkowie-Chrystusa-Apostolowie-i-uczniowie-Joseph-Ratzinger-Benedykt/sklep/opis?nr=148759" price="36.54" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Religia]]></cat>
+  <name><![CDATA[Świadkowie Chrystusa. Apostołowie i uczniowie]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/148759.jpg"/></imgs>
+  <desc><![CDATA[Papież Benedykt XVI kontynuując myśl teologiczną swego wielkiego poprzednika, Jana Pawła II, przykłada ogromną wagę do "powrotu do źródeł" chrześcijaństwa. Pokazując sylwetki apostołów i uczniów Chrystusa, Benedykt XVI pomaga nam zbliżyć się i lepiej zrozumieć istotę chrześcijaństwa. Dopełnienie całości stanowią piękne zdjęcia oraz mapy przedstawiające wędrówkę misyjną pierwszych świadków wiary.]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[Joseph Ratzinger (Benedykt XVI)]]></a>
+   <a name="ISBN"><![CDATA[9788388848520]]></a>
+   <a name="Ilosc_stron"><![CDATA[296]]></a>
+   <a name="Wydawnictwo"><![CDATA[Rosikon Press]]></a>
+   <a name="Rok_wydania"><![CDATA[2010]]></a>
+   <a name="Oprawa"><![CDATA[miękka]]></a>
+   <a name="Format"><![CDATA[165x240 mm]]></a>
+  </attrs>
+ </o>
+ <o id="268528" url="http://www.lideria.pl/Pokolenie-kategoria-historyczna-czy-wspolczesna/sklep/opis?nr=268528" price="23.94" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Podręczniki akademickie/Nauki techniczne]]></cat>
+  <name><![CDATA[Pokolenie: kategoria historyczna czy współczesna?]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/268528.jpg"/></imgs>
+  <desc><![CDATA[Czy autorom tekstów udało się odpowiedzieć na postawione w tytule książki pytanie? Czy rzeczywiście istnieją realne przesłanki ku temu, by myśleć o e-generacji, pokoleniu iPoda, pokoleniu copy/paste, generacji nomadów, "dzieciach trzeciej kultury", "maruderach końca wieku"? 
+
+Czy można mówią o pokoleniu nowych brutalistów, pokoleniu porno, , pokoleniu "to my"? Jak wyglądają najnowsze pokolenia na tle swoich poprzedników - pokolenia '56, pokolenia '68, czy pokolenia '89? Na ile (i czy w ogóle.]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[]]></a>
+   <a name="ISBN"><![CDATA[9788371883491]]></a>
+   <a name="Ilosc_stron"><![CDATA[184]]></a>
+   <a name="Wydawnictwo"><![CDATA[Księgarnia Akademicka]]></a>
+   <a name="Rok_wydania"><![CDATA[2010]]></a>
+   <a name="Oprawa"><![CDATA[miękka]]></a>
+   <a name="Format"><![CDATA[145x205 mm]]></a>
+  </attrs>
+ </o>
+ <o id="88033" url="http://www.lideria.pl/Od-Bukaresztu-do-Laffitow-Jerzego-Giedroycia-rzeczpospolita-epistolarna/sklep/opis?nr=88033" price="32.55" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Biografie i dzienniki]]></cat>
+  <name><![CDATA[Od Bukaresztu do Laffitów. Jerzego Giedroycia rzeczpospolita epistolarna]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/88033.jpg"/></imgs>
+  <desc><![CDATA[Redaktor ?Kultury? i jego bliscy współpracownicy byli mistrzami sztuki epistolarnej. Pozostawiona przez nich korespondencja to jedyne w swoim rodzaju świadectwo postaw, sporów o wartości, poglądów estetycznych i politycznych, wielkich wizji i codziennej organicznej pracy ludzi, którzy powołali do życia jedno z najciekawszych zjawisk w kulturze polskiej. 
+Andrzej St.]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[Andrzej St. Kowalczyk]]></a>
+   <a name="ISBN"><![CDATA[9788386872855]]></a>
+   <a name="Ilosc_stron"><![CDATA[300]]></a>
+   <a name="Wydawnictwo"><![CDATA[Pogranicze]]></a>
+   <a name="Rok_wydania"><![CDATA[2010]]></a>
+   <a name="Oprawa"><![CDATA[twarda]]></a>
+   <a name="Format"><![CDATA[165x240 mm]]></a>
+  </attrs>
+ </o>
+ <o id="72872" url="http://www.lideria.pl/Co-tu-nie-pasuje-Ksiazeczki-edukacyjne-z-naklejkami-Elzbieta-Lekan/sklep/opis?nr=72872" price="1.89" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Literatura piękna i popularna/Literatura dla młodzieży]]></cat>
+  <name><![CDATA[Co tu nie pasuje? Książeczki edukacyjne z naklejkami]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/72872.jpg"/></imgs>
+  <desc><![CDATA[Ciekawe świata maluchy nieustannie zasypują nas pytaniami i opowieściami o nim. Dlatego przygotowaliśmy serię dostosowanych do wieku pytań sprawdzających i poszerzających wiedzę dziecka...]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[Elżbieta Lekan]]></a>
+   <a name="ISBN"><![CDATA[9788374371131]]></a>
+   <a name="Ilosc_stron"><![CDATA[13]]></a>
+   <a name="Wydawnictwo"><![CDATA[Skrzat]]></a>
+   <a name="Rok_wydania"><![CDATA[2005]]></a>
+   <a name="Oprawa"><![CDATA[miękka]]></a>
+   <a name="Format"><![CDATA[150x150 mm]]></a>
+  </attrs>
+ </o>
+ <o id="231219" url="http://www.lideria.pl/Czytam-wklejam-i-maluje-Mala-syrenka-Praca-zbiorowa/sklep/opis?nr=231219" price="2.52" avail="1">
+  <cat><![CDATA[Księgarnia/Książki]]></cat>
+  <name><![CDATA[Czytam, wklejam i maluję. Mała syrenka]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/231219.jpg"/></imgs>
+  <desc><![CDATA[Przedstawiamy Państwu, wybrane spośród wielu, piękne baśnie. Książeczka zawiera ilustracje, obrazki do kolorowania oraz pokrótce opowiedziane, najpiękniejsze bajki i baśnie. W środku zestaw naklejek.]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[Praca zbiorowa]]></a>
+   <a name="ISBN"><![CDATA[9788387313593]]></a>
+   <a name="Ilosc_stron"><![CDATA[20]]></a>
+   <a name="Wydawnictwo"><![CDATA[Pasja]]></a>
+   <a name="Rok_wydania"><![CDATA[2009]]></a>
+   <a name="Oprawa"><![CDATA[miękka]]></a>
+   <a name="Format"><![CDATA[145x210 mm]]></a>
+  </attrs>
+ </o>
+ <o id="86527" url="http://www.lideria.pl/Psychoterapia-Praktyka-Podrecznik-akademicki-Lidia-Grzesiuk/sklep/opis?nr=86527" price="60.27" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Pozostałe książki]]></cat>
+  <name><![CDATA[Psychoterapia. Praktyka. Podręcznik akademicki]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/86527.jpg"/></imgs>
+  <desc><![CDATA[Drugi tom zawiera informacje o terapii grupowej, terapii rodzin, psychoterapii pacjentów schizofrenicznych oraz osób z zaburzeniami z pogranicza nerwicy i psychozy, psychoterapii pacjentów depresyjnych, specyfice psychoterapii dzieci i młodzieży, osób z zaburzeniami odżywiania się, pacjentów po przebytej traumie]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[Lidia Grzesiuk]]></a>
+   <a name="ISBN"><![CDATA[9788385713623]]></a>
+   <a name="Ilosc_stron"><![CDATA[641]]></a>
+   <a name="Wydawnictwo"><![CDATA[Eneteia]]></a>
+   <a name="Rok_wydania"><![CDATA[2006]]></a>
+   <a name="Oprawa"><![CDATA[twarda]]></a>
+   <a name="Format"><![CDATA[170x240 mm]]></a>
+  </attrs>
+ </o>
+ <o id="101896" url="http://www.lideria.pl/Karlowe-drzewa-i-krzewy-iglaste-Adam-Marosz/sklep/opis?nr=101896" price="25.62" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Poradniki/Wnętrza i ogrody]]></cat>
+  <name><![CDATA[Karłowe drzewa i krzewy iglaste]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/101896.jpg"/></imgs>
+  <desc><![CDATA[Bogactwo gatunków i odmian, a także różnorodność kształtów, barw drzew i krzewów iglastych sprawiają, że cieszą się one tak dużym zainteresowaniem. Wybór tych roślin jest ogromny, dlatego tak ważny jest staranny dobór. Wiele odmian po raz pierwszy prezentujemy w naszej książce. Warto je mieć na własnej działce. Proponowana książka pomoże Czytelnikowi dokonać słusznego wyboru.]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[Adam Marosz]]></a>
+   <a name="ISBN"><![CDATA[9788389615213]]></a>
+   <a name="Ilosc_stron"><![CDATA[151]]></a>
+   <a name="Wydawnictwo"><![CDATA[Działkowiec]]></a>
+   <a name="Rok_wydania"><![CDATA[2006]]></a>
+   <a name="Oprawa"><![CDATA[miękka]]></a>
+   <a name="Format"><![CDATA[165x10 mm]]></a>
+  </attrs>
+ </o>
+ <o id="165147" url="http://www.lideria.pl/Moja-Musierowcz-O-tworczosci-autorki-Jezycjady-Przemyslaw-Dakowicz/sklep/opis?nr=165147" price="19.11" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Podręczniki akademickie/Nauki humanistyczne i społeczne]]></cat>
+  <name><![CDATA[Moja Musierowcz. O twórczości autorki Jeżycjady]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/165147.jpg"/></imgs>
+  <desc><![CDATA[Któż z nas nie zna wspaniałych, emanujących ciepłem rodzinnego ogniska powieści dla młodzieży (i nie tylko!) stworzonych piórem Małgorzaty Musierowicz? Jeżeli ktoś jeszcze nie zdążył się spotkać z rodziną Borejków na kartach jednej z książek tej poznańskiej autorki , no to cóż moi drodzy ? najwyższy czas ruszyć do księgarni i zapewnią sobie miłe chwile wakacyjnego relaksu z naprawdę świetną lekturą! Wydaje mi się, że jednak większość nastolatek, ale co również cieszy nastolatków, natknęło się już na twórczość tej autorki.]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[Przemysław Dakowicz]]></a>
+   <a name="ISBN"><![CDATA[9788374052689]]></a>
+   <a name="Ilosc_stron"><![CDATA[162]]></a>
+   <a name="Wydawnictwo"><![CDATA[Wyższa Szkoła Humanistyczno-Ekonomiczna]]></a>
+   <a name="Rok_wydania"><![CDATA[2008]]></a>
+   <a name="Oprawa"><![CDATA[miękka]]></a>
+   <a name="Format"><![CDATA[140x200 mm]]></a>
+  </attrs>
+ </o>
+ <o id="151523" url="http://www.lideria.pl/Kamien-w-sercu-Katarzyna-Lezenska/sklep/opis?nr=151523" price="25.20" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Literatura piękna i popularna/Powieści i opowiadania]]></cat>
+  <name><![CDATA[Kamień w sercu]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/151523.jpg"/></imgs>
+  <desc><![CDATA[Co jeszcze może przytrafią się facetowi przed czterdziestką, który właśnie rozwodzi się z żoną domagającą się specjalnych alimentów dla... swoich kotów? Czy coś jeszcze czeka dziewczynę w gorszej połowie trzydziestki, która pogodziła się już z kłamstwami byłego męża i z samotnym macierzyństwem? Zjazd absolwentów liceum zmieni w życiu Daszy i Marcina więcej, niż by się spodziewali. ]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[Katarzyna Leżeńska]]></a>
+   <a name="ISBN"><![CDATA[9788374696661]]></a>
+   <a name="Ilosc_stron"><![CDATA[328]]></a>
+   <a name="Wydawnictwo"><![CDATA[Prószyński i S-ka]]></a>
+   <a name="Rok_wydania"><![CDATA[2008]]></a>
+   <a name="Oprawa"><![CDATA[miękka]]></a>
+   <a name="Format"><![CDATA[142x202 mm]]></a>
+  </attrs>
+ </o>
+ <o id="167151" url="http://www.lideria.pl/Bedziesz-tam-Guillaume-Musso/sklep/opis?nr=167151" price="23.73" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Literatura piękna i popularna/Powieści i opowiadania]]></cat>
+  <name><![CDATA[Będziesz tam]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/167151.jpg"/></imgs>
+  <desc><![CDATA[Trzecia powieść niezwykle popularnego we Francji pisarza, autora bestsellerów Potem... oraz Uratuj mnie, którego firmowym znakiem jest nieposkromiona fantazja i ogromna wrażliwość. Elliott, uznany chirurg, ma sześćdziesiąt lat i niedługo umrze. Śmiertelna choroba nie daje mu nadziei na przyszłość.]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[Guillaume Musso]]></a>
+   <a name="ISBN"><![CDATA[9788373596825]]></a>
+   <a name="Ilosc_stron"><![CDATA[318]]></a>
+   <a name="Wydawnictwo"><![CDATA[Albatros]]></a>
+   <a name="Rok_wydania"><![CDATA[2012]]></a>
+   <a name="Oprawa"><![CDATA[miękka]]></a>
+   <a name="Format"><![CDATA[130x200 mm]]></a>
+  </attrs>
+ </o>
+ <o id="13256" url="http://www.lideria.pl/Teleinformatyka-Mark-Norris/sklep/opis?nr=13256" price="35.28" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Informatyka]]></cat>
+  <name><![CDATA[Teleinformatyka]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/13256.jpg"/></imgs>
+  <desc><![CDATA[W książce w przystępny sposób opisano technologie wykorzystywane we współczesnych systemach telekomunikacyjnych. Zawiera podstawy telekomunikacji, technologie telekomunikacyjne, niezbędne wiadomości z informatyki, obliczeń i sieci inteligentnych, podstawy Internetu, Intranetu i Extranetu, opis standardów telekomunikacyjnych oraz kierunki rozwoju technologii telekomunikacyjnych.]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[Mark Norris]]></a>
+   <a name="ISBN"><![CDATA[9788320614435]]></a>
+   <a name="Ilosc_stron"><![CDATA[268]]></a>
+   <a name="Wydawnictwo"><![CDATA[WKiŁ]]></a>
+   <a name="Rok_wydania"><![CDATA[2013]]></a>
+   <a name="Oprawa"><![CDATA[miękka]]></a>
+   <a name="Format"><![CDATA[160x230 mm]]></a>
+  </attrs>
+ </o>
+ <o id="181802" url="http://www.lideria.pl/Tworzenie-i-odtwarzanie-kultury-Tradycja-jako-wymiar-zmian-spolecznych/sklep/opis?nr=181802" price="27.30" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Podręczniki akademickie/Nauki techniczne]]></cat>
+  <name><![CDATA[Tworzenie i odtwarzanie kultury. Tradycja jako wymiar zmian społecznych]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/181802.jpg"/></imgs>
+  <desc><![CDATA[Co kryje się pod nazwą tradycji w chwili obecnej, gdy doświadczamy tak wielu głębokich zmian społecznych? Na czym polega zależność między odtwarzaniem i rewizjami tradycji a transformacją społeczno-ustrojową w Europie postkomunistycznej? ]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[]]></a>
+   <a name="ISBN"><![CDATA[9788323325550]]></a>
+   <a name="Ilosc_stron"><![CDATA[234]]></a>
+   <a name="Wydawnictwo"><![CDATA[Uniwersytetu Jagiellońskiego]]></a>
+   <a name="Rok_wydania"><![CDATA[2008]]></a>
+   <a name="Oprawa"><![CDATA[miękka]]></a>
+   <a name="Format"><![CDATA[145x205 mm]]></a>
+  </attrs>
+ </o>
+ <o id="227679" url="http://www.lideria.pl/Rzeczywiste-i-nierzeczywiste-staje-sie-jednym-cialem-111-wierszy-Eugeniusz/sklep/opis?nr=227679" price="29.61" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Poezja]]></cat>
+  <name><![CDATA[Rzeczywiste i nierzeczywiste staje sie jednym ciałem. 111 wierszy]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/227679.jpg"/></imgs>
+  <desc><![CDATA[Każda książka Tkaczyszyna-Dyckiego sugeruje istnienie większej całości, z której pochodzą cząstkowe obrazy, strzępy narracji, wybrakowane fragmenty i ich dalsze ciągi. Powracające frazy i wędrujące motywy są dlatego tak intrygujące, że pourywane, zdezelowane, przycięte - to ich skrupulatnemu skalkulowaniu podporządkowujemy nasze czytanie.]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[Eugeniusz Tkaczyszyn-Dycki]]></a>
+   <a name="ISBN"><![CDATA[9788362006090]]></a>
+   <a name="Ilosc_stron"><![CDATA[128]]></a>
+   <a name="Wydawnictwo"><![CDATA[Biuro Literackie]]></a>
+   <a name="Rok_wydania"><![CDATA[2012]]></a>
+   <a name="Oprawa"><![CDATA[miękka]]></a>
+   <a name="Format"><![CDATA[160x215 mm]]></a>
+  </attrs>
+ </o>
+ <o id="231658" url="http://www.lideria.pl/Fragmenty-z-zycia-lustra-Joanna-Szczepkowska/sklep/opis?nr=231658" price="26.25" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Literatura piękna i popularna/Powieści i opowiadania]]></cat>
+  <name><![CDATA[Fragmenty z życia lustra]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/231658.jpg"/></imgs>
+  <desc><![CDATA[Tajemnicze i intrygujące historie z pozoru zupełnie zwykłych ludzi. W swych opowieściach Joanna Szczepkowska dotyka tematów, które fascynują od zawsze, pyta, kto może powiedzieć o człowieku więcej - lekarz czy uzdrowicielczy na nasze najważniejsze pytania odpowie nauka czy parapsychologiajak możliwa jest miłość i bliskość z drugim człowiekiemjak radzimy sobie z poznawaniem świata i siebie.]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[Joanna Szczepkowska]]></a>
+   <a name="ISBN"><![CDATA[9788308044247]]></a>
+   <a name="Ilosc_stron"><![CDATA[236]]></a>
+   <a name="Wydawnictwo"><![CDATA[Literackie]]></a>
+   <a name="Rok_wydania"><![CDATA[2010]]></a>
+   <a name="Oprawa"><![CDATA[miękka]]></a>
+   <a name="Format"><![CDATA[125x200 mm]]></a>
+  </attrs>
+ </o>
+ <o id="233752" url="http://www.lideria.pl/Etyka-chrzescijanska-Alban-McCoy/sklep/opis?nr=233752" price="24.57" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Religia]]></cat>
+  <name><![CDATA[Etyka chrześcijańska]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/233752.jpg"/></imgs>
+  <desc><![CDATA[Moralność obchodzi wszystkich, każdy stawia pytania natury moralnej. Zarazem możliwość jasnego i logicznego, opartego na rozumowych argumentach dyskutowania o zasadach etycznych jest dziś powszechnie kwestionowana. Naczelną zasadą moralną staje się ?polityczna poprawność?, miejsce etyki zajmuje polityka i psychologia.]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[Alban McCoy]]></a>
+   <a name="ISBN"><![CDATA[9788370336097]]></a>
+   <a name="Ilosc_stron"><![CDATA[204]]></a>
+   <a name="Wydawnictwo"><![CDATA[W drodze]]></a>
+   <a name="Rok_wydania"><![CDATA[2008]]></a>
+   <a name="Oprawa"><![CDATA[miękka]]></a>
+   <a name="Format"><![CDATA[120x195 mm]]></a>
+  </attrs>
+ </o>
+ <o id="209171" url="http://www.lideria.pl/Obywatele-czy-poddani-Mlodziez-szkolna-a-demokracja-Praca-zbiorowa/sklep/opis?nr=209171" price="24.57" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Podręczniki akademickie/Nauki humanistyczne i społeczne]]></cat>
+  <name><![CDATA[Obywatele czy poddani. Młodzież szkolna a demokracja]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/209171.jpg"/></imgs>
+  <desc><![CDATA[W książce podjęto ważny temat socjalizacji politycznej młodzieży, pozwolono również mówią młodzieży o sprawach publicznych własnym głosem.]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[Praca zbiorowa]]></a>
+   <a name="ISBN"><![CDATA[9788362015085]]></a>
+   <a name="Ilosc_stron"><![CDATA[244]]></a>
+   <a name="Wydawnictwo"><![CDATA[Akademickie Żak]]></a>
+   <a name="Rok_wydania"><![CDATA[2009]]></a>
+   <a name="Oprawa"><![CDATA[miękka]]></a>
+   <a name="Format"><![CDATA[145x205 mm]]></a>
+  </attrs>
+ </o>
+ <o id="239785" url="http://www.lideria.pl/Nadobna-dziewica-Joyce-Carol-Oates/sklep/opis?nr=239785" price="21.84" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Literatura piękna i popularna/Powieści i opowiadania]]></cat>
+  <name><![CDATA[Nadobna dziewica]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/239785.jpg"/></imgs>
+  <desc><![CDATA[Najnowsza, bardzo dobrze przyjęta przez krytykę, powieść wybitnej amerykańskiej
+pisarki, arcydzieło jej na wpół "gotyckiego" stylu prozy, jakiemu ostatnio hołduje.]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[Joyce Carol Oates]]></a>
+   <a name="ISBN"><![CDATA[9788311117280]]></a>
+   <a name="Ilosc_stron"><![CDATA[200]]></a>
+   <a name="Wydawnictwo"><![CDATA[Bellona]]></a>
+   <a name="Rok_wydania"><![CDATA[2010]]></a>
+   <a name="Oprawa"><![CDATA[miękka]]></a>
+   <a name="Format"><![CDATA[135x205 mm]]></a>
+  </attrs>
+ </o>
+ <o id="212107" url="http://www.lideria.pl/Wszyscy-maja-psa-tylko-nie-ja-Jaroslaw-Mikolajewski/sklep/opis?nr=212107" price="17.64" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Literatura piękna i popularna/Literatura dla młodzieży]]></cat>
+  <name><![CDATA[Wszyscy mają psa tylko nie ja]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/212107.jpg"/></imgs>
+  <desc><![CDATA[Wszystko miało psa, albo mogło mieć psa. Pies, który tarzał się w trawie, po chwili obwąchiwał drzewo. Inny pies - ten, który wcześniej próbował wygryźą słupek z ogrodzenia - z niewiadomego powodu rzucał się nagle do strumyka i skakał po brzegu jak szalony.]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[Jarosław Mikołajewski]]></a>
+   <a name="ISBN"><![CDATA[9788389774330]]></a>
+   <a name="Ilosc_stron"><![CDATA[33]]></a>
+   <a name="Wydawnictwo"><![CDATA[Muchomor]]></a>
+   <a name="Rok_wydania"><![CDATA[2009]]></a>
+   <a name="Oprawa"><![CDATA[twarda]]></a>
+   <a name="Format"><![CDATA[205x173 mm]]></a>
+  </attrs>
+ </o>
+ <o id="231567" url="http://www.lideria.pl/W-wielkim-Ksiestwie-Litewskim-i-w-Wilnie-Tadeusz-Bujnicki/sklep/opis?nr=231567" price="36.54" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Historia]]></cat>
+  <name><![CDATA[W wielkim Księstwie Litewskim i w Wilnie]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/231567.jpg"/></imgs>
+  <desc><![CDATA[Książka poświęcona problemom kultury i literatury pogranicza, życiu literackiemu Wielkiego Księstwa Litewskiego, litewskości w twórczości m.in. Kraszewskiego, Weyssenhoffa, żagarystów, Konwickiego. Zebrane w tomie rozprawy uszeregowane zostały w dwóch częściach: "Poważnie" i "Śmiesznie". Zabieg ten umożliwia kompleksowe spojrzenie na omawianą problematykę.]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[Tadeusz Bujnicki]]></a>
+   <a name="ISBN"><![CDATA[9788371816055]]></a>
+   <a name="Ilosc_stron"><![CDATA[348]]></a>
+   <a name="Wydawnictwo"><![CDATA[DiG]]></a>
+   <a name="Rok_wydania"><![CDATA[2010]]></a>
+   <a name="Oprawa"><![CDATA[twarda]]></a>
+   <a name="Format"><![CDATA[150x210 mm]]></a>
+  </attrs>
+ </o>
+ <o id="250056" url="http://www.lideria.pl/Rozglosnie-wolnosci-Puddington-Arch/sklep/opis?nr=250056" price="30.45" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Historia]]></cat>
+  <name><![CDATA[Rozgłośnie wolności]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/250056.jpg"/></imgs>
+  <desc><![CDATA[Opowieść o Radiu Wolna Europa i Radiu Swoboda należy do niezwykle fascynujących rozdziałów historii zimnej wojny. Radio Wolna Europa (RWE), które nadawało do zdominowanych przez Moskwę krajów Europy Wschodniej, było prawdopodobnie najbardziej wpływową polityczną międzynarodową rozgłośnią w historii.]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[Puddington Arch]]></a>
+   <a name="ISBN"><![CDATA[9788323124238]]></a>
+   <a name="Ilosc_stron"><![CDATA[424]]></a>
+   <a name="Wydawnictwo"><![CDATA[Uniwersytetu Mikołaja Kopernika]]></a>
+   <a name="Rok_wydania"><![CDATA[2010]]></a>
+   <a name="Oprawa"><![CDATA[miękka]]></a>
+   <a name="Format"><![CDATA[155x225 mm]]></a>
+  </attrs>
+ </o>
+ <o id="253526" url="http://www.lideria.pl/Usmiech-Pol-Pota-Peter-Froberg-Idling/sklep/opis?nr=253526" price="30.45" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Literatura faktu]]></cat>
+  <name><![CDATA[Uśmiech Pol Pota]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/253526.jpg"/></imgs>
+  <desc><![CDATA[W 1975 roku, po pięciu latach bezmyślnych rządów wojskowej kliki generała Lon Nola, władzę w Kambodży zdobywają Czerwoni Khmerzy. Mają ogromne poparcie ludu i lewicujących środowisk europejskich. Zniszczony amerykańskimi nalotami i wojną domową kraj przedzierzga się w Demokratyczną Kampuczę, w której hasła chłopskiej rewolucji mają zbudować nową, lepszą przyszłość.]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[Peter Froberg Idling]]></a>
+   <a name="ISBN"><![CDATA[9788375362084]]></a>
+   <a name="Ilosc_stron"><![CDATA[294]]></a>
+   <a name="Wydawnictwo"><![CDATA[Czarne]]></a>
+   <a name="Rok_wydania"><![CDATA[2012]]></a>
+   <a name="Oprawa"><![CDATA[miękka]]></a>
+   <a name="Format"><![CDATA[125x195 mm]]></a>
+  </attrs>
+ </o>
+ <o id="255005" url="http://www.lideria.pl/Meteoryt-A-G-Taylor/sklep/opis?nr=255005" price="26.25" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Literatura piękna i popularna/Literatura dla młodzieży]]></cat>
+  <name><![CDATA[Meteoryt]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/255005.jpg"/></imgs>
+  <desc><![CDATA[Meteoryt uderzył w ziemię, rozprzestrzeniając śmiertelny wirus. Są tysiące ofiar. Ocaleni Sara i Robert odkrywają w sobie dziwne efekty uboczne - zdolności parapsychologiczne.]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[A.G. Taylor]]></a>
+   <a name="ISBN"><![CDATA[9788361635970]]></a>
+   <a name="Ilosc_stron"><![CDATA[280]]></a>
+   <a name="Wydawnictwo"><![CDATA[Akapit-Press]]></a>
+   <a name="Rok_wydania"><![CDATA[2010]]></a>
+   <a name="Oprawa"><![CDATA[miękka]]></a>
+   <a name="Format"><![CDATA[130x200 mm]]></a>
+  </attrs>
+ </o>
+ <o id="264180" url="http://www.lideria.pl/Wracalismy-znad-morza-Luca-Doninelli/sklep/opis?nr=264180" price="26.25" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Literatura piękna i popularna/Powieści i opowiadania]]></cat>
+  <name><![CDATA[Wracaliśmy znad morza]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/264180.jpg"/></imgs>
+  <desc><![CDATA[Powieść Luki Doninellego ? znakomitego współczesnego prozaika i eseisty, cenionego między innymi przez Claudia Magrisa ? nadzwyczaj sugestywnie, a zarazem w oszczędny sposób opowiada o doświadczeniu pokolenia, które po roku 1968 otarło się o terroryzm. 
+To piękny portret matki i córki, bliskich sobie, a jednak patrzących w różne strony.]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[Luca Doninelli]]></a>
+   <a name="ISBN"><![CDATA[9788306032901]]></a>
+   <a name="Ilosc_stron"><![CDATA[208]]></a>
+   <a name="Wydawnictwo"><![CDATA[Państwowy Instytut Wydawniczy]]></a>
+   <a name="Rok_wydania"><![CDATA[2010]]></a>
+   <a name="Oprawa"><![CDATA[miękka]]></a>
+   <a name="Format"><![CDATA[125x195 mm]]></a>
+  </attrs>
+ </o>
+ <o id="266078" url="http://www.lideria.pl/Powrot-do-domu-Tom-1-Pamiec-ziemi-Orson-Scott-Card/sklep/opis?nr=266078" price="27.93" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Literatura piękna i popularna/Fantastyka i fantasy]]></cat>
+  <name><![CDATA[Powrót do domu.Tom 1. Pamięć ziemi]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/266078.jpg"/></imgs>
+  <desc><![CDATA[Przed tysiącami lat ludzie powierzyli swój los sztucznej inteligencji. Teraz chcą odzyskać wolność.
+
+Wysoko znad planety Harmonia spogląda Naddusza i bacznie obserwuje. Jego zadanie od wielu tysięcy lat jest takie samo - chronią ludzką kolonię zasiedlającą tę planetę, za wszelką cenę bronią Harmonii, a przede wszystkim nie dopuścią do jej autodestrukcji.]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[Orson Scott Card]]></a>
+   <a name="ISBN"><![CDATA[9788376485386]]></a>
+   <a name="Ilosc_stron"><![CDATA[296]]></a>
+   <a name="Wydawnictwo"><![CDATA[Prószyński i S-ka]]></a>
+   <a name="Rok_wydania"><![CDATA[2011]]></a>
+   <a name="Oprawa"><![CDATA[miękka]]></a>
+   <a name="Format"><![CDATA[142x202 mm]]></a>
+  </attrs>
+ </o>
+ <o id="265510" url="http://www.lideria.pl/Systemy-i-sieci-komputerowe-Podrecznik-do-nauki-zawodu-technik-informatyk/sklep/opis?nr=265510" price="32.97" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Informatyka]]></cat>
+  <name><![CDATA[Systemy i sieci komputerowe. Podręcznik do nauki zawodu technik informatyk]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/265510.jpg"/></imgs>
+  <desc><![CDATA[Książka jest wznowionym wydaniem "Systemy i sieci komputerowe. Podręcznik do nauki zawodu technik informatyk"
+
+Podręcznik jest zgodny z podstawą programową kształcenia w zawodzie technik informatyk 312[01].]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[Paweł Bensel]]></a>
+   <a name="ISBN"><![CDATA[9788324631568]]></a>
+   <a name="Ilosc_stron"><![CDATA[336]]></a>
+   <a name="Wydawnictwo"><![CDATA[Helion]]></a>
+   <a name="Rok_wydania"><![CDATA[2010]]></a>
+   <a name="Oprawa"><![CDATA[miękka]]></a>
+   <a name="Format"><![CDATA[170x240 mm]]></a>
+  </attrs>
+ </o>
+ <o id="265416" url="http://www.lideria.pl/Ostatni-tramwaj-dla-spiacych-za-miastem-Dariusz-Orszulewski/sklep/opis?nr=265416" price="17.85" avail="1">
+  <cat><![CDATA[Księgarnia/Książki]]></cat>
+  <name><![CDATA[Ostatni tramwaj dla śpiących za miastem]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/265416.jpg"/></imgs>
+  <desc><![CDATA["Znowu chciał wyjść i była to decyzja bez konieczności. Zew nieistniejącego obowiązku. Chciał mieć jakiś powód. A tak, cały ten arsenał gestów, jak nagłe, zbyt szybkie wstawanie z krzesła, gorączkowe sprawdzanie zawartości torby, czy zakładanie butów wymierzone były w powietrze. Jego wychodzenie z domu dawało poczucie zamętu oraz tempa i paradoksalnie potwornie się dłużyło.]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[Dariusz Orszulewski]]></a>
+   <a name="ISBN"><![CDATA[9788361748687]]></a>
+   <a name="Ilosc_stron"><![CDATA[188]]></a>
+   <a name="Wydawnictwo"><![CDATA[Warszawska Firma Wydawnicza]]></a>
+   <a name="Rok_wydania"><![CDATA[2012]]></a>
+   <a name="Oprawa"><![CDATA[miękka]]></a>
+   <a name="Format"><![CDATA[145x205 mm]]></a>
+  </attrs>
+ </o>
+ <o id="267352" url="http://www.lideria.pl/Grzechotka-Joanna-Jodelka/sklep/opis?nr=267352" price="30.45" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Literatura piękna i popularna/Literatura sensacyjna i grozy]]></cat>
+  <name><![CDATA[Grzechotka]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/267352.jpg"/></imgs>
+  <desc><![CDATA[Poznań, współczesna sceneria, wyraźnie zarysowana przestrzeń miasta. Młoda, samotna kobieta budzi się półprzytomna, świat wokół niej się zamazuje. I wtedy zaczyna się koszmar: dziewczyna jest, a raczej była w zaawansowanej ciąży. Teraz dziecka nie ma. Niezwykłą sprawą zajmuje się sympatyczna psycholożka, policja prowadzi śledztwo, badając otoczenie podejrzanej.]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[Joanna Jodełka]]></a>
+   <a name="ISBN"><![CDATA[9788374149013]]></a>
+   <a name="Ilosc_stron"><![CDATA[304]]></a>
+   <a name="Wydawnictwo"><![CDATA[W.A.B.]]></a>
+   <a name="Rok_wydania"><![CDATA[2011]]></a>
+   <a name="Oprawa"><![CDATA[miękka]]></a>
+   <a name="Format"><![CDATA[125x195 mm]]></a>
+  </attrs>
+ </o>
+ <o id="243111" url="http://www.lideria.pl/Uprawa-ogrodu-w-zgodzie-z-fazami-ksiezyca-Regina-Engelke/sklep/opis?nr=243111" price="34.65" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Poradniki/Wnętrza i ogrody]]></cat>
+  <name><![CDATA[Uprawa ogrodu w zgodzie z fazami księżyca]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/243111.jpg"/></imgs>
+  <desc><![CDATA[Natura kieruje się własnymi prawami. Jeśli nauczymy się je dostrzegać, rozumieć i akceptować, nasze życie stanie się pełniejsze, spokojniejsze, a przede wszystkim zdrowsze.]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[Regina Engelke]]></a>
+   <a name="ISBN"><![CDATA[9788372438058]]></a>
+   <a name="Ilosc_stron"><![CDATA[128]]></a>
+   <a name="Wydawnictwo"><![CDATA[RM]]></a>
+   <a name="Rok_wydania"><![CDATA[2010]]></a>
+   <a name="Oprawa"><![CDATA[miękka]]></a>
+   <a name="Format"><![CDATA[204x260 mm]]></a>
+  </attrs>
+ </o>
+ <o id="253492" url="http://www.lideria.pl/Chorwacja-Polwysep-Istria-i-Kvarner-Przewodnik-dla-zeglarzy-Praca-zbiorowa/sklep/opis?nr=253492" price="32.34" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Mapy i przewodniki]]></cat>
+  <name><![CDATA[Chorwacja. Półwysep Istria i Kvarner. Przewodnik dla żeglarzy]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/253492.jpg"/></imgs>
+  <desc><![CDATA[Trzeci z serii praktycznych przewodników, wskazuje ciekawe miejsca żeglarzom, planującym odwiedzią adriatyckie wybrzeże po raz pierwszy oraz tym, którzy wybierają się tam po raz kolejny. Prezentujemy w nim Kvarner i Półwysep Istria oraz najważniejsze porty: Sukosan, Silba, Olib, Mali i Veli Losinj, Novalja, Rab, Krk, Baska, Malinska, Cres, Pula.]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[Praca zbiorowa]]></a>
+   <a name="ISBN"><![CDATA[9788392804826]]></a>
+   <a name="Ilosc_stron"><![CDATA[158]]></a>
+   <a name="Wydawnictwo"><![CDATA[GlobTourist]]></a>
+   <a name="Rok_wydania"><![CDATA[2010]]></a>
+   <a name="Oprawa"><![CDATA[twarda]]></a>
+   <a name="Format"><![CDATA[165x240 mm]]></a>
+  </attrs>
+ </o>
+ <o id="249630" url="http://www.lideria.pl/Bajki-na-kazdy-dzien-roku-Lato-Praca-zbiorowa/sklep/opis?nr=249630" price="7.77" avail="1">
+  <cat><![CDATA[Księgarnia/Książki]]></cat>
+  <name><![CDATA[Bajki na każdy dzień roku. Lato]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/249630.jpg"/></imgs>
+  <desc><![CDATA[W każdej książce znajdziesz mnóstwo bajek, baśni, opowieści, rymowanek i wierszyków na każdy dzień, miesiąc i porę roku, one pomogą zasnąć i mieć piękne, kolorowe sny!
+Bogaty i różnorodny zbiór opowieści na dobranoc, z pięknymi ilustracjami, przeniesie dzieci do świata fantazji i magii.]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[Praca zbiorowa]]></a>
+   <a name="ISBN"><![CDATA[9788376236131]]></a>
+   <a name="Ilosc_stron"><![CDATA[144]]></a>
+   <a name="Wydawnictwo"><![CDATA[Zielona Sowa]]></a>
+   <a name="Rok_wydania"><![CDATA[2013]]></a>
+   <a name="Oprawa"><![CDATA[twarda]]></a>
+   <a name="Format"><![CDATA[145x185 mm]]></a>
+  </attrs>
+ </o>
+ <o id="70187" url="http://www.lideria.pl/Klopot-z-islamem-Irshad-Manji/sklep/opis?nr=70187" price="26.25" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Religia]]></cat>
+  <name><![CDATA[Kłopot z islamem]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/70187.jpg"/></imgs>
+  <desc><![CDATA[Irshad Manji to współczesna intelektualistka, feministka, kobieta z włosami ostrzyżonymi na jeża i niewyparzonym językiem, dziennikarka, która podziwia Izrael i pochwala amerykański atak na Saddama Husajna. A co więcej - ośmiela się głośno krytykować islam.]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[Irshad Manji]]></a>
+   <a name="ISBN"><![CDATA[9788360279014]]></a>
+   <a name="Ilosc_stron"><![CDATA[246]]></a>
+   <a name="Wydawnictwo"><![CDATA[Cyklady]]></a>
+   <a name="Rok_wydania"><![CDATA[2005]]></a>
+   <a name="Oprawa"><![CDATA[miękka]]></a>
+   <a name="Format"><![CDATA[140x210 mm]]></a>
+  </attrs>
+ </o>
+ <o id="88353" url="http://www.lideria.pl/Dorosle-zycie-Emilki-Lucy-Maud-Montgomery/sklep/opis?nr=88353" price="25.62" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Literatura piękna i popularna/Literatura dla młodzieży]]></cat>
+  <name><![CDATA[Dorosłe życie Emilki]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/88353.jpg"/></imgs>
+  <desc><![CDATA[Emilka wie już, że tylko zawód pisarki przyniesie jej szczęście i nie wyobraża sobie życia bez tworzenia. Nie może również zapomnieć o ukochanym Tedzie - miłości jej życia. Ale gdy Ted opuszcza Emilkę, by studiować w Montrealu, dziewczyna zupełnie się załamuje. Popełnia błąd za błędem, a chyba najpoważniejszym z nich jest decyzja o wyjściu za mąż za człowieka, którego w ogóle nie kocha.]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[Lucy Maud Montgomery]]></a>
+   <a name="ISBN"><![CDATA[9788308038802]]></a>
+   <a name="Ilosc_stron"><![CDATA[280]]></a>
+   <a name="Wydawnictwo"><![CDATA[Literackie]]></a>
+   <a name="Rok_wydania"><![CDATA[2013]]></a>
+   <a name="Oprawa"><![CDATA[twarda]]></a>
+   <a name="Format"><![CDATA[150x210 mm]]></a>
+  </attrs>
+ </o>
+ <o id="251667" url="http://www.lideria.pl/Randki-z-piekla-Kelley-Amstrong-Lori-Handeland-Kim-Harrison-Lynsay-Sands/sklep/opis?nr=251667" price="30.45" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Literatura piękna i popularna/Fantastyka i fantasy]]></cat>
+  <name><![CDATA[Randki z piekła]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/251667.jpg"/></imgs>
+  <desc><![CDATA[Za tobą bale maturalne i wakacje z piekła.
+
+Teraz czas umówią się na niesamowite, mroczne, seksowne i przerażające
+
+Randki z piekła
+]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[Kelley Amstrong, Lori Handeland, Kim Harrison, Lynsay Sands]]></a>
+   <a name="ISBN"><![CDATA[9788324137206]]></a>
+   <a name="Ilosc_stron"><![CDATA[472]]></a>
+   <a name="Wydawnictwo"><![CDATA[Amber]]></a>
+   <a name="Rok_wydania"><![CDATA[2010]]></a>
+   <a name="Oprawa"><![CDATA[miękka]]></a>
+   <a name="Format"><![CDATA[130x205 mm]]></a>
+  </attrs>
+ </o>
+ <o id="42194" url="http://www.lideria.pl/Bezpieczenstwo-telekomunikacji-Praktyka-i-zarzadzanie-Roger-J-Sutton/sklep/opis?nr=42194" price="45.78" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Informatyka]]></cat>
+  <name><![CDATA[Bezpieczeństwo telekomunikacji. Praktyka i zarządzanie]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/42194.jpg"/></imgs>
+  <desc><![CDATA[W książce opisano praktyczne aspekty bezpieczeństwa telekomunikacji oraz zarządzanie nim z uwzględnieniem różnych metod ochrony, a zwłaszcza szyfrowania. Z punktu widzenia bezpieczeństwa problematykę potraktowano szeroko, począwszy od koncepcji sieci i ich początkowej konfiguracji aż do utrzymania bezpieczeństwa eksploatowanych sieci przez zarządzanie kluczami szyfrującymi.]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[Roger J. Sutton]]></a>
+   <a name="ISBN"><![CDATA[9788320615173]]></a>
+   <a name="Ilosc_stron"><![CDATA[364]]></a>
+   <a name="Wydawnictwo"><![CDATA[WKiŁ]]></a>
+   <a name="Rok_wydania"><![CDATA[2004]]></a>
+   <a name="Oprawa"><![CDATA[twarda]]></a>
+   <a name="Format"><![CDATA[160x240 mm]]></a>
+  </attrs>
+ </o>
+ <o id="251558" url="http://www.lideria.pl/Ucz-sie-z-nami-dobrze-sluchac-Czesc-3-Jolanta-Karbowniczek-Izabela-Zaborowska/sklep/opis?nr=251558" price="6.72" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Literatura piękna i popularna/Literatura dla młodzieży]]></cat>
+  <name><![CDATA[Ucz się z nami dobrze słuchać. Część 3]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/251558.jpg"/></imgs>
+  <desc><![CDATA[Przygotowany zeszyt zawiera przykłady wielu różnych ąwiczeń dla dzieci z zaburzeniami wraz z ich dokładnym opisem uwzględniającym sferę słuchową. Mają one pomóc nauczycielom, rodzicom i opiekunom w organizowaniu zajęą, które ułatwiłyby przezwyciężenie trudności w nauce czytania i pisania. Prezentowane ąwiczenia są elementarne, proste i atrakcyjne.]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[Jolanta Karbowniczek, Izabela Zaborowska]]></a>
+   <a name="ISBN"><![CDATA[9788371732171]]></a>
+   <a name="Ilosc_stron"><![CDATA[40]]></a>
+   <a name="Wydawnictwo"><![CDATA[Pedagogiczne ZNP]]></a>
+   <a name="Rok_wydania"><![CDATA[2010]]></a>
+   <a name="Oprawa"><![CDATA[miękka]]></a>
+   <a name="Format"><![CDATA[165x238 mm]]></a>
+  </attrs>
+ </o>
+ <o id="110827" url="http://www.lideria.pl/Krakow-1-18-000-Plan-miasta/sklep/opis?nr=110827" price="17.43" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Mapy i przewodniki]]></cat>
+  <name><![CDATA[Kraków 1:18 000. Plan miasta]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/110827.jpg"/></imgs>
+  <desc><![CDATA[Mapa jest laminowana wytrzymała, wygodna w użyciu, łatwo się rozkłada i składa,
+pokrycie mapy folią laminowaną pozwala zaznaczać drogę na mapie, robią notatki.]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[]]></a>
+   <a name="ISBN"><![CDATA[9788374272803]]></a>
+   <a name="Ilosc_stron"><![CDATA[]]></a>
+   <a name="Wydawnictwo"><![CDATA[Demart]]></a>
+   <a name="Rok_wydania"><![CDATA[2009]]></a>
+   <a name="Oprawa"><![CDATA[]]></a>
+   <a name="Format"><![CDATA[120x250 mm]]></a>
+  </attrs>
+ </o>
+ <o id="145891" url="http://www.lideria.pl/Arka-Adam-Snerg-Wisniewski/sklep/opis?nr=145891" price="26.04" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Literatura piękna i popularna/Fantastyka i fantasy]]></cat>
+  <name><![CDATA[Arka]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/145891.jpg"/></imgs>
+  <desc><![CDATA[Bohaterami powieści są ludzie zniewoleni własnymi wizjami, żyjący w świecie urojonym, niepotrafiący się ze sobą porozumieć ani nawet odnaleźą punktów stycznych między własnymi złudzeniami. Napisana w konwencji alegoryczno-fantastycznej Arka jest dziełem pozostawiającym odbiorcy dużą swobodę intreptretacyjną, co pozwala odczytywać ją na różne sposoby i smakować jej rozmaite warstwy - od parodostycznej aż po psychologiczno - moralistyczną.]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[Adam Snerg-Wiśniewski]]></a>
+   <a name="ISBN"><![CDATA[9788374538091]]></a>
+   <a name="Ilosc_stron"><![CDATA[160]]></a>
+   <a name="Wydawnictwo"><![CDATA[słowo/obraz/terytoria]]></a>
+   <a name="Rok_wydania"><![CDATA[2007]]></a>
+   <a name="Oprawa"><![CDATA[miękka]]></a>
+   <a name="Format"><![CDATA[140x205 mm]]></a>
+  </attrs>
+ </o>
+ <o id="147648" url="http://www.lideria.pl/Sekretne-muzeum-Tajemnice-ukryte-w-dzielach-sztuki-Ernesto-Frers/sklep/opis?nr=147648" price="39.06" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Podręczniki akademickie/Sztuka]]></cat>
+  <name><![CDATA[Sekretne muzeum. Tajemnice ukryte w dziełach sztuki]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/147648.jpg"/></imgs>
+  <desc><![CDATA[Wielu genialnych artystów - malarzy, rzeźbiarzy, architektów i muzyków - wykazywało głębokie zainteresowanie mistycyzmem, okultyzmem i heterodoksyjnymi wierzeniami. Niektórzy z nich należeli do tajnych bractw i stowarzyszeń, a nawet demonicznych sekt. Dlatego często ukrywali w swoich pracach treści i symbole zrozumiałe tylko dla wtajemniczonych. ]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[Ernesto Frers]]></a>
+   <a name="ISBN"><![CDATA[9788360279281]]></a>
+   <a name="Ilosc_stron"><![CDATA[244]]></a>
+   <a name="Wydawnictwo"><![CDATA[Cyklady]]></a>
+   <a name="Rok_wydania"><![CDATA[2007]]></a>
+   <a name="Oprawa"><![CDATA[twarda]]></a>
+   <a name="Format"><![CDATA[150x230 mm]]></a>
+  </attrs>
+ </o>
+ <o id="80149" url="http://www.lideria.pl/O-literaturze-polskiej-Witold-Gombrowicz/sklep/opis?nr=80149" price="26.25" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Podręczniki akademickie/Nauki humanistyczne i społeczne]]></cat>
+  <name><![CDATA[O literaturze polskiej]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/80149.jpg"/></imgs>
+  <desc><![CDATA["W ciągu trzydziestu lat Gombrowicz napisał wiele tekstów o literaturze polskiej. Żaden 2 nich nie powstał jednak jako osobny esej czy recenzja, każdy był bowiem częścią większej całości literackiej - Dziennika, Wspomnień polskich, Rozmów z Dominikiem de Roux oraz licznych wywiadów.]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[Witold Gombrowicz]]></a>
+   <a name="ISBN"><![CDATA[9788308038635]]></a>
+   <a name="Ilosc_stron"><![CDATA[130]]></a>
+   <a name="Wydawnictwo"><![CDATA[Literackie]]></a>
+   <a name="Rok_wydania"><![CDATA[2006]]></a>
+   <a name="Oprawa"><![CDATA[twarda]]></a>
+   <a name="Format"><![CDATA[120x170 mm]]></a>
+  </attrs>
+ </o>
+ <o id="194167" url="http://www.lideria.pl/Nienasycenie-Virginia-Henley/sklep/opis?nr=194167" price="30.45" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Literatura piękna i popularna/Romanse]]></cat>
+  <name><![CDATA[Nienasycenie]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/194167.jpg"/></imgs>
+  <desc><![CDATA[Anglia, Złoty Wiek pod panowaniem królowej Elżbiety I. Młoda, impulsywna dama dworu spotyka przystojnego szkockiego lorda. Choą Catherine uważa go za gbura i brutala, zaś Patrick nazywa ją kotką z piekła rodem, los wplątuje ich w sieć dworskich intryg, nieubłaganie wiąże ze sobą i każe wybierać między rodzącym się pożądaniem a lojalnością.]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[Virginia Henley]]></a>
+   <a name="ISBN"><![CDATA[9788375510966]]></a>
+   <a name="Ilosc_stron"><![CDATA[584]]></a>
+   <a name="Wydawnictwo"><![CDATA[Bis]]></a>
+   <a name="Rok_wydania"><![CDATA[2013]]></a>
+   <a name="Oprawa"><![CDATA[twarda]]></a>
+   <a name="Format"><![CDATA[130x200 mm]]></a>
+  </attrs>
+ </o>
+ <o id="206940" url="http://www.lideria.pl/Piotrus-Sylabowy-Opozycja-Dzwiecznosci-Ii-Jagoda-Cieszynska/sklep/opis?nr=206940" price="41.82" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Literatura piękna i popularna/Literatura dla młodzieży]]></cat>
+  <name><![CDATA[Piotruś Sylabowy. Opozycja Dźwięczności - Ii]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/206940.jpg"/></imgs>
+  <desc><![CDATA[PIOTRUŚ SYLABOWY to atrakcyjna propozycja prowadzenia ąwiczeń artykulacji z dziećmi z wadami wymowy i nie zakończonymym rozwojem mowy. Wykorzystanie emocji związanych ze znaną wszystkim dzieciom zabawą - grą w "Piotrusia" pozwala uczynią ąwiczenia atrakcyjnymi. Gra odwołuje się do symultaniczno-sekwencyjnej metody nauki wczesnego czytania prezentowanej w serii logopedycznej Kocham Czytać.]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[Jagoda Cieszyńska]]></a>
+   <a name="ISBN"><![CDATA[9788361009443]]></a>
+   <a name="Ilosc_stron"><![CDATA[]]></a>
+   <a name="Wydawnictwo"><![CDATA[Wydawnictwo Edukacyjne]]></a>
+   <a name="Rok_wydania"><![CDATA[2013]]></a>
+   <a name="Oprawa"><![CDATA[twarda]]></a>
+   <a name="Format"><![CDATA[200x090 mm]]></a>
+  </attrs>
+ </o>
+ <o id="216831" url="http://www.lideria.pl/Henry-Miller-Frederic-Jacques-Temple/sklep/opis?nr=216831" price="22.26" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Biografie i dzienniki]]></cat>
+  <name><![CDATA[Henry Miller]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/216831.jpg"/></imgs>
+  <desc><![CDATA[Pisarstwo Henry''ego Millera od początku wywoływało liczne spory i kontrowersje. Przez jednych uważany był za wielkiego moralistę, przez innych za cynika, anarchistę i gorszyciela - do tego stopnia, że przez kilka dziesięcioleci jego książki były zakazane w Stanach Zjednoczonych.]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[Frederic Jacques Temple]]></a>
+   <a name="ISBN"><![CDATA[9788373923072]]></a>
+   <a name="Ilosc_stron"><![CDATA[207]]></a>
+   <a name="Wydawnictwo"><![CDATA[Noir Sur Blanc]]></a>
+   <a name="Rok_wydania"><![CDATA[2013]]></a>
+   <a name="Oprawa"><![CDATA[miękka]]></a>
+   <a name="Format"><![CDATA[120x170 mm]]></a>
+  </attrs>
+ </o>
+ <o id="229714" url="http://www.lideria.pl/Apartament-12A-Robert-Rotenberg/sklep/opis?nr=229714" price="29.61" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Literatura piękna i popularna/Literatura sensacyjna i grozy]]></cat>
+  <name><![CDATA[Apartament 12A]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/229714.jpg"/></imgs>
+  <desc><![CDATA[Floryda ma Elmore Leonarda, Chicago - Roberta Turowa, a Waszyngton - George'a Pelecanosa. Teraz pojawił się Robert Rotenberg, który w swoim znakomitym thrillerze pokazuje różne twarze Toronto.
+
+Sprawa wydawała się banalnie prosta. Kevin Brace, popularny kanadyjski prezenter radiowy, przyznał się do zamordowania swojej młodej żony. Stanął w drzwiach ich luksusowego apartamentu z rękami zbroczonymi krwią i powiedział do roznosiciela gazet: "Zabiłem ją". Ciało żony, ze śmiertelną raną od ciosu nożem, leżało w wannie.]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[Robert Rotenberg]]></a>
+   <a name="ISBN"><![CDATA[9788376483344]]></a>
+   <a name="Ilosc_stron"><![CDATA[400]]></a>
+   <a name="Wydawnictwo"><![CDATA[Prószyński i S-ka]]></a>
+   <a name="Rok_wydania"><![CDATA[2010]]></a>
+   <a name="Oprawa"><![CDATA[miękka]]></a>
+   <a name="Format"><![CDATA[125x195 mm]]></a>
+  </attrs>
+ </o>
+ <o id="232776" url="http://www.lideria.pl/Przeciwzycie-Philip-Roth/sklep/opis?nr=232776" price="34.86" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Literatura piękna i popularna/Powieści i opowiadania]]></cat>
+  <name><![CDATA[Przeciwżycie]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/232776.jpg"/></imgs>
+  <desc><![CDATA[Przeciwżycie (1986) jest jedną z najciekawszych, ale też i najbardziej skomplikowanych powieści Philipa Rotha. 
+Autor stara się w niej odpowiedzieć na jedno z podstawowych pytań w całej swojej twórczości - o sytuację Żyda we współczesnym świecie.]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[Philip Roth]]></a>
+   <a name="ISBN"><![CDATA[9788307032153]]></a>
+   <a name="Ilosc_stron"><![CDATA[408]]></a>
+   <a name="Wydawnictwo"><![CDATA[Czytelnik]]></a>
+   <a name="Rok_wydania"><![CDATA[2010]]></a>
+   <a name="Oprawa"><![CDATA[miękka]]></a>
+   <a name="Format"><![CDATA[130x205 mm]]></a>
+  </attrs>
+ </o>
+ <o id="9365" url="http://www.lideria.pl/Ksiega-duchow-Allan-Kardec/sklep/opis?nr=9365" price="40.95" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Poradniki/Parapsychologia i ezoteryka]]></cat>
+  <name><![CDATA[Księga duchów]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/9365.jpg"/></imgs>
+  <desc><![CDATA['Księga Duchów' to: światowy bestseller literatury ezoterycznej, klasyczne dzieło zapoczątkowujące naukowe badania zjawisk mediumicznych, szczegółowy wykład filozofii spirytystycznej, charakterystyka świata Duchów i ich relacji z ludźmi, zasady komunikacji z pozamaterialną sferą bytu]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[Allan Kardec]]></a>
+   <a name="ISBN"><![CDATA[9788386757732]]></a>
+   <a name="Ilosc_stron"><![CDATA[491]]></a>
+   <a name="Wydawnictwo"><![CDATA[KOS]]></a>
+   <a name="Rok_wydania"><![CDATA[2012]]></a>
+   <a name="Oprawa"><![CDATA[miękka]]></a>
+   <a name="Format"><![CDATA[145x205 mm]]></a>
+  </attrs>
+ </o>
+ <o id="239691" url="http://www.lideria.pl/Lider-na-kozetce-Kets-de-Vries/sklep/opis?nr=239691" price="72.24" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Podręczniki akademickie/Ekonomia i biznes]]></cat>
+  <name><![CDATA[Lider na kozetce]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/239691.jpg"/></imgs>
+  <desc><![CDATA[Manfred Kets de Vries, mający ogromną wiedzę z zakresu psychoanalizy, psychiatrii, psychoterapii i ekonomii oraz doświadczenie w szkoleniu liderów największych światowych firm, proponuje spojrzeć na problem przywództwa i dynamiki organizacji w zupełnie nowy sposób.]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[Kets de Vries]]></a>
+   <a name="ISBN"><![CDATA[9788376015637]]></a>
+   <a name="Ilosc_stron"><![CDATA[364]]></a>
+   <a name="Wydawnictwo"><![CDATA[Wolters Kluwer]]></a>
+   <a name="Rok_wydania"><![CDATA[2010]]></a>
+   <a name="Oprawa"><![CDATA[twarda]]></a>
+   <a name="Format"><![CDATA[172x245 mm]]></a>
+  </attrs>
+ </o>
+ <o id="240456" url="http://www.lideria.pl/Co-jest-za-horyzontem-Leon-Bruin/sklep/opis?nr=240456" price="23.10" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Literatura piękna i popularna/Powieści i opowiadania]]></cat>
+  <name><![CDATA[Co jest za horyzontem?]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/240456.jpg"/></imgs>
+  <desc><![CDATA[Autor przez całe życie był oficerem marynarki wojennej. Snuje swoje edukacyjne opowieści, przeplatając fikcję z zapisem prawdziwych życiowych doświadczeń. Opowiada o małym chłopcu, który wychował się na holenderskiej wyspie Texel i o jego budzącej się miłości do morza, także o marzeniach, aby zostać kapitanem okrętu.]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[Leon Bruin]]></a>
+   <a name="ISBN"><![CDATA[9788360577400]]></a>
+   <a name="Ilosc_stron"><![CDATA[160]]></a>
+   <a name="Wydawnictwo"><![CDATA[GWP]]></a>
+   <a name="Rok_wydania"><![CDATA[2013]]></a>
+   <a name="Oprawa"><![CDATA[twarda]]></a>
+   <a name="Format"><![CDATA[165x235 mm]]></a>
+  </attrs>
+ </o>
+ <o id="220630" url="http://www.lideria.pl/Elementy-fizyki-biofizyki-i-agrofizyki-Stanislaw-Przestalski/sklep/opis?nr=220630" price="38.43" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Podręczniki akademickie/Nauki przyrodnicze i matematyczne]]></cat>
+  <name><![CDATA[Elementy fizyki, biofizyki i agrofizyki]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/220630.jpg"/></imgs>
+  <desc><![CDATA[Jest to podręcznik adresowany głównie do studentów kierunków przyrodniczych na uniwersytetach i akademiach rolniczych. Zawarte w nim informacje stanowią podstawę innych przedmiotów o charakterze przyrodniczym.]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[Stanisław Przestalski]]></a>
+   <a name="ISBN"><![CDATA[9788322921272]]></a>
+   <a name="Ilosc_stron"><![CDATA[578]]></a>
+   <a name="Wydawnictwo"><![CDATA[Uniwersytetu Wrocławskiego]]></a>
+   <a name="Rok_wydania"><![CDATA[2009]]></a>
+   <a name="Oprawa"><![CDATA[miękka]]></a>
+   <a name="Format"><![CDATA[170x240 mm]]></a>
+  </attrs>
+ </o>
+ <o id="258743" url="http://www.lideria.pl/Noc-krysztalowa-Preludium-do-zaglady-Martin-Gilbert/sklep/opis?nr=258743" price="34.65" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Historia]]></cat>
+  <name><![CDATA[Noc kryształowa. Preludium do zagłady]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/258743.jpg"/></imgs>
+  <desc><![CDATA[W nocy z 9 na 10 listopada 1938 roku w Niemczech doszło do antyżydowskich wystąpień ludności. Bezpośrednim pretekstem do przeprowadzenia akcji zainicjowanej przez władze partyjne i państwowe było zabójstwo sekretarza ambasady niemieckiej w Paryżu, Ernsta vom Ratha, dokonane kilka dni wcześniej przez żydowskiego emigranta z Niemiec, Herschela Grynszpana. ]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[Martin Gilbert]]></a>
+   <a name="ISBN"><![CDATA[9788376740652]]></a>
+   <a name="Ilosc_stron"><![CDATA[369]]></a>
+   <a name="Wydawnictwo"><![CDATA[Replika]]></a>
+   <a name="Rok_wydania"><![CDATA[2010]]></a>
+   <a name="Oprawa"><![CDATA[miękka]]></a>
+   <a name="Format"><![CDATA[130x200 mm]]></a>
+  </attrs>
+ </o>
+ <o id="265100" url="http://www.lideria.pl/Tomasz-Szymus-Orkiestra-CD/sklep/opis?nr=265100" price="30.45" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Podręczniki akademickie/Sztuka]]></cat>
+  <name><![CDATA[Tomasz Szymuś. Orkiestra + CD]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/265100.jpg"/></imgs>
+  <desc><![CDATA[Płyta inspirowana tanecznymi przebojami.
+Zawiera 16 utworów w nowych aranżacjach wykonanych przez Tomasza Szymusia i jego orkiestrę. Muzyk jest znany polskiej publiczności z uczestnictwa w prestiżowych galach, takich jak Festiwal Top Trendy, Sopot Festiwal czy Festiwal Gwiazd w Międzyzdrojach.]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[]]></a>
+   <a name="ISBN"><![CDATA[9788326800436]]></a>
+   <a name="Ilosc_stron"><![CDATA[36]]></a>
+   <a name="Wydawnictwo"><![CDATA[Agora]]></a>
+   <a name="Rok_wydania"><![CDATA[2010]]></a>
+   <a name="Oprawa"><![CDATA[twarda]]></a>
+   <a name="Format"><![CDATA[145x140 mm]]></a>
+  </attrs>
+ </o>
+ <o id="248575" url="http://www.lideria.pl/Incognegro-Mat-Johnson/sklep/opis?nr=248575" price="34.02" avail="1">
+  <cat><![CDATA[Księgarnia/Książki]]></cat>
+  <name><![CDATA[Incognegro]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/248575.jpg"/></imgs>
+  <desc><![CDATA[Początek XX wieku to czas, gdy lincze były codziennością Południa Stanów Zjednoczonych. Dla większości gazet ta epidemia mordów na tle rasowym nie była już nawet tematem wartym wzmianki. Jednak kilku odważnych reporterów z Północy, ryzykując życie, postanowiło ujawnią te potworności. Byli to Afroamerykanie o jasnej karnacji skóry, którzy mogli uchodzią za białych.]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[Mat Johnson]]></a>
+   <a name="ISBN"><![CDATA[9788323725985]]></a>
+   <a name="Ilosc_stron"><![CDATA[136]]></a>
+   <a name="Wydawnictwo"><![CDATA[Egmont]]></a>
+   <a name="Rok_wydania"><![CDATA[2010]]></a>
+   <a name="Oprawa"><![CDATA[miękka]]></a>
+   <a name="Format"><![CDATA[190x260 mm]]></a>
+  </attrs>
+ </o>
+ <o id="267391" url="http://www.lideria.pl/Cztery-pory-roku-jesien-zima/sklep/opis?nr=267391" price="4.20" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Literatura piękna i popularna/Literatura dla młodzieży]]></cat>
+  <name><![CDATA[Cztery pory roku - jesień, zima]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/267391.jpg"/></imgs>
+  <desc><![CDATA[Cztery pory roku to nowa seria książeczek edukacyjnych przeznaczona dla dzieci w wieku przedszkolnym.
+Proponowany zestaw świczeń ma przez zabawę zapoznać malucha z każdą porą roku. Zadania zostały urozmaicone wesołymi wierszami oraz zagadkami Ewy Stadtmuller. Dzięki temu rodzice wraz z dziećmi mogą twórczo i wesoło spędzią czas. Dodatkowym atutem książeczki są kolorowe naklejki.]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[]]></a>
+   <a name="ISBN"><![CDATA[9788374375757]]></a>
+   <a name="Ilosc_stron"><![CDATA[16]]></a>
+   <a name="Wydawnictwo"><![CDATA[Skrzat]]></a>
+   <a name="Rok_wydania"><![CDATA[2010]]></a>
+   <a name="Oprawa"><![CDATA[miękka]]></a>
+   <a name="Format"><![CDATA[200x285 mm]]></a>
+  </attrs>
+ </o>
+ <o id="146541" url="http://www.lideria.pl/ALBO-albo-2007-1-Psychologia-rodziny-Problemy-psychologii-i-kultury-Praca/sklep/opis?nr=146541" price="19.11" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Pozostałe książki]]></cat>
+  <name><![CDATA[ALBO albo 2007 - 1. Psychologia rodziny. Problemy psychologii i kultury]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/146541.jpg"/></imgs>
+  <desc><![CDATA[Tematy ALBO albo w roku 2007: "Psychologia rodziny. Ojcostwo, macierzyństwo, mity rodzinne", "Cywilizacja i płeć. Płeć psychologiczna, homokultura, cywilizacja pornograficzna", "Bohaterowie i autorytety. Lider, idol, charyzma", "Aniołowie i demony. Dychu, święci, zaświaty, kult przodków".]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[Praca zbiorowa]]></a>
+   <a name="ISBN"><![CDATA[9771230080070]]></a>
+   <a name="Ilosc_stron"><![CDATA[180]]></a>
+   <a name="Wydawnictwo"><![CDATA[Eneteia]]></a>
+   <a name="Rok_wydania"><![CDATA[2008]]></a>
+   <a name="Oprawa"><![CDATA[miękka]]></a>
+   <a name="Format"><![CDATA[160x230 mm]]></a>
+  </attrs>
+ </o>
+ <o id="266435" url="http://www.lideria.pl/Jutrzejsza-milosc-Shirley-Abbott/sklep/opis?nr=266435" price="26.25" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Literatura piękna i popularna/Powieści i opowiadania]]></cat>
+  <name><![CDATA[Jutrzejsza miłość]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/266435.jpg"/></imgs>
+  <desc><![CDATA["Książka Abbott to subtelny gobelin
+utkany z miłości i apokalipsy"
+
+"Publishers Weekly"
+Shirley Abbott przenikliwie analizuje pogmatwane związki swych bohaterów, którzy reprezentują niemal wszystkie warstwy amerykańskiego społeczeństwa. ]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[Shirley Abbott]]></a>
+   <a name="ISBN"><![CDATA[9788374959377]]></a>
+   <a name="Ilosc_stron"><![CDATA[320]]></a>
+   <a name="Wydawnictwo"><![CDATA[Muza]]></a>
+   <a name="Rok_wydania"><![CDATA[2011]]></a>
+   <a name="Oprawa"><![CDATA[miękka]]></a>
+   <a name="Format"><![CDATA[205x145 mm]]></a>
+  </attrs>
+ </o>
+ <o id="77809" url="http://www.lideria.pl/Tom-1-Rafal-Malczewski-i-mit-Zakopanego-Tom-2-Zakopane-w-czasach-Rafala/sklep/opis?nr=77809" price="49.14" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Podręczniki akademickie/Sztuka]]></cat>
+  <name><![CDATA[Tom 1: Rafał Malczewski i mit Zakopanego / Tom 2: Zakopane w czasach Rafała Malczewskiego]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/77809.jpg"/></imgs>
+  <desc><![CDATA[Tom pierwszy - "Rafał Malczewski i mit Zakopanego" - odtwarza dzieje artysty do 1939 r., opracowane na podstawie międzywojennych tekstów prasowych, wspomnień, utworów literackich i recenzji, w oparciu o istniejące obrazy, rysunki i szkice. Tom drugi - "Zakopane w czasach Rafała Malczewskiego" - Omawia kontekst sztuki polskiej w Zakopanem w latach 1918-1939.]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[Rafał Malczewski]]></a>
+   <a name="ISBN"><![CDATA[9788389747365]]></a>
+   <a name="Ilosc_stron"><![CDATA[461]]></a>
+   <a name="Wydawnictwo"><![CDATA[Bosz s.c.]]></a>
+   <a name="Rok_wydania"><![CDATA[2006]]></a>
+   <a name="Oprawa"><![CDATA[miękka]]></a>
+   <a name="Format"><![CDATA[196x256 mm]]></a>
+  </attrs>
+ </o>
+ <o id="247179" url="http://www.lideria.pl/Muzeum-Narodowe-w-Krakowie/sklep/opis?nr=247179" price="207.90" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Podręczniki akademickie/Sztuka]]></cat>
+  <name><![CDATA[Muzeum Narodowe w Krakowie]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/247179.jpg"/></imgs>
+  <desc><![CDATA[Tom ten prezentuje najcenniejsze dzieła malarstwa z najstarszych polskich muzeów: Muzeum Narodowego w Krakowie (rok założenia 1879) oraz zapoczątkowanej na przełomie XVIII i XIX wieku w Puławach Kolekcji Książąt Czartoryskich.]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[]]></a>
+   <a name="ISBN"><![CDATA[9788321346342]]></a>
+   <a name="Ilosc_stron"><![CDATA[632]]></a>
+   <a name="Wydawnictwo"><![CDATA[Arkady]]></a>
+   <a name="Rok_wydania"><![CDATA[2009]]></a>
+   <a name="Oprawa"><![CDATA[twarda]]></a>
+   <a name="Format"><![CDATA[240x295 mm]]></a>
+  </attrs>
+ </o>
+ <o id="101623" url="http://www.lideria.pl/Cztery-Umowy-Droga-do-wolnosci-osobistej-Don-Miguel-Ruiz/sklep/opis?nr=101623" price="19.11" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Pozostałe książki]]></cat>
+  <name><![CDATA[Cztery Umowy. Droga do wolności osobistej]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/101623.jpg"/></imgs>
+  <desc><![CDATA[Cztery umowy to wyjątkowy przewodnik po drodze do prawdziwej wolności i harmonii, autor odkrywa źródło przekonań i zachowań, które nas ograniczają i odbierają prawdziwą radość życia i opierając się na mądrości starożytnych Tolteków, podaje skuteczne sposoby, które z dnia na dzień mogą odmienią życie każdego z nas.]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[Don Miguel Ruiz]]></a>
+   <a name="ISBN"><![CDATA[9788389896698]]></a>
+   <a name="Ilosc_stron"><![CDATA[128]]></a>
+   <a name="Wydawnictwo"><![CDATA[Galaktyka]]></a>
+   <a name="Rok_wydania"><![CDATA[2013]]></a>
+   <a name="Oprawa"><![CDATA[miękka]]></a>
+   <a name="Format"><![CDATA[145x205 mm]]></a>
+  </attrs>
+ </o>
+ <o id="140897" url="http://www.lideria.pl/Kolor-magii-Terry-Pratchett/sklep/opis?nr=140897" price="26.25" avail="1">
+  <cat><![CDATA[Księgarnia/Książki]]></cat>
+  <name><![CDATA[Kolor magii]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/140897.jpg"/></imgs>
+  <desc><![CDATA[To pierwsza w pełni komiksowa wersja powieści Terry'ego Pratchetta z niezwykle popularnego cyklu "Świat Dysku". Witajcie w Świecie Dysku, gdzie bogów nie tyle się czci, co zwala na nich winę! Wyobraźcie sobie płaski świat, podtrzymywany przez cztery słonie, sunące przez kosmos na grzbiecie gigantycznego żółwia. Poznajcie pechowe przygody maga Rincewinda i Dwukwiata, pierwszego turysty na Dysku. ]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[Terry Pratchett]]></a>
+   <a name="ISBN"><![CDATA[9788374695855]]></a>
+   <a name="Ilosc_stron"><![CDATA[128]]></a>
+   <a name="Wydawnictwo"><![CDATA[Prószyński i S-ka]]></a>
+   <a name="Rok_wydania"><![CDATA[2011]]></a>
+   <a name="Oprawa"><![CDATA[miękka]]></a>
+   <a name="Format"><![CDATA[163x235 mm]]></a>
+  </attrs>
+ </o>
+</group>
+</offers>
