@@ -66,18 +66,16 @@ def _launch(full=False):
                 run('git pull')
         if full:
             run('pip install -r frontends/spistresci/requirements.pip')
+
+        css_path = os.path.join(env.CODE_DIR, 'frontends/spistresci/static/css')
+        scss_path = os.path.join(env.CODE_DIR, 'frontends/spistresci/static/scss')
+        run('rm -rf %s && mkdir %s' % (css_path, css_path))
+        run('sass --update %s:%s' % (css_path, scss_path))
+
         with cd(os.path.join(env.CODE_DIR, 'frontends')):
             run('python manage.py collectstatic --noinput')
-        run('find . -name \*.pyc -delete')
-    bounce()
-
-
-def angularlaunch(full=False):
-    with cd('%s%s' % (env.CODE_DIR, '/angular')):
-        if full:
-            run('npm install')
-            run('bower install')
-        run('grunt build')
+            run('python manage.py collectstatic --noinput -i *.scss')
+            run('find . -name \*.pyc -delete')
     bounce()
 
 
