@@ -5,6 +5,7 @@ DEBUG = False
 IS_PROD = True
 DOMAIN_NAME = 'spistresci.pl'
 WWW_ROOT = 'http://%s/' % DOMAIN_NAME
+SSH_HOSTS = ['pati1.spistresci.pl',]
 
 # Python dotted path to the WSGI application used by Django's runserver.
 WSGI_APPLICATION = 'spistresci.wsgi.application'

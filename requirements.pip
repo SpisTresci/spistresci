@@ -21,3 +21,4 @@ django-dajaxice==0.5.5
 Pillow==2.3.0
 django-imagekit==3.0.4
 selenium==2.39.0
+Fabric==1.8.2
