@@ -65,12 +65,12 @@ def _launch(full=False):
             with cd(path):
                 run('git pull')
         if full:
-            run('pip install -r frontends/spistresci/requirements.pip')
+            run('sudo pip install -r frontends/spistresci/requirements.pip')
 
         css_path = os.path.join(env.CODE_DIR, 'frontends/spistresci/static/css')
         scss_path = os.path.join(env.CODE_DIR, 'frontends/spistresci/static/scss')
         run('rm -rf %s && mkdir %s' % (css_path, css_path))
-        run('sass --update %s:%s' % (css_path, scss_path))
+        run('sass --update %s:%s' % (scss_path, css_path))
 
         with cd(os.path.join(env.CODE_DIR, 'frontends')):
             run('python manage.py collectstatic --noinput')
