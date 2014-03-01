@@ -6,3 +6,4 @@
 .sass-cache
 settings/local.py
 uploads/*
+logs

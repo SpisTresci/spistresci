@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+import logging
 import time
 
 from django.core.management.base import BaseCommand
@@ -7,6 +8,7 @@ from django.core.management.base import BaseCommand
 from selenium import webdriver
 from selenium.webdriver.support.wait import WebDriverWait
 
+logger = logging.getLogger('afiliant_update_logger')
 
 class Command(BaseCommand):
 
@@ -53,21 +55,23 @@ class Command(BaseCommand):
         return True
 
     def update_xml_files(self):
-
+        logger.info('*'*20)
+        logger.info('start')
         for url in self.xml_urls:
             def load_completed(d):
                 return d.execute_script("return document.readyState") == "complete" and \
                     url in d.current_url
 
-
             self.driver.get(url)
             WebDriverWait(self.driver, 30).until(load_completed)
             rows = self.driver.find_elements_by_css_selector('table.table_thin tr')
             for row in rows:
+                logger.info('row id: %s' % row.get_attribute('id'))
                 try:
                     btn = row.find_element_by_css_selector('a.update')
                 except:
                     continue
                 else:
+                    logger.info('btn href: %s' % btn.get_attribute('href'))
                     btn.click()
                     time.sleep(5)
