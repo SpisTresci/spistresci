@@ -62,16 +62,32 @@ class Command(BaseCommand):
                 return d.execute_script("return document.readyState") == "complete" and \
                     url in d.current_url
 
-            self.driver.get(url)
-            WebDriverWait(self.driver, 30).until(load_completed)
-            rows = self.driver.find_elements_by_css_selector('table.table_thin tr')
-            for row in rows:
-                logger.info('row id: %s' % row.get_attribute('id'))
-                try:
-                    btn = row.find_element_by_css_selector('a.update')
-                except:
-                    continue
-                else:
-                    logger.info('btn href: %s' % btn.get_attribute('href'))
-                    btn.click()
-                    time.sleep(5)
+            eor = False  # end of rows
+            clicked_links = []
+            while(not eor):
+                not_clicked = 0
+                self.driver.get(url)
+                WebDriverWait(self.driver, 60).until(load_completed)
+                rows = self.driver.find_elements_by_css_selector('table.table_thin tr')
+                for row in rows[1:]:  # [1:] skips header
+                    try:
+                        row_id = row.get_attribute('id')
+                    except:
+                        break
+
+                    try:
+                        btn = row.find_element_by_css_selector('a.update')
+                    except:
+                        not_clicked += 1
+                        continue
+                    else:
+                        href = btn.get_attribute('href')
+                        if href in clicked_links:
+                            not_clicked += 1
+                            continue
+                        btn.click()
+                        time.sleep(3)
+                        clicked_links.append(href)
+                if not_clicked >= len(clicked_links):
+                    eor = True
+                logger.info('end of row')
