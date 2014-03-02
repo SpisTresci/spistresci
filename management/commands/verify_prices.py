@@ -88,7 +88,7 @@ class Command(BaseCommand):
         'Sensus': "//div[@id='box_ebook']/div[@class='price']/span/text()",
         'Fabryka': "//*[@id='productBox']/div[2]/div[2]/p[2]/text()",
         'eClicto': "//div[@class='productPrice productsInfo']//span[@class='red strong fhuge']/text()",
-        'TaniaKsiazka': "//span[@itemprop='price']/text()",
+        'TaniaKsiazka': '//*[@id="p-ourprice"]/strong/span/text() | //*[@id="p-ourprice"]/strong/text()',
         'DobryEbook': [
             "//div[@class='wersjaElektro']/p[@class='cena']/text()",
             "//div[@class='wersjaElektro']/div[@class='promocja']/text()"
