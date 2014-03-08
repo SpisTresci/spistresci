@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.index_person{
+    width: 100%;
+}
+
+.title {
+    /*width: 100%;*/
+    /*text-align: left;*/
+    color: #ab0000;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 25px auto;
+    padding-left: 60px;
+ }
+
+.title .b_center {
+    margin-bottom: 5px;
+    width: -moz-calc(46% - 110px);
+    width: -webkit-calc(46% - 110px);
+    width: -o-calc(46% - 110px);
+    width: calc(46% - 110px);
+    height: 3px
+}
+
+.title .b_right {
+    margin-bottom: 5px;
+}
+
+.title .b_left {
+    margin-bottom: 5px;
+}
+
+.index_person_big_box{
+    width:1060px;
+    height: 1550px;
+    margin: auto;
+}
+
+.index_person_box{
+    width: 1000px;
+    height: 300px;
+    margin: 10px;
+}
+
+.person_sub_box_foto{
+    border: 1px solid #e3e3e3;
+    padding: 10px;
+    float: left;
+    margin-right: 30px;
+}
+
+.person_sub_box_text{
+    width: 700px;
+    border: 7px solid #e3e3e3;
+    float: left;
+    margin-left: 30px;
+    margin-bottom: 10px;
+  }
+
+.arrow{
+    position: relative;
+    margin-left: -35px;
+    margin-top: 20px;
+    float: left;;
+}
+
+.person_sub_box_content{
+    padding: 20px;
+}
+
+.name{
+    font-size: 16px;
+    font-weight: bold;
+    color: #225b98;
+    margin: -5px 0px 10px 0px;
+}
+
+.foto{
+    width: 174px;
+    height: 232px;
+    background-image: url(../img/img_about_us/aboutusmis.png);
+    //background-image: url(../img/img_about_us/misspadochron.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.description_content p{
+    margin-bottom: 16px;
+}
+
+#kszumny_foto.foto{
+    background-image: url(../img/img_about_us/kszumny.jpg);
+}
+
+#kszumny_foto.foto:hover{
+    background-image: url(../img/img_about_us/krzysiek3.JPG);
+}
+#mszumna_foto.foto{
+    background-image: url(../img/img_about_us/mszumna.jpg);
+}
+
+#mszumna_foto.foto:hover{
+    background-image: url(../img/img_about_us/magdalena.JPG);
+}
+
+#pzawislak_foto.foto{
+    background-image: url(../img/img_about_us/pzawislak.jpg);
+}
+
+#pzawislak_foto.foto:hover{
+     background-image: url(../img/img_about_us/piotr2.png);
+}
+
+#msikora_foto.foto{
+      background-image: url(../img/img_about_us/msikora.jpg);
+}
+
+#msikora_foto.foto:hover{
+     background-image: url(../img/img_about_us/mateusz2.jpg);
+}
+
+#pperduta_foto.foto{
+    background-image: url(../img/img_about_us/patryk.jpg);
+}
+
+#pperduta_foto.foto:hover{
+    background-image: url(../img/img_about_us/pperduta.jpg);
+}

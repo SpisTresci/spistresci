@@ -1,5 +1,138 @@
 {% extends "plain_text.html" %}
 {% load staticfiles %}
+{% block css %}
+    <link href="{% static "css/plaintext.css" %}" rel="stylesheet" type="text/css">
+    <link href="{% static "css/about_us.css" %}" rel="stylesheet" type="text/css">
+{% endblock css %}
+
 {% block container %}
-ABOUT-US
+<div class="index_person">
+    <div class="title">
+       <!-- <img class="b_left" src="/static/img/red_line_b.png">-->
+        <img class="b_center" src="/static/img/red_line_c.png" >
+       <!-- <img class="b_right" src="/static/img/red_line_e.png" >-->
+         NASZA BOMBOWA EKIPA
+       <!-- <img class="b_left" src="/static/img/red_line_b.png" > -->
+        <img class="b_center" src="/static/img/red_line_c.png" >
+        <!--<img class="b_right" src="/static/img/red_line_e.png" >-->
+    </div>
+    <div class="index_person_big_box">
+        <div class="index_person_box">
+            <div class="person_sub_box_foto">
+                <div id="kszumny_foto" class="foto"></div>
+              <!--  <img src="/static/img/img_about_us/aboutusmis.png">-->
+            </div>
+            <div class="person_sub_box_text">
+                <img class="arrow" src="/static/img/blogger_review_arrow.png">
+                <div class="person_sub_box_content">
+                    <div class="name">Krzysztof Szumny</div>
+                    <div class="description_content">
+                          <p>Pomysłodawca Spisu Treści, główny programista,
+                              grafik, osoba która potrafiła przekonać
+                              wszystkich swoich współpracowników, że razem jesteśmy w stanie stworzyć serwis, który na nowo zdefiniuje rynek czytelniczy w Polsce :) W wieku 21 lat jako jedna z najmłodszych osób, rozpoczął pracę w firmie Opera Software, gdzie przez 5 lat tworzył przeglądarki internetowe, kontynuując w tym samym czasie studia informatyczne na WPPT Politechniki Wrocławskiej. </p>
+                           <p>Fan i propagator e-czytelnictwa, bloger,
+                               prywatnie szczęśliwie żonaty z Magdaleną.</p>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+
+        <div class="index_person_box">
+            <div class="person_sub_box_foto">
+                <div id="mszumna_foto" class="foto"></div>
+            </div>
+            <div class="person_sub_box_text">
+                <img class="arrow" src="/static/img/blogger_review_arrow.png">
+                <div class="person_sub_box_content">
+
+                    <div class="name">Magdalena Szumna</div>
+                    <div class="description_content">
+                        <p>Absolwentka Fizyki Politechniki Wrocławskiej, specjalistka od zarządzania i marketingu, osoba będąca pierwszą linią weryfikacyjną pomysłów Krzysztofa. Odpowiedzialna w
+                        projekcie za kontakt z księgarniami, finanse,
+                        promocję, a ostatnio także frontend.
+                        Współprowadzi również bloga eKundelek.pl. Jest
+                        pomysłodawczynią nazw obu serwisów.</p>
+                        <p>Uwielbia czekoladę i inne słodycze, pluszowe misie,
+                        LEGO oraz książki.</p>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class="index_person_box">
+            <div class="person_sub_box_foto">
+                <div id="pzawislak_foto" class="foto"></div>
+            </div>
+            <div class="person_sub_box_text">
+                <img class="arrow" src="/static/img/blogger_review_arrow.png">
+                <div class="person_sub_box_content">
+                    <div class="name">Piotr Zawiślak</div>
+                    <div class="description_content">
+                       <p>Absolwent Informatyki Uniwersytetu
+                        Wrocławskiego.
+                        Obecnie nadal pracuje jako programista w firmie Opera
+                        Software. Po godzinach pomaga w Spisie Treści
+                        projektować architekturę systemu oraz implementować jego podstawową funkcjonalność. Zapalony biegacz,
+                        maratończyk.</p>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="index_person_box">
+            <div class="person_sub_box_foto">
+                <div id="msikora_foto" class="foto"></div>
+            </div>
+            <div class="person_sub_box_text">
+                <img class="arrow" src="/static/img/blogger_review_arrow.png">
+                <div class="person_sub_box_content">
+                    <div class="name">Mateusz Sikora</div>
+                    <div class="description_content">
+                       <p>Absolwent Informatyki, wydziału Elektroniki Politechniki Wrocławskiej. Współtworzy komercyjne projekty od 2007 roku, specjalista od Pythona i Django. Do zespołu dołączył w listopadzie 2013 roku i zajmuje się backendem serwisu. Na co dzień pracuje w firmie Tivix Europe, jako senior software engineer. </p>
+                       <p>Po godzinach fan deski snowboardowej, prozy Charlsa Bukowskiego i gorzkiej żołądkowej miętowej.</p>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="index_person_box">
+            <div class="person_sub_box_foto">
+                <div id="pperduta_foto" class="foto"></div>
+            </div>
+            <div class="person_sub_box_text">
+                <img class="arrow" src="/static/img/blogger_review_arrow.png">
+                <div class="person_sub_box_content">
+                    <div class="name">Patryk Perduta</div>
+                    <div class="description_content">
+                   <p>Najmłodsza osoba w zespole. Od niedawna uczy się w
+                       niemieckim liceum. W Spisie Treści z wielkim zapałem
+                       zajmuje się wszystkim tym, na co się mu tylko pozwoli
+                       ;-) Kiedy nie uczy się niemieckiego to programuje albo
+                       trenuje Aikido. Ma nadzieję, że nigdy nie przestanie
+                       się uczyć.</p>
+
+                    <p>Wielbiciel twórczości Terrego Pratchetta oraz Douglasa
+                                Adamsa.</p>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+</div>
 {% endblock container %}
+{% block footer %}{% include "footer.html" %} {% endblock footer %}
+
