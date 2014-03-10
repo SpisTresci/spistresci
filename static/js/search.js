@@ -247,6 +247,14 @@ function onReady(){
         rebuildResults();
     });
 
+    $('.search_more').on("click", function(){
+        $(".index_top_bg").toggleClass("advanced")
+    });
+
+    $('.info_box_x').on("click", function(){
+       $("#search_info_box").hide();
+    });
+
     jQuery.ajaxSetup({
         beforeSend: function() {
             $('.main_container').addClass("loading");
