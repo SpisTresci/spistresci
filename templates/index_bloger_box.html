@@ -1,5 +1,4 @@
 {% load staticfiles %}
-{% comment %}
 <div class="index_blogger_box">
     <div class="blogger_sub_box">
                 <img src="{% if serve_local_files and blogger.photo %}{{ blogger.photo_thumbnail.url }}{% else %}{% static "img/bloggers/default_avatar.jpg" %}{% endif %}" alt="{{ blogger.user.get_full_name }}" style="width: 91px; height: 91px; display: block;" />
@@ -39,4 +38,3 @@
         </div>
     </div>
 </div>
-{% endcomment %}
