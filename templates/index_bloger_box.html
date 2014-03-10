@@ -9,7 +9,7 @@
         </div>
         <div class="blogger_blog">
             Autor bloga:<br/>
-            <a href="{{ blogger.website }}">{{ blogger.website_name }}</a>
+            <a target="_blank" href="{{ blogger.website }}">{{ blogger.website_name }}</a>
         </div>
     </div>
     <div class="review_sub_box_wrapper">
@@ -22,9 +22,9 @@
                 {% else %}
                     <img src="{% static "img/default_cover.png" %}" style="width: 91px; height: 137px" alt="" /></a>
                 {% endif %}
-                <h2 id="recommendation_title"><a href="{{ object.website_path }}">{{ object.title }}</a></h2>
+                <h2 id="recommendation_title"><a target="_blank" href="{{ object.website_path }}">{{ object.title }}</a></h2>
                 <div id="recommendation_content" style="">
-                    {{ object.content|linebreaksbr }}<a href="{{ object.website_path }}"> Czytaj&nbsp;całość&nbsp;»</a>
+                    {{ object.content|linebreaksbr }}<a target="_blank" href="{{ object.website_path }}"> Czytaj&nbsp;całość&nbsp;»</a>
                 </div>
 
             </div>
