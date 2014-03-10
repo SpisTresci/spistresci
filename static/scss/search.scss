@@ -548,3 +548,33 @@ $book-box-width:300px;
 .index_more{
   display: none;
 }
+
+.info_box_x{
+  cursor: pointer;
+  color: #BDB76B;
+  border: 1px solid #BDB76B;
+  background-color: #FFFFE0;
+  font-size: 21px;
+  display: inline-block;
+  line-height: 0px;
+  padding: 9px 3px;
+  text-decoration: none;
+}
+.info_box_x:before{
+  content: "×";
+}
+
+#search_info_box{
+  background-color: lightyellow;
+  margin: 18px 0px;
+  padding: 20px;
+  border: dotted 1px black;
+  font-size: 18px;
+
+  .info_box_x{
+    float: right;
+    margin-top: -10px;
+    margin-right: -10px;
+  }
+}
+

@@ -1,4 +1,13 @@
 {% extends "generic/L_container.html" %}
 {% block L_top_panel %} {% include "search/L_top_panel.html" %} {% endblock L_top_panel %}
-{% block main_container %}<div id="search_results">{% include "search/results_list.html" %}</div>{% endblock main_container %}
+{% block main_container %}
+    <div id="search_info_box" data-wide-search="{{ wide }}">
+        <div class="info_box_x" ></div>
+        Wprowadziliśmy zmiany w mechaniźmie wyszukiwania.
+        Dotychczas domyślnym sposobem było wyszukiwanie "szerokie",
+        które do wyników kwalifikowało wszystkie tytuły, które zawierały choć jedno słowo z zapytania. Zwracało to dość dużą liczbę wyników, którą ciężko było zarządzać np. po sortowaniu. Zdecydowaliśmy się ustawić jako domyślny algorytm bardziej restrykcyjny, który od wyników wyszukiwania wymaga, by w tytule, bądź w nazwisku autora pojawiły się wszystkie słowa z zapytania lub (uwaga!) ich odmiana. Na przykład zapytanie: "Podróż ekstremalna", pozwoli nam znaleźć ksiażkę o tytule "Podróże ekstremalne".
+        Daj nam znać, co myślisz o tej zmianie!
+    </div>
+    <div id="search_results">{% include "search/results_list.html" %}</div>
+{% endblock main_container %}
 {% block L_left_panel %} {% include "search/L_left_panel.html" %} {% endblock L_left_panel %}

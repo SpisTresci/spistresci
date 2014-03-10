@@ -50,6 +50,12 @@ function refreshURL(urlPath, page){
     if(page != 1 && page !== 'undefined'){
         urlPath+="&page="+page;
     }
+
+    var wide = $("#search_info_box").attr("data-wide-search");
+    if(wide == "true"){
+        urlPath+="&wide=true"
+    }
+
     window.history.replaceState("object or string", document.title, "?"+urlPath);
 }
 

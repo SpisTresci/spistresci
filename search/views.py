@@ -24,6 +24,8 @@ class STSearchView(SearchView):
         else:
             self.searchqueryset = self.searchqueryset.clear_order_by()
 
+        self.searchqueryset = self.searchqueryset.get_search_query_set(wide=self.get_args['wide'])
+
         return super(STSearchView, self).__call__(request)
 
     class ConditionBuilder(object):
@@ -104,6 +106,9 @@ class STSearchView(SearchView):
             for item in [("price", "price_lowest"), ("title","sort_title")]:
                 replace(self.get_args['orderby'], item[0], item[1])
                 replace(self.get_args['orderby'], "-"+item[0], "-"+item[1])
+
+        self.get_args["wide"] = ('wide' in self.request.GET and self.request.GET["wide"] == "true")
+
 
     def pre_filtering(self):
         condition = STSearchView.ConditionBuilder()
@@ -193,6 +198,9 @@ class STSearchView(SearchView):
 
         if self.get_args.get('orderby'):
             extra['orderby'] = self.get_orderby_list
+
+        if self.get_args.get('wide'):
+            extra['wide'] = "true"
 
         authorization(self.request, extra)
 
@@ -375,6 +383,24 @@ class STSearchQuerySet(SearchQuerySet):
         for field in args:
             clone.query.add_order_by(field)
 
+        return clone
+
+    def get_search_query_set(self, wide=False):
+        # STSolrSearchQuery wraps query in: " "
+        from haystack.backends.solr_backend import SolrSearchQuery
+        class STTightSolrSearchQuery(SolrSearchQuery):
+            def build_query(self):
+                query_str = super(SolrSearchQuery, self).build_query()
+                query_str = '"%s"' % query_str.strip("\"").strip()
+                return query_str
+
+        if wide:
+            query = self.query._clone(klass=SolrSearchQuery) if self.query else self.query
+        else:
+            query = self.query._clone(klass=STTightSolrSearchQuery) if self.query else self.query
+
+        clone = self.__class__(query=query)
+        clone._load_all = self._load_all
         return clone
 
     def clear_order_by(self):
