@@ -84,11 +84,21 @@ img.loader{
 }
 
 
-//??
 .logo{
-    height: 100px;
     margin: 0 auto;
     width: 100px;
+  img{
+    margin-left: 0px;
+  }
+}
+
+.index_top{
+  .search{
+    padding-top: 80px;
+  }
+  #id_q{
+    height:66px;
+  }
 }
 
 .social{

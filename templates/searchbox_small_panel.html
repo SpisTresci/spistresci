@@ -7,44 +7,62 @@
         </a>
         <div class="search">
           <form action="/search/" class="search_box" name="search_form" id="search_form">
-            <div class="right_input_bg">
+            <div class="search_basic">
+                <div class="right_input_bg">
+                </div>
+                <div class="search_input">
+                  <div class="search_input2">
+                      <input id="id_q" name="q" type="text" autocomplete="off" value="{{ query }}" placeholder="Wpisz tytuł książki lub nazwisko autora" data-shake="3" >
+                      {% block search_input %}  {% include "search_input.html" %} {% endblock search_input %}
+                  </div>
+                </div>
             </div>
-            <div class="search_input">
-              <div class="search_input2">
-                  <input id="id_q" name="q" type="text" autocomplete="off" value="{{ query }}" placeholder="Wpisz tytuł książki lub nazwisko autora" data-shake="3" >
-                  {% block search_input %}  {% include "search_input.html" %} {% endblock search_input %}
+            <div class="search_advanced">
+              <div class="search_advanced_field title_field">
+                <span>Tytuł</span><input class="search_advanced_field" name="title" type="text" autocomplete="off" value="{{ subquery_title }}"/>
+                <div class="search_avanced_option_x"></div>
+                <div class="radio_span">
+                  <input type="radio" name="radio_title" id="radio_t1" class="css-checkbox" data-value="AND" checked="checked" default="true">
+                  <label for="radio_t1" class="css-label">wszystkie słowa</label>
+                  <input type="radio" name="radio_title" id="radio_t2" class="css-checkbox" data-value="OR" >
+                  <label for="radio_t2" class="css-label">którekolwiek ze słów</label>
+                </div >
+                <option value="title_field" style="display: none;">Tytuł</option>
               </div>
-            </div>
-            <div id="search_btn" class="search_small_btn">SZUKAJ</div>
-
-            <div class="search_more">
-                WYSZUKIWANIE ZAAWANSOWANE
+              <div class="search_advanced_field authors_field">
+                <span>Autorzy</span><input class="search_advanced_field" name="authors" type="text" autocomplete="off" value="{{ subquery_authors }}" >
+                <div class="search_avanced_option_x"> </div>
+                <div class="radio_span">
+                  <input type="radio" name="radio_authors" id="radio_a1" class="css-checkbox" data-value="AND">
+                  <label for="radio_a1" class="css-label">wszyscy autorzy</label>
+                  <input type="radio" name="radio_authors" id="radio_a2" class="css-checkbox" data-value="OR" checked="checked" default="true">
+                  <label for="radio_a2" class="css-label">którykolwiek z autorów</label>
+                </div >
+                <option value="authors_field" style="display: none;">Autorzy</option>
+              </div>
+              <select id="select_field">
+                <option value="add_field" selected="selected" disabled>Dodaj Pole</option>
+                <option value="isbn_field">ISBN</option>
+              </select>
             </div>
           </form>
-          <div class="search_advanced">
-            <div>
-              <span>Tytuł</span><input name="title" type="text" autocomplete="off" value="{{ subquery_title }}"/>
-              <div class="radio_span">
-                  <input type="radio" name="radio_title" id="radio_t1" class="css-checkbox" checked="checked">
-                  <label for="radio_t1" class="css-label">wszystkie słowa</label>
-                  <input type="radio" name="radio_title" id="radio_t2" class="css-checkbox">
-                  <label for="radio_t2" class="css-label">którekolwiek ze słów</label>
-              </div >
-            </div>
-            <div>
-              <span>Autorzy</span><input name="authors" type="text" autocomplete="off" value="{{ subquery_authors }}" >
-              <div class="radio_span">
-                  <input type="radio" name="radio_author" id="radio_a1" class="css-checkbox">
-                  <label for="radio_a1" class="css-label">wszyscy autorzy</label>
-                  <input type="radio" name="radio_author" id="radio_a2" class="css-checkbox" checked="checked">
-                  <label for="radio_a2" class="css-label">którykolwiek z autorów</label>
-              </div >
-            </div>
-            <div>
-              <span>ISBN</span><input name="isbn" type="text" autocomplete="off" value="{{ subquery_isbn }}" >
+
+
+          <div class="search_more" data-c="1"></div>
+          <div id="search_btn" class="search_small_btn">SZUKAJ</div>
+
+          <div class="search_advanced_field_factory">
+
+            <div class="search_advanced_field_templates" style="display: none;">
+              <div class="search_advanced_field isbn_field">
+                <span>ISBN</span><input class="search_advanced_field" name="isbn" type="text" autocomplete="off" value="{{ subquery_isbn }}" >
+                <div class="search_avanced_option_x"> </div>
+              </div>
             </div>
           </div>
         </div>
+        <div class="ee1"></div>
       </div>
     </div>
   </div>
+  <div class="index_top_bottom_bg"></div
