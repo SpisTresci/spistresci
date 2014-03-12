@@ -8,22 +8,21 @@
 {% block container %}
 <div class="index_person">
     <div class="title">
-       <!-- <img class="b_left" src="/static/img/red_line_b.png">-->
-        <img class="b_center" src="/static/img/red_line_c.png" >
-       <!-- <img class="b_right" src="/static/img/red_line_e.png" >-->
+       <!-- <img class="b_left" src="{% static "img/red_line_b.png" %}">-->
+        <img class="b_center" src="{% static "img/red_line_c.png" %}" >
+       <!-- <img class="b_right" src="{% static "img/red_line_e.png" %}" >-->
          NASZA BOMBOWA EKIPA
-       <!-- <img class="b_left" src="/static/img/red_line_b.png" > -->
+       <!-- <img class="b_left" src="{% static "img/red_line_b.png" %}" > -->
         <img class="b_center" src="/static/img/red_line_c.png" >
-        <!--<img class="b_right" src="/static/img/red_line_e.png" >-->
+        <!--<img class="b_right" src="{% static "img/red_line_e.png" %}" >-->
     </div>
     <div class="index_person_big_box">
         <div class="index_person_box">
             <div class="person_sub_box_foto">
                 <div id="kszumny_foto" class="foto"></div>
-              <!--  <img src="/static/img/img_about_us/aboutusmis.png">-->
             </div>
             <div class="person_sub_box_text">
-                <img class="arrow" src="/static/img/blogger_review_arrow.png">
+                <img class="arrow" src="{% static "img/blogger_review_arrow.png" %}">
                 <div class="person_sub_box_content">
                     <div class="name">Krzysztof Szumny</div>
                     <div class="description_content">
@@ -46,7 +45,7 @@
                 <div id="mszumna_foto" class="foto"></div>
             </div>
             <div class="person_sub_box_text">
-                <img class="arrow" src="/static/img/blogger_review_arrow.png">
+                <img class="arrow" src="{% static "img/blogger_review_arrow.png" %}">
                 <div class="person_sub_box_content">
 
                     <div class="name">Magdalena Szumna</div>
@@ -70,7 +69,7 @@
                 <div id="pzawislak_foto" class="foto"></div>
             </div>
             <div class="person_sub_box_text">
-                <img class="arrow" src="/static/img/blogger_review_arrow.png">
+                <img class="arrow" src="{% static "img/blogger_review_arrow.png" %}">
                 <div class="person_sub_box_content">
                     <div class="name">Piotr Zawiślak</div>
                     <div class="description_content">
@@ -93,7 +92,7 @@
                 <div id="msikora_foto" class="foto"></div>
             </div>
             <div class="person_sub_box_text">
-                <img class="arrow" src="/static/img/blogger_review_arrow.png">
+                <img class="arrow" src="{% static "img/blogger_review_arrow.png" %} ">
                 <div class="person_sub_box_content">
                     <div class="name">Mateusz Sikora</div>
                     <div class="description_content">
@@ -111,7 +110,7 @@
                 <div id="pperduta_foto" class="foto"></div>
             </div>
             <div class="person_sub_box_text">
-                <img class="arrow" src="/static/img/blogger_review_arrow.png">
+                <img class="arrow" src="{% static "img/blogger_review_arrow.png" %}">
                 <div class="person_sub_box_content">
                     <div class="name">Patryk Perduta</div>
                     <div class="description_content">
@@ -134,5 +133,5 @@
     </div>
 </div>
 {% endblock container %}
-{% block footer %}{% include "footer.html" %} {% endblock footer %}
+
 
