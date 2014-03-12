@@ -9,4 +9,5 @@ mysql-client
 mysql-server
 mysql-common
 libjpeg-dev
-
+libxml2-dev
+libxslt-dev
