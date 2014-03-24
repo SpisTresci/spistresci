@@ -85,6 +85,15 @@
     background-repeat: no-repeat;
 }
 
+#preloaded-images {
+   position: absolute;
+   overflow: hidden;
+   left: -9999px;
+   top: -9999px;
+   height: 1px;
+   width: 1px;
+}
+
 .description_content p{
     margin-bottom: 16px;
 }
@@ -113,7 +122,7 @@
 }
 
 #msikora_foto.foto{
-      background-image: url(../img/img_about_us/msikora.jpg);
+      background-image:url(../img/img_about_us/msikora.jpg);;
 }
 
 #msikora_foto.foto:hover{
