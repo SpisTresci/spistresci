@@ -1,5 +1,5 @@
 {% load staticfiles %}
-{% load mathtags %}
+{% load commontags %}
 {% with book=page.object_list.0.book %}
 <img class="cover" src="{{ book.cover }}" alt="" onerror="this.onerror=null;this.src='{% static "img/default_cover.png" %}'" />
 {% if book.rating %}

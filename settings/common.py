@@ -146,6 +146,7 @@ INSTALLED_APPS = (
     "django_cron",
     'dajaxice',
     'dajax',
+    'mathfilters',
 )
 
 # A sample logging configuration. The only tangible logging
