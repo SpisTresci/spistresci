@@ -5,7 +5,7 @@ argparse==1.2.1
 git+https://github.com/noisy/django-allauth.git@wykop#django-allauth
 git+https://github.com/p1c2u/wykop-sdk.git#wykop-sdk
 django-common-helpers==0.6.0
-git+git://github.com/noisy/django-haystack.git@abda59262ebdfafbcf85554705885b612d69c8fe
+git+git://github.com/noisy/django-haystack.git@support_for_dynamic_query_operator
 django-registration==1.0
 oauthlib==0.6.0
 pysolr==3.1.0
