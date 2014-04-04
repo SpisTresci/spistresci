@@ -27,8 +27,16 @@ function collectFilters(){
     return dic;
 }
 
-function refreshLinks(link, page){
-    refreshPaginationLinks(link)
+function refreshLinks(){
+    var dic = collectFilters();
+    dic["q"] = $("#id_q").val();
+
+    var link = $.param(dic);
+    var page = $(".page_active_number").attr("data-p");
+
+    if($(".page_active_number").length > 0){
+        refreshPaginationLinks(link)
+    }
     refreshURL(link, page);
 }
 
@@ -47,13 +55,17 @@ function refreshPaginationLinks(link){
 
 function refreshURL(urlPath, page){
     document.title = $("#id_q").val() + " - SpisTresci.pl";
-    if(page != 1 && page !== 'undefined'){
+    if(page != 1 && page !== undefined){
         urlPath+="&page="+page;
     }
 
     var wide = $("#search_info_box").attr("data-wide-search");
     if(wide == "true"){
         urlPath+="&wide=true"
+    }
+
+    if($(".index_top_bg").hasClass("advanced")){
+        urlPath+="&advanced=true"
     }
 
     window.history.replaceState("object or string", document.title, "?"+urlPath);
@@ -260,6 +272,7 @@ function onReady(){
                         if(c == 3) $(".ee1").addClass("on");
 
                         $(".index_top_bg").addClass("advanced");
+                        refreshLinks();
                     });
                 });
             });
@@ -273,6 +286,7 @@ function onReady(){
                         $(".search_basic").animate({opacity:"1"});
 
                         $(".index_top_bg").removeClass("advanced");
+                        refreshLinks();
                     });
                 });
             });
@@ -375,14 +389,7 @@ function onResultsReady() {
         rebuildResults($(this).val());
     }, 600));
 
-    if($(".page_active_number").length > 0){
-        var dic = collectFilters();
-        dic["q"] = $("#id_q").val();
-
-        var link = $.param(dic);
-        var page = $(".page_active_number").attr("data-p");
-        refreshLinks(link, page);
-    }
+    refreshLinks();
 
     if (typeof(sort_records) == "function"){
         sort_records();

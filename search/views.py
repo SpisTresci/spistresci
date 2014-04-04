@@ -109,6 +109,7 @@ class STSearchView(SearchView):
                 replace(self.get_args['orderby'], "-"+item[0], "-"+item[1])
 
         self.get_args["wide"] = ('wide' in self.request.GET and self.request.GET["wide"] == "true")
+        self.get_args["advanced"]= ('advanced' in self.request.GET and self.request.GET['advanced'] == 'true')
 
 
     def pre_filtering(self):
@@ -202,6 +203,9 @@ class STSearchView(SearchView):
 
         if self.get_args.get('wide'):
             extra['wide'] = "true"
+
+        if self.get_args.get('advanced'):
+            extra['advanced'] = "true"
 
         authorization(self.request, extra)
 
