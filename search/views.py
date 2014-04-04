@@ -24,7 +24,8 @@ class STSearchView(SearchView):
         else:
             self.searchqueryset = self.searchqueryset.clear_order_by()
 
-        self.searchqueryset = self.searchqueryset.get_search_query_set(wide=self.get_args['wide'])
+        if self.get_args['wide'] == True:
+            self.searchqueryset = self.searchqueryset.query_operator("OR")
 
         return super(STSearchView, self).__call__(request)
 
@@ -385,29 +386,10 @@ class STSearchQuerySet(SearchQuerySet):
 
         return clone
 
-    def get_search_query_set(self, wide=False):
-        # STSolrSearchQuery wraps query in: " "
-        from haystack.backends.solr_backend import SolrSearchQuery
-        class STTightSolrSearchQuery(SolrSearchQuery):
-            def build_query(self):
-                query_str = super(SolrSearchQuery, self).build_query()
-                query_str = '"%s"' % query_str.strip("\"").strip()
-                return query_str
-
-        if wide:
-            query = self.query._clone(klass=SolrSearchQuery) if self.query else self.query
-        else:
-            query = self.query._clone(klass=STTightSolrSearchQuery) if self.query else self.query
-
-        clone = self.__class__(query=query)
-        clone._load_all = self._load_all
-        return clone
-
     def clear_order_by(self):
         clone = self._clone()
         clone.query.clear_order_by()
         return clone
-
 
 def hide_menu(request, value):
     if not request.is_ajax() or not request.method=='POST':
