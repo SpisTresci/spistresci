@@ -23,12 +23,23 @@ $(document).ready(function(){
     });
 
     $('#search_btn').click(function() {
-        $("#id_q").val($.trim($("#id_q").val()));
 
+      if ($(".index_top_bg").hasClass("advanced")){
+        var filled = $(".search_advanced input[type='text']").filter(function () {
+            $(this).val($.trim($(this).val()));
+            return $(this).val().length > 0
+        }).length;
+
+        if (filled != 0)
+            rebuildResults();
+
+      }else{
+        $("#id_q").val($.trim($("#id_q").val()));
         if($("#id_q").val()==""){
             shake_input_placeholder();
         }else{
-            document.forms['search_form'].submit();
+            rebuildResults();
         }
+      }
     });
 });

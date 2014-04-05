@@ -1,5 +1,4 @@
-function collectFilters(){
-    var dic = {};
+function collectFilters(dic){
     $('li[class^="filter_"]').each(function(){
         var filter_name = $(this).attr('class').split(' ').filter(function(element, index, array){return element.substring(0, 7) == 'filter_';})[0].substring(7);
 
@@ -27,10 +26,30 @@ function collectFilters(){
     return dic;
 }
 
-function refreshLinks(){
-    var dic = collectFilters();
-    dic["q"] = $("#id_q").val();
+function collectSearchFields(dic){
+    if ($(".index_top_bg").hasClass("advanced")){
+        $(".search_advanced input[type='text']").each(function () {
+            $(this).val($.trim($(this).val()));
+            if($(this).val().length > 0){
+                var atr_name = $(this).attr('name');
+                dic[atr_name] = $(this).val()
+                var atr_name_op = $("input[name='"+ atr_name +"_op'][default!=true]:checked").val();
+                if (atr_name_op){
+                    dic[atr_name+"_op"] = atr_name_op;
+                }
+            }
+        });
+        dic['advanced'] = true;
 
+    }else{
+        dic["q"] = $("#id_q").val();
+    }
+}
+
+function refreshLinks(){
+    var dic = {}
+    collectFilters(dic);
+    collectSearchFields(dic);
     var link = $.param(dic);
     var page = $(".page_active_number").attr("data-p");
 
@@ -57,15 +76,6 @@ function refreshURL(urlPath, page){
     document.title = $("#id_q").val() + " - SpisTresci.pl";
     if(page != 1 && page !== undefined){
         urlPath+="&page="+page;
-    }
-
-    var wide = $("#search_info_box").attr("data-wide-search");
-    if(wide == "true"){
-        urlPath+="&wide=true"
-    }
-
-    if($(".index_top_bg").hasClass("advanced")){
-        urlPath+="&advanced=true"
     }
 
     window.history.replaceState("object or string", document.title, "?"+urlPath);
@@ -147,8 +157,9 @@ function debounce(fn, delay) {
 }
 
 function rebuildResults(page){
-    var dic = collectFilters();
-    dic["q"] = $("#id_q").val();
+    var dic = {};
+    collectFilters(dic);
+    collectSearchFields(dic);
     dic["page"] = typeof page !== 'undefined' ? page : 1;
     var link = $.param(dic);
 
@@ -254,9 +265,11 @@ function onReady(){
         $(this).closest(".filter_section").find("ul").toggleClass("hide_ul");
     });
 
-    $('#search_box_form').submit(function(event){
-        event.preventDefault();
-        rebuildResults();
+    $('#search_form').keypress(function(event){
+        var keycode = (event.keyCode ? event.keyCode : event.which);
+        if(keycode == '13'){
+            rebuildResults();
+        }
     });
 
     $('.search_more').on("click", function(){
@@ -272,10 +285,10 @@ function onReady(){
                         if(c == 3) $(".ee1").addClass("on");
 
                         $(".index_top_bg").addClass("advanced");
-                        refreshLinks();
                     });
                 });
             });
+            $("input[name='title'].search_advanced_field").val($("#id_q").val());
         }
         else{
             $(".ee1").removeClass("on");
@@ -286,10 +299,10 @@ function onReady(){
                         $(".search_basic").animate({opacity:"1"});
 
                         $(".index_top_bg").removeClass("advanced");
-                        refreshLinks();
                     });
                 });
             });
+            $("#id_q").val($("input[name='title'].search_advanced_field").val());
         }
     });
 

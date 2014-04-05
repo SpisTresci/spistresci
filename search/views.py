@@ -15,17 +15,44 @@ class STSearchView(SearchView):
 
     template='search/index.html'
 
+    def __init__(self, form_class=STSearchForm, *args, **kwargs):
+        return super(STSearchView, self).__init__(form_class=form_class, *args, **kwargs)
+
     def __call__(self, request):
+
         self.session = request.session
         self.request = request
         self.parse_get_args()
+
+        if self.get_args["advanced"]:
+            self.request.GET = self.request.GET.copy()
+            self.request.GET['q'] = '*'
+            self.searchqueryset = STSearchQuerySet()
+
+            condition = STSearchView.ConditionBuilder()
+
+            if "title" in self.get_args['advanced_fields']:
+                title = self.get_args['advanced_fields']['title']
+                if self.get_args['title_op'] == 'OR':
+                    for word in title.split():
+                        condition.add({"title":word})
+                else:
+                    condition.add({"title":title})
+
+            if "name" in self.get_args['advanced_fields']:
+                condition.next(self.get_args['authors_op'].lower())
+                authors = [name.strip() for name in self.get_args['advanced_fields']['name'].split(",")]
+                for name in authors:
+                    condition.add({"name":name})
+
+            self.searchqueryset = self.searchqueryset.filter(condition.get()) if not condition.empty() else self.searchqueryset
+
+        else:
+            self.searchqueryset = STSearchQuerySet()
+
         if 'orderby' in self.get_args:
             self.searchqueryset = self.searchqueryset.order_by(*self.get_args['orderby'])
-        else:
-            self.searchqueryset = self.searchqueryset.clear_order_by()
 
-        if self.get_args['wide'] == True:
-            self.searchqueryset = self.searchqueryset.query_operator("OR")
 
         return super(STSearchView, self).__call__(request)
 
@@ -58,7 +85,7 @@ class STSearchView(SearchView):
             return result
 
         def empty(self):
-            return len(self.all_condition) == 0
+            return len(self.all_condition) == 0 and self.condition == None
 
     def simplifyPrice(self, price_str):
         price_str = price_str.replace(',', '.')
@@ -108,8 +135,19 @@ class STSearchView(SearchView):
                 replace(self.get_args['orderby'], item[0], item[1])
                 replace(self.get_args['orderby'], "-"+item[0], "-"+item[1])
 
-        self.get_args["wide"] = ('wide' in self.request.GET and self.request.GET["wide"] == "true")
-        self.get_args["advanced"]= ('advanced' in self.request.GET and self.request.GET['advanced'] == 'true')
+        self.get_args["advanced"] = ('advanced' in self.request.GET and self.request.GET['advanced'] == 'true')
+
+        if self.get_args['advanced']:
+
+            self.get_args['advanced_fields'] = {}
+
+            if 'title' in self.request.GET:
+                self.get_args['advanced_fields']['title'] = self.request.GET['title']
+                self.get_args['title_op'] = self.request.GET.get('title_op', 'AND')
+
+            if 'authors' in self.request.GET:
+                self.get_args['advanced_fields']['name'] = self.request.GET['authors']
+                self.get_args['authors_op'] = self.request.GET.get('authors_op', 'OR')
 
 
     def pre_filtering(self):
@@ -136,8 +174,8 @@ class STSearchView(SearchView):
 
     def get_results(self):
         condition = self.pre_filtering()
-        test = condition.get()
-        results = self.form.search().filter(condition.get()) if not condition.empty() else self.form.search()
+        results = self.form.search() if condition.empty() else self.form.search().filter(condition.get())
+
         results.get_args = self.get_args
         return results
 
