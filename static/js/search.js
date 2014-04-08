@@ -370,6 +370,7 @@ function onReady(){
     refresh_L_left_panel_height();
     onResultsReady();
 
+    /*
     $.getScript("/static/js/jquery.cookie.js", function(){
         if (!$.cookie('search_info_box')){
             $('#search_info_box').show();
@@ -380,6 +381,7 @@ function onReady(){
             });
         }
     });
+    */
 }
 
 function onResultsReady() {
