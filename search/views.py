@@ -239,9 +239,6 @@ class STSearchView(SearchView):
         if self.get_args.get('orderby'):
             extra['orderby'] = self.get_orderby_list
 
-        if self.get_args.get('wide'):
-            extra['wide'] = "true"
-
         if self.get_args.get('advanced'):
             extra['advanced'] = "true"
 
