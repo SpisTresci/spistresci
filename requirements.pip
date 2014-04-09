@@ -8,7 +8,9 @@ django-common-helpers==0.6.0
 git+git://github.com/noisy/django-haystack.git@support_for_dynamic_query_operator
 django-registration==1.0
 oauthlib==0.6.0
-pysolr==3.1.0
+#pysolr==3.1.0
+#Fix for css select: https://github.com/toastdriven/pysolr/pull/92
+git+https://github.com/atkinson/pysolr.git@3ff9745880b1b5d3be44f7417b3e0b834b9de356
 python-openid==2.2.5
 python-ptrace==0.6.5
 requests==2.0.0
