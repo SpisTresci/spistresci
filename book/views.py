@@ -14,13 +14,13 @@ class STBookView(STSearchView):
     def __call__(self, request, **kwargs):
         self.session = request.session
         request.GET = request.GET.copy()
-        request.GET.update({"id":int(kwargs['book_id']), 'q':' '})
-        return super(STBookView, self).__call__(request)
+        request.GET.update({"id":int(kwargs['book_id']), 'q':'*'})
+        return super(STBookView, self).__call__(request, querySetKlass=STBookQuerySet)
 
     def extra_context(self):
         extra = super(STBookView, self).extra_context()
 
-        if self.results.get_args.keys() == ['id']:
+        if 'id' in self.results.get_args.keys():
             extra["hide_filters"] = True
 
         self.servicesInfo = self.getServicesInfo()

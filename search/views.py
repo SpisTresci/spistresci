@@ -18,7 +18,8 @@ class STSearchView(SearchView):
     def __init__(self, form_class=STSearchForm, *args, **kwargs):
         return super(STSearchView, self).__init__(form_class=form_class, *args, **kwargs)
 
-    def __call__(self, request):
+    def __call__(self, request, querySetKlass=None):
+        querySetKlass = querySetKlass if querySetKlass else STSearchQuerySet
 
         self.session = request.session
         self.request = request
@@ -27,7 +28,7 @@ class STSearchView(SearchView):
         if self.get_args["advanced"]:
             self.request.GET = self.request.GET.copy()
             self.request.GET['q'] = '*'
-            self.searchqueryset = STSearchQuerySet()
+            self.searchqueryset = querySetKlass()
 
             condition = STSearchView.ConditionBuilder()
 
@@ -48,7 +49,7 @@ class STSearchView(SearchView):
             self.searchqueryset = self.searchqueryset.filter(condition.get()) if not condition.empty() else self.searchqueryset
 
         else:
-            self.searchqueryset = STSearchQuerySet()
+            self.searchqueryset = querySetKlass()
 
         if 'orderby' in self.get_args:
             self.searchqueryset = self.searchqueryset.order_by(*self.get_args['orderby'])
