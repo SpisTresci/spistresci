@@ -30,13 +30,13 @@ $(document).ready(function(){
           return $(this).val().length > 0
         }).length;
 
-        if (filled != 0){
-          if(typeof rebuildResults == 'function'){
+        if(typeof rebuildResults == 'function'){
+          if (filled != 0){
             rebuildResults();
           }
-          else{
-            document.forms['search_form'].submit();
-          }
+        }
+        else{
+          document.forms['search_form'].submit();
         }
       }else{
         $("#id_q").val($.trim($("#id_q").val()));
