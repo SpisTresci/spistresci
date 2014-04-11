@@ -265,13 +265,6 @@ function onReady(){
         $(this).closest(".filter_section").find("ul").toggleClass("hide_ul");
     });
 
-    $('#search_form').keypress(function(event){
-        var keycode = (event.keyCode ? event.keyCode : event.which);
-        if(keycode == '13'){
-            rebuildResults();
-        }
-    });
-
     $('.search_more').on("click", function(){
         if(!$(".index_top_bg").hasClass("advanced")){
             $(".search_basic").animate({opacity:"0"}, 600, function(){

@@ -22,6 +22,13 @@ $(document).ready(function(){
       }
     });
 
+    $('#search_form').keypress(function(event){
+      var keycode = (event.keyCode ? event.keyCode : event.which);
+      if(keycode == '13'){
+        document.forms['search_form'].submit();
+      }
+    });
+
     $('#search_btn').click(function() {
 
       if ($(".index_top_bg").hasClass("advanced")){
