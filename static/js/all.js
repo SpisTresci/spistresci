@@ -26,19 +26,29 @@ $(document).ready(function(){
 
       if ($(".index_top_bg").hasClass("advanced")){
         var filled = $(".search_advanced input[type='text']").filter(function () {
-            $(this).val($.trim($(this).val()));
-            return $(this).val().length > 0
+          $(this).val($.trim($(this).val()));
+          return $(this).val().length > 0
         }).length;
 
-        if (filled != 0)
+        if (filled != 0){
+          if(typeof rebuildResults == 'function'){
             rebuildResults();
-
+          }
+          else{
+            document.forms['search_form'].submit();
+          }
+        }
       }else{
         $("#id_q").val($.trim($("#id_q").val()));
         if($("#id_q").val()==""){
-            shake_input_placeholder();
+          shake_input_placeholder();
         }else{
+          if(typeof rebuildResults == 'function'){
             rebuildResults();
+          }
+          else{
+            document.forms['search_form'].submit();
+          }
         }
       }
     });
