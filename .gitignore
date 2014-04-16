@@ -9,3 +9,4 @@ uploads/*
 logs
 log
 static/css/
+solr/*
