@@ -141,6 +141,8 @@ INSTALLED_APPS = (
     'allauth.socialaccount.providers.twitter',
     'allauth.socialaccount.providers.wykop',
 
+    # other
+    'django_nose',
     'registration',
     'django_common',
     'django_cron',
@@ -149,6 +151,8 @@ INSTALLED_APPS = (
     'dajax',
     'mathfilters',
 )
+
+TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
@@ -207,6 +211,8 @@ TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
 HAYSTACK_SEARCH_RESULTS_PER_PAGE = 10
 HAYSTACK_LIMIT_TO_REGISTERED_MODELS = False
 HAYSTACK_DEFAULT_OPERATOR = 'AND'
+
+SOLR_VERSION='4.5.0'
 
 
 AUTHENTICATION_BACKENDS = (
