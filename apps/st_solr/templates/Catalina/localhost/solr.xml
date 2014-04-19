@@ -1,0 +1,3 @@
+<Context docBase="/var/lib/tomcat7/webapps/solr.war" allowLinking="true" privileged="true">
+  <Environment name="solr/home" override="true" type="java.lang.String" value="/opt/solr/webapps/solr1" />
+</Context>

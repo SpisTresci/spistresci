@@ -1,0 +1,23 @@
+<dataConfig>
+    <dataSource type="JdbcDataSource" driver="com.mysql.jdbc.Driver" url="jdbc:mysql://db1.spistresci.pl/st_414" user="root" password="NGUcIpHoz1UI" batchSize="-1" />
+    <document>
+        <entity name="Bookstore" query="select  'spistresci.BookstoreSolrWrapper' as django_ct, @i := @i + 1 as django_id, @i as id, t1.* from (select 'bookstores' as text, bookstore, COUNT(bookstore) as count from MiniBook GROUP BY bookstore) as t1 JOIN (select @i := 0) as t2;">
+
+            <field column="django_ct" name="django_ct" />
+            <field column="django_id" name="django_id" />
+            <field column="id" name="id" />
+            <field column="text" name="text" />
+            <field column="bookstore" name="bookstore" />
+
+            <entity name="MiniBookCounts" query="select COUNT(bookstore) as miniBookCount from MiniBook where bookstore='${Bookstore.bookstore}';">
+                <field name="miniBookCount" column="miniBookCount" />
+            </entity>
+<!--		
+            <entity name="FormatMobiCounts" query="select COUNT(format_mobi) as mobi_count from MiniBook WHERE format_mobi = True AND bookstore = '${Bookstore.bookstore}';">
+                <field name="mobi_count" column="mobi_count" />
+            </entity>
+-->
+        </entity>
+    </document>
+</dataConfig>
+

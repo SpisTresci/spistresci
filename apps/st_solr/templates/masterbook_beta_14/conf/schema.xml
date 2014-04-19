@@ -1,0 +1,40 @@
+{% extends "_base:conf/schema.xml" %}
+
+{% block fields %}
+    <field name="text" type="text_pl" indexed="true" stored="true" multiValued="true" />
+
+    <field name="title" type="text_pl" indexed="true" stored="true" multiValued="false" />
+    <field name="sort_title" type="string" indexed="true" stored="true" multiValued="false" />
+
+    <field name="price_lowest" type="long" indexed="true" stored="true" multiValued="false" />
+
+
+    <field name="formats" type="text_general" indexed="true" stored="true" multiValued="false" />
+
+    <field name="format_mobi" type="boolean" indexed="true" stored="true" multiValued="false" />
+    <field name="format_epub" type="boolean" indexed="true" stored="true" multiValued="false" />
+    <field name="format_pdf" type="boolean" indexed="true" stored="true" multiValued="false" />
+    <field name="format_cd" type="boolean" indexed="true" stored="true" multiValued="false" />
+    <field name="format_mp3" type="boolean" indexed="true" stored="true" multiValued="false" />
+
+    <field name="url" type="text_general" indexed="true" stored="true" multiValued="true" />
+    <field name="cover" type="text_general" indexed="true" stored="true" multiValued="true" />
+
+    <field name="name" type="text_pl" indexed="true" stored="true" multiValued="true" />
+    <field name="firstName" type="text_pl" indexed="true" stored="true" multiValued="true" />
+    <field name="middleName" type="text_pl" indexed="true" stored="true" multiValued="true" />
+    <field name="authorName" type="text_pl" indexed="true" stored="true" multiValued="true" />
+
+    <field name="bookstore" type="text_general" indexed="true" stored="true" multiValued="true" />
+    <field name="price" type="long" indexed="true" stored="true" multiValued="true" />
+    <field name="mini_format_mobi" type="boolean" indexed="true" stored="true" multiValued="true" />
+    <field name="mini_format_epub" type="boolean" indexed="true" stored="true" multiValued="true" />
+    <field name="mini_format_pdf"  type="boolean" indexed="true" stored="true" multiValued="true" />
+    <field name="mini_format_cd"  type="boolean" indexed="true" stored="true" multiValued="true" />
+    <field name="mini_format_mp3"  type="boolean" indexed="true" stored="true" multiValued="true" />
+
+    <copyField source="title" dest="text"/>
+    <copyField source="name" dest="text"/>
+    <copyField source="id" dest="django_id"/>
+    <copyField source="title" dest="sort_title" />
+{% endblock fields %}

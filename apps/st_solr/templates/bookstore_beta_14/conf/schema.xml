@@ -1,0 +1,9 @@
+{% extends "_base:conf/schema.xml" %}
+
+{% block fields %}
+    <field name="text" type="text_pl" indexed="true" stored="true" multiValued="false" />
+    <field name="bookstore" type="text_pl" indexed="true" stored="true" multiValued="false" />
+    <field name="miniBookCount" type="long" indexed="true" stored="true" multiValued="false" />
+    <field name="numBookstores" type="int" indexed="ture" stored="true" multiValued="false" />
+    <field name="numOffers" type="long" indexed="ture" stored="true" multiValued="false" />
+{% endblock fields %}

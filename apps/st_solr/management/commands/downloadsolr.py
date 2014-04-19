@@ -26,11 +26,11 @@ class Command(BaseCommand):
             print "Checksum of solr archive is wrong! Please check that!"
             return
 
-        self.unpackSolr(solr_archive_file, PROJECT_SOLR_DIR, version)
+        self.unpackSolr(solr_archive_file, SOLR_DIR, version)
 
 
     def unpackSolr(self, file, dir, version):
-        print "Unpacking %s to %s ..." % (file, PROJECT_SOLR_DIR)
+        print "Unpacking %s to %s ..." % (file, SOLR_DIR)
         shutil.rmtree(dir, True)
         shutil.rmtree(os.path.join(dir, '..' , '_solr/'), True)
 
