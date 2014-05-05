@@ -9,6 +9,8 @@ class UserAdmin(UserAdmin):
     list_filter = UserAdmin.list_filter + ('date_joined', 'last_login')
 
 admin.site.unregister(User)
+
 admin.site.register(User, UserAdmin)
+from django.contrib import admin
 admin.site.register(BloggerProfile)
 admin.site.register(BookRecommendation)
