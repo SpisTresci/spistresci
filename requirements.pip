@@ -30,3 +30,4 @@ django-imagekit==3.0.4
 selenium==2.39.0
 Fabric==1.8.2
 jsonfield==0.9.22
+termcolor==1.1.0
