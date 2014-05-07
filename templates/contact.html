@@ -1,15 +1,21 @@
 {% extends "plain_text.html" %}
 {% load staticfiles %}
 {% block container %}
+{% block css %}<link href="{% static "css/partners.css" %}" rel="stylesheet" type="text/css">{% endblock css %}
 
+     <div class="index_bloggers">
+            <img class="b_left" src="{% static "img/red_line_b.png" %}" alt="" /><img class="b_center" src="{% static "img/red_line_c.png" %}" alt="" /><img class="b_right" src="{% static "img/red_line_e.png" %}" alt="" />
+            KONTAKT Z NAMI
+            <img class="b_left" src="{% static "img/red_line_b.png" %}" alt="" /><img class="b_center" src="{% static "img/red_line_c.png" %}" alt="" /><img class="b_right" src="{% static "img/red_line_e.png" %}" alt="" />
+     </div>
 
- <div style="max-width: 400px;margin: 50px auto;height:400px;text-align: center;}">
+ <div style="max-width: 400px;margin: 50px auto;height:600px;text-align: center;}">
      <p style="padding: 50px">
-        <h2>Kontakt w sprawach ogólnych</h2>
+        <h3>Kontakt w sprawach ogólnych</h3>
         kontakt@spistresci.pl
      </p>
      <p style="padding: 50px">
-        <h2>Kontakt w sprawie współpracy</h2>
+        <h3>Kontakt w sprawie współpracy</h3>
         wspolpraca@spistresci.pl
      </p>
  </div>
