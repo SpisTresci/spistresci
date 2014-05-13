@@ -77,7 +77,7 @@ urlpatterns += patterns('haystack.views',
     url(r'^admin/', include(admin.site.urls)),
 
     url(r'^accounts/', include('allauth.urls')),
-    url(dajaxice_config.dajaxice_url, include('dajaxice.urls')),
+#    url(dajaxice_config.dajaxice_url, include('dajaxice.urls')),
 )
 
 if settings.IS_DEV:
