@@ -5,33 +5,30 @@
 @import "footer";
 @import "mixin";
 
-.partners_panel{
-
-  text-align: center;
-  #margin: 50 auto;
-  margin-bottom: 50px;
-  padding-left: 10px;
-}
-  ul{
-    list-style: none;
-  }
-
-
-  img .table_partners{
-    padding: 5px;
-    border: #e3e3e3 5px solid;
-    margin: 25px;
-  }
-
-.table_partners {
-    width: 100%;
-    padding-left: 50px;
-    align-items: center;
-
-}
 .block {
   width: 100%;
 }
+
+.table_partners {
+    width: 90%;
+    padding: 5%;
+    align-items: center;
+}
+
+
+.partners_panel{
+  text-align: center;
+}
+
+.table_partners ul{
+  list-style: none;
+  }
+
+.table_partners img{
+  margin: 20px;
+  }
+
+
 
 $book-box-width: 300px;
 $img-group-margin-bottom: 5px;

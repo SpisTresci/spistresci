@@ -13,18 +13,19 @@
                 NASI PARTNERZY
                 <img class="b_left" src="{% static "img/red_line_b.png" %}" alt="" /><img class="b_center" src="{% static "img/red_line_c.png" %}" alt="" /><img class="b_right" src="{% static "img/red_line_e.png" %}" alt="" />
             </div>
+    <br/>
 
                 <div class="table_partners">
                     <ul>
                         {% for service in services %}
 
-                            <a href="{{ service.name_lowercase }}">
+                           <!-- <a href="{{ service.name_lowercase }}"> -->
                                 <img src="{% static "img/logo/"|add:service.name_lowercase|add:"_150x75.png" %}" alt="{{service}}" onerror="this.onerror=null;this.src='{% static "img/logo/loremipsum_150x75.png" %}'" />
-                            </a>
+                           <!-- </a>-->
 
                         {% endfor %}
                     </ul>
-                
+
         <br />
        </div>
 {% endblock container %}
