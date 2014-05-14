@@ -18,7 +18,6 @@ from spistresci.monitor.views import monitor
 
 from spistresci.auth.forms import RegistrationForm, MyLoginForm
 from dajaxice.core import dajaxice_autodiscover, dajaxice_config
-from spistresci.partners.views import partners
 
 admin.autodiscover()
 dajaxice_autodiscover()
@@ -52,7 +51,7 @@ urlpatterns = patterns('',
      url(r'^about-us/', TemplateView.as_view(template_name='about_us.html'), name='about_us'),
      url(r'^contact/', TemplateView.as_view(template_name='contact.html'), name='contact'),
      url(r'^robots\.txt$', TemplateView.as_view(template_name='robots.txt', content_type='text/plain')),
-     url(r'^partners/$', partners),
+     url(r'^partners/', TemplateView.as_view(template_name='partners.html'), name='partners'),
 )
 
 #TODO: check thread safe version of this
