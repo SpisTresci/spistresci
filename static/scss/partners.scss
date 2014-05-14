@@ -10,22 +10,18 @@
 }
 
 .table_partners {
-    width: 90%;
-    padding: 5%;
-    align-items: center;
+  width: 90%;
+  padding: 5%;
+  align-items: center;
+
+  img{
+    margin: 20px;
+  }
 }
 
 .partners_panel{
   text-align: center;
 }
-
-.table_partners ul{
-  list-style: none;
-  }
-
-.table_partners img{
-  margin: 20px;
-  }
 
 $book-box-width: 300px;
 $img-group-margin-bottom: 5px;
