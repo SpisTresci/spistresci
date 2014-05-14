@@ -6,26 +6,32 @@
 @import "mixin";
 
 .partners_panel{
-  width: 70%;
-  text-align: center;
-  margin: 0 auto;
-  margin-bottom: 50px;
 
+  text-align: center;
+  #margin: 50 auto;
+  margin-bottom: 50px;
+  padding-left: 10px;
+}
   ul{
     list-style: none;
   }
 
-  li{
-    display: inline-block;
 
-    img{
-      padding: 5px;
-      border: #e3e3e3 1px solid;
-      margin: 15px;
-    }
+  img .table_partners{
+    padding: 5px;
+    border: #e3e3e3 5px solid;
+    margin: 25px;
   }
-}
 
+.table_partners {
+    width: 100%;
+    padding-left: 50px;
+    align-items: center;
+
+}
+.block {
+  width: 100%;
+}
 
 $book-box-width: 300px;
 $img-group-margin-bottom: 5px;
