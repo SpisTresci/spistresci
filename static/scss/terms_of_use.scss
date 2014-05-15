@@ -1,23 +1,16 @@
 @import "plaintext";
 
+
 .term_of_use{
   max-width: 1600px;
   min-width: 400px;
-
-  #margin: 50px auto;
-  #margin-left: 35px;
-  #margin-right: 35px;
+  margin-top: 30px;
 }
 
-.box_terms_of_use{
- # width: 600px;
-
-}
 .paragraf{
   margin: 20px;
   text-align: left;
 }
-
 
 .index_person{
     width: 100%;
@@ -27,7 +20,6 @@ $book-box-width: 300px;
 $img-group-margin-bottom: 5px;
 
 .index_group{
-  margin: 30px 0;
   float:left;
   text-align:left;
   color:#ab0000;
@@ -39,6 +31,7 @@ $img-group-margin-bottom: 5px;
   @extend .index_group;
   text-align: center;
   width: 100%;
+  margin-bottom: 20px;
   .b_right{
     margin: 0 12px $img-group-margin-bottom 0;
   }
