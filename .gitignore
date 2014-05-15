@@ -6,3 +6,5 @@
 initial_data.json
 /frontends/common/
 /ekundelek/
+*.swp
+/.vagrant/
