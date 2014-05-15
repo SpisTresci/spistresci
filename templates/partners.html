@@ -2,9 +2,8 @@
 {% load staticfiles %}
 
 {% block title %}Spis Treści - strona główna{% endblock %}
-{% block js %}<script type="text/javascript" src="{% static "js/search.js" %}"></script>
+{% block js %}<script type="text/javascript" src="{% static "js/search.js" %}"></script>{% endblock js %}
 {% block css %}<link href="{% static "css/partners.css" %}" rel="stylesheet" type="text/css">{% endblock css %}
-{% endblock js %}
 {% block searchbox %} {% include "searchbox_small_panel.html" %} {% endblock searchbox %}
 {% block container %}
             <div class="index_bloggers">
