@@ -24,4 +24,4 @@ gits populate
 
 find . -name "requirements.pip" -exec sudo pip install -r {} \;
 
-/vagrant/run_tools.sh
+bash /vagrant/run_tools.sh
