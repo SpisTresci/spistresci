@@ -16,14 +16,15 @@ sudo make install
 sudo make install -C contrib
 cd -
 
-sudo gem install sass
-
-mkdir /root/.ssh && touch /root/.ssh/known_hosts && ssh-keyscan -H "dev.spistresci.pl" >> /root/.ssh/known_hosts && chmod 600 /root/.ssh/known_hosts
-mkdir /home/vagrant/.ssh && touch /home/vagrant/.ssh/known_hosts && ssh-keyscan -H "dev.spistresci.pl" >> /home/vagrant/.ssh/known_hosts && chmod 600 /home/vagrant/.ssh/known_hosts
+mkdir /root/.ssh ; touch /root/.ssh/known_hosts ; ssh-keyscan -H "dev.spistresci.pl" >> /root/.ssh/known_hosts ; chmod 600 /root/.ssh/known_hosts
+mkdir /home/vagrant/.ssh ; touch /home/vagrant/.ssh/known_hosts ; ssh-keyscan -H "dev.spistresci.pl" >> /home/vagrant/.ssh/known_hosts ; chmod 600 /home/vagrant/.ssh/known_hosts
 
 gits fetch
 gits populate
 
 find . -name "requirements.pip" -exec sudo pip install -r {} \;
 
+sudo gem install sass
+
 su - vagrant -c "/vagrant/run_tools.sh"
+
