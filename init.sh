@@ -3,7 +3,6 @@
 cd /vagrant
 
 sudo apt-get -y update
-#sudo apt-get -y upgrade
 
 # Ommiting prompt while installing mysql
 echo "mysql-server-5.5 mysql-server/root_password password root" | debconf-set-selections
@@ -24,4 +23,4 @@ gits populate
 
 find . -name "requirements.pip" -exec sudo pip install -r {} \;
 
-bash /vagrant/run_tools.sh
+su - vagrant -c "/vagrant/run_tools.sh"
