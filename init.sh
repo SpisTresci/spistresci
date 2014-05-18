@@ -19,11 +19,17 @@ sudo make install -C contrib
 cd -
 
 mkdir /root/.ssh ; touch /root/.ssh/known_hosts ; ssh-keyscan -H "dev.spistresci.pl" >> /root/.ssh/known_hosts ; chmod 600 /root/.ssh/known_hosts
-mkdir /home/vagrant/.ssh ; touch /home/vagrant/.ssh/known_hosts ; ssh-keyscan -H "db1.spistresci.pl" >> /home/vagrant/.ssh/known_hosts ; ssh-keyscan -H "solr.spistresci.pl" >> /home/vagrant/.ssh/known_hosts ; chmod 600 /home/vagrant/.ssh/known_hosts
+
+
+touch /home/vagrant/.ssh/known_hosts;
+ssh-keyscan -p 1337 -H "db1.spistresci.pl" >> /home/vagrant/.ssh/known_hosts;
+ssh-keyscan -p 1337 -H "solr1.spistresci.pl" >> /home/vagrant/.ssh/known_hosts;
+chmod 600 /home/vagrant/.ssh/known_hosts
+chown -R vagrant:vagrant /home/vagrant/.ssh
+
 
 gits fetch
 gits populate
 
 find . -name "requirements.pip" -exec sudo pip install -r {} \;
 
-su - vagrant -c "/vagrant/run_tools.sh"
