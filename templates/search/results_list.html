@@ -14,8 +14,17 @@
           {% empty %}
           <div class="no_results">
           {% if not update_in_progress %}
-            <p class="msg">Brak pasujących ofert.</p>
-            <p class="submsg">Jeśli znasz księgarnie posiadające oferty spełniające wybrane przez Ciebie kryteria, możesz nam pomóc nawiązać kontakt.</p>
+            <p class="msg">Niestety, nie znaleźliśmy ofert spełniających Twoje kryteria. Spróbuj:</p>
+            <br />
+            <div class="no_results_info_box">
+                <div class="no_results_info_text" >
+                    <li>użyć wyszukiwania zaawansowanego</li>
+                    <li>zmienić lub wyczyścić filtry, jeśli były użyte</li>
+                    <li>zrezygnować z części słów kluczowych</li>
+                    <li>sprawdzić czy nie popełniłeś literówki</li>
+                </div>
+            </div>
+
           {% else %}
             <p class="msg">Przerwa serwisowa</p>
             <p class="submsg">System jest obecnie w trakcie aktuliazcji.</p>
