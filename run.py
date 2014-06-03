@@ -21,7 +21,7 @@ def run_update(connector, args):
     connector.fetchData()
     connector.applyFilters()
 
-    connector.parse()
+    connector.parse(force = args.force)
 
     Final.session = connector.session
 
@@ -149,8 +149,10 @@ def parse_args():
     parser.add_argument('connectors', action="store", nargs="*", choices=connectors + [''], default='', metavar='service_name',
                         help='Names of service to handle, positioned into list of names. Empty list means "FOR EACH".\n\n'
                              'Possible values are:\n\n' + ', '.join(connectors))
-    parser.add_argument('-l', '--limit-books', type=int, default=0, 
+    parser.add_argument('-l', '--limit-books', type=int, default=0,
                         help='Limit books processed for each connector. 0 (default) means process all books')
+    parser.add_argument('-f', '--force', action='store_true', default='false',
+                        help='Force updating even if no changes in xml')
     args = parser.parse_args()
 
     base_name = os.path.basename(sys.argv[0])

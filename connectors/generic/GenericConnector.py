@@ -264,17 +264,15 @@ class GenericConnector(GenericBase, DataValidator):
                 self.after_parse()
 
 
-    def parse(self):
+    def parse(self, force=False):
         self.save_time_of_("parse_start")
         self.before_parse()
         book_number = 0
-        if self.areDataDifferentThanPrevious():
-            #for filename in ['unittests/data/master/inner_merge/xml/' + self.name.lower() + ".xml"]:
-            #for filename in ['unittests/data/master_table/alpha_2/' + self.name.lower() + ".xml"]:#self.fetched_files:
+        if force or self.areDataDifferentThanPrevious():
             for filename in self.fetched_files:
                 for offer in self.getBookList(filename):
                     book_number += 1
-                    #TODO:remove skip_offer option, 
+                    #TODO:remove skip_offer option,
                     #if necessary  override getBookList
                     if book_number < self.skip_offers + 1:
                         continue
@@ -722,7 +720,9 @@ class GenericBook(GenericBase):
                 elif un != new_data[key]:
                     setattr(self, key, new_data[key])
                     from final import MiniBook
-                    updated_minidata |= key in MiniBook.__table__.columns._data.keys()
+                    #This is a hack
+                    #There is no pp_url in MiniBook table however if pp_url is changed, minibook should be updated
+                    updated_minidata |= (key in MiniBook.__table__.columns._data.keys() or key == 'pp_url')
 
                 if updated_minidata:
                     self.update_minidata_timestamp = connector.update_status_service.timestamp
