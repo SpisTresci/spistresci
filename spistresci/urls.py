@@ -17,7 +17,6 @@ from spistresci.track.views import TrackedBookList
 from spistresci.register.views import register_user, egazeciarz_register_user
 from spistresci.monitor.views import monitor
 from spistresci.auth.forms import RegistrationForm, MyLoginForm
-from spistresci.manual_merging.views import manual_merging, manual_merging_take
 from dajaxice.core import dajaxice_autodiscover, dajaxice_config
 
 admin.autodiscover()
@@ -30,9 +29,8 @@ urlpatterns = patterns('',
      url('^logout/$', logout),
      url('^hide_menu/(?P<value>\d)/$', hide_menu),
      url('^monitor/$', monitor),
+     url(r'^manual_merging/', include('spistresci.apps.manual_merging.urls', namespace='manual_merging')),
      url(r'^accounts/signup/$',
-     url('^manual_merging/$', manual_merging),
-     url('^manual_merging/take/$', manual_merging_take),
                            RegistrationView.as_view(form_class=RegistrationForm),
                            name='account_signup'),
 

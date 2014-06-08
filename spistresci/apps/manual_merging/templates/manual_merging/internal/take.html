@@ -1,5 +1,4 @@
 {% load staticfiles %}
-{% load tooltags %}
 {%  with book_left=item_low book_right=item_high %}
 <div class="compare">
 	<div class="book left">
@@ -7,7 +6,7 @@
 			<img class="cover" src="{{ book_left.cover }}">
 			<div class="desc">
 				<div class="title">{{ book_left.title }}</div>
-				<div class="autor">{{ book_left.authors | joinby:", " }}</div>
+				<div class="autor">{{ book_left.authors | join:", " }}</div>
 				<div class="price">
 					<span class="p_1">cena od: </span>
 					<span class="p_2">{{ book_left.price }}</span>
@@ -21,8 +20,8 @@
 			<div class="content">
 				<img class="cover" src="{{ mini.cover }}">
 				<div class="desc">
-					<div class="format">{{ mini.formats | joinby:", " }}</div>
-					<div class="autor">{{ mini.authors | joinby:", " }}</div>
+					<div class="format">{{ mini.formats | join:", " }}</div>
+					<div class="autor">{{ mini.authors | join:", " }}</div>
 				</div>
 				<div class="price">
 					<span class="p_2">{{ mini.price }}</span>
@@ -47,7 +46,7 @@
 			<img class="cover" src="{{ book_right.cover }}">
 			<div class="desc">
 				<div class="title">{{ book_right.title }}</div>
-				<div class="autor">{{ book_right.authors | joinby:", " }}</div>
+				<div class="autor">{{ book_right.authors | join:", " }}</div>
 				<div class="price">
 					<span class="p_1">cena od: </span>
 					<span class="p_2">{{ book_right.price }}</span>
@@ -65,8 +64,8 @@
 			<div class="content">
 				<img class="cover" src="{{ mini.cover }}">
 				<div class="desc">
-					<div class="format">{{ mini.formats | joinby:", " }}</div>
-					<div class="autor">{{ mini.authors | joinby:", " }}</div>
+					<div class="format">{{ mini.formats | join:", " }}</div>
+					<div class="autor">{{ mini.authors | join:", " }}</div>
 				</div>
 				<div class="price">
 					<span class="p_2">{{ mini.price }}</span>
