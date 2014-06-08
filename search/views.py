@@ -272,12 +272,33 @@ class STSearchQuerySet(SearchQuerySet):
         products=[]
         for product in results:
             product.records = []
-            for price, bookstore, url, cover, format_mobi, format_pdf, format_epub, format_cd, format_mp3 in zip (product.price, product.bookstore, product.url, product.cover, product.mini_format_mobi, product.mini_format_pdf, product.mini_format_epub, product.mini_format_cd, product.mini_format_mp3):
-                record={}
-                for var_name in ["price", "bookstore", "url", "cover", "format_mobi", "format_pdf", "format_epub", "format_cd", "format_mp3"]:
-                    record[var_name] = eval(var_name)
 
-                record["formats"] = [attr.replace("format_", "").upper() for attr, value  in record.iteritems() if str(attr).startswith("format_") and value]
+            mapping = {
+                "price": product.price,
+                "bookstore": product.bookstore,
+                "url": product.url,
+                "cover": product.cover,
+                "format_mobi": product.mini_format_mobi,
+                "format_pdf": product.mini_format_pdf,
+                "format_epub": product.mini_format_epub,
+                "format_cd": product.mini_format_cd,
+                "format_mp3": product.mini_format_mp3,
+                "format_ks": product.mini_format_ks,
+            }
+
+            records_in_products = len(product.price)
+
+            for i in range(records_in_products):
+                record = {}
+                for key, list_of_values in mapping.items():
+                    record[key] = list_of_values[i]
+
+                record["formats"] = [
+                    attr.replace("format_", "")
+                    for attr, value in record.iteritems()
+                    if str(attr).startswith("format_") and value
+                ]
+
                 record["id"] = str(product.id) + '-' + record['bookstore']
                 product.records.append(record)
 

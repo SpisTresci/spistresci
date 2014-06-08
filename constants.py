@@ -18,6 +18,7 @@ def getListOfTopMenuServices(request):
 supported_formats = {
     "ebook":["mobi", "epub", "pdf"],
     "audiobook":["mp3", "cd"],
+    "druk":["ks"],
 }
 
 supported_formats_flat = [format for subgroup_format_list in supported_formats.values() for format in subgroup_format_list]

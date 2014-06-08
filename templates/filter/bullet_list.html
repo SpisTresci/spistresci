@@ -1,4 +1,4 @@
-{% load mathfilters %}
+{% load mathfilters commontags %}
 
 <div class="filter_content bullet_list">
 {% for group in filter.data %}
@@ -8,7 +8,7 @@
         <ul id="sub{{ forloop.counter }}">
         {% for item in group.items %}
             <li class="filter_{{ filter.name_id }}{% if item.isFilterActive %} act{% endif %}" data-q="{{ item.name }}">
-                <a>{{ item.name }}</a>
+                <a>{{ item.name|formats_to_readable }}</a>
             </li>
         {% endfor %}
         </ul>

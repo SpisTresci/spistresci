@@ -1,5 +1,4 @@
-{% load staticfiles %}
-{% load mathfilters %}
+{% load staticfiles mathfilters commontags%}
 {% with product=result %}
 <div class="search_list_item" data-records-count="{{ product.records|length }}">
     <div class="search_list_book">
@@ -37,8 +36,8 @@
                 {% endfor %}
                 </div>
                 <div class="s_text">
-                    Formaty: {% for format in product.formats %}{% if forloop.first %}{{ format }}{% else %}, {{ format }}{% endif %}{% endfor %}<br />
-                    Serwisy: {% for service in product.services %}{% if forloop.first %}{{ service }}{% else %}, {{ service }}{% endif %}{% endfor %}
+                    Formaty: {{ product.formats|formats_to_readable|join:", "|upper }}<br />
+                    Serwisy: {{ product.services|join:", " }}
                 </div>
             </div>
         </div>

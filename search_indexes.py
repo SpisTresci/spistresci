@@ -26,6 +26,8 @@ class MasterBookIndex(indexes.SearchIndex, indexes.Indexable):
     format_pdf = indexes.BooleanField(index_fieldname='format_pdf', stored=True)
     format_cd = indexes.BooleanField(index_fieldname='format_cd', stored=True)
     format_mp3 = indexes.BooleanField(index_fieldname='format_mp3', stored=True)
+    format_cd_mp3 = indexes.BooleanField(index_fieldname='format_cd_mp3', stored=True)
+    format_ks = indexes.BooleanField(index_fieldname='format_ks', stored=True)
 
     bookstore = indexes.MultiValueField()
     price = IntegerMultiValueField()
@@ -34,6 +36,8 @@ class MasterBookIndex(indexes.SearchIndex, indexes.Indexable):
     mini_format_pdf = indexes.MultiValueField()
     mini_format_cd = indexes.MultiValueField()
     mini_format_mp3 = indexes.MultiValueField()
+    mini_format_cd_mp3 = indexes.MultiValueField()
+    mini_format_ks = indexes.MultiValueField()
 
     def get_model(self):
         return MasterBookSolrWrapper

@@ -1,6 +1,4 @@
-{% load staticfiles %}
-{% load mathfilters %}
-{% load str_tags %}
+{% load staticfiles mathfilters str_tags commontags%}
 
 <div class="records_panel_wrapper" data-records-count="{{ product.records|length }}">
     <div class="records_toogle_switcher up"></div>
@@ -20,7 +18,7 @@
                 <img src="{% static "img/logo/"|add:record.bookstore|add:"_150x75.png"|lower %}" alt="{{record.bookstore}}" onerror="this.onerror=null;this.src='{% static "img/logo/loremipsum_150x75.png" %}'" />
             </div>
             <div class="record_formats" data-no="{{ record.formats|length}}">
-                Dostajesz: <br/>{{ record.formats|join:", " }}
+                Dostajesz: <br/>{{ record.formats|formats_to_readable|join:", " }}
             </div>
             <div class="record_info"></div>
             {%comment%}
@@ -46,7 +44,7 @@
                 Oferty {{ product.filtered_records_number }} serwis{{ product.filtered_records_number|pluralize:"u,ów" }} nie spełniły wymagań aktywnych filtrów.
 
                 {% with formats=product.filtered_formats %}
-                    Format{{ formats|pluralize:"y"}}: {{ formats|join:", "}}
+                    Format{{ formats|pluralize:"y"}}: {{ formats|formats_to_readable|join:", "}}
                 {% endwith %}
 
                 Cena {% if product.filtered_records_number > 1%}od {% endif %}{{ product.price_lowest_before_filtering }} zł.
