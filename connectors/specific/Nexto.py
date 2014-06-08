@@ -48,11 +48,11 @@ class Nexto(XMLConnector):
     def downloadFile(self, url=None, filename=None, headers=None):
         super(Nexto, self).downloadFile(url=url, filename=filename, headers={'accept-encoding':'gzip'})
 
-    def parse(self):
+    def parse(self, force=False):
         self.save_time_of_("parse_start")
         self.before_parse()
         book_number = 0
-        if self.areDataDifferentThanPrevious():
+        if force or self.areDataDifferentThanPrevious():
             for filename in self.fetched_files:
                 for offer in self.getBookList(filename):
                     book_number += 1

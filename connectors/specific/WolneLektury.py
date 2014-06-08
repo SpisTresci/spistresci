@@ -81,7 +81,7 @@ class WolneLektury(JSONConnector):
     def after_parse(self):
         self.validate_number_of_books_in_db()
 
-    def parse(self):
+    def parse(self, force=False):
         self.save_time_of_("parse_start")
         self.before_parse()
         book_number = 0

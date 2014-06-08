@@ -56,7 +56,7 @@ class Selkar(XMLConnector):
         'is_bestseller': ('bestseller', ''),
     }
 
-    
+
     def adjust_parse(self, dic):
         title = dic['title']
         if title.startswith('EBOOK'):
@@ -67,10 +67,10 @@ class Selkar(XMLConnector):
             dic['formats'] = ['audiobook_unknown']
             #TODO: get format from description
 
-    def parse(self):
+    def parse(self, force=False):
         self.save_time_of_("parse_start")
         book_number = 0
-        if self.areDataDifferentThanPrevious():
+        if force or self.areDataDifferentThanPrevious():
             for (key, root) in self.fetched_xmls.items():
                 itemstag = root.find('items')
                 if itemstag:

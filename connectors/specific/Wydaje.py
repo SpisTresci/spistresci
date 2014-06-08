@@ -47,11 +47,12 @@ class Wydaje(XMLConnector):
         if dic.get('rating'):
             dic['rating'] = int(round(float(dic['rating'])/6, 3) * 100)
 
-    def parse(self):
+    def parse(self, force=False):
         self.save_time_of_("parse_start")
         self.before_parse()
         book_number = 0
-        if self.areDataDifferentThanPrevious():
+
+        if force or self.areDataDifferentThanPrevious():
             for filename in self.fetched_files:
                 for offer in self.getBookList(filename):
                     book_number += 1
