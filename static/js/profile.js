@@ -4,7 +4,9 @@ function refresh_L_left_panel_height(){
 
 $(function() {
     $(".filter_box_header").on("click", function(event){
-        $(this).closest(".filter_obj").toggleClass("act");
+        if($(this).hasClass("clickable"))
+            $(this).closest(".filter_obj").toggleClass("act");
+
         refresh_L_left_panel_height();
     });
 

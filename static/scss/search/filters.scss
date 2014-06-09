@@ -23,19 +23,24 @@
   span{
     padding-left:12px;
   }
-  cursor:pointer;
 
   box-sizing: border-box;
   -moz-box-sizing: border-box;
 
   .arrow{
-    display: inline-block;
+    display: none;
     float: right;
     background:url(../img/2arrow_down.png) no-repeat;
     width:17px;
     height:16px;
     margin-right:12px;
     margin-top:4px;
+  }
+
+  &.clickable{
+    .arrow{
+      display: inline-block;
+    }
   }
 
   .act &{
