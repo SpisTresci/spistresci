@@ -94,6 +94,12 @@ tr, th {
       box-shadow: 0 1px 1px #ccc inset, 0 1px 0 #fff;
   }
 
+  a
+  {
+    @extend .blue_button;
+
+    padding: 2px 38px 3px 39px;
+  }
 
   input[type='submit']
   {
