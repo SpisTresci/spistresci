@@ -267,7 +267,7 @@ ADMIN_EMAIL_PASSWORD = None
 ADMIN_EMAIL_USE_TLS = True
 
 
-DEFAULT_FROM_EMAIL = 'no-reply@spistresci.pl'
+DEFAULT_FROM_EMAIL = 'SpisTreści.pl <no-reply@spistresci.pl>'
 
 CRON_CLASSES = [
     "spistresci.cron.TrackNotificationCronJob",
