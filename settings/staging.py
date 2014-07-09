@@ -67,6 +67,11 @@ HAYSTACK_CONNECTIONS = {
     },
 }
 
+EMAIL_HOST = 'localhost'
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
+EMAIL_PORT = 1025
+EMAIL_USE_TLS = False
 EMAIL_SUBJECT_PREFIX= '[SpisTresci][Staging]'
 
 SITE_ROOT = os.path.join(os.path.dirname(os.path.realpath(__file__)), '..')
