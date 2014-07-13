@@ -1,0 +1,23 @@
+{
+  "phabricator.uri" : "https://dev.spistresci.pl/",
+  "project.name" : "SpisTresci.pl",
+  "repository.callsign" : "F",
+
+  "base": "arc:upstream, git:merge-base(origin/dev)",
+  "arc.land.onto.default" : "dev",
+  "arc.feature.start.default" : "origin/dev",
+  "arc.land.update.default" : "rebase",
+
+  "load" : [
+    ".arclibdjango/"
+  ],
+
+  "unit.engine": "DjangoUnitTestEngine",
+  "unit.engine.manage_py_dir": "..",
+
+  "aliases" : {
+    "new-feature" : [
+      "!git fetch origin;arc feature"
+    ]
+  }
+}

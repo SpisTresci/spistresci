@@ -78,7 +78,7 @@ STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    os.path.join(SITE_ROOT,'static/'),
+    os.path.join(SITE_ROOT, 'static/'),
 )
 
 # List of finder classes that know how to find static files in
@@ -86,7 +86,7 @@ STATICFILES_DIRS = (
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-#    'django.contrib.staticfiles.finders.DefaultStorageFinder',
+    # 'django.contrib.staticfiles.finders.DefaultStorageFinder',
     'dajaxice.finders.DajaxiceFinder',
 )
 
@@ -97,7 +97,7 @@ SECRET_KEY = '8=u8p9csxz_0@%6rc2%0h(r_+7kj+2kb06lyu1)w4v^$jdf@sg'
 TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.Loader',
     'django.template.loaders.app_directories.Loader',
-#     'django.template.loaders.eggs.Loader',
+    # 'django.template.loaders.eggs.Loader',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -113,8 +113,8 @@ MIDDLEWARE_CLASSES = (
 ROOT_URLCONF = 'spistresci.urls'
 
 TEMPLATE_DIRS = (
-    os.path.join(SITE_ROOT,'templates/'),
-    os.path.join(SITE_ROOT,'../common/templates/'),
+    os.path.join(SITE_ROOT, 'templates/'),
+    os.path.join(SITE_ROOT, '../common/templates/'),
 )
 
 INSTALLED_APPS = (
@@ -125,7 +125,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # Uncomment the next line to enable the admin:
-     'django.contrib.admin',
+    'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 
@@ -142,9 +142,11 @@ INSTALLED_APPS = (
     'allauth.socialaccount.providers.google',
     'allauth.socialaccount.providers.twitter',
     'allauth.socialaccount.providers.wykop',
+
     'registration',
     'django_common',
-    "django_cron",
+    'django_cron',
+    'django_nose',
     'dajaxice',
     'dajax',
     'mathfilters',
@@ -202,16 +204,18 @@ LOGGING = {
     }
 }
 
+TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
+
 HAYSTACK_SEARCH_RESULTS_PER_PAGE = 10
 HAYSTACK_LIMIT_TO_REGISTERED_MODELS = False
 HAYSTACK_DEFAULT_OPERATOR = 'AND'
 
 
 AUTHENTICATION_BACKENDS = (
-     #'spistresci.auth_backends.eGazeciarzAuthenticationBackend',
-     'allauth.account.auth_backends.AuthenticationBackend',
-     #'django.contrib.auth.backends.ModelBackend',
-     'django_common.auth_backends.EmailBackend',
+    # 'spistresci.auth_backends.eGazeciarzAuthenticationBackend',
+    'allauth.account.auth_backends.AuthenticationBackend',
+    # 'django.contrib.auth.backends.ModelBackend',
+    'django_common.auth_backends.EmailBackend',
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (
@@ -224,23 +228,25 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django_common.context_processors.common_settings',
 )
 
-# SOCIALACCOUNT_PROVIDERS are needed for social authentication, which is currently implemented using django-allauth.
-# Each provider needs to be defined in INSTALLED_APPS, and usually require inserting to database special information
-# about secret key/app id of particular provider, which is done by django-fixtures loaded dynamically in settings file
+# SOCIALACCOUNT_PROVIDERS are needed for social authentication, which is
+# currently implemented using django-allauth. Each provider needs to be defined
+# in INSTALLED_APPS, and usually require inserting to database special
+# information about secret key/app id of particular provider, which is done by
+# django-fixtures loaded dynamically in settings file
 
 SOCIALACCOUNT_PROVIDERS = {
     'facebook':
     {
         'SCOPE': ['email'],
-        'AUTH_PARAMS': { 'auth_type': 'https' },
-        'METHOD': 'oauth2' ,
+        'AUTH_PARAMS': {'auth_type': 'https'},
+        'METHOD': 'oauth2',
         'LOCALE_FUNC': lambda request: 'pl-pl',
         'VERIFIED_EMAIL': False,
     },
     'google':
     {
         'SCOPE': ['https://www.googleapis.com/auth/userinfo.profile', 'email'],
-        'AUTH_PARAMS': { 'access_type': 'online' },
+        'AUTH_PARAMS': {'access_type': 'online'},
     },
     'twitter':
     {
@@ -248,7 +254,7 @@ SOCIALACCOUNT_PROVIDERS = {
     },
     'wykop':
     {
-        'REDIRECT_URL':'http://spistresci.pl/accounts/wykop/login/token/',
+        'REDIRECT_URL': 'http://spistresci.pl/accounts/wykop/login/token/',
     },
 }
 
@@ -281,6 +287,11 @@ BLOGGER_GROUP_NAME = 'blogger'
 SERVE_LOCAL_FILES = True
 GOOGLE_ANALYTICS_ID = 'UA-45133188-1'
 
-import shutil, sys
-if len(sys.argv) >=2 and sys.argv[1] == 'syncdb':
-    shutil.copyfile(os.path.join(SITE_ROOT,'fixtures/authentication-dev.json'), os.path.join(SITE_ROOT,'../initial_data.json'))
+import shutil
+import sys
+
+if len(sys.argv) >= 2 and sys.argv[1] == 'syncdb':
+    shutil.copyfile(
+        os.path.join(SITE_ROOT, 'fixtures/authentication-dev.json'),
+        os.path.join(SITE_ROOT, '../initial_data.json')
+    )
