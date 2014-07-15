@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<okazje>
+  <offers>
+    <offer>
+      <id>256</id>
+      <name><![CDATA[Antoine de Saint-Exupery, MAŁY KSIĄŻĘ, 2CD (audiobook)]]></name>
+      <description><![CDATA[<p>
+]]></description>
+      <category><![CDATA[LITERATURA ŚWIATOWA/Klasyka światowa]]></category>
+      <price>3591</price>
+      <url><![CDATA[https://www.a4b-tracking.com/pl/stat-click-feed/20602637/33]]></url>
+      <attribute name="autor">Antoine de Saint-Exupery</attribute>
+      <attribute name="czas">108</attribute>
+      <attribute name="wydawnictwo">AudioLiber</attribute>
+    </offer>
+  </offers>
+</okazje>

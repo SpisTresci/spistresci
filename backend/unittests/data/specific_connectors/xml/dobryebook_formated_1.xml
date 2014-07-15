@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dobryebook>
+  <ebook>
+    <tytul>Godziny nadliczbowe</tytul>
+    <podtytul/>
+    <autor>Tadeusz M. Nycz</autor>
+    <link>http://dobryebook.pl/godziny_nadliczbowe_nadgodziny_nadliczbowki_czas_pracy_prawo_pracy-e-1.html</link>
+    <cena>18.3</cena>
+    <wielkosc_pliku>457 kB</wielkosc_pliku>
+    <liczba_stron>64</liczba_stron>
+    <isbn>978-83-61871-04-0</isbn>
+    <male_zdjecie>http://dobryebook.pl/zdjecia_male_e/godziny_3.png</male_zdjecie>
+    <duze_zdjecie>http://dobryebook.pl/zdjecia_duze_e/godziny_1.png</duze_zdjecie>
+  </ebook>
+</dobryebook>

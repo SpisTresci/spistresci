@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<products>
+  <prod awId="3704779" programName="TaniaKsiążka.pl">
+    <pId>275326</pId>
+    <name>Listonosz Słuchowisko bajka edukacyjna</name>
+    <desc> Bajeczka, słuchowisko, którą masz przed sobą, została napisana z myślą o ciekawych świata i kochających przygody maluchach. Jej autor ndash; Lech Tkaczyk ndash; zgodnie ze sprawdzoną zasadą bdquo;nauka poprzez zabawęrdquo;, w nowatorski i ciekawy sposób zapoznaje dzieci z zawodem...</desc>
+    <cat>
+      <awCatId>1927</awCatId>
+      <awCat>Powieści i opowiadania</awCat>
+      <mCat>Audiobook</mCat>
+    </cat>
+    <brand/>
+    <awLink>http://webep1.com/Zobacz/To?a=4105&amp;mp=400&amp;p=3704779&amp;x=7206&amp;r=L2xpc3Rvbm9zei10a2FjenlrLWxlY2gtcC0yNzUzMjYuaHRtbA2</awLink>
+    <awThumb>http://img.weben1.com/Thumbnail/400/3704779.jpg</awThumb>
+    <awImage>http://img.weben1.com/Pictures/400/3704779.jpg</awImage>
+    <price curr="PLN">
+      <display>14.03</display>
+    </price>
+    <atribute Name="ISBN">9788372774033</atribute>
+  </prod>
+</products>

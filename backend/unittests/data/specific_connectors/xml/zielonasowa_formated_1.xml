@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pasaz:Envelope SYSTEM "loadOffers.dtd">
+<pasaz:Envelope xmlns:pasaz="http://schemas.xmlsoap.org/soap/envelope/">
+  <pasaz:Body>
+    <loadOffers xmlns="urn:ExportB2B">
+      <offers>
+        <offer>
+          <id>2</id>
+          <name><![CDATA[100 wyjątkowych miejsc. Zobacz, zanim znikną]]></name>
+          <price>29.90</price>
+          <url>https://ssl.afiliant.com/affskrypt,db90cbc0,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia]]></categoryId>
+          <description><![CDATA[\"Książka &bdquo;100 wyjątkowych miejsc. Zobacz, zanim znikną&rdquo; ma ważną misję &ndash; przypominać nam o tym, co możemy stracić za kilka pokoleń, a czasem już za kilka lat. 100 niesamowitych zdjęć autorstwa światowej klasy fotografikw zabierze nas w podrż dookoła świata. Fotografie ukazują wyjątkowe piękno przyrody w najodleglejszych zakątkach Ziemi. Niestety istnienie tych miejsc jest bezpośrednio zagrożone, dlatego znalazły się one w raporcie Międzyrządowego Zespołu ds. Zmian Klimatu przy ONZ, ktrego twrcom przyznano Pokojową Nagrodę Nobla. Ta książka to nie tylko piękny album. Zawiera ona wypowiedzi ekspertw, a także znanych osb, ktre mwią, w jaki sposb zmiany klimatu dotykają ich samych. O tym, jak zatrzymać niebezpieczne zmiany, piszą m.in.: aktorka Connie Nielsen, lider zespołu Eurythmics Dave Stewart, na co dzień zajmujący się klimatem Tomasz Zubilewicz oraz Jarosław Kret, a także podrżnik i polarnik Marek Kamiński. Na szczęście na liście 100 najbardziej zagrożonych zmianami klimatycznymi miejsc na świecie nie ma Polski. Nie oznacza to jednak, że możemy spać spokojnie, bo nie mamy się o co martwić. Musimy pamiętać, że takie miejsca jak Tatry, Żuławy Wiślane, Płwysep Helski czy Gdańsk także wymagają naszej szczeglnej troski.Opisanie 100 miejsc, ktre warto zobaczyć, zanim znikną, to według mnie doskonały sposb uzmysłowienia ludziom, jak wiele szkd mogą wyrządzić zmiany klimatyczne. Rajendra K. Pachauri  Ten album musi być dla nas inspiracją do konkretnych działań &ndash; i nie wmawiaj sobie, że nie masz na to czasu. Za chwilę się przekonasz, co może nam umknąć i już nie wrcić. I pamiętaj: w życiu są rzeczy ważne i ważniejsze. Tomasz Zubilewicz  Opierając się na powierzchownej wiedzy, sceptycy często podważają (stosując logikę na &bdquo;chłopski rozum&rdquo;) rzetelne opinie będące efektem badań setek poważnych naukowcw. [&hellip;] Słowa często ulatują. Obrazy zapamiętuje się na bardzo długo. Niech więc obrazy przemwią! Jarosław Kret  Jak każda podrż zaczyna się od małego kroku, tak wszystkie wielkie zmiany zaczynają się od drobiazgw, o ktrych zawsze powinniśmy pamiętać. W przypadku walki ze zmianami klimatycznymi chodzi przede wszystkim o poszanowanie energii. Marek Kamiński  Partnerem polskiej edycji projektu &bdquo;100 wyjątkowych miejsc. Zobacz, zanim znikną&rdquo; jest WWF Polska &ndash; międzynarodowa organizacja ekologiczna, ktrej misją jest przeciwdziałanie degradacji środowiska naturalnego i kształtowanie przyszłości, w ktrej ludzie będą żyli w harmonii z przyrodą. 1% ceny każdego sprzedanego albumu zostanie przekazane na rzecz WWF Polska. \"]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/2/100_wyjatkowych_miejsc_Zobacz_zanim_znikna_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[  ]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+      </offers>
+    </loadOffers>
+  </pasaz:Body>
+</pasaz:Envelope>

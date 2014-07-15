@@ -1,0 +1,24 @@
+# Must be readable and writable by apache
+<IfModule mod_wsgi.c>
+WSGISocketPrefix ${APACHE_RUN_DIR}
+
+<VirtualHost *:80>
+	#DocumentRoot /path/to/welcome_screen/project
+	#ServerName spistresci.pl
+
+	#run mod_wsgi process for django in daemon mode
+	#this allows avoiding confused timezone settings when
+	#another application runs in the same virtual host
+	WSGIDaemonProcess WELCOME
+	WSGIProcessGroup WELCOME
+
+
+	WSGIScriptAlias / /path/to/welcome_screen/project/wsgi_production.py
+	<Directory /path/to/welcome_screen/project>
+	<Files wsgi_production.py>
+	Order deny,allow
+	Allow from all
+	</Files>
+	</Directory>
+</VirtualHost>
+</IfModule>

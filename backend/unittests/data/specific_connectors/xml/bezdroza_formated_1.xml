@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="iso-8859-2"?>
+<!--
+	    Dane z dnia: śro, 18 wrz 2013, 02:08:22 CEST
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ Ze względu na wielkość pliku XML, proszę o ściąganie wersji produkty-bezdroza.xml.zip
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+            Jeśli będziesz sprzedawał książki w PP, to użyj pola <status>:
+
+		0 - niedostepna
+		1 - dostepna
+		2 - w przygotowaniu
+		5 - druk na żądanie
+		7 - przedsprzedaz
+	    oraz <cena>, <cenadetaliczna> (ceny takie jak na stronach GW Helion : moga zawierac znizki itp.)
+
+	    dla ksiegarni internetowych (wspolpraca z dzialem handlowym, ehelion) użyj pola <status2>:
+
+    		1 - dostępna
+		2 - dostępna w małej ilości
+		3 - chwilowo niedostępna
+		4 - niedostępna
+		5 - POD
+		6 - w przygotowaniu
+		7 - w przedsprzedaży
+            oraz pola <ksiegarnie_nieinter> gdzie znajduja sie wszystkie dane odnosnie ceny netto, brutto, stawka VAT
+
+		<typ>:
+			1 - ksiazka
+			2 - ebook
+			3 - audiobook mp3
+			4 - audiocd mp3
+
+		<marka>:
+			1 - helion
+			2 - onepress
+			3 - editio
+			4 - sensus
+			5 - septem
+			6 - bezdroza
+			8 - podrecznik
+			11 - bezdroża obce
+
+Zmiany:
+09.02.2011 @MJJ dolożenie elementu <typ>
+15.06.2011 @MJJ dodanie pliku lista2-statusy.xml z samymi statusami, cenami
+21.12.2011 @TKr seolinki, zagregowane formaty ebooków
+23.01.2012 @TKr info o promocjach, lista promocji serwis.pl/xml/lista-promocje.cgi
+15.06.2012 @TKr dodane info o audiobookach
+29.08.2012 @TKr dodane md5 jako wßkaźnik zmiany informacji w książce
+
+		Kontakt: Michal Jęczalik <michal.jeczalik@helion.pl>
+-->
+<details>
+  <lista baza="bezdroza">
+    <ksiazka ident="AKTSTU">
+      <isbn>83-246-2472-4</isbn>
+      <ean>9788324624720</ean>
+      <ident>AKTSTU</ident>
+      <tytul language="polski">Fotografia obnażona. Mistrzowskie sesje aktu</tytul>
+      <link>http://bezdroza.pl/ksiazki/fotografia-obnazona-mistrzowskie-sesje-aktu-radoslaw-brzozowski,aktstu.htm</link>
+      <autor>Radosław Brzozowski</autor>
+      <status>1</status>
+      <cena>39.00</cena>
+      <cenadetaliczna>39.00</cenadetaliczna>
+      <znizka>0.00</znizka>
+      <marka>1</marka>
+      <nazadanie>0</nazadanie>
+      <format>200x230</format>
+      <typ>1</typ>
+      <oprawa>miękka</oprawa>
+      <wydawca>Helion</wydawca>
+      <liczbastron>192</liczbastron>
+      <datawydania>2011-05-04</datawydania>
+      <online>http://pdf.helion.pl/aktstu/aktstu-6.pdf</online>
+      <okladka>http://bezdroza.pl/okladki/326x466/aktstu.jpg</okladka>
+      <okladkatyl>http://bezdroza.pl/okladki-tyl/326x466/aktstu.jpg</okladkatyl>
+      <issueurl>http://bezdroza.pl/eksiazki/aktstu.htm</issueurl>
+      <bestseller>0</bestseller>
+      <nowosc>0</nowosc>
+      <nosnik>1 CD</nosnik>
+      <serietematyczne>
+        <seriatematyczna id="21">Fotografia</seriatematyczna>
+        <seriatematyczna id="1">Przewodniki</seriatematyczna>
+      </serietematyczne>
+      <seriewydawnicze>
+        <seriawydawnicza id="6">Przewodniki celowniki</seriawydawnicza>
+        <seriawydawnicza id="3">Przewodniki</seriawydawnicza>
+      </seriewydawnicze>
+      <powiazane>
+        <ident_powiazany>AMERYK</ident_powiazany>
+        <ident_powiazany>BEBBH5</ident_powiazany>
+        <ident_powiazany>BEBIAL</ident_powiazany>
+        <ident_powiazany>BEMAJA</ident_powiazany>
+        <ident_powiazany>BEMAL1</ident_powiazany>
+        <ident_powiazany>BESARD</ident_powiazany>
+        <ident_powiazany>BEVVC6</ident_powiazany>
+        <ident_powiazany>BEZAMO</ident_powiazany>
+        <ident_powiazany>BMLMZ7</ident_powiazany>
+        <ident_powiazany>BRSYC1</ident_powiazany>
+        <ident_powiazany>BZCSB1</ident_powiazany>
+        <ident_powiazany>MATRIO</ident_powiazany>
+      </powiazane>
+      <ksiegarnie_nieinter>
+        <waga>0.54</waga>
+        <status2>4</status2>
+        <cena_netto>37.14</cena_netto>
+        <cena_brutto>39</cena_brutto>
+        <vat>1.86</vat>
+        <vat_procent>5</vat_procent>
+      </ksiegarnie_nieinter>
+      <opis><![CDATA[<blockquote><i>
+Akt nie jest zwykłym przedstawieniem ciała, lecz odnosząc je przez analogie do wszystkich struktur, jakie stały się częścią naszego doświadczenia wyobrażeniowego, uświadamia nam istnienie uniwersalnego porządku 
+<br><div align="right">Tomasz Lewicki</div></i>
+</blockquote>
+
+<div align="center"><h4><b> Piękna kompozycja ciała: </b></h4></div>
+<ul>
+<li>Modelowanie bryły ludzkiego ciała</li>
+<li>Mistrzowskie manipulacje światłem i cieniem</li>
+<li>Tworzenie atmosfery zaufania na sesji zdjęciowej</li>
+<li>Wykorzystywanie kreatywnych zabiegów fotograficznych </li>
+</ul>
+
+<br />
+<div align="center"><h4><b>Dowiedz się, jak stworzyć profesjonalne studio fotograficzne. Opanuj światło, wykorzystaj opcje, które daje Ci Twój sprzęt, i osiągaj zamierzone efekty.</b></h4></div>
+
+
+<p>Akt to nie tylko golizna. To zaklęte w obrazie za pomocą techniki fotograficznej najgłębsze ludzkie emocje. A brak ubrania jest jedynie dosadnym narzędziem wyrazu.
+Ludzka fizyczność od zawsze fascynowała, inspirowała i niepokoiła artystów, rozwijała ich warsztat i wzbogacała dziedzictwo historii sztuki. Nie ma drugiego tak wdzięcznego i kontrowersyjnego tematu jak nagie ciało. Odrzucane w średniowieczu, gloryfikowane przez renesans, w końcu na stałe rozgościło się w malarstwie i rzeźbie, by wreszcie w 1840 roku zawędrować na kliszę fotograficzną. </p>
+<p>Akt jest swoistym hołdem dla piękna ludzkiego (najczęściej kobiecego) ciała. Dzięki solidnemu warsztatowi fotografika, właściwemu sprzętowi, umiejętnemu operowaniu światłem i cieniem oraz zaufaniu między artystą a modelką powstają zachwycające dzieła. Delikatne, subtelne, eteryczne... lub też prowokujące, wyrafinowane i drapieżne. Zdjęcia mówiące więcej niż tysiąc słów. Obrazy przedstawiające żywe emocje, pragnienia, oddanie, erotyczną pasję. Kuszące seksem, kokietujące zmysły i wyobraźnię, zapraszające do intymnego świata. Albo wykorzystujące nagość i bryłę ludzkiego ciała jedynie jako instrumenty tworzące niebanalny obraz.</p>
+
+<div align="center"><h4><b> Odczaruj zaklęty świat studia </b></h4></div>
+<ul>
+<li>Przygotowanie sesji: dbałość o odpowiednie warunki i aspekty techniczne oraz współpraca z modelką.</li>
+<li>Sprzęt: statyw, teleobiektyw, blenda, sprzęt oświetleniowy, tła, meble, kosmetyki i dodatki.</li>
+<li>Światło i możliwości manipulowania cieniem: praca z jedną lub kilkoma lampami i końcówkami modelującymi światło.</li>
+<li>Efekty specjalne: zmiana kontrastu, korekty, konwersja do obrazu czarno-białego, tonowanie i wyostrzanie zdjęcia.</li>
+</ul>	
+
+<hr />
+<a href="http://swiatobrazu.pl" target="blank"><img src="http://helion.pl/img/rozne/patroni/swiatobrazu.jpg" />
+</a><img src="http://helion.pl/img/rozne/patroni/swiataktu.jpg" />
+</a><img src="http://helion.pl/img/rozne/patroni/plfoto.jpg" />
+</a><img src="http://helion.pl/img/rozne/patroni/obiektywni.jpg" />	]]></opis>
+      <md5>0ccab381d335813bceeb3ba30595906f</md5>
+    </ksiazka>
+  </lista>
+</details>

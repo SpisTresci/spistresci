@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='iso-8859-2'?>
+<details>
+<lista baza="ebookpoint">
+<ksiazka ident="E_201F_EBOOK">
+	<isbn>978-8-3753-6634-1</isbn>
+	<ean>9788375366341</ean>
+	<ident>E_201F_EBOOK</ident>
+	<tytul language="polski">Futbol jest okrutny</tytul>
+	<link>http://ebookpoint.pl/ksiazki/futbol-jest-okrutny-michal-okonski,e_201f_ebook.htm</link>
+	<autor>Michał Okoński</autor>
+	<status>1</status>
+	<cena>27.90</cena>
+	<cenadetaliczna>27.90</cenadetaliczna>
+	<znizka>0.00</znizka>
+	<marka>13</marka>
+	<nazadanie>0</nazadanie>
+	<format></format>
+	<typ>2</typ>
+	<ebook_formaty>
+		<ebook_format>pdf</ebook_format>
+		<ebook_format>epub</ebook_format>
+		<ebook_format>mobi</ebook_format>
+	</ebook_formaty>
+	<liczbastron>224</liczbastron>
+	<datawydania>2013-05-07</datawydania>
+	<online>http://pdf.helion.pl/e_201f/e_201f.epub</online>
+	<okladka>http://ebookpoint.pl/okladki/326x466/e_201f.jpg</okladka>
+	<bestseller>0</bestseller>
+	<nowosc>1</nowosc>
+	<serietematyczne>
+		<seriatematyczna id="85">Literatura faktu</seriatematyczna>
+	</serietematyczne>
+	<ksiegarnie_nieinter>
+		<waga>0.00</waga>
+		<status2>4</status2>
+		<cena_netto>22.68</cena_netto>
+		<cena_brutto>27.9</cena_brutto>
+		<vat>5.22</vat>
+		<vat_procent>23</vat_procent>
+	</ksiegarnie_nieinter>
+	<opis>
+	<![CDATA[&bdquo;Wiecie, jak to jest żyć z perspektywą wykitowania podczas meczu, w dodatku perspektywą naukowo potwierdzoną? Dlaczego ministerstwo zdrowia, a niechby nawet ministerstwo sportu nie informuje, że oglądanie Tottenhamu może być przyczyną wielu groźnych chor&oacute;b?&rdquo; &ndash; to brzmi jak fragment Futbolowej gorączki Nicka Hornby&rsquo;ego, choć dotyczy klubu, z kt&oacute;rym Hornby jako kibic Arsenalu raczej nie chciałby mieć nic wsp&oacute;lnego. Futbol jest okrutny to pełna humoru autoanaliza kibicowskiego uzależnienia: opowieść o tym, jak piłka nożna niepostrzeżenie zagarnia kolejne przestrzenie życia dziennikarza &bdquo;Tygodnika Powszechnego&rdquo;, jak komplikuje udział w arcyważnej naradzie kierownictwa firmy, jak wpływa na wychowywanie dzieci i relacje z własnym ojcem, jak zmienia myślenie o seksie i śmierci.<br />
+<br />
+R&oacute;wnocześnie jest to opowieść o chorobach i wielkości wsp&oacute;łczesnej piłki. Z jednej strony komercja, bankrutujące kluby, rasizm, seksizm i homofobia, ciężki los sędzi&oacute;w i zmarnowane życie dawnych gwiazd, z drugiej futbol jako narzędzie społecznej zmiany &ndash; kluby odbudowywane przez kibic&oacute;w, piłkarze zaangażowani w pomaganie innym, sto osiem podań Barcelony i piętnaście minut w szatni Liverpoolu. Jednym słowem: futbol w jego absolutnej narracyjnej nieprzewidywalności, z nieustającym Fergie Time, czyli meczami rozstrzyganymi w ostatnich sekundach ostatniej kolejki ostatniego sezonu. Rozważna i romantyczna opowieść o &bdquo;pięknej grze&rdquo;, kt&oacute;rej patronami są inni kibice inteligenci: Marek Bieńczyk, Jerzy Pilch, Ken Loach i... Jan Paweł II.	]]>
+	</opis>
+	<md5>7fb9d612fa162195fafac893f7755a58</md5>
+</ksiazka>
+</lista>
+</details>

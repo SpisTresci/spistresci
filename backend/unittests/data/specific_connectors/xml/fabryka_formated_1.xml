@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<offers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1">
+  <group name="books">
+    <o id="99904966943" url="http://www.fabryka.pl/ebooki/gra-o-markiza-e-book-julie-anne-long-3775976/" price="27.00" avail="1">
+      <name><![CDATA[Gra o markiza [e-book]]]></name>
+      <cat><![CDATA[Ebooki/Książki/romanse]]></cat>
+      <imgs>
+        <main url="http://www.fabryka.pl/uploads/tx_evoproducts/69/43/6943_99904966943.jpg"/>
+      </imgs>
+      <desc><![CDATA[<p> Plotkarska prasa nazywa go Lodowatym Lordem. Zimny i wyniosły Julian Spenser, markiz Dryden, otacza się wyłącznie tym co najlepsze: zarówno jeśli chodzi o stroje, konie i… kochanki. A teraz znalazł idealną narzeczoną, która wniesie mu w posagu utracone dziedzictwo Spenserów.</p> <p> Lecz jego misterne plany rozsypują się jak zamek z piasku, gdy Julian poznaje damę do towarzystwa przyszłej żony. Piękna Phoebe o zagadkowym uśmiechu i prowokującej inteligencji jako jedyna potrafi przejrzeć markiza. Wzajemne nieodparte przyciąganie to dla nich tortura – słodka i niebezpieczna, bo poddanie się pożądaniu może oznaczać utratę wszystkiego...</p>]]></desc>
+      <attrs>
+        <a name="Autor"><![CDATA[Julie Anne Long]]></a>
+        <a name="ISBN"><![CDATA[978-83-241-4926-1]]></a>
+        <a name="Ilosc_stron"><![CDATA[320]]></a>
+        <a name="Wydawnictwo"><![CDATA[Amber]]></a>
+        <a name="Rok_wydania"><![CDATA[2013]]></a>
+        <a name="Oprawa"/>
+        <a name="Format"><![CDATA[EPUB,MOBI]]></a>
+        <a name="Fragment"><![CDATA[https://www.elibri.com.pl/excerpt/18919]]></a>
+      </attrs>
+    </o>
+  </group>
+</offers>

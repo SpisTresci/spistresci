@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<products>
+  <product>
+    <id>1</id>
+    <title><![CDATA[www.malpa.pl]]></title>
+    <authors><![CDATA[Krystyna Janda]]></authors>
+    <price>35.91</price>
+    <format>PDF</format>
+    <isbn>978-83-7747-225-5</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/103/wwwmalpapl</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/231/103-wwwmalpapl.jpg</cover>
+    <size>2,5 MB</size>
+    <length>413</length>
+  </product>
+</products>

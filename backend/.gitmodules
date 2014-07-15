@@ -1,0 +1,3 @@
+[submodule "data"]
+	path = data
+	url = git@spistresci.pl:/var/git/bigdata.git

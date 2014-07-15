@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE pasaz:Envelope SYSTEM "loadOffers.dtd">
+<pasaz:Envelope xmlns:pasaz="http://schemas.xmlsoap.org/soap/envelope/">
+  <pasaz:Body>
+    <loadOffers xmlns="urn:ExportB2B">
+      <offers>
+        <offer>
+          <id>12135</id>
+          <name><![CDATA[Legendy naszej motoryzacji (Wersja elektroniczna (PDF))]]></name>
+          <price>20.00</price>
+          <url><![CDATA[http://www.zlotemysli.pl/ekundelek,RSS/prod/12134/legendy-naszej-motoryzacji-aleksander-sowa.html]]></url>
+          <categoryId><![CDATA[Księgarnia/E-booki]]></categoryId>
+          <description><![CDATA[Dzięki tej publikacji wybierzesz się, dobrze się bawiąc, w pasjonującą podróż przez ponad 100 lat historii polskiej motoryzacji.]]></description>
+          <image><![CDATA[http://get.zlotemysli.pl/products/image/000/012/134/600x848.jpg?201308]]></image>
+          <attributes>
+            <attribute>
+              <name><![CDATA[zm:imageParent]]></name>
+              <value><![CDATA[http://get.zlotemysli.pl/products/image/000/012/134/600x848.jpg?201308]]></value>
+            </attribute>
+            <attribute>
+              <name><![CDATA[zm:imageMedium]]></name>
+              <value><![CDATA[http://get.zlotemysli.pl/products/image/000/012/134/152x200.jpg?201308]]></value>
+            </attribute>
+            <attribute>
+              <name><![CDATA[zm:imageSmall]]></name>
+              <value><![CDATA[http://get.zlotemysli.pl/products/image/000/012/134/82x122.jpg?201308]]></value>
+            </attribute>
+            <attribute>
+              <name><![CDATA[zm:categoryId]]></name>
+              <value><![CDATA[13]]></value>
+            </attribute>
+            <attribute>
+              <name><![CDATA[zm:productTypeId]]></name>
+              <value><![CDATA[2]]></value>
+            </attribute>
+            <attribute>
+              <name><![CDATA[Autor]]></name>
+              <value><![CDATA[Aleksander Sowa]]></value>
+            </attribute>
+            <attribute>
+              <name><![CDATA[ISBN]]></name>
+              <value><![CDATA[978-83-932553-9-9]]></value>
+            </attribute>
+            <attribute>
+              <name><![CDATA[Wydawnictwo]]></name>
+              <value><![CDATA[Złote Myśli Sp. z o.o.]]></value>
+            </attribute>
+            <attribute>
+              <name><![CDATA[Rok wydania]]></name>
+              <value><![CDATA[2011]]></value>
+            </attribute>
+            <attribute>
+              <name><![CDATA[Ilość stron]]></name>
+              <value><![CDATA[426]]></value>
+            </attribute>
+            <attribute>
+              <name><![CDATA[Format pliku]]></name>
+              <value><![CDATA[PDF]]></value>
+            </attribute>
+          </attributes>
+          <availability>1</availability>
+        </offer>
+      </offers>
+    </loadOffers>
+  </pasaz:Body>
+</pasaz:Envelope>

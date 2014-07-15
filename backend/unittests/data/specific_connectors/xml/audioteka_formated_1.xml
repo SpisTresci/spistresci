@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pasaz:Envelope SYSTEM "loadOffers.dtd">
+<pasaz:Envelope xmlns:pasaz="http://schemas.xmlsoap.org/soap/envelope/">
+  <pasaz:Body>
+    <loadOffers xmlns="urn:ExportB2B">
+      <offers>
+        <offer>
+          <id>a-tale-of-two-cities</id>
+          <name><![CDATA[A Tale Of Two Cities]]></name>
+          <price>12,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f36ea6,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/charles-dickens/a-tale-of-two-cities-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Macmillan]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Charles Dickens]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[1 godz. 9 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+      </offers>
+    </loadOffers>
+  </pasaz:Body>
+</pasaz:Envelope>

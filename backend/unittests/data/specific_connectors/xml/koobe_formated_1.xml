@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<upolujebooka generator="SilverCMS-koobe" generationTime="15.04.2013 14:13" ver="3.5">
+  <products>
+    <product>
+      <name><![CDATA[Skarbiec aforyzmów. Sztuka życia]]></name>
+      <id>708983</id>
+      <url>http://www.koobe.pl/708983,ebook,skarbiec-aforyzmow-sztuka-zycia.htm?utm_source=ekundelek&amp;utm_medium=porownywarki</url>
+      <description><![CDATA[Zbiór sentencji dla tych, którzy szukają odpowiedzi na pytanie o cel i sens naszego istnienia.]]></description>
+      <image>http://www.koobe.pl/static/0/1/img/8a65408c5460e6d5df5b4cd2f6427de0_226_0_n_100/skarbiec20aforyzmow20sztuka20zyciacov.jpg</image>
+      <price>7.06</price>
+      <category>Książki / E-booki</category>
+      <producer>Europa</producer>
+      <property name="isbn">83-7407-058-7</property>
+      <property name="author">Nieznany</property>
+      <property name="format">PDF,EPUB</property>
+      <property name="protection">WATERMARK</property>
+    </product>
+  </products>
+</upolujebooka>

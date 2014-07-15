@@ -1,0 +1,100 @@
+tag_name~Abooki~Audeo~Audiobook~Audioteka~Bezdroza~BezKartek~Bookoteka~BooksOn~CzeskieKlimaty~Czytio~DlaBystrzakow~DobryEbook~eBookpoint~ebooks43~eClicto~Empik~EscapeMagazine~FantastykaPolska~Gandalf~Helion~KodeksyWmp3~Koobe~Latarnik~Legimi~Merlin~Nexto~OnePress~Pokatne~Polona~Publio~RW2010~Selkar~Sensus~Septem~TaniaKsiazka~Tmc~Virtualo~Wikibooks~Woblink~WolneEbooki~WolneLektury~Wydaje~Zantes~ZielonaSowa~Zinamon~ZloteMysli
+rating~~~~~~~~~~~~~~~~~~~~~~~~~~./review-note~~./rating~~~~~~~~~./rating~~~~~./rating~~~~
+redactor~~~~~~~~~~~~~~~~~~~~~~~~~./redakcja~~~~~~~~~~~~~~~~~~~~~
+page_count~~~~~./liczbastron~./pageCount~~~./attrs/a[@name='Ilosc_stron']~./length~./liczbastron~./liczba_stron~./liczbastron~~~~~~./attrs/a[@name='Ilosc_stron']~./liczbastron~~~~~./liczba_stron~~./liczbastron~~~~~pages~./liczbastron~./liczbastron~~~~~~~~~~~~./n:attributes/n:attribute[n:name='Ilość stron']/n:value
+list_price~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~list_price~~~~~~~~~~~~~~
+cover_small~~~~~~~~~~~~./male_zdjecie~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~./n:attributes/n:attribute[n:name='zm:imageSmall']/n:value
+availability~~@avail~~~~~~@avail~~~~~~~@avail~./availability~~~@avail~~~~@avail~~~~~~~~~~~~~~~~@avail~~~~~~~./n:availability
+votes~~~~~~~~~~~~~~~~~~~~~~~~~~~~./votes~~~~~~~~~~~~~~./votes~~~~
+title~./name~./name~./name~./n:name~./tytul[@language='polski']~./name~./title~./n:name~./name~./title~./tytul[@language='polski']~./tytul~./tytul[@language='polski']~./div[@class='book_box_title']/a~./name~./name~./title~./title~./name~./tytul[@language='polski']~./name~./name~./name~./n:name~./tytul~./name~./tytul[@language='polski']~./title~~./title~./tytul~title~./tytul[@language='polski']~./tytul[@language='polski']~./name~./n:name~./title~~./name~./title~~./title~./title~./n:name~./tytul~./n:name
+place_in_top~~~~~./top~~~~~~./top~~./top~~~~~~~./top~~~~~~~./top~~~~~~./top~./top~~~~~~~~~~~~
+offers~~~~~~~~~~~~~~~~~~~~~~~~~~./issues/issue{'issue_title': ('./title', ''), 'price': ('./price/price-club', ''), 'page_count': ('./pages-count', ''), 'free_fragment': ('./free-fragments/free-fragment', ''), 'activation_date': ('./activation-date', ''), 'authors': ('./authors/author', ''), 'date': ('./publication-date', ''), 'tocs': ('./tocs/table-of-content', ''), 'price_normal': ('./price/price-original', ''), 'audio_time': ('./audiobook-length', ''), 'cover': ('./covers/cover', ''), 'issue_id': ('@issue-id', ''), 'lectors': ('./lectors/lector', ''), 'formats': ('./formats-all', ''), 'price_for_not_registered': ('./price/price-normal', '')}~~~~~~~~~~~~~~~~./offers/offer{'price': ('./price', ''), 'formats': ('./formats/format', '')}~~~~
+baset~~~~~~~~@baset~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+online_sample~~~~~./issueurl~~~~~~./issueurl~~./issueurl~~~~~~~./issueurl~~~~~~~./issueurl~~~~~~./issueurl~./issueurl~~~~~~~~~~~~
+product_type_id~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~./n:attributes/n:attribute[n:name='zm:productTypeId']/n:value
+views~~~~~~~~~~~~~~~~~~~~~~~~~~~~./views~~~~~~~~~~~~~~~~~~
+lang_long~~~~~~./languages/lang_long~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+isbn~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~isbn~~~~~~~~~~~~~~
+@id~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~external_id~~~~~~~~
+categories~~~~~~~~~~~~~~~~~./*[contains(name(), 'categories_')]~~~~~~~~~./category~~~~./categories/category~~~~~~~~~~~~./categories/category~./*[contains(name(), 'categories_')]~~~
+notes~~~~~~~~~~~~~~~~~~./description/div/div[@class='field-items']/div~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+translators~~~~~./tlumacz~~~~~~./tlumacz~~./tlumacz~~~~~~~./tlumacz~~~~~./tlumacz~~./tlumacz~~~~~translator~./tlumacz~./tlumacz~~~~~~~~~~~~
+security~~~~~~./securityType~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+set~~~~~~~~@set~~~~~~~@set~~~~~~~~@set~~~~~~~~~~~~~~~~~~~~~~~
+weight~~~~~~~~~~~~~~~@weight~~~~~~~~@weight~~~~~~~~~~~~~~~~~~~~~~~
+series~~~~~./seriewydawnicze/seriawydawnicza~~~~~~./seriewydawnicze/seriawydawnicza~~./seriewydawnicze/seriawydawnicza~~~~~~~./seriewydawnicze/seriawydawnicza~~~~~~~./seriewydawnicze/seriawydawnicza~~~~~~./seriewydawnicze/seriawydawnicza~./seriewydawnicze/seriawydawnicza~~~~~~~~~~~~
+bookshop~~~~~./marka~~~~~~./marka~~./marka~~~~~~~./marka~~~~~~~./marka~~~~~~./marka~./marka~~~~~~~~~~~~
+thematic_series~~~~~./serietematyczne/seriatematyczna~~~~~~./serietematyczne/seriatematyczna~~./serietematyczne/seriatematyczna~~~~~~~./serietematyczne/seriatematyczna~~~~~~~./serietematyczne/seriatematyczna~~~~~~./serietematyczne/seriatematyczna~./serietematyczne/seriatematyczna~~~~~~~~~~~~
+category~./cat~./cat~./category~./n:categoryId~~./category~~./n:cat~./cat~~~~~~./cat~~~./description/div[@class='field field-name-field-kategoria field-type-taxonomy-term-reference field-label-inline inline clearfix']/ul/li/a~./cat~~./cat~./category~./cat~./n:categoryId~./lista_kategorii~~~~~~~category_id~~~./cat/awCat~./n:categoryId~~~./cat~~~~~./n:categoryId~./kategorie~./n:attributes/n:attribute[n:name='zm:categoryId']/n:value
+section~~~~~~~~~~~~~~~~~~~~~~~~~./dzial~~~~~~~~~~~~~~~~~~~~~
+comments~~~~~~~~~~~~~~~~~~~~~~~~~~~~./comments~~~~~~~~~~~~~~~~~~
+promotion_name~~~~~./promocja~~~~~~./promocja~~./promocja~~~~~~~./promocja~~~~~~~./promocja~~~~~~./promocja~./promocja~~~~~~~~~~~~
+new~~~~~~~~~~~~~~~~~~~~~~~~~~~~./new~~~~~~~~~~~~~~~~~~
+thumbnail~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~./awThumb~~~~~~~~~~~
+tags~~~~~~~~~~~~~~~~~~~~~~~~~~~~./tags~~~~~~~~~~~~~~./tags~~~~
+discount~~~~~./znizka~~~~~~./znizka~~./znizka~~~~~~~./znizka~~~~~~~./znizka~~~~~~./znizka~./znizka~~~~~~~~~~~~
+protection~~~~~~~~~~~~~~~~~~~~~~./property[@name='protection']~~~~~~~~./protectionType~~~~~~~./security~~~~~~~~./zabezpieczenia~
+programName~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~@programName~~~~~~~~~~~
+publisher_id~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~./producer_id~~~
+genre~~~~~~~~~~~~~~~~~~./description/div[@class='field field-name-field-gatunek field-type-taxonomy-term-reference field-label-inline inline clearfix']/ul/li/a~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+price_normal~~~~~./cenadetaliczna~~~~~~./cenadetaliczna~~./cenadetaliczna~~~~~~~./cenadetaliczna~~~~~~~./cenadetaliczna~~~~~~./cenadetaliczna~./cenadetaliczna~~~~~~~~~~~~
+md5~~~~~./md5~~~~~~./md5~~./md5~~~~~~~./md5~~~~~~~./md5~~~~~~./md5~./md5~~~~~~~~~~~~
+audio_time~~./attrs/a[@name='Czas (min)']~./attribute[@name='czas']~./n:attributes/n:attribute[n:name='Dugość']/n:value~~./audioTime~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+lang_short~~~~~~./languages/lang_short~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+product_id~~~~~~~~~~~~~~~~~~~~~~~~~~@product-id~~~~~~~~~~~~~~~~~~~~
+status2~~~~~./ksiegarnie_nieinter/status2~~~~~~./ksiegarnie_nieinter/status2~~./ksiegarnie_nieinter/status2~~~~~~~./ksiegarnie_nieinter/status2~~~~~~~./ksiegarnie_nieinter/status2~~~~~~./ksiegarnie_nieinter/status2~./ksiegarnie_nieinter/status2~~~~~~~~~~~~
+publisher~~./attrs/a[@name='Producent']~./attribute[@name='wydawnictwo']~./n:attributes/n:attribute[n:name='Wydawca']/n:value~~./publisher~~~./attrs/a[@name='Wydawnictwo']~~~~~~./attrs/a[@name='Producent']~~./producer_producer~~./attrs/a[@name='Wydawnictwo']~~~./producer~./attrs/a[@name='Producent']~./n:attributes/n:attribute[n:name='Wydawnictwo']/n:value~./wydawnictwo~./manufacturer~~~~./company~~publisher~~~~./n:attributes/n:attribute[n:name='Producent']/n:value~~~./attrs/a[@name='Wydawnictwo']~~~~./producer_producer~~~./n:attributes/n:attribute[n:name='Wydawnictwo']/n:value
+external_id~./attrs/a[@name='ShopProductId']~@id~./id~./n:id~./ident~./ebookId~~@id~@id~./id~./ident~~./ident~~@id~./TDProductId~./id~./filteredId~@id~./ident~@id~./id~@id~./n:id~./towar_id~@product-id~./ident~./id~~./id~~id~./ident~./ident~./pId~./n:id~~~@id~~~./id~./id~./n:id~./id~./n:id
+title_oryginal~~~~~./tytul[@language='oryginal']~~~~~~./tytul[@language='oryginal']~~./tytul[@language='oryginal']~~~~~~~./tytul[@language='oryginal']~~~~~~~./tytul[@language='oryginal']~~~~~~./tytul[@language='oryginal']~./tytul[@language='oryginal']~~~~~~~~~~~~
+subtitle~~~~~~~~~~~~./podtytul~~~~~./title_sub~~~~~~~~~~~~~~~~~~~~~~~~~~./title_sub~~~
+date~~~~~./datawydania~~~~./attrs/a[@name='Rok_wydania']~~./datawydania~~./datawydania~~./attrs/a[@name='Rok_wydania']~~~~~./datawydania~~~~./n:attributes/n:attribute[n:name='Rok_wydania']/n:value~./date~~./datawydania~./date~~~~published~./datawydania~./datawydania~~~~~~~~~./time~~~./n:attributes/n:attribute[n:name='Rok wydania']/n:value
+storage_type~~~~~./nosnik~~~~~~./nosnik~~./nosnik~~~~~~~./nosnik~~~~~~~./nosnik~~~~~~./nosnik~./nosnik~~~~~~~~~~~~
+is_bestseller~~~~~./bestseller~~~~~~./bestseller~~./bestseller~~~~~~~./bestseller~~~~~~~./bestseller~~~~~bestseller~./bestseller~./bestseller~~~~~~~~~~~~
+size~~~~~./format~~~~~~./format~~./format~~~~~~~./format~~~~~~~./format~~~~~dimensions~./format~./format~~~~~~~~~~~~
+net_price~~~~~./ksiegarnie_nieinter/cena_netto~~~~~~./ksiegarnie_nieinter/cena_netto~~./ksiegarnie_nieinter/cena_netto~~~~~~~./ksiegarnie_nieinter/cena_netto~~~~~~~./ksiegarnie_nieinter/cena_netto~~~~~~./ksiegarnie_nieinter/cena_netto~./ksiegarnie_nieinter/cena_netto~~~~~~~~~~~~
+pages~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~./pages~~~~
+gross_price~~~~~./ksiegarnie_nieinter/cena_brutto~~~~~~./ksiegarnie_nieinter/cena_brutto~~./ksiegarnie_nieinter/cena_brutto~~~~~~~./ksiegarnie_nieinter/cena_brutto~~~~~~~./ksiegarnie_nieinter/cena_brutto~~~~~~./ksiegarnie_nieinter/cena_brutto~./ksiegarnie_nieinter/cena_brutto~~~~~~~~~~~~
+price_promotion~~~~~~~~~~~~~~~~~./price_promo~~~~~~~~~~~~~~~~~~~~~~~~~~./price_promo~~~
+type~~~~~./typ~~~~~~./typ~~./typ~~~~~~~./typ~~~~~~./type~./typ~~~~~~./typ~./typ~./cat/mCat~~~~~~~~~~~
+vat~~~~~./ksiegarnie_nieinter/vat~~~~~~./ksiegarnie_nieinter/vat~~./ksiegarnie_nieinter/vat~~~~~~~./ksiegarnie_nieinter/vat~~~~~~~./ksiegarnie_nieinter/vat~~~~~~./ksiegarnie_nieinter/vat~./ksiegarnie_nieinter/vat~~~~~~~~~~~~
+raw_title~./name~~./name~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~./n:name
+publisher_code~~~~~~~~~~~~~~~~~~~~~~~./attrs/a[@name='Kod_producenta']~~~~~~~~~~~~~~~~~~~~~~~
+cover_type~~~~~~~~~~~~~~~~~~~./attrs/a[@name='Oprawa']~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ean~~~~~./ean~~~~~~./ean~~./ean~~~./ean~~~~./ean~~~~~~~./ean~~~~~ean~./ean~./ean~~~~~~~~~~~~
+brand~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~./brand~~~~~~~~~~~
+program_id~@id~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+is_available~~~~~./status~~~~~~./status~~./status~~~~~~~./status~~~~~~~./status~~~~~~./status~./status~~~~~~~~~~~~
+authors~./attrs/a[@name='Producent']~./attrs/a[@name='Autor']~./attribute[@name='autor']~./n:attributes/n:attribute[n:name='Autor']/n:value~./autor~./authors~./*[contains(name(), 'author_')]~./n:attrs/n:a[@name='Autor']~./attrs/a[@name='Autor']~./authors~./autor~./autor~./autor~./div[@class='book_box_autor']~./attrs/a[@name='Autor']~~./*[contains(name(), 'authors_')]~./description/div[@class='field field-name-field-autor field-type-taxonomy-term-reference field-label-inline inline clearfix']/ul/li/a~./attrs/a[@name='Autor']~./autor~~./property[@name='author']~~./n:attributes/n:attribute[n:name='Autor']/n:value~./autor~~./autor~./authors~~./authors~./autor~author~./autor~./autor~~~./authors~~~./author~~./authors/author/name~./*[contains(name(), 'authors_')]~./n:attributes/n:attribute[n:name='Producent']/n:value~./autorzy~./n:attributes/n:attribute[n:name='Autor']/n:value
+subscription~~~~~~~~~~~~~~~~~~~~~~~~./n:attributes/n:attribute[n:name='Abonament']/n:value~~~~~~~~~~~~~~~~~~~~~~
+cover_parent~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~./n:attributes/n:attribute[n:name='zm:imageParent']/n:value
+descriptionShort~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~./descriptionShort~~~~~~~~~
+add_to_cart_url~~~~~~~~~~~~~~~~~~~~~~~~~./url_koszyk~~~~~~~~~~~~~~~~~~~~~
+./a[@href]~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~url~~~~~~~~
+isbns~~~~~./isbn~./isbn~./isbn~~./attrs/a[@name='ISBN']~./isbn~./isbn~./isbn~./isbn~~./attrs/a[@name='ISBN']~./isbn~./producer_ident~~./attrs/a[@name='ISBN']~./isbn~./attrs/a[@name='EAN']~./property[@name='isbn']~./attrs/a[@name='EAN']~./n:attributes/n:attribute[n:name='ISBN']/n:value~./identyfikator~./issn~./isbn~~~./isbns~~~./isbn~./isbn~./atribute[@Name='ISBN']~~./isbn~~./attrs/a[@name='ISBN']~~~./isbn~./producer_ident~~./isbn~./n:attributes/n:attribute[n:name='ISBN']/n:value
+formats~~~~~./ebook_formaty/ebook_format~./format~./format~~~./format~./ebook_formaty/ebook_format~~./ebook_formaty/ebook_format~./div[@class='book_box_format']~./attrs/a[@name='Format']~~~~./attrs/a[@name='Format']~./ebook_formaty/ebook_format~~./property[@name='format']~~./n:attributes/n:attribute[n:name='Format']/n:value~./nosnik~~./ebook_formaty/ebook_format~./formats~~./formats~./formaty~~./ebook_formaty/ebook_format~./ebook_formaty/ebook_format~~~./format~~./attrs/a[@name='Format']~./formats~~~~~./format~./n:attributes/n:attribute[n:name='Format pliku']/n:value
+advanced_booking~~~~~./przedsprzedazDO~~~~~~./przedsprzedazDO~~./przedsprzedazDO~~~~~~~./przedsprzedazDO~~~~~~~./przedsprzedazDO~~~~~~./przedsprzedazDO~./przedsprzedazDO~~~~~~~~~~~~
+cover_medium~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~./n:attributes/n:attribute[n:name='zm:imageMedium']/n:value
+awId~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~@awId~~~~~~~~~~~
+./a[@title]~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~title~~~~~~~~
+binding~~~~~./oprawa~~~~~~./oprawa~~./oprawa~~~~~~~./oprawa~~~~~~~./oprawa~~~~~cover~./oprawa~./oprawa~~~~~~~~~~~~
+is_new~~~~~./nowosc~~~~~~./nowosc~~./nowosc~~~~~~~./nowosc~~~~~~~./nowosc~~~~~~./nowosc~./nowosc~~~~~~~~~~~~
+sample~~~~~./online~~~~~~./online~~./online~~~~~~~./online~~~~~~~./online~~~~~~./online~./online~~~~~~~~./sample~~~~
+file_size~~~~~~~~~~./size~~./wielkosc_pliku~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+linked~~~~~./powiazane/ident_powiazany~~~~~~./powiazane/ident_powiazany~~./powiazane/ident_powiazany~~~~~~~./powiazane/ident_powiazany~~~~~~~./powiazane/ident_powiazany~~~~~~./powiazane/ident_powiazany~./powiazane/ident_powiazany~~~~~~~~~~~~
+utm_term~~~~~~~~~~~~~~~~~~~~~~~~~./utm_term~~~~~~~~~~~~~~~~~~~~~
+cover_back~~~~~./okladkatyl~~~~~~./okladkatyl~~./okladkatyl~~~~~~~./okladkatyl~~~~~~~./okladkatyl~~~~~~./okladkatyl~./okladkatyl~~~~~~~~~~~~
+description_short~~~~~~~~~~~~~~~~~./describe_short~~~~~~~~~~~~~~~~~~~~~~~~~~./describe_short~~~
+status~~~~~~~~~~~~~~~~~./status~~~~~~~~./status~~~~~~~status~~~~~~~~~~~./status~~~
+description~./desc~./desc~./description~./n:description~./opis~./description~~./n:desc~./desc~~./opis~~./opis~./div[@class='book_box_desc']~./desc~./description~./describe_long~~./desc~./opis~./desc~./description~./desc~./n:description~./opis~./description~./opis~~~~~description~./opis~./opis~./desc~./n:description~./description~~./desc~~~./description~./describe_long~./n:description~~./n:description
+price~@price~@price~./price~./n:price~./cena~./price~./price~@price~@price~./price~./cena~./cena~./cena~~@price~./price~./price~~@price~./cena~@price~./price~@price~./n:price~./cena~~./cena~~~./price~./cena~price~./cena~./cena~./price/display~./n:price~./price~~@price~./cena~~~./price~./n:price~./cena~./n:price
+section_id~~~~~~~~~~~~~~~~~~~~~~~~~./dzial_id~~~~~~~~~~~~~~~~~~~~~
+alert~~~~~~~~~~~~~~~~~~~~~~~~~~~~./alert~~~~~~~~~~~~~~~~~~
+vat_percent~~~~~./ksiegarnie_nieinter/vat_procent~~~~~~./ksiegarnie_nieinter/vat_procent~~./ksiegarnie_nieinter/vat_procent~~~~~~~./ksiegarnie_nieinter/vat_procent~~~~~~~./ksiegarnie_nieinter/vat_procent~~~~~~./ksiegarnie_nieinter/vat_procent~./ksiegarnie_nieinter/vat_procent~~~~~~~~~~~~
+stack~~~~~~~~~~~~~~~~~~~~~~~@stack~~~~~~~~~~~~~~~~~~~~~~~
+lang~~~~~~~~~~~~~~~~~~~~~~~~~./jezyk~./language~~~~~~~~~~~~~~~~~~~~
+on_demand~~~~~./nazadanie~~~~~~./nazadanie~~./nazadanie~~~~~~~./nazadanie~~~~~~~./nazadanie~~~~~~./nazadanie~./nazadanie~~~~~~~~~~~~
+url~@url~@url~./url~./n:url~./link~./url~./url~@url~@url~./url~./link~./link~./link~./a[@href]~@url~./productUrl~./url~./link~@url~./link~@url~./url~@url~./n:url~./url~./url~./link~./url~~./productUrl~./url~url~./link~./link~./awLink~./n:url~./url~~@url~./link~~./url~./url~./n:url~./url~./n:url
+cover~./imgs/main[@url]~./imgs/main[@url]~~./n:image~./okladka~./image~./coverUrl~./n:imgs/n:main[@url]~./imgs/main[@url]~./cover~./okladka~./duze_zdjecie~./okladka~./a/img[@src]~./imgs/main[@url]~./imageUrl~./*[contains(name(), 'covers_')]~~./imgs/main[@url]~./okladka~./imgs/main[@url]~./image~./imgs/main[@url]~./n:image~./url_images~~./okladka~./cover~~./imageUrl~./okladka~image~./okladka~./okladka~./awImage~./n:image~./coverId~~./imgs/main[@url]~./okladka~~./cover~./*[contains(name(), 'covers_')]~./n:image~./okladka~./n:image
+mass~~~~~./ksiegarnie_nieinter/waga~~~~~~./ksiegarnie_nieinter/waga~~./ksiegarnie_nieinter/waga~~~~~~~./ksiegarnie_nieinter/waga~~~~~~~./ksiegarnie_nieinter/waga~~~~~~./ksiegarnie_nieinter/waga~./ksiegarnie_nieinter/waga~~~~~~~~~~~~
+lectors~~./attrs/a[@name='Lektor']~~./n:attributes/n:attribute[n:name='Czyta']/n:value~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+category_id~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~./cat/awCatId~~~~~~~~~~~

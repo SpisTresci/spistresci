@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pasaz:Envelope SYSTEM "loadOffers.dtd">
+<pasaz:Envelope xmlns:pasaz="http://schemas.xmlsoap.org/soap/envelope/">
+  <pasaz:Body>
+    <loadOffers xmlns="urn:ExportB2B">
+      <offers>
+        <offer>
+          <id>2</id>
+          <name><![CDATA[100 wyjątkowych miejsc. Zobacz, zanim znikną]]></name>
+          <price>29.90</price>
+          <url>https://ssl.afiliant.com/affskrypt,db90cbc0,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia]]></categoryId>
+          <description><![CDATA[\"Książka &bdquo;100 wyjątkowych miejsc. Zobacz, zanim znikną&rdquo; ma ważną misję &ndash; przypominać nam o tym, co możemy stracić za kilka pokoleń, a czasem już za kilka lat. 100 niesamowitych zdjęć autorstwa światowej klasy fotografikw zabierze nas w podrż dookoła świata. Fotografie ukazują wyjątkowe piękno przyrody w najodleglejszych zakątkach Ziemi. Niestety istnienie tych miejsc jest bezpośrednio zagrożone, dlatego znalazły się one w raporcie Międzyrządowego Zespołu ds. Zmian Klimatu przy ONZ, ktrego twrcom przyznano Pokojową Nagrodę Nobla. Ta książka to nie tylko piękny album. Zawiera ona wypowiedzi ekspertw, a także znanych osb, ktre mwią, w jaki sposb zmiany klimatu dotykają ich samych. O tym, jak zatrzymać niebezpieczne zmiany, piszą m.in.: aktorka Connie Nielsen, lider zespołu Eurythmics Dave Stewart, na co dzień zajmujący się klimatem Tomasz Zubilewicz oraz Jarosław Kret, a także podrżnik i polarnik Marek Kamiński. Na szczęście na liście 100 najbardziej zagrożonych zmianami klimatycznymi miejsc na świecie nie ma Polski. Nie oznacza to jednak, że możemy spać spokojnie, bo nie mamy się o co martwić. Musimy pamiętać, że takie miejsca jak Tatry, Żuławy Wiślane, Płwysep Helski czy Gdańsk także wymagają naszej szczeglnej troski.Opisanie 100 miejsc, ktre warto zobaczyć, zanim znikną, to według mnie doskonały sposb uzmysłowienia ludziom, jak wiele szkd mogą wyrządzić zmiany klimatyczne. Rajendra K. Pachauri  Ten album musi być dla nas inspiracją do konkretnych działań &ndash; i nie wmawiaj sobie, że nie masz na to czasu. Za chwilę się przekonasz, co może nam umknąć i już nie wrcić. I pamiętaj: w życiu są rzeczy ważne i ważniejsze. Tomasz Zubilewicz  Opierając się na powierzchownej wiedzy, sceptycy często podważają (stosując logikę na &bdquo;chłopski rozum&rdquo;) rzetelne opinie będące efektem badań setek poważnych naukowcw. [&hellip;] Słowa często ulatują. Obrazy zapamiętuje się na bardzo długo. Niech więc obrazy przemwią! Jarosław Kret  Jak każda podrż zaczyna się od małego kroku, tak wszystkie wielkie zmiany zaczynają się od drobiazgw, o ktrych zawsze powinniśmy pamiętać. W przypadku walki ze zmianami klimatycznymi chodzi przede wszystkim o poszanowanie energii. Marek Kamiński  Partnerem polskiej edycji projektu &bdquo;100 wyjątkowych miejsc. Zobacz, zanim znikną&rdquo; jest WWF Polska &ndash; międzynarodowa organizacja ekologiczna, ktrej misją jest przeciwdziałanie degradacji środowiska naturalnego i kształtowanie przyszłości, w ktrej ludzie będą żyli w harmonii z przyrodą. 1% ceny każdego sprzedanego albumu zostanie przekazane na rzecz WWF Polska. \"]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/2/100_wyjatkowych_miejsc_Zobacz_zanim_znikna_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[  ]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>3</id>
+          <name><![CDATA[Odkrycia i wynalazki]]></name>
+          <price>19.71</price>
+          <url>https://ssl.afiliant.com/affskrypt,db929369,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Podręczniki szkolne]]></categoryId>
+          <description><![CDATA[Idealna i fascynująca książka dla małych odkrywców uwielbiających czytać o wielkich odkryciach i wynalazkach, szukających ciekawostek na temat podróżników, odległych krajów i nieznanych planet. Książka ujawnia i odkrywa wiele nowych, zaskakujących informacji! Pokazuje, jak człowiek w ciągu wieków postrzegał niebo, morze i ziemię. Podział na dwie części  jedną poświęconą odkryciom, a drugą wynalazkom  ukazuje nowy punkt widzenia na rzeczywistość i rzeczy codziennego użytku. Młody czytelnik znajdzie tu ciekawostki ze świata archeologii, astronomii, paleontologii aż po biologię i geografię. Dzięki książce pozna wiele znanych osób i odkryje ich genialne osiągnięcia, które zmieniły losy ludzkości. Zrozumie, jak zmienił się świat dzięki pracy człowieka i otrzyma odpowiedź na wszystkie nurtujące pytania. Na końcu każdego rozdziału przeczyta ciekawostki, dotyczące każdej dziedziny ludzkiej wiedzy, które ujawnią ukryte prawdy i tajemnice, do tej pory nierozszyfrowane!]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/3/Odkrycia_i_wynalazki_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[  ]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>6</id>
+          <name><![CDATA[Zwierzęta]]></name>
+          <price>19.71</price>
+          <url>https://ssl.afiliant.com/affskrypt,db929f18,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Podręczniki szkolne]]></categoryId>
+          <description><![CDATA["Idealna i fascynująca książka dla małych odkrywców, którzy nieustannie szukają ciekawostek o rybach, ssakach, ptakach i owadach. Książka daje możliwość odkrycia wielu nowych, interesujących informacji o zwierzętach, pozwala poznać z bliska ich wspaniały świat. Dzięki informacjom zawartym w książce młody czytelnik odkryje wiele interesujących gatunków zwierząt, pozna zaskakujące ciekawostki o zwierzętach, odkryje te rzadko opisywane czy zagrożone wyginięciem. Odkryje ich zwyczaje, pochodzenie, sposób porozumiewania się, pozna zwierzęta, które latają, pływają, biegają, pełzają i skaczą! Na końcu każdego rozdziału przeczyta o rekordach w świecie zwierząt: o zwierzętach śmiesznych, wielkich, szybkich, sprytnych, a nawet dziwnych!"]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/6/Zwierzeta_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[  ]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>12</id>
+          <name><![CDATA[300 krówek na gigancie]]></name>
+          <price>20.61</price>
+          <url>https://ssl.afiliant.com/affskrypt,db92b676,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Literatura piękna i popularna,Literatura dla dzieci i młodzieży]]></categoryId>
+          <description><![CDATA[W spokojne dni zajmuje się prowadzeniem hotelu w Dolinie Emmy, ale kiedy ktoś jej potrzebuje&hellip;ona jest gotowa do akcji w swym prochowcu-talizmanie. żadna zagadka nie stanowi problemu dla Krffki Emmy!]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/12/300_krowek_na_gigancie_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[Peter Coolbak]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>13</id>
+          <name><![CDATA[365 dobranocek]]></name>
+          <price>17.91</price>
+          <url>https://ssl.afiliant.com/affskrypt,db92ba5b,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Literatura piękna i popularna,Literatura dla dzieci i młodzieży]]></categoryId>
+          <description><![CDATA[Gdy otworzysz tę wyjątkową książeczkę, to co dzień inną przeczytasz bajeczkę, są tu też historyjki i wierszyki śmiesznewięc je po kolei przeczytaj koniecznie.]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/13/365_dobranocek_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[  ]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>20</id>
+          <name><![CDATA[Poznaję cyfry i litery. Akademia zabaw przedszkolaka]]></name>
+          <price>7.11</price>
+          <url>https://ssl.afiliant.com/affskrypt,db92d59e,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Literatura piękna i popularna,Literatura dla dzieci i młodzieży]]></categoryId>
+          <description><![CDATA["Nowa seria edukacyjnych kolorowanek dla najmłodszych. Zakres zadań i tematyka kolorowanek zostały dostosowane do zainteresowań i możliwości przedszkolaków. Zadania zawarte w tych książkach gwarantują doskonałą zabawę. Rozwiązywanie zadań, kolorowanie, szukanie przejść przez labirynty, przyklejanie naklejek  te czynności nie tylko bawią, ale również uczą, ćwiczą logiczne myślenie, doskonalą spostrzegawczość i mowę, rozwijają wyobraźnię. Dziecko poszerza i zdobywa nową wiedzę o otaczającym je świecie, uczy się liczyć, poznaje kształty, porównuje wielkości przedmiotów i określa ich położenie w przestrzeni.Ilustracje: Monika Karaśkiewicz."]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/20/Poznaje_cyfry_i_litery_Akademia_zabaw_przedszkolaka_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[  ]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>21</id>
+          <name><![CDATA[Poznaję świat. Akademia zabaw przedszkolaka]]></name>
+          <price>7.11</price>
+          <url>https://ssl.afiliant.com/affskrypt,db92d983,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Literatura piękna i popularna,Literatura dla dzieci i młodzieży]]></categoryId>
+          <description><![CDATA["Nowa seria edukacyjnych kolorowanek dla najmłodszych. Zakres zadań i tematyka kolorowanek zostały dostosowane do zainteresowań i możliwości przedszkolaków. Zadania zawarte w tych książkach gwarantują doskonałą zabawę. Rozwiązywanie zadań, kolorowanie, szukanie przejść przez labirynty, przyklejanie naklejek  te czynności nie tylko bawią, ale również uczą, ćwiczą logiczne myślenie, doskonalą spostrzegawczość i mowę, rozwijają wyobraźnię. Dziecko poszerza i zdobywa nową wiedzę o otaczającym je świecie, uczy się liczyć, poznaje kształty, porównuje wielkości przedmiotów i określa ich położenie w przestrzeni.Ilustracje: Monika Karaśkiewicz."]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/21/Poznaje_swiat_Akademia_zabaw_przedszkolaka_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[  ]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>24</id>
+          <name><![CDATA[Austeria]]></name>
+          <price>17.91</price>
+          <url>https://ssl.afiliant.com/affskrypt,db92e532,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Literatura piękna i popularna]]></categoryId>
+          <description><![CDATA[\"Do nagrania głosu użyczyli znakomici polscy aktorzy i lektorzy:Kazimierz Kaczor - lektura, Krystyna Czubwna &ndash; opracowanie. Lektura z opracowaniem i audiobookiem prezentuje lektury uwzględnione w programach nauczania szkł wszystkich typw i szczebli. Książki zostały opracowane.przez nauczycieli specjalistw zgodnie z obowiązującą podstawą programową. Każda z nich zawiera: &bull; starannie przygotowany, opatrzony przypisami pełny tekst utworu, &bull; oznaczone symbolami graficznymi komentarze do tekstu, zamieszczone na marginesach, &bull; biogram autora, &bull; streszczenie utworu, &bull; obszerne, wyczerpujące omwienie treści i problematyki, &bull; wnikliwe charakterystyki bohaterw, &bull; tematy i plany najczęściej pojawiających się wypracowań związanych z lekturą, Do każdej książki gratis dodany został audiobook w przyjaznym formacie mp3, zawierający pełny tekst lektury oraz opracowanie.\"]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/24/Austeria_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[Julian Stryjkowski]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>25</id>
+          <name><![CDATA[Bajki o wielkich i małych przygodach]]></name>
+          <price>17.91</price>
+          <url>https://ssl.afiliant.com/affskrypt,db92e917,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Literatura piękna i popularna,Literatura dla dzieci i młodzieży]]></categoryId>
+          <description><![CDATA[Posłuchajcie opowieści o przygodach niezwykłych bohaterów: mrówki, która szukała szczęścia, mieszkającej w grzybiej nóżce biedronkii jej nieproszonego gościa, skromnego szewczyka, który uratował zaklętą pannę, dzielnego zdobywcy Sobotniej Góry i wielu innych. Każdy z nich przeżywa przygody na swoją miarę, dlatego jedne przygody są wielkie, a inne małe, lecz wszystkie fascynujące i pełne niespodzianek. Seria Biblioteczka Przedszkolaka zawiera baśnie, bajki i bajeczki dobrane specjalnie z myślą o najmłodszych. Obok utworów należących do klasyki literatury dziecięcej mali czytelnicy znajdą tu utwory pisarzy współczesnych, bliskie zainteresowaniom i wrażliwości dziecka w wieku przedszkolnym. Wesołe, pogodne i mądre teksty nadają się znakomicie do wspólnej głośnej lektury w domu i w przedszkolu.]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/25/Bajki_o_wielkich_i_malych_przygodach_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[  ]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>29</id>
+          <name><![CDATA[Ballady i romanse]]></name>
+          <price>8.91</price>
+          <url>https://ssl.afiliant.com/affskrypt,db92f8ab,37f416,,27eb4,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Literatura piękna i popularna]]></categoryId>
+          <description><![CDATA[\"Do nagrania głosu użyczyli znakomici polscy aktorzy i lektorzy:Olgierd Łukaszewicz - lektura, Krystyna Czubwna &ndash; opracowanie. Lektura z opracowaniem i audiobookiem prezentuje lektury uwzględnione w programach nauczania szkł wszystkich typw i szczebli. Książki zostały opracowane przez nauczycieli specjalistw zgodnie z obowiązującą podstawą programową. Każda z nich zawiera: &bull; starannie przygotowany, opatrzony przypisami pełny tekst utworu, &bull; oznaczone symbolami graficznymi komentarze do tekstu, zamieszczone na marginesach, &bull; biogram autora, &bull; streszczenie utworu, &bull; obszerne, wyczerpujące omwienie treści i problematyki, &bull; wnikliwe charakterystyki bohaterw, &bull; tematy i plany najczęściej pojawiających się wypracowań związanych z lekturą, Do każdej książki gratis dodany został audiobook w przyjaznym formacie mp3, zawierający pełny tekst lektury oraz opracowanie.\"]]></description>
+          <image><![CDATA[http://www.zielonasowa.pl/zdjecia/29/Ballady_i_romanse_l.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Producent</name>
+              <value><![CDATA[Adam Mickiewicz]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+      </offers>
+    </loadOffers>
+  </pasaz:Body>
+</pasaz:Envelope>

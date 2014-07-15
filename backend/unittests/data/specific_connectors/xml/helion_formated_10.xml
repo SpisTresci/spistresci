@@ -1,0 +1,755 @@
+<?xml version="1.0" encoding="iso-8859-2"?>
+<!--
+	    Dane z dnia: sob, 21 wrz 2013, 01:07:24 CEST
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ Ze względu na wielkość pliku XML, proszę o ściąganie wersji produkty-helion.xml.zip
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+            Jeśli będziesz sprzedawał książki w PP, to użyj pola <status>:
+
+		0 - niedostepna
+		1 - dostepna
+		2 - w przygotowaniu
+		5 - druk na żądanie
+		7 - przedsprzedaz
+	    oraz <cena>, <cenadetaliczna> (ceny takie jak na stronach GW Helion : moga zawierac znizki itp.)
+
+	    dla ksiegarni internetowych (wspolpraca z dzialem handlowym, ehelion) użyj pola <status2>:
+
+    		1 - dostępna
+		2 - dostępna w małej ilości
+		3 - chwilowo niedostępna
+		4 - niedostępna
+		5 - POD
+		6 - w przygotowaniu
+		7 - w przedsprzedaży
+            oraz pola <ksiegarnie_nieinter> gdzie znajduja sie wszystkie dane odnosnie ceny netto, brutto, stawka VAT
+
+		<typ>:
+			1 - ksiazka
+			2 - ebook
+			3 - audiobook mp3
+			4 - audiocd mp3
+
+		<marka>:
+			1 - helion
+			2 - onepress
+			3 - editio
+			4 - sensus
+			5 - septem
+			6 - bezdroza
+			8 - podrecznik
+			11 - bezdroża obce
+
+Zmiany:
+09.02.2011 @MJJ dolożenie elementu <typ>
+15.06.2011 @MJJ dodanie pliku lista2-statusy.xml z samymi statusami, cenami
+21.12.2011 @TKr seolinki, zagregowane formaty ebooków
+23.01.2012 @TKr info o promocjach, lista promocji serwis.pl/xml/lista-promocje.cgi
+15.06.2012 @TKr dodane info o audiobookach
+29.08.2012 @TKr dodane md5 jako wßkaźnik zmiany informacji w książce
+
+		Kontakt: Michal Jęczalik <michal.jeczalik@helion.pl>
+-->
+<details>
+<lista baza="helion">
+<ksiazka ident="100E27">
+	<isbn>978-83-246-1331-1</isbn>
+	<ean>9788324613311</ean>
+	<ident>100E27</ident>
+	<tytul language="polski">100 sposobów na Excel 2007 PL. Tworzenie funkcjonalnych arkuszy </tytul>
+	<tytul language="oryginal">Excel Hacks: Tips &amp; Tools for Streamlining Your Spreadsheets</tytul>
+	<link>http://helion.pl/ksiazki/100-sposobow-na-excel-2007-pl-tworzenie-funkcjonalnych-arkuszy-david-hawley-raina-hawley,100e27.htm</link>
+	<autor>David Hawley, Raina Hawley</autor>
+	<tlumacz>Zbigniew Smogur</tlumacz>
+	<status>1</status>
+	<cena>57.00</cena>
+	<cenadetaliczna>57.00</cenadetaliczna>
+	<znizka>0.00</znizka>
+	<marka>1</marka>
+	<nazadanie>0</nazadanie>
+	<format>168x237</format>
+	<typ>1</typ>
+	<oprawa>miękka</oprawa>
+	<wydawca/>
+	<liczbastron>368</liczbastron>
+	<datawydania>2008-05-20</datawydania>
+	<online>http://pdf.helion.pl/100e27/100e27-2.pdf</online>
+	<okladka>http://helion.pl/okladki/326x466/100e27.jpg</okladka>
+	<bestseller>0</bestseller>
+	<nowosc>0</nowosc>
+	<promocja id="401">Opadają liście, opadają ceny!</promocja>
+	<powiazane>
+		<ident_powiazany>ALGALM</ident_powiazany>
+		<ident_powiazany>ANDREC</ident_powiazany>
+		<ident_powiazany>E21PVB</ident_powiazany>
+		<ident_powiazany>GOOGAD</ident_powiazany>
+		<ident_powiazany>GRYMEG</ident_powiazany>
+		<ident_powiazany>JQUEMO</ident_powiazany>
+		<ident_powiazany>NAZA12</ident_powiazany>
+		<ident_powiazany>PHOTKS</ident_powiazany>
+		<ident_powiazany>PODWSM</ident_powiazany>
+		<ident_powiazany>PORSP4</ident_powiazany>
+		<ident_powiazany>WYRAWP</ident_powiazany>
+		<ident_powiazany>WYRERE</ident_powiazany>
+	</powiazane>
+	<seriewydawnicze>
+		<seriawydawnicza id="30">100 sposobów na...</seriawydawnicza>
+		<seriawydawnicza id="17">O'Reilly</seriawydawnicza>
+	</seriewydawnicze>
+	<serietematyczne>
+		<seriatematyczna id="28">Excel</seriatematyczna>
+	</serietematyczne>
+	<ksiegarnie_nieinter>
+		<waga>0.60</waga>
+		<status2>1</status2>
+		<cena_netto>54.29</cena_netto>
+		<cena_brutto>57</cena_brutto>
+		<vat>2.71</vat>
+		<vat_procent>5</vat_procent>
+	</ksiegarnie_nieinter>
+	<opis><![CDATA[Wykorzystaj wszystkie możliwości Excela, aby tworzyć funkcjonalne i efektowne arkusze</p>
+
+<ul>
+<li>Jak analizować dane i zarządzać nimi?</li>
+<li>Jak optymalnie wykorzystywać tabele przestawne?</li>
+<li>Jak tworzyć spersonalizowane wykresy?</li>
+</ul>
+
+<p>Większość użytkowników Excela zna tylko drobną część dostępnych w nim możliwości. Istnieje jednak wiele metod pozwalających znacząco poszerzyć wydajność tego programu i tworzyć efektowne arkusze kalkulacyjne bez potrzeby czasochłonnego zdobywania wiedzy. Nowa wersja Excela umożliwia chociażby łatwiejsze korzystanie z mechanizmu tabel przestawnych, formatowania warunkowego i nazw zakresów, podglądu "na żywo", galerii predefiniowanych stylów oraz grafik SmartArt. Wszystko to sprawia, że każdy może dziś w swoich arkuszach używać bardziej skomplikowanych elementów wizualnych i graficznych.</p>
+
+
+<p>Obecnie, kiedy wszystko dzieje się coraz szybciej, czas staje się jedną z najistotniejszych i pożądanych wartości. Książka "100 sposobów na Excel 2007 PL. Tworzenie funkcjonalnych arkuszy" pozwala Ci właśnie zyskać na czasie - oferuje ponad sto gotowych metod tworzenia funkcjonalnych i efektownych arkuszy, szybkich i niezawodnych rozwiązań skomplikowanych problemów. Warto także wykorzystać te metody do przeanalizowania oraz zastosowania niektórych możliwości języka Visual Basic for Applications (VBA) - dzięki temu będziesz mógł zaadaptować wszystkie zawarte tu propozycje do własnych potrzeb.</p>
+
+
+<ul>
+<li>Skoroszyty i arkusze</li>
+<li>Wbudowane mechanizmy do analizy danych i zarządzania nimi</li>
+<li>Metody tworzenia nazw i zakresów komórek</li>
+<li>Tabele przestawne</li>
+<li>Formuły i funkcje</li>
+<li>Wykresy i makra</li>
+<li>Współpraca Excela z innymi aplikacjami pakietu Office</li>
+</ul>
+
+
+<p>Wszystko, co chciałbyś widzieć o Excelu, aby natychmiast z niego skorzystać.</p>
+
+<div align="center"><h4><b> Poznaj ponad setkę sposobów skutecznego radzenia sobie z Excelem!</b></h4></div>]]></opis>
+	<md5>f873fbeb4fec259f4b4ffc0443ebf367</md5>
+</ksiazka>
+<ksiazka ident="100EBI">
+	<isbn>978-83-246-2723-3</isbn>
+	<ean>9788324627233</ean>
+	<ident>100EBI</ident>
+	<tytul language="polski">125 pytań na temat e-biznesu do Piotra Majewskiego</tytul>
+	<link>http://helion.pl/ksiazki/125-pytan-na-temat-e-biznesu-do-piotra-majewskiego-piotr-majewski,100ebi.htm</link>
+	<autor>Piotr Majewski</autor>
+	<status>1</status>
+	<cena>39.00</cena>
+	<cenadetaliczna>39.00</cenadetaliczna>
+	<znizka>0.00</znizka>
+	<marka>1</marka>
+	<nazadanie>0</nazadanie>
+	<format>A5</format>
+	<typ>1</typ>
+	<oprawa>miękka</oprawa>
+	<wydawca/>
+	<liczbastron>224</liczbastron>
+	<datawydania>2010-09-20</datawydania>
+	<online>http://pdf.helion.pl/100ebi/100ebi.pdf</online>
+	<okladka>http://helion.pl/okladki/326x466/100ebi.jpg</okladka>
+	<okladkatyl>http://helion.pl/okladki-tyl/326x466/100ebi.jpg</okladkatyl>
+	<issueurl>http://helion.pl/eksiazki/100ebi.htm</issueurl>
+	<bestseller>0</bestseller>
+	<nowosc>0</nowosc>
+	<promocja id="401">Opadają liście, opadają ceny!</promocja>
+	<powiazane>
+		<ident_powiazany>ABCKO8</ident_powiazany>
+		<ident_powiazany>BIBEBI</ident_powiazany>
+		<ident_powiazany>CLICMI</ident_powiazany>
+		<ident_powiazany>E14TEI</ident_powiazany>
+		<ident_powiazany>EBIZP2</ident_powiazany>
+		<ident_powiazany>ERAFAC</ident_powiazany>
+		<ident_powiazany>GITROZ</ident_powiazany>
+		<ident_powiazany>GROMKO</ident_powiazany>
+		<ident_powiazany>MY5LAT</ident_powiazany>
+		<ident_powiazany>MY5LOG</ident_powiazany>
+		<ident_powiazany>PODFRE</ident_powiazany>
+		<ident_powiazany>ZROBPM</ident_powiazany>
+	</powiazane>
+	<serietematyczne>
+		<seriatematyczna id="151">E-biznes</seriatematyczna>
+	</serietematyczne>
+	<ksiegarnie_nieinter>
+		<waga>0.28</waga>
+		<status2>1</status2>
+		<cena_netto>37.14</cena_netto>
+		<cena_brutto>39</cena_brutto>
+		<vat>1.86</vat>
+		<vat_procent>5</vat_procent>
+	</ksiegarnie_nieinter>
+	<opis><![CDATA[<div align="center"><h4><b>Zadaj pytanie, otrzymasz odpowiedź</b></h4></div>
+
+
+<p>Dla tysięcy osób czujących w sobie żyłkę przedsiębiorczości internet jest prawdziwą ziemią obiecaną - trochę jeszcze dziką i nie do końca rozpoznaną, jednak oferującą niezmierzone wprost możliwości. E-biznes zaś to najbardziej smakowita wisienka na tym wirtualnym torcie. </p>
+
+<p>
+Nowe e-inicjatywy powstają codziennie; często wystarczy po prostu dobry pomysł, by bardzo niewielkim kosztem wejść na rynek i podbić go dzięki swoim usługom czy produktom. Ale skąd wiadomo, że pomysł jest dobry? Od czego zacząć? Jakie rozwiązania najlepiej zastosować? Jak ograniczyć koszty do minimum? Sam pewnie masz ochotę zadać setki pytań na ten temat. Potrzebujesz więc kompetentnego eksperta i praktyka w jednej osobie; człowieka, który pozwoli Ci rozwiać wszelkie wątpliwości w dziedzinie e-biznesu - Piotra Majewskiego. </p>
+
+<p>Przeczytaj, co mówi na temat e-biznesu, i poznaj odpowiedzi na 125 najważniejszych pytań, m.in.:
+<ul>
+<li>Jak wejść w internet i odnieść sukces bez wielkich inwestycji?</li>
+<li>Gdzie są pieniądze w sieci, a gdzie ich nie ma?</li>
+<li>Jak przeprowadzić efektywną analizę rynku i konkurencji?</li>
+<li>Jak zacząć, jeśli nie mamy doświadczenia informatycznego i funduszy, ale mamy czas?</li>
+<li>Jak stworzyć kampanię marketingową dla nowo powstałego portalu?</li>
+<li>Jak wypromować swój e-biznes skutecznymi i darmowymi metodami?</li>
+<li>W jaki sposób klienci najchętniej płacą w e-sklepach i jak ułatwić im transakcje?</li>
+<li>Gdzie szukać i jak znaleźć dobrego copywritera?</li>
+<li>Jak zwabić klientów do sklepu internetowego?</li>
+<li>Jak blog może wpływać na sprzedaż?</li>
+</ul>
+</p>]]></opis>
+	<md5>63542992939af0a38a8b0b9ff1cadde4</md5>
+</ksiazka>
+<ksiazka ident="100RZP">
+	<isbn>978-83-246-6283-8</isbn>
+	<ean>9788324662838</ean>
+	<ident>100RZP</ident>
+	<tytul language="polski">100 rzeczy, które każdy projektant powinien wiedzieć o potencjalnych klientach</tytul>
+	<tytul language="oryginal">100 Things Every Designer Needs to Know About People (Voices That Matter)</tytul>
+	<link>http://helion.pl/ksiazki/100-rzeczy-ktore-kazdy-projektant-powinien-wiedziec-o-potencjalnych-klientach-susan-weinschenk,100rzp.htm</link>
+	<autor>Susan Weinschenk</autor>
+	<tlumacz>Daniel Kaczmarek</tlumacz>
+	<status>1</status>
+	<cena>49.00</cena>
+	<cenadetaliczna>49.00</cenadetaliczna>
+	<znizka>0.00</znizka>
+	<marka>1</marka>
+	<nazadanie>0</nazadanie>
+	<format>168x237 </format>
+	<typ>1</typ>
+	<oprawa>miękka</oprawa>
+	<wydawca/>
+	<liczbastron>244</liczbastron>
+	<datawydania>2013-06-21</datawydania>
+	<online>http://pdf.helion.pl/100rzp/100rzp.pdf</online>
+	<okladka>http://helion.pl/okladki/326x466/100rzp.jpg</okladka>
+	<okladkatyl>http://helion.pl/okladki-tyl/326x466/100rzp.jpg</okladkatyl>
+	<issueurl>http://helion.pl/eksiazki/100rzp.htm</issueurl>
+	<bestseller>0</bestseller>
+	<nowosc>1</nowosc>
+	<promocja id="401">Opadają liście, opadają ceny!</promocja>
+	<powiazane>
+		<ident_powiazany>ABCKO8</ident_powiazany>
+		<ident_powiazany>CWJAS3</ident_powiazany>
+		<ident_powiazany>E13TEI</ident_powiazany>
+		<ident_powiazany>JQUEMO</ident_powiazany>
+		<ident_powiazany>NIEKA2</ident_powiazany>
+		<ident_powiazany>PHMSRO</ident_powiazany>
+		<ident_powiazany>PODFRE</ident_powiazany>
+		<ident_powiazany>PODWSM</ident_powiazany>
+		<ident_powiazany>PPJSA7</ident_powiazany>
+		<ident_powiazany>SYSIKV</ident_powiazany>
+		<ident_powiazany>TSIDR3</ident_powiazany>
+		<ident_powiazany>WORPRE</ident_powiazany>
+	</powiazane>
+	<serietematyczne>
+		<seriatematyczna id="87">Funkcjonalność stron</seriatematyczna>
+	</serietematyczne>
+	<ksiegarnie_nieinter>
+		<waga>0.60</waga>
+		<status2>1</status2>
+		<cena_netto>46.67</cena_netto>
+		<cena_brutto>49</cena_brutto>
+		<vat>2.33</vat>
+		<vat_procent>5</vat_procent>
+	</ksiegarnie_nieinter>
+	<opis><![CDATA[<div align="center"><h4><b> Dowiedz się, jak pracuje mózg Twojego klienta </b></h4></div>
+
+<p>Jak myślą konsumenci? W jaki sposób podejmują decyzje? Co sprawia, że klikają myszką, dokonują zakupu i robią dokładnie to, co chciałbyś, aby robili? 
+Talent i umiejętności to tylko połowa sukcesu. Aby Twoje projekty rzucały wszystkich na kolana, potrzebna Ci wiedza dotycząca tego, jak działa ludzki mózg. Może Ci się czasem wydawać, że ludzie zachowują się irracjonalnie i nieprzewidywalnie, ale w tym szaleństwie jest metoda. Czas, byś ją poznał i użył jej do własnych celów!</p>
+
+<p>Z zawartych w tej książce rzeczowych instrukcji dowiesz się, jak odczytywać zachowania konsumentów i co przyciąga ich uwagę. Poznasz błędy, jakie ludzie najczęściej popełniają w procesie postrzegania oraz dokonywania wyborów, i nauczysz się je przewidywać. Wykorzystaj w swojej pracy wnioski z badań naukowych oraz szereg praktycznych przykładów. Zacznij projektować i tworzyć bardziej intuicyjne, skuteczne, efektowne teksty, witryny internetowe, aplikacje, produkty, grafiki oraz wszelkie inne genialne dzieła, idealnie dopasowane do potrzeb potencjalnych klientów. </p>
+
+<ul>
+<li>Jak przykuwać uwagę na stronie WWW?</li>
+<li>Jak spowodować, by coś zapadło ludziom w pamięć?</li>
+<li>Jak motywować innych, by wykonali kolejny krok?</li>
+<li>Jak utrwalać w umysłach odbiorców określone informacje?</li>
+<li>Jak kształtować czyjeś przyzwyczajenia?</li>
+<li>Jak pogłębiać i utrwalać relacje z klientami?</li>
+<li>Jak odwoływać się do pozytywnych emocji i wspomnień?</li>
+<li>Jak skutecznie oddziaływać na podświadomość klienta?</li></ul>
+
+<div align="center"><h4><b> Zwiększ skuteczność, wskaźniki konwersji i użyteczność projektów! </b></h4></div>
+
+<hr /> 
+
+<p><b>Susan M. Weinschenk</b> jest doktorem psychologii z wieloletnim doświadczeniem w praktycznym zastosowaniu psychologii do projektowania rozwiązań technologicznych. Jest autorką kilku książek na temat metod projektowania skupionych na potrzebach użytkowników. Jest także wykładowcą i prelegentką oraz szefową działu User Experience Strategy dla obu Ameryk w firmie Human Factors International, a ponadto autorką popularnego bloga 
+whatmakesthemclick.net.</p>]]></opis>
+	<md5>c809eaa8d803b34d601d2776bf47847d</md5>
+</ksiazka>
+<ksiazka ident="100SPO">
+	<isbn>83-7361-452-4</isbn>
+	<ean>9788373614529</ean>
+	<ident>100SPO</ident>
+	<tytul language="polski">100 sposobów na tworzenie robotów sieciowych</tytul>
+	<tytul language="oryginal">Spidering Hacks 100 Industrial-Strength Tips&amp; Tools</tytul>
+	<link>http://helion.pl/ksiazki/100-sposobow-na-tworzenie-robotow-sieciowych-kevin-hemenway-tara-calishain,100spo.htm</link>
+	<autor>Kevin Hemenway, Tara Calishain</autor>
+	<tlumacz>Tomasz Żmijewski</tlumacz>
+	<status>0</status>
+	<cena>69.00</cena>
+	<cenadetaliczna>69.00</cenadetaliczna>
+	<znizka>0.00</znizka>
+	<marka>1</marka>
+	<nazadanie>1</nazadanie>
+	<format>B5</format>
+	<typ>1</typ>
+	<oprawa>miękka</oprawa>
+	<wydawca/>
+	<liczbastron>384</liczbastron>
+	<datawydania>2004-04-20</datawydania>
+	<online>http://pdf.helion.pl/100spo/100spo-1.pdf</online>
+	<okladka>http://helion.pl/okladki/326x466/100spo.jpg</okladka>
+	<bestseller>0</bestseller>
+	<nowosc>0</nowosc>
+	<promocja id="401">Opadają liście, opadają ceny!</promocja>
+	<powiazane>
+		<ident_powiazany>100RZP</ident_powiazany>
+		<ident_powiazany>AC27BI</ident_powiazany>
+		<ident_powiazany>ASPM4P</ident_powiazany>
+		<ident_powiazany>CWJQUE</ident_powiazany>
+		<ident_powiazany>E12MEN</ident_powiazany>
+		<ident_powiazany>GRYMEG</ident_powiazany>
+		<ident_powiazany>JQUEMO</ident_powiazany>
+		<ident_powiazany>JSJQNP</ident_powiazany>
+		<ident_powiazany>PPJSA7</ident_powiazany>
+		<ident_powiazany>STARTP</ident_powiazany>
+		<ident_powiazany>TSIDR3</ident_powiazany>
+		<ident_powiazany>WYRAWP</ident_powiazany>
+	</powiazane>
+	<seriewydawnicze>
+		<seriawydawnicza id="30">100 sposobów na...</seriawydawnicza>
+		<seriawydawnicza id="17">O'Reilly</seriawydawnicza>
+	</seriewydawnicze>
+	<serietematyczne>
+		<seriatematyczna id="168">Inne</seriatematyczna>
+	</serietematyczne>
+	<ksiegarnie_nieinter>
+		<waga>0.66</waga>
+		<status2>5</status2>
+		<cena_netto>65.71</cena_netto>
+		<cena_brutto>69</cena_brutto>
+		<vat>3.29</vat>
+		<vat_procent>5</vat_procent>
+	</ksiegarnie_nieinter>
+	<opis><![CDATA[<p>Internet to niewyczerpane źródło informacji. Zwykle jednak znalezienie w gąszczu witryn i danych tego, co jest naprawdę potrzebne, jest zadaniem niezwykle trudnym. Wyszukiwarki internetowe, nawet te najpopularniejsze i najbardziej efektywne w działaniu, nie zawsze są odpowiednim rozwiązaniem. W takich przypadkach trzeba poszukać innego sposobu, a nawet opracować własną metodę przeszukiwania sieci.</p>
+
+Książka "100 sposobów na tworzenie robotów sieciowych" może służyć pomocą w wielu takich właśnie przypadkach. Przedstawia sposoby tworzenia i wykorzystywania "pająków" przeszukujących sieć pod kątem określonych zasobów. W książce poruszono następujące zagadnienia:
+<ul>
+<li> Uwarunkowania prawne dotyczące korzystania z programów przeszukujących sieć
+<li> Narzędzia do tworzenia robotów oraz wyszukiwania danych
+<li> Sposoby wyszukiwania i pobierania plików multimedialnych
+<li> Przeszukiwanie sieciowych baz danych
+<li> Metody zapisywania zbiorów danych i aktualizowania ich
+<li> Tworzenie zbiorów danych łatwych do przeszukiwania przez innych
+</ul>
+<p>W książce przedstawiono techniki tworzenia kompletnych programów przeszukujących sieć (pająków), umożliwiających odnalezienie wszystkich potrzebnych danych.</p>]]></opis>
+	<md5>4411c899785319fab87832a7114db637</md5>
+</ksiazka>
+<ksiazka ident="100UBU">
+	<isbn>83-246-0701-3</isbn>
+	<ean>9788324607013</ean>
+	<ident>100UBU</ident>
+	<tytul language="polski">100 sposobów na Ubuntu</tytul>
+	<tytul language="oryginal">Ubuntu Hacks: Tips &amp; Tools for Exploring, Using, and Tuning Linux</tytul>
+	<link>http://helion.pl/ksiazki/100-sposobow-na-ubuntu-jonathan-oxer-kyle-rankin-bill-childers,100ubu.htm</link>
+	<autor>Jonathan Oxer, Kyle Rankin, Bill Childers</autor>
+	<tlumacz>Adam Bąk, Przemysław Szeremiota</tlumacz>
+	<status>1</status>
+	<cena>59.00</cena>
+	<cenadetaliczna>59.00</cenadetaliczna>
+	<znizka>0.00</znizka>
+	<marka>1</marka>
+	<nazadanie>0</nazadanie>
+	<format>B5</format>
+	<typ>1</typ>
+	<oprawa>miękka</oprawa>
+	<wydawca/>
+	<liczbastron>440</liczbastron>
+	<datawydania>2006-11-29</datawydania>
+	<online>http://pdf.helion.pl/100ubu/100ubu-3.pdf</online>
+	<okladka>http://helion.pl/okladki/326x466/100ubu.jpg</okladka>
+	<bestseller>0</bestseller>
+	<nowosc>0</nowosc>
+	<promocja id="401">Opadają liście, opadają ceny!</promocja>
+	<powiazane>
+		<ident_powiazany>ACCGAB</ident_powiazany>
+		<ident_powiazany>ARCH10</ident_powiazany>
+		<ident_powiazany>CSH5PR</ident_powiazany>
+		<ident_powiazany>GETTIN</ident_powiazany>
+		<ident_powiazany>GITROZ</ident_powiazany>
+		<ident_powiazany>GOOGAD</ident_powiazany>
+		<ident_powiazany>IOS5RE</ident_powiazany>
+		<ident_powiazany>JQUEMO</ident_powiazany>
+		<ident_powiazany>JSCMOC</ident_powiazany>
+		<ident_powiazany>TWAPW8</ident_powiazany>
+		<ident_powiazany>WIN8ZA</ident_powiazany>
+		<ident_powiazany>WYRERE</ident_powiazany>
+	</powiazane>
+	<seriewydawnicze>
+		<seriawydawnicza id="30">100 sposobów na...</seriawydawnicza>
+		<seriawydawnicza id="17">O'Reilly</seriawydawnicza>
+	</seriewydawnicze>
+	<serietematyczne>
+		<seriatematyczna id="142">Ubuntu</seriatematyczna>
+	</serietematyczne>
+	<ksiegarnie_nieinter>
+		<waga>0.64</waga>
+		<status2>2</status2>
+		<cena_netto>56.19</cena_netto>
+		<cena_brutto>59</cena_brutto>
+		<vat>2.81</vat>
+		<vat_procent>5</vat_procent>
+	</ksiegarnie_nieinter>
+	<opis><![CDATA[<div align="center"><h4><b> Zbiór praktycznych wskazówek dla użytkowników Ubuntu </b></h4></div> 
+<ul>
+<li> Administrowanie systemem </li>
+<li> Korzystanie z właściwości multimedialnych </li>
+<li> Zabezpieczanie systemu przed atakami </li>
+</ul>
+<p> Ubuntu Linux w ciągu niespełna dwóch lat stał się jedną z najpopularniejszych dystrybucji Linuksa na świecie. Został zbudowany w oparciu o dystrybucję Debian, ale przeznaczony jest dla użytkowników domowych. Twórcy dystrybucji wybrali z zasobów Debiana najlepsze i najbardziej stabilne oprogramowanie niezbędne do korzystania z wszystkich możliwości komputera, dlatego system jest gotowy do użytku natychmiast po instalacji. Użytkownicy zaawansowani na pewno docenią w Ubuntu możliwość korzystania z pakietów instalacyjnych Debiana, dzięki którym będą mogli dostosować system do własnych wymagań i przyzwyczajeń. </p>
+
+<p> Książka "100 sposobów na Buntu" to skarbnica wiedzy dla korzystających z tej dystrybucji. Jej autorzy -- długoletni użytkownicy różnych dystrybucji Linuksa -- przedstawiają w niej sposoby na wyciśnięcie z Ubuntu pełni jego możliwości. Czytając ją, dowiesz się, w jaki sposób korzystać z płyty Ubuntu Live CD, jak instalować i konfigurować system oraz dostroić go do optymalnej wydajności. Nauczysz się obsługi konsoli tekstowej i środowisk graficznych, zainstalujesz nowe programy oraz wykorzystasz multimedialne właściwości komputera z oprogramowaniem Ubuntu. Poznasz sposoby uruchamiania serwerów sieciowych w oparciu o Ubuntu i zabezpieczysz system przed atakami hakerów. </p>
+<ul>
+<li> Uruchamianie Ubuntu Live CD </li>
+<li> Instalacja Ubuntu </li>
+<li> Współpraca z systemami Windows i Mac OS X </li>
+<li> Konfigurowanie środowiska KDE </li>
+<li> Synchronizacja z PDA </li>
+<li> Odtwarzanie płyt CD i DVD </li>
+<li> Pobieranie zdjęć z aparatów cyfrowych </li>
+<li> Instalowanie nowego oprogramowania z pakietów </li>
+<li> Zabezpieczenie sieci zaporą sieciową </li>
+<li> Kompilowanie jądra </li>
+<li> Zastosowanie Ubuntu w charakterze serwera sieciowego </li>
+</ul>
+<div align="center"><h4><b> Poznaj najgłębiej ukryte możliwości Ubuntu. </b></h4></div>]]></opis>
+	<md5>9f27424ff52f7861991e6f72f9ddeebc</md5>
+</ksiazka>
+<ksiazka ident="101OPO">
+	<isbn>83-246-0388-3</isbn>
+	<ean>9788324603886</ean>
+	<ident>101OPO</ident>
+	<tytul language="polski">122 sposoby na OpenOffice.ux.pl 2.0</tytul>
+	<link>http://helion.pl/ksiazki/122-sposoby-na-openoffice-ux-pl-2-0-adam-jaronicki,101opo.htm</link>
+	<autor>Adam Jaronicki</autor>
+	<status>1</status>
+	<cena>79.00</cena>
+	<cenadetaliczna>79.00</cenadetaliczna>
+	<znizka>0.00</znizka>
+	<marka>1</marka>
+	<nazadanie>0</nazadanie>
+	<format>B5</format>
+	<typ>1</typ>
+	<oprawa>miękka</oprawa>
+	<wydawca/>
+	<liczbastron>736</liczbastron>
+	<nosnik>1 CD</nosnik>
+	<datawydania>2006-12-14</datawydania>
+	<online>http://pdf.helion.pl/101opo/101opo-9.pdf</online>
+	<okladka>http://helion.pl/okladki/326x466/101opo.jpg</okladka>
+	<bestseller>0</bestseller>
+	<nowosc>0</nowosc>
+	<promocja id="401">Opadają liście, opadają ceny!</promocja>
+	<powiazane>
+		<ident_powiazany>AC21PR</ident_powiazany>
+		<ident_powiazany>CWVBA</ident_powiazany>
+		<ident_powiazany>CZEX21</ident_powiazany>
+		<ident_powiazany>EX21BI</ident_powiazany>
+		<ident_powiazany>EXTZAA</ident_powiazany>
+		<ident_powiazany>GITROZ</ident_powiazany>
+		<ident_powiazany>PODRG2</ident_powiazany>
+		<ident_powiazany>SHPO21</ident_powiazany>
+		<ident_powiazany>VB27PP</ident_powiazany>
+		<ident_powiazany>VBAE10</ident_powiazany>
+		<ident_powiazany>VS12PC</ident_powiazany>
+		<ident_powiazany>ZAEXAN</ident_powiazany>
+	</powiazane>
+	<serietematyczne>
+		<seriatematyczna id="31">OpenOffice</seriatematyczna>
+	</serietematyczne>
+	<ksiegarnie_nieinter>
+		<waga>1.00</waga>
+		<status2>1</status2>
+		<cena_netto>75.24</cena_netto>
+		<cena_brutto>79</cena_brutto>
+		<vat>3.76</vat>
+		<vat_procent>5</vat_procent>
+	</ksiegarnie_nieinter>
+	<opis><![CDATA[<p> OpenOffice to dostępny nieodpłatnie pakiet biurowy, który jest coraz groźniejszym konkurentem dla komercyjnych produktów. W jego skład wchodzi edytor tekstu, arkusz kalkulacyjny, program graficzny, aplikacja do tworzenia prezentacji multimedialnych, edytor równań oraz baza danych -- ten zestaw aplikacji tworzy kompletne narzędzie niezbędne w każdym biurze. OpenOffice przypomina sposobem obsługi pakiety komercyjne i może wymieniać z nimi pliki. Wydajna praca z tak rozbudowanym zestawem aplikacji wymaga opanowania wszystkich jego funkcji. Aby jednak usprawnić codzienne korzystanie z OpenOffice, należy wykorzystać wiele sztuczek, których opisu próżno szukać w oryginalnej dokumentacji pakietu. </p>
+
+<p> Książka "122 sposoby na OpenOffice.ux.pl 2.0" zawiera obrazowe przykłady ilustrujące od podstaw kolejne, coraz bardziej zaawansowane funkcje pakietu. Dzięki nim dokonasz profesjonalnej edycji i formatowania dokumentu, usprawnisz obliczenia i przygotowanie wykresów, a także stworzysz efektowną prezentację multimedialną. Dowiesz się również, w jaki sposób przyspieszyć pracę z pakietem i dostosować interfejs użytkownika do swoich potrzeb. Szczególny nacisk położono na wymianę danych z innymi aplikacjami, eksportowanie i importowanie plików w różnych formatach oraz automatyzację prac i korzystanie z zaawansowanych narzędzi edycyjnych i formatujących. </p>
+<ul>
+<li> Instalacja i konfiguracja pakietu oraz jego najnowszych modułów dostępnych w internecie </li>
+<li> Zaawansowane mechanizmy edycji </li>
+<li> Automatyzacja formatowania przy wykorzystaniu stylów </li>
+<li> Praca z tabelami oraz kolumnami typu gazetowego </li>
+<li> Osadzanie obiektów graficznych w tekście  </li>
+<li> Praca z dużymi dokumentami  </li>
+<li> Edycja i formatowanie arkusza kalkulacyjnego oraz praktyczne przykłady realizacji obliczeń </li>
+<li> Formatowanie wykresów </li>
+<li> Przygotowanie arkusza jako bazy danych </li>
+<li> Tworzenie prezentacji na podstawie szablonów oraz projektowanie własnych wzorców </li>
+<li> Animowanie obiektów slajdów i stosowanie elementów interaktywnych </li>
+</ul>
+<div align="center"><h4><b> Odkryj w ekspresowym tempie tajniki OpenOffice <br /> i wykorzystuj je w codziennej pracy. </b></h4></div>]]></opis>
+	<md5>95086c521c1d72c920674a6f85444582</md5>
+</ksiazka>
+<ksiazka ident="101ZAB">
+	<isbn>83-7361-517-2</isbn>
+	<ean>9788373615175</ean>
+	<ident>101ZAB</ident>
+	<tytul language="polski">101 zabezpieczeń przed atakami w sieci komputerowej</tytul>
+	<link>http://helion.pl/ksiazki/101-zabezpieczen-przed-atakami-w-sieci-komputerowej-maciej-szmit-marek-gusta-mariusz-tomaszewski,101zab.htm</link>
+	<autor>Maciej Szmit, Marek Gusta, Mariusz Tomaszewski</autor>
+	<status>0</status>
+	<cena>89.00</cena>
+	<cenadetaliczna>89.00</cenadetaliczna>
+	<znizka>0.00</znizka>
+	<marka>1</marka>
+	<nazadanie>1</nazadanie>
+	<format>B5</format>
+	<typ>1</typ>
+	<oprawa>miękka</oprawa>
+	<wydawca/>
+	<liczbastron>560</liczbastron>
+	<nosnik>1 CD</nosnik>
+	<datawydania>2005-03-09</datawydania>
+	<online>http://pdf.helion.pl/101zab/101zab-3.pdf</online>
+	<okladka>http://helion.pl/okladki/326x466/101zab.jpg</okladka>
+	<bestseller>0</bestseller>
+	<nowosc>0</nowosc>
+	<promocja id="401">Opadają liście, opadają ceny!</promocja>
+	<powiazane>
+		<ident_powiazany>AC21PR</ident_powiazany>
+		<ident_powiazany>BEKOMP</ident_powiazany>
+		<ident_powiazany>E13TEI</ident_powiazany>
+		<ident_powiazany>HACPEN</ident_powiazany>
+		<ident_powiazany>HACTES</ident_powiazany>
+		<ident_powiazany>HAKAND</ident_powiazany>
+		<ident_powiazany>METASP</ident_powiazany>
+		<ident_powiazany>MIBEIT</ident_powiazany>
+		<ident_powiazany>PANPAK</ident_powiazany>
+		<ident_powiazany>PHOTKS</ident_powiazany>
+		<ident_powiazany>SPLASI</ident_powiazany>
+		<ident_powiazany>STARTP</ident_powiazany>
+	</powiazane>
+	<serietematyczne>
+		<seriatematyczna id="75">Bezpieczeństwo sieci</seriatematyczna>
+	</serietematyczne>
+	<ksiegarnie_nieinter>
+		<waga>0.92</waga>
+		<status2>5</status2>
+		<cena_netto>84.76</cena_netto>
+		<cena_brutto>89</cena_brutto>
+		<vat>4.24</vat>
+		<vat_procent>5</vat_procent>
+	</ksiegarnie_nieinter>
+	<opis><![CDATA[<p> Chyba każda sieć komputerowa na świecie była już atakowana przez hakerów. Niektóre z ataków były skuteczne, inne nie. Efekty skutecznego ataku hakerów mogą być różne -- od braku szkód, aż po utratę ważnych danych lub, co często okazuje się znacznie gorsze -- wydostanie się takich danych na zewnątrz. Co sprawia, że niektóre sieci opierają się atakom hakerów, a inne nie? Sekret tkwi w zabezpieczeniach i pracy administratora. </p>
+
+<p> W książce "101 zabezpieczeń przed atakami w sieci komputerowej" każdy, kto chce zabezpieczyć swoją sieć przed niepowołanym dostępem, znajdzie niezbędną do tego wiedzę. Książka przedstawia różne rodzaje ataków, sposoby ich wykrywania i metody ochrony sieci przed nimi. Opisuje ataki na różne warstwy i elementy sieci oraz zasady korzystania z zapór sieciowych. </p>
+<ul>
+<li> Wykrywanie sniffingu i ochrona przed nim
+<li> Skanowanie portów i IP-spoofing
+<li> Ataki typu DoS
+<li> Wirusy, robaki i programy szpiegujące
+<li> Zabezpieczanie procesu logowania
+<li> Ochrona przed atakiem przez przepełnienie bufora
+<li> Technologie i architektury zapór sieciowych
+<li> Systemy wykrywania ataków typu IDS
+</ul>
+<p> Jeśli chcesz, aby administrowana przez Ciebie sieć była bezpieczna, skorzystaj ze sposobów przedstawionych w tej książce. </p>]]></opis>
+	<md5>930f98010e09419a1b74524b87ba2187</md5>
+</ksiazka>
+<ksiazka ident="17GRZ3">
+	<isbn>978-83-246-4969-3</isbn>
+	<ean>9788324649693</ean>
+	<ident>17GRZ3</ident>
+	<tytul language="polski">17 śmiertelnych błędów szefa. Wydanie III rozszerzone</tytul>
+	<link>http://helion.pl/ksiazki/17-smiertelnych-bledow-szefa-wydanie-iii-rozszerzone-rafal-szczepanik,17grz3.htm</link>
+	<autor>Rafał Szczepanik</autor>
+	<status>1</status>
+	<cena>54.90</cena>
+	<cenadetaliczna>54.90</cenadetaliczna>
+	<znizka>0.00</znizka>
+	<marka>2</marka>
+	<nazadanie>0</nazadanie>
+	<format>140x208 </format>
+	<typ>1</typ>
+	<oprawa>twarda</oprawa>
+	<wydawca/>
+	<liczbastron>384</liczbastron>
+	<datawydania>2012-10-29</datawydania>
+	<online>http://pdf.helion.pl/17grz3/17grz3.pdf</online>
+	<okladka>http://helion.pl/okladki/326x466/17grz3.jpg</okladka>
+	<okladkatyl>http://helion.pl/okladki-tyl/326x466/17grz3.jpg</okladkatyl>
+	<issueurl>http://helion.pl/eksiazki/17grz3.htm</issueurl>
+	<bestseller>0</bestseller>
+	<nowosc>0</nowosc>
+	<promocja id="401">Opadają liście, opadają ceny!</promocja>
+	<powiazane>
+		<ident_powiazany>ACCGAB</ident_powiazany>
+		<ident_powiazany>E13TEI</ident_powiazany>
+		<ident_powiazany>NAZA12</ident_powiazany>
+		<ident_powiazany>PPFP23</ident_powiazany>
+	</powiazane>
+	<ksiegarnie_nieinter>
+		<waga>0.54</waga>
+		<status2>1</status2>
+		<cena_netto>52.29</cena_netto>
+		<cena_brutto>54.9</cena_brutto>
+		<vat>2.61</vat>
+		<vat_procent>5</vat_procent>
+	</ksiegarnie_nieinter>
+	<opis><![CDATA[<div align="center"><h4><b>Bo każdy menedżer ma w szafie jakiegoś trupa...</b></h4></div>
+
+<p>Dobra książka o zarządzaniu to taka, którą czyta się niczym świetną powieść detektywistyczną - z zapartym tchem, w jeden wieczór, pod kołdrą, z latarką w ręku, do białego świtu... Taka książka nie pozwala zasnąć z wrażenia i odłożyć się na półkę, zapada w pamięć, każe czytelnikowi wracać i analizować swoją treść wciąż od nowa. Hołdujący tym przekonaniom Rafał Szczepanik, menedżer i trener menedżerów, napisał... kryminał. Powieść sensacyjną z zarządzaniem w tle.</p>
+
+<p>Czytelniku! <b>17 śmiertelnych błędów szefa</b> doczekało się już trzeciego wydania. Widać wielu zarządzających w naszym kraju po cichu podejrzewa, że w ich szafie na dokumenty kryją się jakieś stare sprawki, które mogą okazać się śmiertelnie groźne dla ich firmy, ich kariery, ich zespołu ... Nikt nie rodzi się przywódcą. Jednak każdy może nauczyć się zarządzania i uniknąć błędów, jakie na swoje nieszczęście popełnił bohater tej książki: Janusz Czerwiński, prezes firmy Astra Tech.</p> 
+
+<p>W tym wydaniu błędów jest nie 17, lecz 20. Poza tymi, których bezwzględnie trzeba unikać, pojawiają się takie, które popełnić wręcz należy. Dla własnego dobra, rzecz jasna!</p>
+
+<br /><hr /><p><b>Rafał Szczepanik</b> jest jednym z założycieli Training Partners. Specjalizuje się w prowadzeniu szkoleń outdoor i gier symulacyjnych. Wcześniej współtworzył portal Pracuj.pl i przez pięć lat był jego wiceprezesem. Pracował też jako trener w Danii i Gwatemali. W roku 2004 został uznany za jednego z czterech najlepszych polskich trenerów w kategorii "gry symulacyjne". Prywatnie jest alpinistą, podróżnikiem, pierwszym Polakiem, który zdobył oba bieguny i himalajski ośmiotysięcznik. Jest też autorem książek Budowanie zespołu. Przygotowywanie i prowadzenie szkoleń outdoor (Onepress 2002, 2005), Nietypowe przypadki Public Relations (Onepress 2003, 2009), Komandosi w białych kołnierzykach. Metody zarządzania stosowane przez najlepszych menedżerów (Onepress 2009), Firma jak kamorra. 11 strategicznych zasad mafii w legalnym biznesie (Onepress 2010).</p>]]></opis>
+	<md5>2be4b0f62db2cf333cd7a53a9d649d98</md5>
+</ksiazka>
+<ksiazka ident="2D3DTP">
+	<isbn>83-7197-680-1</isbn>
+	<ean>9788371976803</ean>
+	<ident>2D3DTP</ident>
+	<tytul language="polski">Tworzenie gier 2D i 3D w języku Turbo Pascal</tytul>
+	<link>http://helion.pl/ksiazki/tworzenie-gier-2d-i-3d-w-jezyku-turbo-pascal-piotr-besta,2d3dtp.htm</link>
+	<autor>Piotr Besta</autor>
+	<status>0</status>
+	<cena>59.00</cena>
+	<cenadetaliczna>59.00</cenadetaliczna>
+	<znizka>0.00</znizka>
+	<marka>1</marka>
+	<nazadanie>1</nazadanie>
+	<format>B5</format>
+	<typ>1</typ>
+	<oprawa>miękka</oprawa>
+	<wydawca/>
+	<liczbastron>416</liczbastron>
+	<datawydania>2002-03-27</datawydania>
+	<online>http://pdf.helion.pl/2d3dtp/2d3dtp-6.pdf</online>
+	<okladka>http://helion.pl/okladki/326x466/2d3dtp.jpg</okladka>
+	<bestseller>0</bestseller>
+	<nowosc>0</nowosc>
+	<promocja id="401">Opadają liście, opadają ceny!</promocja>
+	<powiazane>
+		<ident_powiazany>ASPM4W</ident_powiazany>
+		<ident_powiazany>CSH5PR</ident_powiazany>
+		<ident_powiazany>KODDOS</ident_powiazany>
+		<ident_powiazany>METASP</ident_powiazany>
+		<ident_powiazany>PODRG2</ident_powiazany>
+		<ident_powiazany>PORSP4</ident_powiazany>
+		<ident_powiazany>USBPRO</ident_powiazany>
+		<ident_powiazany>VS12PC</ident_powiazany>
+		<ident_powiazany>W8TWAP</ident_powiazany>
+		<ident_powiazany>WYRAWP</ident_powiazany>
+		<ident_powiazany>WZOELE</ident_powiazany>
+		<ident_powiazany>ZWISAM</ident_powiazany>
+	</powiazane>
+	<serietematyczne>
+		<seriatematyczna id="55">Programowanie gier</seriatematyczna>
+		<seriatematyczna id="117">Turbo Pascal - Programowanie</seriatematyczna>
+	</serietematyczne>
+	<ksiegarnie_nieinter>
+		<waga>0.66</waga>
+		<status2>5</status2>
+		<cena_netto>56.19</cena_netto>
+		<cena_brutto>59</cena_brutto>
+		<vat>2.81</vat>
+		<vat_procent>5</vat_procent>
+	</ksiegarnie_nieinter>
+	<opis><![CDATA[Książka "Tworzenie gier 2D i 3D w języku Turbo Pascal" Piotra Besty skierowana jest do szerokiego grona początkujących programistów, dopiero rozpoczynających swoją wielką przygodę z komputerem. Nie oznacza to, że z książki nie mogą skorzystać doskonale znające Turbo Pascala. <p>
+
+Każdy, kto kiedykolwiek grał w gry komputerowe, zapragnął z pewnością stworzyć własną, idealną grę. Dzięki tej książce osoby te będą mogły spełnić swoje marzenia w profesjonalny sposób. <p>
+
+Rozpoczynając czytanie książki nie musisz podsiać doświadczenia w pisaniu programów, wszystkiego dowiesz się, czytając kolejne rozdziały, a zgromadzona wiedza oraz doświadczenie pozwoli na szybkie rozpoczęcie samodzielnych prac nad dowolną grą. Książka w szczegółowy sposób wyjaśnia proces i sposoby wyświetlania grafiki w grach, tajemnice oraz sztuczki w nich zastosowane.
+<ul>
+ <li>Poznasz techniki wprawiania w ruch grafiki dwu- i trójwymiarowej.
+ <li>Nauczysz się tworzyć grafikę spotykaną w grach typu RTS i FPP.
+ <li>Poznasz podstawy szybkiego języka programowania, jakim jest Assembler.
+</ul>
+A po ukończeniu książki śmiało będziesz mógł przystąpić do tworzenia takich gier jak Settlers, Quake, Dune, StarCraft, Descent i im podobnych. Musisz jednak wykazać się niebywałą determinacją i poświęceniem -- i tego między innymi nauczy cię ta książka.]]></opis>
+	<md5>5d0836a57d840a46c14e911308e95643</md5>
+</ksiazka>
+<ksiazka ident="3DMAXB">
+	<isbn>83-7197-029-3</isbn>
+	<ean>9788371970290</ean>
+	<ident>3DMAXB</ident>
+	<tytul language="polski">3D Studio MAX. Czarna księga animatora</tytul>
+	<tytul language="oryginal">Inside 3D Studio MAX Vol. III</tytul>
+	<link>http://helion.pl/ksiazki/3d-studio-max-czarna-ksiega-animatora-s-kennedy-g-maestri-r-frantz,3dmaxb.htm</link>
+	<autor>S. Kennedy, G. Maestri, R. Frantz</autor>
+	<tlumacz>Maciej Pasek</tlumacz>
+	<status>0</status>
+	<cena>95.00</cena>
+	<cenadetaliczna>95.00</cenadetaliczna>
+	<znizka>0.00</znizka>
+	<marka>1</marka>
+	<nazadanie>1</nazadanie>
+	<format>B5</format>
+	<typ>1</typ>
+	<oprawa>miękka</oprawa>
+	<wydawca/>
+	<liczbastron>624</liczbastron>
+	<nosnik>1 CD</nosnik>
+	<datawydania>1998-07-20</datawydania>
+	<okladka>http://helion.pl/okladki/326x466/3dmaxb.jpg</okladka>
+	<bestseller>0</bestseller>
+	<nowosc>0</nowosc>
+	<promocja id="401">Opadają liście, opadają ceny!</promocja>
+	<powiazane>
+		<ident_powiazany>AMD4</ident_powiazany>
+		<ident_powiazany>BUDUB2</ident_powiazany>
+		<ident_powiazany>CINEMA</ident_powiazany>
+		<ident_powiazany>CWGOSK</ident_powiazany>
+		<ident_powiazany>GITROZ</ident_powiazany>
+		<ident_powiazany>GRYMEG</ident_powiazany>
+		<ident_powiazany>ILCS6O</ident_powiazany>
+		<ident_powiazany>MEZP5F</ident_powiazany>
+		<ident_powiazany>PCS6OP</ident_powiazany>
+		<ident_powiazany>PROJW2</ident_powiazany>
+		<ident_powiazany>TWAPRE</ident_powiazany>
+		<ident_powiazany>TWNOAP</ident_powiazany>
+	</powiazane>
+	<seriewydawnicze>
+		<seriawydawnicza id="5">Czarna księga</seriawydawnicza>
+	</seriewydawnicze>
+	<serietematyczne>
+		<seriatematyczna id="56">3ds max</seriatematyczna>
+	</serietematyczne>
+	<ksiegarnie_nieinter>
+		<waga>1.05</waga>
+		<status2>5</status2>
+		<cena_netto>90.48</cena_netto>
+		<cena_brutto>95</cena_brutto>
+		<vat>4.52</vat>
+		<vat_procent>5</vat_procent>
+	</ksiegarnie_nieinter>
+	<opis><![CDATA[<P> 3D Studio MAX to nie tylko świetne narzędzie do modelowania i renderingu. Jest to również -- a może nawet przede wszystkim -- wspaniały program do tworzenia animacji. Animować w 3DS MAX można praktycznie wszystko. Poruszać obiektami możemy w sposób bardzo prosty, wprowadzając odpowiednie animowane transformacje lub wykorzystując pola sił (space warps), czy gotowe kontrolery animacji (animation controllers). </p>
+
+<p> Animacje tworzymy w sposób tak intuicyjny, że zajęcie to dostępne jest nawet dla najmniej zaawansowanych użytkowników. Jednocześnie w MAX-ie znaleźć można wielkie bogactwo opcji i narzędzi, które użytkownikom zaawansowanym pozwolą osiągnąć wiele efektów uważanych za bardzo trudne do uzyskania i precyzyjnie animować bardzo złożone struktury. Tworzenie animacji różni ną  się od zwykłej, modelarskiej pracy. Nie wystarczy zaplanowanie wyglądu obiektów, należy zaprojektować ich ruchy i wzajemne powiązania czasowe. </p>
+
+<p> Jeśli czytając książki "3D Studio MAX. Vademecum profesjonalisty" brakowało Ci praktycznych przykładów, to jest to książka dla Ciebie. Kolejne rozdziały są w zasadzie osobnymi praktycznymi przykładami, których przerobienie pozwoli Ci poznać tajniki animacji. </p>]]></opis>
+	<md5>8e13009672090827a323327aa02787cf</md5>
+</ksiazka>
+</lista>
+</details>

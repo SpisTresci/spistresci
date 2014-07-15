@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ISO-8859-2"?>
+<offers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1">
+<group name="books">
+ <o id="271100" url="http://www.lideria.pl/Nie-swieci-Alfred-Zajdorf/sklep/opis?nr=271100" price="34.65" avail="1">
+  <cat><![CDATA[Księgarnia/Książki/Biografie i dzienniki]]></cat>
+  <name><![CDATA[Nie święci...]]></name>
+  <imgs><main url="http://www.lideria.pl/img_big/271100.jpg"/></imgs>
+  <desc><![CDATA[Luty 1940 roku. Dworzec w Warszawie. Na oczach Alfreda Zajdorfa, wówczas jedenastoletniego żydowskiego chłopca, hitlerowcy dokonują egzekucji jego ojca. Zrozpaczonego i zagubionego sierotę ratują Polacy.]]></desc>
+  <attrs>
+   <a name="Autor"><![CDATA[Alfred Zajdorf]]></a>
+   <a name="ISBN"><![CDATA[9788375066524]]></a>
+   <a name="Ilosc_stron"><![CDATA[496]]></a>
+   <a name="Wydawnictwo"><![CDATA[Zysk i S-ka]]></a>
+   <a name="Rok_wydania"><![CDATA[2011]]></a>
+   <a name="Oprawa"><![CDATA[miękka]]></a>
+   <a name="Format"><![CDATA[170x245 mm]]></a>
+  </attrs>
+ </o>
+</group>
+</offers>

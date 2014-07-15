@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pasaz:Envelope SYSTEM "loadOffers.dtd">
+<pasaz:Envelope xmlns:pasaz="http://schemas.xmlsoap.org/soap/envelope/">
+  <pasaz:Body>
+    <loadOffers xmlns="urn:ExportB2B">
+      <offers>
+        <offer>
+          <id>5245</id>
+          <name><![CDATA[Działaj skutecznie]]></name>
+          <price>19.9</price>
+          <url>https://ssl.afiliant.com/affskrypt,c4265a06,37f416,,11483,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Podręczniki akademickie,Ekonomia i biznes]]></categoryId>
+          <description><![CDATA[Jak realizować swoje cele ze 100% skutecznością i jak skuteczniej działać w każdej dziedzinie swojego życia?  Czy chciałbyś potrafić spełniać swoje marzenia i kończyć to, co zacząłeś? Czy masz w swoim życiu cel, ktrego nie możesz osiągnąć, albo marzenie, ktre się jeszcze nie spełniło? Czy chciałbyś skuteczniej działać w swoim życiu i zrobić to, co zawsze chciałeś zrobić? Czy brakuje Ci czasami sił i energii do osiągnięcia tego, czego bardzo pragniesz?  Czy boisz się porażek albo paraliżuje Cię strach przed porażką? Jeśli odpowiedziałeś &bdquo;tak&rdquo; na ktreś z tych pytań, to mam dla Ciebie dobrą wiadomość. TAK, możesz zacząć osiągać cele, ktre sobie wyznaczyłeś. TAK, możesz nie bać się porażek i z odwaga dążyć do wyznaczonego celu TAK, możesz działać skuteczniej i osiągnąć w swoim życiu to wszystko, co do tej pory wydawało Ci się nieosiągalne. &bdquo;Każdy &ndash; nie tylko ten, kto myśli o sukcesie &ndash; powinien codziennie rano, zaraz po przebudzeniu, przeczytać tę książkę&rdquo; Każdy &ndash; nie tylko ten, kto myśli o sukcesie - powinien codziennie rano, zaraz po przebudzeniu, przeczytać tę książkę. Nauczyć się jej na pamięć i cytować sobie w każdym stosownym momencie: czy to planując dzień, czy całe życie, czy w sytuacji, kiedy coś się nie udaje. To zdecydowanie najlepszy ebook na temat komunikacji, autoprezentacji, zarządzania sobą w czasie i kontroli emocji, jaki dotychczas czytałam.  Ale to tylko fundamentalne zagadnienia tego fascynującego wydawnictwa, ponieważ &ndash; jak zwykle u tego autora &ndash; wszechstronność prezentowanej wiedzy wzbudza głęboki i należny mu szacunek. Daje się też odczuć, że mamy do czynienia z Trenerem najwyższej klasy. Przekaz jest klarowny, uporządkowany, a cała książka ma mj ulubiony charakter praktycznego poradnika. Książka Andrzeja Bubrowieckiego &ndash; jak zresztą sam autor &ndash; inspiruje, motywuje i daje wskazwki. Może być natchnieniem, dodać pewności siebie i entuzjazmu na całe życie każdemu czytelnikowi. Wielkie brawa!  dr Irena Kamińska-Radomska The Protocol School of Poland www.protocol.pl Powiem więcej &ndash; aby tego wszystkiego dokonać, wcale nie musisz zapracować się na śmierć albo ciężko pracować i odmawiać sobie wszystkich przyjemności życia. Wszystko, czego potrzebujesz, to nauczyć się &bdquo;Jak działać skutecznie?&rdquo; Oto przed Tobą pojawia się możliwość, na ktrą być może długo czekałeś. Być może do tej pory nie zrealizowałeś żadnego ze swoich marzeń. Być może marzenia, ktre do tej pory udało Ci się zrealizować, okazały się nic niewarte &ndash; to wszystko jest nieważne, ponieważ już za chwilę poznasz dokładny i sprawdzony sposb, ktry pozwoli Ci realizować cele, ktre dadzą Ci satysfakcje i spełnienie. Zanim jednak to zrobisz, powinieneś wiedzieć, że&hellip; Aby zastosować rady zawarte w tej książce, nie potrzebujesz mieć skończonych dwch fakultetw albo mieć przeczytanych 120 książek o motywacji, zarządzaniu czasem i sukcesie. Nie musisz też być osobą bardzo mocno zapracowaną (ale możesz), ktra ma na głowie trzy firmy i zarządzanie 50 pracownikami. Wręcz przeciwnie. Możesz dużo skorzystać z rad zawartych w tej książce tylko dlatego, że są to uniwersalne, zawsze działające sposoby na bycie bardziej skutecznym w życiu.  Być może teraz sobie myślisz: &bdquo;Jak coś jest uniwersalne i do wszystkiego, to jest do niczego&rdquo;. Jednak prawda jest taka, że te zasady, o ktrych dowiesz się z książki &bdquo;Działaj skutecznie!&rdquo;, są do zastosowania przez wszystkich. Dlaczego? Przede wszystkim dlatego, że Zasady bycia skutecznym są nieskomplikowane i łatwe do zastosowania Bycie skutecznym w życiu to nie jest czarna magia zarezerwowana tylko dla nielicznych i tylko dla wybrańcw. Wręcz przeciwnie. Ta książka udowadnia to, że każdy z nas &ndash; niezależnie od tego, czy jest mechanikiem samochodowym, czy właścicielem funduszu emerytalnego &ndash; może działać skutecznie i osiągać cele, ktre przed sobą postawił.  Jakie są Twoje cele i co Ty chcesz osiągnąć? Nawet jeśli teraz jeszcze nie wiesz, co chcesz robić, co osiągnąć w życiu i jakie są Twoje marzenia, to dzięki tej książce możesz się tego dowiedzieć. W końcu ten poradnik nie miałby żadnej wartości, gdyby nie fakt, że najpierw pozwoli Ci dokładnie określić, czego pragniesz i jaki cel da Ci spełnienie i szczęście. Jest to bardzo ważne, a mimo to wielu ludzi o tym zapomina.  Koncentrują się na działaniu, ciężkiej pracy, zdobywaniu nowych umiejętności, jednak to wszystko prowadzi ich w ślepy zaułek. Ktregoś dnia spostrzegają, że cele, ktre sobie wyznaczyli i realizowali z takim zapałem, tak naprawdę nie są dla nich satysfakcjonujące. Jeśli Ty chcesz uniknąć podobnego losu i nie pracować na darmo, to powinieneś skorzystać z wiedzy zawartej w tej książce.  O autorze... Andrzej Bubrowiecki jest absolwentem Wydziału Pedagogicznego Uniwersytetu Warszawskiego.  Ceniony Coach Rozwoju Osobistego, Trener w Biznesie, Trener Szybkiego Czytania i Technik Pamięciowych. Ekspert w dziedzinie twrczego wykorzystania umysłu; pamięci i kreatywnego myślenia, a także komunikacji interpersonalnej i autoprezentacji.  Specjalizuje się rwnież w szkoleniach z psychologii sprzedaży, zarządzania sobą w czasie oraz kontroli emocji i zarządzania stresem. Jest autorem książek &bdquo;Popraw swoją pamięć&rdquo; i &bdquo;Popraw swoją kreatywność&rdquo;, ebookw &bdquo;Sekrety kreatywnego myślenia&rdquo; i &bdquo;Techniki pamięciowe dla każdego&rdquo;. Dużą popularnością cieszy się jego autorski program szkoleniowy &bdquo;Pamięć i Kreatywność &ndash; wrota do sukcesu XXI wieku&rdquo;. Był wielokrotnie ekspertem w programach telewizyjnych i radiowych. W jego szkoleniach i prezentacjach uczestniczyło już ponad 6000 osb. Jak sam o sobie mwi, jest trenerem pasjonatem, a jego praca &ndash; najlepszym dowodem na to, że marzenia się spełniają.  Jak określić i zrealizować cele w swoim życiu?  Wyznaczanie celw i skuteczna ich realizacja to nie jest prosta sztuka, nie wystarczy tylko pomyśleć przez chwilę, co by się chciało mieć, i przyjąć to za cel. W tym poradniku poznasz aż trzy praktyczne ćwiczenia, ktre pozwolą Ci dokładnie i szczegłowo wyznaczyć cel, ktry osiągniesz.  Jak określić priorytety w życiu? Od tego, aby robić więcej, ważniejsze jest to, aby skupić się na rzeczach najważniejszych. Zanim zaczniesz działać, musisz wiedzieć, co powinieneś robić, aby osiągnąć maksimum rezultatw. Co zrobić, aby przy mniejszej ilości pracy osiągać większe i lepsze rezultaty? Nie sztuką jest ciężko pracować. Sztuką jest mądrze pracować i robić tylko te rzeczy, ktre przynoszą Ci największy zysk. Jak zarządzać swoim czasem i co zrobić, aby mieć go więcej na to, co tylko chcesz (zabawa, nauka, rodzina)? Dowiedz się, jak dzięki prostym technikom oszczędzić marnowany dotąd czas i jednocześnie bardziej zbliżać się do osiągnięcia sukcesu. Co łączy absolutnie wszystkich ludzi sukcesu i jak tę wiedzę wykorzystać, żeby szybciej osiągnąć to, czego pragniesz? Ta jedna jedyna cecha dotyczy każdego człowieka sukcesu &ndash; od milionera, przez wybitnych naukowcw, po sportowcw. Dlaczego jedni ludzie są o wiele bardziej skuteczni w tym, co robią (niezależnie za co się wezmą), a inni nie potrafią niczego doprowadzić do końca? Jak radzić sobie z porażkami i jak się nie załamać? Nie]]></description>
+          <image><![CDATA[http://www.legimi.com/imageshandler/5245/miniature/]]></image>
+          <attributes>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Andrzej Bubrowiecki]]></value>
+            </attribute>
+            <attribute>
+              <name>ISBN</name>
+              <value><![CDATA[978-83-7582-695-1]]></value>
+            </attribute>
+            <attribute>
+              <name>Wydawnictwo</name>
+              <value><![CDATA[Złote Myśli Sp. z o.o.]]></value>
+            </attribute>
+            <attribute>
+              <name>Rok_wydania</name>
+              <value><![CDATA[2011]]></value>
+            </attribute>
+            <attribute>
+              <name>Format</name>
+              <value><![CDATA[EPUB]]></value>
+            </attribute>
+            <attribute>
+              <name>Abonament</name>
+              <value><![CDATA[9.9]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>5271</id>
+          <name><![CDATA[Pierwsze miejsce w wyszukiwarkach]]></name>
+          <price>33</price>
+          <url>https://ssl.afiliant.com/affskrypt,c4265deb,37f416,,11483,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki]]></categoryId>
+          <description><![CDATA[Czy jesteś właścicielem bloga, strony internetowej lub sklepu? Jeśli tak, to pewnie wiesz już jaką rolę odgrywa fakt, aby pojawiała się ona na pierwzszej stronie w wyszukiwarce, czy nawet na pierwszym miejscu - więcej odwiedzających, większy ruch, większy zysk. Spraw, aby Twoja strona internetowa zaczęła tętnić życiem i zyskała na popularności.  Jak przyciągnąć więcej odwiedzających i klientw na swoją stronę internetową? Poznaj sekrety wyszukiwarek, dzięki ktrym Twoja strona pojawi się na pierwszym miejscu w wynikach wyszukiwania. Doświadczenie NIE wymagane!  Nieważne, czy prowadzisz hobbistyczny blog, czy posiadasz własny ebiznes, na ktrym zarabiasz pieniądze. Jeśli chcesz przyciągnąć więcej odwiedzających na stronę, jeśli chcesz więcej zarobić i sprawić, aby Twoja witryna była bardziej popularna, to teraz masz doskonałą okazję.  Co zrobić, aby więcej osb odwiedzało Twoją stronę? Dziś w Internecie nie wystarczy mieć już dobrze zaprojektowaną witrynę albo kupić kilka reklam w Google, aby odnieść sukces. Skończyły się już czasy, w ktrych niepotrzebna była nauka pozycjonowania. Teraz jeśli nie wiesz, jak  pozycjonować stronę, to najprawdopodobniej bardzo mało osb będzie ją odwiedzać i nigdy nie stanie się popularna.  Co ciekawe, większość właścicieli stron w Internecie zupełnie nie zna się na tym, jak przyciągnąć do siebie więcej odwiedzających i co zrobić, aby pojawić się wysoko w wyszukiwarkach (Google, WP, Yahoo). Nie mają pojęcia o takich zagadnieniach jak optymalizacja stron www i nie wiedzą, od czego zacząć, bo po prostu brakuje praktycznej wiedzy na ten temat.  Prawda jest jednak taka, że nauka pozycjonowania wcale nie jest taka trudna, jak się wydaje albo jak przekonują nas o tym rżnego rodzaju &bdquo;specjaliści&rdquo;. Każda wyszukiwarka ma swj unikalny system oceniania stron. W zależności od tego, co na stronie jest i jak została zbudowana, wyszukiwarka ją ocenia i z tej oceny wyciąga wnioski, jak wysoko umieścić ją w wynikach wyszukiwana.  Jeśli tworzysz swoją stronę według tych zasad i nie zapominasz o optymalizacji pod to, co &bdquo;lubi&rdquo; wyszukiwarka, to automatycznie sprawiasz, że Twoja strona znajdzie się wysoko w wynikach wyszukiwania.  Wszystko opiera się na tych trzech najważniejszych filarach, ktre dogłębnie poznasz (na konkretnych przykładach) w książce.   Krok 1: Dobr słw kluczowych Jest to najważniejszy etap w procesie podnoszenia pozycji swojej strony. Jeżeli źle dobierzesz słowa kluczowe, nic nie da nawet ciężka praca pźniej. Złe słowa kluczowe mogą spowodować, że zamiast większej liczby odwiedzających zainteresowanych tym, co robisz lub sprzedajesz,  będziesz miał większą liczbę &bdquo;odwiedzających&rdquo;, ktrzy nie są zainteresowani.  Krok 2: SEO, czyli optymalizacja stron internetowych pod wyszukiwarki Każda wyszukiwarka na swj określony sposb, w jaki czyta strony i pod tym kątem ocenia, jak wysoko umieścić je w wynikach wyszukiwania. Jeśli Twoja strona zaprojektowana jest w sposb, ktry pasuje wyszukiwarce, to automatycznie będzie ona lepiej oceniana. Kluczem jest przekształcenie strony w niektrych specjalnych jej częściach, żeby dopasować się do wyszukiwarki.  Krok 3: Pozycjonowanie, czyli zwiększanie ilości linkw do strony Wyszukiwarki odczytują dużą liczbę linkw (odnośnikw) do Twojej strony jako znak, że jest wartościowa i ludzie polecają ją innym (oczywiście z pewnymi wyjątkami). Z tej książki dowiesz się dokładnie, jak dodawać linki do swojej strony i co zrobić, aby przyniosło Ci to pożądane rezultaty. Ponadto unikniesz błędw, ktre mogą spowodować, że otrzymasz karę (np. od Google) za niewłaściwe dodawanie linkw.  Czy nauka pozycjonowania jest dla Ciebie? Ta książka jest przede wszystkim dla wszystkich tych osb, ktre chcą przyciągnąć na swoją stronę więcej odwiedzających i to niezależnie od tego, czy mają to być klienci, czy polecasz produkty w programie partnerskim, czy chcesz przyciągnąć zapaleńcw, ktrzy rwnież interesują się Twoim hobby.  Publikacja nada się idealnie dla wszystkich &bdquo;żłtodziobw&rdquo;, ktrym nic nie mwią takie słowa jak: pozycjonowanie, SEO, SEM, optymalizacja stron internetowych. Zawarte tutaj podstawy pomogą Ci zrozumieć, w jaki sposb działają wyszukiwarki i co trzeba zrobić, aby na naszą stronę wchodziło więcej internautw. Nawet jeśli nie masz wykształcenia informatyka i nie znasz się na programowaniu.  Ponadto książka nadaje się rwnież dla zaawansowanych użytkownikw , ktrzy znają już podstawy, ale mogą nie być obeznani z najnowszymi regułami działania wyszukiwarek i oceniania przez nie stron.  Już niedługo zobaczysz, że nauka pozycjonowania wcale nie jest taka trudna, a optymalizacja stron pod wyszukiwarki wcale nie wymaga znajomości językw programowania, jeśli tylko masz odpowiednią wiedzę.  Oto wiedza, ktrej potrzebujesz:  Jak działają wyszukiwarki? Poznaj zasady funkcjonowania największych wyszukiwarek, takich jak Google, WP (NetSprint), aby zrozumieć, w jaki sposb Twoja strona może pojawić się na pierwszym miejscu. Jak dobierać słowa kluczowe, dzięki ktrym przyciągniesz więcej klientw i odwiedzających na swoja stronę? Co ma największy wpływ na ocenę Twojej strony przez wyszukiwarkę i jak to wykorzystać? Jak zdobyć więcej linkw do swojej strony, dzięki ktrym strona będzie wyżej w wynikach wyszukiwania? Jakie są zabronione sposoby pozycjonowania i jaka grozi Ci za nie kara? Karę możesz otrzymać nawet wtedy, kiedy nieumyślnie popełnisz błąd, dlatego lepiej jest wiedzieć, czego zabraniają wyszukiwarki. Jak pozycjonować strony? Kompletny przewodnk od A do Z, ktry pozwoli Ci, krok po kroku, na optymalizację swojej strony www. O autorze:  Arkadiusz Podlaski od najmłodszych lat interesuje się tworzeniem stron internetowych. Właściciel wielu serwisw internetowych (np. www.fortius.pl, www.biznesmarketing.pl, www.podlaski.net). Specjalizuje się w marketingu internetowym, a przede wszystkim w pozycjonowaniu i optymalizacji stron www. Przez ostatnie kilka lat zdobył bardzo duże doświadczenie w tym temacie, dzięki czemu może podzielić się nim w ramach niniejszej książki.  5 najczęściej popełnianych błędw w pozycjonowaniu i jak ich uniknąć (może Ci to zaoszczędzić tysiące złotych, a nawet usunięcie Twojej strony z wyszukiwarek). Jakie są najczęściej używane zwroty i skrty w świecie pozycjonowania, aby łatwiej było Ci go zrozumieć, nawet jeśli teraz nie masz żadnego doświadczenia? Jakie są najważniejsze części strony, ktre wpływają na jej pozycję w wyszukiwarkach i co się w nich powinno znaleźć? 7 najważniejszych czynnikw, ktre wpływają na pozycję Twojej strony w wyszukiwarce. Dowiedz się, od czego zależy to, czy Twoja witryna stanie się popularna i chętnie odwiedzana przez ludzi. Największe błędy w optymalizacji stron www, jakie popełnia większość webmasterw, chcąc poprawić swoją pozycję w wynikach wyszukiwania. W jaki sposb pozycjonować się za darmo i czy w ogle możliwe jest, aby Twoja strona była wysoko w wynikach wyszukiwania bez płacenia specjalistycznym firmom? Uważaj, aby wyszukiwarki się nie rozmyś]]></description>
+          <image><![CDATA[http://www.legimi.com/imageshandler/5271/miniature/]]></image>
+          <attributes>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Arkadiusz Podlaski]]></value>
+            </attribute>
+            <attribute>
+              <name>ISBN</name>
+              <value><![CDATA[978-83-7582-817-7]]></value>
+            </attribute>
+            <attribute>
+              <name>Wydawnictwo</name>
+              <value><![CDATA[Złote Myśli Sp. z o.o.]]></value>
+            </attribute>
+            <attribute>
+              <name>Rok_wydania</name>
+              <value><![CDATA[2011]]></value>
+            </attribute>
+            <attribute>
+              <name>Format</name>
+              <value><![CDATA[EPUB]]></value>
+            </attribute>
+            <attribute>
+              <name>Abonament</name>
+              <value><![CDATA[9.9]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>5279</id>
+          <name><![CDATA[Sztuka zdobywania pieniędzy]]></name>
+          <price>22.9</price>
+          <url>https://ssl.afiliant.com/affskrypt,c42661d0,37f416,,11483,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Podręczniki akademickie,Ekonomia i biznes]]></categoryId>
+          <description><![CDATA[Poznaj sekrety dotyczące zdobywania pieniędzy, ktre działają bez względu na okolicznościP.T. Barnum, to jeden z pierwszych amerykańskich milionerw, ktry swoje bogactwo zdobywał w czasach wojny domowej, kryzysu ekonomicznego, politycznych rozruchw, niewolnictwa i głodu. W wieku 46 lat WSZYSTKO STRACIŁ, tylko po to, by pźniej zgromadzić jeszcze większą fortunę. Teraz masz okazję przeczytać po polsku jego książkę, w ktrej przekazuje on PONADCZASOWE ZASADY ZDOBYWANIA PIENIĘDZY. P.T. Barnum (1810-1890) był jednym z pierwszy Amerykańskich milionerw i jedną z najbardziej rozpoznawalnych postaci wczesnego czasu. Stworzył wielkie imperium biznesowe, stał się sławny i jeszcze pomgł swoim pracownikom stać się bogatymi. Tego wszystkiego dokonał podczas wojny domowej w USA, klęski głodu, niewolnictwa, rozruchw politycznych i ekonomicznego kryzysu. Był znanym mwcą, showmanem, autorem wielu bestsellerw, politykiem, inwestorem, przedsiębiorcą i geniuszem marketingu. Mwi się także o nim jako o ojcu nowoczesnej reklamy. W 1880 roku, w książce "Sztuka zdobywania pieniędzy" (The Art of Money-Getting)" Barnum ujawnił światu swoje sekrety na temat pomnażania pieniędzy. Zawierały one porady na temat biznesu, osobistej efektywności, planowania oraz zarządzania nawet najskromniejszymi finansami.Czy to prawda, że sztuka zdobywania pieniędzy nigdy się nie zmienia? Czasy się zmieniają, ale niektre zasady nigdy. Parę lat temu był czas prosperity i hossy, a dzisiaj mamy kryzys. Parę lat temu Internet był dobrem luksusowym, dzisiaj jest w prawie każdym domu. Z biegiem lat widzimy, jak idzie postęp technologiczny, jak zmieniają się normy życia społecznego i otaczający nas ludzie.Zadziwiające jest jednak to, że mimo tych wszystkich zmian, nowości i odkryć pewne zasady wciąż pozostają takie same. P.T. Barnum w swojej książce przekazuje Ci FILARY PROWADZENIA BIZNESU, bez ktrych pomnażanie pieniędzy byłoby dla Ciebie udręką. Przykładowo - dbanie o dobry wizerunek, wzbudzanie ciekawości produktem / sklepem, lub szukanie swojej własnej drogi zawodowej, zgodnej ze swoimi umiejętnościami - te wszystkie założenia działają niezależnie od tego, czy jest kryzys, hossa, duża konkurencja czy jakiekolwiek inne przeciwności.Mało tego - te zasady nie dotyczą tylko biznesu - to są uniwersalne zasady, ktrych poznanie jest niezbędne, aby zmienić swj sposb myślenia, ktry wiele osb hamuje na drodze do sukcesu.Chcesz poznać zawsze działające zasady zdobywania pieniędzy, działające wbrew wszystkim przeciwnościom?Niektrzy ludzie rodzą się z wiedzą, jak zdobywać pieniądze, a inni nigdy jej nie poznają. Są pewne fundamentalne zasady, ktrymi każdy powinien się kierować, jeśli chce zdobyć bogactwo. Działają one niezależnie od &bdquo;czasw&rdquo; i okoliczności.Oczywiście nie są one znane wszystkim, dlatego też i wielu ludzi żyje cały czas od pierwszego do pierwszego, a inni opływają w bogactwo. Dlatego też m.in. dzieci bogatych rodzicw pomnażają ich majątki i stają się jeszcze bogatsze, podczas gdy biedni z pokolenia na pokolenie są biedni. Bez rżnicy jest to, w jaki sposb chcesz zdobyć wielkie pieniądze: zakładając firmę czy inwestując na giełdzie, czy w jakikolwiek inny sposb. To, co najbardziej się liczy, to Twoje myślenie na temat pieniędzy. Sposb, w jaki je zdobędziesz, jest już tylko krokiem do celu.Jak zdobywało się pieniądze 140 lat temu, a jak to wygląda dzisiaj?Barnum, w odrżnieniu od wielu &bdquo;nauczycieli sukcesu&rdquo;, sam był milionerem i doszedł do swojego majątku własną pracą. To właśnie doświadczenie zarabiania pieniędzy, od pierwszego dolara do milionw, pozwoliło mu dogłębnie poznać zasady zdobywania bogactwa.Jeśli nie znasz tych zasad, to czeka Cię długa i ciężka droga, żeby być bogatym, a może nawet nigdy Ci się to nie uda. Paradoksalnie, nawet jeśli wygrasz w Totolotka, to i tak nie będziesz w stanie utrzymać przy sobie tych pieniędzy bez poznania zasad bogactwa.Śmiało można powiedzieć, że P.T. Barnum (chociaż nieświadomie) stał się jednym z pierwszych wielkich, i mających wpływ na tysiące ludzi, nauczycieli sukcesu i finansowego bogactwa.Fragment książki:Prawdziwa ekonomia jest źle zrozumiana, ludzie zaś idą przez życie, nie pojmując właściwie, czym jest ta zasada. Jeden mwi: "Mam takie a takie przychody, a tam jest mj sąsiad, ktry ma takie same. Jednak każdego roku jemu wystarcza i jeszcze zostaje, mnie zaś brakuje. Dlaczego? Wiem przecież wszystko o oszczędzaniu." Myśli że wie, ale nie wie. Są ludzie, ktrzy myślą, że oszczędzanie polega na zachowywaniu ścinkw sera i resztek świec, na obcięciu dwch pensw z rachunku za praczkę, i w ogle na robieniu wszelkiego rodzaju małych, trywialnych, brudnych sztuczek. Oszczędność to nie skąpstwo. Nieszczęściem jest także to, iż tego typu ludzie stosują swoje oszczędzanie tylko w jednym kierunku. Wyobrażają sobie, że są tak cudownie oszczędni, wydając mniej o pł pensa tam, gdzie powinni wydać dwa pensy, iż myślą, że mogą sobie pozwolić na rozrzutność w innych kierunkach. Oto czego jeszcze dowiesz się z tej książki:Dlaczego mimo ciężkiej pracy, wysiłku i poświęcenia, większość ludzi nie jest zadowolona ze stanu swojego portfela, chociaż &bdquo;teoretycznie&rdquo; powinna? Dowiedz się, jak uniknąć błędw w swoim dążeniu do finansowego spokoju, ktre mogą spowodować, że poniesiesz porażkę, a Twoja praca pjdzie na marne. Jak zarządzać swoimi finansami, aby nawet jeśli nie masz dużo pieniędzy, pomnażać je i budować swj kapitał? Tak, jest możliwe oszczędzać i gromadzić więcej pieniędzy, nawet jeśli uważasz, że mało zarabiasz. Często wręcz absurdalne czynności, ktre wykonują ludzie bogaci, a ktre większość &bdquo;normalnych&rdquo; osb uważa za dziwactwo i stratę czasu. Dowiedz się, co robią bogaci, a czego nie chcą robić biedni. Jak uniknąć porażki po sukcesie? Dowiedz się, dlaczego tak wiele osb traci swojej fortuny lub spełnione marzenia nie dają im żadnej satysfakcji i sam nie wpadnij w tę pułapkę. Jaka jest jedna cecha charakteru, ktra pozwoli Ci dojść do celu i pokonywać przeciwności, ktre na pewno na Twojej drodze się pojawią (nie chodzi o wiarę w sukces)? Dowiedz się, czego potrzebujesz, aby Twoja motywacja nie wygasła i napędzała Cię każdego dnia. Jedna najlepsza rada na przyspieszenie osiągnięcia sukcesu. Ta jedna wskazwka, zaoszczędzi Ci lata pracy i zmarnowanego czasu. Będzie prawdopodobnie najlepszym sposobem, jaki kiedykolwiek dostaniesz, aby szybciej stać się bogatym. Czego nigdy nie robić, jeśli chcesz osiągnąć satysfakcjonujący Cię sukces, ktry da Ci spełnienie? Dlaczego tak wiele osb, mimo że doszło do dużych pieniędzy, straciło je i już nigdy nie będą mieli szansy stać się znowu bogatymi? Co robić, dążąc do osiągnięcia finansowego sukcesu, aby zapobiec porażce albo nie utrudniać i nie sabotować własnych starań? Niestety często zupełnie nieświadomie robimy rzeczy, ktre przeszkadzają nam osiągnąć swoje marzenia. Dowiedz się, jak temu zapobiec.Co słynni autorzy mwią o Barnumie?Joe Vitale, autor &bdquo;Hipnotycznego Marketingu&rdquo; - jednego z największych bestsellerw, jakie kiedykolwiek zostały wydane w naszym wydawnictwie, nale]]></description>
+          <image><![CDATA[http://www.legimi.com/imageshandler/5279/miniature/]]></image>
+          <attributes>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[P. T. Barnum]]></value>
+            </attribute>
+            <attribute>
+              <name>ISBN</name>
+              <value><![CDATA[978-83-7582-790-3]]></value>
+            </attribute>
+            <attribute>
+              <name>Wydawnictwo</name>
+              <value><![CDATA[Złote Myśli Sp. z o.o.]]></value>
+            </attribute>
+            <attribute>
+              <name>Rok_wydania</name>
+              <value><![CDATA[2011]]></value>
+            </attribute>
+            <attribute>
+              <name>Format</name>
+              <value><![CDATA[EPUB]]></value>
+            </attribute>
+            <attribute>
+              <name>Abonament</name>
+              <value><![CDATA[9.9]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>5471</id>
+          <name><![CDATA[Odzyskaj pieniądze za leczenie nieubezpieczonych pacjentów]]></name>
+          <price>11.07</price>
+          <url>https://ssl.afiliant.com/affskrypt,c42665b5,37f416,,11483,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Poradniki,Poradniki psychologiczne]]></categoryId>
+          <description><![CDATA[Ebook informuje o sposobach potwierdzania, czy pacjent jest ubezpieczony, uzyskaniu decyzji potwierdzającej prawo do leczenia osoby kwalifikującej się do otrzymania pomocy społecznej, dotacjach celowych z budżetu państwa na leczenie pacjentów nieubezpieczonych.W odniesieniu do leczenia obcokrajowców opisuje warunki, które musi spełnić ta osoba, by uzyskać świadczenie, tj. wykupić polisę ubezpieczeniową lub mieć własne środki (leczenie planowe). Przedstawia także sytuację, w której ZOZ musi zwrócić się do ambasady, aby uzyskać zwrot za leczenie nieubezpieczonego obcokrajowca.Z tekstu dowiesz się:jak ustalać prawo do świadczeń zdrowotnych finansowanych ze środków publicznych udzielanych pacjentomjak uzyskać zapłatę za świadczenia udzielone osobom bezdomnym i innym, które nie mają żadnych źródeł utrzymania oraz nie są objęte ubezpieczeniem zdrowotnymjak w przypadkach stanów nagłych uzyskać decyzję wójta (burmistrza, prezydenta) potwierdzającą prawo do leczenia osoby kwalifikującej się do otrzymania pomocy społecznejjak uzyskać dotację celową z budżetu państwa w przypadku, gdy osoba nieubezpieczona nie otrzyma decyzji wójta (burmistrza, prezydenta) gminy, gdyż nie spełnia kryterium dochodowego ani nie jest możliwe ściągnięcie zapłaty za jej leczenie, np. z powodu braku adresu zameldowania lub podania fałszywego adresu, świadczenia zdrowotne są refundowane przez NFZna jakiej podstawie zakłady opieki zdrowotnej rozliczają się z NFZ w związku z udzieleniem im pomocy medycznej i jak postępować z pacjentami zagranicznymi, by nie narazić się na brak zapłaty z ich strony.]]></description>
+          <image><![CDATA[http://www.legimi.com/imageshandler/5471/miniature/]]></image>
+          <attributes>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Krzysztof Tuczapski]]></value>
+            </attribute>
+            <attribute>
+              <name>ISBN</name>
+              <value><![CDATA[978-83-7677-627-9]]></value>
+            </attribute>
+            <attribute>
+              <name>Wydawnictwo</name>
+              <value><![CDATA[Wiedza i Praktyka]]></value>
+            </attribute>
+            <attribute>
+              <name>Rok_wydania</name>
+              <value><![CDATA[2011]]></value>
+            </attribute>
+            <attribute>
+              <name>Format</name>
+              <value><![CDATA[PDF]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>5661</id>
+          <name><![CDATA[Motywacja i budowanie zaangażowania pracowników]]></name>
+          <price>35.67</price>
+          <url>https://ssl.afiliant.com/affskrypt,c4267d13,37f416,,11483,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Podręczniki akademickie,Ekonomia i biznes]]></categoryId>
+          <description><![CDATA[Myli się ten, kto sądzi, że jedyną motywacją są dla pracowników pieniądze. Skuteczna motywacja to bowiem cały system różnorodnych działań zarówno finansowych, jak i niefinansowych. Nawet najlepiej opłacany pracownik, ale nie chwalony i nie doceniany po pewnym czasie przestanie efektywnie pracować. I odwrotnie &ndash; działania niefinansowe nie odniosą żadnego skutku, jeśli pracownik nie będzie miał godziwej pensji.Co motywuje pracowników, a co wręcz przeciwnie &ndash; zniechęca do pracy? Jak stworzyć zgrany, lojalny i zaangażowany w życie firmy zespół?Odpowiedzi na te pytania znajdziesz w praktycznym vademecum &bdquo;Motywacja i budowanie zaangażowania pracowników&rdquo;.Z raportu Motywacja i budowanie zaangażowania pracowników dowiesz się m.in.:Dlaczego warto motywować pracowników?Na czym polega motywacja wewnętrzna i zewnętrzna?Dlaczego nie warto stosować motywacji &bdquo;poprzez strach&rdquo;?Co zrobić, gdy dobrze wynagradzany pracownik pracuje nieefektywnie?Jak można motywować finansowo, a jak pozafinansowo?Czy jeden system motywacyjny może być skuteczny wobec wszystkich pracowników?Czy jednorazowe działania motywacyjne przynoszą dobry skutek?Z czego powinien się składać skuteczny system motywacyjny?Co daje firmie dobry system motywacyjny?Jakie czynniki wpływają na zaangażowanie pracownika?Jak wynagradzać, aby nie demotywować?Czy nazwa stanowiska pracy może mieć znaczenie?Dlaczego warto inwestować w rozwój pracowników?Jaki powinien być dobry szef?Jak zbudować zgrany zespół?Dlaczego warto czasem dać pracownikowi dodatkowy urlop?Jeśli chcesz się dowiedzieć, jak skutecznie motywować pracowników do efektywnej pracy na rzecz Twojej firmy, to specjalne wydanie &bdquo;Prawa pracy w pytaniach i odpowiedziach&rdquo; jest dla Ciebie.Zagadnienia dotyczące motywacji i budowania zaangażowania pracowników omówiliśmy w 3 praktycznych rozdziałach:Na czym polega skuteczna motywacjaBudowanie systemu motywacyjnegoBudowanie zaangażowania pracownikówDoradzają Ci najlepsi specjaliściMożesz w pełni ufać wskazówkom zawartym w tym wydaniu specjalnym i stosować je bez obaw. Zostały one przygotowane przez wieloletnich specjalistów z dziedziny zarządzania personelem, co gwarantuje publikację przygotowaną z wykorzystaniem wysokich kwalifikacji, wiedzy i doświadczenia.Nie zwlekajJeszcze dziś zamów numer specjalny &bdquo;Prawa pracy w pytaniach i odpowiedziach&rdquo;: &bdquo;Motywacja i budowanie zaangażowania prawników&rdquo;. Zdobędziesz praktyczne wskazówki oraz przykłady z życia wzięte obrazujące ich zastosowanie.]]></description>
+          <image><![CDATA[http://www.legimi.com/imageshandler/5661/miniature/]]></image>
+          <attributes>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[]]></value>
+            </attribute>
+            <attribute>
+              <name>ISBN</name>
+              <value><![CDATA[978-83-7677-697-2]]></value>
+            </attribute>
+            <attribute>
+              <name>Wydawnictwo</name>
+              <value><![CDATA[Wiedza i Praktyka]]></value>
+            </attribute>
+            <attribute>
+              <name>Rok_wydania</name>
+              <value><![CDATA[2011]]></value>
+            </attribute>
+            <attribute>
+              <name>Format</name>
+              <value><![CDATA[PDF]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>5662</id>
+          <name><![CDATA[Praca w soboty, niedziele i święta]]></name>
+          <price>35.67</price>
+          <url>https://ssl.afiliant.com/affskrypt,c42680f8,37f416,,11483,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Poradniki,Poradniki psychologiczne]]></categoryId>
+          <description><![CDATA[Prawidłowe rekompensowanie pracy w dni wolne z tytułu 5-dniowego tygodnia pracy (tzw. wolne soboty), niedziele oraz święta stwarza wielu pracodawcom sporo kłopotów. Szczególne problemy dotyczą &ndash; jak wynika z ostatniego raportu z działalności PIP &ndash; właśnie prawidłowej rekompensaty pracy w 6. dniu tygodnia. Wielu pracodawców podczas kontroli jest zdziwionych, że inspektor ma zastrzeżenia, skoro za pracę w sobotę pracownik otrzymał wynagrodzenie i dodatek lub czas wolny. Nie jest to bowiem poprawny sposób rekompensaty pracy w dniu wolnym z tytułu 5-dniowego tygodnia pracy. Jak więc ją rekompensować? Podobne problemy pojawiają się, gdy w sytuacji gdy pracownik w swoją wolną sobotę wyjeżdża w delegację lub zostaje wysłany na szkolenie. Czy należy mu to jakoś zrekompensować?Z kolei w przypadku pracy w niedziele i święta, duże problemy sprawia m.in. rozliczenie pracy w nocy z soboty na niedzielę - okazuje się, że wiele firm nie przywiązuje wagi do tego, jak określona jest u nich doba niedzielno-świąteczna, a w kontekście rozliczania takiej pracy, jest to bardzo ważne &ndash; a także pracy w dniu wolnym oddanym za święto.O czym zatem musisz pamiętać rozliczając pracę w soboty, niedziele i święta?Odpowiedzi na te wszystkie pytania znajdziesz w praktycznym vademecum Praca w soboty, niedziele i święta!Z raportu Praca w soboty, niedziele i święta dowiesz się m.in.:Kiedy możesz polecać pracę w dniu wolnym z tytułu 5-dniowego tygodnia pracy?Jaki jest najczęstszy błąd w rekompensacie pracy w &bdquo;wolną&rdquo; sobotę?Czym różni się oddanie dnia wolnego od oddania czasu wolnego?Czy oddając dzień wolny za pracę w &bdquo;wolną sobotę&rdquo; trzeba jeszcze płacić za tę pracę wynagrodzenie?W jakich sytuacjach możesz nie udzielić dnia wolnego za pracę w sobotę i nie spotka Cię za to kara?Jak rekompensować podróż służbową w dniu wolnym z tytułu 5-dniowego tygodnia pracy?Czy za szkolenie w weekend należy się pracownikowi inny dzień wolny?Kiedy wolno Ci polecić pracę w niedzielę lub święto?Czy umowa cywilnoprawna jest sposobem na zakaz handlu w święta?Jak ustalić granice czasowe trwania niedzieli i święta w zakładzie, aby niepotrzebnie nie przepłacać?Jak prawidłowo rekompensować pracę w niedzielę i święto?Jak rekompensować pracę nadliczbową w niedzielę w porze nocnej?Czy &bdquo;zadaniowiec&rdquo; pracujący w niedzielę ma prawo do rekompensaty?Jak rekompensować podróż służbową w święto?Doradzają Ci najlepsi specjaliściMożesz w pełni ufać wskazówkom zawartym w tym wydaniu specjalnym i stosować je bez obaw. Zostały one przygotowane przez specjalistów z dziedziny prawa pracy. Konsultantem merytorycznym raportu jest pani Anna Tomczyk &ndash; zastępca Głównego Inspektora Pracy. To pracowanie tematyczne zostało przygotowane z zachowaniem najwyższej staranności i wykorzystaniem wysokich kwalifikacji, wiedzy i doświadczenia.]]></description>
+          <image><![CDATA[http://www.legimi.com/imageshandler/5662/miniature/]]></image>
+          <attributes>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[]]></value>
+            </attribute>
+            <attribute>
+              <name>ISBN</name>
+              <value><![CDATA[978-83-7677-696-5]]></value>
+            </attribute>
+            <attribute>
+              <name>Wydawnictwo</name>
+              <value><![CDATA[Wiedza i Praktyka]]></value>
+            </attribute>
+            <attribute>
+              <name>Rok_wydania</name>
+              <value><![CDATA[2011]]></value>
+            </attribute>
+            <attribute>
+              <name>Format</name>
+              <value><![CDATA[PDF]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>5664</id>
+          <name><![CDATA[Ewidencjonowanie czasu pracy]]></name>
+          <price>44.28</price>
+          <url>https://ssl.afiliant.com/affskrypt,c42684dd,37f416,,11483,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Poradniki,Poradniki psychologiczne]]></categoryId>
+          <description><![CDATA[Ewidencja czasu pracy &ndash; to zmora niejednego kadrowca. Jej prowadzenie jest czasochłonne i nie ma możliwości pozbycia się tego obowiązku. A do tego jest to jeden z dokumentów najczęściej i najbardziej skrupulatnie kontrolowanych przez inspektorów pracy.Również w razie sporu sądowego z pracownikiem o nadgodziny jest pewne, że sąd pracy zobowiąże Cię do przedstawienia ewidencji. A wówczas błędy w jej prowadzeniu, czy zupełny jej brak mogą być dla Ciebie kosztowne. Warto więc prowadzić ewidencję czasu pracy bardzo dokładnie!Oto kilka przykładów pytań na jakie znajdziesz odpowiedź w tym specjalnym wydaniu miesięcznika:Co powinna zawierać karta ewidencji czasu pracy?W jaki sposób można sobie ułatwić prowadzenie ewidencji?Co Ci grozi, gdy &bdquo;zgubisz&rdquo; ewidencję czasu pracy lub jej w ogóle nie prowadzisz?Jakie najczęstsze błędy w ewidencjonowaniu czasu pracy popełniają pracodawcy i jak ich uniknąć?Dla jakich kategorii pracowników możesz prowadzić ewidencję w węższym zakresie?W jaki sposób najkorzystniej ewidencjonować nieobecności w pracy?Gdzie i w jaki sposób przechowywać kartę ewidencji?Nie zwlekaj z decyzją!Jeszcze dziś zamów numer specjalny &bdquo;Prawa pracy w orzeczeniach Sądu Najwyższego&rdquo;: &bdquo;Ewidencjonowanie czasu pracy&rdquo;. Zdobędziesz praktyczne wskazówki oraz przykłady z życia wzięte obrazujące ich zastosowanie.]]></description>
+          <image><![CDATA[http://www.legimi.com/imageshandler/5664/miniature/]]></image>
+          <attributes>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[]]></value>
+            </attribute>
+            <attribute>
+              <name>ISBN</name>
+              <value><![CDATA[978-83-7572-606-0]]></value>
+            </attribute>
+            <attribute>
+              <name>Wydawnictwo</name>
+              <value><![CDATA[Wiedza i Praktyka]]></value>
+            </attribute>
+            <attribute>
+              <name>Rok_wydania</name>
+              <value><![CDATA[2011]]></value>
+            </attribute>
+            <attribute>
+              <name>Format</name>
+              <value><![CDATA[PDF]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>5665</id>
+          <name><![CDATA[Premie i nagrody]]></name>
+          <price>61.38</price>
+          <url>https://ssl.afiliant.com/affskrypt,c42688c2,37f416,,11483,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Poradniki,Poradniki psychologiczne]]></categoryId>
+          <description><![CDATA[Jeśli zastanawiasz się:czy lepiej wprowadzić premię regulaminową, czy może system nagród (zwanych często premiami uznaniowymi)?czym te świadczenia różnią się między sobą?w jaki sposób wprowadzić regulamin premiowania i jakie zapisy powinny się w nim znaleźć?kiedy pracownik ma prawo domagać się od pracodawcy wypłaty premii?czy można dochodzić wypłaty nagrody przed sądem pracy?Na wszystkie te pytania znajdziesz w specjalnym wydaniu miesięcznika &bdquo;Prawo pracy w orzeczeniach Sądu Najwyższego&rdquo; w całości poświęconym zasadom przyznawania pracownikom premii i nagród. Przedstawiamy w nim również orzecznictwo Sądu Najwyższego w tej kwestii, które pomoże Ci prawidłowo wprowadzać, a następnie wypłacać premie i nagrody uprawnionym pracownikom.]]></description>
+          <image><![CDATA[http://www.legimi.com/imageshandler/5665/miniature/]]></image>
+          <attributes>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[]]></value>
+            </attribute>
+            <attribute>
+              <name>ISBN</name>
+              <value><![CDATA[978-83-7677-251-6]]></value>
+            </attribute>
+            <attribute>
+              <name>Wydawnictwo</name>
+              <value><![CDATA[Wiedza i Praktyka]]></value>
+            </attribute>
+            <attribute>
+              <name>Rok_wydania</name>
+              <value><![CDATA[2011]]></value>
+            </attribute>
+            <attribute>
+              <name>Format</name>
+              <value><![CDATA[PDF]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>5666</id>
+          <name><![CDATA[Sformułowanie przyczyny wypowiedzenia]]></name>
+          <price>44.28</price>
+          <url>https://ssl.afiliant.com/affskrypt,c4268ca7,37f416,,11483,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Poradniki,Poradniki psychologiczne]]></categoryId>
+          <description><![CDATA[Wiemy, jak wiele problemów przysparza pracodawcom sformułowanie przyczyny wypowiedzenia umowy. Po czym poznać, czy przyczyna jest wystarczająco konkretna, no i czy w ogóle nadaje się do tego, aby być powodem wypowiedzenia. Przepisów na ten temat brak, więc nic dziwnego, że możesz czuć się zagubiony!A w dodatku błąd w tej kwestii może być dla firmy bardzo kosztowny, gdy sprawa trafi do sądu pracy. Skąd więc czerpać wiedzę? Otóż najlepiej uczyć się na błędach innych pracodawców, czyli&hellip; sięgnąć do orzecznictwa sądów pracy. Dlatego też ten numer specjalny miesięcznika &bdquo;Prawo pracy w orzeczeniach Sądu Najwyższego&rdquo;, poświęcony właśnie tematyce przyczyn wypowiedzenia, przygotowaliśmy ze szczególnym uwzględnieniem bogatego orzecznictwa Sądu Najwyższego w tej kwestii.Jeśli jeszcze masz jakieś wątpliwości, oto kilka przykładów pytań na jakie znajdziesz odpowiedź w tym specjalnym wydaniu miesięcznika:Czy utrata zaufania do pracownika to wystarczająca przyczyna wypowiedzenia?Czy można zwolnić pracownika z powodu nabycia przez niego uprawnień emerytalnych?Co wpisać w wypowiedzeniu, gdy pracownik nie spełnia Twoich oczekiwań?Jak skonkretyzować przyczynę leżącą po stronie pracodawcy?Co zrobi sąd pracy, gdy odkryje, że podana przez Ciebie przyczyna wypowiedzenia jest tylko &bdquo;zasłoną dymną&rdquo;?Jak ocenić, czy przyczyna wypowiedzenia jest wystarczająco konkretna?Dlaczego warto wskazywać w wypowiedzeniu więcej niż jedną przyczynę?Nie zwlekaj z decyzją!Jeszcze dziś zamów numer specjalny &bdquo;Prawa pracy w orzeczeniach Sądu Najwyższego&rdquo;: &bdquo;Sformułowanie przyczyny wypowiedzenia&rdquo;. Zdobędziesz praktyczne wskazówki oraz przykłady z życia wzięte obrazujące ich zastosowanie.]]></description>
+          <image><![CDATA[http://www.legimi.com/imageshandler/5666/miniature/]]></image>
+          <attributes>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[]]></value>
+            </attribute>
+            <attribute>
+              <name>ISBN</name>
+              <value><![CDATA[978-83-7572-828-6]]></value>
+            </attribute>
+            <attribute>
+              <name>Wydawnictwo</name>
+              <value><![CDATA[Wiedza i Praktyka]]></value>
+            </attribute>
+            <attribute>
+              <name>Rok_wydania</name>
+              <value><![CDATA[2011]]></value>
+            </attribute>
+            <attribute>
+              <name>Format</name>
+              <value><![CDATA[PDF]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>5667</id>
+          <name><![CDATA[Zatrudnianie kadry kierowniczej]]></name>
+          <price>44.28</price>
+          <url>https://ssl.afiliant.com/affskrypt,c426908c,37f416,,11483,,,</url>
+          <categoryId><![CDATA[Księgarnia,Książki,Poradniki,Poradniki psychologiczne]]></categoryId>
+          <description><![CDATA[Oto kilka przykładów pytań na jakie znajdziesz odpowiedź w tym specjalnym wydaniu miesięcznika:Którym kierownikom w żadnym przypadku nie przysługuje dodatek za pracę w nadgodzinach?Jak możecie się chronić przed wydostaniem się na zewnątrz informacji posiadanych przez kierownika stanowiących tajemnicę pracodawcy?Jak można uzasadnić wypowiedzenie umowy kierownikowi?Czy każdemu kierownikowi przysługuje dodatek funkcyjny?Za co i w jakim stopniu odpowiada osoba zajmująca stanowisko kierownicze?Nie zwlekaj z decyzją!Jeszcze dziś zamów numer specjalny &bdquo;Prawa pracy w orzeczeniach Sądu Najwyższego&rdquo;: &bdquo;Zatrudnianie kadry kierowniczej&rdquo;. Zdobędziesz praktyczne wskazówki oraz przykłady z życia wzięte obrazujące ich zastosowanie.]]></description>
+          <image><![CDATA[http://www.legimi.com/imageshandler/5667/miniature/]]></image>
+          <attributes>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[]]></value>
+            </attribute>
+            <attribute>
+              <name>ISBN</name>
+              <value><![CDATA[978-83-7572-829-3]]></value>
+            </attribute>
+            <attribute>
+              <name>Wydawnictwo</name>
+              <value><![CDATA[Wiedza i Praktyka]]></value>
+            </attribute>
+            <attribute>
+              <name>Rok_wydania</name>
+              <value><![CDATA[2011]]></value>
+            </attribute>
+            <attribute>
+              <name>Format</name>
+              <value><![CDATA[PDF]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+      </offers>
+    </loadOffers>
+  </pasaz:Body>
+</pasaz:Envelope>

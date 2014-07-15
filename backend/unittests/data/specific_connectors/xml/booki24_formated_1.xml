@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<offers>
+  <offer>
+    <id>1895</id>
+    <name><![CDATA[Inteligentny inwestor]]></name>
+    <manufacturer><![CDATA[Studio Emka]]></manufacturer>
+    <description><![CDATA[Obecne wydanie INTELIGENTNEGO INWESTORA to najważniejsza książka, jaką kiedykolwiek przeczytasz o osiąganiu zamierzonych celów finansowych. Jasno przedstawia podstawy, niezwykle skutecznego i popularnego podejścia do inwestowania.]]></description>
+    <price>52.18</price>
+    <url>http://www.booki24.pl/ebooki/inteligentny-inwestor-p1895.html</url>
+    <cover>http://www.booki24.pl/data/shop/products/inteligentny-inwestor-ebook.jpg</cover>
+    <isbn><![CDATA[978-83-62304-73-8]]></isbn>
+    <authors>
+      <author><![CDATA[Benjamin Graham]]></author>
+    </authors>
+    <categories>
+      <category><![CDATA[Ekonomia]]></category>
+    </categories>
+    <formats>
+      <format name="pdf" drm="znak wodny"/>
+    </formats>
+  </offer>
+</offers>

@@ -1,0 +1,1203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<products>
+  <product>
+    <id>1</id>
+    <title><![CDATA[www.malpa.pl]]></title>
+    <authors><![CDATA[Krystyna Janda]]></authors>
+    <price>35.91</price>
+    <format>PDF</format>
+    <isbn>978-83-7747-225-5</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/103/wwwmalpapl</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/231/103-wwwmalpapl.jpg</cover>
+    <size>2,5 MB</size>
+    <length>413</length>
+  </product>
+  <product>
+    <id>2</id>
+    <title><![CDATA[Wszystko o raku piersi]]></title>
+    <authors><![CDATA[Ruth H. Grobstein]]></authors>
+    <price>26.91</price>
+    <format>PDF</format>
+    <isbn>978-83-7414-338-7</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/125/Wszystko_o_raku_piersi</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/231/125-Wszystko_o_raku_piersi.jpg</cover>
+    <size>1,4 MB</size>
+    <length>242</length>
+  </product>
+  <product>
+    <id>3</id>
+    <title><![CDATA[Limeryki o pewnych panach i paniach, czyli numery z każdej sfery]]></title>
+    <authors><![CDATA[Rafał Bryndal]]></authors>
+    <price>26.91</price>
+    <format>PDF</format>
+    <isbn>978-83-7747-110-4</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/171/Limeryki_o_pewnych_panach_i_paniach_czyli_numery_z_kazdej_sfery</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/210/171-Limeryki_o_pewnych_panach_i_paniach_czyli_numery_z_kazdej_sfery.jpg</cover>
+    <size>13 MB</size>
+    <length>166</length>
+  </product>
+  <product>
+    <id>4</id>
+    <title><![CDATA[Lekcje historii PRL w rozmowach]]></title>
+    <authors><![CDATA[Andrzej Brzeziecki]]></authors>
+    <price>31.41</price>
+    <format>PDF</format>
+    <isbn>978-83-7747-109-8</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/196/Lekcje_historii_PRL_w_rozmowach</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/231/196-Lekcje_historii_PRL_w_rozmowach.jpg</cover>
+    <size>4,2 MB</size>
+    <length>362</length>
+  </product>
+  <product>
+    <id>5</id>
+    <title><![CDATA[W świecie wszechmogącym. O przemocy, śmierci i Bogu]]></title>
+    <authors><![CDATA[Zbigniew Mikołejko]]></authors>
+    <price>44.91</price>
+    <format>PDF</format>
+    <isbn>978-83-7747-214-9</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/202/W_swiecie_wszechmogacym_O_przemocy_smierci_i_Bogu</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/239/202-W_swiecie_wszechmogacym_O_przemocy_smierci_i_Bogu.jpg</cover>
+    <size>2,8 MB</size>
+    <length>434</length>
+  </product>
+  <product>
+    <id>6</id>
+    <title><![CDATA[Prawo gospodarcze. Tom 5]]></title>
+    <authors><![CDATA[Marzena Okła]]></authors>
+    <price>179.10</price>
+    <format>PDF</format>
+    <isbn>978-83-7483-401-8</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/242/Prawo_gospodarcze_Tom_5</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/126/242-Prawo_gospodarcze_Tom_5.jpg</cover>
+    <size>3,0 MB</size>
+    <length>754</length>
+  </product>
+  <product>
+    <id>7</id>
+    <title><![CDATA[Prawo pracy materialne - wzory pism z objaśnieniami. Tom 7a]]></title>
+    <authors><![CDATA[Stanisław Piwnik]]></authors>
+    <price>179.10</price>
+    <format>PDF</format>
+    <isbn>978-83-7483-884-9</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/246/Prawo_pracy_materialne_-_wzory_pism_z_objasnieniami_Tom_7a</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/126/246-Prawo_pracy_materialne_-_wzory_pism_z_objasnieniami_Tom_7a.jpg</cover>
+    <size>3,6 MB</size>
+    <length>852</length>
+  </product>
+  <product>
+    <id>8</id>
+    <title><![CDATA[Regulae iuris Łacińskie inskrypcje na kolumnach Sądu Najwyższego Rzeczypospolitej Polskiej - twarda oprawa]]></title>
+    <authors><![CDATA[Witold Wołodkiewicz]]></authors>
+    <price>69.00</price>
+    <format>PDF</format>
+    <isbn>83-7483-286-X</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/283/Regulae_iuris_Lacinskie_inskrypcje_na_kolumnach_Sadu_Najwyzszego</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/305/283-Regulae_iuris_Lacinskie_inskrypcje_na_kolumnach_Sadu_Najwyzszego.jpg</cover>
+    <size>2,8 MB</size>
+    <length>184</length>
+  </product>
+  <product>
+    <id>9</id>
+    <title><![CDATA[Postępowanie karne skarbowe]]></title>
+    <authors><![CDATA[Feliks Prusak]]></authors>
+    <price>40.50</price>
+    <format>PDF</format>
+    <isbn>978-83-255-0727-5</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/310/Postepowanie_karne_skarbowe</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/297/310-Postepowanie_karne_skarbowe.jpg</cover>
+    <size>2,5 MB</size>
+    <length>457</length>
+  </product>
+  <product>
+    <id>10</id>
+    <title><![CDATA[Kodeks spółek handlowych. Tom III. Komentarz do artykułów 301-458]]></title>
+    <authors><![CDATA[Andrzej Szajkowski]]></authors>
+    <price>224.10</price>
+    <format>PDF</format>
+    <isbn>978-83-7483-035-5</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/314/Kodeks_spolek_handlowych_Tom_III_Komentarz_do_artykulow_301-458</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/301/314-Kodeks_spolek_handlowych_Tom_III_Komentarz_do_artykulow_301-458.jpg</cover>
+    <size>10,0 MB</size>
+    <length>1656</length>
+  </product>
+  <product>
+    <id>11</id>
+    <title><![CDATA[Wspólnotowe prawo gospodarcze. Tom I Swobody rynku wewnętrznego]]></title>
+    <authors><![CDATA[Aleksander Cieśliński]]></authors>
+    <price>89.10</price>
+    <format>PDF</format>
+    <isbn>978-83-7387-569-2</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/324/Wspolnotowe_prawo_gospodarcze_Tom_I_Swobody_rynku_wewnetrznego</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/297/324-Wspolnotowe_prawo_gospodarcze_Tom_I_Swobody_rynku_wewnetrznego.jpg</cover>
+    <size>4,8 MB</size>
+    <length>1063</length>
+  </product>
+  <product>
+    <id>12</id>
+    <title><![CDATA[Prawo upadłościowe i naprawcze]]></title>
+    <authors><![CDATA[Stanisław Gurgul]]></authors>
+    <price>35.10</price>
+    <format>PDF</format>
+    <isbn>978-83-255-1215-6</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/342/Prawo_upadlosciowe_i_naprawcze</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/299/342-Prawo_upadlosciowe_i_naprawcze.jpg</cover>
+    <size>2,9 MB</size>
+    <length>394</length>
+  </product>
+  <product>
+    <id>13</id>
+    <title><![CDATA[Prawo rzeczowe. System Prawa Prywatnego. Tom 3]]></title>
+    <authors><![CDATA[Edward Gniewek]]></authors>
+    <price>224.10</price>
+    <format>PDF</format>
+    <isbn>978-83-255-3898-9</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/352/Prawo_rzeczowe_System_Prawa_Prywatnego_Tom_3</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/118/352-Prawo_rzeczowe_System_Prawa_Prywatnego_Tom_3.jpg</cover>
+    <size>2,2 MB</size>
+    <length>604</length>
+  </product>
+  <product>
+    <id>15</id>
+    <title><![CDATA[Ubezpieczenie społeczne migrujących pracowników oraz osób prowadzących działalność gospodarczą]]></title>
+    <authors><![CDATA[Tomasz Major]]></authors>
+    <price>53.10</price>
+    <format>PDF</format>
+    <isbn>978-83-255-1621-5</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/371/Ubezpieczenie_spoleczne_migrujacych_pracownikow_oraz_osob_prowad</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/244/371-Ubezpieczenie_spoleczne_migrujacych_pracownikow_oraz_osob_prowad.jpg</cover>
+    <size>3,7 MB</size>
+    <length>218</length>
+  </product>
+  <product>
+    <id>16</id>
+    <title><![CDATA[Kodeks spółek handlowych. Komentarz. Tom V. Pozakodeksowe prawo handlowe]]></title>
+    <authors><![CDATA[Stanisław Sołtysiński]]></authors>
+    <price>224.10</price>
+    <format>PDF</format>
+    <isbn>978-83-7483-424-7</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/403/Kodeks_spolek_handlowych_Komentarz_Tom_V_Pozakodeksowe_prawo_han</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/301/403-Kodeks_spolek_handlowych_Komentarz_Tom_V_Pozakodeksowe_prawo_han.jpg</cover>
+    <size>10 MB</size>
+    <length>1902</length>
+  </product>
+  <product>
+    <id>17</id>
+    <title><![CDATA[Podatek od czynności cywilnoprawnych. Opłata skarbowa]]></title>
+    <authors><![CDATA[Jan Zdanowicz]]></authors>
+    <price>71.10</price>
+    <format>PDF</format>
+    <isbn>978-83-255-0741-1</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/404/Podatek_od_czynnosci_cywilnoprawnych_Oplata_skarbowa</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/242/404-Podatek_od_czynnosci_cywilnoprawnych_Oplata_skarbowa.jpg</cover>
+    <size>1,5 MB</size>
+    <length>337</length>
+  </product>
+  <product>
+    <id>18</id>
+    <title><![CDATA[Dictionary of Finance Terms for Professionals. English-Polish. Polish-English Słownik fachowej terminologii finansowej. Angielsko-polski, polsko-angielski]]></title>
+    <authors><![CDATA[Roman Kozierkiewicz]]></authors>
+    <price>134.10</price>
+    <format>PDF</format>
+    <isbn>978-83-7483-573-2</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/434/Dictionary_of_Finance_Terms_for_Professionals_English-Polish_Pol</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/304/434-Dictionary_of_Finance_Terms_for_Professionals_English-Polish_Pol.jpg</cover>
+    <size>3,3 MB</size>
+    <length>577</length>
+  </product>
+  <product>
+    <id>19</id>
+    <title><![CDATA[Kodeks spółek handlowych. Edycja czwarta]]></title>
+    <authors><![CDATA[Ewa Skibińska]]></authors>
+    <price>89.10</price>
+    <format>PDF</format>
+    <isbn>978-83-255-1180-7</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/435/Kodeks_spolek_handlowych_Edycja_czwarta</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/118/435-Kodeks_spolek_handlowych_Edycja_czwarta.jpg</cover>
+    <size>3,6 MB</size>
+    <length>728</length>
+  </product>
+  <product>
+    <id>20</id>
+    <title><![CDATA[Prawo cywilne - część ogólna. System Prawa Prywatnego. Tom 2]]></title>
+    <authors><![CDATA[Maksymilian Pazdan]]></authors>
+    <price>224.10</price>
+    <format>PDF</format>
+    <isbn>978-83-7483-426-1</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/438/Prawo_cywilne_-_czesc_ogolna_System_Prawa_Prywatnego_Tom_2</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/118/438-Prawo_cywilne_-_czesc_ogolna_System_Prawa_Prywatnego_Tom_2.jpg</cover>
+    <size>5,0 MB</size>
+    <length>804</length>
+  </product>
+  <product>
+    <id>21</id>
+    <title><![CDATA[Rozliczenia finansowe wspólnoty mieszkaniowej]]></title>
+    <authors><![CDATA[Maciej Tertelis]]></authors>
+    <price>44.10</price>
+    <format>PDF</format>
+    <isbn>83-7387-436-4</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/439/Rozliczenia_finansowe_wspolnoty_mieszkaniowej</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/244/439-Rozliczenia_finansowe_wspolnoty_mieszkaniowej.jpg</cover>
+    <size>4,3 MB</size>
+    <length>305</length>
+  </product>
+  <product>
+    <id>22</id>
+    <title><![CDATA[Podatek akcyzowy w prawie polskim i europejskim. Komentarz]]></title>
+    <authors><![CDATA[Dominik Mączyński]]></authors>
+    <price>65.00</price>
+    <format>PDF</format>
+    <isbn>83-7387-434-8</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/443/Podatek_akcyzowy_w_prawie_polskim_i_europejskim_Komentarz</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/300/443-Podatek_akcyzowy_w_prawie_polskim_i_europejskim_Komentarz.jpg</cover>
+    <size>863 KB</size>
+    <length>340</length>
+  </product>
+  <product>
+    <id>23</id>
+    <title><![CDATA[Prawo dewizowe]]></title>
+    <authors><![CDATA[Rafał Kubiak]]></authors>
+    <price>40.50</price>
+    <format>PDF</format>
+    <isbn>978-83-7483-865-8</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/452/Prawo_dewizowe</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/297/452-Prawo_dewizowe.jpg</cover>
+    <size>4,6 MB</size>
+    <length>330</length>
+  </product>
+  <product>
+    <id>24</id>
+    <title><![CDATA[Pieniądze wspólnoty mieszkaniowej]]></title>
+    <authors><![CDATA[Maciej Tertelis]]></authors>
+    <price>31.50</price>
+    <format>PDF</format>
+    <isbn>83-7387-437-2</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/455/Pieniadze_wspolnoty_mieszkaniowej</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/244/455-Pieniadze_wspolnoty_mieszkaniowej.jpg</cover>
+    <size>1,2 MB</size>
+    <length>161</length>
+  </product>
+  <product>
+    <id>25</id>
+    <title><![CDATA[Wpisy w rejestrze przedsiębiorców dotyczące spółek handlowych]]></title>
+    <authors><![CDATA[Elwira Marszałkowska-Krześ]]></authors>
+    <price>49.00</price>
+    <format>PDF</format>
+    <isbn>83-7387-543-3</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/463/Wpisy_w_rejestrze_przedsiebiorcow_dotyczace_spolek_handlowych</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/305/463-Wpisy_w_rejestrze_przedsiebiorcow_dotyczace_spolek_handlowych.jpg</cover>
+    <size>1,7 MB</size>
+    <length>286</length>
+  </product>
+  <product>
+    <id>26</id>
+    <title><![CDATA[Legal English. Workbook]]></title>
+    <authors><![CDATA[Małgorzata Jakubaszek]]></authors>
+    <price>31.49</price>
+    <format>PDF</format>
+    <isbn>83-7483-368-8</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/473/Legal_English_Workbook</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/297/473-Legal_English_Workbook.jpg</cover>
+    <size>1,1 MB</size>
+    <length>226</length>
+  </product>
+  <product>
+    <id>27</id>
+    <title><![CDATA[Nauka administracji]]></title>
+    <authors><![CDATA[Zbigniew Leoński]]></authors>
+    <price>35.10</price>
+    <format>PDF</format>
+    <isbn>978-83-255-1158-6</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/475/Nauka_administracji</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/297/475-Nauka_administracji.jpg</cover>
+    <size>1,9 MB</size>
+    <length>185</length>
+  </product>
+  <product>
+    <id>29</id>
+    <title><![CDATA[Spółdzielnie mieszkaniowe]]></title>
+    <authors><![CDATA[Lesław Myczkowski]]></authors>
+    <price>53.10</price>
+    <format>PDF</format>
+    <isbn>83-7387-601-4</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/482/Spoldzielnie_mieszkaniowe</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/244/482-Spoldzielnie_mieszkaniowe.jpg</cover>
+    <size>8,8 MB</size>
+    <length>345</length>
+  </product>
+  <product>
+    <id>30</id>
+    <title><![CDATA[Działalność uchwałodawcza naczelnego Sądu Administracyjnego]]></title>
+    <authors><![CDATA[Andrzej Skoczylas]]></authors>
+    <price>35.10</price>
+    <format>PDF</format>
+    <isbn>83-7387-507-7</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/489/Dzialalnosc_uchwalodawcza_naczelnego_Sadu_Administracyjnego</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/303/489-Dzialalnosc_uchwalodawcza_naczelnego_Sadu_Administracyjnego.jpg</cover>
+    <size>1,9 MB</size>
+    <length>336</length>
+  </product>
+  <product>
+    <id>31</id>
+    <title><![CDATA[Organizacje międzynarodowe]]></title>
+    <authors><![CDATA[Brygida Kuźniak]]></authors>
+    <price>44.10</price>
+    <format>PDF</format>
+    <isbn>978-83-7483-798-9</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/491/Organizacje_miedzynarodowe</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/297/491-Organizacje_miedzynarodowe.jpg</cover>
+    <size>3,8 MB</size>
+    <length>2</length>
+  </product>
+  <product>
+    <id>32</id>
+    <title><![CDATA[Kodeks karny. Część szczególna. Komentarz do artykułów 222–316. Tom II]]></title>
+    <authors><![CDATA[Jerzy Skorupka]]></authors>
+    <price>251.10</price>
+    <format>PDF</format>
+    <isbn>978-83-255-1583-6</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/493/Kodeks_karny_Czesc_szczegolna_Komentarz_do_artykulow_222316</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/301/493-Kodeks_karny_Czesc_szczegolna_Komentarz_do_artykulow_222316_Tom_.jpg</cover>
+    <size>9,1 MB</size>
+    <length>1783</length>
+  </product>
+  <product>
+    <id>33</id>
+    <title><![CDATA[Zarządzanie nieruchomościami mieszkaniowymi]]></title>
+    <authors><![CDATA[Ewa Bończak-Kucharczyk]]></authors>
+    <price>62.10</price>
+    <format>PDF</format>
+    <isbn>83-7387-615-4</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/497/Zarzadzanie_nieruchomosciami_mieszkaniowymi</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/244/497-Zarzadzanie_nieruchomosciami_mieszkaniowymi.jpg</cover>
+    <size>2,3 MB</size>
+    <length>394</length>
+  </product>
+  <product>
+    <id>34</id>
+    <title><![CDATA[Indywidualne konta emerytalne. Komentarz]]></title>
+    <authors><![CDATA[Piotr Paczkowski]]></authors>
+    <price>35.10</price>
+    <format>PDF</format>
+    <isbn>83-7387-612-X</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/506/Indywidualne_konta_emerytalne_Komentarz</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/301/506-Indywidualne_konta_emerytalne_Komentarz.jpg</cover>
+    <size>2,3 MB</size>
+    <length>226</length>
+  </product>
+  <product>
+    <id>35</id>
+    <title><![CDATA[Testamenty wspólne]]></title>
+    <authors><![CDATA[Konrad Osajda]]></authors>
+    <price>35.10</price>
+    <format>PDF</format>
+    <isbn>83-7387-029-6</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/507/Testamenty_wspolne</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/303/507-Testamenty_wspolne.jpg</cover>
+    <size>2,9 MB</size>
+    <length>2</length>
+  </product>
+  <product>
+    <id>36</id>
+    <title><![CDATA[Apelacja karna]]></title>
+    <authors><![CDATA[Kazimierz Łojewski]]></authors>
+    <price>35.10</price>
+    <format>PDF</format>
+    <isbn>83-7387-517-4</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/508/Apelacja_karna</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/244/508-Apelacja_karna.jpg</cover>
+    <size>689 KB</size>
+    <length>154</length>
+  </product>
+  <product>
+    <id>37</id>
+    <title><![CDATA[Realizacja prawa do sądu w postępowaniu cywilnym]]></title>
+    <authors><![CDATA[Piotr Pogonowski]]></authors>
+    <price>35.10</price>
+    <format>PDF</format>
+    <isbn>83-7387-616-2</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/511/Realizacja_prawa_do_sadu_w_postepowaniu_cywilnym</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/303/511-Realizacja_prawa_do_sadu_w_postepowaniu_cywilnym.jpg</cover>
+    <size>2,8 MB</size>
+    <length>206</length>
+  </product>
+  <product>
+    <id>38</id>
+    <title><![CDATA[Własność lokali. Komentarz]]></title>
+    <authors><![CDATA[Gerard Bieniek]]></authors>
+    <price>53.10</price>
+    <format>PDF</format>
+    <isbn>978-83-7483-915-0</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/516/Wlasnosc_lokali_Komentarz</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/301/516-Wlasnosc_lokali_Komentarz.jpg</cover>
+    <size>1,8 MB</size>
+    <length>266</length>
+  </product>
+  <product>
+    <id>39</id>
+    <title><![CDATA[Prawo spółek handlowych]]></title>
+    <authors><![CDATA[Andrzej Szajkowski]]></authors>
+    <price>109.00</price>
+    <format>PDF</format>
+    <isbn>83-7387-650-2</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/517/Prawo_spolek_handlowych</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/305/517-Prawo_spolek_handlowych.jpg</cover>
+    <size>4,0 MB</size>
+    <length>887</length>
+  </product>
+  <product>
+    <id>40</id>
+    <title><![CDATA[Stan wyższej konieczności w polskim prawie karnym]]></title>
+    <authors><![CDATA[Jerzy Lachowski]]></authors>
+    <price>35.10</price>
+    <format>PDF</format>
+    <isbn>83-7387-603-0</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/518/Stan_wyzszej_koniecznosci_w_polskim_prawie_karnym</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/303/518-Stan_wyzszej_koniecznosci_w_polskim_prawie_karnym.jpg</cover>
+    <size>3,4 MB</size>
+    <length>300</length>
+  </product>
+  <product>
+    <id>41</id>
+    <title><![CDATA[Spółka akcyjna. Komentarz]]></title>
+    <authors><![CDATA[Jacek Bieniak]]></authors>
+    <price>80.10</price>
+    <format>PDF</format>
+    <isbn>83-7387-664-2</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/521/Spolka_akcyjna_Komentarz</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/301/521-Spolka_akcyjna_Komentarz.jpg</cover>
+    <size>1,8 MB</size>
+    <length>559</length>
+  </product>
+  <product>
+    <id>42</id>
+    <title><![CDATA[Nieruchomości w projektach finansowanych przez UE]]></title>
+    <authors><![CDATA[Maciej Tertelis]]></authors>
+    <price>49.50</price>
+    <format>PDF</format>
+    <isbn>83-7387-606-5</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/522/Nieruchomosci_w_projektach_finansowanych_przez_UE</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/244/522-Nieruchomosci_w_projektach_finansowanych_przez_UE.jpg</cover>
+    <size>1,7 MB</size>
+    <length>355</length>
+  </product>
+  <product>
+    <id>44</id>
+    <title><![CDATA[Kodeks spółek handlowych. Tom II. Komentarz do artykułów 151-300]]></title>
+    <authors><![CDATA[Janusz Szwaja]]></authors>
+    <price>224.10</price>
+    <format>PDF</format>
+    <isbn>83-7387-661-8</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/549/Kodeks_spolek_handlowych_Tom_II_Komentarz_do_artykulow_151-300</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/301/549-Kodeks_spolek_handlowych_Tom_II_Komentarz_do_artykulow_151-300.jpg</cover>
+    <size>6,2 MB</size>
+    <length>1016</length>
+  </product>
+  <product>
+    <id>45</id>
+    <title><![CDATA[Gospodarowanie odpadami i opakowaniami. Komentarz]]></title>
+    <authors><![CDATA[Bartosz Draniewicz]]></authors>
+    <price>80.10</price>
+    <format>PDF</format>
+    <isbn>83-7387-682-0</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/552/Gospodarowanie_odpadami_i_opakowaniami_Komentarz</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/301/552-Gospodarowanie_odpadami_i_opakowaniami_Komentarz.jpg</cover>
+    <size>1,4 MB</size>
+    <length>434</length>
+  </product>
+  <product>
+    <id>46</id>
+    <title><![CDATA[Roszczenia ze stosunku pracy członka zarządu spółki kapitałowej]]></title>
+    <authors><![CDATA[Sebastian Koczur]]></authors>
+    <price>53.10</price>
+    <format>PDF</format>
+    <isbn>83-7387-720-7</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/556/Roszczenia_ze_stosunku_pracy_czlonka_zarzadu_spolki_kapitalowej</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/120/556-Roszczenia_ze_stosunku_pracy_czlonka_zarzadu_spolki_kapitalowej.jpg</cover>
+    <size>1,8 MB</size>
+    <length>307</length>
+  </product>
+  <product>
+    <id>47</id>
+    <title><![CDATA[Własność budynków i lokali oraz inne prawa rzeczowe w praktyce]]></title>
+    <authors><![CDATA[Lesław Myczkowski]]></authors>
+    <price>62.10</price>
+    <format>PDF</format>
+    <isbn>83-7387-725-8</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/559/Wlasnosc_budynkow_i_lokali_oraz_inne_prawa_rzeczowe_w_praktyce</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/244/559-Wlasnosc_budynkow_i_lokali_oraz_inne_prawa_rzeczowe_w_praktyce.jpg</cover>
+    <size>1,9 MB</size>
+    <length>453</length>
+  </product>
+  <product>
+    <id>48</id>
+    <title><![CDATA[Swoboda działalności gospodarczej]]></title>
+    <authors><![CDATA[Marek Szydło]]></authors>
+    <price>44.10</price>
+    <format>PDF</format>
+    <isbn>83-7387-797-5</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/570/Swoboda_dzialalnosci_gospodarczej</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/303/570-Swoboda_dzialalnosci_gospodarczej.jpg</cover>
+    <size>2,3 MB</size>
+    <length>343</length>
+  </product>
+  <product>
+    <id>49</id>
+    <title><![CDATA[Materialne prawo administracyjne]]></title>
+    <authors><![CDATA[Zbigniew Leoński]]></authors>
+    <price>35.10</price>
+    <format>PDF</format>
+    <isbn>978-83-255-0416-8</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/571/Materialne_prawo_administracyjne</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/297/571-Materialne_prawo_administracyjne.jpg</cover>
+    <size>2,2 MB</size>
+    <length>274</length>
+  </product>
+  <product>
+    <id>50</id>
+    <title><![CDATA[Investitionen in Polen. Rahmenbedingungen. Rechnungswesen. Steuern. Prüfung]]></title>
+    <authors><![CDATA[Withold Wollgarten]]></authors>
+    <price>89.10</price>
+    <format>PDF</format>
+    <isbn>83-7483-309-2</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/573/Investitionen_in_Polen_Rahmenbedingungen_Rechnungswesen_Steuern_</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/297/573-Investitionen_in_Polen_Rahmenbedingungen_Rechnungswesen_Steuern_.jpg</cover>
+    <size>2,0 MB</size>
+    <length>416</length>
+  </product>
+  <product>
+    <id>51</id>
+    <title><![CDATA[Zasady bezpieczeństwa w ruchu drogowym. Komentarz]]></title>
+    <authors><![CDATA[Wojciech Kotowski]]></authors>
+    <price>35.10</price>
+    <format>PDF</format>
+    <isbn>83-7387-803-3</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/577/Zasady_bezpieczenstwa_w_ruchu_drogowym_Komentarz</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/301/577-Zasady_bezpieczenstwa_w_ruchu_drogowym_Komentarz.jpg</cover>
+    <size>1,2 MB</size>
+    <length>314</length>
+  </product>
+  <product>
+    <id>52</id>
+    <title><![CDATA[Spółka z ograniczoną odpowiedzialnością]]></title>
+    <authors><![CDATA[Radosław L. Kwaśnicki]]></authors>
+    <price>159.00</price>
+    <format>PDF</format>
+    <isbn>83-7387-810-6</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/579/Spolka_z_ograniczona_odpowiedzialnoscia</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/305/579-Spolka_z_ograniczona_odpowiedzialnoscia.jpg</cover>
+    <size>14 MB</size>
+    <length>1024</length>
+  </product>
+  <product>
+    <id>53</id>
+    <title><![CDATA[Ochrona godności i innych dóbr osobistych pracownika]]></title>
+    <authors><![CDATA[Dominika Dörre-Nowak]]></authors>
+    <price>44.10</price>
+    <format>PDF</format>
+    <isbn>83-7387-683-9</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/583/Ochrona_godnosci_i_innych_dobr_osobistych_pracownika</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/303/583-Ochrona_godnosci_i_innych_dobr_osobistych_pracownika.jpg</cover>
+    <size>7,6 MB</size>
+    <length>312</length>
+  </product>
+  <product>
+    <id>54</id>
+    <title><![CDATA[Zarządzanie marketingiem]]></title>
+    <authors><![CDATA[Zdzisław Knecht]]></authors>
+    <price>30.60</price>
+    <format>PDF</format>
+    <isbn>978-83-255-0172-3</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/586/Zarzadzanie_marketingiem</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/242/586-Zarzadzanie_marketingiem.jpg</cover>
+    <size>2,1 MB</size>
+    <length>227</length>
+  </product>
+  <product>
+    <id>55</id>
+    <title><![CDATA[Ochrona znaków towarowych w Internecie]]></title>
+    <authors><![CDATA[Anna Kobylańska]]></authors>
+    <price>53.10</price>
+    <format>PDF</format>
+    <isbn>83-7387-716-9</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/589/Ochrona_znakow_towarowych_w_Internecie</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/303/589-Ochrona_znakow_towarowych_w_Internecie.jpg</cover>
+    <size>1,9 MB</size>
+    <length>192</length>
+  </product>
+  <product>
+    <id>56</id>
+    <title><![CDATA[Przekształcanie spółek handlowych]]></title>
+    <authors><![CDATA[Grzegorz Miś]]></authors>
+    <price>62.10</price>
+    <format>PDF</format>
+    <isbn>83-7387-678-2</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/592/Przeksztalcanie_spolek_handlowych</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/120/592-Przeksztalcanie_spolek_handlowych.jpg</cover>
+    <size>12 MB</size>
+    <length>504</length>
+  </product>
+  <product>
+    <id>57</id>
+    <title><![CDATA[Realizacja roszczenia o zawarcie umowy]]></title>
+    <authors><![CDATA[Agnieszka Łuszpak-Zając]]></authors>
+    <price>35.10</price>
+    <format>PDF</format>
+    <isbn>83-7387-823-8</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/593/Realizacja_roszczenia_o_zawarcie_umowy</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/303/593-Realizacja_roszczenia_o_zawarcie_umowy.jpg</cover>
+    <size>1,3 MB</size>
+    <length>234</length>
+  </product>
+  <product>
+    <id>58</id>
+    <title><![CDATA[Prawo o ruchu drogowym. Zasady bezpieczeństwa. Kierowca/Wypadki. Komentarz]]></title>
+    <authors><![CDATA[Kazimierz J. Pawelec]]></authors>
+    <price>53.10</price>
+    <format>PDF</format>
+    <isbn>83-7387-415-1</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/594/Prawo_o_ruchu_drogowym_Zasady_bezpieczenstwa_KierowcaWypadki_Kom</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/301/594-Prawo_o_ruchu_drogowym_Zasady_bezpieczenstwa_KierowcaWypadki_Kom.jpg</cover>
+    <size>2,1 MB</size>
+    <length>355</length>
+  </product>
+  <product>
+    <id>59</id>
+    <title><![CDATA[The Great Dictionary of Law and Economics. English-Polish Angielsko-polski słownik terminologii gospodarczej i prawniczej]]></title>
+    <authors><![CDATA[Ewa Ożga]]></authors>
+    <price>170.10</price>
+    <format>PDF</format>
+    <isbn>978-83-255-2926-0</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/595/The_Great_Dictionary_of_Law_and_Economics_English-Polish_Angiels</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/323/595-The_Great_Dictionary_of_Law_and_Economics_English-Polish_Angiels.jpg</cover>
+    <size>4,0 MB</size>
+    <length>799</length>
+  </product>
+  <product>
+    <id>60</id>
+    <title><![CDATA[Wspólnota mieszkaniowa - charakter prawny, prawa i obowiązki właścicieli, zarząd nieruchomością wspólną]]></title>
+    <authors><![CDATA[Aleksander Turlej]]></authors>
+    <price>40.50</price>
+    <format>PDF</format>
+    <isbn>83-7387-401-1</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/596/Wspolnota_mieszkaniowa_-_charakter_prawny_prawa_i_obowiazki_wlas</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/244/596-Wspolnota_mieszkaniowa_-_charakter_prawny_prawa_i_obowiazki_wlas.jpg</cover>
+    <size>7,1 MB</size>
+    <length>314</length>
+  </product>
+  <product>
+    <id>61</id>
+    <title><![CDATA[Przeprowadzanie dowodów w sprawach cywilnych i handlowych w państwach UE. Komentarz]]></title>
+    <authors><![CDATA[Jan Ciszewski]]></authors>
+    <price>35.10</price>
+    <format>PDF</format>
+    <isbn>83-7387-899-8</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/598/Przeprowadzanie_dowodow_w_sprawach_cywilnych_i_handlowych_w_pans</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/301/598-Przeprowadzanie_dowodow_w_sprawach_cywilnych_i_handlowych_w_pans.jpg</cover>
+    <size>1,0 MB</size>
+    <length>260</length>
+  </product>
+  <product>
+    <id>62</id>
+    <title><![CDATA[Ustawa o działalności pożytku publicznego i o wolontariacie. Komentarz]]></title>
+    <authors><![CDATA[Jerzy Kopyra]]></authors>
+    <price>40.50</price>
+    <format>PDF</format>
+    <isbn>83-7387-860-2</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/599/Ustawa_o_dzialalnosci_pozytku_publicznego_i_o_wolontariacie_Kome</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/301/599-Ustawa_o_dzialalnosci_pozytku_publicznego_i_o_wolontariacie_Kome.jpg</cover>
+    <size>6,1 MB</size>
+    <length>283</length>
+  </product>
+  <product>
+    <id>63</id>
+    <title><![CDATA[English-Polish Dictionary of Business Terms. Tom I]]></title>
+    <authors><![CDATA[Roman Kozierkiewicz]]></authors>
+    <price>179.10</price>
+    <format>PDF</format>
+    <isbn>978-83-255-2923-9</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/600/English-Polish_Dictionary_of_Business_Terms_Tom_I</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/323/600-English-Polish_Dictionary_of_Business_Terms_Tom_I.jpg</cover>
+    <size>5,0 MB</size>
+    <length>998</length>
+  </product>
+  <product>
+    <id>64</id>
+    <title><![CDATA[Historia warszawskiej adwokatury]]></title>
+    <authors><![CDATA[Zdzisław Krzemiński]]></authors>
+    <price>44.10</price>
+    <format>PDF</format>
+    <isbn>978-83-255-0519-6</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/601/Historia_warszawskiej_adwokatury</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/304/601-Historia_warszawskiej_adwokatury.jpg</cover>
+    <size>6,3 MB</size>
+    <length>300</length>
+  </product>
+  <product>
+    <id>65</id>
+    <title><![CDATA[Zabezpieczenie roszczeń, egzekucja należności. Tom 6]]></title>
+    <authors><![CDATA[Robert Pabis]]></authors>
+    <price>170.10</price>
+    <format>PDF</format>
+    <isbn>83-7387-765-7</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/606/Zabezpieczenie_roszczen_egzekucja_naleznosci_Tom_6</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/126/606-Zabezpieczenie_roszczen_egzekucja_naleznosci_Tom_6.jpg</cover>
+    <size>2,9 MB</size>
+    <length>673</length>
+  </product>
+  <product>
+    <id>66</id>
+    <title><![CDATA[Zagadnienia techniczne w prawie budowlanym]]></title>
+    <authors><![CDATA[Sławomir Serafin]]></authors>
+    <price>44.10</price>
+    <format>PDF</format>
+    <isbn>83-7387-821-1</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/608/Zagadnienia_techniczne_w_prawie_budowlanym</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/244/608-Zagadnienia_techniczne_w_prawie_budowlanym.jpg</cover>
+    <size>1,4 MB</size>
+    <length>289</length>
+  </product>
+  <product>
+    <id>67</id>
+    <title><![CDATA[Instytucja skargi subsydiarnej w procesie karnym]]></title>
+    <authors><![CDATA[Jarosław Zagrodnik]]></authors>
+    <price>53.10</price>
+    <format>PDF</format>
+    <isbn>83-7387-813-0</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/609/Instytucja_skargi_subsydiarnej_w_procesie_karnym</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/303/609-Instytucja_skargi_subsydiarnej_w_procesie_karnym.jpg</cover>
+    <size>6,2 MB</size>
+    <length>487</length>
+  </product>
+  <product>
+    <id>68</id>
+    <title><![CDATA[Ewolucja instytucji procesowych w prawie karnym skarbowym]]></title>
+    <authors><![CDATA[Grzegorz Skowronek]]></authors>
+    <price>35.10</price>
+    <format>PDF</format>
+    <isbn>83-7387-853-X</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/610/Ewolucja_instytucji_procesowych_w_prawie_karnym_skarbowym</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/303/610-Ewolucja_instytucji_procesowych_w_prawie_karnym_skarbowym.jpg</cover>
+    <size>1,3 MB</size>
+    <length>258</length>
+  </product>
+  <product>
+    <id>69</id>
+    <title><![CDATA[Europejska spółka akcyjna]]></title>
+    <authors><![CDATA[Katarzyna Niedzielska]]></authors>
+    <price>53.10</price>
+    <format>PDF</format>
+    <isbn>83-7387-811-4</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/613/Europejska_spolka_akcyjna</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/303/613-Europejska_spolka_akcyjna.jpg</cover>
+    <size>2,0 MB</size>
+    <length>282</length>
+  </product>
+  <product>
+    <id>70</id>
+    <title><![CDATA[Polnische Wirtschafts Gesetze - Polskie ustawy gospodarcze]]></title>
+    <authors><![CDATA[Opracowanie zbiorowe ]]></authors>
+    <price>143.10</price>
+    <format>PDF</format>
+    <isbn>978-83-255-1255-2</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/614/Polnische_Wirtschafts_Gesetze_-_Polskie_ustawy_gospodarcze</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/297/614-Polnische_Wirtschafts_Gesetze_-_Polskie_ustawy_gospodarcze.jpg</cover>
+    <size>2,7 MB</size>
+    <length>707</length>
+  </product>
+  <product>
+    <id>71</id>
+    <title><![CDATA[Spółka z ograniczoną odpowiedzialnością. Komentarz]]></title>
+    <authors><![CDATA[Andrzej Kidyba]]></authors>
+    <price>152.10</price>
+    <format>PDF</format>
+    <isbn>978-83-255-0687-2</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/621/Spolka_z_ograniczona_odpowiedzialnoscia_Komentarz</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/301/621-Spolka_z_ograniczona_odpowiedzialnoscia_Komentarz.jpg</cover>
+    <size>7,4 MB</size>
+    <length>984</length>
+  </product>
+  <product>
+    <id>72</id>
+    <title><![CDATA[Polish-English Dictionary of Business Terms. Tom II]]></title>
+    <authors><![CDATA[Roman Kozierkiewicz]]></authors>
+    <price>179.10</price>
+    <format>PDF</format>
+    <isbn>978-83-255-2922-2</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/633/Polish-English_Dictionary_of_Business_Terms_Tom_II</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/323/633-Polish-English_Dictionary_of_Business_Terms_Tom_II.jpg</cover>
+    <size>6,3 MB</size>
+    <length>816</length>
+  </product>
+  <product>
+    <id>73</id>
+    <title><![CDATA[Procedury podatkowe - gwarancje procesowe czy instrument fiskalizmu?]]></title>
+    <authors><![CDATA[Henryk Dzwonkowski]]></authors>
+    <price>39.00</price>
+    <format>PDF</format>
+    <isbn>83-7387-875-0</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/637/Procedury_podatkowe_-_gwarancje_procesowe_czy_instrument_fiskali</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/123/637-Procedury_podatkowe_-_gwarancje_procesowe_czy_instrument_fiskali.jpg</cover>
+    <size>999 KB</size>
+    <length>206</length>
+  </product>
+  <product>
+    <id>74</id>
+    <title><![CDATA[Prawo rzymskie. Instytucje]]></title>
+    <authors><![CDATA[Witold Wołodkiewicz]]></authors>
+    <price>40.50</price>
+    <format>PDF</format>
+    <isbn>978-83-255-1088-6</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/639/Prawo_rzymskie_Instytucje</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/297/639-Prawo_rzymskie_Instytucje.jpg</cover>
+    <size>2,3 MB</size>
+    <length>435</length>
+  </product>
+  <product>
+    <id>75</id>
+    <title><![CDATA[Prawo telekomunikacyjne. Komentarz]]></title>
+    <authors><![CDATA[Stanisław Piątek]]></authors>
+    <price>170.10</price>
+    <format>PDF</format>
+    <isbn>83-7387-867-X</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/650/Prawo_telekomunikacyjne_Komentarz</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/301/650-Prawo_telekomunikacyjne_Komentarz.jpg</cover>
+    <size>16 MB</size>
+    <length>1223</length>
+  </product>
+  <product>
+    <id>76</id>
+    <title><![CDATA[Umowy w obrocie nieruchomościami]]></title>
+    <authors><![CDATA[Stella Brzeszczyńska]]></authors>
+    <price>129.00</price>
+    <format>PDF</format>
+    <isbn>83-7387-822-X</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/652/Umowy_w_obrocie_nieruchomosciami</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/305/652-Umowy_w_obrocie_nieruchomosciami.jpg</cover>
+    <size>6,6 MB</size>
+    <length>933</length>
+  </product>
+  <product>
+    <id>77</id>
+    <title><![CDATA[Prawo wekslowe i czekowe. Komentarz]]></title>
+    <authors><![CDATA[Marek Czarnecki]]></authors>
+    <price>215.10</price>
+    <format>PDF</format>
+    <isbn>978-83-7483-800-9</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/653/Prawo_wekslowe_i_czekowe_Komentarz</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/301/653-Prawo_wekslowe_i_czekowe_Komentarz.jpg</cover>
+    <size>5,2 MB</size>
+    <length>1002</length>
+  </product>
+  <product>
+    <id>79</id>
+    <title><![CDATA[Podatek od spadków i darowizn 2009]]></title>
+    <authors><![CDATA[Stella Brzeszczyńska]]></authors>
+    <price>71.10</price>
+    <format>PDF</format>
+    <isbn>978-83-255-1067-1</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/662/Podatek_od_spadkow_i_darowizn_2009</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/242/662-Podatek_od_spadkow_i_darowizn_2009.jpg</cover>
+    <size>2,4 MB</size>
+    <length>333</length>
+  </product>
+  <product>
+    <id>80</id>
+    <title><![CDATA[Pojęcie powiernictwa - konstrukcja prawna zarządu powierniczego]]></title>
+    <authors><![CDATA[Robert Rykowski]]></authors>
+    <price>62.10</price>
+    <format>PDF</format>
+    <isbn>83-7387-866-1</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/663/Pojecie_powiernictwa_-_konstrukcja_prawna_zarzadu_powierniczego</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/120/663-Pojecie_powiernictwa_-_konstrukcja_prawna_zarzadu_powierniczego.jpg</cover>
+    <size>19 MB</size>
+    <length>551</length>
+  </product>
+  <product>
+    <id>82</id>
+    <title><![CDATA[Wykroczenia drogowe. Komentarz]]></title>
+    <authors><![CDATA[Wojciech Kotowski]]></authors>
+    <price>35.10</price>
+    <format>PDF</format>
+    <isbn>83-7387-955-2</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/675/Wykroczenia_drogowe_Komentarz</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/301/675-Wykroczenia_drogowe_Komentarz.jpg</cover>
+    <size>959 KB</size>
+    <length>229</length>
+  </product>
+  <product>
+    <id>83</id>
+    <title><![CDATA[Sprawiedliwość karania w społeczeństwach liberalnych. Zasada proporcjonalności]]></title>
+    <authors><![CDATA[Michał Królikowski]]></authors>
+    <price>44.10</price>
+    <format>PDF</format>
+    <isbn>83-7387-969-2</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/682/Sprawiedliwosc_karania_w_spoleczenstwach_liberalnych_Zasada_prop</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/303/682-Sprawiedliwosc_karania_w_spoleczenstwach_liberalnych_Zasada_prop.jpg</cover>
+    <size>1,8 MB</size>
+    <length>194</length>
+  </product>
+  <product>
+    <id>84</id>
+    <title><![CDATA[Swoboda umów według art. 3531 KC. Konstrukcja prawna]]></title>
+    <authors><![CDATA[Piotr Machnikowski]]></authors>
+    <price>35.10</price>
+    <format>PDF</format>
+    <isbn>83-7387-999-4</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/685/Swoboda_umow_wedlug_art_3531_KC_Konstrukcja_prawna</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/303/685-Swoboda_umow_wedlug_art_3531_KC_Konstrukcja_prawna.jpg</cover>
+    <size>5,9 MB</size>
+    <length>416</length>
+  </product>
+  <product>
+    <id>85</id>
+    <title><![CDATA[Prawo rodzinne. Tom 3. Wzory z objaśnieniami]]></title>
+    <authors><![CDATA[Henryk Haak]]></authors>
+    <price>152.10</price>
+    <format>PDF</format>
+    <isbn>83-7387-676-7</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/687/Prawo_rodzinne_Tom_3_Wzory_z_objasnieniami</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/126/687-Prawo_rodzinne_Tom_3_Wzory_z_objasnieniami.jpg</cover>
+    <size>2,3 MB</size>
+    <length>638</length>
+  </product>
+  <product>
+    <id>86</id>
+    <title><![CDATA[Agent handlowy - regulacje polskie i europejskie]]></title>
+    <authors><![CDATA[Ewa Rott-Pietrzyk]]></authors>
+    <price>53.10</price>
+    <format>PDF</format>
+    <isbn>83-7387-979-X</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/688/Agent_handlowy_-_regulacje_polskie_i_europejskie</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/303/688-Agent_handlowy_-_regulacje_polskie_i_europejskie.jpg</cover>
+    <size>10 MB</size>
+    <length>489</length>
+  </product>
+  <product>
+    <id>87</id>
+    <title><![CDATA[Rechnungslegungsgesetz. Ustawa o rachunkowości]]></title>
+    <authors><![CDATA[Przemysław Fil]]></authors>
+    <price>109.00</price>
+    <format>PDF</format>
+    <isbn>978-83-255-2884-3</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/689/Rechnungslegungsgesetz_Ustawa_o_rachunkowosci</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/123/689-Rechnungslegungsgesetz_Ustawa_o_rachunkowosci.jpg</cover>
+    <size>1,5 MB</size>
+    <length>307</length>
+  </product>
+  <product>
+    <id>88</id>
+    <title><![CDATA[Karta praw społecznych Rady Europy]]></title>
+    <authors><![CDATA[Andrzej Marian Świątkowski]]></authors>
+    <price>62.10</price>
+    <format>PDF</format>
+    <isbn>83-7387-943-9</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/696/Karta_praw_spolecznych_Rady_Europy</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/303/696-Karta_praw_spolecznych_Rady_Europy.jpg</cover>
+    <size>5,2 MB</size>
+    <length>641</length>
+  </product>
+  <product>
+    <id>89</id>
+    <title><![CDATA[Ordynacja podatkowa. Komentarz do nowelizacji]]></title>
+    <authors><![CDATA[Ireneusz Krawczyk]]></authors>
+    <price>69.00</price>
+    <format>PDF</format>
+    <isbn>83-7483-024-7</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/699/Ordynacja_podatkowa_Komentarz_do_nowelizacji</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/300/699-Ordynacja_podatkowa_Komentarz_do_nowelizacji.jpg</cover>
+    <size>1,8 MB</size>
+    <length>522</length>
+  </product>
+  <product>
+    <id>90</id>
+    <title><![CDATA[Kredyt mieszkaniowy i budowlany]]></title>
+    <authors><![CDATA[Zbigniew Dobosiewicz]]></authors>
+    <price>40.50</price>
+    <format>PDF</format>
+    <isbn>83-7387-957-9</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/701/Kredyt_mieszkaniowy_i_budowlany</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/244/701-Kredyt_mieszkaniowy_i_budowlany.jpg</cover>
+    <size>39 MB</size>
+    <length>208</length>
+  </product>
+  <product>
+    <id>91</id>
+    <title><![CDATA[Umowy odnoszące się do osób trzecich]]></title>
+    <authors><![CDATA[Małgorzata Bednarek]]></authors>
+    <price>44.10</price>
+    <format>PDF</format>
+    <isbn>83-7483-009-3</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/703/Umowy_odnoszace_sie_do_osob_trzecich</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/303/703-Umowy_odnoszace_sie_do_osob_trzecich.jpg</cover>
+    <size>2,0 MB</size>
+    <length>175</length>
+  </product>
+  <product>
+    <id>92</id>
+    <title><![CDATA[Pracownicza odpowiedzialność odszkodowawcza. Komentarz]]></title>
+    <authors><![CDATA[Władysław Patulski]]></authors>
+    <price>53.10</price>
+    <format>PDF</format>
+    <isbn>83-7387-952-8</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/704/Pracownicza_odpowiedzialnosc_odszkodowawcza_Komentarz</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/301/704-Pracownicza_odpowiedzialnosc_odszkodowawcza_Komentarz.jpg</cover>
+    <size>2,6 MB</size>
+    <length>321</length>
+  </product>
+  <product>
+    <id>93</id>
+    <title><![CDATA[Przedsiębiorca w postępowaniu cywilnym rozpoznawczym]]></title>
+    <authors><![CDATA[Radosław Flejszar]]></authors>
+    <price>40.50</price>
+    <format>PDF</format>
+    <isbn>83-7387-983-8</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/706/Przedsiebiorca_w_postepowaniu_cywilnym_rozpoznawczym</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/303/706-Przedsiebiorca_w_postepowaniu_cywilnym_rozpoznawczym.jpg</cover>
+    <size>1,9 MB</size>
+    <length>361</length>
+  </product>
+  <product>
+    <id>94</id>
+    <title><![CDATA[Umowy akcjonariuszy co do sposobu wykonania prawa głosu w prawie polskim i amerykańskim]]></title>
+    <authors><![CDATA[Łukasz Gasiński]]></authors>
+    <price>53.10</price>
+    <format>PDF</format>
+    <isbn>83-7387-845-9</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/711/Umowy_akcjonariuszy_co_do_sposobu_wykonania_prawa_glosu_w_prawie</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/120/711-Umowy_akcjonariuszy_co_do_sposobu_wykonania_prawa_glosu_w_prawie.jpg</cover>
+    <size>2,1 MB</size>
+    <length>332</length>
+  </product>
+  <product>
+    <id>95</id>
+    <title><![CDATA[Prawo upadłościowe i naprawcze. Tom 5]]></title>
+    <authors><![CDATA[Robert Pabis]]></authors>
+    <price>179.10</price>
+    <format>PDF</format>
+    <isbn>83-7483-028-X</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/712/Prawo_upadlosciowe_i_naprawcze_Tom_5</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/126/712-Prawo_upadlosciowe_i_naprawcze_Tom_5.jpg</cover>
+    <size>3,4 MB</size>
+    <length>824</length>
+  </product>
+  <product>
+    <id>96</id>
+    <title><![CDATA[Leksykon myślicieli politycznych i prawnych]]></title>
+    <authors><![CDATA[Tomasz Scheffler]]></authors>
+    <price>53.10</price>
+    <format>PDF</format>
+    <isbn>978-83-255-0297-3</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/714/Leksykon_myslicieli_politycznych_i_prawnych</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/304/714-Leksykon_myslicieli_politycznych_i_prawnych.jpg</cover>
+    <size>1,9 MB</size>
+    <length>666</length>
+  </product>
+  <product>
+    <id>97</id>
+    <title><![CDATA[Dyscyplina finansów publicznych. Komentarz]]></title>
+    <authors><![CDATA[Piotr Gryska]]></authors>
+    <price>62.10</price>
+    <format>PDF</format>
+    <isbn>83-7387-989-7</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/716/Dyscyplina_finansow_publicznych_Komentarz</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/301/716-Dyscyplina_finansow_publicznych_Komentarz.jpg</cover>
+    <size>3,7 MB</size>
+    <length>601</length>
+  </product>
+  <product>
+    <id>98</id>
+    <title><![CDATA[Podatnik w postępowaniu podatkowym]]></title>
+    <authors><![CDATA[Adam Mariański]]></authors>
+    <price>73.00</price>
+    <format>PDF</format>
+    <isbn>83-7387-940-4</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/718/Podatnik_w_postepowaniu_podatkowym</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/300/718-Podatnik_w_postepowaniu_podatkowym.jpg</cover>
+    <size>1,7 MB</size>
+    <length>526</length>
+  </product>
+  <product>
+    <id>99</id>
+    <title><![CDATA[Orzecznictwo Trybunału Sprawiedliwości Wspólnot Europejskich w sprawach gospodarczych]]></title>
+    <authors><![CDATA[Michał Bernat]]></authors>
+    <price>71.10</price>
+    <format>PDF</format>
+    <isbn>83-7387-992-7</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/720/Orzecznictwo_Trybunalu_Sprawiedliwosci_Wspolnot_Europejskich_w_s</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/127/720-Orzecznictwo_Trybunalu_Sprawiedliwosci_Wspolnot_Europejskich_w_s.jpg</cover>
+    <size>1,9 MB</size>
+    <length>454</length>
+  </product>
+  <product>
+    <id>100</id>
+    <title><![CDATA[Kodeks karny. Część szczególna. Komentarz do artykułów 117–221. Tom I]]></title>
+    <authors><![CDATA[Bogusław Michalski]]></authors>
+    <price>251.10</price>
+    <format>PDF</format>
+    <isbn>978-83-255-1244-6</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/721/Kodeks_karny_Czesc_szczegolna_Komentarz_do_artykulow_117221</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/301/721-Kodeks_karny_Czesc_szczegolna_Komentarz_do_artykulow_117221_Tom_.jpg</cover>
+    <size>7,4 MB</size>
+    <length>1480</length>
+  </product>
+  <product>
+    <id>101</id>
+    <title><![CDATA[Odpowiedzialność cywilna władzy publicznej]]></title>
+    <authors><![CDATA[Paweł Dzienis]]></authors>
+    <price>44.10</price>
+    <format>PDF</format>
+    <isbn>83-7387-971-4</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/723/Odpowiedzialnosc_cywilna_wladzy_publicznej</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/303/723-Odpowiedzialnosc_cywilna_wladzy_publicznej.jpg</cover>
+    <size>14 MB</size>
+    <length>399</length>
+  </product>
+  <product>
+    <id>102</id>
+    <title><![CDATA[Dictionary of Economic Terms. Banking. Finance. Law Słownik terminologii gospodarczej. Bankowość. Finanse. Prawo English-Polish, Polish-English]]></title>
+    <authors><![CDATA[Iwona Kienzler]]></authors>
+    <price>134.10</price>
+    <format>PDF</format>
+    <isbn>978-83-255-2925-3</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/725/Dictionary_of_Economic_Terms_Banking_Finance_Law_Slownik_termino</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/323/725-Dictionary_of_Economic_Terms_Banking_Finance_Law_Slownik_termino.jpg</cover>
+    <size>3,5 MB</size>
+    <length>746</length>
+  </product>
+  <product>
+    <id>103</id>
+    <title><![CDATA[Skarga konstytucyjna. Polski model na tle porównawczym]]></title>
+    <authors><![CDATA[Bogumił Szmulik]]></authors>
+    <price>44.10</price>
+    <format>PDF</format>
+    <isbn>83-7483-004-2</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/730/Skarga_konstytucyjna_Polski_model_na_tle_porownawczym</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/303/730-Skarga_konstytucyjna_Polski_model_na_tle_porownawczym.jpg</cover>
+    <size>7,3 MB</size>
+    <length>353</length>
+  </product>
+  <product>
+    <id>104</id>
+    <title><![CDATA[Usługi detektywistyczne. Komentarz]]></title>
+    <authors><![CDATA[Grzegorz Gozdór]]></authors>
+    <price>44.10</price>
+    <format>PDF</format>
+    <isbn>83-7483-012-3</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/731/Uslugi_detektywistyczne_Komentarz</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/301/731-Uslugi_detektywistyczne_Komentarz.jpg</cover>
+    <size>1 019 KB</size>
+    <length>270</length>
+  </product>
+  <product>
+    <id>105</id>
+    <title><![CDATA[Pozycja prawna zarządu i członków zarządu spółek kapitałowych]]></title>
+    <authors><![CDATA[Agata Gburzyńska-Dulewicz]]></authors>
+    <price>53.10</price>
+    <format>PDF</format>
+    <isbn>83-7483-008-5</isbn>
+    <url>http://www.czytio.pl/ksiegarnia/ebook/735/Pozycja_prawna_zarzadu_i_czlonkow_zarzadu_spolek_kapitalowych</url>
+    <cover>http://www.czytio.pl/ksiegarnia/images/120/735-Pozycja_prawna_zarzadu_i_czlonkow_zarzadu_spolek_kapitalowych.jpg</cover>
+    <size>1,0 MB</size>
+    <length>244</length>
+  </product>
+</products>

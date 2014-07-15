@@ -1,0 +1,2394 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pasaz:Envelope SYSTEM "loadOffers.dtd">
+<pasaz:Envelope xmlns:pasaz="http://schemas.xmlsoap.org/soap/envelope/">
+  <pasaz:Body>
+    <loadOffers xmlns="urn:ExportB2B">
+      <offers>
+        <offer>
+          <id>a-tale-of-two-cities</id>
+          <name><![CDATA[A Tale Of Two Cities]]></name>
+          <price>12,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f36ea6,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/charles-dickens/a-tale-of-two-cities-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Macmillan]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Charles Dickens]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[1 godz. 9 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>anna-and-the-fighter</id>
+          <name><![CDATA[Anna and the Fighter]]></name>
+          <price>12,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f3728b,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/elizabeth-laird/anna-and-the-fighter-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Macmillan]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Elizabeth Laird]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[0 godz. 24 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>bristol-murder</id>
+          <name><![CDATA[Bristol Murder]]></name>
+          <price>18,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f37670,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/philip-prowse/bristol-murder-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Macmillan]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Philip Prowse]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[1 godz. 49 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>daisy-miller</id>
+          <name><![CDATA[Daisy Miller]]></name>
+          <price>18,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f37a55,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/henry-james/daisy-miller-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Macmillan]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Henry James]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[2 godz. 13 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>dangerous-journey</id>
+          <name><![CDATA[Dangerous Journey]]></name>
+          <price>12,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f37e3a,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/alwyn-cox/dangerous-journey-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Macmillan]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Alwyn Cox]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[0 godz. 19 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>dracula-readers</id>
+          <name><![CDATA[Dracula]]></name>
+          <price>18,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f3821f,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/bram-stoker/dracula-readers-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Macmillan]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Bram Stoker]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[1 godz. 15 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>emma</id>
+          <name><![CDATA[Emma]]></name>
+          <price>18,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f38604,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/jane-austen/emma-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Macmillan]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Jane Austen]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[3 godz. 34 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>far-from-the-madding-crowd</id>
+          <name><![CDATA[Far from the Madding Crowd]]></name>
+          <price>18,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f389e9,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/thomas-hardy/far-from-the-madding-crowd-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Macmillan]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Thomas Hardy]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[2 godz. 39 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>frankenstein</id>
+          <name><![CDATA[Frankenstein]]></name>
+          <price>12,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f38dce,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/mary-shelley/frankenstein-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Macmillan]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Mary Shelley]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[0 godz. 53 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>great-expectations</id>
+          <name><![CDATA[Great Expectations]]></name>
+          <price>18,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f391b3,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/charles-dickens/great-expectations-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Macmillan]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Charles Dickens]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[2 godz. 33 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>heidi</id>
+          <name><![CDATA[Heidi]]></name>
+          <price>18,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f39598,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/johanna-spyri/heidi-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Macmillan]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Johanna Spyri]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[2 godz. 6 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>i-robot</id>
+          <name><![CDATA[I, Robot]]></name>
+          <price>18,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f3997d,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/isaac-asimov/i-robot-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Macmillan]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Isaac Asimov]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[2 godz. 1 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>jane-eyre</id>
+          <name><![CDATA[Jane Eyre]]></name>
+          <price>12,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f39d62,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/charlotte-bronte/jane-eyre-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Macmillan]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Charlotte Bronte]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[1 godz. 21 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>king-arthur-and-the-knights-of-the-round-table</id>
+          <name><![CDATA[King Arthur and the Knights of the Round Table]]></name>
+          <price>18,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f3a147,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/stephen-colbourn/king-arthur-and-the-knights-of-the-round-table-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Macmillan]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Stephen Colbourn]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[2 godz. 0 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>l-a-movie</id>
+          <name><![CDATA[L.A. Movie]]></name>
+          <price>18,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f3a52c,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/philip-prowse/l-a-movie-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Macmillan]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Philip Prowse]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[2 godz. 59 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>l-a-winners</id>
+          <name><![CDATA[L.A. Winners]]></name>
+          <price>12,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f3a911,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/philip-prowse/l-a-winners-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Macmillan]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Philip Prowse]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[1 godz. 45 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>little-women</id>
+          <name><![CDATA[Little Women]]></name>
+          <price>12,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f3acf6,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/louisa-m-alcott/little-women-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Macmillan]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Louisa M. Alcott]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[1 godz. 15 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>marco</id>
+          <name><![CDATA[Marco]]></name>
+          <price>12,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f3b0db,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/mike-esplen/marco-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Macmillan]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Mike Esplen]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[0 godz. 21 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>meet-me-in-istanbul</id>
+          <name><![CDATA[Meet Me in Istanbul]]></name>
+          <price>18,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f3b4c0,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/richard-chisholm/meet-me-in-istanbul-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Macmillan]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Richard Chisholm]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[1 godz. 37 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>money-for-a-motorbike</id>
+          <name><![CDATA[Money for a Motorbike]]></name>
+          <price>12,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f3b8a5,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/john-milne/money-for-a-motorbike-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Macmillan]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[John Milne]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[0 godz. 19 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>nelson-mandela</id>
+          <name><![CDATA[Nelson Mandela]]></name>
+          <price>18,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f3bc8a,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/carl-w-hart/nelson-mandela-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Macmillan]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Carl W Hart]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[1 godz. 43 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>northanger-abbey</id>
+          <name><![CDATA[Northanger Abbey]]></name>
+          <price>12,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f3c06f,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/jane-austen/northanger-abbey-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Macmillan]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Jane Austen]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[1 godz. 8 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>officially-dead</id>
+          <name><![CDATA[Officially Dead]]></name>
+          <price>18,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f3c454,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/richard-prescott/officially-dead-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Macmillan]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Richard Prescott]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[2 godz. 23 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>oliver-twist</id>
+          <name><![CDATA[Oliver Twist]]></name>
+          <price>18,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f3c839,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/charles-dickens/oliver-twist-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Macmillan]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Charles Dickens]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[1 godz. 28 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>owl-creek-bridge-and-other-stories</id>
+          <name><![CDATA[Owl Creek Bridge and Other Stories]]></name>
+          <price>18,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f3cc1e,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/ambrose-bierce/owl-creek-bridge-and-other-stories-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Macmillan]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Ambrose Bierce]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[2 godz. 23 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>princess-diana</id>
+          <name><![CDATA[Princess Diana]]></name>
+          <price>12,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f3d003,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/anne-collins/princess-diana-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Macmillan]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Anne Collins]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[1 godz. 30 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>rich-man-poor-man</id>
+          <name><![CDATA[Rich Man, Poor Man]]></name>
+          <price>12,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f3d3e8,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/t-c-jupp/rich-man-poor-man-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Macmillan]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[T.C. Jupp]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[0 godz. 25 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>robin-hood</id>
+          <name><![CDATA[Robin Hood]]></name>
+          <price>18,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f3d7cd,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/stephen-colbourn/robin-hood-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Macmillan]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Stephen Colbourn]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[1 godz. 46 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>robinson-crusoe-readers</id>
+          <name><![CDATA[Robinson Crusoe]]></name>
+          <price>18,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f3dbb2,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/daniel-defoe/robinson-crusoe-readers-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Macmillan]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Daniel Defoe]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[1 godz. 50 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>room-13-and-other-ghost-stories</id>
+          <name><![CDATA[Room 13 and Other Ghost Stories]]></name>
+          <price>12,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f3df97,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/m-r-james/room-13-and-other-ghost-stories-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Macmillan]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[M. R. James]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[1 godz. 25 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>selected-stories-by-d-h-lawrence</id>
+          <name><![CDATA[Selected Stories by D.H. Lawrence]]></name>
+          <price>18,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f3e37c,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/d-h-lawrence/selected-stories-by-d-h-lawrence-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Macmillan]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[D.H. Lawrence]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[2 godz. 40 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>sense-and-sensibility</id>
+          <name><![CDATA[Sense and Sensibility]]></name>
+          <price>18,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f3e761,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/jane-austen/sense-and-sensibility-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Macmillan]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Jane Austen]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[3 godz. 0 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>seven-stories-of-mystery-and-horror</id>
+          <name><![CDATA[Seven Stories of Mystery and Horror]]></name>
+          <price>12,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f3eb46,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/edgar-allan-poe/seven-stories-of-mystery-and-horror-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Macmillan]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Edgar Allan Poe]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[1 godz. 50 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>tales-of-horror</id>
+          <name><![CDATA[Tales of Horror]]></name>
+          <price>12,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f3ef2b,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/bram-stoker/tales-of-horror-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Macmillan]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Bram Stoker]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[1 godz. 20 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>tess-of-the-d-urbervilles</id>
+          <name><![CDATA[Tess of the d'Urbervilles]]></name>
+          <price>18,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f3f310,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/thomas-hardy/tess-of-the-d-urbervilles-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Macmillan]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Thomas Hardy]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[3 godz. 1 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>the-adventures-of-tom-sawyer</id>
+          <name><![CDATA[The Adventures of Tom Sawyer]]></name>
+          <price>12,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f3f6f5,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/mark-twain/the-adventures-of-tom-sawyer-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Macmillan]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Mark Twain]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[1 godz. 15 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>the-black-cat</id>
+          <name><![CDATA[The Black Cat]]></name>
+          <price>12,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f3fada,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/john-milne/the-black-cat-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Macmillan]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[John Milne]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[1 godz. 4 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>the-canterville-ghost-and-other-stories</id>
+          <name><![CDATA[The Canterville Ghost and Other Stories]]></name>
+          <price>12,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f3febf,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/oscar-wilde/the-canterville-ghost-and-other-stories-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Macmillan]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Oscar Wilde]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[1 godz. 15 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>the-hound-of-the-baskervilles</id>
+          <name><![CDATA[The Hound of the Baskervilles]]></name>
+          <price>12,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f402a4,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/arthur-conan-doyle/the-hound-of-the-baskervilles-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Macmillan]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Arthur Conan Doyle]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[1 godz. 17 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>the-house-on-the-hill</id>
+          <name><![CDATA[The House on the Hill]]></name>
+          <price>12,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f40689,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/elizabeth-laird/the-house-on-the-hill-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Macmillan]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Elizabeth Laird]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[0 godz. 28 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>the-last-of-the-mohicans</id>
+          <name><![CDATA[The Last of the Mohicans]]></name>
+          <price>12,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f40a6e,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/james-fenimore-cooper/the-last-of-the-mohicans-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Macmillan]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[James Fenimore Cooper]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[1 godz. 3 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>the-legends-of-sleepy-hollow-and-rip-van-winkle</id>
+          <name><![CDATA[The Legends of Sleepy Hollow and Rip Van Winkle]]></name>
+          <price>12,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f40e53,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/washington-irving/the-legends-of-sleepy-hollow-and-rip-van-winkle-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Macmillan]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Washington Irving]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[1 godz. 41 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>the-long-tunnel</id>
+          <name><![CDATA[The Long Tunnel]]></name>
+          <price>12,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f41238,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/john-milne/the-long-tunnel-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Macmillan]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[John Milne]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[0 godz. 22 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>the-man-in-the-iron-mask</id>
+          <name><![CDATA[The Man in the Iron Mask]]></name>
+          <price>12,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f4161d,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/alexandre-dumas/the-man-in-the-iron-mask-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Macmillan]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Alexandre Dumas]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[1 godz. 40 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>the-mill-on-the-floss</id>
+          <name><![CDATA[The Mill On The Floss]]></name>
+          <price>12,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f41a02,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/george-eliot/the-mill-on-the-floss-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Macmillan]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[George Eliot]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[1 godz. 6 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>the-phantom-airman</id>
+          <name><![CDATA[The Phantom Airman]]></name>
+          <price>12,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f41de7,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/allan-frewin-jones/the-phantom-airman-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Macmillan]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Allan Frewin Jones]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[1 godz. 40 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>the-phantom-of-the-opera</id>
+          <name><![CDATA[The Phantom of the Opera]]></name>
+          <price>12,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f421cc,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/gaston-leroux/the-phantom-of-the-opera-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Macmillan]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Gaston Leroux]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[1 godz. 19 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>the-picture-of-dorian-gray</id>
+          <name><![CDATA[The Picture of Dorian Gray]]></name>
+          <price>12,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f425b1,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/oscar-wilde/the-picture-of-dorian-gray-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Macmillan]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Oscar Wilde]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[0 godz. 53 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>the-queen-of-death</id>
+          <name><![CDATA[The Queen of Death]]></name>
+          <price>18,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f42996,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/john-milne/the-queen-of-death-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Macmillan]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[John Milne]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[1 godz. 42 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>the-secret-garden</id>
+          <name><![CDATA[The Secret Garden]]></name>
+          <price>18,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f42d7b,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/frances-hodgson-burnett/the-secret-garden-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Macmillan]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Frances Hodgson Burnett]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[2 godz. 14 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>the-sign-of-four</id>
+          <name><![CDATA[The Sign of Four]]></name>
+          <price>18,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f43160,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/arthur-conan-doyle/the-sign-of-four-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Macmillan]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Artur Conan Doyle]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[1 godz. 39 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>the-smuggler</id>
+          <name><![CDATA[The Smuggler]]></name>
+          <price>18,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f43545,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/piers-plowright/the-smuggler-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Macmillan]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Piers Plowright]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[1 godz. 49 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>the-space-invaders</id>
+          <name><![CDATA[The Space Invaders]]></name>
+          <price>18,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f4392a,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/geoffrey-matthews/the-space-invaders-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Macmillan]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Geoffrey Matthews]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[1 godz. 14 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>the-speckled-band-and-other-stories</id>
+          <name><![CDATA[The Speckled Band and Other Stories]]></name>
+          <price>18,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f43d0f,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/arthur-conan-doyle/the-speckled-band-and-other-stories-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Macmillan]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Artur Conan Doyle]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[1 godz. 31 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>the-stranger</id>
+          <name><![CDATA[The Stranger]]></name>
+          <price>12,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f440f4,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/norman-whitney/the-stranger-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Macmillan]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Norman Whitney]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[1 godz. 0 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>the-tenant-of-wildfell-hall</id>
+          <name><![CDATA[The Tenant of Wildfell Hall]]></name>
+          <price>18,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f444d9,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/anne-bronte/the-tenant-of-wildfell-hall-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Macmillan]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Anne Bronte]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[2 godz. 25 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>the-three-musketeers</id>
+          <name><![CDATA[The Three Musketeers]]></name>
+          <price>12,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f448be,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/alexandre-dumas/the-three-musketeers-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Macmillan]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Alexandre Dumas]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[1 godz. 20 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>the-treasure-of-monte-cristo</id>
+          <name><![CDATA[The Treasure of Monte Cristo]]></name>
+          <price>18,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f44ca3,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/alexandre-dumas/the-treasure-of-monte-cristo-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Macmillan]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Alexandre Dumas]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[2 godz. 31 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>the-wizard-of-oz</id>
+          <name><![CDATA[The Wizard of Oz]]></name>
+          <price>18,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f45088,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/l-frank-baum/the-wizard-of-oz-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Macmillan]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[L. Frank Baum]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[2 godz. 10 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>the-woman-who-disappeared</id>
+          <name><![CDATA[The Woman Who Disappeared]]></name>
+          <price>18,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f4546d,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/philip-prowse/the-woman-who-disappeared-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Macmillan]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Philip Prowse]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[1 godz. 26 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>therese-raquin</id>
+          <name><![CDATA[Therese Raquin]]></name>
+          <price>18,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f45852,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/emile-zola/therese-raquin-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Macmillan]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Emilé Zola]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[2 godz. 11 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>unquiet-graves</id>
+          <name><![CDATA[Unquiet Graves]]></name>
+          <price>12,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f45c37,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/allan-frewin-jones/unquiet-graves-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Macmillan]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Allan Frewin Jones]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[1 godz. 38 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>white-fang</id>
+          <name><![CDATA[White Fang]]></name>
+          <price>12,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f4601c,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/jack-london/white-fang-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Macmillan]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Jack London]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[1 godz. 37 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>wuthering-heights</id>
+          <name><![CDATA[Wuthering Heights]]></name>
+          <price>18,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f46401,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/emily-bronte/wuthering-heights-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Macmillan]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Emily Bronte]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[2 godz. 46 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>ateny</id>
+          <name><![CDATA[Ateny]]></name>
+          <price>9,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f467e6,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/papagayo/ateny-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Papagayo Sp. z o.o.]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Papagayo Sp. z o.o.]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[1 godz. 52 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>cracow-the-magical-city</id>
+          <name><![CDATA[Cracow, the Magical City]]></name>
+          <price>9,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f46bcb,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/city-tour-polska/cracow-the-magical-city-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[City Tour Polska, Rafał Moryto Sp. Kom.]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Tomasz Martyniuk;Barbara Dudek;Monika Wąs]]></value>
+            </attribute>
+            <attribute>
+              <name>Czyta</name>
+              <value><![CDATA[Ian Transue]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[3 godz. 5 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>egipt-dolny</id>
+          <name><![CDATA[Egipt Dolny]]></name>
+          <price>9,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f46fb0,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/papagayo/egipt-dolny-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Papagayo Sp. z o.o.]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Papagayo Sp. z o.o.]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[1 godz. 36 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>egipt-gorny</id>
+          <name><![CDATA[Egipt Górny]]></name>
+          <price>9,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f47395,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/papagayo/egipt-gorny-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Papagayo Sp. z o.o.]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Papagayo Sp. z o.o.]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[2 godz. 20 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>gdansk</id>
+          <name><![CDATA[Gdańsk]]></name>
+          <price>9,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f4777a,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/papagayo/gdansk-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Papagayo Sp. z o.o.]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Papagayo Sp. z o.o.]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[1 godz. 34 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>krakau-magische-stadt</id>
+          <name><![CDATA[Krakau Magische Stadt]]></name>
+          <price>9,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f47b5f,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/city-tour-polska/krakau-magische-stadt-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[City Tour Polska, Rafał Moryto Sp. Kom.]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Tomasz Martyniuk;Barbara Dudek;Monika Wąs]]></value>
+            </attribute>
+            <attribute>
+              <name>Czyta</name>
+              <value><![CDATA[Peter-Christian Seraphim]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[3 godz. 17 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>krakow</id>
+          <name><![CDATA[Kraków]]></name>
+          <price>9,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f47f44,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/papagayo/krakow-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Papagayo Sp. z o.o.]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Papagayo Sp. z o.o.]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[2 godz. 25 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>krakow-miasto-magiczne</id>
+          <name><![CDATA[Kraków Miasto Magiczne]]></name>
+          <price>9,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f48329,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/city-tour-polska/krakow-miasto-magiczne-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[City Tour Polska, Rafał Moryto Sp. Kom.]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Tomasz Martyniuk;Barbara Dudek;Monika Wąs]]></value>
+            </attribute>
+            <attribute>
+              <name>Czyta</name>
+              <value><![CDATA[Tomasz Wysocki]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[4 godz. 12 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>londyn</id>
+          <name><![CDATA[Londyn]]></name>
+          <price>9,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f4870e,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/papagayo/londyn-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Papagayo Sp. z o.o.]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Papagayo Sp. z o.o.]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[1 godz. 52 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>paryz</id>
+          <name><![CDATA[Paryż]]></name>
+          <price>9,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f48af3,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/papagayo/paryz-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Papagayo Sp. z o.o.]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Papagayo Sp. z o.o.]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[1 godz. 34 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>praga</id>
+          <name><![CDATA[Praga]]></name>
+          <price>9,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f48ed8,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/papagayo/praga-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Papagayo Sp. z o.o.]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Papagayo Sp. z o.o.]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[1 godz. 56 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>rzym</id>
+          <name><![CDATA[Rzym]]></name>
+          <price>9,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f492bd,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/papagayo/rzym-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Papagayo Sp. z o.o.]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Papagayo Sp. z o.o.]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[1 godz. 21 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>warszawa</id>
+          <name><![CDATA[Warszawa]]></name>
+          <price>9,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f496a2,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/papagayo/warszawa-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Papagayo Sp. z o.o.]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Papagayo Sp. z o.o.]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[2 godz. 44 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>wenecja</id>
+          <name><![CDATA[Wenecja]]></name>
+          <price>9,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f49a87,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/papagayo/wenecja-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Papagayo Sp. z o.o.]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Papagayo Sp. z o.o.]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[2 godz. 4 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>wieden</id>
+          <name><![CDATA[Wiedeń]]></name>
+          <price>9,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f49e6c,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/papagayo/wieden-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Papagayo Sp. z o.o.]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Papagayo Sp. z o.o.]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[2 godz. 22 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>wilno</id>
+          <name><![CDATA[Wilno]]></name>
+          <price>9,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f4a251,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/papagayo/wilno-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Papagayo Sp. z o.o.]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Papagayo Sp. z o.o.]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[1 godz. 18 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>wroclaw</id>
+          <name><![CDATA[Wrocław]]></name>
+          <price>9,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f4a636,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/papagayo/wroclaw-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Papagayo Sp. z o.o.]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Papagayo Sp. z o.o.]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[2 godz. 1 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>zakopane</id>
+          <name><![CDATA[Zakopane]]></name>
+          <price>9,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f4aa1b,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/papagayo/zakopane-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Papagayo Sp. z o.o.]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Papagayo Sp. z o.o.]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[1 godz. 15 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>forbes-01-12</id>
+          <name><![CDATA[AudioForbes nr 01 Styczeń 2012]]></name>
+          <price>9,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f4ae00,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/forbes/forbes-01-12-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Forbes]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Forbes]]></value>
+            </attribute>
+            <attribute>
+              <name>Czyta</name>
+              <value><![CDATA[Wojciech Najda]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[4 godz. 2 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>forbes-02-12</id>
+          <name><![CDATA[AudioForbes nr 02 Luty 2012]]></name>
+          <price>9,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f4b1e5,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/forbes/forbes-02-12-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Forbes]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Forbes]]></value>
+            </attribute>
+            <attribute>
+              <name>Czyta</name>
+              <value><![CDATA[Wojciech Najda]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[4 godz. 36 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>forbes-03-11</id>
+          <name><![CDATA[AudioForbes nr 03 Marzec 2011]]></name>
+          <price>9,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f4b5ca,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/forbes/forbes-03-11-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Forbes]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Forbes]]></value>
+            </attribute>
+            <attribute>
+              <name>Czyta</name>
+              <value><![CDATA[Wojciech Najda]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[4 godz. 57 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>forbes-03-12</id>
+          <name><![CDATA[AudioForbes nr 03 Marzec 2012]]></name>
+          <price>9,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f4b9af,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/forbes/forbes-03-12-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Forbes]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Forbes]]></value>
+            </attribute>
+            <attribute>
+              <name>Czyta</name>
+              <value><![CDATA[Wojciech Najda]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[4 godz. 41 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>forbes-04-11</id>
+          <name><![CDATA[AudioForbes nr 04 Kwiecień 2011]]></name>
+          <price>9,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f4bd94,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/forbes/forbes-04-11-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Forbes]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Forbes]]></value>
+            </attribute>
+            <attribute>
+              <name>Czyta</name>
+              <value><![CDATA[Wojciech Najda]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[4 godz. 14 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>forbes-04-12</id>
+          <name><![CDATA[AudioForbes nr 04 Kwiecień 2012]]></name>
+          <price>9,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f4c179,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/forbes/forbes-04-12-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Forbes]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Forbes]]></value>
+            </attribute>
+            <attribute>
+              <name>Czyta</name>
+              <value><![CDATA[Wojciech Najda]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[3 godz. 53 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>forbes-05-11</id>
+          <name><![CDATA[AudioForbes nr 05 Maj 2011]]></name>
+          <price>9,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f4c55e,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/forbes/forbes-05-11-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Forbes]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Forbes]]></value>
+            </attribute>
+            <attribute>
+              <name>Czyta</name>
+              <value><![CDATA[Roch Siemianowski;Wojciech Najda]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[4 godz. 28 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>forbes-06-11</id>
+          <name><![CDATA[AudioForbes nr 06 Czerwiec 2011]]></name>
+          <price>9,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f4c943,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/forbes/forbes-06-11-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Forbes]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Forbes]]></value>
+            </attribute>
+            <attribute>
+              <name>Czyta</name>
+              <value><![CDATA[Wojciech Najda]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[3 godz. 37 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>forbes-07-11</id>
+          <name><![CDATA[AudioForbes nr 07 Lipiec 2011]]></name>
+          <price>9,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f4cd28,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/forbes/forbes-07-11-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Forbes]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Forbes]]></value>
+            </attribute>
+            <attribute>
+              <name>Czyta</name>
+              <value><![CDATA[Wojciech Najda]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[3 godz. 52 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>forbes-08-11</id>
+          <name><![CDATA[AudioForbes nr 08 Sierpień 2011]]></name>
+          <price>9,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f4d10d,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/forbes/forbes-08-11-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Forbes]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Forbes]]></value>
+            </attribute>
+            <attribute>
+              <name>Czyta</name>
+              <value><![CDATA[Wojciech Najda]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[3 godz. 47 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>forbes-09-11</id>
+          <name><![CDATA[AudioForbes nr 09 Wrzesień 2011]]></name>
+          <price>9,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f4d4f2,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/forbes/forbes-09-11-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Forbes]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Forbes]]></value>
+            </attribute>
+            <attribute>
+              <name>Czyta</name>
+              <value><![CDATA[Wojciech Najda]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[3 godz. 47 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>forbes-10-11</id>
+          <name><![CDATA[AudioForbes nr 10 Październik 2011]]></name>
+          <price>9,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f4d8d7,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/forbes/forbes-10-11-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Forbes]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Forbes]]></value>
+            </attribute>
+            <attribute>
+              <name>Czyta</name>
+              <value><![CDATA[Wojciech Najda]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[3 godz. 20 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>forbes-11-11</id>
+          <name><![CDATA[AudioForbes nr 11 Listopad 2011]]></name>
+          <price>9,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f4dcbc,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/forbes/forbes-11-11-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Forbes]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Forbes]]></value>
+            </attribute>
+            <attribute>
+              <name>Czyta</name>
+              <value><![CDATA[Wojciech Najda]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[4 godz. 32 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>forbes-12-11</id>
+          <name><![CDATA[AudioForbes nr 12 Grudzień 2011]]></name>
+          <price>9,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f4e0a1,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/forbes/forbes-12-11-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Forbes]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Forbes]]></value>
+            </attribute>
+            <attribute>
+              <name>Czyta</name>
+              <value><![CDATA[Wojciech Najda]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[4 godz. 32 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>newsweek-do-sluchania-nr-01-12</id>
+          <name><![CDATA[Newsweek do słuchania nr 01 - 02.01.2012]]></name>
+          <price>4,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f4e486,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/newsweek/newsweek-do-sluchania-nr-01-12-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Newsweek]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Newsweek]]></value>
+            </attribute>
+            <attribute>
+              <name>Czyta</name>
+              <value><![CDATA[Roch Siemianowski]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[4 godz. 28 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>newsweek-do-sluchania-nr-01</id>
+          <name><![CDATA[Newsweek do słuchania nr 01 - 03.01.2011]]></name>
+          <price>4,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f4e86b,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/newsweek/newsweek-do-sluchania-nr-01-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Newsweek]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Newsweek]]></value>
+            </attribute>
+            <attribute>
+              <name>Czyta</name>
+              <value><![CDATA[Roch Siemianowski]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[4 godz. 15 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>newsweek-do-sluchania-nr-02-12</id>
+          <name><![CDATA[Newsweek do słuchania nr 02 - 09.01.2012]]></name>
+          <price>4,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f4ec50,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/newsweek/newsweek-do-sluchania-nr-02-12-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Newsweek]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Newsweek]]></value>
+            </attribute>
+            <attribute>
+              <name>Czyta</name>
+              <value><![CDATA[Roch Siemianowski]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[4 godz. 53 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+        <offer>
+          <id>newsweek-do-sluchania-nr-02-11</id>
+          <name><![CDATA[Newsweek do słuchania nr 02 - 10.01.2011]]></name>
+          <price>4,00</price>
+          <url>https://ssl.afiliant.com/affskrypt,c6f4f035,37f416,,1a881,,,</url>
+          <categoryId><![CDATA[Księgarnia,Audiobooki]]></categoryId>
+          <description><![CDATA[]]></description>
+          <image><![CDATA[http://audioteka.pl/images/products/newsweek/newsweek-do-sluchania-nr-02-11-duze.jpg]]></image>
+          <attributes>
+            <attribute>
+              <name>Wydawca</name>
+              <value><![CDATA[Newsweek]]></value>
+            </attribute>
+            <attribute>
+              <name>Autor</name>
+              <value><![CDATA[Newsweek]]></value>
+            </attribute>
+            <attribute>
+              <name>Czyta</name>
+              <value><![CDATA[Roch Siemianowski]]></value>
+            </attribute>
+            <attribute>
+              <name>Dugość</name>
+              <value><![CDATA[4 godz. 50 min.]]></value>
+            </attribute>
+          </attributes>
+        </offer>
+      </offers>
+    </loadOffers>
+  </pasaz:Body>
+</pasaz:Envelope>

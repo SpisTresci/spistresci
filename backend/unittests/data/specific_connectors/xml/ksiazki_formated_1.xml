@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<offers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1">
+  <group name="books">
+    <o id="99904949962" url="http://ksiazki.pl/ksiazki/basn-4167/" price="22.50" avail="1">
+      <name><![CDATA[Baśń (e-book)]]></name>
+      <cat><![CDATA[Ebooki/Książki/proza obca]]></cat>
+      <imgs>
+        <main url="http://www.ksiazki.pl/uploads/tx_evoproducts/okladki/99/62/99904949962.jpg"/>
+      </imgs>
+      <desc><![CDATA[<p> Powieść została nominowana w 2012 roku do nagrody Danish Radio Literature Prize w kategorii „Najlepsza powieść roku”.</p> <p> Chłopiec nie zadaje pytań, kiedy po zamachu na Olofa Palmego ojciec każe mu się spakować i mówi, że wyjeżdżają do Danii. To nie pierwsza i nie ostatnia przeprowadzka. Za to jak zwykle nagła i nieoczekiwana. Chłopiec wie jednak, że tak trzeba. Rozumie też, że nie może chodzić do szkoły jak inne dzieci. Ale lekcje z ojcem są znacznie ciekawsze, bo ojciec jest erudytą i wspaniale opowiada. Chłopiec nie pyta, dlaczego ojciec raz pracuje jako ochroniarz w klubie ze striptizem, to znów jako stolarz albo ogrodnik. Czasem nawet pomaga mu w pracy. No i nie dziwi się, że zdarza im się nie płacić za rzeczy, które zabierają ze sklepów, bo ojciec mówi, że to nie jest kradzież. Wie, że wszystko to jest częścią baśni, w której on sam – królewicz, i jego ojciec – król, toczą nierówną walkę z tajemniczą białą królową. Spotkanie z nią oznacza dla nich śmiertelne niebezpieczeństwo, dlatego ciągle muszą uciekać.</p>]]></desc>
+      <attrs>
+        <a name="Autor"><![CDATA[Jonas T. Bengtsson]]></a>
+        <a name="ISBN"><![CDATA[978-83-7536-680-8]]></a>
+        <a name="Ilosc_stron"><![CDATA[416]]></a>
+        <a name="Wydawnictwo"><![CDATA[Czarne]]></a>
+        <a name="Rok_wydania"><![CDATA[2013]]></a>
+        <a name="Oprawa"/>
+        <a name="Format"><![CDATA[EPUB,MOBI]]></a>
+        <a name="Fragment"><![CDATA[https://www.elibri.com.pl/excerpt/18137]]></a>
+      </attrs>
+    </o>
+  </group>
+</offers>

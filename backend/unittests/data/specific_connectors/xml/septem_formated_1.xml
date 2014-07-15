@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="iso-8859-2"?>
+<!--
+	    Dane z dnia: sob, 21 wrz 2013, 01:07:24 CEST
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ Ze względu na wielkość pliku XML, proszę o ściąganie wersji produkty-septem.xml.zip
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+            Jeśli będziesz sprzedawał książki w PP, to użyj pola <status>:
+
+		0 - niedostepna
+		1 - dostepna
+		2 - w przygotowaniu
+		5 - druk na żądanie
+		7 - przedsprzedaz
+	    oraz <cena>, <cenadetaliczna> (ceny takie jak na stronach GW Helion : moga zawierac znizki itp.)
+
+	    dla ksiegarni internetowych (wspolpraca z dzialem handlowym, ehelion) użyj pola <status2>:
+
+    		1 - dostępna
+		2 - dostępna w małej ilości
+		3 - chwilowo niedostępna
+		4 - niedostępna
+		5 - POD
+		6 - w przygotowaniu
+		7 - w przedsprzedaży
+            oraz pola <ksiegarnie_nieinter> gdzie znajduja sie wszystkie dane odnosnie ceny netto, brutto, stawka VAT
+
+		<typ>:
+			1 - ksiazka
+			2 - ebook
+			3 - audiobook mp3
+			4 - audiocd mp3
+
+		<marka>:
+			1 - helion
+			2 - onepress
+			3 - editio
+			4 - sensus
+			5 - septem
+			6 - bezdroza
+			8 - podrecznik
+			11 - bezdroża obce
+
+Zmiany:
+09.02.2011 @MJJ dolożenie elementu <typ>
+15.06.2011 @MJJ dodanie pliku lista2-statusy.xml z samymi statusami, cenami
+21.12.2011 @TKr seolinki, zagregowane formaty ebooków
+23.01.2012 @TKr info o promocjach, lista promocji serwis.pl/xml/lista-promocje.cgi
+15.06.2012 @TKr dodane info o audiobookach
+29.08.2012 @TKr dodane md5 jako wßkaźnik zmiany informacji w książce
+
+		Kontakt: Michal Jęczalik <michal.jeczalik@helion.pl>
+-->
+<details>
+  <lista baza="septem">
+    <ksiazka ident="100SSP">
+      <isbn>978-83-246-2335-8</isbn>
+      <ean>9788324623358</ean>
+      <ident>100SSP</ident>
+      <tytul language="polski">100 sposobów na zwiększenie odporności. Seriaporad.pl</tytul>
+      <tytul language="oryginal">100 Ways to Boost Your Immune System &amp;#040;Collins GEM&amp;#041;</tytul>
+      <link>http://septem.pl/ksiazki/100-sposobow-na-zwiekszenie-odpornosci-seriaporad-pl-theresa-cheung,100ssp.htm</link>
+      <autor>Theresa Cheung</autor>
+      <tlumacz>Joanna Krzemień-Rusche</tlumacz>
+      <status>1</status>
+      <cena>14.90</cena>
+      <cenadetaliczna>14.90</cenadetaliczna>
+      <znizka>0.00</znizka>
+      <marka>5</marka>
+      <nazadanie>0</nazadanie>
+      <format>115x170</format>
+      <typ>1</typ>
+      <oprawa>miękka</oprawa>
+      <wydawca/>
+      <liczbastron>104</liczbastron>
+      <datawydania>2010-03-29</datawydania>
+      <online>http://pdf.helion.pl/100ssp/100ssp-2.pdf</online>
+      <okladka>http://septem.pl/okladki/326x466/100ssp.jpg</okladka>
+      <okladkatyl>http://septem.pl/okladki-tyl/326x466/100ssp.jpg</okladkatyl>
+      <issueurl>http://septem.pl/eksiazki/100ssp.htm</issueurl>
+      <bestseller>0</bestseller>
+      <nowosc>0</nowosc>
+      <powiazane>
+        <ident_powiazany>BEMAL1</ident_powiazany>
+        <ident_powiazany>BEPAPO</ident_powiazany>
+        <ident_powiazany>BIEGAN</ident_powiazany>
+        <ident_powiazany>LHC</ident_powiazany>
+        <ident_powiazany>MIGREN</ident_powiazany>
+        <ident_powiazany>MYZDRO</ident_powiazany>
+        <ident_powiazany>OPTYSP</ident_powiazany>
+        <ident_powiazany>POLMAR</ident_powiazany>
+        <ident_powiazany>SEKNOV</ident_powiazany>
+        <ident_powiazany>SSOJOB</ident_powiazany>
+        <ident_powiazany>SYMBSP</ident_powiazany>
+        <ident_powiazany>ZDROG2</ident_powiazany>
+      </powiazane>
+      <seriewydawnicze>
+        <seriawydawnicza id="6">Seriaporad.pl</seriawydawnicza>
+      </seriewydawnicze>
+      <serietematyczne>
+        <seriatematyczna id="19">Zdrowie i uroda</seriatematyczna>
+      </serietematyczne>
+      <ksiegarnie_nieinter>
+        <waga>0.10</waga>
+        <status2>2</status2>
+        <cena_netto>14.19</cena_netto>
+        <cena_brutto>14.9</cena_brutto>
+        <vat>0.71</vat>
+        <vat_procent>5</vat_procent>
+      </ksiegarnie_nieinter>
+      <opis><![CDATA[<div align="center"><h4><b> Zdrowy poradnik. Bawi, uczy, zaskakuje </b></h4></div>
+
+<ul>
+<li>Podnoszenie odporności poprzez zmianę trybu życia</li>
+<li>Wprowadzanie do planu dnia prostych ćwiczeń</li>
+<li>Domowe metody na szybkie pozbycie się stresu </li>
+<li>Diety bogate w przeciwutleniacze, żelazo i witaminy</li>
+</ul>
+
+
+<div align="center"><h4><b> Żyj długo, zdrowo i szczęśliwie </b></h4></div>
+
+<ul>
+<li>Rozpoznawanie i zwalczanie wroga - bakterie, wirusy, grzyby i pasożyty.</li>
+<li>Szkodliwe nawyki, przyczyniające się do osłabienia odporności.</li>
+<li>Zasady odżywiania się, które wzmocnią Twój system immunologiczny.</li>
+<li>Zaprzyjaźnienie się z setką wzmacniaczy układu odpornościowego.</li>
+</ul>
+
+<p>Zmęczenie, częste przeziębienia, nawracające infekcje, pojawiające się alergie, wahania nastroju i przedwczesne starzenie - to wszystko skutki przeciążenia organizmu i osłabienia Twojego systemu odpornościowego. Jeśli chcesz dłużej cieszyć się zdrowiem, ustrzec się groźnych chorób i odzyskać witalność bez uciekania się do sztucznych chemicznych wzmacniaczy, ten nietuzinkowy poradnik podpowie Ci, jak tego dokonać - i to od zaraz. A jeśli mimo wszystko jakiejś złośliwej chorobie uda się przedrzeć do Twojego organizmu, dowiesz się, jak błyskawicznie ją zwalczyć.</p>
+
+<p>Jesteś ciekawy świata, chcesz wiedzieć więcej i wciąż się czegoś uczyć, a nie masz czasu na czytanie opasłych poradników? Seriaporad.pl to niezwykłe książeczki, które szybko, sensownie i bez owijania w bawełnę wprowadzą każdego w interesujący go temat. Koniecznie sprawdź też pozostałe tytuły!</p>]]></opis>
+      <md5>4eac6f4ddaf294de6ca1abf8406cfdbb</md5>
+    </ksiazka>
+  </lista>
+</details>

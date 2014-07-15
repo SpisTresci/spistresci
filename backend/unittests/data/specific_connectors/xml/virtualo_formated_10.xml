@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<products>
+  <product>
+    <title>www.malpa.pl</title>
+    <format>PDF</format>
+    <security>WM</security>
+    <price>30.72</price>
+    <isbn>978-83-7747-225-5</isbn>
+    <coverId>103</coverId>
+    <authors>Krystyna Janda</authors>
+    <url>http://virtualo.pl/www_malpa_pl/i97/</url>
+    <description><![CDATA[<p>Ten dziennik jest właściwie dziwny. Piszę go już tak długo, że nie umiem myśleć o Was inaczej niż jak o bliskich, a jednocześnie nie mogę Wam powiedzieć wszystkiego. Wszystkiego? Co ja piszę!? Co najmniej 40 procent tego, co myślę i przeżywam, nie mogę ujawnić, bo byłoby nietaktowne, okropne. Jestem w moich zapiskach szczera i impulsywna, choć pilnie strzegę kilku granic, które sobie sama wyznaczyłam. – pisze Krystyna Janda, "artystka multimedialna", w pamiętniku prowadzonym od kilku lat na stronie www.krystynajanda.com. Wybór z jej zapisków, obejmujący okres od września 2000 do września 2003, raz jeszcze dowodzi ogromnej wrażliwości, ciekawości świata, zmysłu obserwacji, otwartości, a zarazem poczucia humoru i autoironii autorki. Anegdoty z polskiego świata filmowo-teatralnego przeplatają się tu ze sprawozdaniami z produkcji domowych przetworów, cytaty z filozofów z fragmentami horoskopów, ulubione wiersze z przepisami na śledzie w migdałach... www.małpa.pl to lektura pełna ciepła, a zarazem celnych obserwacji i intelektualnych niespodzianek, promieniująca zgodą na życie, we wszelkich jego przejawach.</p>]]></description>
+    <descriptionShort><![CDATA[Ten dziennik jest właściwie dziwny. Piszę go już tak długo, że nie umiem myśleć o Was inaczej niż jak o bliskich, a jednocześnie nie mogę Wam powiedzieć wszystkiego. Wszystkiego? ...]]></descriptionShort>
+    <rating>5</rating>
+  </product>
+  <product>
+    <title>Bajki</title>
+    <format>PDF</format>
+    <security/>
+    <price>4.62</price>
+    <isbn/>
+    <coverId>2333</coverId>
+    <authors>Jean La Fontaine</authors>
+    <url>http://virtualo.pl/bajki/i103/</url>
+    <description><![CDATA[<p>Prezentowany wybór "Bajek" La Fontaine'a zawiera 26 najbardziej znanych i aktualnych utworów. Francuski poeta czerpał ze starożytnych wzorców (Ezop, Fedrus), ale także wzbogacał swoje wersje dialogami i dysertacjami na aktualne tematy. Stosowany przez niego język jest też bardziej zbliżony do mowy żywej. Nie poprzestając na tematyce moralno-obyczajowej, często podejmował bieżące problemy polityczne i społeczne. Rozpiętość tematyczna tych utworów jest duża: od naukowo-filozoficznej po plotkarsko-towarzyską. Wybrane bajki przełożyli klasycy literatury polskiej XVIII-XIX w.</p>]]></description>
+    <descriptionShort><![CDATA[Prezentowany wybór „Bajek” La Fontaine'a zawiera 26 najbardziej znanych i aktualnych utworów. Francuski poeta czerpał ze starożytnych wzorców (Ezop, Fedrus), ale także wzbogacał swoje...]]></descriptionShort>
+    <rating>0</rating>
+  </product>
+  <product>
+    <title>Ben Hur</title>
+    <format>PDF</format>
+    <security/>
+    <price>4.70</price>
+    <isbn/>
+    <coverId>2334</coverId>
+    <authors>Lewis Wallace</authors>
+    <url>http://virtualo.pl/ben_hur/i104/</url>
+    <description><![CDATA[Podróż do Palestyny i wizyta w wielu świętych miejscach była podnietą do napisania powieści z dni Chrystusa - "Ben Hur". Wydana w 1880 r. zyskała wielką popularność. Bohaterem jest tytułowy Ben Hur, żydowski arystokrata z I w. Po dokonaniu szeregu heroicznych czynów przyjmuje na koniec wiarę chrześcijańską. Popularność książki dyskontowały jej ekranizacje, filmowe widowiska w typowo hollywoodzkim stylu - pierwsza z 1926 r. z Ramonem Novarro w roli głównej, druga z r. 1960, w reż. Williama Wylera z Charltonem Hestonem. Powieść ma wiele tłumaczeń. Po raz pierwszy w Polsce ukazała się w 1889-90.]]></description>
+    <descriptionShort><![CDATA[Bohaterem jest tytułowy Ben Hur, żydowski arystokrata z I w. Po dokonaniu szeregu heroicznych czynów przyjmuje na koniec wiarę chrześcijańską...]]></descriptionShort>
+    <rating>2,5</rating>
+  </product>
+  <product>
+    <title>Wybór nowel</title>
+    <format>MP3</format>
+    <security/>
+    <price>7.55</price>
+    <isbn>978-83-60313-20-6</isbn>
+    <coverId>2608</coverId>
+    <authors>Bolesław Prus</authors>
+    <url>http://virtualo.pl/wybor_nowel/i105/</url>
+    <description><![CDATA[<p>Wybór czterech klasycznych nowel Bolesława Prusa: Katarynka, Milknące głosy, Z legend dawnego Egiptu, Powracająca fala.</p>]]></description>
+    <descriptionShort><![CDATA[Katarynka, Milknące głosy, Z legend dawnego Egiptu, Powracająca fala.]]></descriptionShort>
+    <rating>5</rating>
+  </product>
+  <product>
+    <title>Wybór nowel II</title>
+    <format>MP3</format>
+    <security/>
+    <price>7.55</price>
+    <isbn>978-83-60313-19-0</isbn>
+    <coverId>2609</coverId>
+    <authors>Bolesław Prus</authors>
+    <url>http://virtualo.pl/wybor_nowel_ii/i106/</url>
+    <description><![CDATA[<p>Wybór trzech, klasycznych nowel Bolesława Prusa: Antek, Grzechy dzieciństwa, Kamizelka.</p>]]></description>
+    <descriptionShort><![CDATA[Antek, Grzechy dzieciństwa, Kamizelka.]]></descriptionShort>
+    <rating>2</rating>
+  </product>
+  <product>
+    <title>Korepetycje z sukcesu</title>
+    <format>MP3</format>
+    <security/>
+    <price>15.63</price>
+    <isbn>978-83-60313-18-3</isbn>
+    <coverId>2610</coverId>
+    <authors>Iwona Majewska-Opiełka</authors>
+    <url>http://virtualo.pl/korepetycje_sukcesu/i107/</url>
+    <description><![CDATA[<p>Jak działać skutecznie, jak zaplanować własne szczęście a przede wszystkim jak realizować marzenia. Autorka w bardzo przystępny sposób przekazuje cenną wiedzę, motywuje do podjęcia prostych, ale oszałamiająco skutecznych działań, które dla młodych, rozpoczynających swoją drogę życiową osób, mogą się okazać bardzo cennymi drogowskazami na drodze do wymarzonego sukcesu w każdej dziedzinie życia. Zawsze aktualne i nie tylko dla młodzieży.</p>]]></description>
+    <descriptionShort><![CDATA[Jak działać skutecznie, jak zaplanować własne szczęście a przede wszystkim jak realizować marzenia. Autorka w bardzo przystępny sposób przekazuje cenną wiedzę...]]></descriptionShort>
+    <rating>3</rating>
+  </product>
+  <product>
+    <title>Przypadki Robinsona Krusoe</title>
+    <format>MP3</format>
+    <security/>
+    <price>15.63</price>
+    <isbn>978-83-60313-17-6</isbn>
+    <coverId>2611</coverId>
+    <authors>Daniel Defoe</authors>
+    <url>http://virtualo.pl/przypadki_robinsona_krusoe/i108/</url>
+    <description><![CDATA[<p>Niezwykłe przygody Robinsona przenoszą nas do innego świata, do miejsc pięknych i okrutnych jednocześnie. To wspaniała opowieść o umiejętności stawiania czoła przeciwnościom losu, o sile wiary i potędze przedsiębiorczości. Efekty dźwiękowe oraz muzyka wyczarują dla nas nastrój, który sprawi, że poczujemy się jakbyśmy razem z Robinsonem budowali jego samotne królestwo...</p>]]></description>
+    <descriptionShort><![CDATA[Niezwykłe przygody Robinsona przenoszą nas do innego świata, do miejsc pięknych i okrutnych jednocześnie. To wspaniała opowieść o ...]]></descriptionShort>
+    <rating>2,8</rating>
+  </product>
+  <product>
+    <title>Krzyżacy</title>
+    <format>MP3</format>
+    <security/>
+    <price>7.55</price>
+    <isbn>978-83-60313-09-1</isbn>
+    <coverId>2612</coverId>
+    <authors>Henryk Sienkiewicz</authors>
+    <url>http://virtualo.pl/krzyzacy/i109/</url>
+    <description><![CDATA[<p>Czym Krzyżacy są dla nas dzisiaj? Odległym wspomnieniem świetności naszego kraju? Obrazem rycerskich zwyczajów? A może historią pojedynczych bohaterów, których los splótł się z losami narodu i niezrozumiałym zrządzeniem w równej mierze dał im posmakować radości i bólu?</p>
+<p>Spod pióra pisarza wyszło dzieło na tyle złożone, że podążanie tropem fabuły każdemu dostarczy przeżyć płynących z obcowania z wielka literaturą. Zasłuchajmy się zatem w opowieść o minionej świetności... Stańmy oko w oko z najlepszym rycerstwem ówczesnej Europy... Dajmy się porwać fabule i z bohaterami przeżyjmy chwile niedoli i szczęścia...</p>
+<p>Wymagających czytelników zachęcać nie trzeba, inni nie pożałują, że zdecydowali się na odsłuchanie utworu.</p>]]></description>
+    <descriptionShort><![CDATA[Czym Krzyżacy są dla nas dzisiaj? Odległym wspomnieniem świetności naszego kraju? Obrazem rycerskich zwyczajów? A może historią pojedynczych bohaterów...]]></descriptionShort>
+    <rating>3,3</rating>
+  </product>
+  <product>
+    <title>Pan Wołodyjowski</title>
+    <format>MP3</format>
+    <security/>
+    <price>13.48</price>
+    <isbn>978-83-60313-15-2</isbn>
+    <coverId>2613</coverId>
+    <authors>Henryk Sienkiewicz</authors>
+    <url>http://virtualo.pl/pan_wolodyjowski/i110/</url>
+    <description><![CDATA[<p>Feeria namiętności z obu biegunów uczuciowego uniwersum: brutalnie torturowany przez pałającego żądzą zemsty Nowowiejskiego Azja i Wołodyjowski, ze wzruszeniem, w modlitewnym skupieniu żegnający się z ukochaną przed wielką bitwą. Esencja miłości w Ketlingu i jurna zawadiackość Basi. Dramaty uczuć w tej części Trylogii Sienkiewicza obserwujemy na pierwszym planie. Wydarzenia historyczne dopiero na drugim. Siedemnastowieczne tło nie przeszkadza przy tym wcale w żywym odbiorze fabuły. Ściany mierzone łokciami, krew na wąsach okrzepła i  zbójcy skryci w głębokich pieczarach nie zakłócają naszego współczesnego obcowania z książką. Powieść porywa i ze swym nurtem niesie daleko…dziś jednak nie pod Kamieniec, czy pod Chocim, ale w rejony nabrzmiałe emocjami, na tereny, gdzie słowa wiele znaczą, a honor jest wartością, wcale nie abstrakcyjną.</p>
+<p>Gdybym miała na kogoś z kart powieści szczególnie zwrócić uwagę, byłaby to Basia, o której Stanisław Tarnowski lat temu sto z okładem pisał w „Przeglądzie Polskim”: „Krzysia podobałaby się nam bardzo, Basia wcale. Nie lubimy panien – kozaków, hajdamaków, źle wychowanych, a przez jakąś dla nich zapewne zrozumiałą kokieterią przesadzających umyślnie złe wychowanie i udających jeszcze gorsze, choć to, które mają, jest już doprawdy dosyć złe”.</p>
+<p>Zawsze przypominając sobie te słowa o bohaterce dzielnej i szczerej w swych reakcjach, która jawnie promowała sylwetkę kobiety niezależnej, a jednocześnie wrażliwej i kochającej, mam ochotę zawołać: A właśnie, że lubimy! Ot, co!</p>
+<p>Karolina Dering, „Migotania, Przejaśnienia”</p>]]></description>
+    <descriptionShort><![CDATA[Feeria namiętności z obu biegunów uczuciowego uniwersum: brutalnie torturowany przez pałającego żądzą zemsty Nowowiejskiego Azja i Wołodyjowsk...]]></descriptionShort>
+    <rating>3,5</rating>
+  </product>
+  <product>
+    <title>Potop</title>
+    <format>MP3</format>
+    <security/>
+    <price>15.63</price>
+    <isbn>9788360313145</isbn>
+    <coverId>2614</coverId>
+    <authors>Henryk Sienkiewicz</authors>
+    <url>http://virtualo.pl/potop/i111/</url>
+    <description><![CDATA[<p>Dzięki tej interpretacji na nowo odkrywam język bohaterów "Potopu" i z dziką satysfakcją cytuję go we współczesnej codzienności. Doskonała dykcja aktora powoduje, że i w codziennych rozmowach mam wyjątkową ochotę  nie śpieszyć się, nie mówić skrótami, rezygnować z "medialnego" kodu, który bynajmniej nie ma nic wspólnego z pielęgnowaniem polszczyzny, z kulturą języka. Jestem przekonana, że ta interpretacja powieści uczyni wiele dobrego dla zachwaszczonego polskiego języka. Być może uświadomi także młodym, którzy zechcą w ten sposób przeczytać "Potop", że  warto wrócić do źródeł języka, dbać o jego czystość.  Marta Fox, Poetka, pisarka, autorka wielu książek dla młodzieży.</p>]]></description>
+    <descriptionShort><![CDATA[Dzięki tej interpretacji na nowo odkrywam język bohaterów „Potopu” i z dziką satysfakcją cytuję go we współczesnej codzienności...]]></descriptionShort>
+    <rating>3,3</rating>
+  </product>
+</products>

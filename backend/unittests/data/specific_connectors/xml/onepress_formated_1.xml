@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="iso-8859-2"?>
+<!--
+	    Dane z dnia: sob, 21 wrz 2013, 01:07:24 CEST
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ Ze względu na wielkość pliku XML, proszę o ściąganie wersji produkty-onepress.xml.zip
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+            Jeśli będziesz sprzedawał książki w PP, to użyj pola <status>:
+
+		0 - niedostepna
+		1 - dostepna
+		2 - w przygotowaniu
+		5 - druk na żądanie
+		7 - przedsprzedaz
+	    oraz <cena>, <cenadetaliczna> (ceny takie jak na stronach GW Helion : moga zawierac znizki itp.)
+
+	    dla ksiegarni internetowych (wspolpraca z dzialem handlowym, ehelion) użyj pola <status2>:
+
+    		1 - dostępna
+		2 - dostępna w małej ilości
+		3 - chwilowo niedostępna
+		4 - niedostępna
+		5 - POD
+		6 - w przygotowaniu
+		7 - w przedsprzedaży
+            oraz pola <ksiegarnie_nieinter> gdzie znajduja sie wszystkie dane odnosnie ceny netto, brutto, stawka VAT
+
+		<typ>:
+			1 - ksiazka
+			2 - ebook
+			3 - audiobook mp3
+			4 - audiocd mp3
+
+		<marka>:
+			1 - helion
+			2 - onepress
+			3 - editio
+			4 - sensus
+			5 - septem
+			6 - bezdroza
+			8 - podrecznik
+			11 - bezdroża obce
+
+Zmiany:
+09.02.2011 @MJJ dolożenie elementu <typ>
+15.06.2011 @MJJ dodanie pliku lista2-statusy.xml z samymi statusami, cenami
+21.12.2011 @TKr seolinki, zagregowane formaty ebooków
+23.01.2012 @TKr info o promocjach, lista promocji serwis.pl/xml/lista-promocje.cgi
+15.06.2012 @TKr dodane info o audiobookach
+29.08.2012 @TKr dodane md5 jako wßkaźnik zmiany informacji w książce
+
+		Kontakt: Michal Jęczalik <michal.jeczalik@helion.pl>
+-->
+<details>
+  <lista baza="onepress">
+    <ksiazka ident="1001IN">
+      <isbn>83-246-0098-1</isbn>
+      <ean>9788324600984</ean>
+      <ident>1001IN</ident>
+      <tytul language="polski">1001 sposobów na przejmowanie inicjatywy w pracy</tytul>
+      <tytul language="oryginal">1001 Ways to Take Initiative at Work</tytul>
+      <link>http://onepress.pl/ksiazki/1001-sposobow-na-przejmowanie-inicjatywy-w-pracy-bob-nelson,1001in.htm</link>
+      <autor>Bob Nelson</autor>
+      <tlumacz>Wojciech Sztukowski</tlumacz>
+      <status>1</status>
+      <cena>39.00</cena>
+      <cenadetaliczna>39.00</cenadetaliczna>
+      <znizka>0.00</znizka>
+      <marka>2</marka>
+      <nazadanie>0</nazadanie>
+      <format>A5</format>
+      <typ>1</typ>
+      <oprawa>twarda</oprawa>
+      <wydawca/>
+      <liczbastron>248</liczbastron>
+      <datawydania>2006-03-23</datawydania>
+      <online>http://pdf.helion.pl/1001in/1001in-1.pdf</online>
+      <okladka>http://onepress.pl/okladki/326x466/1001in.jpg</okladka>
+      <bestseller>0</bestseller>
+      <nowosc>0</nowosc>
+      <promocja id="406">Opadają liście, opadają ceny!</promocja>
+      <powiazane>
+        <ident_powiazany>ARTMAV</ident_powiazany>
+        <ident_powiazany>BESARD</ident_powiazany>
+        <ident_powiazany>BIBEBI</ident_powiazany>
+        <ident_powiazany>FILOKV</ident_powiazany>
+        <ident_powiazany>KPIR2</ident_powiazany>
+        <ident_powiazany>MERCHA</ident_powiazany>
+        <ident_powiazany>POKOTY</ident_powiazany>
+        <ident_powiazany>POKSIP</ident_powiazany>
+        <ident_powiazany>SAMODV</ident_powiazany>
+        <ident_powiazany>SPRYBI</ident_powiazany>
+        <ident_powiazany>SUNGET</ident_powiazany>
+        <ident_powiazany>WYWKOM</ident_powiazany>
+      </powiazane>
+      <seriewydawnicze>
+        <seriawydawnicza id="2">Small Business</seriawydawnicza>
+      </seriewydawnicze>
+      <serietematyczne>
+        <seriatematyczna id="12">Twoja kariera</seriatematyczna>
+      </serietematyczne>
+      <ksiegarnie_nieinter>
+        <waga>0.42</waga>
+        <status2>1</status2>
+        <cena_netto>37.14</cena_netto>
+        <cena_brutto>39</cena_brutto>
+        <vat>1.86</vat>
+        <vat_procent>5</vat_procent>
+      </ksiegarnie_nieinter>
+      <opis><![CDATA[<div align="center"><h4><b> Zadbaj o swoją pracę i karierę </b></h4></div> 
+<ul>
+<li> Szukaj nowych rozwiązań -- myśl niekonwencjonalnie </li>
+<li> Rozwijaj się i podnoś swoje kwalifikacje </li>
+<li> Pogódź pracę z życiem rodzinnym </li>
+</ul>
+<p> Największym błędem popełnianym przez wielu ludzi jest myślenie, że pracują dla kogoś innego. Szef i comiesięczne odbieranie paska z wypłatą nie świadczą o tym, że nie pracujemy dla siebie. Przecież każdy z nas świadomie kieruje swoją karierą i od naszych decyzji zależy jej przebieg. To, czy chcemy rozwijać swoje kwalifikacje, pogłębiać wiedzę i czy umiemy w odpowiednim momencie zaproponować swoją pomoc, może mieć ogromny wpływ na naszą pracę. W każdym przedsiębiorstwie można wykazać się swoimi umiejętnościami i pomysłowością, rozwinąć istniejące projekty lub udoskonalić procedury. Można przejąć inicjatywę, zanim ktoś powie nam, co i kiedy zrobić. </p>
+
+<p> Czytając książkę "1001 sposobów na przejmowanie inicjatywy w pracy", dowiesz się, jak "zaistnieć" w firmie. Przekonasz się, że czekanie na polecenia szefa wcale nie jest najlepszą drogą do zdobycia uznania w pracy. Autor Bob Nelson udowodni Ci, że każdy pracownik może być motorem trwałych i pozytywnych zmian w firmie. Nauczysz się niekonwencjonalnie myśleć, budować sieć kontaktów wewnątrz firmy i poza nią, rozmawiać z przełożonymi i współpracownikami i pracować w zespole. </p>
+<ul>
+<li> Przyjmowanie odpowiedzialności za podejmowane działania </li>
+<li> Rozwijanie umiejętności zarządzania czasem </li>
+<li> Sztuka komunikacji z innymi ludźmi </li>
+<li> Kierowanie przełożonymi </li>
+<li> Doskonalenie swoich umiejętności </li>
+<li> Pokonywanie przeszkód w pracy </li>
+<li> Rozmowy z klientami </li>
+<li> Poszukiwanie nowej pracy </li>
+</ul>
+<div align="center"><h4><b> Przekonaj się, że jedyną osobą, dla której pracujesz, jesteś Ty sam. </b></h4></div>]]></opis>
+      <md5>ffaccdefcf2f047a81dda6e77b661b8d</md5>
+    </ksiazka>
+  </lista>
+</details>
