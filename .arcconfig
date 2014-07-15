@@ -3,9 +3,9 @@
   "project.name" : "SpisTresci.pl",
   "repository.callsign" : "F",
 
-  "base": "arc:upstream, git:merge-base(origin/dev)",
-  "arc.land.onto.default" : "dev",
-  "arc.feature.start.default" : "origin/dev",
+  "base": "arc:upstream, git:merge-base(origin/T630_big_refaktor)",
+  "arc.land.onto.default" : "T630_big_refaktor",
+  "arc.feature.start.default" : "origin/T630_big_refaktor",
   "arc.land.update.default" : "rebase",
 
   "load" : [
