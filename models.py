@@ -151,7 +151,7 @@ class BookstoreCommandStatus(models.Model):
     TYPE_CHOICES = (
         (TYPE_FETCH, u'Pobieranie'),
         (TYPE_PARSE, u'Parsowanie'),
-        (TYPE_ANALYZE, u'Analiza/Łączenie')
+        (TYPE_ANALYZE, u'Analiza/Łączenie'),
     )
 
     type = models.IntegerField(choices=TYPE_CHOICES)

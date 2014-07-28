@@ -206,16 +206,6 @@ class AddBookTest(TestCase):
 
         self.assertEquals(MiniBook.objects.count(), 2)
 
-    def test_old_format_of_price(self):
-
-        book_dict_1 = {
-            'external_id': u'219',
-            'price': u'1520',
-        }
-
-        book_1 = add_MiniBook(self.test_bookstore_1, book_dict_1)
-        self.assertEquals(book_1.price, Decimal('15.20'))
-
     def test_add_book_with_empty_list_of_formats(self):
 
         book_dict_1 = {
@@ -276,7 +266,7 @@ class AddBookTest(TestCase):
         book_1 = add_MiniBook(self.test_bookstore_1, book)
         self.assertEquals(MiniAuthor.objects.count(), 1)
 
-        author = MiniAuthor.objects.all()[0]
+        author = book_1.authors.all()[0]
 
         self.assertEquals(author.middle_name, '')
         self.assertEquals(author.last_name, 'Ciepko')
@@ -314,86 +304,3 @@ class AddBookTest(TestCase):
         self.assertNotEqual(author1, author2)
 
         self.assertEquals(author2.last_name, 'Smith')
-
-
-class Utf8Test(TestCase):
-    """
-    Test for checking utf8 capability,
-    In case of any failures, please see:
-    http://stackoverflow.com/a/10866836/338581
-    """
-
-    def setUp(self):
-
-        self.test_bookstore_utf8_1 = Bookstore.objects.create(
-            name=u'Żółty żółw',
-            url=u'http://żółty-żółw.pl/',
-        )
-
-    def test_title_in_utf8(self):
-
-        book = {
-            'external_id': 1,
-            'title': u'Powieść kończąca się kropką'
-        }
-        self.assertEquals(MiniBook.objects.count(), 0)
-
-        book_1 = add_MiniBook(self.test_bookstore_utf8_1, book)
-        self.assertEquals(MiniBook.objects.count(), 1)
-        self.assertEquals(book_1.title, book['title'])
-
-
-    def test_add_author_in_utf8(self):
-
-        book = {
-            'external_id': 1,
-            'authors': [{
-                'name': u'Małgorzata Elżbieta Kalicińska',
-                'first_name': u'Małgorzata',
-                'middle_name': u'Elżbieta',
-                'last_name': u'Kalicińska',
-            }],
-        }
-
-        self.assertEquals(MiniAuthor.objects.count(), 0)
-        book_1 = add_MiniBook(self.test_bookstore_utf8_1, book)
-        self.assertEquals(MiniAuthor.objects.count(), 1)
-
-        author = MiniAuthor.objects.all()[0]
-
-        self.assertEquals(author.name, u'Małgorzata Elżbieta Kalicińska')
-        self.assertEquals(author.first_name, u'Małgorzata')
-        self.assertEquals(author.middle_name, u'Elżbieta')
-        self.assertEquals(author.last_name, u'Kalicińska')
-
-
-from django.core import management
-
-
-class DeleteOrphanRecordsManagementCommandTest(TestCase):
-
-    def setUp(self):
-        pass
-
-    def test_call_command(self):
-        management.call_command('deleteorphanrecords')
-
-
-class ConnectorsUpdateManagementCommandTest(TestCase):
-    def setUp(self):
-        pass
-
-    def test_call_command(self):
-        management.call_command('connectorsupdate', mode='test')
-
-    def test_missing_settings_in_ini_file(self):
-        raise NotImplementedError()
-
-    def test_connectors_read_from_ini_file(self):
-        raise NotImplementedError()
-
-    def test_command_status_and_error_during_fetch(self):
-        raise NotImplementedError()
-
-    def test_command_status_and_error_during_parse(self):
-        raise NotImplementedError()
