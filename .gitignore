@@ -7,4 +7,5 @@
 settings/local.py
 uploads/*
 logs
+log
 static/css/
