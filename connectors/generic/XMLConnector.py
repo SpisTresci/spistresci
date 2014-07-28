@@ -1,5 +1,5 @@
-from connectors.generic import GenericConnector
-from utils import Enum
+from spistresci.connectors.generic import GenericConnector
+from spistresci.connectors.utils.EnumMeta import Enum
 import lxml.etree as et
 import os
 import re

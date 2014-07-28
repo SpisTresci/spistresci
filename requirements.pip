@@ -13,8 +13,11 @@ oauthlib==0.6.0
 git+https://github.com/atkinson/pysolr.git@3ff9745880b1b5d3be44f7417b3e0b834b9de356
 python-openid==2.2.5
 python-ptrace==0.6.5
+pyisbn-1.0.0
 requests==2.0.0
 requests-oauthlib==0.4.0
+regex==2014.06.28
+lxml==3.3.5
 wsgiref==0.1.2
 cssselect==0.9.1
 django-cron==0.3.2

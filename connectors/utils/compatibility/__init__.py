@@ -1,7 +1,7 @@
 try:
   from collections import OrderedDict
 except ImportError:
-  from utils.compatibility import OrderedDict
+  from spistresci.utils.compatibility import OrderedDict
 
 try:
     import json

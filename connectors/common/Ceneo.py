@@ -1,8 +1,5 @@
-from connectors.generic import XMLConnector
-import lxml.etree as et
-from connectors.generic import *
-import os
-import re
+from spistresci.connectors.generic.XMLConnector import XMLConnector
+from spistresci.connectors.generic import *
 
 class Ceneo(XMLConnector):
     depth = 1

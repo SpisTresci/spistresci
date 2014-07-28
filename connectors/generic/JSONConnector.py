@@ -1,6 +1,6 @@
-from connectors.generic import GenericConnector
-from connectors.generic import WrongConnectorModeException
-from utils.compatibility import json
+from spistresci.connectors.generic import GenericConnector
+from spistresci.connectors.generic import WrongConnectorModeException
+from spistresci.connectors.utils.compatibility import json
 import os
 
 class JSONConnector(GenericConnector):

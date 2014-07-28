@@ -1,14 +1,14 @@
 import re
 from pyisbn import *
 import glob
-from models.BookType import BookType
-from models.BookType import book_types
+#from models.BookType import BookType
+#from models.BookType import book_types
 import base64
 
 class DataValidator(object):
 
     list_of_names = []
-    supported_formats = [x for v in book_types.itervalues() for x in v]
+    supported_formats = []#[x for v in book_types.itervalues() for x in v]
     supported_persons = ['author', 'lector', 'redactor', 'translator']
  #   format_convertions_rules = []
 
@@ -67,7 +67,7 @@ class DataValidator(object):
             if x not in self.supported_formats:
                 self.erratum_logger.warning("Unsupported format! connector: %s, id: %s, title: %s, formats: %s" % (self.name, id, title, formats))
 
-        dic['book_type'] = BookType.fromFormats(format_list)
+        dic['book_type'] = None #BookType.fromFormats(format_list)
         dic['formats'] = format_list
 
 #    def convertFormats(self, dic):

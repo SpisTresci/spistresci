@@ -11,20 +11,26 @@ import base64
 import time
 
 import ConfigParser
-from utils import logger_instance
-from utils import DataValidator
-from utils import MultiLevelConfigParser
-from utils.GetOrCreateCache import GetOrCreateCache
-from sqlalchemy.ext.associationproxy import association_proxy
-from sqlalchemy.orm import class_mapper
-import utils
+from spistresci.connectors.utils.ConnectorsLogger import logger_instance
+from spistresci.connectors.utils.DataValidator import DataValidator
+from spistresci.connectors.utils import MultiLevelConfigParser
+from spistresci.connectors.utils.EnumMeta import Enum
+from spistresci.connectors.utils.GetOrCreateCache import GetOrCreateCache
+#from sqlalchemy.ext.associationproxy import association_proxy
+#from sqlalchemy.orm import class_mapper
+import spistresci.connectors.utils
 #interesting thing: utils.Enum is hide by sql_wrapper.Enum
-from sqlwrapper import *
-from connectors import Tools
-from models import *
-from utils.ConfigReader import ConfigReader
+#from sqlwrapper import *
+from spistresci.connectors import Tools
+#from models import *
+from spistresci.connectors.utils.ConfigReader import ConfigReader
+from django.conf import settings
 
-Base = SqlWrapper.getBaseClass()
+
+#Base = SqlWrapper.getBaseClass()
+from spistresci.model_controler import add_MiniBook
+from spistresci.models import Bookstore
+
 
 class InvalidContext(RuntimeError):
     pass
@@ -60,13 +66,13 @@ class GenericConnector(GenericBase, DataValidator):
     BZIP - create tar.bz2 archive
     GZIP - create tar.gz archive
     '''
-    class ArchiveType(utils.Enum):
+    class ArchiveType(Enum):
         values = ['NONE', 'UNCOMPRESSED', 'BZIP', 'GZ']
 
-    class InnerMerge(utils.Enum):
+    class InnerMerge(Enum):
         values = ['NONE', 'ALL', 'GROUP']
 
-    class BookList_Mode(utils.Enum):
+    class BookList_Mode(Enum):
         values = [
             'UNKNOWN',
 
@@ -86,7 +92,7 @@ class GenericConnector(GenericBase, DataValidator):
     max_len = {}
     max_len_entry = {}
 
-    config_file = 'conf/update.ini'
+    config_file = 'update.ini'
     config_object = None
 
     rows_initialized = True#False
@@ -123,10 +129,10 @@ class GenericConnector(GenericBase, DataValidator):
         self.unpack_file = self.config.get('unpack_file', '')
         self.unpack_dir = self.config.get('unpack_dir', '')
         self.remove_unpacked = int(self.config.get('remove_unpacked', 1))
-        self.log_config = self.config.get('log_config', 'conf/log.update.ini')
-        self.logger = logger_instance(self.log_config)
+        self.log_config = self.config.get('log_config', 'log.update.ini')
+        self.logger = logger_instance(os.path.join(settings.SITE_ROOT, self.log_config))
         self.log_erratum_config = self.config.get('log_erratum_config', 'conf/log.erratum.ini')
-        self.erratum_logger = logger_instance(self.log_erratum_config)
+        self.erratum_logger = logger_instance(os.path.join(settings.SITE_ROOT, self.log_erratum_config))
         self.logger.debug('%s connector created' % self.name)
         self.mode = self.BookList_Mode.int(self.config.get('mode', 'UNKNOWN'))
         self.filters_config = self.config.get('filters', {})
@@ -144,6 +150,10 @@ class GenericConnector(GenericBase, DataValidator):
         self.update_status_service = None
         self.loadListOfNames()
         self.session_obj_counter = 0
+        self.bookstore, created = Bookstore.objects.get_or_create(
+            name=self.name,
+            url=self.url,
+        )
 
     def __del__(self):
         if self.logger:
@@ -265,7 +275,7 @@ class GenericConnector(GenericBase, DataValidator):
 
 
     def parse(self, force=False):
-        self.save_time_of_("parse_start")
+        #self.save_time_of_("parse_start")
         self.before_parse()
         book_number = 0
         if force or self.areDataDifferentThanPrevious():
@@ -286,15 +296,17 @@ class GenericConnector(GenericBase, DataValidator):
                     self.validate(book)
                     if self.fulfillRequirements(book):
                         self.create_pp_url(book)
-                        self.add_record(book)
+                        self.new_add_record(book)
+                        #self.add_record(book)
 
             self.after_parse()
-            self.session.commit()
-            self.save_info_about_offers(offers_parsed = book_number)
+            #self.session.commit()
+            #self.save_info_about_offers(offers_parsed = book_number)
         else:
-            self.save_info_about_offers(offers_new = 0)
+            pass
+            #self.save_info_about_offers(offers_new = 0)
 
-        self.save_time_of_("parse_end")
+        #self.save_time_of_("parse_end")
 
 
     '''override before_parse, adjust_parse and after_parse to
@@ -509,19 +521,20 @@ class GenericConnector(GenericBase, DataValidator):
 
     #FIXME: refactoring, DataStorageWrapper
     def areDataDifferentThanPrevious(self):
-        if not self.update_status_service:
-            return True
-        self.update_status_service.checksum = self.calculateChecksum()
-        self.update_status_service.session.commit()
-        first = self.session.query(UpdateStatusService)\
-            .filter(UpdateStatusService.service_name == self.update_status_service.service_name,
-                    UpdateStatusService.id != self.update_status_service.id,
-                    UpdateStatusService.success == True)\
-            .order_by(UpdateStatusService.timestamp.desc()).first()
-
-        if not first:
-            return True
-        return first.checksum != self.update_status_service.checksum
+        return True
+        # if not self.update_status_service:
+        #     return True
+        # self.update_status_service.checksum = self.calculateChecksum()
+        # self.update_status_service.session.commit()
+        # first = self.session.query(UpdateStatusService)\
+        #     .filter(UpdateStatusService.service_name == self.update_status_service.service_name,
+        #             UpdateStatusService.id != self.update_status_service.id,
+        #             UpdateStatusService.success == True)\
+        #     .order_by(UpdateStatusService.timestamp.desc()).first()
+        #
+        # if not first:
+        #     return True
+        # return first.checksum != self.update_status_service.checksum
 
     #TODO: move to SqlWrapper
     @classmethod
@@ -543,6 +556,13 @@ class GenericConnector(GenericBase, DataValidator):
             return session.query(ClassName).filter_by(**d).first()
         else:
             return (session.query(ClassName).filter_by(**{param_name:d[param_name]}).first()) if d.get(param_name) != None else None
+
+    def new_add_record(self, d):
+
+        from spistresci.models import MiniBook, Bookstore
+        bookstore = Bookstore.objects.get(name=self.name)
+
+        add_MiniBook(bookstore, d)
 
     def add_record(self, d):
         #TODO: made this thread safe
@@ -616,300 +636,300 @@ class GenericConnector(GenericBase, DataValidator):
         #session.close()
 
 
-class GenericBook(GenericBase):
-    id = Column(Integer, primary_key=True)
-    external_id = Column(Integer, unique=True)
-    title = Column(Unicode(256))
-    price = Column(Integer) #price in grosz
-    #if price_normal == -1 it means there is no special offer for this book
-    price_normal = Column(Integer, default=-1) #price in grosz
-    #status = Column(Integer)
-    url = Column(STUrl)
-    pp_url = Column(STUrl)
-    cover = Column(STUrl)
-
-    @declared_attr
-    def book_type_id(cls):
-        return Column(Integer, ForeignKey('BookType.id'))
-
-    @declared_attr
-    def book_type(cls):
-        return relationship("BookType")
-
-    @declared_attr
-    def declareTablesFor(cls):
-        connector_name = cls.__tablename__[:-len("Book")]
-        for table_name in ["Author", "BookPrice", "BooksAuthors", "ISBN", "BooksFormats", "Format"]:
-            t = 'class %s%s(%s%s, Base): pass' % (connector_name, table_name, "Generic", table_name)
-#            print t
-            exec(t)
-
-    @declared_attr
-    def description_id(cls):
-        return Column(Integer, ForeignKey('BookDescription.id'), unique=True)
-
-    @declared_attr
-    def description(cls):
-        return relationship("BookDescription", uselist=False)
-
-    @declared_attr
-    def isbns(cls):
-        return relationship(cls.__tablename__[:-len("Book")] + "ISBN", backref="book", lazy='dynamic')
-
-    @declared_attr
-    def __tablename__(cls):
-        cls.register()
-        return cls.__name__
-
-    @declared_attr
-    def mini_book_id(cls):
-        return Column(Integer, ForeignKey('MiniBook.id'), unique=True)
-
-    @declared_attr
-    def mini_book(cls):
-        return relationship("MiniBook", uselist=False)
-
-    update_timestamp = Column(Integer)
-    update_minidata_timestamp = Column(Integer)
-
-
-#TODO: how to do this?
-#    '''this is title presented to frontend'''
-#    @declared_attr
-#    def org_title(cls):
-#        return cls.title
-
-    @declared_attr
-    def authors(cls):
-        name = cls.__tablename__[:-len("Book")]
-        return association_proxy(name + "_authorship", "author")
-
-    def __init__(self, initial_data):
-        for key in initial_data:
-            try:
-                if getattr(self, key) == None:
-                    setattr(self, key, initial_data[key])
-            except AttributeError:
-                pass
-
-    #DoNotLetCommit
-    def update(self, new_data, session, connector):
-        for key in new_data:
-            try:
-                un = unicode(getattr(self, key))
-
-                updated_minidata = False
-                updated = False
-
-                if key == 'persons':
-                    updated_minidata |= self.update_relation(session, new_data, "authors", GenericAuthor.getConcretizedClass(context=self))
-                elif key == 'isbns':
-                    updated_minidata |= self.update_relation(session, new_data, "isbns", GenericISBN.getConcretizedClass(context=self))
-                elif key == 'formats':
-                    updated_minidata |= self.update_relation(session, new_data, "formats", GenericFormat.getConcretizedClass(context=self))
-                elif key == 'description':
-                    if self.description.description != new_data[key]:
-                        self.description.description = new_data[key]
-                        updated = True
-                elif key == 'price':
-                    #special case of updating price is handle by trigger
-                    if un != new_data[key]:
-                        setattr(self, key, new_data[key])
-                        updated_minidata |= True
-
-                elif un != new_data[key]:
-                    setattr(self, key, new_data[key])
-                    from final import MiniBook
-                    #This is a hack
-                    #There is no pp_url in MiniBook table however if pp_url is changed, minibook should be updated
-                    updated_minidata |= (key in MiniBook.__table__.columns._data.keys() or key == 'pp_url')
-
-                if updated_minidata:
-                    self.update_minidata_timestamp = connector.update_status_service.timestamp
-                    self.update_timestamp = connector.update_status_service.timestamp
-                elif updated:
-                    self.update_timestamp = connector.update_status_service.timestamp
-
-            except AttributeError:
-                pass
-
-    def update_relation(self, session, new_data, foos, Foo):
-        updated = False
-        str_foos = []
-        self_foos = getattr(self, foos)
-
-        for foo in self_foos:
-            str_foos.append(unicode(foo))
-
-        if sorted(str_foos) != sorted(new_data[foos]):
-
-            for foo in new_data[foos]:
-                if foo not in str_foos:
-                    f = Foo.get_or_create(session, foo)
-                    self_foos.append(f)
-                    session.add(f)
-                    updated = True
-
-            for foo in str_foos:
-                if foo not in new_data[foos]:
-                    f = Foo.get_or_create(session, foo)
-                    self_foos.remove(f)
-                    updated = True
-
-        return updated
-
-    @staticmethod
-    def getConcretizedClass(context):
-        return GenericBase.getConcretizedClass(context, 'Book')
-
-class GenericAuthor(GenericBase):
-    id = Column(Integer, primary_key=True)
-    name = Column(Unicode(255))#, unique=True)
-    firstName = Column(Unicode(32))
-    middleName = Column(Unicode(32))
-    lastName = Column(Unicode(32))
-
-    @declared_attr
-    def __tablename__(cls):
-        cls.register()
-        return cls.__name__
-
-    @declared_attr
-    def books(cls):
-        name = cls.__tablename__[:-len("Author")]
-        return association_proxy(name + "_authorship", "book")
-
-    def __unicode__(self):
-        return unicode(self.name)
-
-    @classmethod
-    def get_or_create(cls, session, author):
-        return GenericConnector.get_or_create_(session, cls, author, 'name')
-
-    @staticmethod
-    def getConcretizedClass(context):
-        return GenericBase.getConcretizedClass(context, 'Author')
-
-class GenericBookPrice(GenericBase):
-
-    id = Column(Integer, primary_key=True)
-    @declared_attr
-    def book_id(cls):
-        return Column(Integer, ForeignKey(cls.__tablename__[:-len("Price")] + '.id'))
-
-    price = Column(Integer)
-    date = Column(DateTime)
-
-    @declared_attr
-    def __tablename__(cls):
-        cls.register()
-        return cls.__name__
-
-class GenericBooksAuthors(GenericBase):
-
-    @declared_attr
-    def __tablename__(cls):
-        cls.register()
-        return cls.__name__
-
-    id = Column(Integer, primary_key=True)
-
-    @declared_attr
-    def role_name(cls):
-        return Column(Unicode(15), ForeignKey('PersonRole.name'))
-
-    @declared_attr
-    def role(cls):
-        return relationship("PersonRole", uselist=False)
-
-    @staticmethod
-    def getConcretizedClass(context):
-        return GenericBase.getConcretizedClass(context, 'BooksAuthors')
-
-    @declared_attr
-    def book_id(cls):
-        name = cls.__tablename__[:-len("BooksAuthors")]
-        return Column(Integer, ForeignKey(name + 'Book.id'))
-
-    @declared_attr
-    def author_id(cls):
-        name = cls.__tablename__[:-len("BooksAuthors")]
-        return Column(Integer, ForeignKey(name + 'Author.id'))
-
-    @declared_attr
-    def book(cls):
-        name = cls.__tablename__[:-len("BooksAuthors")]
-        table = cls.registered[name + 'Book']
-        return relationship(table, backref=name + "_authorship")
-
-    @declared_attr
-    def author(cls):
-        name = cls.__tablename__[:-len("BooksAuthors")]
-        table = cls.registered[name + 'Author']
-        return relationship(table, backref=name + "_authorship")
-
-class GenericISBN(GenericBase):
-    id = Column(Integer, primary_key=True)
-
-    @declared_attr
-    def __tablename__(cls):
-        cls.register()
-        return cls.__name__
-
-    @declared_attr
-    def book_id(cls):
-        return Column(Integer, ForeignKey(cls.__tablename__[:-len("ISBN")] + 'Book.id'))
-
-    @staticmethod
-    def getConcretizedClass(context):
-        return GenericBase.getConcretizedClass(context, 'ISBN')
-
-    @classmethod
-    def get_or_create(cls, session, isbn_dict, param_name):
-        return GenericConnector.get_or_create_(session, cls, isbn_dict, param_name)
-
-    raw = Column(Unicode(50))
-    core = Column(Unicode(9))
-    isbn10 = Column(Unicode(10))
-    isbn13 = Column(Unicode(13))
-    valid = Column(Boolean)
-
-class GenericBooksFormats(GenericBase):
-    id = Column(Integer, primary_key=True)
-
-    @declared_attr
-    def __tablename__(cls):
-        cls.register()
-        return cls.__name__
-
-    @staticmethod
-    def getConcretizedClass(context):
-        return GenericBase.getConcretizedClass(context, 'BooksFormats')
-
-    @declared_attr
-    def book_id(cls):
-        name = cls.__tablename__[:-len("BooksFormats")]
-        return Column(Integer, ForeignKey(name + 'Book.id'))
-
-    @declared_attr
-    def format_id(cls):
-        name = cls.__tablename__[:-len("BooksFormats")]
-        return Column(Integer, ForeignKey(name + 'Format.id'))
-
-class GenericFormat(GetOrCreateCache, GenericBase):
-    id = Column(Integer, primary_key=True)
-    name = Column(Unicode(10))
-
-    @declared_attr
-    def __tablename__(cls):
-        cls.register()
-        return cls.__name__
-
-    @declared_attr
-    def books(cls):
-        name = cls.__tablename__[:-len("Format")]
-        return relationship(name + "Book", secondary = cls.metadata.tables[name + 'BooksFormats'] , backref = backref("formats", lazy = 'joined'), lazy = 'joined')
-
-    @staticmethod
-    def getConcretizedClass(context):
-        return GenericBase.getConcretizedClass(context, 'Format')
+# class GenericBook(GenericBase):
+#     id = Column(Integer, primary_key=True)
+#     external_id = Column(Integer, unique=True)
+#     title = Column(Unicode(256))
+#     price = Column(Integer) #price in grosz
+#     #if price_normal == -1 it means there is no special offer for this book
+#     price_normal = Column(Integer, default=-1) #price in grosz
+#     #status = Column(Integer)
+#     url = Column(STUrl)
+#     pp_url = Column(STUrl)
+#     cover = Column(STUrl)
+#
+#     @declared_attr
+#     def book_type_id(cls):
+#         return Column(Integer, ForeignKey('BookType.id'))
+#
+#     @declared_attr
+#     def book_type(cls):
+#         return relationship("BookType")
+#
+#     @declared_attr
+#     def declareTablesFor(cls):
+#         connector_name = cls.__tablename__[:-len("Book")]
+#         for table_name in ["Author", "BookPrice", "BooksAuthors", "ISBN", "BooksFormats", "Format"]:
+#             t = 'class %s%s(%s%s, Base): pass' % (connector_name, table_name, "Generic", table_name)
+# #            print t
+#             exec(t)
+#
+#     @declared_attr
+#     def description_id(cls):
+#         return Column(Integer, ForeignKey('BookDescription.id'), unique=True)
+#
+#     @declared_attr
+#     def description(cls):
+#         return relationship("BookDescription", uselist=False)
+#
+#     @declared_attr
+#     def isbns(cls):
+#         return relationship(cls.__tablename__[:-len("Book")] + "ISBN", backref="book", lazy='dynamic')
+#
+#     @declared_attr
+#     def __tablename__(cls):
+#         cls.register()
+#         return cls.__name__
+#
+#     @declared_attr
+#     def mini_book_id(cls):
+#         return Column(Integer, ForeignKey('MiniBook.id'), unique=True)
+#
+#     @declared_attr
+#     def mini_book(cls):
+#         return relationship("MiniBook", uselist=False)
+#
+#     update_timestamp = Column(Integer)
+#     update_minidata_timestamp = Column(Integer)
+#
+#
+# #TODO: how to do this?
+# #    '''this is title presented to frontend'''
+# #    @declared_attr
+# #    def org_title(cls):
+# #        return cls.title
+#
+#     @declared_attr
+#     def authors(cls):
+#         name = cls.__tablename__[:-len("Book")]
+#         return association_proxy(name + "_authorship", "author")
+#
+#     def __init__(self, initial_data):
+#         for key in initial_data:
+#             try:
+#                 if getattr(self, key) == None:
+#                     setattr(self, key, initial_data[key])
+#             except AttributeError:
+#                 pass
+#
+#     #DoNotLetCommit
+#     def update(self, new_data, session, connector):
+#         for key in new_data:
+#             try:
+#                 un = unicode(getattr(self, key))
+#
+#                 updated_minidata = False
+#                 updated = False
+#
+#                 if key == 'persons':
+#                     updated_minidata |= self.update_relation(session, new_data, "authors", GenericAuthor.getConcretizedClass(context=self))
+#                 elif key == 'isbns':
+#                     updated_minidata |= self.update_relation(session, new_data, "isbns", GenericISBN.getConcretizedClass(context=self))
+#                 elif key == 'formats':
+#                     updated_minidata |= self.update_relation(session, new_data, "formats", GenericFormat.getConcretizedClass(context=self))
+#                 elif key == 'description':
+#                     if self.description.description != new_data[key]:
+#                         self.description.description = new_data[key]
+#                         updated = True
+#                 elif key == 'price':
+#                     #special case of updating price is handle by trigger
+#                     if un != new_data[key]:
+#                         setattr(self, key, new_data[key])
+#                         updated_minidata |= True
+#
+#                 elif un != new_data[key]:
+#                     setattr(self, key, new_data[key])
+#                     from final import MiniBook
+#                     #This is a hack
+#                     #There is no pp_url in MiniBook table however if pp_url is changed, minibook should be updated
+#                     updated_minidata |= (key in MiniBook.__table__.columns._data.keys() or key == 'pp_url')
+#
+#                 if updated_minidata:
+#                     self.update_minidata_timestamp = connector.update_status_service.timestamp
+#                     self.update_timestamp = connector.update_status_service.timestamp
+#                 elif updated:
+#                     self.update_timestamp = connector.update_status_service.timestamp
+#
+#             except AttributeError:
+#                 pass
+#
+#     def update_relation(self, session, new_data, foos, Foo):
+#         updated = False
+#         str_foos = []
+#         self_foos = getattr(self, foos)
+#
+#         for foo in self_foos:
+#             str_foos.append(unicode(foo))
+#
+#         if sorted(str_foos) != sorted(new_data[foos]):
+#
+#             for foo in new_data[foos]:
+#                 if foo not in str_foos:
+#                     f = Foo.get_or_create(session, foo)
+#                     self_foos.append(f)
+#                     session.add(f)
+#                     updated = True
+#
+#             for foo in str_foos:
+#                 if foo not in new_data[foos]:
+#                     f = Foo.get_or_create(session, foo)
+#                     self_foos.remove(f)
+#                     updated = True
+#
+#         return updated
+#
+#     @staticmethod
+#     def getConcretizedClass(context):
+#         return GenericBase.getConcretizedClass(context, 'Book')
+#
+# class GenericAuthor(GenericBase):
+#     id = Column(Integer, primary_key=True)
+#     name = Column(Unicode(255))#, unique=True)
+#     firstName = Column(Unicode(32))
+#     middleName = Column(Unicode(32))
+#     lastName = Column(Unicode(32))
+#
+#     @declared_attr
+#     def __tablename__(cls):
+#         cls.register()
+#         return cls.__name__
+#
+#     @declared_attr
+#     def books(cls):
+#         name = cls.__tablename__[:-len("Author")]
+#         return association_proxy(name + "_authorship", "book")
+#
+#     def __unicode__(self):
+#         return unicode(self.name)
+#
+#     @classmethod
+#     def get_or_create(cls, session, author):
+#         return GenericConnector.get_or_create_(session, cls, author, 'name')
+#
+#     @staticmethod
+#     def getConcretizedClass(context):
+#         return GenericBase.getConcretizedClass(context, 'Author')
+#
+# class GenericBookPrice(GenericBase):
+#
+#     id = Column(Integer, primary_key=True)
+#     @declared_attr
+#     def book_id(cls):
+#         return Column(Integer, ForeignKey(cls.__tablename__[:-len("Price")] + '.id'))
+#
+#     price = Column(Integer)
+#     date = Column(DateTime)
+#
+#     @declared_attr
+#     def __tablename__(cls):
+#         cls.register()
+#         return cls.__name__
+#
+# class GenericBooksAuthors(GenericBase):
+#
+#     @declared_attr
+#     def __tablename__(cls):
+#         cls.register()
+#         return cls.__name__
+#
+#     id = Column(Integer, primary_key=True)
+#
+#     @declared_attr
+#     def role_name(cls):
+#         return Column(Unicode(15), ForeignKey('PersonRole.name'))
+#
+#     @declared_attr
+#     def role(cls):
+#         return relationship("PersonRole", uselist=False)
+#
+#     @staticmethod
+#     def getConcretizedClass(context):
+#         return GenericBase.getConcretizedClass(context, 'BooksAuthors')
+#
+#     @declared_attr
+#     def book_id(cls):
+#         name = cls.__tablename__[:-len("BooksAuthors")]
+#         return Column(Integer, ForeignKey(name + 'Book.id'))
+#
+#     @declared_attr
+#     def author_id(cls):
+#         name = cls.__tablename__[:-len("BooksAuthors")]
+#         return Column(Integer, ForeignKey(name + 'Author.id'))
+#
+#     @declared_attr
+#     def book(cls):
+#         name = cls.__tablename__[:-len("BooksAuthors")]
+#         table = cls.registered[name + 'Book']
+#         return relationship(table, backref=name + "_authorship")
+#
+#     @declared_attr
+#     def author(cls):
+#         name = cls.__tablename__[:-len("BooksAuthors")]
+#         table = cls.registered[name + 'Author']
+#         return relationship(table, backref=name + "_authorship")
+#
+# class GenericISBN(GenericBase):
+#     id = Column(Integer, primary_key=True)
+#
+#     @declared_attr
+#     def __tablename__(cls):
+#         cls.register()
+#         return cls.__name__
+#
+#     @declared_attr
+#     def book_id(cls):
+#         return Column(Integer, ForeignKey(cls.__tablename__[:-len("ISBN")] + 'Book.id'))
+#
+#     @staticmethod
+#     def getConcretizedClass(context):
+#         return GenericBase.getConcretizedClass(context, 'ISBN')
+#
+#     @classmethod
+#     def get_or_create(cls, session, isbn_dict, param_name):
+#         return GenericConnector.get_or_create_(session, cls, isbn_dict, param_name)
+#
+#     raw = Column(Unicode(50))
+#     core = Column(Unicode(9))
+#     isbn10 = Column(Unicode(10))
+#     isbn13 = Column(Unicode(13))
+#     valid = Column(Boolean)
+#
+# class GenericBooksFormats(GenericBase):
+#     id = Column(Integer, primary_key=True)
+#
+#     @declared_attr
+#     def __tablename__(cls):
+#         cls.register()
+#         return cls.__name__
+#
+#     @staticmethod
+#     def getConcretizedClass(context):
+#         return GenericBase.getConcretizedClass(context, 'BooksFormats')
+#
+#     @declared_attr
+#     def book_id(cls):
+#         name = cls.__tablename__[:-len("BooksFormats")]
+#         return Column(Integer, ForeignKey(name + 'Book.id'))
+#
+#     @declared_attr
+#     def format_id(cls):
+#         name = cls.__tablename__[:-len("BooksFormats")]
+#         return Column(Integer, ForeignKey(name + 'Format.id'))
+#
+# class GenericFormat(GetOrCreateCache, GenericBase):
+#     id = Column(Integer, primary_key=True)
+#     name = Column(Unicode(10))
+#
+#     @declared_attr
+#     def __tablename__(cls):
+#         cls.register()
+#         return cls.__name__
+#
+#     @declared_attr
+#     def books(cls):
+#         name = cls.__tablename__[:-len("Format")]
+#         return relationship(name + "Book", secondary = cls.metadata.tables[name + 'BooksFormats'] , backref = backref("formats", lazy = 'joined'), lazy = 'joined')
+#
+#     @staticmethod
+#     def getConcretizedClass(context):
+#         return GenericBase.getConcretizedClass(context, 'Format')

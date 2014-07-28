@@ -1,5 +1,5 @@
 import ConfigParser
-from utils import MultiLevelConfigParser
+from spistresci.connectors.utils.MultiLevelConfigParser import MultiLevelConfigParser
 
 
 class ConfigReader(object):

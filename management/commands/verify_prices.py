@@ -17,7 +17,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.common.exceptions import WebDriverException
 
 from spistresci.common.helpers import send_email
-from spistresci.models import Minibook
+from spistresci.models import MiniBook as Minibook
 
 
 class Command(BaseCommand):

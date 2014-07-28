@@ -1,4 +1,3 @@
-from utils import logger_instance
 from utils.compatibility import OrderedDict
 import ConfigParser
 
@@ -45,7 +44,7 @@ def load_class(modulename, classname):
     module =  __import__(modulename, globals(), locals(), [classname])
     return getattr(module, classname)
 
-def load_connector(connectorname, config=None, modulename='connectors.specific'):
+def load_connector(connectorname, config=None, modulename='spistresci.connectors.specific'):
     if config:
         try:
             modulename = config.get(connectorname, 'connector_module')

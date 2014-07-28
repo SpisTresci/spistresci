@@ -1,7 +1,7 @@
 import logging
 import logging.handlers
-#from utils import MultiLevelConfigParser
-import utils
+from spistresci.connectors.utils.MultiLevelConfigParser import MultiLevelConfigParser
+import spistresci.connectors.utils
 import os
 import sys
 from datetime import datetime
@@ -135,7 +135,7 @@ class ConnectorsLogger(object):
                 raise IOError('Log config file %s, does not exist' % self.log_config)
         else:
             self.log_config = log_config
-            self.config = utils.MultiLevelConfigParser({'level':'DEBUG', 'logger':'update'})
+            self.config = MultiLevelConfigParser({'level':'DEBUG', 'logger':'update'})
             self.config.read(self.log_config)
             self.level = self.config.get('DEFAULT', 'level')
             self.logger_name = self.config.get('DEFAULT', 'logger')

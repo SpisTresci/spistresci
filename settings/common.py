@@ -126,6 +126,8 @@ INSTALLED_APPS = (
     # 'django.contrib.admindocs',
 
     'spistresci',
+    'spistresci.connectors',
+
     'haystack',
 
     # allauth
@@ -273,10 +275,11 @@ ADMIN_EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = 'SpisTreści.pl <no-reply@spistresci.pl>'
 
 CRON_CLASSES = [
-    "spistresci.cron.TrackNotificationCronJob",
-    "spistresci.cron.ClearUsersCronJob",
-    "spistresci.cron.VerifyPricesCronJob",
-    "spistresci.cron.AfiliantUpdateCronJob",
+    "spistresci.update.UpdateManager",
+    # "spistresci.cron.TrackNotificationCronJob",
+    # "spistresci.cron.ClearUsersCronJob",
+    # "spistresci.cron.VerifyPricesCronJob",
+    # "spistresci.cron.AfiliantUpdateCronJob",
 ]
 
 BLOGGER_GROUP_NAME = 'blogger'
@@ -291,3 +294,5 @@ if len(sys.argv) >= 2 and sys.argv[1] == 'syncdb':
         os.path.join(SITE_ROOT, 'fixtures/authentication-dev.json'),
         os.path.join(SITE_ROOT, '../initial_data.json')
     )
+
+CONNECTORS_CONFIG_DIR = os.path.join(SITE_ROOT, 'conf')

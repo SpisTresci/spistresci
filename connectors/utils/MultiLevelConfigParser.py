@@ -1,8 +1,9 @@
 import os
 import socket
 from ConfigParser import SafeConfigParser
-from utils.compatibility import OrderedDict
+from compatibility import OrderedDict
 import codecs
+from django.conf import settings
 
 class MultiLevelConfigParser(SafeConfigParser):
     
@@ -40,6 +41,8 @@ class MultiLevelConfigParser(SafeConfigParser):
         #this is compilant with _read version that does not  for multilevel
         for _file in files:
             try:
+                _file = os.path.join(settings.CONNECTORS_CONFIG_DIR, _file)
+
                 with codecs.open(_file, 'r', 'utf8') as ff:
                     self.readfp(ff)
                 files_read.append(_file)
