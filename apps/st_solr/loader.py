@@ -11,13 +11,15 @@ class Loader(AppDirectoriesLoader):
 
     def __call__(self, template_name, template_dirs=None):
         return self.load_template_from_other_solr_core(
-            template_name, template_dirs
+            template_name,
+            template_dirs,
         )
 
-    def load_template_from_other_solr_core(self,
-                                           template_name,
-                                           template_dirs=None,
-                                           ):
+    def load_template_from_other_solr_core(
+        self,
+        template_name,
+        template_dirs=None,
+    ):
         """
         Returns the absolute paths to "template_name", when appended to each
         directory in "template_dirs". Any paths that don't lie inside one of
@@ -26,7 +28,9 @@ class Loader(AppDirectoriesLoader):
         """
         try:
             core_name, template_name = template_name.split(":", 1)
-            template_dirs = [join(dirname(__file__), 'templates/', core_name)]
+            template_dirs = [
+                join(dirname(__file__), 'templates/', core_name),
+            ]
             return self.load_template_source(template_name, template_dirs)
         except:
             raise TemplateDoesNotExist(template_name)
