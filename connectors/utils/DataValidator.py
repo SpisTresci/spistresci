@@ -1,9 +1,11 @@
 import re
+from decimal import Decimal
 from pyisbn import *
 import glob
 #from models.BookType import BookType
 #from models.BookType import book_types
 import base64
+
 
 class DataValidator(object):
 
@@ -134,24 +136,28 @@ class DataValidator(object):
     def validateTitle(self, dic, id, title):
         pass
 
-    def validatePrice(self, dic, id, title, price_tag_name = 'price', default_price=0):
-        if type(default_price) is not int:
-            raise TypeError('Default_price should be integer')
+    def validatePrice(self, dic, id, title, price_tag_name='price', default_price='0.00'):
+        # if type(default_price) is not int:
+        #     raise TypeError('Default_price should be integer')
         
         original_price = dic.get(price_tag_name, default_price)
         if original_price != default_price and original_price != '':
-            price_match = self.price_re.match(original_price)
-            if not price_match:
-                self.erratum_logger.warning("Entry has price in wrong format! connector: %s, id: %s, title: %s, price: %s" % (self.name, id, title, str(original_price)))
-                dic[price_tag_name] = unicode(default_price)
-            else:
-                zl = int(('%1s'%price_match.groups()[0]).replace(' ','0'))*100
-                gr = int(('%-2s'%price_match.groups()[2]).replace(' ','0'))
+            match = self.price_re.match(original_price)
+            if match:
+                zl = match.groups()[0].rjust(1, '0')
+                gr = match.groups()[2].ljust(2, '0')
+                dic[price_tag_name] = Decimal('%s.%s' % (zl, gr))
+                self.erratum_logger.debug(
+                    'Connector %s. Validate %s. Price regex for id %s title %s matched following: %s, detected price: %s' %
+                    (self.name, price_tag_name, id, title, list(match.groups()), dic[price_tag_name])
+                )
+                return
 
-                dic[price_tag_name] = unicode(zl+gr)
-                self.erratum_logger.debug('Connector %s. Validate %s. Price regex for id %s title %s matched following: %s, detected price: %s' % (self.name, price_tag_name, id, title, list(price_match.groups()), dic[price_tag_name]))
-        else:
-            dic[price_tag_name] = unicode(default_price)
+            else:
+                self.erratum_logger.warning("Entry has price in wrong format! connector: %s, id: %s, title: %s, price: %s" % (self.name, id, title, str(original_price)))
+
+        dic[price_tag_name] = Decimal(default_price)
+
 
     def validatePerson(self, person, id, title):
         pdict = {}
@@ -176,15 +182,15 @@ class DataValidator(object):
             if len(names) == 2: #imie i nazwisko
                 n1 = names[0].strip()
                 n2 = names[1].strip()
-                pdict["firstName"] = (n1 if self.isName(n1) else (n2 if self.isName(n2) else n1)).title()
-                pdict["lastName"] = (n2 if self.isName(n1) else (n1 if self.isName(n2) else n2)).title()
-                pdict["middleName"] = u""
+                pdict["first_name"] = (n1 if self.isName(n1) else (n2 if self.isName(n2) else n1)).title()
+                pdict["last_name"] = (n2 if self.isName(n1) else (n1 if self.isName(n2) else n2)).title()
+                pdict["middle_name"] = u""
             elif len(names) == 3:
-                pdict["firstName"] = names[0].strip().title()
-                pdict["middleName"] = names[1].strip().title()
-                pdict["lastName"] = names[2].strip().title()
+                pdict["first_name"] = names[0].strip().title()
+                pdict["middle_name"] = names[1].strip().title()
+                pdict["last_name"] = names[2].strip().title()
             else:
-                pdict["firstName"] = pdict["middleName"] = pdict["lastName"] = u""
+                pdict["first_name"] = pdict["middle_name"] = pdict["last_name"] = u""
 
         return pdict
 
@@ -221,11 +227,11 @@ class DataValidator(object):
                 if pdict != {}:
                     new_list_of_person_dicts.append(pdict)
 
-            if dic.get('persons') == None:
-                dic['persons'] = []
-
-            dic['persons'].append({unicode(tag_name):new_list_of_person_dicts})
-            del dic[tag_name]
+            # if dic.get('persons') == None:
+            #     dic['persons'] = []
+            #
+            # dic['persons'].append({unicode(tag_name):new_list_of_person_dicts})
+            dic[tag_name] = new_list_of_person_dicts
 
     def isName(self, word):
         return word in self.list_of_names
