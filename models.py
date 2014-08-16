@@ -126,11 +126,20 @@ class CommandStatus(models.Model):
 
     start = models.DateTimeField(auto_now_add=True)
     end = models.DateTimeField(null=True, blank=True)
+    watch_dog = models.DateTimeField(auto_now_add=True)
     manual = models.BooleanField()
     partial = models.BooleanField()
 
     finished = models.BooleanField(default=False)
     success = models.BooleanField(default=False)
+
+    WATCH_DOG_THRESHOLD = 60
+
+    def feed_dog(self):
+        td = timezone.timedelta(seconds=self.WATCH_DOG_THRESHOLD/4)
+        if self.watch_dog + td < timezone.now():
+            self.watch_dog = timezone.now()
+            self.save()
 
 
 class BookstoreCommandStatus(models.Model):
@@ -143,6 +152,7 @@ class BookstoreCommandStatus(models.Model):
 
     start = models.DateTimeField(auto_now_add=True)
     end = models.DateTimeField(null=True, blank=True)
+    watch_dog = models.DateTimeField(auto_now_add=True)
 
     TYPE_FETCH = 1
     TYPE_PARSE = 2
@@ -156,3 +166,16 @@ class BookstoreCommandStatus(models.Model):
 
     type = models.IntegerField(choices=TYPE_CHOICES)
     extra = JSONField()
+
+    WATCH_DOG_THRESHOLD = 60
+
+    def feed_dog(self):
+        self.cmd_status.feed_dog()
+        td = timezone.timedelta(seconds=self.WATCH_DOG_THRESHOLD/4)
+        if self.watch_dog + td < timezone.now():
+            self.watch_dog = timezone.now()
+            self.save()
+
+    def is_dog_fed(self):
+        td = timezone.timedelta(seconds=self.WATCH_DOG_THRESHOLD)
+        return self.watch_dog + td > timezone.now()

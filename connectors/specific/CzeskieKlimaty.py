@@ -1,8 +1,8 @@
-from connectors.common import Ceneo
-from sqlwrapper import *
-from connectors.generic import GenericBook
-
-Base = SqlWrapper.getBaseClass()
+from spistresci.connectors.common import Ceneo
+# from sqlwrapper import *
+# from connectors.generic import GenericBook
+#
+# Base = SqlWrapper.getBaseClass()
 
 class CzeskieKlimaty(Ceneo):
 
@@ -27,18 +27,18 @@ class CzeskieKlimaty(Ceneo):
         #CzeskieKlimaty has printed books.
         dic['formats'] = ['ks']
 
-class CzeskieKlimatyBook(GenericBook, Base):
-    id = Column(Integer, primary_key = True)
-
-    price = Column(Integer)             #GROSZE!!!
-    #url
-
-    title = Column(Unicode(256))        #143
-    #description
-    category = Column(Unicode(80))      #72
-    #cover
-    #authors
-    #isbns
-    page_count = Column(Integer)
-    publisher = Column(Unicode(70))     #59
-    date = Column(Date)                 #
+# class CzeskieKlimatyBook(GenericBook, Base):
+#     id = Column(Integer, primary_key = True)
+#
+#     price = Column(Integer)             #GROSZE!!!
+#     #url
+#
+#     title = Column(Unicode(256))        #143
+#     #description
+#     category = Column(Unicode(80))      #72
+#     #cover
+#     #authors
+#     #isbns
+#     page_count = Column(Integer)
+#     publisher = Column(Unicode(70))     #59
+#     date = Column(Date)                 #

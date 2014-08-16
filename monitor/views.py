@@ -1,26 +1,50 @@
 # -*- coding: utf-8 -*-
 from django.shortcuts import render, redirect
-from models import *
+from spistresci.models import CommandStatus, BookstoreCommandStatus
 from datetime import datetime, timedelta
 
 def monitor(request):
 
-    if request.user.is_authenticated() and request.user.username == 'admin':
-        services = list(Service.objects.all())
-        services.sort(key=lambda x: x.name.lower())
-        update_statuses = UpdateStatus.objects.order_by('id')[:25].reverse()
+    if True:#request.user.is_authenticated() and request.user.username == 'admin':
 
-        table = []
-        for us in update_statuses:
-            s_stable = []
-            table.append(s_stable)
-            for service in services:
-                uss_s = UpdateStatusService.objects.filter(update_status_id = us.id, service_name = service.name)
-                uss = uss_s[0] if len(uss_s) != 0 else None
-                s_stable.append(uss)
+        context = {}
 
-        repair_dates(update_statuses)
-        return render(request, 'monitor/index.html', {"data": table, "services":services, "update_statuses": update_statuses})
+        commands = list(CommandStatus.objects.all())
+        commands.reverse()
+        commands = commands[:20]
+        context['commands'] = commands
+
+        bookstores = {}
+        for command in commands:
+            for bcs in command.bookstorecommandstatus_set.all():
+                bookstores[bcs.bookstore.name] = bcs.bookstore
+
+        bookstores = [bookstores[key] for key in sorted(bookstores)]
+        context['bookstores'] = bookstores
+
+        data = []
+        for command in commands:
+            row = {'command': command, 'innerrows': []}
+            data.append(row)
+
+            for type, desc in BookstoreCommandStatus.TYPE_CHOICES:
+                inner_row = []
+                row['innerrows'].append(inner_row)
+                for bookstore in bookstores:
+                    try:
+                        bcs = BookstoreCommandStatus.objects.get(
+                            cmd_status=command,
+                            bookstore=bookstore,
+                            type=type
+                        )
+                    except BookstoreCommandStatus.DoesNotExist:
+                        bcs = None
+
+                    inner_row.append(bcs)
+
+        context['data'] = data
+
+        return render(request, 'monitor/index.html', context)
     else:
         return redirect("/")
 

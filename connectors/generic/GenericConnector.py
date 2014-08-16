@@ -29,7 +29,7 @@ from django.conf import settings
 
 #Base = SqlWrapper.getBaseClass()
 from spistresci.model_controler import add_MiniBook
-from spistresci.models import Bookstore
+from spistresci.models import Bookstore, BookstoreCommandStatus
 
 
 class InvalidContext(RuntimeError):
@@ -234,7 +234,14 @@ class GenericConnector(GenericBase, DataValidator):
 
     def fetchData(self):
         """fetchData method"""
-        pass
+
+        checksum = self.calculateChecksum()
+        bcs = self.bookstore_cmd_status
+        extra = dict(bcs.extra)
+        extra['checksum'] = checksum
+        bcs.extra = extra
+        bcs.save()
+
     
     def getBookList(self, filename):
         pass
@@ -278,7 +285,7 @@ class GenericConnector(GenericBase, DataValidator):
         #self.save_time_of_("parse_start")
         self.before_parse()
         book_number = 0
-        if force or self.areDataDifferentThanPrevious():
+        if self.areDataDifferentThanPrevious() or force:
             for filename in self.fetched_files:
                 for offer in self.getBookList(filename):
                     book_number += 1
@@ -298,6 +305,8 @@ class GenericConnector(GenericBase, DataValidator):
                         self.create_pp_url(book)
                         self.new_add_record(book)
                         #self.add_record(book)
+
+                    self.bookstore_cmd_status.feed_dog()
 
             self.after_parse()
             #self.session.commit()
@@ -442,6 +451,7 @@ class GenericConnector(GenericBase, DataValidator):
 
             file_size_dl += len(buffer)
             f.write(buffer)
+            self.bookstore_cmd_status.feed_dog()
 
         f.close()
         self.logger.debug('Download of %s completed, downloaded %d bytes' % (filename, file_size_dl))
@@ -519,22 +529,34 @@ class GenericConnector(GenericBase, DataValidator):
             self.update_status_service.offers_new = offers_new if offers_new else self.howManyNewOffers()
             self.update_status_service.offers_promotion = offers_promotion if offers_promotion else self.howManyOffersInPromotion()
 
-    #FIXME: refactoring, DataStorageWrapper
+    # FIXME, TODO: T663 - Aktualizacja się nie wykonuje, jeżeli poprzednim
+    # razem był ściągany taki sam plik (checksum), a później nastąpił błąd
     def areDataDifferentThanPrevious(self):
-        return True
-        # if not self.update_status_service:
-        #     return True
-        # self.update_status_service.checksum = self.calculateChecksum()
-        # self.update_status_service.session.commit()
-        # first = self.session.query(UpdateStatusService)\
-        #     .filter(UpdateStatusService.service_name == self.update_status_service.service_name,
-        #             UpdateStatusService.id != self.update_status_service.id,
-        #             UpdateStatusService.success == True)\
-        #     .order_by(UpdateStatusService.timestamp.desc()).first()
-        #
-        # if not first:
-        #     return True
-        # return first.checksum != self.update_status_service.checksum
+        bcs = self.bookstore_cmd_status
+
+        fetch_command_status = BookstoreCommandStatus.objects.filter(
+            type=BookstoreCommandStatus.TYPE_FETCH,
+            cmd_status=bcs.cmd_status,
+            bookstore_id=bcs.bookstore_id
+        ).order_by('id')
+        fetch_command_status = list(fetch_command_status)[-1]
+        checksum = dict(fetch_command_status.extra).get('checksum', '')
+
+        latest_bcs = BookstoreCommandStatus.objects.filter(
+            type=BookstoreCommandStatus.TYPE_FETCH,
+            success=True,
+            bookstore_id=bcs.bookstore_id
+        ).exclude(
+            id=fetch_command_status.id
+        ).order_by('id')
+
+        if not latest_bcs:
+            return True
+
+        latest_bcs = list(latest_bcs)[-1]
+
+        latest_checksum = dict(latest_bcs.extra).get('checksum', '')
+        return latest_checksum != checksum
 
     #TODO: move to SqlWrapper
     @classmethod

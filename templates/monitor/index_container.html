@@ -1,71 +1,73 @@
 {% load static %}
 <div>
-   <table>
-      <tr>
-         <td class="lp"><div>ID</div></td>
-         <td class="date"><div>Start</div></td>
-         <td class="date"><div>Koniec</div></td>
-         <td class="type"><div>Typ</div></td>
-      </tr>
-      {% for update_status in update_statuses %}
-        <tr class="us{% if update_status.finished %} finished{% endif %}{% if update_status.success %} success{% endif %}">
-            <td>{{ update_status.id }}</td>
-            <td>{{ update_status.start|date:"d-m-Y H:i" }}</td>
-            <td>{{ update_status.end|date:"d-m-Y H:i" }}</td>
-            <td>{% if update_status.manual %}manual{% else %}auto{% endif %}</td>
+    <table>
+        <tr>
+            <td class="lp"><div>ID</div></td>
+            <td class="date"><div>Start/Koniec/Typ</div></td>
         </tr>
-      {% endfor %}
-      <tr>
-          <td colspan="4" style="text-align: left">
-              <button id="new_update">Nowy</button>
-              <button id="all" class="new_update checked">Wszystkie</button>
-              <button id="update" class="new_update">Update!</button>
-              <input id="autorefresh" type="checkbox" value="autorefresh" checked> autorefresh
-          </td>
-      </tr>
-   </table>
-   <table class="connectors">
-           <tr>
-           {% for service in services %}
-             <td class='rotated_cell'>
-                <div class='rotate_text'>{{ forloop.counter }} - {{ service.name }}</div>
-             </td>
-           {% endfor %}
-           </tr>
-           <tr>
-         {% for update_status in data %}
-           <tr>
-           {% for update_status_service in update_status %}
-                <td
-{% if update_status_service %}
-title="
-id: {{ update_status_service.id }}
-checksum: {{ update_status_service.checksum }}
-timestamp: {{ update_status_service.timestamp }}
-offers: {{ update_status_service.offers }}
-offers_parsed: {{ update_status_service.offers_parsed }}
-offers_new: {{ update_status_service.offers_new }}
-offers_promotion: {{ update_status_service.offers_promotion }}
-fetch_start: {{ update_status_service.fetch_start|date:"d-m-Y H:i" }}
-fetch_end: {{ update_status_service.fetch_end|date:"d-m-Y H:i" }}
-parse_start: {{ update_status_service.parse_start|date:"d-m-Y H:i" }}
-parse_end: {{ update_status_service.parse_end|date:"d-m-Y H:i" }}
-final_start: {{ update_status_service.final_start|date:"d-m-Y H:i" }}
-final_end: {{ update_status_service.final_end|date:"d-m-Y H:i" }}
-"
-{% endif%}
-                class="{% if update_status_service %}{% if update_status_service.success %}
-                success {% if update_status_service.offers_parsed %}updated{% endif %}
-                {% else %}fail{% endif %}{% else %}no{% endif %}"></td>
-           {% endfor %}
-           </tr>
+        {% for command in commands %}
+            <tr class="us{% if command.finished %} finished{% endif %}{% if command.success %} success{% endif %}">
+                <td rowspan="3" class="row">{{ command.id }}</td>
+                <td>{{ command.start|date:"d-m-Y H:i" }}</td>
+            </tr>
+            <tr>
+                <td>{{ command.end|date:"d-m-Y H:i" }}</td>
+            </tr>
+            <tr>
+                <td>{% if command.manual %}manual{% else %}auto{% endif %}</td>
+            </tr>
         {% endfor %}
-           <tr class="new_update">
-           {% for service in services %}
-             <td>
-                <input class="update_checkbox" type="checkbox" checked value="{{ service.name }}">
-             </td>
-           {% endfor %}
-           </tr>
-   </table>
+        <tr>
+            <td colspan="4" style="text-align: left">
+                <button id="new_update">Nowy</button>
+                <button id="all" class="new_update checked">Wszystkie</button>
+                <button id="update" class="new_update">Update!</button>
+                <input id="autorefresh" type="checkbox" value="autorefresh" checked> autorefresh
+            </td>
+        </tr>
+    </table>
+    <table class="connectors">
+        <tr>
+            {% for bookstore in bookstores %}
+                <td class='rotated_cell'>
+                    <div class='rotate_text'>{{ forloop.counter }} - {{ bookstore.name }}</div>
+                </td>
+            {% endfor %}
+        </tr>
+        {% for row in data %}
+            {% for innerrow in row.innerrows %}
+                <tr>
+                    {% for bcs in innerrow %}
+                        <td class="
+                            {% if bcs %}
+                                {% if not bcs.finished %}
+                                    {% if bcs.is_dog_fed %}
+                                        in_progress
+                                    {% else %}
+                                        stop_fail
+                                    {% endif %}
+                                {% else %}
+                                    {% if bcs.success %}
+                                        success
+                                    {% else %}
+                                        fail
+                                    {% endif %}
+                                {% endif %}
+                            {% else %}
+                                no
+                            {% endif %}
+                        ">
+                        </td>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+        {% endfor %}
+        <tr class="new_update">
+            {% for service in services %}
+                <td>
+                    <input class="update_checkbox" type="checkbox" checked value="{{ service.name }}">
+                </td>
+            {% endfor %}
+        </tr>
+    </table>
 </div>

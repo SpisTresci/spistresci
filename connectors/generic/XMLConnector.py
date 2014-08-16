@@ -35,6 +35,7 @@ class XMLConnector(GenericConnector):
             self.fetched_files.append(os.path.join(self.backup_dir, self.filename))
 
         self.save_time_of_("fetch_end")
+        super(XMLConnector, self).fetchData()
 
     def getTagValue(self, product, tagName, default=""):
         tag = product.getElementsByTagName(tagName)[0]

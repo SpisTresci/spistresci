@@ -8,7 +8,7 @@ from Allegro import Allegro
 # from Booki24 import Booki24
 # from Bookoteka import Bookoteka
 # from BooksOn import BooksOn
-# from CzeskieKlimaty import CzeskieKlimaty
+from CzeskieKlimaty import CzeskieKlimaty
 # from Czytio import Czytio
 # from DlaBystrzakow import DlaBystrzakow
 # from DobryEbook import DobryEbook

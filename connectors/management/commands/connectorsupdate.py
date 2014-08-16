@@ -74,12 +74,12 @@ class Command(BaseCommand):
                     cmd_status,
                 )
 
-                # self.run_connector_method(
-                #     connector,
-                #     connector.parse,
-                #     BookstoreCommandStatus.TYPE_PARSE,
-                #     cmd_status,
-                # )
+                self.run_connector_method(
+                    connector,
+                    connector.parse,
+                    BookstoreCommandStatus.TYPE_PARSE,
+                    cmd_status,
+                )
 
             except:
                 self.logger.exception(
@@ -111,6 +111,7 @@ class Command(BaseCommand):
             type=cmd_type,
         )
         bookstore_cmd_status.save()
+        connector.bookstore_cmd_status = bookstore_cmd_status
 
         try:
             method()

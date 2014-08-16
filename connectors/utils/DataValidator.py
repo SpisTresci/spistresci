@@ -34,6 +34,7 @@ class DataValidator(object):
         self.validateLectors(dic, id, title)
         self.validateTranslators(dic, id, title)
         self.validateLength(dic, id, title)
+        self.validateDescription(dic, id, title)
 
     format_sepeparators = [',', ' ']
 
@@ -70,7 +71,7 @@ class DataValidator(object):
                 self.erratum_logger.warning("Unsupported format! connector: %s, id: %s, title: %s, formats: %s" % (self.name, id, title, formats))
 
         dic['book_type'] = None #BookType.fromFormats(format_list)
-        dic['formats'] = format_list
+        dic['formats'] = [{'name':format} for format in format_list]
 
 #    def convertFormats(self, dic):
 #        for rule in self.format_convertions_rules:
@@ -232,6 +233,9 @@ class DataValidator(object):
             #
             # dic['persons'].append({unicode(tag_name):new_list_of_person_dicts})
             dic[tag_name] = new_list_of_person_dicts
+
+    def validateDescription(self, dic, id, title):
+        dic['description'] = {'description': dic['description']}
 
     def isName(self, word):
         return word in self.list_of_names
