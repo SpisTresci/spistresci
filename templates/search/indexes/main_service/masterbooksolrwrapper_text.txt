@@ -1,5 +1,0 @@
-{{ object.author }}
-{{ object.title }}
-{{ object.price_lowest }}
-{{ object.image_url }}
-{{ object.formats }}

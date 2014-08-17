@@ -45,7 +45,7 @@
       </div>
       </div>
       <div class="index_bottom">
-        <div class="index_title">U nas porównasz <b>403 909 ofert z 47 serwisów!</b></div>
+        <div class="index_title">U nas porównasz <b>{{ minibooks }} ofert z {{ bookstores }} serwisów!</b></div>
 
         {% for group in group_of_books %}
         <div class="index_subtitle{% if not forloop.counter|divisibleby:2 %} flank{% endif %}">

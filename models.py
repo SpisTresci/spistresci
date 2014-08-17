@@ -69,9 +69,16 @@ class MasterBook(models.Model):
 
     title = models.CharField(max_length=512L, blank=True)
     cover = models.CharField(max_length=512L, blank=True)
-    format = models.ManyToManyField(BookFormat)
+    formats = models.ManyToManyField(BookFormat)
 
     authors = models.ManyToManyField(MasterAuthor)
+
+    def price_lowest(self):
+        return min(mini.price for mini in self.mini_books.all())
+
+    def bookstores(self):
+        bookstores = set(mini.bookstore.name for mini in self.mini_books.all())
+        return list(bookstores)
 
 
 class MiniBook(models.Model):

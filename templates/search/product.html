@@ -1,6 +1,6 @@
 {% load staticfiles mathfilters commontags%}
-{% with product=result %}
-<div class="search_list_item" data-records-count="{{ product.records|length }}">
+{% with product=result.object %}
+<div class="search_list_item" data-records-count="{{ product.mini_books.all|length }}">
     <div class="search_list_book">
         <div class="book_box">
             <div class="image-wrap-border">
@@ -36,8 +36,8 @@
                 {% endfor %}
                 </div>
                 <div class="s_text">
-                    Formaty: {{ product.formats|formats_to_readable|join:", "|upper }}<br />
-                    Serwisy: {{ product.services|join:", " }}
+                    Formaty: {{ product.formats.all|formats_to_readable|join:", "|upper }}<br />
+                    Serwisy: {{ product.bookstores|join:", " }}
                 </div>
             </div>
         </div>

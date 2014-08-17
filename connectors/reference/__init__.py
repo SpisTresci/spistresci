@@ -1,1 +1,1 @@
-from BibliotekaNarodowa import BibliotekaNarodowa
+# from BibliotekaNarodowa import BibliotekaNarodowa

@@ -132,6 +132,7 @@ INSTALLED_APPS = (
     'haystack',
 
     'spistresci.apps.st_solr',
+    'spistresci.blogger',
 
     # allauth
     'allauth',

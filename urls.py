@@ -4,6 +4,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.views.generic import TemplateView
 from django.shortcuts import render_to_response
+from haystack.views import SearchView
 from registration.backends.default.views import RegistrationView
 
 from spistresci.index.views import index
@@ -57,7 +58,8 @@ urlpatterns = patterns('',
 #TODO: check thread safe version of this
 # Without threading...
 urlpatterns += patterns('haystack.views',
-    url(r'^search/$', STSearchView(), name='haystack_search'),
+    url(r'^search/$', SearchView(), name='haystack_search'),
+    # url(r'^search/$', STSearchView(), name='haystack_search'),
     url(r'^q/$', STSearchView(template="search/results_list.html"), name='haystack_search'),
     url(r'^qb/$', STSearchView(template="search/results_thumbnail_list.html"), name='haystack_search'),
     url(r'^qn/$', STSearchView(template="search/results_thumbnail_list.html"), name='haystack_search'),

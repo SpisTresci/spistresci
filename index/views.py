@@ -3,8 +3,9 @@ from django.shortcuts import render
 from spistresci.auth.views import authorization
 from spistresci.constants import *
 from spistresci.blogger.models import BookRecommendation, BloggerProfile
+from spistresci.models import MiniBook, Bookstore
 
-group_of_books=[{"name":u"BESTSELLERY"},{"name":u"NOWOŚCI"},{"name":u"PROMOCJE"}]
+group_of_books=[{"name": u"BESTSELLERY"}, {"name": u"NOWOŚCI"},{"name":u"PROMOCJE"}]
 RECOMENDATIONS_ON_FRONTPAGE = 4
 
 def getRandomReviews():
@@ -27,6 +28,9 @@ def index(request):
     c['request'] = request
 
     c['group_of_books']=group_of_books
+
     c.update(getRandomReviews())
+    c['minibooks'] = MiniBook.objects.count()
+    c['bookstores'] = Bookstore.objects.count()
 
     return render(request, 'index.html', c)

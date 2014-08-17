@@ -36,11 +36,12 @@ def formats_to_readable(value):
     if isinstance(value, basestring):
         return formats_mapping[value] if value in formats_mapping else value
 
-    formats = list(value)
+    format_names = [item.name for item in list(value)]
 
     formats = [
-        formats_mapping[item] if item in formats_mapping else item
-        for item in formats
+        formats_mapping[name]
+        if name in formats_mapping else name
+        for name in format_names
     ]
 
     return formats

@@ -1,4 +1,4 @@
-from models import MiniBook
+from models import MiniBook, MasterBook
 
 
 def add_MiniBook(bookstore, d):
@@ -97,5 +97,21 @@ def add_MiniBook(bookstore, d):
                 setattr(book, key, obj)
 
         book.save()
+
+        master = MasterBook(
+            title=book.title,
+            cover=book.cover
+        )
+        master.save()
+
+        for format in book.formats.all():
+            master.formats.add(format)
+
+        book.master = master
+        book.master.save()
+        book.save()
+
+        print "test"
+
 
     return book
