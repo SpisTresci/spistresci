@@ -6,11 +6,7 @@ from os.path import (
 )
 
 SOLR_CORES = [
-    'bookstore_latest',
-    'bookstore_latest_bis',
-
-    'masterbook_latest',
-    'masterbook_latest_bis',
+    'masterbook',
 ]
 
 SOLR_VERSION = getattr(settings, 'ST_SOLR_VERSION', '4.5.0')

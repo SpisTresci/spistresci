@@ -2,15 +2,8 @@
 
 <solr sharedLib="lib" persistent="true"{% if ZooKeeper %} zkHost="solr1.spistresci.pl:2181"{% endif %}>
     <cores adminPath="/admin/cores" hostPort="9001" hostContext="${hostContext:solr}"{% if ZooKeeper %} zkClientTimeout="20000" leaderVoteWait="10000" {% endif %}>
-
     {% for core in cores %}
-    <core name="{{ core }}" instanceDir="{{ core }}"/>
+        <core name="{{ core }}" instanceDir="{{ core }}"/>
     {% endfor %}
-
-{% comment %}
-    <core name="masterbook_with_description_latest_shard1" instanceDir="masterbook_with_description_latest_shard1_replica1" collection="masterbook_with_description_latest"/>
-    <core name="masterbook_with_description_latest_shard2" instanceDir="masterbook_with_description_latest_shard2_replica1" collection="masterbook_with_description_latest"/>
-{% endcomment %}
-
-</cores>
+    </cores>
 </solr>
