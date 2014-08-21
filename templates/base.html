@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+{% load staticfiles %}
+<!--
+
+ $$$$$$\            $$\                                                   $$\
+$$  __$$\           $$ |                                                  \__|
+$$ /  $$ | $$$$$$\  $$ | $$$$$$\   $$$$$$$\ $$$$$$$$\  $$$$$$\  $$$$$$$\  $$\  $$$$$$\
+$$ |  $$ |$$  __$$\ $$ |$$  __$$\ $$  _____|\____$$  |$$  __$$\ $$  __$$\ $$ |$$  __$$\
+$$ |  $$ |$$ /  $$ |$$ |$$ /  $$ |\$$$$$$\    $$$$ _/ $$$$$$$$ |$$ |  $$ |$$ |$$$$$$$$ |
+$$ |  $$ |$$ |  $$ |$$ |$$ |  $$ | \____$$\  $$  _/   $$   ____|$$ |  $$ |$$ |$$   ____|
+ $$$$$$  |\$$$$$$$ |$$ |\$$$$$$  |$$$$$$$  |$$$$$$$$\ \$$$$$$$\ $$ |  $$ |$$ |\$$$$$$$\
+ \______/  \____$$ |\__| \______/ \_______/ \________| \_______|\__|  \__|\__| \_______|
+          $$\   $$ |
+          \$$$$$$  |   SZUKAMY OSÓB, KTÓRE POMOGĄ NAM ROZWIJAĆ SPISTRESCI.PL
+           \______/
+
+
+Wierzym, że w kod źródłowy strony nie zagląda byle kto, a niektórzy ciekawi webdeveloperzy mają właśnie taki zwyczaj :)
+
+Jeżeli chciałbyś z nami pracować, to właśnie zaglądając tutaj przeszedłeś pierwszy etap "rekrutacji" :)
+
+Kogo potrzebujemy? :)
+
+ 1) Doświadczonych programistów Django/Pythona
+ 2) Specjalistów od baz danych
+
+Pomimo tego, że Internet to wspaniałe narzędzie, a praca zdalna teoretycznie jest możliwa z każdego miejsca, to jednak szukamy osób tylko i wyłącznie z Wrocławia, Oławy lub okolic. Cenimy sobie swoje towarzystwo ;)
+
+Co oferujemy?
+
+ - startupowe warunki i atmosfere...
+ - stosowne korzyści wynikające z uczestnictwa w naszym projekcie
+ - to, że dowiesz się, że sen jest dla mięczaków :)
+ - sławę :)
+
+
+Zastanawiając się, czy ktokolwiek zobaczy to ogłoszenie, cierpliwie czekamy na Wasze CV wysłane na adres: praca@spistresci.pl
+
+-->
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %}{% endblock title %}</title>
+    <link href="{% static "css/style.css" %}" rel="stylesheet" type="text/css">
+    {% block css %}{% endblock css %}
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+
+    <script type="text/javascript" src="{% static "js/all.js" %}"></script>
+    {% include "snippets/google_analytics.html" %}
+    {% block js %} {% endblock js %}
+    <link href="{% static "img/favicon.ico" %}" rel="icon" type="image/x-icon" />
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="http://ciasteczka.eu/cookiesEU-latest.min.js"></script>
+    <script type="text/javascript">
+      $(function(){
+        jQuery.fn.cookiesEU({
+          parent: $('.footer_footer'),
+          position: 'bottom',
+          auto_accept: false
+        });
+      });
+    </script>
+  </head>
+  <body>
+     {% if not is_prod %}
+     <div class="ribbon" style="background-color: {% if is_dev %}#24c52a{% else %}#a00{% endif %};overflow: hidden;position: absolute;left: -4em;top: 4em;-moz-transform: rotate(-45deg);-webkit-transform: rotate(-45deg);z-index: 2000;">
+         <a href="#" rel="me" style="border: 1px solid {% if is_dev %}#24c52a{% else %}#faa{% endif %};color: #fff; display: block; font: bold 81.25% 'Helvetiva Neue', Helvetica, Arial, sans-serif;margin: 0.05em 0;padding: 0.5em 3.5em;text-align: center;text-decoration: none;">
+             {% if is_dev %}
+                 127.0.0.1 - localhost
+             {% else %}
+                 staging.spistresci.pl
+             {% endif %}
+             - Debug ON
+         </a>
+     </div>
+     {% endif %}
+     {% block menu %} {% include "menu.html" %} {% endblock menu %}
+     {% block searchbox %}{% endblock searchbox %}
+     {% block container %}{% endblock container %}
+     {% block footer %} {% include "footer.html" %} {% endblock footer %}
+  </body>
+</html>
