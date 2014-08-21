@@ -10,3 +10,5 @@ logs
 log
 static/css/
 solr/*
+initial_data.json
+/.vagrant/
