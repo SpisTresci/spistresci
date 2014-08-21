@@ -111,7 +111,6 @@ ROOT_URLCONF = 'spistresci.urls'
 
 TEMPLATE_DIRS = (
     os.path.join(SITE_ROOT, 'templates/'),
-    os.path.join(SITE_ROOT, '../common/templates/'),
 )
 
 INSTALLED_APPS = (
