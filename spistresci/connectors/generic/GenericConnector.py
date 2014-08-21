@@ -286,6 +286,7 @@ class GenericConnector(GenericBase, DataValidator):
         #self.save_time_of_("parse_start")
         self.before_parse()
         book_number = 0
+        force = True # TODO - REMOVE ASAP
         if self.areDataDifferentThanPrevious() or force:
             for filename in self.fetched_files:
                 for offer in self.getBookList(filename):

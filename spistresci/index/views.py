@@ -3,7 +3,7 @@ from django.shortcuts import render
 from spistresci.auth.views import authorization
 from spistresci.constants import *
 from spistresci.blogger.models import BookRecommendation, BloggerProfile
-from spistresci.models import MiniBook, Bookstore
+from spistresci.models import MiniBook, Bookstore, Promotion
 
 group_of_books=[{"name": u"BESTSELLERY"}, {"name": u"NOWOŚCI"},{"name":u"PROMOCJE"}]
 RECOMENDATIONS_ON_FRONTPAGE = 4
@@ -32,5 +32,20 @@ def index(request):
     c.update(getRandomReviews())
     c['minibooks'] = MiniBook.objects.count()
     c['bookstores'] = Bookstore.objects.count()
+
+
+    minis = MiniBook.objects.filter(id__in = range(10))
+
+    promo_day = Promotion.objects.get(id=Promotion.PROMOTION_OF_THE_DAY)
+
+    for mini in minis:
+        promo_day.mini_books.add(mini)
+
+    promominis = MiniBook.objects.filter(
+        promotion__id=Promotion.PROMOTION_OF_THE_DAY
+    ).order_by('?')[:6]
+
+    c['promominis'] = promominis
+
 
     return render(request, 'index.html', c)

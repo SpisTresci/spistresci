@@ -11,6 +11,5 @@ class UserAdmin(UserAdmin):
 admin.site.unregister(User)
 
 admin.site.register(User, UserAdmin)
-from django.contrib import admin
 admin.site.register(BloggerProfile)
 admin.site.register(BookRecommendation)

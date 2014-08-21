@@ -47,19 +47,35 @@
       <div class="index_bottom">
         <div class="index_title">U nas porównasz <b>{{ minibooks }} ofert z {{ bookstores }} serwisów!</b></div>
 
-        {% for group in group_of_books %}
-        <div class="index_subtitle{% if not forloop.counter|divisibleby:2 %} flank{% endif %}">
-          <img class="b_left" src="{% static "img/red_line_b.png" %}" alt="" /><img class="b_center" src="{% static "img/red_line_c.png" %}" alt="" /><img class="b_right" src="{% static "img/red_line_e.png" %}" alt="" />
-          {{ group.name }}
-          <img class="b_left" src="{% static "img/red_line_b.png" %}" alt="" /><img class="b_center" src="{% static "img/red_line_c.png" %}" alt="" /><img class="b_right" src="{% static "img/red_line_e.png" %}" alt="" />
+        <div class="index_bloggers">
+            <img class="b_left" src="{% static "img/red_line_b.png" %}" alt="" /><img class="b_center" src="{% static "img/red_line_c.png" %}" alt="" /><img class="b_right" src="{% static "img/red_line_e.png" %}" alt="" />
+              PROMOCJE DNIA
+            <img class="b_left" src="{% static "img/red_line_b.png" %}" alt="" /><img class="b_center" src="{% static "img/red_line_c.png" %}" alt="" /><img class="b_right" src="{% static "img/red_line_e.png" %}" alt="" />
+                {% for review in blogger_reviews %}
+                    <div class="index_blogger_box_wrapper{% if forloop.counter > 3 %} extra{% endif %}">
+                        {% include "index_bloger_box.html" with blogger=review.blogger object=review.recomendation %}
+                    </div>
+                {% endfor %}
         </div>
-        {% endfor %}
+        <div class="three_index_box" style="width: 900px">
+          <div id="search_results_{{ forloop.counter }}">
+              {% include "search/results_thumbnail_list.html" %}
+          </div>
+        </div>
 
-        {% for group in group_of_books %}
-        <div class="three_index_box{% if not forloop.counter|divisibleby:2 %} flank{% endif %}">
-          <div id="search_results_{{ forloop.counter }}"><img class="loader" src="{% static "img/loader.gif" %}"></div>
-        </div>
-        {% endfor %}
+{#        {% for group in group_of_books %}#}
+{#        <div class="index_subtitle{% if not forloop.counter|divisibleby:2 %} flank{% endif %}">#}
+{#          <img class="b_left" src="{% static "img/red_line_b.png" %}" alt="" /><img class="b_center" src="{% static "img/red_line_c.png" %}" alt="" /><img class="b_right" src="{% static "img/red_line_e.png" %}" alt="" />#}
+{#          {{ group.name }}#}
+{#          <img class="b_left" src="{% static "img/red_line_b.png" %}" alt="" /><img class="b_center" src="{% static "img/red_line_c.png" %}" alt="" /><img class="b_right" src="{% static "img/red_line_e.png" %}" alt="" />#}
+{#        </div>#}
+{#        {% endfor %}#}
+{##}
+{#        {% for group in group_of_books %}#}
+{#        <div class="three_index_box{% if not forloop.counter|divisibleby:2 %} flank{% endif %}">#}
+{#          <div id="search_results_{{ forloop.counter }}"><img class="loader" src="{% static "img/loader.gif" %}"></div>#}
+{#        </div>#}
+{#        {% endfor %}#}
         
       <div class="index_bloggers">
         <img class="b_left" src="{% static "img/red_line_b.png" %}" alt="" /><img class="b_center" src="{% static "img/red_line_c.png" %}" alt="" /><img class="b_right" src="{% static "img/red_line_e.png" %}" alt="" />

@@ -58,6 +58,16 @@
             "secret":"i5081OxjUc",
             "sites":[1]
         }
+    },
+    {
+        "model": "spistresci.promotion",
+        "pk": 1,
+        "fields": {
+            "name": "Promocje Dnia",
+            "start": null,
+            "end": null,
+            "banner": "",
+            "extra": null
+        }
     }
-
 ]

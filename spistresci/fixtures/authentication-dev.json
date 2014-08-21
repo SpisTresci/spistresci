@@ -58,5 +58,24 @@
             "secret":"87MXpW2piu",
             "sites":[1]
         }
+    },
+    {
+        "model":"spistresci.promotion",
+        "pk":1,
+        "fields":{
+            "id":1,
+            "name": "Promocje Dnia"
+        }
+    },
+    {
+        "model": "spistresci.promotion",
+        "pk": 1,
+        "fields": {
+            "name": "Promocje Dnia",
+            "start": null,
+            "end": null,
+            "banner": "",
+            "extra": null
+        }
     }
 ]

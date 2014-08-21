@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from django.db import models
+from django.contrib import admin
 from decimal import Decimal
 from django.utils import timezone
 from jsonfield import JSONField
@@ -9,16 +10,28 @@ class BookFormat(models.Model):
 
     name = models.CharField(max_length=10, blank=False)
 
+    def __str__(self):
+        return self.name
+
+admin.site.register(BookFormat)
+
 
 class Bookstore(models.Model):
 
     name = models.CharField(max_length=50, blank=False)
     url = models.CharField(max_length=512L)
 
+    def __str__(self):
+        return self.name
+
+admin.site.register(Bookstore)
+
 
 class BookDescription(models.Model):
 
     description = models.TextField(blank=True)
+
+admin.site.register(BookDescription)
 
 
 class ISBN(models.Model):
@@ -28,6 +41,8 @@ class ISBN(models.Model):
     isbn10 = models.CharField(max_length=10, blank=True)
     isbn13 = models.CharField(max_length=13, blank=True)
     valid = models.BooleanField()
+
+admin.site.register(ISBN)
 
 
 class MasterAuthor(models.Model):
@@ -42,6 +57,8 @@ class MasterAuthor(models.Model):
     first_name_soundex = models.IntegerField(null=True, blank=True)
     middle_name_soundex = models.IntegerField(null=True, blank=True)
     last_name_soundex = models.IntegerField(null=True, blank=True)
+
+admin.site.register(MasterAuthor)
 
 
 class MiniAuthor(models.Model):
@@ -64,6 +81,8 @@ class MiniAuthor(models.Model):
     middle_name_soundex = models.IntegerField(null=True, blank=True)
     last_name_soundex = models.IntegerField(null=True, blank=True)
 
+admin.site.register(MiniAuthor)
+
 
 class MasterBook(models.Model):
 
@@ -73,12 +92,20 @@ class MasterBook(models.Model):
 
     authors = models.ManyToManyField(MasterAuthor)
 
+    # bestseller = models.BooleanField()
+    # new = models.BooleanField()
+
     def price_lowest(self):
         return min(mini.price for mini in self.mini_books.all())
+
+    def price_highest(self):
+        return max(mini.price for mini in self.mini_books.all())
 
     def bookstores(self):
         bookstores = set(mini.bookstore.name for mini in self.mini_books.all())
         return list(bookstores)
+
+admin.site.register(MasterBook)
 
 
 class MiniBook(models.Model):
@@ -128,6 +155,33 @@ class MiniBook(models.Model):
         self.modified = timezone.now()
         return super(MiniBook, self).save(*args, **kwargs)
 
+admin.site.register(MiniBook)
+
+
+class Promotion(models.Model):
+    PROMOTION_OF_THE_DAY = 1
+
+    name = models.CharField(max_length=512L, default='')
+    start = models.DateTimeField(null=True, blank=True)
+    end = models.DateTimeField(null=True, blank=True)
+    banner = models.CharField(max_length=512L, null=True, blank=True)
+    extra = JSONField(blank=True, null=True)
+
+    mini_books = models.ManyToManyField(
+        MiniBook,
+        null=True,
+        blank=True,
+        related_name='promotion',
+    )
+    master_books = models.ManyToManyField(
+        MasterBook,
+        null=True,
+        blank=True,
+        related_name='promotion',
+    )
+
+admin.site.register(Promotion)
+
 
 class CommandStatus(models.Model):
 
@@ -147,6 +201,8 @@ class CommandStatus(models.Model):
         if self.watch_dog + td < timezone.now():
             self.watch_dog = timezone.now()
             self.save()
+
+admin.site.register(CommandStatus)
 
 
 class BookstoreCommandStatus(models.Model):
@@ -186,3 +242,5 @@ class BookstoreCommandStatus(models.Model):
     def is_dog_fed(self):
         td = timezone.timedelta(seconds=self.WATCH_DOG_THRESHOLD)
         return self.watch_dog + td > timezone.now()
+
+admin.site.register(BookstoreCommandStatus)

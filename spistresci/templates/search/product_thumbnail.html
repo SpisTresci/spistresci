@@ -1,6 +1,6 @@
 {% load staticfiles mathfilters str_tags commontags %}
 {% with product=result %}
-          <div class="index_box{% if forloop.counter > 5 %} extra{% endif %}">
+          <div class="index_box{% if forloop.counter > 6 %} extra{% endif %}">
             <img src="{{ product.cover }}" style="width: 91px; height: 137px;" onerror="this.onerror=null;this.src='{% static "img/default_cover.png" %}'" alt=""  />
             <div class="ib_text">
               <div class="ib_text1">
@@ -18,7 +18,7 @@
                   cena od:
                 </div>
                 <div class="ib_price">
-                  {{ product.price_lowest }}<span class="ib_price2">zł</span>
+                  {{ product.price }}<span class="ib_price2">zł</span>
                 </div>
                 <div class="ib_line">
                 </div>
@@ -37,7 +37,7 @@
                   Dostępne<br />
                   formaty:
                   <div class="ibh_image_format">
-                    {{  product.formats|formats_to_readable|join:"<br />" }}
+                    {{  product.formats.all|formats_to_readable|join:"<br />" }}
                   </div>
                 </a>
               </div>
