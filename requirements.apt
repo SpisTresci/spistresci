@@ -3,6 +3,7 @@ git-core
 python-pip
 python-mysqldb
 python-dev
+python-virtualenv
 libmysqlclient-dev
 mysql-client-core-5.5
 mysql-client
@@ -13,3 +14,4 @@ libxml2-dev
 libxslt-dev
 screen
 vim
+virtualenvwrapper
