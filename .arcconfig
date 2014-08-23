@@ -13,7 +13,6 @@
   ],
 
   "unit.engine": "DjangoUnitTestEngine",
-  "unit.engine.manage_py_dir": "..",
 
   "aliases" : {
     "new-feature" : [
