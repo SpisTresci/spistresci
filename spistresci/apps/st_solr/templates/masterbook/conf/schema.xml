@@ -151,15 +151,19 @@
     <dynamicField name="*_coordinate"  type="tdouble" indexed="true"  stored="false"/>
 
 
+    <field name="price_lowest" type="text_en" indexed="true" stored="true" multiValued="false" />
+
+    <field name="bookstore" type="text_en" indexed="true" stored="true" multiValued="true" />
+
+    <field name="title" type="text_en" indexed="true" stored="true" multiValued="false" />
+
     <field name="text" type="text_en" indexed="true" stored="true" multiValued="false" />
 
     <field name="format" type="text_en" indexed="true" stored="true" multiValued="true" />
 
-    <field name="bookstore" type="text_en" indexed="true" stored="true" multiValued="true" />
+    <field name="price_highest" type="text_en" indexed="true" stored="true" multiValued="false" />
 
     <field name="title_exact" type="string" indexed="true" stored="true" multiValued="false" />
-
-    <field name="title" type="text_en" indexed="true" stored="true" multiValued="false" />
 
   </fields>
 

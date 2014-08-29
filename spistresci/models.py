@@ -6,9 +6,20 @@ from django.utils import timezone
 from jsonfield import JSONField
 
 
+class BookFormatType(models.Model):
+
+    name = models.CharField(max_length=10, blank=False)
+
+    def __str__(self):
+        return self.name
+
+admin.site.register(BookFormatType)
+
+
 class BookFormat(models.Model):
 
     name = models.CharField(max_length=10, blank=False)
+    type = models.ForeignKey(BookFormatType)
 
     def __str__(self):
         return self.name
