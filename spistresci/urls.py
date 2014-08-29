@@ -8,7 +8,8 @@ from haystack.views import SearchView
 from registration.backends.default.views import RegistrationView
 
 from spistresci.index.views import index
-from spistresci.search.view import SpisTresciSearchForm
+from spistresci.search.view import SpisTresciSearchView
+from spistresci.search.forms import SpisTresciSearchForm
 from spistresci.search.views import STSearchView, STSearchQuerySet, hide_menu, STSearchForm
 from spistresci.book.views import STBookQuerySet, STBookView, book_redirect
 from spistresci.auth.views import (logout, accounts_social_signup,
@@ -59,12 +60,21 @@ urlpatterns = patterns('',
 #TODO: check thread safe version of this
 # Without threading...
 urlpatterns += patterns('haystack.views',
-    url(r'^search/$', SearchView(form_class=SpisTresciSearchForm), name='haystack_search'),
-    # url(r'^search/$', STSearchView(), name='haystack_search'),
-    # url(r'^q/$', STSearchView(template="search/results_list.html"), name='haystack_search'),
-    # url(r'^qb/$', STSearchView(template="search/results_thumbnail_list.html"), name='haystack_search'),
-    # url(r'^qn/$', STSearchView(template="search/results_thumbnail_list.html"), name='haystack_search'),
-    # url(r'^qp/$', STSearchView(template="search/results_thumbnail_list.html"), name='haystack_search'),
+    url(
+        r'^search/$',
+        SpisTresciSearchView(
+            form_class=SpisTresciSearchForm,
+        ),
+        name='haystack_search'
+    ),
+    url(
+        r'^q/$',
+        SpisTresciSearchView(
+            template="search/results_list.html",
+            form_class=SpisTresciSearchForm,
+        ),
+        name='haystack_search',
+    ),
 
     #url(r'^accounts/login/$',  login),
     url(r'^accounts/logout/$', logout),

@@ -77,8 +77,10 @@ Zastanawiając się, czy ktokolwiek zobaczy to ogłoszenie, cierpliwie czekamy n
      </div>
      {% endif %}
      {% block menu %} {% include "menu.html" %} {% endblock menu %}
-     {% block searchbox %}{% endblock searchbox %}
-     {% block container %}{% endblock container %}
+     <form action="/search/" class="search_box" name="search_form" id="search_form">
+        {% block searchbox %}{% endblock searchbox %}
+        {% block container %}{% endblock container %}
+     </form>
      {% block footer %} {% include "footer.html" %} {% endblock footer %}
   </body>
 </html>
