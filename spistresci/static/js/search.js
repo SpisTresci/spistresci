@@ -1,56 +1,5 @@
-function collectFilters(dic){
-    $('li[class^="filter_"]').each(function(){
-        var filter_name = $(this).attr('class').split(' ').filter(function(element, index, array){return element.substring(0, 7) == 'filter_';})[0].substring(7);
-
-        if ($(this).hasClass("act")){
-            var atr = $(this).attr("data-q");
-            if (filter_name in dic){
-               dic[filter_name]+= ","+atr;
-            }else{
-               dic[filter_name]=atr;
-            }
-        }
-    });
-
-    $('input[class^="filter_"]').each(function(){
-        var filter_name = $(this).attr('class').split(' ').filter(function(element, index, array){return element.substring(0, 7) == 'filter_';})[0].substring(7);
-         if($(this).val()){
-            dic[$(this).attr("data-q")]=$(this).val()
-        }
-    });
-
-    var as = $(".sort_by.active_sort");
-    if (!as.hasClass("default")){
-        dic["orderby"]=as.attr("data-sort-type");
-    }
-    return dic;
-}
-
-function collectSearchFields(dic){
-    if ($(".index_top_bg").hasClass("advanced")){
-        $(".search_advanced input[type='text']").each(function () {
-            $(this).val($.trim($(this).val()));
-            if($(this).val().length > 0){
-                var atr_name = $(this).attr('name');
-                dic[atr_name] = $(this).val()
-                var atr_name_op = $("input[name='"+ atr_name +"_op'][default!=true]:checked").val();
-                if (atr_name_op){
-                    dic[atr_name+"_op"] = atr_name_op;
-                }
-            }
-        });
-        dic['advanced'] = true;
-
-    }else{
-        dic["q"] = $("#id_q").val();
-    }
-}
-
 function refreshLinks(){
-    var dic = {}
-    collectFilters(dic);
-    collectSearchFields(dic);
-    var link = $.param(dic);
+    var link = $('form').serialize();
     var page = $(".page_active_number").attr("data-p");
 
     if($(".page_active_number").length > 0){
@@ -157,12 +106,7 @@ function debounce(fn, delay) {
 }
 
 function rebuildResults(page){
-    var dic = {};
-    collectFilters(dic);
-    collectSearchFields(dic);
-    dic["page"] = typeof page !== 'undefined' ? page : 1;
-    var link = $.param(dic);
-
+    var link = $('form').serialize();
     loadResults(link, onResultsReady);
 }
 
