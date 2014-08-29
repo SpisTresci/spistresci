@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 # Django settings for main_service project.
 import os
+import json
+
 
 DEBUG = True
 IS_DEV = False
@@ -299,9 +301,18 @@ import shutil
 import sys
 
 if len(sys.argv) >= 2 and sys.argv[1] == 'syncdb':
-    shutil.copyfile(
-        os.path.join(SITE_ROOT, 'fixtures/authentication-dev.json'),
-        os.path.join(SITE_ROOT, '../initial_data.json')
-    )
+
+    data = []
+
+    fixtures_dir = os.path.join(SITE_ROOT, 'fixtures')
+
+    for filename in os.listdir(fixtures_dir):
+        if filename.endswith('.json.' + ENV) or filename.endswith('.json'):
+            with open(os.path.join(fixtures_dir, filename)) as f:
+                data += json.load(f)
+
+    with open(os.path.join(SITE_ROOT, '../initial_data.json'), 'w') as filename:
+        json.dump(data, filename, indent=4)
+
 
 CONNECTORS_CONFIG_DIR = os.path.join(SITE_ROOT, 'conf')

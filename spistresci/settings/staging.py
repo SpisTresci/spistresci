@@ -77,7 +77,3 @@ EMAIL_SUBJECT_PREFIX= '[SpisTresci][Staging]'
 SITE_ROOT = os.path.join(os.path.dirname(os.path.realpath(__file__)), '..')
 
 MEDIA_ROOT = '/var/www/django/uploads/'
-
-import shutil, sys
-if len(sys.argv) >=2 and sys.argv[1] == 'syncdb':
-    shutil.copyfile(os.path.join(SITE_ROOT,'fixtures/authentication-production.json'), os.path.join(SITE_ROOT,'../initial_data.json'))

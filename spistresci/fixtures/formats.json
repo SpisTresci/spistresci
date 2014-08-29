@@ -1,0 +1,63 @@
+[
+    {
+        "fields": {
+            "name": "book"
+        },
+        "model": "spistresci.bookformattype",
+        "pk": 1
+    },
+    {
+        "fields": {
+            "name": "ebook"
+        },
+        "model": "spistresci.bookformattype",
+        "pk": 2
+    },
+    {
+        "fields": {
+            "name": "audiobook"
+        },
+        "model": "spistresci.bookformattype",
+        "pk": 3
+    },
+    {
+        "fields": {
+            "name": "mobi",
+            "type": 2
+        },
+        "model": "spistresci.bookformat",
+        "pk": 1
+    },
+    {
+        "fields": {
+            "name": "epub",
+            "type": 2
+        },
+        "model": "spistresci.bookformat",
+        "pk": 2
+    },
+    {
+        "fields": {
+            "name": "pdf",
+            "type": 2
+        },
+        "model": "spistresci.bookformat",
+        "pk": 3
+    },
+    {
+        "fields": {
+            "name": "mp3",
+            "type": 3
+        },
+        "model": "spistresci.bookformat",
+        "pk": 4
+    },
+    {
+        "fields": {
+            "name": "audio cd",
+            "type": 3
+        },
+        "model": "spistresci.bookformat",
+        "pk": 5
+    }
+]
