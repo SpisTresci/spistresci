@@ -5,14 +5,7 @@
 {% block title %}Spis Treści - wyniki wyszukiwania{% endblock title %}
 {% block css %}
     <link href="{% static "css/search.css" %}" rel="stylesheet" type="text/css">
-<!--    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">-->
-
-    <style>
-    .check-with-label:checked + .label-for-check {
-      font-weight: bold;
-    }
-    </style>
-
+    <!--    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">-->
 {% endblock css %}
 
 
@@ -31,12 +24,11 @@
     <script type="text/javascript" src="{% static "js/track_form.js" %}"></script>
 
 {% endblock js %}
+
 {% block container %}
-
     {% include "search/container.html" %}
-
-
 {% endblock container %}
+
 {% block searchbox %}
-{% include "searchbox_small_panel.html" %}
+    {% include "searchbox_small_panel.html" %}
 {% endblock searchbox %}
