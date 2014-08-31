@@ -103,6 +103,20 @@ $filter_box_header_bar2_color: #ab0000;
   }
 }
 
+.label-for-check{
+  padding-top: 2px;
+  padding-left: 5px;
+  padding-right: 30px;
+  font-size: 13px;
+  cursor: pointer;
+  display: block;
+}
+
+.check-with-label:checked + .label-for-check {
+  background: #225b98 url(../img/2x.png) 165px no-repeat;
+  color: white;
+}
+
 @import "filters/price";
 @import "filters/bullet_list";
 @import "filters/multiselect_list";
