@@ -3,15 +3,13 @@ from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
 from django.views.generic import TemplateView
-from django.shortcuts import render_to_response
-from haystack.views import SearchView
 from registration.backends.default.views import RegistrationView
+from spistresci.book.views import STBookView, book_redirect
 
 from spistresci.index.views import index
 from spistresci.search.view import SpisTresciSearchView
 from spistresci.search.forms import SpisTresciSearchForm
-from spistresci.search.views import STSearchView, STSearchQuerySet, hide_menu, STSearchForm
-from spistresci.book.views import STBookQuerySet, STBookView, book_redirect
+from spistresci.search.views import hide_menu
 from spistresci.auth.views import (logout, accounts_social_signup,
         accounts_profile, MyLoginView, ProfileRemove)
 from spistresci.track.views import TrackedBookList
@@ -25,7 +23,7 @@ from dajaxice.core import dajaxice_autodiscover, dajaxice_config
 admin.autodiscover()
 dajaxice_autodiscover()
 
-book_url_re = r'book/(?P<book_id>\d+)/.*$'
+book_url_re = r'book/(?P<pk>\d+)/.*$'
 
 urlpatterns = patterns('',
      url('^$', index, name="index"),
@@ -41,7 +39,7 @@ urlpatterns = patterns('',
                            name="account_login"),
 
      url(r'^accounts/', include('registration.backends.default.urls')),
-     url(r'^%s' % (book_url_re,), STBookView(), name='book_page'),
+     url(r'^%s' % (book_url_re,), STBookView.as_view(template_name="book/index.html"), name='book_page'),
      url(r'^book-redirect/$', book_redirect, name="book_redirect"),
 #     url('^description/(?P<book_id>\w+)/$', book_description),
      url(r'^blogger/', include('spistresci.blogger.urls', namespace='blogger')),

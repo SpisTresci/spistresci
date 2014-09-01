@@ -1,6 +1,6 @@
 {% load staticfiles %}
 {% load commontags %}
-{% with book=page.object_list.0.book %}
+{% with book=object %}
 <img class="cover" src="{{ book.cover }}" alt="" onerror="this.onerror=null;this.src='{% static "img/default_cover.png" %}'" />
 {% if book.rating %}
     <div class="rating">

@@ -25,7 +25,7 @@ class STCheckboxSelectMultiple(CheckboxSelectMultiple):
         model = self.choices.queryset.model
 
         dic = {
-            'output': ['    <div class="filter_content bullet_list">'],
+            'output': ['<div class="filter_content bullet_list">'],
             'has_id': attrs and 'id' in attrs,
             'final_attrs': self.build_attrs(attrs, name=name),
             'str_values': set([force_text(v) for v in value]),

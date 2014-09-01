@@ -1,15 +1,15 @@
-{% with book=page.object_list.0.book %}
+{% with book=object %}
 <div id="title" class="title" data-book-id="{{book.id}}">
 {{ book.title }}
 </div>
 <div class="authors">
-{% for author in book.authors%}{% if forloop.first %}<a href="">{{ author }}</a>{% else %}, <a href="">{{ author }}</a>{% endif %}{% endfor %}
+{% for author in book.authors.all %}{% if forloop.first %}<a href="">{{ author }}</a>{% else %}, <a href="">{{ author }}</a>{% endif %}{% endfor %}
 </div>
 <div class="publisher">
 <span>Wydawnictwo: </span>{{ book.producent }}
 </div>
 <div class="description">
-   {{ book.description_short | safe}}
+   {{ book.mini_books.all.0.description.description | safe}}
 {%comment%}
     <span class="description">Czytaj dalej.</span>
 {%endcomment%}

@@ -1,5 +1,5 @@
 {% include "book/filter_panel.html" %}
-{% for product in page.object_list %}
-    {% include "search/records_list.html" %}
-{% endfor %}
+{#{% for product in object.mini_books.all %}#}
+    {% include "search/records_list.html" with product=object %}
+{#{% endfor %}#}
 {% include "book/comments.html" %}
