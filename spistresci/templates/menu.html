@@ -2,7 +2,7 @@
 {% load socialaccount %}
     <ul class="menu">
       {% for service in top_menu %}
-      <li{% if path == service.url%} class="act"{% endif %}>
+      <li{% if request.path == service.url%} class="act"{% endif %}>
         <a href="{{ service.url }}">
           {{ service.name }}
         </a>

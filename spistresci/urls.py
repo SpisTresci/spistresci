@@ -6,7 +6,7 @@ from django.views.generic import TemplateView
 from registration.backends.default.views import RegistrationView
 from spistresci.book.views import STBookView, book_redirect
 
-from spistresci.index.views import index
+from spistresci.index.views import HomePage
 from spistresci.search.view import SpisTresciSearchView
 from spistresci.search.forms import SpisTresciSearchForm
 from spistresci.search.views import hide_menu
@@ -26,7 +26,7 @@ dajaxice_autodiscover()
 book_url_re = r'book/(?P<pk>\d+)/.*$'
 
 urlpatterns = patterns('',
-     url('^$', index, name="index"),
+     url('^$', HomePage.as_view(), name="index"),
      url('^logout/$', logout),
      url('^hide_menu/(?P<value>\d)/$', hide_menu),
      url('^monitor/$', monitor),

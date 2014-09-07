@@ -1,51 +1,70 @@
 # -*- coding: utf-8 -*-
-from django.shortcuts import render
-from spistresci.auth.views import authorization
-from spistresci.constants import *
+
+from django.db.models import Count
+from django.views.generic.base import TemplateView
+
 from spistresci.blogger.models import BookRecommendation, BloggerProfile
-from spistresci.models import MiniBook, Bookstore, Promotion
-
-group_of_books=[{"name": u"BESTSELLERY"}, {"name": u"NOWOŚCI"},{"name":u"PROMOCJE"}]
-RECOMENDATIONS_ON_FRONTPAGE = 4
-
-def getRandomReviews():
-
-    from django.db.models import Count
-    bloggers = BloggerProfile.objects.filter(user__recommendations__status=BookRecommendation.STATUS_PUBLICATED).annotate(number_of_recs=Count('user__recommendations')).filter(number_of_recs__gt=0).order_by('?')[:RECOMENDATIONS_ON_FRONTPAGE]
-
-    dic = {"blogger_reviews":[]}
-
-    for blogger in bloggers:
-        dic["blogger_reviews"].append({"blogger": blogger, "recomendation": blogger.user.recommendations.order_by('?')[0]})
-
-    return dic
+from spistresci.models import (
+    Bookstore,
+    MasterBook,
+    MiniBook,
+    Promotion,
+)
 
 
-def index(request):
-    c = {'top_menu':getListOfTopMenuServices(request)}
-    c.update({'path':request.path})
-    authorization(request, c)
-    c['request'] = request
+class HomePage(TemplateView):
 
-    c['group_of_books']=group_of_books
+    template_name = 'index.html'
+    BOOK_LIMIT = 6
+    RECOMENDATIONS_ON_FRONTPAGE = 4
 
-    c.update(getRandomReviews())
-    c['minibooks'] = MiniBook.objects.count()
-    c['bookstores'] = Bookstore.objects.count()
+    def get_context_data(self, **kwargs):
+        context = super(HomePage, self).get_context_data(**kwargs)
 
+        context.update(self.getRandomReviews())
 
-    minis = MiniBook.objects.filter(id__in = range(10))
+        context.update({
+            'promominis': MiniBook.objects.filter(
+                promotion__id=Promotion.PROMOTION_OF_THE_DAY
+            ).order_by('?')[:self.BOOK_LIMIT],
+            'bestsellers': {
+                'mini_books': MiniBook.objects.filter(
+                    bestseller_type=MiniBook.BESTSELLER__MANUALLY_SET
+                ).all()[:self.BOOK_LIMIT],
+                'master_books': MasterBook.objects.filter(
+                    bestseller_type=MasterBook.BESTSELLER__MANUALLY_SET
+                ).all()[:self.BOOK_LIMIT]
+            },
+            'new': {
+                'mini_books': MiniBook.objects.filter(
+                    new_type=MiniBook.NEW__MANUALLY_SET
+                ).all()[:self.BOOK_LIMIT],
+                'master_books': MasterBook.objects.filter(
+                    new_type=MasterBook.NEW__MANUALLY_SET
+                ).all()[:self.BOOK_LIMIT]
+            },
+            'bookstores_count': Bookstore.objects.count(),
+            'minibooks_count': MiniBook.objects.count(),
+        })
 
-    promo_day = Promotion.objects.get(id=Promotion.PROMOTION_OF_THE_DAY)
+        return context
 
-    for mini in minis:
-        promo_day.mini_books.add(mini)
+    def getRandomReviews(self):
 
-    promominis = MiniBook.objects.filter(
-        promotion__id=Promotion.PROMOTION_OF_THE_DAY
-    ).order_by('?')[:6]
+        bloggers = BloggerProfile.objects.filter(
+            user__recommendations__status=BookRecommendation.STATUS_PUBLICATED
+        ).annotate(
+            number_of_recs=Count('user__recommendations')
+        ).filter(
+            number_of_recs__gt=0
+        ).order_by('?')[:self.RECOMENDATIONS_ON_FRONTPAGE]
 
-    c['promominis'] = promominis
+        dic = {"blogger_reviews": []}
 
+        for blogger in bloggers:
+            dic["blogger_reviews"].append({
+                "blogger": blogger,
+                "recomendation": blogger.user.recommendations.order_by('?')[0]
+            })
 
-    return render(request, 'index.html', c)
+        return dic

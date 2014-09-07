@@ -1,18 +1,25 @@
 # -*- coding: utf-8 -*-
 
+
 def getListOfTopMenuServices(request):
     list_of_services = [
-        {'name':u'Spis Treści', 'url':'/'},
-        {'name':u'eKundelek', 'url':'http://eKundelek.pl'},
-     #   {'name':u'Ranking', 'url':'#'},
-     #   {'name':u'Raporty', 'url':'#'},
+        {
+            'name': u'Spis Treści',
+            'url': '/'
+        },
+        {
+            'name': u'eKundelek',
+            'url': 'http://eKundelek.pl'
+        },
     ]
 
     if request.user.is_authenticated() and request.user.username == 'admin':
-        list_of_services.append({'name':u'Monitor', 'url':'/monitor/'})
+        list_of_services.append({
+            'name': u'Monitor',
+            'url': '/monitor/'
+        })
 
     return list_of_services
-
 
 
 supported_formats = {
