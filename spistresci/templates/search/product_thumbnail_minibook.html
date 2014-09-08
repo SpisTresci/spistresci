@@ -19,14 +19,15 @@
                 </div>
                 <div class="ib_price">
                   {{ product.price }}<span class="ib_price2">zł</span>
+                  <span class="old_price">{{ product.price_normal }}</span>
                 </div>
                 <div class="ib_line">
                 </div>
                 <div class="ib_btn track_button" data-track-form-id="{{ product.id }}">
                 </div>
-                <a href="/book/{{ product.id }}/{{ product.title | slugify}}">
+                <a href="{{ product.pp_url }}">
                     <div class="ib_btn2{% comment %}details_button{% endcomment %}">
-                        SZCZEGÓŁY
+                        SPRAWDŹ
                     </div>
                 </a>
               </div>

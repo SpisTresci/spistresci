@@ -22,7 +22,7 @@ class STCheckboxSelectMultiple(CheckboxSelectMultiple):
         if value is None: value = []
 
         # Normalize to strings
-        model = self.choices.queryset.model
+
 
         dic = {
             'output': ['<div class="filter_content bullet_list">'],
@@ -34,6 +34,7 @@ class STCheckboxSelectMultiple(CheckboxSelectMultiple):
         groups = self.kwargs.get('group_by', [])
         if groups:
             groups = groups.objects.all()
+            model = self.choices.queryset.model
 
             for i, group in enumerate(groups):
                 dic.update({
@@ -50,8 +51,11 @@ class STCheckboxSelectMultiple(CheckboxSelectMultiple):
             class gr():
                 name = "Wszystkie"
 
+            if hasattr(self.choices, 'queryset'):
+                self.choices = self.choices.queryset.model.objects.all()
+
             dic.update({
-                'new_choices': model.objects.all(),
+                'new_choices': self.choices,
                 'last': True,
                 'group': gr(),
                 'attrs': attrs,
@@ -86,7 +90,11 @@ class STCheckboxSelectMultiple(CheckboxSelectMultiple):
         )
         output.append(format_html('<ul id="sub{0}">', gr_counter))
 
-        new_choices = [(nc.id, nc.name) for nc in new_choices]
+        if isinstance(new_choices,  list):
+            new_choices = [nc for nc in new_choices]
+        else:
+            new_choices = [(nc.id, nc.name) for nc in new_choices]
+
         for i, (value, label) in enumerate(new_choices):
             # If an ID attribute was given, add a numeric index as a suffix,
             # so that the checkboxes don't all have the same ID attribute.
@@ -112,7 +120,7 @@ class STCheckboxSelectMultiple(CheckboxSelectMultiple):
             label = force_text(label)
             output.append(
                 format_html(
-                    '<li>{1}<label{0} class="label-for-check">{2}</label></li>',
+                    u'<li>{1}<label{0} class="label-for-check">{2}</label></li>',
                     label_for,
                     rendered_cb,
                     label
@@ -183,6 +191,16 @@ class SpisTresciSearchForm(ModelSearchForm):
         )
     )
     # price_range = RangeField(forms.DecimalField)
+    main_filters = forms.MultipleChoiceField(
+        widget=STCheckboxSelectMultiple,
+        choices=(
+            (1, u'Bestsellery'),
+            (2, u'Promocje'),
+            (3, u'Nowości'),
+        ),
+        required=False,
+    )
+
     bookstores = forms.ModelMultipleChoiceField(
         queryset=Bookstore.objects.all(),
         widget=STCheckboxSelectMultiple,

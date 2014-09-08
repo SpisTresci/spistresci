@@ -1,4 +1,5 @@
 <div class="filter_panel">
+    {% include 'filter/filter_section.html' with field=form.main_filters section_name='FILTRY' %}
     {% include 'filter/filter_section.html' with field=form.formats section_name='FORMATY' %}
 {#    {% include 'filter/filter_section.html' with field=form.price_range section_name='CENA' %}#}
     {% include 'filter/filter_section.html' with field=form.bookstores section_name='SERWISY' %}

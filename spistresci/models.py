@@ -95,16 +95,51 @@ class MiniAuthor(models.Model):
 admin.site.register(MiniAuthor)
 
 
-class MasterBook(models.Model):
+class BaseBook(models.Model):
+
+    class Meta:
+        abstract = True
 
     title = models.CharField(max_length=512L, blank=True)
     cover = models.CharField(max_length=512L, blank=True)
     formats = models.ManyToManyField(BookFormat)
 
-    authors = models.ManyToManyField(MasterAuthor)
+    BESTSELLER__MANUALLY_SET = 1
+    BESTSELLER__OF_ALL_TIME = 2
+    BESTSELLER__OF_THE_DAY = 3
+    BESTSELLER__OF_THE_WEEK = 4
 
-    # bestseller = models.BooleanField()
-    # new = models.BooleanField()
+    BESTSELLER__TYPE_CHOICES = (
+        (BESTSELLER__MANUALLY_SET, u'Wybrane'),
+        (BESTSELLER__OF_ALL_TIME, u'Wszechczasów'),
+        (BESTSELLER__OF_THE_DAY, u'Dnia'),
+        (BESTSELLER__OF_THE_WEEK, u'Tygodnia'),
+    )
+
+    bestseller_type = models.IntegerField(
+        choices=BESTSELLER__TYPE_CHOICES,
+        null=True,
+        blank=True,
+    )
+
+    NEW__MANUALLY_SET = 1
+    NEW__IN_FORMAT = 2
+
+    NEW__TYPE_CHOICES = (
+        (NEW__MANUALLY_SET, u'Wybrane'),
+        (NEW__IN_FORMAT, u'W formacie'),
+    )
+
+    new_type = models.IntegerField(
+        choices=NEW__TYPE_CHOICES,
+        null=True,
+        blank=True,
+    )
+
+
+class MasterBook(BaseBook):
+
+    authors = models.ManyToManyField(MasterAuthor, null=True, blank=True)
 
     def price_lowest(self):
         return min(mini.price for mini in self.mini_books.all())
@@ -119,14 +154,13 @@ class MasterBook(models.Model):
 admin.site.register(MasterBook)
 
 
-class MiniBook(models.Model):
+class MiniBook(BaseBook):
 
     class Meta:
         unique_together = (("external_id", "bookstore"),)
 
     external_id = models.IntegerField()
-    title = models.CharField(max_length=512L, default='')
-    cover = models.CharField(max_length=512L, default='')
+
     price = models.DecimalField(
         max_digits=8,
         decimal_places=2,
@@ -155,8 +189,6 @@ class MiniBook(models.Model):
 
     authors = models.ManyToManyField(MiniAuthor, null=True, blank=True)
     isbns = models.ManyToManyField(ISBN, null=True, blank=True)
-    formats = models.ManyToManyField(BookFormat)
-
     extra = JSONField()
 
     def save(self, *args, **kwargs):

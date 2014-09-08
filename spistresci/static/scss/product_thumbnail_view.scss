@@ -48,7 +48,11 @@ $book-box-width: 300px;
   position:absolute;
   top:53px;
   left:0px;
+  .group_promotion &{
+    top: 73px;
+  }
 }
+
 .ib_text_pos a{
   text-decoration:none !important;
 }
@@ -56,6 +60,9 @@ $book-box-width: 300px;
   color:#225b98;
   font-weight:bold;
   cursor:default;
+  .group_promotion &{
+    display: none;
+  }
 }
 .ib_price{
   font-size:28px;
@@ -68,6 +75,20 @@ $book-box-width: 300px;
   font-size:12px;
   cursor:default;
 }
+
+.old_price{
+  @extend .strikethrough;
+  font-size: 18px;
+  display: none;
+  .group_promotion &{
+    display: inline;
+  }
+}
+
+.old_price:before{
+  @extend .strikethrough:before
+}
+
 .ib_line{
   width:146px;
   margin-bottom:1px;
