@@ -49,13 +49,12 @@ Zastanawiając się, czy ktokolwiek zobaczy to ogłoszenie, cierpliwie czekamy n
     <link href="{% static "css/style.css" %}" rel="stylesheet" type="text/css">
     {% block css %}{% endblock css %}
 
-
-    <!-- TODO: add ofline version of jQuery -->
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="{% static "js/jquery.min.js" %}"></script>
+    <script type="text/javascript" src="{% static "js/jquery-ui.min.js" %}"></script>
     <script type="text/javascript" src="{% static "js/all.js" %}"></script>
+    <script type="text/javascript" src="{% static "js/cookiesEU-latest.min.js" %}"></script>
     {% include "snippets/google_analytics.html" %}
-    <script type="text/javascript" src="http://ciasteczka.eu/cookiesEU-latest.min.js"></script>
+
     <script type="text/javascript">
       $(function(){jQuery.fn.cookiesEU({parent: $('.footer_footer'), position: 'bottom', auto_accept: false});});
     </script>
