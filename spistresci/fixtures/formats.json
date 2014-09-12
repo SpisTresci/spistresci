@@ -22,15 +22,15 @@
     },
     {
         "fields": {
-            "name": "mobi",
-            "type": 2
+            "name": "ks",
+            "type": 1
         },
         "model": "spistresci.bookformat",
         "pk": 1
     },
     {
         "fields": {
-            "name": "epub",
+            "name": "mobi",
             "type": 2
         },
         "model": "spistresci.bookformat",
@@ -38,7 +38,7 @@
     },
     {
         "fields": {
-            "name": "pdf",
+            "name": "epub",
             "type": 2
         },
         "model": "spistresci.bookformat",
@@ -46,11 +46,19 @@
     },
     {
         "fields": {
+            "name": "pdf",
+            "type": 2
+        },
+        "model": "spistresci.bookformat",
+        "pk": 4
+    },
+    {
+        "fields": {
             "name": "mp3",
             "type": 3
         },
         "model": "spistresci.bookformat",
-        "pk": 4
+        "pk": 5
     },
     {
         "fields": {
@@ -58,6 +66,6 @@
             "type": 3
         },
         "model": "spistresci.bookformat",
-        "pk": 5
+        "pk": 6
     }
 ]

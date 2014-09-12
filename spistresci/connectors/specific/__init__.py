@@ -45,7 +45,7 @@ from CzeskieKlimaty import CzeskieKlimaty
 # from WolneEbooki import WolneEbooki
 # from WolneLektury import WolneLektury
 # from WolneLektury import WolneLektury
-# from Wydaje import Wydaje
+from Wydaje import Wydaje
 # from Zantes import Zantes
 # from ZielonaSowa import ZielonaSowa
 # from Zinamon import Zinamon
