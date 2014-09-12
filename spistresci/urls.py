@@ -23,7 +23,7 @@ from dajaxice.core import dajaxice_autodiscover, dajaxice_config
 admin.autodiscover()
 dajaxice_autodiscover()
 
-book_url_re = r'book/(?P<pk>\d+)/.*$'
+book_url_re = r'book/(?P<pk>\d+)/(?P<title>.*)$'
 
 urlpatterns = patterns('',
      url('^$', HomePage.as_view(), name="index"),

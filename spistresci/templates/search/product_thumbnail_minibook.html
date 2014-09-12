@@ -4,7 +4,7 @@
             <img src="{{ product.cover }}" style="width: 91px; height: 137px;" onerror="this.onerror=null;this.src='{% static "img/default_cover.png" %}'" alt=""  />
             <div class="ib_text">
               <div class="ib_text1">
-                <a href="/book/{{ product.id }}/{{ product.title | slugify}}" title="{{ product.title }}">{{ product.title|truncatewords_by_chars:40 }}</a>
+                <a href="{% url "book_page" pk=product.pk title=product.title|slugify %}" title="{{ product.title }}">{{ product.title }}</a>
               </div>
               <div class="ib_text2 s_author">
                 {% for author in product.name %}
@@ -25,7 +25,7 @@
                 </div>
                 <div class="ib_btn track_button" data-track-form-id="{{ product.id }}">
                 </div>
-                <a href="{{ product.pp_url }}">
+                <a href="{% url "book_page" pk=product.pk title=product.title|slugify %}" title="{{ product.title }}">
                     <div class="ib_btn2{% comment %}details_button{% endcomment %}">
                         SPRAWDŹ
                     </div>
@@ -34,7 +34,7 @@
             </div>
             <div class="index_box_h">
               <div class="ibh_image">
-                <a href="/book/{{ product.id }}/{{ product.title | slugify}}" title="{{ product.title }}">
+                <a href="{% url "book_page" pk=product.pk title=product.title|slugify %}" title="{{ product.title }}">
                   Dostępne<br />
                   formaty:
                   <div class="ibh_image_format">

@@ -10,7 +10,7 @@ class BookFormatType(models.Model):
 
     name = models.CharField(max_length=10, blank=False)
 
-    def __str__(self):
+    def __unicode__(self):
         return self.name
 
 admin.site.register(BookFormatType)
@@ -21,7 +21,7 @@ class BookFormat(models.Model):
     name = models.CharField(max_length=10, blank=False)
     type = models.ForeignKey(BookFormatType)
 
-    def __str__(self):
+    def __unicode__(self):
         return self.name
 
 admin.site.register(BookFormat)
@@ -32,7 +32,7 @@ class Bookstore(models.Model):
     name = models.CharField(max_length=50, blank=False)
     url = models.CharField(max_length=512L)
 
-    def __str__(self):
+    def __unicode__(self):
         return self.name
 
 admin.site.register(Bookstore)
@@ -41,6 +41,9 @@ admin.site.register(Bookstore)
 class BookDescription(models.Model):
 
     description = models.TextField(blank=True)
+
+    def __unicode__(self):
+        return self.description[:100]
 
 admin.site.register(BookDescription)
 
@@ -52,6 +55,9 @@ class ISBN(models.Model):
     isbn10 = models.CharField(max_length=10, blank=True)
     isbn13 = models.CharField(max_length=13, blank=True)
     valid = models.BooleanField()
+
+    def __unicode__(self):
+        return self.core
 
 admin.site.register(ISBN)
 
@@ -68,6 +74,9 @@ class MasterAuthor(models.Model):
     first_name_soundex = models.IntegerField(null=True, blank=True)
     middle_name_soundex = models.IntegerField(null=True, blank=True)
     last_name_soundex = models.IntegerField(null=True, blank=True)
+
+    def __unicode__(self):
+        return self.name
 
 admin.site.register(MasterAuthor)
 
@@ -91,6 +100,10 @@ class MiniAuthor(models.Model):
     first_name_soundex = models.IntegerField(null=True, blank=True)
     middle_name_soundex = models.IntegerField(null=True, blank=True)
     last_name_soundex = models.IntegerField(null=True, blank=True)
+
+    def __unicode__(self):
+        return self.name
+
 
 admin.site.register(MiniAuthor)
 
@@ -136,6 +149,8 @@ class BaseBook(models.Model):
         blank=True,
     )
 
+    def __unicode__(self):
+        return self.title
 
 class MasterBook(BaseBook):
 
@@ -198,6 +213,7 @@ class MiniBook(BaseBook):
         self.modified = timezone.now()
         return super(MiniBook, self).save(*args, **kwargs)
 
+
 admin.site.register(MiniBook)
 
 
@@ -223,6 +239,9 @@ class Promotion(models.Model):
         related_name='promotion',
     )
 
+    def __unicode__(self):
+        return self.name
+
 admin.site.register(Promotion)
 
 
@@ -244,6 +263,10 @@ class CommandStatus(models.Model):
         if self.watch_dog + td < timezone.now():
             self.watch_dog = timezone.now()
             self.save()
+
+    def __unicode__(self):
+        return str(self.start) + ' - ' + str(self.end)
+
 
 admin.site.register(CommandStatus)
 
@@ -285,5 +308,8 @@ class BookstoreCommandStatus(models.Model):
     def is_dog_fed(self):
         td = timezone.timedelta(seconds=self.WATCH_DOG_THRESHOLD)
         return self.watch_dog + td > timezone.now()
+
+    def __unicode__(self):
+        return str(self.start) + ' - ' + str(self.end)
 
 admin.site.register(BookstoreCommandStatus)

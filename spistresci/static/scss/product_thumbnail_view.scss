@@ -22,29 +22,33 @@ $book-box-width: 300px;
 }
 .ib_text1{
   width:145px;
+  height: 40px;
+
+  a{
+    color:#464646;
+    font-weight:bold;
+    text-decoration:none;
+    font-size:14px;
+    line-height:16px;
+  }
+  a:hover{
+    color:#ab0000;
+    text-decoration:underline;
+  }
 }
-.ib_text1 a{
-  color:#464646;
-  font-weight:bold;
-  text-decoration:none;
-  font-size:14px;
-  line-height:16px;
-}
-.ib_text1 a:hover{
-  color:#ab0000;
-  text-decoration:underline;
-}
+
 .ib_text2{
   font-size:12px;
-}
-.ib_text2 a{
-  color:#464646;
-  text-decoration:underline;
-}
-.ib_text2 a:hover{
-  color:#ab0000;
+  a{
+    color:#464646;
+    text-decoration:underline;
+  }
+  a:hover{
+     color:#ab0000;
+  }
 }
 .ib_text_pos{
+
   position:absolute;
   top:53px;
   left:0px;
