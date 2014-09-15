@@ -45,3 +45,7 @@ def formats_to_readable(value):
     ]
 
     return formats
+
+@register.filter
+def wrap_each(value_list,  arg):
+    return [arg.replace("%s", unicode(value)) for value in value_list]

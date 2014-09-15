@@ -7,11 +7,9 @@
                 <a href="{% url "book_page" pk=product.pk title=product.title|slugify %}" title="{{ product.title }}">{{ product.title }}</a>
               </div>
               <div class="ib_text2 s_author">
-                {% for author in product.name %}
-                    {% if forloop.first %}
-                        <a href="/search/?q={{ author }}">{{ author }}</a>{% else %}, <a href="/search/?q={{ author }}">{{ author }}</a>
-                    {% endif %}
-                {% endfor %}
+              {% autoescape off %}
+                {{ product.authors.all|wrap_each:'<a href="/search/?q=%s">%s</a>'|join:', ' }}
+              {% endautoescape %}
               </div>
               <div class="ib_text_pos">
                 <div class="ib_text3">
