@@ -4,11 +4,13 @@
 *.swo
 *.swp
 .sass-cache
-settings/local.py
 uploads/*
 logs
 log
-static/css/
-solr/*
 initial_data.json
 /.vagrant/
+.idea/
+backup/
+spistresci/solr/
+spistresci/static/css/
+spistresci/settings/local.py
