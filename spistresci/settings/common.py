@@ -302,7 +302,7 @@ GOOGLE_ANALYTICS_ID = 'UA-45133188-1'
 import shutil
 import sys
 
-if len(sys.argv) >= 2 and sys.argv[1] == 'syncdb':
+if len(sys.argv) >= 2 and sys.argv[1] in ['syncdb', 'test']:
 
     data = []
 

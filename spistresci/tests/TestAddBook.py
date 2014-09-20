@@ -6,6 +6,7 @@ from spistresci.model_controler import add_MiniBook
 from spistresci.models import (
     Bookstore,
     BookFormat,
+    BookFormatType,
     MiniAuthor,
     MiniBook,
 )
@@ -216,41 +217,78 @@ class TestAddBook(TestCase):
 
         book_1 = add_MiniBook(self.test_bookstore_1, book_dict_1)
         self.assertEquals(book_1.formats.count(), 0)
-        self.assertEquals(BookFormat.objects.count(), 0)
 
         book_dict_1['formats'] = []
         book_1 = add_MiniBook(self.test_bookstore_1, book_dict_1)
         self.assertEquals(book_1.formats.count(), 0)
-        self.assertEquals(BookFormat.objects.count(), 0)
 
-    def test_update_of_format(self):
+    def test_update_of_new_format(self):
+
+        book_format_name = 'testf'
+
+        self.assertRaises(
+            BookFormat.DoesNotExist,
+            BookFormat.objects.get,
+            name=book_format_name,
+        )
+
+        number_of_formats = BookFormat.objects.count()
+
+        ebook = BookFormatType.objects.get(name='ebook')
 
         book_dict_1 = {
             'external_id': u'16',
-            'formats': [{'name': 'epub'}],
+            'formats': [
+                {
+                    'name': book_format_name,
+                    'type': ebook
+                },
+            ],
         }
 
         book_1 = add_MiniBook(self.test_bookstore_1, book_dict_1)
-        self.assertEquals(BookFormat.objects.count(), 1)
+        self.assertEquals(book_1.formats.count(), 1)
+        self.assertEquals(BookFormat.objects.count(), number_of_formats + 1)
 
-        book_dict_1['formats'].append({'name': 'mobi'})
+    def test_update_of_existing_format(self):
+
+        book_format_name = 'mobi'
+        BookFormat.objects.get(name=book_format_name)
+        number_of_formats = BookFormat.objects.count()
+        ebook = BookFormatType.objects.get(name='ebook')
+
+        book_dict_1 = {
+            'external_id': u'16',
+            'formats': [
+                {
+                    'name': book_format_name,
+                    'type': ebook
+                },
+            ],
+        }
+
         book_1 = add_MiniBook(self.test_bookstore_1, book_dict_1)
-        self.assertEquals(BookFormat.objects.count(), 2)
+        self.assertEquals(book_1.formats.count(), 1)
+        self.assertEquals(BookFormat.objects.count(), number_of_formats)
 
     def test_two_new_formats_instead_one_old_format(self):
 
+        ebook = BookFormatType.objects.get(name='ebook')
+
         book_dict_1 = {
             'external_id': u'16',
-            'formats': [{'name': 'epub'}],
+            'formats': [{'name': 'epub', 'type': ebook}],
         }
 
-        add_MiniBook(self.test_bookstore_1, book_dict_1)
-        self.assertEquals(BookFormat.objects.count(), 1)
+        book_1 = add_MiniBook(self.test_bookstore_1, book_dict_1)
+        self.assertEquals(book_1.formats.count(), 1)
 
-        book_dict_1['formats'] = [{'name': 'mobi'}, {'name': 'pdf'}]
+        book_dict_1['formats'] = [
+            {'name': 'mobi', 'type': ebook},
+            {'name': 'pdf', 'type': ebook}
+        ]
         book_1 = add_MiniBook(self.test_bookstore_1, book_dict_1)
         self.assertEquals(book_1.formats.count(), 2)
-        self.assertEquals(BookFormat.objects.count(), 3)
 
     def test_add_author(self):
 
