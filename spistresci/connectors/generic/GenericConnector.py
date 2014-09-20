@@ -30,7 +30,7 @@ from django.conf import settings
 
 #Base = SqlWrapper.getBaseClass()
 from spistresci.model_controler import add_MiniBook
-from spistresci.models import Bookstore, BookstoreCommandStatus
+from spistresci.models import Bookstore, BookstoreCommandStatus, MiniBook
 
 
 class InvalidContext(RuntimeError):
@@ -330,6 +330,22 @@ class GenericConnector(GenericBase, DataValidator):
 
     def after_parse(self):
         pass
+
+    def analyze(self):
+
+        last_parse_cmd = BookstoreCommandStatus.get_last_parse_command(
+            self.bookstore
+        )
+
+        to_analyze = MiniBook.objects.filter(
+            created_with_command=last_parse_cmd
+        )
+
+        print "Wszystkich MiniBooków: " + str(MiniBook.objects.count())
+        print "Do przeanalizowania: " + str(len(to_analyze))
+
+        for mini_book in to_analyze:
+            candidates = mini_book.getCandidatesByTitle()
 
     def create_pp_url(self, book):
         if self.pp_url:

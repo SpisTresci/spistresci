@@ -81,6 +81,13 @@ class Command(BaseCommand):
                     cmd_status,
                 )
 
+                self.run_connector_method(
+                    connector,
+                    connector.analyze,
+                    BookstoreCommandStatus.TYPE_ANALYZE,
+                    cmd_status,
+                )
+
             except:
                 self.logger.exception(
                     'Update of connector %s FAILED' % connector.name
