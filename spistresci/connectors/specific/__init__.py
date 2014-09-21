@@ -32,7 +32,7 @@ from Gandalf import Gandalf
 # from OnePress import OnePress
 # from Pokatne import Pokatne
 # from Polona import Polona
-# from Publio import Publio
+from Publio import Publio
 # from RW2010 import RW2010
 # from Selkar import Selkar
 # from Sensus import Sensus

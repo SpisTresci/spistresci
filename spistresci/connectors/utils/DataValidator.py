@@ -235,7 +235,8 @@ class DataValidator(object):
             dic[tag_name] = new_list_of_person_dicts
 
     def validateDescription(self, dic, id, title):
-        dic['description'] = {'description': dic['description']}
+        if 'description' in dic:
+            dic['description'] = {'description': dic['description']}
 
     def isName(self, word):
         return word in self.list_of_names

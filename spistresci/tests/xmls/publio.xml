@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<products>
+  <product>
+    <id>97149</id>
+    <title><![CDATA[Masa o kobietach polskiej mafii]]></title>
+    <authors><![CDATA[Jarosław „Masa” Sokołowski]]></authors>
+    <formats><![CDATA[mobi, epub]]></formats>
+    <protectionType><![CDATA[LEGIMI]]></protectionType>
+    <price><![CDATA[26.59]]></price>
+    <productUrl><![CDATA[http://www.publio.pl/masa-o-kobietach-polskiej-mafii-jaroslaw-masa-sokolowski,p97149.html]]></productUrl>
+    <imageUrl><![CDATA[http://www.publio.pl/files/product/medium/21/40/3c/97149-masa-o-kobietach-polskiej-mafii-jaroslaw-masa-sokolowski-1.jpg]]></imageUrl>
+    <isbns><![CDATA[978-837-961-694-7]]></isbns>
+    <company><![CDATA[Prószyński Media]]></company>
+    <categories>
+      <category><![CDATA[Publicystyka, literatura faktu]]></category>
+      <category><![CDATA[Wywiady]]></category>
+    </categories>
+  </product>
+  <product>
+    <id>90659</id>
+    <title><![CDATA[Inferno]]></title>
+    <authors><![CDATA[Dan Brown]]></authors>
+    <formats><![CDATA[mobi, epub]]></formats>
+    <protectionType><![CDATA[LEGIMI]]></protectionType>
+    <price><![CDATA[33.15]]></price>
+    <productUrl><![CDATA[http://www.publio.pl/inferno-dan-brown,p90659.html]]></productUrl>
+    <imageUrl><![CDATA[http://www.publio.pl/files/product/medium/35/03/57/90659-inferno-dan-brown-1.jpg]]></imageUrl>
+    <isbns><![CDATA[9788375088526]]></isbns>
+    <company><![CDATA[Wydawnictwo Sonia Draga]]></company>
+    <categories>
+      <category><![CDATA[Powieść, opowiadanie]]></category>
+      <category><![CDATA[Kryminał, thriller]]></category>
+      <category><![CDATA[Thriller]]></category>
+      <category><![CDATA[Thriller religijny]]></category>
+      <category><![CDATA[Thriller spiskowy]]></category>
+    </categories>
+  </product>
+  <product>
+    <id>87901</id>
+    <title><![CDATA[Anioły i demony]]></title>
+    <authors><![CDATA[Dan Brown]]></authors>
+    <formats><![CDATA[mobi, epub]]></formats>
+    <protectionType><![CDATA[LEGIMI]]></protectionType>
+    <price><![CDATA[32.30]]></price>
+    <productUrl><![CDATA[http://www.publio.pl/anioly-i-demony-dan-brown,p87901.html]]></productUrl>
+    <imageUrl><![CDATA[http://www.publio.pl/files/product/medium/eb/a4/15/87901-anioly-i-demony-dan-brown-1.jpg]]></imageUrl>
+    <isbns><![CDATA[9788375088045]]></isbns>
+    <company><![CDATA[Wydawnictwo Sonia Draga]]></company>
+    <categories>
+      <category><![CDATA[Powieść, opowiadanie]]></category>
+      <category><![CDATA[Kryminał, thriller]]></category>
+      <category><![CDATA[Thriller]]></category>
+      <category><![CDATA[Thriller religijny]]></category>
+      <category><![CDATA[Thriller spiskowy]]></category>
+    </categories>
+  </product>
+</products>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<offers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1">
+  <group name="books">
+    <o id="480434" url="http://www.gandalf.com.pl/e/masa-o-kobietach-polskiej-mafii-epub/" price="23.23" avail="1">
+      <cat>Ebooki, sensacja i literatura grozy</cat>
+      <name><![CDATA[MASA o kobietach polskiej mafii]]></name>
+      <imgs>
+        <main url="http://www.gandalf.com.pl/o/masa-o-kobietach-polskiej-mafii-epub,pd,480434.jpg"/>
+      </imgs>
+      <attrs>
+        <a name="Autor"><![CDATA[Artur Górski]]></a>
+        <a name="EAN"><![CDATA[]]></a>
+        <a name="ISBN"><![CDATA[978-83-7961-694-7]]></a>
+        <a name="Wydawnictwo"><![CDATA[Prószyński Media]]></a>
+        <a name="Oprawa"><![CDATA[]]></a>
+        <a name="Format"><![CDATA[mobi,epub]]></a>
+      </attrs>
+    </o>
+    <o id="449514" url="http://www.gandalf.com.pl/e/inferno-epub/" price="28.95" avail="1">
+      <cat>Ebooki, sensacja i literatura grozy</cat>
+      <name><![CDATA[Inferno]]></name>
+      <imgs>
+        <main url="http://www.gandalf.com.pl/o/inferno-epub,pd,449514.jpg"/>
+      </imgs>
+      <attrs>
+        <a name="Autor"><![CDATA[Dan Brown]]></a>
+        <a name="EAN"><![CDATA[]]></a>
+        <a name="ISBN"><![CDATA[978-83-7508-852-6]]></a>
+        <a name="Wydawnictwo"><![CDATA[Sonia Draga]]></a>
+        <a name="Oprawa"><![CDATA[]]></a>
+        <a name="Format"><![CDATA[mobi,epub]]></a>
+      </attrs>
+    </o>
+    <o id="432473" url="http://www.gandalf.com.pl/e/anioly-i-demony-epub/" price="28.22" avail="1">
+      <cat>Ebooki, sensacja i literatura grozy</cat>
+      <name><![CDATA[Anioły i demony]]></name>
+      <imgs>
+        <main url="http://www.gandalf.com.pl/o/anioly-i-demony-epub,pd,432473.jpg"/>
+      </imgs>
+      <attrs>
+        <a name="Autor"><![CDATA[Dan Brown]]></a>
+        <a name="EAN"><![CDATA[]]></a>
+        <a name="ISBN"><![CDATA[978-83-7508-804-5]]></a>
+        <a name="Wydawnictwo"><![CDATA[Sonia Draga]]></a>
+        <a name="Oprawa"><![CDATA[]]></a>
+        <a name="Format"><![CDATA[mobi,epub]]></a>
+      </attrs>
+    </o>
+    <o id="300395" url="http://www.gandalf.com.pl/e/tlumaczka-epub/" price="24.22" avail="1">
+      <cat>Ebooki, literatura piękna</cat>
+      <name><![CDATA[Tłumaczka]]></name>
+      <imgs>
+        <main url="http://www.gandalf.com.pl/o/tlumaczka-epub,pd,300395.jpg"/>
+      </imgs>
+      <attrs>
+        <a name="Autor"><![CDATA[Leila Aboulela]]></a>
+        <a name="EAN"><![CDATA[]]></a>
+        <a name="ISBN"><![CDATA[]]></a>
+        <a name="Wydawnictwo"><![CDATA[Remi]]></a>
+        <a name="Oprawa"><![CDATA[]]></a>
+        <a name="Format"><![CDATA[epub]]></a>
+      </attrs>
+    </o>
+  </group>
+</offers>
