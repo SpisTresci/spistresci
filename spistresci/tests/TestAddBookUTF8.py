@@ -3,6 +3,8 @@ from django.test import TestCase
 from spistresci.model_controler import add_MiniBook
 from spistresci.models import (
     Bookstore,
+    BookstoreCommandStatus,
+    CommandStatus,
     MiniAuthor,
     MiniBook,
 )
@@ -16,11 +18,20 @@ class AddBookUTF8Test(TestCase):
     """
 
     def setUp(self):
+        cmd_status = CommandStatus()
+        cmd_status.save()
 
         self.test_bookstore_utf8_1 = Bookstore.objects.create(
             name=u'Żółty żółw',
             url=u'http://żółty-żółw.pl/',
         )
+
+        test_bookstore_1_cmd_status = BookstoreCommandStatus(
+            cmd_status=cmd_status,
+            bookstore=self.test_bookstore_utf8_1,
+            type=BookstoreCommandStatus.TYPE_PARSE,
+        )
+        test_bookstore_1_cmd_status.save()
 
     def test_title_in_utf8(self):
 

@@ -5,8 +5,10 @@ from django.utils.unittest.case import skip
 from spistresci.model_controler import add_MiniBook
 from spistresci.models import (
     Bookstore,
+    BookstoreCommandStatus,
     BookFormat,
     BookFormatType,
+    CommandStatus,
     MiniAuthor,
     MiniBook,
 )
@@ -43,16 +45,31 @@ class TestAddBook(TestCase):
     #     self.assertEqual(1 + 1, 2)
 
     def setUp(self):
+        cmd_status = CommandStatus()
+        cmd_status.save()
 
         self.test_bookstore_1 = Bookstore.objects.create(
             name='TestowySklep',
             url='http://testowysklep.pl/',
         )
+        test_bookstore_1_cmd_status = BookstoreCommandStatus(
+            cmd_status=cmd_status,
+            bookstore=self.test_bookstore_1,
+            type=BookstoreCommandStatus.TYPE_PARSE,
+        )
+        test_bookstore_1_cmd_status.save()
 
         self.test_bookstore_2 = Bookstore.objects.create(
             name='TestowySklep2',
             url='http://testowysklep2.pl/',
         )
+        test_bookstore_2_cmd_status = BookstoreCommandStatus(
+            cmd_status=cmd_status,
+            bookstore=self.test_bookstore_2,
+            type=BookstoreCommandStatus.TYPE_PARSE,
+        )
+        test_bookstore_2_cmd_status.save()
+
 
     def test_add_empty_book_to_empty_db(self):
         """
