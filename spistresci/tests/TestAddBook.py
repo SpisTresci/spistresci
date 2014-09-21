@@ -204,7 +204,6 @@ class TestAddBook(TestCase):
         self.assertEqual(book_1, book_2)
         self.assertEqual(book_2.title, 'new title')
 
-
     def test_update_of_external_id(self):
 
         book = {

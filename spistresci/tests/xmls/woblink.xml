@@ -14,22 +14,16 @@
         <a name="Format">EPUB,MOBI</a>
       </attrs>
     </o>
-    <o id="5234" price="20.90" url="http://woblink.com/e-book,pozostale-pantalyk-marian-pilot,5234" fragment="http://woblink.com/user/fragment/versionId/10322/type/epub" avail="1">
-      <cat><![CDATA[Pozostałe]]></cat>
-      <name><![CDATA[Pantałyk]]></name>
+    <o id="10322" price="24.99" url="http://woblink.com/e-book,kryminal-i-sensacja-inferno-dan-brown,10322" fragment="http://woblink.com/user/fragment/versionId/20428/type/epub" avail="1">
+      <cat><![CDATA[Kryminał i sensacja]]></cat>
+      <name><![CDATA[Inferno]]></name>
       <imgs>
-        <main url="http://woblink.com/storable/pub_photos/110114-pantalyk.jpg"/>
+        <main url="http://woblink.com/storable/pub_photos/257957-inferno.jpg"/>
       </imgs>
-      <desc><![CDATA["Tom mistrzowskich opowiadań laureata ubiegłorocznej nagrody Nike. Trzynaście znakomitych tekstów składających się na przewrotną sagę rodu Dudów. Precyzja realistycznego opisu splata się tutaj z elementami fantastycznymi nawiązującymi do ludowej mitologii i duchowości, a umiejętnie odwzorowana gwara tworzy uniwersalny, lecz po gombrowiczowsku odkształcony, obraz wsi.
-
-""Pantałyk"" został wydany po raz pierwszy przez wyd. Czytelnik w 1970 roku. Proza trzydziestoczteroletniego wtedy autora zaskakuje dojrzałością, a z perspektywy czterech dekad od wydania czyta się ten zbiór jako wyjątkowo ciekawy przejaw realizmu magicznego.
-
-Marian Pilot (ur.1936), powieściopisarz i nowelista, autor słuchowisk, dziennikarz i scenarzysta filmowy, działacz ludowy, zaliczany jest do twórców ""nurtu wiejskiego"" choć z silną - gombrowiczowską -  skłonnością do groteskowej deformacji, turpistycznej nadekspresji;
-Laureat Nagrody NIKE za wydaną w WL-u powieść  ""Pióropusz""."
-]]></desc>
+      <desc><![CDATA[Światowej sławy specjalista od symboli, Robert Langdon budzi się na szpitalnym łóżku w zupełnie obcym miejscu. Nie pamięta, jak i dlaczego znalazł się w szpitalu. Nie potrafi też wyjaśnić, w jaki sposób wszedł w posiadanie tajemniczego przedmiotu, który znajduje we własnej marynarce. Czasu na rozmyślania nie ma niestety zbyt wiele. Ledwie na dobre odzyskuje przytomność, ktoś próbuje go zabić. W towarzystwie młodej lekarki Sienny Brooks Langdon opuszcza w pośpiechu szpital. Ścigany przez nieznanych wrogów przemierza uliczki Florencji, próbując odkryć powody niespodziewanego pościgu. Podąża śladem tajemniczych wskazówek ukrytych w słynnym poemacie Dantego… Czy jego wiedza o tajemnych sekretach, które skrywa historyczna fasada miasta wystarczy, by umknąć nieznanym oprawcom? Czy zdoła rozszyfrować zagadkę i uratować świat przed śmiertelnym zagrożeniem?]]></desc>
       <attrs>
-        <a name="ISBN"><![CDATA[9788308049044]]></a>
-        <a name="Wydawnictwo"><![CDATA[Wydawnictwo Literackie]]></a>
+        <a name="ISBN"><![CDATA[9788375088526]]></a>
+        <a name="Wydawnictwo"><![CDATA[Sonia Draga]]></a>
         <a name="Format">EPUB,MOBI</a>
       </attrs>
     </o>
