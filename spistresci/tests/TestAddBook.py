@@ -243,11 +243,8 @@ class TestAddBook(TestCase):
 
         book_format_name = 'testf'
 
-        self.assertRaises(
-            BookFormat.DoesNotExist,
-            BookFormat.objects.get,
-            name=book_format_name,
-        )
+        with self.assertRaises(BookFormat.DoesNotExist):
+            BookFormat.objects.get(name=book_format_name)
 
         number_of_formats = BookFormat.objects.count()
 

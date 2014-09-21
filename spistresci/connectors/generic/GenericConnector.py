@@ -598,11 +598,7 @@ class GenericConnector(GenericBase, DataValidator):
             return (session.query(ClassName).filter_by(**{param_name:d[param_name]}).first()) if d.get(param_name) != None else None
 
     def new_add_record(self, d):
-
-        from spistresci.models import MiniBook, Bookstore
-        bookstore = Bookstore.objects.get(name=self.name)
-
-        add_MiniBook(bookstore, d)
+        add_MiniBook(self.bookstore, d)
 
     def add_record(self, d):
         #TODO: made this thread safe

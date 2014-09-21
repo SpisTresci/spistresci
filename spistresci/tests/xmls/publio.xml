@@ -54,4 +54,35 @@
       <category><![CDATA[Thriller spiskowy]]></category>
     </categories>
   </product>
+  <product>
+    <id>105974</id>
+    <title><![CDATA[Limeryki i inne wariacje]]></title>
+    <authors><![CDATA[Michał Rusinek]]></authors>
+    <formats><![CDATA[mobi, epub, pdf]]></formats>
+    <protectionType><![CDATA[LEGIMI]]></protectionType>
+    <price><![CDATA[32.39]]></price>
+    <productUrl><![CDATA[http://www.publio.pl/limeryki-i-inne-wariacje-michal-rusinek,p105974.html]]></productUrl>
+    <imageUrl><![CDATA[http://www.publio.pl/files/product/medium/d4/a2/d9/105974-limeryki-i-inne-wariacje-michal-rusinek-1.jpg]]></imageUrl>
+    <isbns><![CDATA[978-832-681-346-7, 978-832-681-671-0, 978-832-681-672-7]]></isbns>
+    <company><![CDATA[Agora SA]]></company>
+    <categories>
+      <category><![CDATA[Poezja, dramat]]></category>
+      <category><![CDATA[Fraszki, satyry, limeryki]]></category>
+    </categories>
+  </product>
+  <product>
+    <id>47742</id>
+    <title><![CDATA[Zapach żółtych róż]]></title>
+    <authors><![CDATA[Sherryl Woods]]></authors>
+    <formats><![CDATA[mobi, epub]]></formats>
+    <protectionType><![CDATA[LEGIMI]]></protectionType>
+    <price><![CDATA[23.74]]></price>
+    <productUrl><![CDATA[http://www.publio.pl/zapach-zoltych-roz-sherryl-woods,p47742.html]]></productUrl>
+    <imageUrl><![CDATA[http://www.publio.pl/files/product/medium/01/b3/29/47742-zapach-zoltych-roz-sherryl-woods-1.jpg]]></imageUrl>
+    <isbns><![CDATA[978-832-760-120-9]]></isbns>
+    <company><![CDATA[Mira by Harlequin]]></company>
+    <categories>
+      <category><![CDATA[Powieść, opowiadanie]]></category>
+    </categories>
+  </product>
 </products>

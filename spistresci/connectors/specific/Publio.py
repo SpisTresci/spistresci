@@ -22,3 +22,9 @@ class Publio(XMLConnector):
     def adjust_parse(self, dic):
         #convert category to list
         dic['category'] = listToUnicode(dic.get('category'))
+
+    def validateISBNs(self, dic, id, title):
+        if 'isbns' in dic:
+            dic['isbns'] = [isbn.strip() for isbn in dic['isbns'].split(',')]
+
+        super(Publio, self).validateISBNs(dic, id, title)
