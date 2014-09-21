@@ -1,9 +1,6 @@
-from connectors.common import Ceneo
-from sqlwrapper import *
-from connectors.generic import GenericBook
+from spistresci.connectors.common import Ceneo
 import re
 
-Base = SqlWrapper.getBaseClass()
 
 class Gandalf(Ceneo):
     #dict of xml_tag -> db_column_name translations
@@ -31,21 +28,4 @@ class Gandalf(Ceneo):
 
     def validateTitle(self, dic, id, title):
         for format in dic['formats']:
-            dic['title'] = re.sub('\W'+format.lower()+'$', '', dic['title'])
-
-#{'category': 53, 'publisher': 61, 'description': 16, 'cover_type': 30, 'title': 208, 'url': 81, 'price': 6, 'page_count': 4, 'cover': 93, 'authors': 53, 'isbns': 30, 'formats': 4, 'external_id': 6, 'availability': 2}
-class GandalfBook(GenericBook, Base):
-    #external_id
-    #url
-    #price
-    availability = Column(Integer)
-    category = Column(Unicode(64))      #53
-    title = Column(Unicode(256))        #208
-    #cover
-    #description
-    #authors
-    #isbns
-    #formats
-    page_count = Column(Integer)
-    cover_type =  Column(Unicode(64))   #30
-    publisher = Column(Unicode(128))    #61
+            dic['title'] = re.sub('\W'+format['name'].lower()+'$', '', dic['title'])

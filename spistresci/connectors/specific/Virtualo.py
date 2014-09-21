@@ -1,6 +1,5 @@
-from connectors.generic import XMLConnector
-from sqlwrapper import *
-from connectors.generic import GenericBook
+from spistresci.connectors.generic import XMLConnector
+
 
 class Virtualo(XMLConnector):
 
@@ -42,15 +41,3 @@ class Virtualo(XMLConnector):
 
     def create_id_from_url(self, dic):
         dic['external_id'] = dic['url'].split('/')[4][1:]
-
-Base = SqlWrapper.getBaseClass()
-
-class VirtualoBook(GenericBook, Base):
-    id = Column(Integer, primary_key = True)
-    title = Column(Unicode(256))        #174
-    protection = Column(Unicode(8))       #3
-    price = Column(Integer)             #*0,01PLN
-    #url
-    #cover
-    rating = Column(Integer)            #0-100
-

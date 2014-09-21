@@ -19,7 +19,7 @@ from CzeskieKlimaty import CzeskieKlimaty
 # from EscapeMagazine import EscapeMagazine
 # from Fabryka import Fabryka
 # from FantastykaPolska import FantastykaPolska
-# from Gandalf import Gandalf
+from Gandalf import Gandalf
 # from Helion import Helion
 # from KodeksyWmp3 import KodeksyWmp3
 # from Koobe import Koobe
@@ -39,9 +39,9 @@ from CzeskieKlimaty import CzeskieKlimaty
 # from Septem import Septem
 # from TaniaKsiazka import TaniaKsiazka
 # from Tmc import Tmc
-# from Virtualo import Virtualo
+from Virtualo import Virtualo
 # from Wikibooks import Wikibooks
-# from Woblink import Woblink
+from Woblink import Woblink
 # from WolneEbooki import WolneEbooki
 # from WolneLektury import WolneLektury
 # from WolneLektury import WolneLektury

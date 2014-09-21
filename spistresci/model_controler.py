@@ -1,3 +1,4 @@
+from django.db.models.fields.related import OneToOneField
 from models import MiniBook, MasterBook
 
 
@@ -88,10 +89,19 @@ def add_MiniBook(bookstore, d):
 
             if isinstance(value[0], list):
                 for rel_dict in value[0]:
+
                     rel_obj, created = \
                         __rel_class__.objects.get_or_create(**rel_dict)
 
                     getattr(book, key).add(rel_obj)
+
+            elif isinstance(
+                    MiniBook._meta.get_field_by_name(key)[0],
+                    OneToOneField
+            ):
+                obj = __rel_class__.objects.create(**value[0])
+                setattr(book, key, obj)
+
             else:
                 obj, created = __rel_class__.objects.get_or_create(**value[0])
                 setattr(book, key, obj)

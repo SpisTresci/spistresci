@@ -88,6 +88,11 @@ class ComparableMixin(object):
 
 class BookFormatType(models.Model):
 
+    UNKNOWN = 1
+    BOOK = 2
+    EBOOK = 3
+    AUDIOBOOK = 4
+
     name = models.CharField(max_length=10, blank=False)
 
     def __unicode__(self):
@@ -99,7 +104,7 @@ admin.site.register(BookFormatType)
 class BookFormat(models.Model):
 
     name = models.CharField(max_length=10, blank=False)
-    type = models.ForeignKey(BookFormatType)
+    type = models.ForeignKey(BookFormatType, default=BookFormatType.UNKNOWN)
 
     def __unicode__(self):
         return self.name
@@ -110,7 +115,7 @@ admin.site.register(BookFormat)
 class Bookstore(models.Model):
 
     name = models.CharField(max_length=50, blank=False)
-    url = models.CharField(max_length=512L)
+    url = models.URLField(max_length=2048)
 
     def __unicode__(self):
         return self.name
@@ -268,14 +273,14 @@ class MiniBook(ComparableMixin, BaseBook):
         default=Decimal('0.00'),
     )
 
-    url = models.CharField(max_length=512L, default='')
-    pp_url = models.CharField(max_length=512L, default='')
+    url = models.URLField(max_length=2048, default='')
+    pp_url = models.URLField(max_length=2048, default='')
 
     created = models.DateTimeField(editable=False)
     modified = models.DateTimeField()
 
     bookstore = models.ForeignKey(Bookstore)
-    description = models.ForeignKey(BookDescription, null=True, blank=True)
+    description = models.OneToOneField(BookDescription, null=True, blank=True)
     master = models.ForeignKey(
         MasterBook,
         null=True,
