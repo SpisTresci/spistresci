@@ -309,7 +309,24 @@ class MiniBook(ComparableMixin, BaseBook):
         minis = MiniBook.objects.filter(
             ~Q(bookstore=self.bookstore),
             ~Q(master=self.master),
-            title=self.title,
+            title__iexact=self.title,
+        )
+
+        return minis
+
+    def getCandidatesByISBNs(self):
+
+        minis = MiniBook.objects.filter(
+            ~Q(id=self.id),
+            isbns__core__in=[isbn.core for isbn in self.isbns.all()],
+        )
+
+        return minis
+
+    def getCandidatesByAuthors(self):
+        minis = MiniBook.objects.filter(
+            ~Q(id=self.id),
+            authors__name__in=[author.name for author in self.authors.all()]
         )
 
         return minis
