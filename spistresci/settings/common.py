@@ -149,7 +149,6 @@ INSTALLED_APPS = (
     'allauth.socialaccount.providers.wykop',
 
     # other
-    'django_nose',
     'registration',
     'django_common',
     'django_cron',
@@ -212,8 +211,6 @@ LOGGING = {
         },
     }
 }
-
-TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
 
 HAYSTACK_SEARCH_RESULTS_PER_PAGE = 10
 HAYSTACK_LIMIT_TO_REGISTERED_MODELS = False
