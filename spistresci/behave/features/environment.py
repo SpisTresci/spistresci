@@ -1,18 +1,17 @@
 import os
 from selenium import webdriver
-
-
-from spistresci.behave.adapter.selenium.navigation_bar import (
-    NavigationBarSeleniumAdapter,
-)
-
-from spistresci.behave.adapter.selenium.home_page.base import (
-    HomePageBaseSeleniumAdapter,
-)
-
-from spistresci.behave.adapter.selenium.search.base import (
-    SearchBaseSeleniumAdapter,
-)
+from spistresci.behave.adapter.selenium.about_us.base import \
+    AboutUsBaseSeleniumAdapter
+from spistresci.behave.adapter.selenium.home_page.base import \
+    HomePageBaseSeleniumAdapter
+from spistresci.behave.adapter.selenium.login_page.base import \
+    LoginBaseSeleniumAdapter
+from spistresci.behave.adapter.selenium.navigation_bar import \
+    NavigationBarSeleniumAdapter
+from spistresci.behave.adapter.selenium.partners_page.base import \
+    PartnersBaseSeleniumAdapter
+from spistresci.behave.adapter.selenium.search.base import \
+    SearchBaseSeleniumAdapter
 
 
 class Placeholder(object):
@@ -28,7 +27,7 @@ def before_all(context):
     context._selenium_driver = _get_selenium(os.environ.get('BROWSER'))
     context._selenium_driver.set_page_load_timeout(30)
     context._selenium_driver.set_window_size(1400, 1000)
-    context._selenium_driver.get(context.base_url)
+    # context._selenium_driver.get(context.base_url)
 
     # Selenium adapters
     context.selenium = Placeholder()
@@ -40,6 +39,15 @@ def before_all(context):
 
     context.selenium.search = Placeholder()
     context.selenium.search.base = SearchBaseSeleniumAdapter(context)
+
+    context.selenium.login = Placeholder()
+    context.selenium.login.base = LoginBaseSeleniumAdapter(context)
+
+    context.selenium.partners = Placeholder()
+    context.selenium.partners.base = PartnersBaseSeleniumAdapter(context)
+
+    context.selenium.about_us = Placeholder()
+    context.selenium.about_us.base = AboutUsBaseSeleniumAdapter(context)
 
 def after_all(context):
     context._selenium_driver.close()
