@@ -1,17 +1,35 @@
 import os
 from selenium import webdriver
+
 from spistresci.behave.adapter.selenium.about_us.base import \
     AboutUsBaseSeleniumAdapter
+
+from spistresci.behave.adapter.selenium.book.base import \
+    BookBaseSeleniumAdapter
+
+from spistresci.behave.adapter.selenium.contact.base import \
+    ContactBaseSeleniumAdapter
+
 from spistresci.behave.adapter.selenium.home_page.base import \
     HomePageBaseSeleniumAdapter
-from spistresci.behave.adapter.selenium.login_page.base import \
+
+from spistresci.behave.adapter.selenium.login.base import \
     LoginBaseSeleniumAdapter
-from spistresci.behave.adapter.selenium.navigation_bar import \
-    NavigationBarSeleniumAdapter
-from spistresci.behave.adapter.selenium.partners_page.base import \
+
+from spistresci.behave.adapter.selenium.partners.base import \
     PartnersBaseSeleniumAdapter
+
+from spistresci.behave.adapter.selenium.profile.base import \
+    ProfileBaseSeleniumAdapter
+
+from spistresci.behave.adapter.selenium.register.base import \
+    RegisterBaseSeleniumAdapter
+
 from spistresci.behave.adapter.selenium.search.base import \
     SearchBaseSeleniumAdapter
+
+from spistresci.behave.adapter.selenium.terms_of_use.base import \
+    TermsOfUseBaseSeleniumAdapter
 
 
 class Placeholder(object):
@@ -32,7 +50,14 @@ def before_all(context):
     # Selenium adapters
     context.selenium = Placeholder()
 
-    context.selenium.navigation_bar = NavigationBarSeleniumAdapter(context)
+    context.selenium.about_us = Placeholder()
+    context.selenium.about_us.base = AboutUsBaseSeleniumAdapter(context)
+
+    context.selenium.book = Placeholder()
+    context.selenium.book.base = BookBaseSeleniumAdapter(context)
+
+    context.selenium.contact = Placeholder()
+    context.selenium.contact.base = ContactBaseSeleniumAdapter(context)
 
     context.selenium.home_page = Placeholder()
     context.selenium.home_page.base = HomePageBaseSeleniumAdapter(context)
@@ -46,8 +71,18 @@ def before_all(context):
     context.selenium.partners = Placeholder()
     context.selenium.partners.base = PartnersBaseSeleniumAdapter(context)
 
-    context.selenium.about_us = Placeholder()
-    context.selenium.about_us.base = AboutUsBaseSeleniumAdapter(context)
+    context.selenium.profile = Placeholder()
+    context.selenium.profile.base = ProfileBaseSeleniumAdapter(context)
+
+    context.selenium.register = Placeholder()
+    context.selenium.register.base = RegisterBaseSeleniumAdapter(context)
+
+    context.selenium.search = Placeholder()
+    context.selenium.search.base = SearchBaseSeleniumAdapter(context)
+
+    context.selenium.terms_of_use = Placeholder()
+    context.selenium.terms_of_use.base = TermsOfUseBaseSeleniumAdapter(context)
+
 
 def after_all(context):
     context._selenium_driver.close()

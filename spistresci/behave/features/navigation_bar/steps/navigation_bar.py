@@ -1,14 +1,24 @@
 from behave import *
 
 
+@given('I am on about us page')
+def step_impl(context):
+    context.selenium.about_us.base.go_to()
+
+
+@given('I am on book page')
+def step_impl(context):
+    context.selenium.book.base.go_to()
+
+
+@given('I am on contact page')
+def step_impl(context):
+    context.selenium.contact.base.go_to()
+
+
 @given('I am on home page')
 def step_impl(context):
     context.selenium.home_page.base.go_to()
-
-
-@given('I am on search page')
-def step_impl(context):
-    context.selenium.search.base.go_to()
 
 
 @given('I am on login page')
@@ -21,9 +31,24 @@ def step_impl(context):
     context.selenium.partners.base.go_to()
 
 
-@given('I am on about us page')
+@given('I am on profile page')
 def step_impl(context):
-    context.selenium.about_us.base.go_to()
+    context.selenium.profile.base.go_to()
+
+
+@given('I am on register page')
+def step_impl(context):
+    context.selenium.register.base.go_to()
+
+
+@given('I am on search page')
+def step_impl(context):
+    context.selenium.search.base.go_to()
+
+
+@given('I am on terms of use page')
+def step_impl(context):
+    context.selenium.terms_of_use.base.go_to()
 
 
 @when("service name in navigation bar match current service name")

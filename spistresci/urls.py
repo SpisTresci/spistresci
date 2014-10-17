@@ -24,22 +24,34 @@ dajaxice_autodiscover()
 
 book_url_re = r'book/(?P<pk>\d+)/(?P<title>.*)$'
 
-urlpatterns = patterns('',
-     url('^$', HomePage.as_view(), name="index"),
+urlpatterns = patterns(
+     '',
+     url(
+         '^$',
+         HomePage.as_view(),
+         name="index"
+     ),
      url('^logout/$', logout),
      url('^hide_menu/(?P<value>\d)/$', hide_menu),
      url('^monitor/$', monitor),
      url(r'^manual_merging/', include('spistresci.apps.manual_merging.urls', namespace='manual_merging')),
-     url(r'^accounts/signup/$',
-                           RegistrationView.as_view(form_class=RegistrationForm),
-                           name='account_signup'),
-
-     url(r'^accounts/login/$',
-                           MyLoginView.as_view(form_class=MyLoginForm),
-                           name="account_login"),
+     url(
+         r'^accounts/signup/$',
+         RegistrationView.as_view(form_class=RegistrationForm),
+         name='account_signup'
+     ),
+     url(
+         r'^accounts/login/$',
+         MyLoginView.as_view(form_class=MyLoginForm),
+         name="account_login"
+     ),
 
      url(r'^accounts/', include('registration.backends.default.urls')),
-     url(r'^%s' % (book_url_re,), STBookView.as_view(template_name="book/index.html"), name='book_page'),
+     url(
+         r'^%s' % book_url_re,
+         STBookView.as_view(template_name="book/index.html"),
+         name='book_page'
+     ),
      url(r'^book-redirect/$', book_redirect, name="book_redirect"),
 #     url('^description/(?P<book_id>\w+)/$', book_description),
      url(r'^blogger/', include('spistresci.blogger.urls', namespace='blogger')),
@@ -49,12 +61,23 @@ urlpatterns = patterns('',
      url(r'^regulamin/', TemplateView.as_view(template_name='terms_of_use.html'), name='terms_of_use'),
      url(r'^faq/', TemplateView.as_view(template_name='faq.html'), name='faq'),
      url(r'^howto/', TemplateView.as_view(template_name='howto.html'), name='howto'),
-     url(r'^about-us/', TemplateView.as_view(template_name='about_us.html'), name='about_us'),
-     url(r'^contact/', TemplateView.as_view(template_name='contact.html'), name='contact'),
+     url(
+         r'^about-us/',
+         TemplateView.as_view(template_name='about_us.html'),
+         name='about_us'
+     ),
+     url(
+         r'^contact/',
+         TemplateView.as_view(template_name='contact.html'),
+         name='contact'
+     ),
      url(r'^robots\.txt$', TemplateView.as_view(template_name='robots.txt', content_type='text/plain')),
-     url(r'^partners/', TemplateView.as_view(template_name='partners.html'), name='partners'),
+     url(
+         r'^partners/',
+         TemplateView.as_view(template_name='partners.html'),
+         name='partners'
+     ),
 )
-
 #TODO: check thread safe version of this
 # Without threading...
 urlpatterns += patterns('haystack.views',
@@ -63,7 +86,7 @@ urlpatterns += patterns('haystack.views',
         SpisTresciSearchView(
             form_class=SpisTresciSearchForm,
         ),
-        name='haystack_search'
+        name='search'
     ),
     url(
         r'^q/$',
@@ -71,7 +94,7 @@ urlpatterns += patterns('haystack.views',
             template="search/results_list.html",
             form_class=SpisTresciSearchForm,
         ),
-        name='haystack_search',
+        name='quick_search',
     ),
 
     #url(r'^accounts/login/$',  login),
