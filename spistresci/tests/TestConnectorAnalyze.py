@@ -54,6 +54,7 @@ class TestConnectorAnalyze(TestCase):
             connector.fetched_files = [fetched_file]
             connector.areDataDifferentThanPrevious = lambda: True
             connector.parse()
+            connector.analyze()
 
     def test_allegro_parse(self):
 

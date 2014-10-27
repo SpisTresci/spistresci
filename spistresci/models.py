@@ -331,6 +331,15 @@ class MiniBook(ComparableMixin, BaseBook):
 
         return minis
 
+    def updateSimilar(self, miniBook, result=None):
+        low, hight = (self, miniBook) if self.id < miniBook.id else (miniBook, self)
+
+        obj, _ = Similarity.objects.get_or_create(lower_id=low, higher_id=hight)
+        if result:
+            obj.result = result
+
+        obj.save()
+
 admin.site.register(MiniBook)
 
 
@@ -437,3 +446,10 @@ class BookstoreCommandStatus(models.Model):
         ).latest('id')
 
 admin.site.register(BookstoreCommandStatus)
+
+
+class Similarity(models.Model):
+
+    lower_id = models.ForeignKey(MiniBook, related_name='low_id')
+    higher_id = models.ForeignKey(MiniBook, related_name='high_id')
+    result = models.FloatField(null=True, blank=True)

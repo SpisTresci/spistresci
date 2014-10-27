@@ -346,6 +346,9 @@ class GenericConnector(GenericBase, DataValidator):
 
         for mini_book in to_analyze:
             candidates = mini_book.getCandidatesByTitle()
+            for candidate in candidates:
+                mini_book.updateSimilar(candidate)
+
 
     def create_pp_url(self, book):
         if self.pp_url:

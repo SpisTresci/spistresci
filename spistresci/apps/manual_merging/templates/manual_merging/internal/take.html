@@ -1,27 +1,26 @@
 {% load staticfiles %}
-{%  with book_left=item_low book_right=item_high %}
 <div class="compare">
 	<div class="book left">
 		<div class="master_book">
 			<img class="cover" src="{{ book_left.cover }}">
 			<div class="desc">
 				<div class="title">{{ book_left.title }}</div>
-				<div class="autor">{{ book_left.authors | join:", " }}</div>
+				<div class="autor">{{ book_left.authors.all | join:", " }}</div>
 				<div class="price">
 					<span class="p_1">cena od: </span>
-					<span class="p_2">{{ book_left.price }}</span>
+					<span class="p_2">{{ book_left.price_lowest }}</span>
 					<span class="p_3">zł</span>
 				</div>
 			</div>
 		</div>
 
-		{% for mini in book_left.minis %}
+		{% for mini in book_left.mini_books.all %}
 		<div class="mini_book">
 			<div class="content">
 				<img class="cover" src="{{ mini.cover }}">
 				<div class="desc">
-					<div class="format">{{ mini.formats | join:", " }}</div>
-					<div class="autor">{{ mini.authors | join:", " }}</div>
+					<div class="format">{{ mini.formats.all | join:", " }}</div>
+					<div class="autor">{{ mini.authors.all | join:", " }}</div>
 				</div>
 				<div class="price">
 					<span class="p_2">{{ mini.price }}</span>
@@ -46,16 +45,16 @@
 			<img class="cover" src="{{ book_right.cover }}">
 			<div class="desc">
 				<div class="title">{{ book_right.title }}</div>
-				<div class="autor">{{ book_right.authors | join:", " }}</div>
+				<div class="autor">{{ book_right.authors.all | join:", " }}</div>
 				<div class="price">
 					<span class="p_1">cena od: </span>
-					<span class="p_2">{{ book_right.price }}</span>
+					<span class="p_2">{{ book_right.price_lowest }}</span>
 					<span class="p_3">zł</span>
 				</div>
 			</div>
 		</div>
 
-		{% for mini in book_right.minis %}
+		{% for mini in book_right.mini_books.all %}
 		<div class="mini_book">
 			<div class="mini_book_choice">
 				<img src="{% static "manual_merging/switch_mini_to_left.png" %}">
@@ -64,8 +63,8 @@
 			<div class="content">
 				<img class="cover" src="{{ mini.cover }}">
 				<div class="desc">
-					<div class="format">{{ mini.formats | join:", " }}</div>
-					<div class="autor">{{ mini.authors | join:", " }}</div>
+					<div class="format">{{ mini.formats.all | join:", " }}</div>
+					<div class="autor">{{ mini.authors.all | join:", " }}</div>
 				</div>
 				<div class="price">
 					<span class="p_2">{{ mini.price }}</span>
@@ -78,4 +77,3 @@
 	</div>
 	<div class="clear"></div>
 </div>
-{% endwith %}
