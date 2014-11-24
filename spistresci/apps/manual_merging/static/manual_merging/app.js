@@ -81,16 +81,16 @@ function keydown(e) {
 }
 
 $(document).ready(function(){
-	for (window.number = 0; window.number < 10; window.number++) {
-		loadPage();
-	}
-	window.number--;				//prawdopodobnie tego fora z takim iterowaniem i na koncu dekrementacja iteratora powinienem napisac w jakis inny, ladniejszy sposob. jesli wiesz jak, to daj znac :)
-
-	$(window).scroll(function() {
-		if($(document).height() - $(document).scrollTop() < 1000) {
-			window.number++;
-			loadPage();
-		}
-	});
-	document.onkeydown = keydown;
+	//for (window.number = 0; window.number < 10; window.number++) {
+	//	loadPage();
+	//}
+	//window.number--;				//prawdopodobnie tego fora z takim iterowaniem i na koncu dekrementacja iteratora powinienem napisac w jakis inny, ladniejszy sposob. jesli wiesz jak, to daj znac :)
+    //
+	//$(window).scroll(function() {
+	//	if($(document).height() - $(document).scrollTop() < 1000) {
+	//		window.number++;
+	//		loadPage();
+	//	}
+	//});
+	//document.onkeydown = keydown;
 });

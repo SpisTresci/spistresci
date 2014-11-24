@@ -1,12 +1,16 @@
 {% load staticfiles %}
-<html>
+<html ng-app="Merge">
     <head>
-        <link type="text/css" rel="stylesheet"  href="{% static "manual_merging/style.css" %}">
-        <script type="text/javascript" src="{% static "js/jquery.min.js" %}"></script>
-        <script type="text/javascript" src="{% static "manual_merging/jquery.animate-colors.js" %}"></script>
-        <script type="text/javascript" src="{% static "manual_merging/app.js" %}"></script>
+        <script type="text/javascript" src="{% static "js/libs/angular/angular.js" %}"></script>
+        <script type="text/javascript" src="{% static "js/app/app.js" %}"></script>
+        <script type="text/javascript" src="{% static "js/app/controllers/app-controller.js" %}"></script>
+
     </head>
     <body>
-
+        <div ng-controller="BookController">
+            <p>[[ left.title ]]</p>
+            <p>[[ left.price_lowest ]]</p>
+            <img ng-src="[[ left.cover ]]" />
+        </div>
     </body>
 </html>
