@@ -4,8 +4,9 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.views.generic import TemplateView
 from registration.backends.default.views import RegistrationView
-from spistresci.book.views import STBookView, book_redirect
+from rest_framework.routers import DefaultRouter
 
+from spistresci.book.views import STBookView, book_redirect
 from spistresci.index.views import HomePage
 from spistresci.search.view import SpisTresciSearchView
 from spistresci.search.forms import SpisTresciSearchForm
@@ -13,16 +14,25 @@ from spistresci.search.views import hide_menu
 from spistresci.auth.views import (logout, accounts_social_signup,
         accounts_profile, MyLoginView, ProfileRemove)
 from spistresci.track.views import TrackedBookList
+
 #from allauth.account.views import LoginView
-from spistresci.register.views import register_user, egazeciarz_register_user
+from spistresci.register.views import egazeciarz_register_user
 from spistresci.monitor.views import monitor
 from spistresci.auth.forms import RegistrationForm, MyLoginForm
-from dajaxice.core import dajaxice_autodiscover, dajaxice_config
+from dajaxice.core import dajaxice_autodiscover
+from api.viewsets import MasterBookViewSet, MiniBookViewSet, MiniBookSimilarityViewSet, \
+    BookFormatViewSet
 
 admin.autodiscover()
 dajaxice_autodiscover()
 
 book_url_re = r'book/(?P<pk>\d+)/(?P<title>.*)$'
+
+router = DefaultRouter()
+router.register(r'masterbooks', MasterBookViewSet)
+router.register(r'minibooks', MiniBookViewSet)
+router.register(r'similar-minibooks', MiniBookSimilarityViewSet)
+router.register(r'formats', BookFormatViewSet)
 
 urlpatterns = patterns(
      '',
@@ -30,6 +40,16 @@ urlpatterns = patterns(
          '^$',
          HomePage.as_view(),
          name="index"
+     ),
+     url(
+         r'^api-auth/',
+         include('rest_framework.urls'
+                 # , namespace='api'
+         )
+     ),
+     url(
+         r'^api/',
+         include(router.urls)
      ),
      url('^logout/$', logout),
      url('^hide_menu/(?P<value>\d)/$', hide_menu),

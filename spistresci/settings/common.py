@@ -149,6 +149,7 @@ INSTALLED_APPS = (
     'allauth.socialaccount.providers.wykop',
 
     # other
+    'rest_framework',
     'registration',
     'django_common',
     'django_cron',
@@ -235,6 +236,15 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'allauth.socialaccount.context_processors.socialaccount',
     'django_common.context_processors.common_settings',
 )
+
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ],
+    'URL_FIELD_NAME': 'api-url',
+}
 
 # SOCIALACCOUNT_PROVIDERS are needed for social authentication, which is
 # currently implemented using django-allauth. Each provider needs to be defined

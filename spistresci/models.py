@@ -453,3 +453,9 @@ class Similarity(models.Model):
     lower_id = models.ForeignKey(MiniBook, related_name='low_id')
     higher_id = models.ForeignKey(MiniBook, related_name='high_id')
     result = models.FloatField(null=True, blank=True)
+
+    def lower_masterbook(self):
+        return self.lower_id.master
+
+    def higher_masterbook(self):
+        return self.higher_id.master
