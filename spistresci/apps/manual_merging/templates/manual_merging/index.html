@@ -1,16 +1,33 @@
 {% load staticfiles %}
 <html ng-app="Merge">
     <head>
+        <link type="text/css" rel="stylesheet"  href="{% static "manual_merging/style.css" %}">
+
         <script type="text/javascript" src="{% static "js/libs/angular/angular.js" %}"></script>
+        <script type="text/javascript" src="{% static "js/libs/angular/angular-locale_pl-pl.js" %}"></script>
         <script type="text/javascript" src="{% static "js/app/app.js" %}"></script>
-        <script type="text/javascript" src="{% static "js/app/controllers/app-controller.js" %}"></script>
+        <script type="text/javascript" src="{% static "js/app/controllers/books-controller.js" %}"></script>
+        <script type="text/javascript" src="{% static "js/app/directives/directives.js" %}"></script>
 
     </head>
     <body>
-        <div ng-controller="BookController">
-            <p>[[ left.title ]]</p>
-            <p>[[ left.price_lowest ]]</p>
-            <img ng-src="[[ left.cover ]]" />
+        <div ng-controller="BooksController">
+            <div class="compare"
+                 ng-repeat="pair in books" ng-init="left = pair.left; right = pair.right"
+                 ng-class="{
+                    selected: isSelected($index),
+                    approved: isApproved($index),
+                    rejected: isRejected($index),
+                    undecided: isUndecided($index)
+                    }"
+                    >
+
+                <book inner-align="left" obj="pair.left"></book>
+                <choose-controllers></choose-controllers>
+                <book inner-align="right" obj="pair.right"></book>
+
+                <div class="clear"></div>
+            </div>
         </div>
     </body>
 </html>

@@ -1,0 +1,35 @@
+<div class="book [[innerAlign]]">
+    <div class="master_book">
+        <img class="cover" ng-src="[[ obj.cover ]]">
+        <div class="desc">
+            <div class="title">[[ obj.title ]]</div>
+            <!--<div class="autor">[[ obj.authors.all | join:", " ]]</div>-->
+            <div class="price">
+                <span class="p_1">cena od: </span>
+                <span class="p_2">[[ obj.price_lowest ]]</span>
+                <span class="p_3">zł</span>
+            </div>
+        </div>
+    </div>
+
+    <div ng-repeat="mini in obj.mini_books">
+        <div class="mini_book">
+            <div class="content">
+                <img class="cover" ng-src="[[ mini.cover ]]">
+                <div class="desc">
+                    <!--<div class="format">[[ mini.formats.all | join:", " ]]</div>-->
+                    <!--<div class="autor">[[ mini.authors.all | join:", " ]]</div>-->
+                </div>
+                <div class="price">
+                    <span class="p_2">[[ mini.price ]]</span>
+                    <span class="p_3">zł</span>
+                </div>
+            </div>
+            <div class="mini_book_choice" ng-switch on="innerAlign">
+                <img ng-switch-when="right" src="/static/manual_merging/move_mini_from_[[innerAlign]].png">
+                <img src="/static/manual_merging/not_ok_mini.png">
+                <img ng-switch-when="left" src="/static/manual_merging/move_mini_from_[[innerAlign]].png">
+            </div>
+        </div>
+    </div>
+</div>
