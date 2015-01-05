@@ -1,10 +1,7 @@
-from connectors.common import HelionBase, HelionBaseBook
-from sqlwrapper import SqlWrapper
+from spistresci.connectors.common.HelionBase import HelionBase
+from spistresci.connectors.generic import *
 
 class eBookpoint(HelionBase):
     pass
 
-Base = SqlWrapper.getBaseClass()
-class eBookpointBook(HelionBaseBook, Base):
-    pass
 

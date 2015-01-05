@@ -1,7 +1,5 @@
 from connectors.generic import *
-import lxml.etree as et
-from sqlwrapper import *
-import utils.Str
+from spistresci.connectors.utils.Str import listToUnicode
 
 
 class HelionBase(XMLConnector):
@@ -61,7 +59,7 @@ class HelionBase(XMLConnector):
 
     def adjust_parse(self, dic):
         for key in ['promotion_name', 'thematic_series', 'series', 'linked']:
-            dic[key] = utils.Str.listToUnicode(dic.get(key))
+            dic[key] = listToUnicode(dic.get(key))
 
     
     #statuses = {
@@ -73,50 +71,50 @@ class HelionBase(XMLConnector):
     #            5:('few pieces left in stock', 'dostepna w malej ilosci'),
     #            }
 
-class HelionBaseBook(GenericBook):
-    external_id = Column(Unicode(16), unique=True)
-    #isbn
-    ean = Column(Unicode(16))                          #14
-#    title = Column(Unicode(256))                       #120
-    title_oryginal = Column(Unicode(256))              #177
-    #url
-    #cover
-    cover_back = Column(STUrl)                   #51
-    #authors
-    #translators
-    #formats
-    #description
-    status = Column(Integer)
-    #price
-    #price_normal
-    discount = Column(Integer)                         #GROSZE!!!
-    bookshop = Column(Integer)
-    on_demand = Column(Integer) #TODO: T284
-    size = Column(Unicode(64))                   #33
-    type = Column(Integer)
-    binding = Column(Unicode(16))                       #6
-    page_count = Column(Unicode(8))
-    date = Column(Date)
-    sample = Column(STUrl)              #44
-    online_sample = Column(STUrl)  #44
-    is_bestseller = Column(Boolean)
-    is_new = Column(Boolean)
-    name_of_promotion = Column(Unicode(128))           #29
-    linked = Column(Unicode(128))                                            #12 X 5 #TODO: T285
-    #thematic_series
-    #series
-
-    #add support for paper books
-    #
-    #    "./ksiegarnie_nieinter/waga":('mass', ''),
-    #    "./ksiegarnie_nieinter/status2":('status2', ''),
-    #    "./ksiegarnie_nieinter/cena_netto":('net_price', ''),
-    #    "./ksiegarnie_nieinter/cena_brutto":('gross_price', ''),
-    #    "./ksiegarnie_nieinter/vat":('vat', ''),
-    #    "./ksiegarnie_nieinter/vat_procent":('vat_percent', ''),
-
-    advanced_booking = Column(Date)
-    place_in_top = Column(Integer)
-    storage_type = Column(Unicode(16))                  #4
-    md5 = Column(Unicode(32))                           #32
+# class HelionBaseBook(GenericBook):
+#     external_id = Column(Unicode(16), unique=True)
+#     #isbn
+#     ean = Column(Unicode(16))                          #14
+# #    title = Column(Unicode(256))                       #120
+#     title_oryginal = Column(Unicode(256))              #177
+#     #url
+#     #cover
+#     cover_back = Column(STUrl)                   #51
+#     #authors
+#     #translators
+#     #formats
+#     #description
+#     status = Column(Integer)
+#     #price
+#     #price_normal
+#     discount = Column(Integer)                         #GROSZE!!!
+#     bookshop = Column(Integer)
+#     on_demand = Column(Integer) #TODO: T284
+#     size = Column(Unicode(64))                   #33
+#     type = Column(Integer)
+#     binding = Column(Unicode(16))                       #6
+#     page_count = Column(Unicode(8))
+#     date = Column(Date)
+#     sample = Column(STUrl)              #44
+#     online_sample = Column(STUrl)  #44
+#     is_bestseller = Column(Boolean)
+#     is_new = Column(Boolean)
+#     name_of_promotion = Column(Unicode(128))           #29
+#     linked = Column(Unicode(128))                                            #12 X 5 #TODO: T285
+#     #thematic_series
+#     #series
+#
+#     #add support for paper books
+#     #
+#     #    "./ksiegarnie_nieinter/waga":('mass', ''),
+#     #    "./ksiegarnie_nieinter/status2":('status2', ''),
+#     #    "./ksiegarnie_nieinter/cena_netto":('net_price', ''),
+#     #    "./ksiegarnie_nieinter/cena_brutto":('gross_price', ''),
+#     #    "./ksiegarnie_nieinter/vat":('vat', ''),
+#     #    "./ksiegarnie_nieinter/vat_procent":('vat_percent', ''),
+#
+#     advanced_booking = Column(Date)
+#     place_in_top = Column(Integer)
+#     storage_type = Column(Unicode(16))                  #4
+#     md5 = Column(Unicode(32))                           #32
 

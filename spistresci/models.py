@@ -259,7 +259,7 @@ class MiniBook(ComparableMixin, BaseBook):
     class Meta:
         unique_together = (("external_id", "bookstore"),)
 
-    external_id = models.IntegerField()
+    external_id = models.CharField(max_length=32)
     created_with_command = models.ForeignKey('BookstoreCommandStatus')
 
     price = models.DecimalField(
