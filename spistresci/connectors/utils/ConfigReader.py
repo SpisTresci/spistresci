@@ -1,8 +1,15 @@
+import os
+import re
 import ConfigParser
+
+from django.conf import settings
+
 from spistresci.connectors.utils.MultiLevelConfigParser import MultiLevelConfigParser
 
 
 class ConfigReader(object):
+
+    CONF_DIR = os.path.join(settings.SITE_ROOT, 'conf')
 
     @classmethod
     def read_config(cls, config_file):
@@ -46,3 +53,17 @@ class ConfigReader(object):
             config[splited[0]] = ConfigReader._get_conf_option(splited, value, config)
 
         return config
+
+    @classmethod
+    def get_list_of_configs(cls):
+
+        regex = re.compile('^([^.]*)\.ini')
+
+        ini_files = []
+        for root, dirs, files in os.walk(cls.CONF_DIR):
+            for name in files:
+                r = regex.search(name)
+                if r:
+                    ini_files.append(r.group(1))
+
+        return ini_files

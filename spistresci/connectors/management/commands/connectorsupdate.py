@@ -5,7 +5,8 @@ from optparse import make_option
 from django.core.management.base import BaseCommand
 from django.conf import settings
 from django.utils.timezone import now
-from spistresci.connectors import Tools
+from spistresci.connectors.management.commands._base import ConnectorsCommandBase
+
 from spistresci.connectors.generic.GenericConnector import GenericConnector
 from spistresci.connectors.utils.ConfigReader import ConfigReader
 from spistresci.connectors.utils.ConnectorsLogger import logger_instance
@@ -15,21 +16,37 @@ from spistresci.models import (
 )
 
 
-def get_list_of_configs():
-    return ['update', 'test']
+class Command(BaseCommand, ConnectorsCommandBase):
+    """
+    Data of each service/bookstore has to be updated regularly.
 
+    This command triggers mechanism, and following thing are happening:
 
-class Command(BaseCommand):
+     1. data in xml/json/marc21 format are downloaded for specified bookstores
+     2. if bookstore provides compressed data, data is unpacked
+     3. unpacked data are moved to 'data/[serivce_name]' directory
+     4. data are added to git service submodule directory
+
+    """
+
+    help = __doc__
 
     option_list = BaseCommand.option_list + (
         make_option(
             '--mode',
             action='store',
             dest='mode',
-            help='Mode',
+            help=
+                'Command can be run in few different modes. Each mode has its '
+                'own configuration file in: {}. Available modes: {}. '
+                'Default mode: {}.'.format(
+                    os.path.join(ConfigReader.CONF_DIR, '[mode].ini'),
+                    ', '.join(ConfigReader.get_list_of_configs()),
+                    'update'
+                ),
             type='choice',
             default='update',
-            choices=get_list_of_configs(),
+            choices=ConfigReader.get_list_of_configs(),
         ),
     )
 
@@ -139,61 +156,3 @@ class Command(BaseCommand):
             bookstore_cmd_status.finished = True
             bookstore_cmd_status.end = now()
             bookstore_cmd_status.save()
-
-    def get_list_of_connectors_to_run(self):
-
-        GenericConnector.config_object = ConfigReader.read_config(
-            GenericConnector.config_file
-        )
-
-        config_connector_classnames_list = Tools.get_classnames(
-            GenericConnector.config_object
-        ).items()
-
-        connector_classnames_list = config_connector_classnames_list
-
-        # args_connector_classnames_list = self.filter_varargs(
-        #     Tools.filter_in_list,
-        #     config_connector_classnames_list,
-        #     True,
-        #     #args.connectors,
-        #     ['Allegro'],
-        # )
-        #
-        # connector_classnames_list = self.filter_varargs(
-        #     Tools.filter_disabled,
-        #     args_connector_classnames_list,
-        #     False,
-        #     GenericConnector.config_object,
-        #     self.logger,
-        # )
-
-        filtered_list = self.filter_varargs(
-            Tools.filter_disabled,
-            config_connector_classnames_list,
-            False,
-            GenericConnector.config_object,
-            self.logger,
-        )
-
-        partial = connector_classnames_list > filtered_list
-
-        connectors = [
-            Tools.load_connector(
-                connectorname=connector[1],
-                config=GenericConnector.config_object
-            )(
-                name=connector[0],
-                limit_books=0   # args.limit_books
-            )
-            for connector in connector_classnames_list
-        ]
-
-        return connectors, partial
-
-    @staticmethod
-    def filter_varargs(fun, iterable, expected, *args, **kwargs):
-        return [
-            item for item in iterable
-            if fun(item, *args, **kwargs) == expected
-        ]

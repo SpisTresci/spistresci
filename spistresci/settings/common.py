@@ -51,7 +51,7 @@ USE_L10N = True
 # If you set this to False, Django will not use timezone-aware datetimes.
 USE_TZ = True
 
-SITE_ROOT = os.path.join(os.path.dirname(os.path.realpath(__file__)), '..')
+SITE_ROOT = os.path.realpath(os.path.join(os.path.dirname(__file__), '..'))
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/var/www/example.com/media/"
 MEDIA_ROOT = os.path.join(SITE_ROOT, 'uploads')

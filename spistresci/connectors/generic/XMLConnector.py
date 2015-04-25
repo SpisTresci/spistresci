@@ -5,6 +5,7 @@ import os
 import re
 import hashlib
 
+
 class XMLConnector(GenericConnector):
 
     xml_tag_dict = {}
@@ -19,23 +20,38 @@ class XMLConnector(GenericConnector):
         if download:
             self.downloadFile()
 
-        if unpack and self.mode == XMLConnector.BookList_Mode.ZIPPED_XMLS:
-            self.fetched_files.extend(
-              self.unpackZIP(os.path.join(self.backup_dir, self.filename))
-            )
-        elif unpack and self.mode == XMLConnector.BookList_Mode.GZIPPED_XMLS:
-            self.fetched_files.extend(
-              self.unpackGZIP(os.path.join(self.backup_dir, self.filename))
-            )
-        elif unpack and self.mode == XMLConnector.BookList_Mode.BZIPPED_XMLS:
-            self.fetched_files.extend(
-              self.unpackBZIP(os.path.join(self.backup_dir, self.filename))
-            )
-        elif self.mode == XMLConnector.BookList_Mode.SINGLE_XML:
-            self.fetched_files.append(os.path.join(self.backup_dir, self.filename))
+        if unpack:
+            self.unpackData()
 
         self.save_time_of_("fetch_end")
         super(XMLConnector, self).fetchData()
+
+    def unpackData(self, delete_archive=False):
+
+        if self.mode == XMLConnector.BookList_Mode.ZIPPED_XMLS:
+            self.fetched_files.extend(
+                self.unpackZIP(os.path.join(self.backup_dir, self.filename))
+            )
+        elif self.mode == XMLConnector.BookList_Mode.GZIPPED_XMLS:
+            self.fetched_files.extend(
+                self.unpackGZIP(os.path.join(self.backup_dir, self.filename))
+            )
+        elif self.mode == XMLConnector.BookList_Mode.BZIPPED_XMLS:
+            self.fetched_files.extend(
+                self.unpackBZIP(os.path.join(self.backup_dir, self.filename))
+            )
+        elif self.mode == XMLConnector.BookList_Mode.SINGLE_XML:
+            self.fetched_files.append(
+                os.path.join(self.backup_dir, self.filename)
+            )
+
+        if delete_archive and self.mode in [
+            XMLConnector.BookList_Mode.ZIPPED_XMLS,
+            XMLConnector.BookList_Mode.GZIPPED_XMLS,
+            XMLConnector.BookList_Mode.BZIPPED_XMLS,
+        ]:
+            os.remove(os.path.join(self.backup_dir, self.filename))
+
 
     def getTagValue(self, product, tagName, default=""):
         tag = product.getElementsByTagName(tagName)[0]
