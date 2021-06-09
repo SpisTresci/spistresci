@@ -1,0 +1,11 @@
+Technical Dept
+
+
+1. Behave tests for some reason seems to open two browser windows:
+
+We have:
+
+    def after_all(context):
+        context._selenium_driver.close()
+
+what close one window.
